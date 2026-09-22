@@ -17,3 +17,5 @@ scratch/
 .system_generated/
 *.tmp
 *.bak
+
+.vercel

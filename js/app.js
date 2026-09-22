@@ -1935,6 +1935,85 @@ window.copyShareText = function() {
   }
 };
 
+// ── Quick Hero Search & Practice Launcher Engine ──
+window.executeHeroSearch = function() {
+  const input = $('#hero-search-input');
+  if (!input) return;
+  const rawQuery = input.value.trim().toLowerCase();
+  if (!rawQuery) {
+    location.hash = '#practice';
+    return;
+  }
+
+  // Check special keywords
+  if (rawQuery.includes('desmos') || rawQuery.includes('máy tính') || rawQuery.includes('graph')) {
+    if (typeof toggleDesmos === 'function') toggleDesmos();
+    return;
+  }
+  if (rawQuery.includes('phụ huynh') || rawQuery.includes('parent') || rawQuery.includes('cha mẹ')) {
+    location.hash = '#parent';
+    return;
+  }
+  if (rawQuery.includes('flashcard') || rawQuery.includes('từ vựng') || rawQuery.includes('vocab')) {
+    location.hash = '#flashcards';
+    return;
+  }
+  if (rawQuery.includes('mock') || rawQuery.includes('thi thử') || rawQuery.includes('test')) {
+    location.hash = '#mock';
+    return;
+  }
+  if (rawQuery.includes('lỗi') || rawQuery.includes('mistake') || rawQuery.includes('sai')) {
+    location.hash = '#mistakes';
+    return;
+  }
+  if (rawQuery.includes('learn') || rawQuery.includes('học') || rawQuery.includes('phương pháp')) {
+    location.hash = '#learn';
+    return;
+  }
+
+  // Domain / Skill matches
+  let targetDomain = 'rw-info';
+  if (rawQuery.includes('algebra') || rawQuery.includes('đại số') || rawQuery.includes('linear')) {
+    targetDomain = 'math-alg';
+  } else if (rawQuery.includes('advanced') || rawQuery.includes('quadratic') || rawQuery.includes('hàm số')) {
+    targetDomain = 'math-adv';
+  } else if (rawQuery.includes('geometry') || rawQuery.includes('hình học') || rawQuery.includes('trig')) {
+    targetDomain = 'math-geo';
+  } else if (rawQuery.includes('craft') || rawQuery.includes('context') || rawQuery.includes('ngữ cảnh')) {
+    targetDomain = 'rw-craft';
+  } else if (rawQuery.includes('conventions') || rawQuery.includes('grammar') || rawQuery.includes('ngữ pháp')) {
+    targetDomain = 'rw-conv';
+  } else if (rawQuery.includes('expression') || rawQuery.includes('transition') || rawQuery.includes('liên kết')) {
+    targetDomain = 'rw-expr';
+  } else if (rawQuery.includes('math') || rawQuery.includes('toán')) {
+    targetDomain = 'math-alg';
+  }
+
+  location.hash = '#practice';
+  setTimeout(() => {
+    const domainSelect = $('#domain-select');
+    if (domainSelect) {
+      domainSelect.value = targetDomain;
+      if (typeof startPractice === 'function') startPractice();
+    }
+  }, 100);
+};
+
+window.quickJumpTopic = function(topic) {
+  if (topic === 'fc') {
+    location.hash = '#flashcards';
+    return;
+  }
+  location.hash = '#practice';
+  setTimeout(() => {
+    const domainSelect = $('#domain-select');
+    if (domainSelect) {
+      domainSelect.value = topic;
+      if (typeof startPractice === 'function') startPractice();
+    }
+  }, 100);
+};
+
 // ── Global Keyboard Shortcuts (Escape to close modals) ──
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {

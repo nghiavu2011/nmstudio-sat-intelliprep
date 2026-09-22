@@ -49,6 +49,11 @@
   }
   </script>
 
+  <!-- Google Fonts: Plus Jakarta Sans (Geometric Modern) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -119,8 +124,129 @@
       
       <!-- Dashboard Section -->
       <section id="today" class="section active">
-        <h1 class="text-2xl font-bold mb-2">Good morning!</h1>
-        <p class="text-muted mb-4 date-display"></p>
+        <!-- Hero Split-Screen Showcase (Geometric Bauhaus Theme) -->
+        <div class="hero-split-container mb-6">
+          <div class="hero-split-grid">
+            <!-- Left Hero: Deep Midnight Indigo -->
+            <div class="hero-left-panel">
+              <!-- Top micro-nav inside hero -->
+              <div class="hero-micro-nav flex justify-between items-center mb-6">
+                <div class="hero-brand-pill">
+                  <span class="hero-brand-dot"></span>
+                  <span>N&amp;Mstudio_Education</span>
+                </div>
+                <div class="hero-quick-links text-xs">
+                  <a href="#learn" class="hero-nav-link">Phương pháp</a>
+                  <a href="#mock" class="hero-nav-link">Thi thử</a>
+                  <a href="#parent" class="hero-nav-link highlight">Góc Phụ Huynh</a>
+                </div>
+              </div>
+
+              <!-- Main Headline -->
+              <div class="hero-headline-wrap mb-5">
+                <h1 class="hero-display-title">
+                  Chinh phục<br>
+                  <span class="text-sky-gradient">Digital SAT 2026</span><br>
+                  bứt phá 1500+
+                </h1>
+                <p class="hero-subtitle text-sm">
+                  Lộ trình học tập thông minh cá nhân hóa cho học sinh Lớp 10–12 và Cổng đồng hành tâm lý học giáo dục dành riêng cho Phụ huynh.
+                </p>
+              </div>
+
+              <!-- Search / Quick Practice Launcher Pill -->
+              <div class="hero-search-wrapper mb-4">
+                <div class="hero-search-bar">
+                  <span class="search-icon">🔍</span>
+                  <input type="text" id="hero-search-input" placeholder="Tìm kiếm dạng bài, từ vựng hoặc gõ 'Desmos'..." onkeydown="if(event.key==='Enter') executeHeroSearch()">
+                  <button class="hero-search-submit-btn" onclick="executeHeroSearch()" title="Bắt đầu học ngay">
+                    <span>→</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Fast tags and micro-copy -->
+              <div class="hero-quick-tags flex items-center gap-2 flex-wrap text-xs">
+                <span class="text-muted text-2xs uppercase tracking-wider">Gợi ý nhanh:</span>
+                <button class="hero-tag-chip" onclick="quickJumpTopic('rw-craft')">📖 Words in Context</button>
+                <button class="hero-tag-chip" onclick="quickJumpTopic('math-adv')">📐 Advanced Math</button>
+                <button class="hero-tag-chip" onclick="toggleDesmos()">📈 Máy tính Desmos</button>
+                <button class="hero-tag-chip" onclick="quickJumpTopic('fc')">🗂️ Flashcards FSRS</button>
+              </div>
+
+              <div class="hero-footer-link mt-5 pt-4 border-t border-white-10 text-xs text-muted flex justify-between items-center flex-wrap gap-2">
+                <span>Bạn là phụ huynh cần tư vấn lộ trình 1:1?</span>
+                <a href="https://zalo.me/84985578385" target="_blank" rel="noopener noreferrer" class="text-coral underline font-semibold">Nhắn Zalo: +98 557 8385 →</a>
+              </div>
+            </div>
+
+            <!-- Right Hero: Sky Blue Geometric Mosaic Collage -->
+            <div class="hero-right-panel">
+              <!-- Top bar on right panel -->
+              <div class="hero-right-top flex justify-between items-center mb-4">
+                <div class="flex items-center gap-2 text-xs font-bold text-navy-dark">
+                  <span>✨ Digital SAT 2026 Ready</span>
+                </div>
+                <a href="#mock" class="btn-dark-pill text-xs">
+                  <span>Thi Thử Ngay</span>
+                </a>
+              </div>
+
+              <!-- Geometric Bauhaus Bento Mosaic Grid -->
+              <div class="bauhaus-mosaic-grid">
+                <!-- Circle Frame 1: Top Coral / Student Achievement (1500+ Trajectory) -->
+                <div class="mosaic-cell cell-coral-circle" onclick="openShareModal()" title="Xem Thẻ Thành Tích Học Tập">
+                  <div class="circle-content">
+                    <span class="circle-emoji">🎯</span>
+                    <div class="circle-title">1500+</div>
+                    <div class="circle-sub">MỤC TIÊU TOP 1%</div>
+                  </div>
+                </div>
+
+                <!-- Geometric Pill: Sky Blue / 200+ Adaptive Questions -->
+                <div class="mosaic-cell cell-sky-pill" onclick="location.hash='#practice'">
+                  <div class="pill-stat">200+</div>
+                  <div class="pill-desc">Câu Hỏi Adaptive</div>
+                </div>
+
+                <!-- Circle Frame 2: Yellow Marigold / Desmos Graphing Calculator -->
+                <div class="mosaic-cell cell-yellow-circle" onclick="toggleDesmos()" title="Mở Máy tính Desmos">
+                  <div class="circle-content">
+                    <span class="circle-emoji">📈</span>
+                    <div class="circle-title">Desmos</div>
+                    <div class="circle-sub">MÁY TÍNH ĐỒ THỊ</div>
+                  </div>
+                </div>
+
+                <!-- Geometric Shape: Quarter Circle & Arch -->
+                <div class="mosaic-cell cell-quarter-arch" onclick="location.hash='#parent'">
+                  <div class="arch-tag">👨‍👩‍👧 Đồng Hành</div>
+                  <div class="arch-desc">0% Áp lực điểm số</div>
+                </div>
+
+                <!-- Circle Frame 3: Deep Midnight Indigo / Flashcard FSRS -->
+                <div class="mosaic-cell cell-navy-circle" onclick="location.hash='#flashcards'" title="Mở Thẻ Ghi Nhớ FSRS">
+                  <div class="circle-content">
+                    <span class="circle-emoji">🗂️</span>
+                    <div class="circle-title">80 Cards</div>
+                    <div class="circle-sub">ANKI &amp; FSRS-LITE</div>
+                  </div>
+                </div>
+
+                <!-- Geometric Pill: Pastel Pink / 15 Skills -->
+                <div class="mosaic-cell cell-pink-pill" onclick="location.hash='#progress'">
+                  <div class="pill-stat">15/15</div>
+                  <div class="pill-desc">Kỹ Năng Master</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-xl font-bold mb-3 flex items-center justify-between">
+          <span>Kế Hoạch Hôm Nay / Today's Action</span>
+          <span class="text-sm font-normal text-muted date-display"></span>
+        </h2>
 
         <div class="grid-3 mb-4">
           <div class="card">
