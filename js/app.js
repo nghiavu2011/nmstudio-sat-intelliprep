@@ -82,6 +82,37 @@ function escapeHTML(str) {
     .replace(/'/g, '&#39;');
 }
 
+// ── Answer Verification Helper (Supports Strings, Fractions & Decimals) ──
+function parseNumericValue(val) {
+  if (val === null || val === undefined) return NaN;
+  const s = String(val).trim();
+  if (!s) return NaN;
+  if (s.includes('/')) {
+    const parts = s.split('/');
+    if (parts.length === 2) {
+      const num = Number(parts[0]);
+      const den = Number(parts[1]);
+      if (!isNaN(num) && !isNaN(den) && den !== 0) return num / den;
+    }
+  }
+  return Number(s);
+}
+
+function isAnswerCorrect(userAns, correctAns) {
+  if (userAns === null || userAns === undefined || correctAns === null || correctAns === undefined) return false;
+  const uStr = String(userAns).trim().toLowerCase();
+  const cStr = String(correctAns).trim().toLowerCase();
+  if (uStr === cStr) return true;
+
+  // Numeric equivalence for Digital SAT Student-Produced Responses (Grid-ins)
+  const uNum = parseNumericValue(uStr);
+  const cNum = parseNumericValue(cStr);
+  if (!isNaN(uNum) && !isNaN(cNum)) {
+    return Math.abs(uNum - cNum) < 1e-5;
+  }
+  return false;
+}
+
 // ── Question & Dataset Caches ──
 const qCache = {};
 const fcCache = {};
@@ -212,6 +243,12 @@ function handleRoute() {
   if (hash === '#timed' || hash === '#mock') target = '#test';
   if (hash === '#parent') target = '#progress';
 
+  // Alibaba OCR - Resource Efficiency: Pause active exam timer if navigating away from #test
+  if (target !== '#test' && activeExam && activeExam.timerInterval) {
+    clearInterval(activeExam.timerInterval);
+    activeExam.timerInterval = null;
+  }
+
   // Update navigation tab highlights
   $$('.nav-tab').forEach(tab => {
     tab.classList.toggle('active', tab.getAttribute('href') === target);
@@ -226,7 +263,13 @@ function handleRoute() {
   if (target === '#today') renderToday();
   if (target === '#practice') loadPracticeSession();
   if (target === '#review') renderReview();
-  if (target === '#test') renderTest();
+  if (target === '#test') {
+    if (activeExam && activeExam.testId && activeExam.secondsRemaining > 0 && !activeExam.completed && $('#timed-exam-area')?.style.display === 'block') {
+      startExamTimer();
+    } else {
+      renderTest();
+    }
+  }
   if (target === '#progress') renderProgress();
 
   window.scrollTo(0, 0);
@@ -308,6 +351,11 @@ window.selectDomainTab = function(domainKey) {
   loadPracticeSession(domainKey);
 };
 
+window.quickJumpTopic = function(domainKey) {
+  location.hash = '#practice';
+  setTimeout(() => selectDomainTab(domainKey), 50);
+};
+
 function renderCurrentQuestion() {
   const q = practicePool[currentPracticeIdx];
   if (!q) return;
@@ -349,7 +397,7 @@ function renderCurrentQuestion() {
     choicesContainer.innerHTML = `
       <div style="padding:1rem 0;">
         <label class="text-sm font-semibold text-muted block mb-2">Nhập kết quả số (Student-Produced Response):</label>
-        <input type="text" id="grid-in-input" class="grid-in-input" placeholder="e.g. 4.5 or 12" />
+        <input type="text" id="grid-in-input" class="grid-in-input" placeholder="e.g. 4.5 or 12" onkeydown="if(event.key==='Enter')submitCurrentAnswer()" />
       </div>
     `;
   }
@@ -391,7 +439,7 @@ window.submitCurrentAnswer = function() {
   }
 
   const timeTakenSec = Math.round((Date.now() - questionStartTime) / 1000);
-  const isCorrect = String(userAns).trim().toLowerCase() === String(q.correct_answer).trim().toLowerCase();
+  const isCorrect = isAnswerCorrect(userAns, q.correct_answer);
 
   // Update DB Skills Stats
   const skill = q.skill || 'General';
@@ -563,6 +611,10 @@ window.startFlashcardReview = function(deckType = null) {
   }
 };
 
+window.startSpacedReviewSession = function() {
+  startFlashcardReview('mistakes');
+};
+
 function renderFlashcardCard() {
   const c = flashcardDeck[currentCardIdx];
   if (!c) return;
@@ -647,6 +699,7 @@ window.flipFlashcard = function() {
 };
 
 window.rateFlashcard = function(rating) {
+  if (!flashcardDeck || !flashcardDeck.length) return;
   const c = flashcardDeck[currentCardIdx];
   if (c) {
     const cur = db.flashcardState[c.card_id] || { ease: 2.5, interval: 1, reviews: 0 };
@@ -1063,6 +1116,8 @@ window.exitTimedSession = function() {
 
 window.finishTimedSession = function() {
   if (activeExam.timerInterval) clearInterval(activeExam.timerInterval);
+  activeExam.timerInterval = null;
+  activeExam.completed = true;
 
   let correctCount = 0;
   const total = activeExam.questions.length;
@@ -1070,7 +1125,7 @@ window.finishTimedSession = function() {
 
   activeExam.questions.forEach((q, idx) => {
     const userAns = activeExam.userAnswers[idx];
-    const isCorrect = userAns && String(userAns).trim().toLowerCase() === String(q.correct_answer).trim().toLowerCase();
+    const isCorrect = isAnswerCorrect(userAns, q.correct_answer);
     if (isCorrect) correctCount++;
 
     // Update skill progress in background
@@ -1115,7 +1170,7 @@ function showTestResults(correct, total, timeSpentSec) {
   // Generate Review Accordion HTML
   const reviewHtml = activeExam.questions.map((q, idx) => {
     const userAns = activeExam.userAnswers[idx] || 'Chưa trả lời';
-    const isCorrect = userAns !== 'Chưa trả lời' && String(userAns).trim().toLowerCase() === String(q.correct_answer).trim().toLowerCase();
+    const isCorrect = userAns !== 'Chưa trả lời' && isAnswerCorrect(userAns, q.correct_answer);
 
     let whyNot = '';
     if (q.why_others_wrong && typeof q.why_others_wrong === 'object') {
@@ -1676,10 +1731,17 @@ window.exportUserData = function() {
 window.exportErrorLogCSV = function() {
   if (!db.errors || !db.errors.length) { alert('Chưa có dữ liệu lỗi sai.'); return; }
   const headers = ['question_id', 'domain', 'skill', 'answer', 'correct_answer', 'error_type', 'date'];
+  const cleanCell = val => `"${String(val || '').replace(/"/g, '""')}"`;
   const rows = db.errors.map(e => [
-    e.question_id, `"${e.domain}"`, `"${e.skill}"`, `"${e.answer}"`, `"${e.correct_answer}"`, e.error_type, new Date(e.timestamp).toLocaleDateString()
+    cleanCell(e.question_id),
+    cleanCell(e.domain),
+    cleanCell(e.skill),
+    cleanCell(e.answer),
+    cleanCell(e.correct_answer),
+    cleanCell(e.error_type),
+    cleanCell(new Date(e.timestamp).toLocaleDateString('vi-VN'))
   ]);
-  const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+  const csv = '\uFEFF' + [headers.join(','), ...rows.map(r => r.join(','))].join('\r\n');
   const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
@@ -1696,15 +1758,83 @@ window.resetAllProgress = function() {
   location.reload();
 };
 
-// ── Global Keyboard Shortcuts ──
+// ── Global Keyboard Shortcuts & Modal UX (Digital SAT Bluebook Standards) ──
 document.addEventListener('keydown', e => {
+  // Always allow Escape to close active modals
   if (e.key === 'Escape') {
     closeAICoach();
     closeShareModal();
     closeAnkiModal();
     const desmos = $('#desmos-modal');
     if (desmos && !desmos.classList.contains('hidden')) toggleDesmos();
+    return;
   }
+
+  // Do not intercept if user is typing in an input, textarea, or contenteditable
+  const activeEl = document.activeElement;
+  const isInput = activeEl && (
+    activeEl.tagName === 'INPUT' ||
+    activeEl.tagName === 'TEXTAREA' ||
+    activeEl.isContentEditable
+  );
+  if (isInput) return;
+
+  const currentRoute = location.hash || '#today';
+  const key = e.key.toUpperCase();
+
+  // Test / Exam Screen Hotkeys (Bluebook Navigation)
+  if (currentRoute === '#test' && $('#timed-exam-area')?.style.display === 'block') {
+    if (['A', 'B', 'C', 'D'].includes(key)) {
+      e.preventDefault();
+      selectExamAnswer(key);
+    } else if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      prevTimedQuestion();
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      nextTimedQuestion();
+    }
+    return;
+  }
+
+  // Practice Screen Hotkeys
+  if (currentRoute === '#practice') {
+    if (['A', 'B', 'C', 'D'].includes(key)) {
+      e.preventDefault();
+      selectChoice(key);
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      submitCurrentAnswer();
+    }
+    return;
+  }
+
+  // Review / Flashcard Screen Hotkeys
+  if (currentRoute === '#review' && $('#flashcard-interactive-wrapper')?.style.display === 'block') {
+    if (e.key === ' ') {
+      e.preventDefault();
+      flipFlashcard();
+    } else if (['1', '2', '3', '4'].includes(e.key)) {
+      e.preventDefault();
+      rateFlashcard(Number(e.key));
+    }
+  }
+});
+
+// Modal Backdrop Click-to-Close (Alibaba OCR - Usability & Ergonomics)
+document.addEventListener('click', e => {
+  const backdropConfigs = [
+    { el: $('#desmos-modal'), close: toggleDesmos, isOpen: el => !el.classList.contains('hidden') && el.style.display !== 'none' },
+    { el: $('#share-modal'), close: closeShareModal, isOpen: el => el.style.display === 'flex' },
+    { el: $('#anki-export-modal'), close: closeAnkiModal, isOpen: el => el.style.display === 'flex' },
+    { el: $('#ai-coach-modal'), close: closeAICoach, isOpen: el => el.classList.contains('open') }
+  ];
+
+  backdropConfigs.forEach(({ el, close, isOpen }) => {
+    if (el && isOpen(el) && e.target === el) {
+      close();
+    }
+  });
 });
 
 // ── App Startup ──
