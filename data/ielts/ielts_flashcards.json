@@ -1,0 +1,68 @@
+{
+  "deck_name": "IELTS Academic Word List & Collocations",
+  "cards": [
+    {
+      "card_id": "IELTS-FC-001",
+      "type": "vocabulary",
+      "difficulty": 3,
+      "front": {
+        "word": "substantiate",
+        "context": "The researcher failed to substantiate her empirical claims with reproducible trial data."
+      },
+      "back": {
+        "meaning": "To provide factual evidence to support or prove the truth of an assertion (Chứng minh, xác thực)",
+        "collocations": ["substantiate a hypothesis", "empirical substantiation", "fail to substantiate"],
+        "ielts_usage": "Crucial for Writing Task 2 and Reading evidence evaluation.",
+        "example": "Subsequent environmental audits substantiated the initial findings of heavy metal contamination."
+      },
+      "skill": "Academic Lexical Resource"
+    },
+    {
+      "card_id": "IELTS-FC-002",
+      "type": "vocabulary",
+      "difficulty": 3,
+      "front": {
+        "word": "mitigate",
+        "context": "Urban greening initiatives serve to mitigate the adverse microclimatic effects of concrete infrastructure."
+      },
+      "back": {
+        "meaning": "To make something less severe, harmful, or painful (Giảm thiểu tác động tiêu cực)",
+        "collocations": ["mitigate risks", "mitigate climate impacts", "mitigation strategy"],
+        "ielts_usage": "High-frequency in environmental, social, and economic Writing Task 2 essays.",
+        "example": "Strict emissions caps were instituted to mitigate further atmospheric degradation."
+      },
+      "skill": "Academic Lexical Resource"
+    },
+    {
+      "card_id": "IELTS-FC-003",
+      "type": "grammar_cohesion",
+      "difficulty": 4,
+      "front": {
+        "phrase": "Notwithstanding the fact that...",
+        "function": "Concession & High-Level Contrast Transition"
+      },
+      "back": {
+        "meaning": "In spite of the fact that / Although (Mặc dù / Bất kể thực tế rằng...)",
+        "ielts_usage": "Used in Band 8+ Writing Task 2 introduction/counter-argument paragraphs to demonstrate complex syntactic range.",
+        "example": "Notwithstanding the substantial initial capital investment, photovoltaic solar arrays deliver long-term economic dividends."
+      },
+      "skill": "Coherence & Cohesion"
+    },
+    {
+      "card_id": "IELTS-FC-004",
+      "type": "vocabulary",
+      "difficulty": 3,
+      "front": {
+        "word": "ubiquitous",
+        "context": "Handheld smart devices have become ubiquitous throughout secondary school classrooms."
+      },
+      "back": {
+        "meaning": "Present, appearing, or found everywhere (Phổ biến khắp nơi, nhan nhản)",
+        "collocations": ["ubiquitous presence", "become increasingly ubiquitous"],
+        "ielts_usage": "Replaces basic adjectives like 'popular' or 'very common' in Academic Writing & Speaking Part 3.",
+        "example": "Digital automated payment systems are now virtually ubiquitous across urban retail centers."
+      },
+      "skill": "Academic Lexical Resource"
+    }
+  ]
+}

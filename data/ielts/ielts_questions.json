@@ -1,0 +1,139 @@
+{
+  "exam": "IELTS Academic",
+  "version": "2026",
+  "questions": [
+    {
+      "question_id": "IELTS-RD-001",
+      "domain": "Reading",
+      "skill": "True / False / Not Given",
+      "difficulty": 3,
+      "passage": "Biomimetics—the practice of developing novel materials and technologies by emulating patterns and strategies found in biological nature—has reshaped contemporary architecture. A prominent instance is Harare's Eastgate Centre in Zimbabwe, designed by architect Mick Pearce. The ventilation system models the self-cooling mechanisms of indigenous Macrotermes termite mounds. These subterranean architects maintain nest temperatures within a fraction of a degree while exterior temperatures fluctuate wildly from 35°C during hot African days to below freezing at night. By utilizing passive airflow generated through convective chimneys and concrete thermal mass, the complex consumes 90 percent less energy than conventional air-conditioned buildings of comparable scale.",
+      "question_stem": "The temperature inside Macrotermes termite mounds remains virtually constant despite extreme external weather swings.",
+      "choices": {
+        "A": "TRUE",
+        "B": "FALSE",
+        "C": "NOT GIVEN"
+      },
+      "correct_answer": "A",
+      "explanation": "The text explicitly states that the termites 'maintain nest temperatures within a fraction of a degree while exterior temperatures fluctuate wildly from 35°C... to below freezing'. 'Within a fraction of a degree' directly matches 'remains virtually constant'. Therefore, the statement is TRUE.",
+      "why_others_wrong": {
+        "B": "Incorrect because the passage directly confirms constant internal temperatures rather than contradicting it.",
+        "C": "Incorrect because specific factual evidence for internal vs. external temperature stability is fully documented in the paragraph."
+      },
+      "common_trap": "Overlooking synonym paraphrases: 'within a fraction of a degree' = 'virtually constant'.",
+      "thinking_framework": "IELTS True/False/Not Given: Match three factual checkpoints: 1. Subject (termite mound temperature), 2. Direction/State (constant), 3. Condition (external fluctuations). All three are affirmed.",
+      "error_type": "PARAPHRASE_RECOGNITION",
+      "estimated_time_seconds": 75,
+      "source_basis": "original_academic",
+      "tags": ["architecture", "biomimetics", "reading"]
+    },
+    {
+      "question_id": "IELTS-RD-002",
+      "domain": "Reading",
+      "skill": "Matching Headings",
+      "difficulty": 4,
+      "passage": "Urban agroforestry—integrating trees and woody perennials into municipal agriculture—is gaining momentum across temperate metropolitan regions. Beyond producing food, urban tree canopies alleviate the urban heat island effect, attenuate stormwater runoff, and sequester atmospheric carbon. Nevertheless, municipal planners frequently encounter bureaucratic friction regarding subterranean utility conflicts, zoning ordinances dating to industrial-era segregation of land uses, and complex liability frameworks surrounding municipal tree maintenance.",
+      "question_stem": "Which heading best summarizes the paragraph?",
+      "choices": {
+        "A": "The ecological yields and regulatory impediments of municipal agroforestry",
+        "B": "Historical development of industrial zoning in temperate cities",
+        "C": "Technological advancements in urban stormwater filtration",
+        "D": "Economic profitability of commercial city tree farms"
+      },
+      "correct_answer": "A",
+      "explanation": "The paragraph is structured into two core halves: the environmental benefits (alleviating heat islands, stormwater attenuation, carbon capture) followed by the counterbalancing regulatory/legal challenges (zoning ordinances, subterranean utilities, liability). Option A captures both sides comprehensively.",
+      "why_others_wrong": {
+        "B": "Too narrow: industrial zoning is only cited as one historical cause of regulatory friction.",
+        "C": "Distractor: stormwater filtration is a minor detail, not the main theme.",
+        "D": "Out of scope: the paragraph focuses on municipal sustainability, not commercial tree farming profitability."
+      },
+      "common_trap": "Selecting a heading based on a single supporting sentence rather than the structural dual-theme (Benefits + Obstacles).",
+      "thinking_framework": "Heading Matcher: Identify Topic Sentence + Pivot Indicator ('Nevertheless') + Concluding Synthesizer.",
+      "error_type": "OVER_GENERALIZATION",
+      "estimated_time_seconds": 90,
+      "source_basis": "original_academic",
+      "tags": ["urban_planning", "ecology", "reading"]
+    },
+    {
+      "question_id": "IELTS-RD-003",
+      "domain": "Reading",
+      "skill": "Summary Completion",
+      "difficulty": 3,
+      "passage": "Epigenetic modifications represent chemical tags appended to genomic DNA or associated histone proteins that alter gene expression without mutating the fundamental nucleotide sequence. Environmental stimuli such as prolonged nutritional scarcity, psychological trauma, or environmental toxicant exposure can trigger the addition or removal of methyl groups. Remarkably, several longitudinal cohort studies demonstrate that these epigenetic signatures can persist across mitotic divisions and potentially influence health outcomes in subsequent generations.",
+      "question_stem": "Epigenetic mechanisms alter gene activity through chemical additions without changing the underlying ______ sequence.",
+      "choices": {
+        "A": "nucleotide",
+        "B": "histone",
+        "C": "mitotic",
+        "D": "nutritional"
+      },
+      "correct_answer": "A",
+      "explanation": "The passage states: 'alter gene expression without mutating the fundamental nucleotide sequence'. 'Mutating' equates to 'changing', making 'nucleotide' the exact fitting lexical item.",
+      "why_others_wrong": {
+        "B": "Histones are associated proteins, not the sequence that remains unmutated.",
+        "C": "Mitotic refers to cellular division types, not sequence composition.",
+        "D": "Nutritional refers to environmental stressors."
+      },
+      "common_trap": "Picking adjacent nouns ('histone') instead of the specific modifier of 'sequence'.",
+      "thinking_framework": "Summary Gap Fill: Check grammatical category (noun/adjective modifying 'sequence') and scan for the negation marker ('without changing').",
+      "error_type": "LEXICAL_PRECISION",
+      "estimated_time_seconds": 60,
+      "source_basis": "original_academic",
+      "tags": ["genetics", "biology", "reading"]
+    },
+    {
+      "question_id": "IELTS-WR-001",
+      "domain": "Writing",
+      "skill": "Task 1 Data Description & Synthesis",
+      "difficulty": 3,
+      "passage": "Visual Data Scenario: A line graph illustrates the percentage of renewable electricity generation across four European nations (Germany, Denmark, Spain, UK) between 2000 and 2024. Denmark exhibited a dramatic upward trajectory from 16% to 82%, overtaking Germany in 2012.",
+      "question_stem": "Which overview sentence is most effective and adheres to IELTS Band 8+ academic criteria?",
+      "choices": {
+        "A": "Overall, while all surveyed countries experienced growth in renewable electricity shares, Denmark registered the most substantial increase, surpassing Germany as the leading producer over the period.",
+        "B": "In 2000 Denmark was 16% and in 2024 it was 82%, while Germany was 8% in 2000 and 52% in 2024.",
+        "C": "I think renewable energy is very important for European countries to fight climate change.",
+        "D": "Overall, Denmark went up, Germany went up, Spain went up and UK also increased slightly."
+      },
+      "correct_answer": "A",
+      "explanation": "An Band 8+ Task 1 Overview must highlight key general trends and standout comparative features (broad upward trend + Denmark's dominant growth and leadership transition) without mechanical data listing or personal opinions.",
+      "why_others_wrong": {
+        "B": "Lists mechanical statistics with zero synthesis; belongs in body paragraphs, not the overview.",
+        "C": "Personal opinion / stance is strictly penalized in Academic Task 1.",
+        "D": "Repetitive, simplistic sentence structure lacking cohesive synthesis."
+      },
+      "common_trap": "Writing specific numbers into the Overview or including personal commentary.",
+      "thinking_framework": "Task 1 Overview Formula: [Overall Signpost] + [General Collective Trend] + [Key Divergence / Extremum].",
+      "error_type": "ACADEMIC_REGISTER",
+      "estimated_time_seconds": 80,
+      "source_basis": "original_academic",
+      "tags": ["writing", "task1", "academic_style"]
+    },
+    {
+      "question_id": "IELTS-WR-002",
+      "domain": "Writing",
+      "skill": "Task 2 Academic Cohesion & Hedging",
+      "difficulty": 4,
+      "passage": "Topic: Some educators argue that university curricula should focus entirely on job-specific technical skills rather than broad theoretical humanities.",
+      "question_stem": "Which thesis and topic sentence achieves the highest academic sophistication through appropriate hedging and concession?",
+      "choices": {
+        "A": "While vocational training undeniably enhances immediate graduate employability, overemphasizing technical specialization risks eroding critical thinking and adaptive capacity in an evolving labor market.",
+        "B": "Humanities are 100% better than technical skills and all universities must stop teaching technology.",
+        "C": "Technical skills are very useful for getting a job quickly after graduating university.",
+        "D": "University should teach everything because students have different minds and interests."
+      },
+      "correct_answer": "A",
+      "explanation": "Option A uses academic hedging ('undeniably enhances', 'risks eroding', 'evolving labor market') and complex concession syntax ('While X, Y') to establish a balanced, high-level Band 8+ analytical position.",
+      "why_others_wrong": {
+        "B": "Absolute, emotional language ('100% better', 'must stop') violates academic objectivity.",
+        "C": "Unilateral, elementary sentence with no concession or depth.",
+        "D": "Vague colloquial phrasing ('teach everything', 'different minds')."
+      },
+      "common_trap": "Using sweeping absolute statements (always, never, 100%) instead of modal hedges (tends to, risks, potentially).",
+      "thinking_framework": "IELTS Task 2 Hedging Principle: Concession Clause ('Although/While...') + Counter-argument with Modal Verbs.",
+      "error_type": "HEDGING_AND_REGISTER",
+      "estimated_time_seconds": 90,
+      "source_basis": "original_academic",
+      "tags": ["writing", "task2", "cohesion"]
+    }
+  ]
+}

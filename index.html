@@ -3,657 +3,542 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>N&amp;Mstudio_Education — SAT IntelliPrep | Hệ Thống Luyện Thi Digital SAT 2026</title>
-  <meta name="description" content="N&amp;Mstudio_Education — SAT IntelliPrep: Hệ thống luyện thi Digital SAT thông minh 2026 dành riêng cho học sinh THPT (Lớp 10-12) và phụ huynh đồng hành. Ngân hàng câu hỏi adaptive, flashcards FSRS, máy tính Desmos và phân tích lỗi sai chuẩn tâm lý học giáo dục.">
-  <meta name="keywords" content="Digital SAT 2026, luyện thi SAT, SAT IntelliPrep, N&amp;Mstudio, từ vựng SAT Anki, đề thi thử SAT, phụ huynh đồng hành SAT, du học Mỹ">
+  <title>N&amp;Mstudio_Education — IELTS / SAT Intelligent Learning OS</title>
+  <meta name="description" content="Hệ thống luyện thi Digital SAT & IELTS Academic thông minh dành riêng cho học sinh THPT (Lớp 10-12) và Phụ huynh đồng hành.">
+  <meta name="keywords" content="Digital SAT 2026, IELTS Academic, N&amp;Mstudio Education, Luyện thi SAT, Spaced Repetition, FSRS, Desmos">
   <meta name="author" content="N&amp;Mstudio_Education">
-  <meta name="theme-color" content="#1a1a2e">
+  <meta name="theme-color" content="#15283B">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/logo.png">
 
-  <!-- OpenGraph / Facebook / Zalo -->
+  <!-- OpenGraph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sat-intelliprep.nmstudio.edu.vn">
-  <meta property="og:title" content="N&amp;Mstudio_Education — SAT IntelliPrep | Chinh Phục Digital SAT 2026">
-  <meta property="og:description" content="Nền tảng luyện thi Digital SAT thông minh chuẩn quốc tế. Cùng học sinh lớp 10-12 bứt phá 1500+ và phụ huynh theo dõi tiến trình thực chất.">
+  <meta property="og:title" content="N&amp;Mstudio_Education — IELTS / SAT Intelligent Learning OS">
+  <meta property="og:description" content="Nền tảng luyện thi chuẩn học thuật Calm Academic Intelligence dành cho học sinh THPT bứt phá 1500+ SAT và 7.5+ IELTS.">
   <meta property="og:image" content="assets/logo.png">
 
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="N&amp;Mstudio_Education — SAT IntelliPrep">
-  <meta name="twitter:description" content="Luyện thi Digital SAT thông minh cùng N&amp;Mstudio_Education. Tối ưu tư duy, chuẩn hóa phương pháp, bứt phá điểm số.">
-  <meta name="twitter:image" content="assets/logo.png">
-
-  <!-- Schema.org JSON-LD for Google SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationalApplication",
-    "name": "N&Mstudio_Education — SAT IntelliPrep",
-    "applicationCategory": "EducationalApplication",
-    "operatingSystem": "All modern browsers (Chrome, Edge, Safari, Firefox)",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "VND"
-    },
-    "description": "Hệ thống luyện thi Digital SAT thông minh dành cho học sinh lớp 10-12 và phụ huynh đồng hành với phương pháp tâm lý học giáo dục tích cực.",
-    "author": {
-      "@type": "Organization",
-      "name": "N&Mstudio_Education",
-      "telephone": "+98 557 8385",
-      "url": "https://zalo.me/84985578385"
-    }
-  }
-  </script>
-
-  <!-- Google Fonts: Plus Jakarta Sans (Geometric Modern) -->
+  <!-- Typography: Be Vietnam Pro (Calm Academic Standard) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- Initial Setup Modal -->
-  <div id="setup-modal">
-    <div class="modal-content">
-      <div class="setup-brand-header text-center mb-4">
-        <img src="assets/logo.png" alt="N&amp;Mstudio Logo" class="brand-logo-large mx-auto mb-2" width="64" height="64">
-        <h2 class="text-xl font-bold">N&amp;Mstudio_Education</h2>
-        <p class="text-sm font-semibold" style="color:var(--color-primary)">SAT IntelliPrep — Lộ Trình Cá Nhân Hóa</p>
+  <div id="setup-modal" style="display:none;">
+    <div class="modal-content" style="background:var(--color-surface);border-radius:var(--radius-xl);padding:2rem;max-width:500px;width:90%;box-shadow:var(--shadow-lg);border:1px solid var(--color-border);">
+      <div class="text-center mb-4">
+        <img src="assets/logo.png" alt="N&amp;Mstudio Logo" width="56" height="56" style="border-radius:12px;margin-bottom:0.5rem;">
+        <h2 style="font-size:1.35rem;font-weight:800;">Chào mừng bạn đến với N&amp;Mstudio</h2>
+        <p class="text-muted" style="font-size:0.85rem;">Thiết lập hồ sơ để hệ thống cá nhân hóa lộ trình học tập.</p>
       </div>
-      <p class="mb-4 text-muted text-sm">Chào mừng bạn! Hãy thiết lập hồ sơ học tập để hệ thống cá nhân hóa bài luyện tập theo đúng năng lực.</p>
       
-      <label class="font-semibold block mb-2 text-sm">Khối Lớp Hiện Tại (Grade)</label>
-      <select id="setup-grade">
-        <option value="10">Lớp 10 (Xây dựng nền tảng từ vựng &amp; tư duy logic sớm)</option>
-        <option value="11">Lớp 11 (Giai đoạn vàng tăng tốc luyện đề &amp; bứt phá 1450+)</option>
-        <option value="12">Lớp 12 (Chinh phục điểm tuyệt đối &amp; hoàn thiện hồ sơ Early Decision)</option>
+      <label style="font-weight:700;font-size:0.85rem;display:block;margin-bottom:0.35rem;">Chương Trình Mục Tiêu</label>
+      <select id="setup-workspace" style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius);border:1.5px solid var(--color-border);margin-bottom:1rem;">
+        <option value="sat" selected>Digital SAT 2026 (Mục tiêu 1450 - 1550+)</option>
+        <option value="ielts">IELTS Academic (Mục tiêu Band 7.0 - 8.0+)</option>
       </select>
 
-      <label class="font-semibold block mb-2 mt-3 text-sm">Trình Độ Tiếng Anh (English Level)</label>
-      <select id="setup-level">
-        <option value="foundation">Cơ bản / Foundation (Hỗ trợ song ngữ Anh - Việt)</option>
-        <option value="intermediate" selected>Trung cấp / Intermediate (Ưu tiên tiếng Anh chuẩn SAT)</option>
-        <option value="advanced">Nâng cao / Advanced (100% tiếng Anh nguyên bản)</option>
+      <label style="font-weight:700;font-size:0.85rem;display:block;margin-bottom:0.35rem;">Khối Lớp Hiện Tại</label>
+      <select id="setup-grade" style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius);border:1.5px solid var(--color-border);margin-bottom:1rem;">
+        <option value="10">Lớp 10 (Xây dựng nền tảng từ vựng &amp; tư duy sớm)</option>
+        <option value="11" selected>Lớp 11 (Giai đoạn vàng tăng tốc luyện đề)</option>
+        <option value="12">Lớp 12 (Bứt phá điểm tối đa &amp; nộp hồ sơ du học)</option>
       </select>
 
-      <button id="setup-submit" class="btn btn-primary mt-4 w-full">Bắt Đầu Học Ngay 🚀</button>
+      <label style="font-weight:700;font-size:0.85rem;display:block;margin-bottom:0.35rem;">Cấp Độ Ngôn Ngữ</label>
+      <select id="setup-level" style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius);border:1.5px solid var(--color-border);margin-bottom:1.5rem;">
+        <option value="foundation">Cơ bản (Hỗ trợ giải thích tiếng Việt)</option>
+        <option value="intermediate" selected>Trung cấp (Chuẩn học thuật quốc tế)</option>
+        <option value="advanced">Nâng cao (100% tiếng Anh nguyên bản)</option>
+      </select>
+
+      <button id="setup-submit" class="btn-primary-action w-full" style="width:100%;">Bắt Đầu Lộ Trình Học Tập 🚀</button>
     </div>
   </div>
 
-  <div class="layout">
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-      <div class="sidebar-brand">
-        <img src="assets/logo.png" alt="N&amp;Mstudio Logo" class="brand-logo" width="42" height="42">
-        <div class="brand-info">
-          <div class="brand-title">N&amp;Mstudio</div>
-          <div class="brand-subtitle">SAT IntelliPrep</div>
+  <div class="app-container">
+    <!-- Top Header & Workspace Switcher -->
+    <header class="top-header">
+      <div class="top-header-inner">
+        <!-- Brand identity -->
+        <div class="brand-section">
+          <img src="assets/logo.png" alt="Logo" class="brand-logo-img">
+          <div class="brand-name-wrap">
+            <span class="brand-title">N&amp;Mstudio_Education</span>
+            <span class="brand-tagline">Intelligent Learning OS</span>
+          </div>
+        </div>
+
+        <!-- Workspace Selector -->
+        <div class="workspace-selector-box">
+          <span class="workspace-label">Chương Trình:</span>
+          <select id="workspace-select" class="workspace-select" onchange="switchWorkspace(this.value)">
+            <option value="sat">Digital SAT 2026</option>
+            <option value="ielts">IELTS Academic</option>
+          </select>
+        </div>
+
+        <!-- 5-Destination Primary Navigation -->
+        <nav class="primary-nav">
+          <a href="#today" class="nav-tab active" data-nav="today"><span class="nav-icon">🧭</span> <span class="nav-text">TODAY</span></a>
+          <a href="#practice" class="nav-tab" data-nav="practice"><span class="nav-icon">🎯</span> <span class="nav-text">PRACTICE</span></a>
+          <a href="#review" class="nav-tab" data-nav="review"><span class="nav-icon">🔄</span> <span class="nav-text">REVIEW</span></a>
+          <a href="#test" class="nav-tab" data-nav="test"><span class="nav-icon">⏱️</span> <span class="nav-text">TEST</span></a>
+          <a href="#progress" class="nav-tab" data-nav="progress"><span class="nav-icon">📊</span> <span class="nav-text">PROGRESS</span></a>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <button id="toggle-lang" class="btn btn-outline text-xs" style="padding:0.35rem 0.65rem;">🌐 VI / EN</button>
+          <a href="https://zalo.me/84985578385" target="_blank" rel="noopener noreferrer" class="zalo-pill-btn" title="Liên hệ Hotline Zalo">
+            <span>💬 Hotline: +98 557 8385</span>
+          </a>
         </div>
       </div>
-      <nav class="nav-menu">
-        <a href="#today" class="nav-item active" data-en="TODAY" data-vi="HÔM NAY">TODAY</a>
-        <a href="#learn" class="nav-item" data-en="LEARN" data-vi="HỌC">LEARN</a>
-        <a href="#practice" class="nav-item" data-en="PRACTICE" data-vi="LUYỆN TẬP">PRACTICE</a>
-        <a href="#flashcards" class="nav-item" data-en="FLASHCARDS" data-vi="THẺ GHI NHỚ">FLASHCARDS</a>
-        <a href="#timed" class="nav-item" data-en="TIMED" data-vi="LUYỆN THỜI GIAN">TIMED</a>
-        <a href="#mock" class="nav-item" data-en="MOCK SAT" data-vi="THI THỬ">MOCK SAT</a>
-        <a href="#mistakes" class="nav-item" data-en="MY MISTAKES" data-vi="LỖI CỦA TÔI">MY MISTAKES</a>
-        <a href="#progress" class="nav-item" data-en="PROGRESS" data-vi="TIẾN ĐỘ">PROGRESS</a>
-        <a href="#parent" class="nav-item nav-parent-item" data-en="PARENT COMPANION" data-vi="GÓC PHỤ HUYNH">👨‍👩‍👧 GÓC PHỤ HUYNH</a>
-      </nav>
-      <div class="sidebar-footer mt-auto pt-3 border-t border-border">
-        <button id="toggle-lang" class="btn btn-outline text-xs w-full mb-2">🌐 Đổi Ngôn Ngữ / Toggle Lang</button>
-        <a href="https://zalo.me/84985578385" target="_blank" rel="noopener noreferrer" class="zalo-partner-badge" title="Kết nối Hotline Zalo">
-          <div class="zalo-badge-icon">💬</div>
-          <div class="zalo-badge-text">
-            <span class="zalo-badge-label">Tư vấn &amp; Hợp tác:</span>
-            <span class="zalo-badge-phone">+98 557 8385 (Zalo)</span>
-          </div>
-        </a>
-      </div>
-    </aside>
+    </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
+    <!-- Main Content Shell -->
+    <main class="main-shell">
       
-      <!-- Dashboard Section -->
-      <section id="today" class="section active">
-        <!-- Hero Split-Screen Showcase (Geometric Bauhaus Theme) -->
-        <div class="hero-split-container mb-6">
-          <div class="hero-split-grid">
-            <!-- Left Hero: Deep Midnight Indigo -->
-            <div class="hero-left-panel">
-              <!-- Top micro-nav inside hero -->
-              <div class="hero-micro-nav flex justify-between items-center mb-6">
-                <div class="hero-brand-pill">
-                  <span class="hero-brand-dot"></span>
-                  <span>N&amp;Mstudio_Education</span>
-                </div>
-                <div class="hero-quick-links text-xs">
-                  <a href="#learn" class="hero-nav-link">Phương pháp</a>
-                  <a href="#mock" class="hero-nav-link">Thi thử</a>
-                  <a href="#parent" class="hero-nav-link highlight">Góc Phụ Huynh</a>
-                </div>
-              </div>
-
-              <!-- Main Headline -->
-              <div class="hero-headline-wrap mb-5">
-                <h1 class="hero-display-title">
-                  Chinh phục<br>
-                  <span class="text-sky-gradient">Digital SAT 2026</span><br>
-                  bứt phá 1500+
-                </h1>
-                <p class="hero-subtitle text-sm">
-                  Lộ trình học tập thông minh cá nhân hóa cho học sinh Lớp 10–12 và Cổng đồng hành tâm lý học giáo dục dành riêng cho Phụ huynh.
-                </p>
-              </div>
-
-              <!-- Search / Quick Practice Launcher Pill -->
-              <div class="hero-search-wrapper mb-4">
-                <div class="hero-search-bar">
-                  <span class="search-icon">🔍</span>
-                  <input type="text" id="hero-search-input" placeholder="Tìm kiếm dạng bài, từ vựng hoặc gõ 'Desmos'..." onkeydown="if(event.key==='Enter') executeHeroSearch()">
-                  <button class="hero-search-submit-btn" onclick="executeHeroSearch()" title="Bắt đầu học ngay">
-                    <span>→</span>
-                  </button>
-                </div>
-              </div>
-
-              <!-- Fast tags and micro-copy -->
-              <div class="hero-quick-tags flex items-center gap-2 flex-wrap text-xs">
-                <span class="text-muted text-2xs uppercase tracking-wider">Gợi ý nhanh:</span>
-                <button class="hero-tag-chip" onclick="quickJumpTopic('rw-craft')">📖 Words in Context</button>
-                <button class="hero-tag-chip" onclick="quickJumpTopic('math-adv')">📐 Advanced Math</button>
-                <button class="hero-tag-chip" onclick="toggleDesmos()">📈 Máy tính Desmos</button>
-                <button class="hero-tag-chip" onclick="quickJumpTopic('fc')">🗂️ Flashcards FSRS</button>
-              </div>
-
-              <div class="hero-footer-link mt-5 pt-4 border-t border-white-10 text-xs text-muted flex justify-between items-center flex-wrap gap-2">
-                <span>Bạn là phụ huynh cần tư vấn lộ trình 1:1?</span>
-                <a href="https://zalo.me/84985578385" target="_blank" rel="noopener noreferrer" class="text-coral underline font-semibold">Nhắn Zalo: +98 557 8385 →</a>
-              </div>
-            </div>
-
-            <!-- Right Hero: Sky Blue Geometric Mosaic Collage -->
-            <div class="hero-right-panel">
-              <!-- Top bar on right panel -->
-              <div class="hero-right-top flex justify-between items-center mb-4">
-                <div class="flex items-center gap-2 text-xs font-bold text-navy-dark">
-                  <span>✨ Digital SAT 2026 Ready</span>
-                </div>
-                <a href="#mock" class="btn-dark-pill text-xs">
-                  <span>Thi Thử Ngay</span>
-                </a>
-              </div>
-
-              <!-- Geometric Bauhaus Bento Mosaic Grid -->
-              <div class="bauhaus-mosaic-grid">
-                <!-- Circle Frame 1: Top Coral / Student Achievement (1500+ Trajectory) -->
-                <div class="mosaic-cell cell-coral-circle" onclick="openShareModal()" title="Xem Thẻ Thành Tích Học Tập">
-                  <div class="circle-content">
-                    <span class="circle-emoji">🎯</span>
-                    <div class="circle-title">1500+</div>
-                    <div class="circle-sub">MỤC TIÊU TOP 1%</div>
-                  </div>
-                </div>
-
-                <!-- Geometric Pill: Sky Blue / 200+ Adaptive Questions -->
-                <div class="mosaic-cell cell-sky-pill" onclick="location.hash='#practice'">
-                  <div class="pill-stat">200+</div>
-                  <div class="pill-desc">Câu Hỏi Adaptive</div>
-                </div>
-
-                <!-- Circle Frame 2: Yellow Marigold / Desmos Graphing Calculator -->
-                <div class="mosaic-cell cell-yellow-circle" onclick="toggleDesmos()" title="Mở Máy tính Desmos">
-                  <div class="circle-content">
-                    <span class="circle-emoji">📈</span>
-                    <div class="circle-title">Desmos</div>
-                    <div class="circle-sub">MÁY TÍNH ĐỒ THỊ</div>
-                  </div>
-                </div>
-
-                <!-- Geometric Shape: Quarter Circle & Arch -->
-                <div class="mosaic-cell cell-quarter-arch" onclick="location.hash='#parent'">
-                  <div class="arch-tag">👨‍👩‍👧 Đồng Hành</div>
-                  <div class="arch-desc">0% Áp lực điểm số</div>
-                </div>
-
-                <!-- Circle Frame 3: Deep Midnight Indigo / Flashcard FSRS -->
-                <div class="mosaic-cell cell-navy-circle" onclick="location.hash='#flashcards'" title="Mở Thẻ Ghi Nhớ FSRS">
-                  <div class="circle-content">
-                    <span class="circle-emoji">🗂️</span>
-                    <div class="circle-title">80 Cards</div>
-                    <div class="circle-sub">ANKI &amp; FSRS-LITE</div>
-                  </div>
-                </div>
-
-                <!-- Geometric Pill: Pastel Pink / 15 Skills -->
-                <div class="mosaic-cell cell-pink-pill" onclick="location.hash='#progress'">
-                  <div class="pill-stat">15/15</div>
-                  <div class="pill-desc">Kỹ Năng Master</div>
-                </div>
-              </div>
-            </div>
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 1: TODAY (LEARNING COMMAND CENTER)
+           ═══════════════════════════════════════════════════════════════ -->
+      <section id="today" class="section-view active">
+        <div class="today-header">
+          <h1 class="today-greeting" id="today-greeting-text">Chào bạn! Chúc bạn một ngày học tập tập trung.</h1>
+          <div class="today-subdate flex items-center justify-between flex-wrap gap-2">
+            <span class="date-display"></span>
+            <span class="plan-badge" id="current-workspace-badge">Digital SAT Workspace</span>
           </div>
         </div>
 
-        <h2 class="text-xl font-bold mb-3 flex items-center justify-between">
-          <span>Kế Hoạch Hôm Nay / Today's Action</span>
-          <span class="text-sm font-normal text-muted date-display"></span>
-        </h2>
-
-        <div class="grid-3 mb-4">
-          <div class="card">
-            <h3 class="text-lg font-semibold">Recommended Study Plan</h3>
-            <p class="text-sm mt-2"><strong>Focus:</strong> Information & Ideas (RW)</p>
-            <p class="text-sm"><strong>Why:</strong> Low accuracy in last 3 sessions.</p>
-            <p class="text-sm"><strong>Time:</strong> 25 mins</p>
-            <button class="btn btn-primary mt-4">Start Session</button>
-          </div>
-          <div class="card">
-            <h3 class="text-lg font-semibold">Flashcards Due</h3>
-            <div class="text-3xl font-bold mt-2" id="fc-due-count">—</div>
-            <a href="#flashcards" class="btn btn-outline mt-4">Review Now</a>
-          </div>
-          <div class="card">
-            <h3 class="text-lg font-semibold">Recent Errors</h3>
-            <p class="text-sm mt-2">3 new errors in Advanced Math.</p>
-            <a href="#mistakes" class="btn btn-outline mt-4">Diagnose Errors</a>
-          </div>
-        </div>
-
-        <!-- Motivation & Action Row -->
-        <div class="card motivation-card mb-4">
-          <div class="flex justify-between items-center flex-wrap gap-3">
-            <div class="flex items-center gap-3">
-              <span class="text-2xl">🌱</span>
-              <div>
-                <h4 class="font-bold text-sm">Tư Duy Phát Triển (Growth Mindset)</h4>
-                <p class="text-xs text-muted">Mỗi lỗi sai hôm nay là một bước tiến gần hơn tới điểm 1500+. Kỷ luật bản thân từng ngày tạo nên thành quả vượt trội.</p>
-              </div>
-            </div>
-            <div class="flex gap-2 flex-wrap">
-              <button class="btn btn-outline text-xs" onclick="openShareModal()">🏆 Tạo Thẻ Thành Tích (Flex FB/Threads)</button>
-              <a href="#parent" class="btn btn-outline text-xs">👨‍👩‍👧 Dành Cho Phụ Huynh</a>
-            </div>
-          </div>
-        </div>
-
-        <h2 class="text-xl font-bold mb-4 mt-8">Quick Start / Bắt đầu nhanh</h2>
-        <div class="flex gap-4 flex-wrap items-center">
-          <button class="btn btn-outline" onclick="startQuickSession(20)">20 min session</button>
-          <button class="btn btn-outline" onclick="startQuickSession(45)">45 min session</button>
-          <button class="btn btn-outline" onclick="startQuickSession(90)">90 min session</button>
-          <button class="btn btn-primary" onclick="startSpacedReviewSession()">🔄 Review Previous Learning (Spaced Review)</button>
-        </div>
-      </section>
-
-      <!-- Learn Section -->
-      <section id="learn" class="section">
-        <h1>Learn / Học</h1>
-        <div class="grid-2">
-          <div class="card">
-            <h2>Track A: Digital SAT Mastery</h2>
-            <ul class="flex-col gap-2 mt-4">
-              <li><a href="#" class="btn btn-outline w-full text-left">RW: Information & Ideas</a></li>
-              <li><a href="#" class="btn btn-outline w-full text-left">RW: Craft & Structure</a></li>
-              <li><a href="#" class="btn btn-outline w-full text-left">Math: Algebra Frameworks</a></li>
-            </ul>
-          </div>
-          <div class="card">
-            <h2>Track B: Academic English</h2>
-            <ul class="flex-col gap-2 mt-4">
-              <li><a href="#" class="btn btn-outline w-full text-left">Advanced Vocabulary</a></li>
-              <li><a href="#" class="btn btn-outline w-full text-left">Complex Sentences</a></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Practice Section -->
-      <section id="practice" class="section">
-        <h1>Practice / Luyện Tập</h1>
-        <div class="card mb-4 flex gap-4 items-center flex-wrap">
-          <select id="practice-domain" style="width: auto; margin: 0;">
-            <option value="rw-info">RW: Information & Ideas</option>
-            <option value="rw-craft">RW: Craft & Structure</option>
-            <option value="rw-expr">RW: Expression of Ideas</option>
-            <option value="rw-conv">RW: Standard English Conventions</option>
-            <option value="math-alg">Math: Algebra</option>
-            <option value="math-adv">Math: Advanced Math</option>
-            <option value="math-psda">Math: Problem-Solving & Data Analysis</option>
-            <option value="math-geo">Math: Geometry & Trigonometry</option>
-          </select>
-          <select id="practice-diff" style="width: auto; margin: 0;">
-            <option value="">All Difficulties</option>
-            <option value="1">Level 1 — Foundation</option>
-            <option value="2">Level 2 — Core</option>
-            <option value="3">Level 3 — Applied</option>
-            <option value="4">Level 4 — Advanced SAT</option>
-            <option value="5">Level 5 — Transfer</option>
-          </select>
-          <button class="btn btn-primary" id="start-practice-btn">Load Questions</button>
-          <button class="btn btn-outline" id="practice-desmos-btn" onclick="toggleDesmos()" title="Open Desmos Graphing Calculator">📈 Desmos</button>
-        </div>
-        <div id="practice-area" class="card hidden">
-          <!-- Question rendered via JS -->
-          <div id="q-passage" class="mb-4"></div>
-          <div id="q-choices" class="flex-col gap-2"></div>
-          <div id="q-feedback" class="mt-4 hidden p-4 rounded bg-bg border border-border"></div>
-        </div>
-      </section>
-
-      <!-- Flashcards Section -->
-      <section id="flashcards" class="section">
-        <h1>Flashcards / Thẻ Ghi Nhớ</h1>
-        <div class="text-center mb-4">Cards Due: <strong id="fc-due">10</strong></div>
-        <div class="flashcard-container" id="flashcard">
-          <div class="flashcard">
-            <div class="flashcard-face flashcard-front">
-              <span id="fc-front-text">Front of card</span>
-            </div>
-            <div class="flashcard-face flashcard-back">
-              <span id="fc-back-text" class="mb-4">Back of card</span>
-              <div class="srs-buttons">
-                <button class="btn btn-outline" style="color: var(--color-error); border-color: currentColor;" onclick="nextCard('again')">Again</button>
-                <button class="btn btn-outline" style="color: var(--color-warning); border-color: currentColor;" onclick="nextCard('hard')">Hard</button>
-                <button class="btn btn-outline" style="color: var(--color-primary); border-color: currentColor;" onclick="nextCard('good')">Good</button>
-                <button class="btn btn-outline" style="color: var(--color-success); border-color: currentColor;" onclick="nextCard('easy')">Easy</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-4 flex justify-center gap-4 flex-wrap">
-          <button class="btn btn-primary" id="flip-btn">Flip Card (Lật thẻ)</button>
-          <button class="btn btn-outline" onclick="exportAnkiTSV()">🗂️ Export to Anki (.txt)</button>
-        </div>
-      </section>
-
-      <!-- Timed Section -->
-      <section id="timed" class="section">
-        <h1>Timed Practice / Luyện Thời Gian</h1>
-        <div id="timed-config" class="card">
-          <h2 class="text-lg font-semibold mb-2">Select Timed Mode</h2>
-          <p class="text-muted text-sm mb-4">Practice under authentic Digital SAT timing constraints to build pacing and stamina.</p>
-          <div class="grid-3 mb-4">
-            <div class="card" style="margin-bottom:0">
-              <h3 class="font-bold">RW Module Sprint</h3>
-              <p class="text-sm text-muted mt-1">20 Questions · 25 Minutes</p>
-              <button class="btn btn-primary mt-4 w-full" onclick="startTimedSession('rw', 25, 20)">Start RW Sprint</button>
-            </div>
-            <div class="card" style="margin-bottom:0">
-              <h3 class="font-bold">Math Module Sprint</h3>
-              <p class="text-sm text-muted mt-1">15 Questions · 25 Minutes</p>
-              <button class="btn btn-primary mt-4 w-full" onclick="startTimedSession('math', 25, 15)">Start Math Sprint</button>
-            </div>
-            <div class="card" style="margin-bottom:0">
-              <h3 class="font-bold">Power 10 Rapid Drill</h3>
-              <p class="text-sm text-muted mt-1">10 Mixed Questions · 10 Minutes</p>
-              <button class="btn btn-primary mt-4 w-full" onclick="startTimedSession('mixed', 10, 10)">Start Power 10</button>
-            </div>
-          </div>
-        </div>
-        <div id="timed-exam-area" class="card hidden">
-          <div class="exam-header">
+        <!-- Dominant Component: Today's Action Plan -->
+        <div class="today-command-card">
+          <div class="command-card-top">
             <div>
-              <span id="timed-exam-title" class="font-bold">Timed Practice</span>
-              <span id="timed-exam-status" class="text-sm text-muted ml-2"></span>
+              <span class="plan-badge">Kế Hoạch Hôm Nay • 27 Phút</span>
+              <h2 class="command-title" id="today-plan-headline">Tiếp Tục Luyện Tập Kỹ Năng Trọng Tâm</h2>
+              <p class="command-meta" id="today-plan-subtext">Hệ thống đã chuẩn bị 3 hoạt động tối ưu dựa trên phân tích lỗi sai gần nhất.</p>
             </div>
-            <div class="flex items-center gap-2">
-              <button class="btn btn-outline text-sm" id="timed-flag-btn" onclick="toggleFlagCurrentQuestion()">🚩 Flag</button>
-              <div id="timed-timer" class="timer-badge">25:00</div>
-              <button class="btn btn-primary text-sm" id="timed-submit-btn" onclick="finishTimedSession()">Finish Early</button>
-            </div>
-          </div>
-          <div id="timed-palette" class="q-palette"></div>
-          <div id="timed-q-content"></div>
-          <div class="flex justify-between items-center mt-6">
-            <button class="btn btn-outline" id="timed-prev-btn" onclick="navigateTimedQuestion(-1)">← Previous</button>
-            <div id="timed-conf-container" class="confidence-box">
-              <span class="text-xs font-semibold">Confidence:</span>
-              <button class="conf-btn" data-conf="high" onclick="setConfidence('high')">High (Chắc chắn)</button>
-              <button class="conf-btn" data-conf="medium" onclick="setConfidence('medium')">Medium (Phân vân)</button>
-              <button class="conf-btn" data-conf="low" onclick="setConfidence('low')">Low (Đoán)</button>
-            </div>
-            <button class="btn btn-primary" id="timed-next-btn" onclick="navigateTimedQuestion(1)">Next →</button>
-          </div>
-        </div>
-        <div id="timed-report-area" class="hidden"></div>
-      </section>
-
-      <!-- Mock Test Section -->
-      <section id="mock" class="section">
-        <h1>Mock SAT / Thi Thử Mô Phỏng</h1>
-        <div id="mock-config" class="card">
-          <div class="flex justify-between items-center mb-4">
-            <div>
-              <h2 class="text-xl font-bold">Digital SAT Multistage Adaptive Simulation</h2>
-              <p class="text-muted text-sm mt-1">Realistic 2-module structure: Module 1 routes to Easy/Hard Module 2 based on your performance.</p>
-            </div>
-            <span class="tag bg-primary text-white" style="color:white;background:var(--color-primary)">Adaptive MST</span>
-          </div>
-          <div class="mb-4">
-            <label class="text-sm font-semibold block mb-1">Select Practice Test Pack / Chọn Bộ Đề Luyện Thi:</label>
-            <select id="mock-test-selector" style="width:100%;max-width:400px;margin-bottom:0">
-              <option value="1">Digital SAT Practice Test 1 (Full Simulation)</option>
-              <option value="2">Digital SAT Practice Test 2 (Full Simulation)</option>
-              <option value="3">Digital SAT Practice Test 3 (Full Simulation)</option>
-            </select>
-          </div>
-          <div class="grid-2 mb-4">
-            <div class="card" style="margin-bottom:0">
-              <h3 class="font-bold">Reading & Writing Mock</h3>
-              <p class="text-sm text-muted mt-1">Module 1 (15 Qs, 18m) → Adaptive Module 2 (15 Qs, 18m)</p>
-              <button class="btn btn-primary mt-4 w-full" onclick="startMockTest('rw')">Begin RW Mock Test</button>
-            </div>
-            <div class="card" style="margin-bottom:0">
-              <h3 class="font-bold">Math Mock</h3>
-              <p class="text-sm text-muted mt-1">Module 1 (12 Qs, 18m) → Adaptive Module 2 (12 Qs, 18m)</p>
-              <button class="btn btn-primary mt-4 w-full" onclick="startMockTest('math')">Begin Math Mock Test</button>
-            </div>
-          </div>
-          <div class="p-4 rounded bg-bg text-sm text-muted border border-border">
-            <strong>Adaptive Routing Notice:</strong> The College Board Digital SAT routes students to a higher-difficulty or standard-difficulty Module 2. This simulation uses genuine item discrimination thresholds (65% benchmark) without inventing fake scaled scores.
-          </div>
-        </div>
-        <div id="mock-exam-area" class="card hidden">
-          <div class="exam-header">
-            <div>
-              <span id="mock-stage-badge" class="tag" style="background:var(--color-primary);color:white">Module 1: Routing</span>
-              <span id="mock-exam-status" class="text-sm text-muted ml-2 font-semibold"></span>
-            </div>
-            <div class="flex items-center gap-2">
-              <button class="btn btn-outline text-sm" id="mock-flag-btn" onclick="toggleMockFlagCurrentQuestion()">🚩 Flag</button>
-              <div id="mock-timer" class="timer-badge">18:00</div>
-              <button class="btn btn-primary text-sm" id="mock-submit-btn" onclick="submitCurrentMockModule()">Submit Module</button>
-            </div>
-          </div>
-          <div id="mock-palette" class="q-palette"></div>
-          <div id="mock-q-content"></div>
-          <div class="flex justify-between items-center mt-6">
-            <button class="btn btn-outline" id="mock-prev-btn" onclick="navigateMockQuestion(-1)">← Previous</button>
-            <div id="mock-conf-container" class="confidence-box">
-              <span class="text-xs font-semibold">Confidence:</span>
-              <button class="conf-btn" data-conf="high" onclick="setMockConfidence('high')">High (Chắc chắn)</button>
-              <button class="conf-btn" data-conf="medium" onclick="setMockConfidence('medium')">Medium (Phân vân)</button>
-              <button class="conf-btn" data-conf="low" onclick="setMockConfidence('low')">Low (Đoán)</button>
-            </div>
-            <button class="btn btn-primary" id="mock-next-btn" onclick="navigateMockQuestion(1)">Next →</button>
-          </div>
-        </div>
-        <div id="mock-break-area" class="card hidden text-center p-8">
-          <h2 class="text-2xl font-bold mb-2">Module 1 Complete</h2>
-          <p id="mock-routing-message" class="text-muted mb-6"></p>
-          <button class="btn btn-primary" onclick="proceedToMockModule2()">Continue to Module 2</button>
-        </div>
-        <div id="mock-report-area" class="hidden"></div>
-      </section>
-
-      <!-- Mistakes Section -->
-      <section id="mistakes" class="section">
-        <h1>My Mistakes / Lỗi Của Tôi</h1>
-        <div class="card">
-          <div class="flex justify-between items-center mb-4 flex-wrap gap-2">
-            <p class="text-muted">Review and diagnose your past errors to prevent them.</p>
-            <button class="btn btn-primary" onclick="startSpacedReviewSession()">🔄 Review All Mistake Concepts</button>
-          </div>
-          <div id="mistakes-list" class="flex-col gap-4">
-            <div class="p-4 border border-border rounded">
-              <div class="flex justify-between">
-                <span class="tag">Math: Algebra</span>
-                <span class="text-sm text-muted">Yesterday</span>
-              </div>
-              <p class="mt-2"><strong>Issue:</strong> Misinterpreted the slope of the linear equation.</p>
-              <div class="mt-4 flex gap-2">
-                <button class="btn btn-outline text-sm">Diagnosis</button>
-                <button class="btn btn-primary text-sm">Try Similar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Progress Section -->
-      <section id="progress" class="section">
-        <h1>Progress / Tiến Độ</h1>
-        <div class="grid-2">
-          <div class="card">
-            <h2>Skill Map</h2>
-            <div class="mt-4 flex-col gap-2">
-              <div>
-                <div class="flex justify-between text-sm"><span>Information & Ideas</span><span>80%</span></div>
-                <div class="progress-container"><div class="progress-bar bg-success" style="width: 80%"></div></div>
-              </div>
-              <div>
-                <div class="flex justify-between text-sm"><span>Craft & Structure</span><span>45%</span></div>
-                <div class="progress-container"><div class="progress-bar bg-warning" style="width: 45%"></div></div>
-              </div>
-              <div>
-                <div class="flex justify-between text-sm"><span>Advanced Math</span><span>30%</span></div>
-                <div class="progress-container"><div class="progress-bar bg-error" style="width: 30%"></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <h2>Accuracy Trend</h2>
-            <p class="text-muted text-sm mt-4">[Chart Placeholder: Accuracy over time]</p>
-          </div>
-        </div>
-        <div class="card mt-4">
-          <h2 class="text-lg font-bold mb-2">Data Management / Quản lý dữ liệu học tập</h2>
-          <p class="text-sm text-muted mb-4">Export your study history, error diagnoses, and flashcard progress for offline review or backup.</p>
-          <div class="flex gap-4 flex-wrap">
-            <button class="btn btn-outline" onclick="exportUserData()">📥 Export Study Data (JSON)</button>
-            <button class="btn btn-outline" onclick="exportErrorLogCSV()">📊 Export Mistake Ledger (CSV)</button>
-            <button class="btn btn-outline" onclick="exportAnkiTSV()">🗂️ Export Flashcards (Anki TSV)</button>
-            <button class="btn btn-outline" style="color:var(--color-error);border-color:currentColor" onclick="resetAllProgress()">🗑️ Reset All Progress</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Parent Companion Section -->
-      <section id="parent" class="section">
-        <div class="parent-header-banner p-6 rounded-lg mb-6">
-          <div class="flex justify-between items-start flex-wrap gap-4">
-            <div>
-              <div class="tag tag-parent mb-2">👨‍👩‍👧 DÀNH CHO CHA MẸ ĐỒNG HÀNH</div>
-              <h1 class="text-2xl font-bold mb-1">Góc Phụ Huynh — Đồng Hành Cùng Con Chinh Phục SAT</h1>
-              <p class="text-sm opacity-90 max-w-2xl">
-                Theo dõi sự kiên trì, nỗ lực và tiến bộ thực chất của con theo phương pháp tâm lý học giáo dục tích cực (Growth Mindset). Hệ thống tôn trọng quyền tự chủ của học sinh THPT, giúp cha mẹ thấu hiểu mà không tạo áp lực tiêu cực hay phán xét điểm số.
-              </p>
-            </div>
-            <div class="flex gap-2 flex-wrap">
-              <button class="btn btn-outline bg-white text-dark text-sm" onclick="window.print()">🖨️ In Báo Cáo Định Kỳ</button>
-              <a href="https://zalo.me/84985578385" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-sm">💬 Hotline Tư Vấn: +98 557 8385</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Metric Cards focused on EFFORT and CONSISTENCY (Not shaming errors) -->
-        <div class="grid-4 mb-6" id="parent-metrics-grid">
-          <div class="card stat-card">
-            <div class="text-muted text-xs font-semibold uppercase">⏱️ Tổng Thời Gian Rèn Luyện</div>
-            <div class="text-2xl font-bold mt-1" id="parent-total-hours">0 giờ 00p</div>
-            <div class="text-xs text-muted mt-1">Được tính từ các phiên học và làm đề thực tế</div>
-          </div>
-          <div class="card stat-card">
-            <div class="text-muted text-xs font-semibold uppercase">📝 Khối Lượng Câu Hỏi Hoàn Thành</div>
-            <div class="text-2xl font-bold mt-1" id="parent-total-questions">0 câu</div>
-            <div class="text-xs text-muted mt-1">Qua bài luyện tập, timed test và mock test</div>
-          </div>
-          <div class="card stat-card">
-            <div class="text-muted text-xs font-semibold uppercase">🔥 Kỷ Luật Rèn Luyện Tuần Này</div>
-            <div class="text-2xl font-bold mt-1" id="parent-active-days">0 ngày</div>
-            <div class="text-xs text-muted mt-1">Duy trì nhịp học đều đặn, không dồn ứ</div>
-          </div>
-          <div class="card stat-card">
-            <div class="text-muted text-xs font-semibold uppercase">🎯 Kỹ Năng Đã Làm Chủ Vững Vàng</div>
-            <div class="text-2xl font-bold mt-1" id="parent-mastered-skills">0 / 15</div>
-            <div class="text-xs text-muted mt-1">Đạt độ chính xác ≥ 75% trên ngân hàng đề</div>
-          </div>
-        </div>
-
-        <!-- Parent Psychology Advice & Encouragement -->
-        <div class="grid-2 mb-6">
-          <div class="card">
-            <h3 class="text-lg font-bold mb-3 flex items-center gap-2">
-              <span>💡</span> Cẩm Nang Tâm Lý Cha Mẹ (Học Sinh Lớp 10–12)
-            </h3>
-            <div class="flex-col gap-3 text-sm">
-              <div class="p-3 bg-muted-light rounded border-left-accent">
-                <strong>1. Tôn trọng lòng tự tôn &amp; sự tự chủ:</strong>
-                <p class="text-xs text-muted mt-1">Học sinh độ tuổi 15–18 cần cảm thấy mình là người làm chủ lộ trình học. Tránh kiểm tra đột xuất hoặc yêu cầu con chụp màn hình từng câu làm sai. Hãy hỏi: <em>"Hôm nay con thấy phần nào thú vị nhất?"</em></p>
-              </div>
-              <div class="p-3 bg-muted-light rounded border-left-accent">
-                <strong>2. Khen ngợi nỗ lực thay vì điểm số cố định (Growth Mindset):</strong>
-                <p class="text-xs text-muted mt-1">Khen: <em>"Bố mẹ ghi nhận con đã kiên trì ngồi 45 phút học từ vựng hôm nay"</em> tạo động lực nội tại mạnh mẽ hơn nhiều so với việc chỉ khen khi con đạt điểm cao.</p>
-              </div>
-              <div class="p-3 bg-muted-light rounded border-left-accent">
-                <strong>3. Biến lỗi sai thành cơ hội học tập:</strong>
-                <p class="text-xs text-muted mt-1">Digital SAT là kỳ thi của bẫy tư duy logic. Mỗi câu làm sai là một bẫy đã được vạch mặt. Khi con làm sai, hãy cùng con xem mục <em>"My Mistakes"</em> để con tự nhận ra bẫy người ra đề giăng ra.</p>
-              </div>
-              <div class="p-3 bg-muted-light rounded border-left-accent">
-                <strong>4. Bảo vệ giấc ngủ &amp; sức khỏe não bộ:</strong>
-                <p class="text-xs text-muted mt-1">Não bộ cần ngủ đủ 7–8 tiếng để củng cố trí nhớ dài hạn (Spaced Consolidation). Thức khuya cày cuốc trước ngày thi thường làm giảm 30–50 điểm SAT Reading do kiệt sức nhận thức.</p>
-              </div>
-            </div>
+            <button class="btn-primary-action" onclick="startTodayPlan()">
+              <span>▶ Bắt Đầu Kế Hoạch Hôm Nay</span>
+            </button>
           </div>
 
-          <div class="card">
-            <h3 class="text-lg font-bold mb-3 flex items-center gap-2">
-              <span>📋</span> Báo Cáo Tiến Trình Định Kỳ (Printable Summary)
-            </h3>
-            <div id="parent-report-card" class="p-4 border border-border rounded bg-surface">
-              <div class="flex justify-between items-center border-b border-border pb-2 mb-3">
+          <!-- Activity list breakdown -->
+          <div class="plan-activities-list">
+            <div class="plan-activity-item">
+              <div class="activity-name-wrap">
+                <span class="activity-index">1</span>
                 <div>
-                  <h4 class="font-bold text-sm">BẢN TỔNG KẾT TIẾN ĐỘ THỰC CHẤT</h4>
-                  <span class="text-xs text-muted" id="parent-report-date">Cập nhật hôm nay</span>
+                  <strong id="act-1-title">Luyện 10 Câu Kỹ Năng Trọng Tâm</strong>
+                  <div class="text-xs text-muted" id="act-1-desc">Information &amp; Ideas (Reading &amp; Writing)</div>
                 </div>
-                <span class="tag tag-success" id="parent-status-badge">Đang rèn luyện tốt</span>
               </div>
-              <div class="text-sm flex-col gap-2 mb-4" id="parent-report-summary">
-                <p>Học sinh đang theo học lộ trình Digital SAT với sự chủ động.</p>
+              <span class="activity-tag">15 phút</span>
+            </div>
+
+            <div class="plan-activity-item">
+              <div class="activity-name-wrap">
+                <span class="activity-index">2</span>
+                <div>
+                  <strong id="act-2-title">Chẩn Đoán Lỗi Sai (Spaced Error Review)</strong>
+                  <div class="text-xs text-muted" id="act-2-desc">Bóc tách 3 bẫy suy luận đã mắc phải trong tuần</div>
+                </div>
               </div>
-              <div class="border-t border-border pt-3 flex justify-between items-center">
-                <span class="text-xs text-muted">Hệ thống N&amp;Mstudio_Education</span>
-                <button class="btn btn-outline text-xs" onclick="window.print()">🖨️ In Báo Cáo Này</button>
+              <span class="activity-tag">7 phút</span>
+            </div>
+
+            <div class="plan-activity-item">
+              <div class="activity-name-wrap">
+                <span class="activity-index">3</span>
+                <div>
+                  <strong id="act-3-title">Truy Hồi Từ Vựng Học Thuật (FSRS Flashcards)</strong>
+                  <div class="text-xs text-muted" id="act-3-desc">5 thẻ từ vựng đến hạn ôn tập dài hạn</div>
+                </div>
+              </div>
+              <span class="activity-tag">5 phút</span>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center flex-wrap gap-2 text-xs text-muted">
+            <span>🌱 <em>"Kỷ luật từng ngày tạo nên thành quả bền vững. Mỗi lỗi sai là một bước tiến gần hơn tới mục tiêu."</em></span>
+            <button class="btn btn-outline text-xs" onclick="openShareModal()">🏆 Tạo Thẻ Thành Tích</button>
+          </div>
+        </div>
+
+        <!-- 3-Column Insights Subgrid -->
+        <div class="today-subgrid">
+          <!-- Card 1: Focus Skill -->
+          <div class="insight-card">
+            <div>
+              <div class="insight-header">
+                <span>🎯</span> Kỹ Năng Trọng Tâm
+              </div>
+              <div class="insight-body">
+                <h4 id="focus-skill-name">Inferences &amp; Evidence</h4>
+                <p id="focus-skill-reason">Cần củng cố do tỷ lệ chính xác 64% trong 3 buổi gần nhất.</p>
+              </div>
+            </div>
+            <div class="insight-footer">
+              <a href="#practice" class="text-sm font-semibold" onclick="quickJumpTopic('rw-info')">Luyện Kỹ Năng Này →</a>
+            </div>
+          </div>
+
+          <!-- Card 2: Concept Attention -->
+          <div class="insight-card">
+            <div>
+              <div class="insight-header">
+                <span>⚠️</span> Cảnh Báo Bẫy Logic
+              </div>
+              <div class="insight-body">
+                <h4 id="trap-alert-name">Over-Inference Trap</h4>
+                <p id="trap-alert-desc">Bạn có xu hướng suy diễn vượt quá phạm vi bằng chứng tác giả đưa ra.</p>
+              </div>
+            </div>
+            <div class="insight-footer">
+              <a href="#review" class="text-sm font-semibold">Xem Sổ Tay Lỗi Sai →</a>
+            </div>
+          </div>
+
+          <!-- Card 3: Consistency & Growth -->
+          <div class="insight-card">
+            <div>
+              <div class="insight-header">
+                <span>📈</span> Tiến Trình Thực Chất
+              </div>
+              <div class="insight-body">
+                <h4>Bạn Hôm Nay vs 30 Ngày Trước</h4>
+                <p id="trajectory-stat">Độ chính xác tăng từ <strong>62% → 78%</strong> với 120+ câu đã giải quyết.</p>
+              </div>
+            </div>
+            <div class="insight-footer">
+              <a href="#progress" class="text-sm font-semibold">Xem Biểu Đồ Năng Lực →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 2: PRACTICE (DELIBERATE LEARNING SESSION)
+           ═══════════════════════════════════════════════════════════════ -->
+      <section id="practice" class="section-view">
+        <div class="practice-header-bar">
+          <div>
+            <h2 style="font-size:1.35rem;font-weight:800;margin-bottom:0.2rem;">Luyện Tập Có Chủ Đích (Deliberate Practice)</h2>
+            <p class="text-muted text-sm">Chọn phân môn hoặc bắt đầu rèn luyện theo đúng định dạng bài thi.</p>
+          </div>
+          <div class="domain-tabs" id="practice-domain-tabs">
+            <button class="domain-tab-btn active" data-domain="rw-info" onclick="selectDomainTab('rw-info')">Information &amp; Ideas</button>
+            <button class="domain-tab-btn" data-domain="rw-craft" onclick="selectDomainTab('rw-craft')">Craft &amp; Structure</button>
+            <button class="domain-tab-btn" data-domain="rw-expr" onclick="selectDomainTab('rw-expr')">Expression</button>
+            <button class="domain-tab-btn" data-domain="rw-conv" onclick="selectDomainTab('rw-conv')">Conventions</button>
+            <button class="domain-tab-btn" data-domain="math-alg" onclick="selectDomainTab('math-alg')">Algebra</button>
+            <button class="domain-tab-btn" data-domain="math-adv" onclick="selectDomainTab('math-adv')">Advanced Math</button>
+            <button class="domain-tab-btn" data-domain="math-psda" onclick="selectDomainTab('math-psda')">Problem Solving</button>
+            <button class="domain-tab-btn" data-domain="math-geo" onclick="selectDomainTab('math-geo')">Geometry &amp; Trig</button>
+          </div>
+        </div>
+
+        <!-- Question Shell (High Focus) -->
+        <div class="question-shell" id="question-shell-container">
+          <div class="question-meta-bar">
+            <span class="skill-pill" id="q-skill-display">Central Ideas &amp; Details</span>
+            <div class="flex items-center gap-2">
+              <span class="difficulty-tag" id="q-difficulty-display">Difficulty: Level 3</span>
+              <button class="btn btn-outline text-xs" onclick="toggleDesmos()" id="practice-desmos-btn" style="padding:0.2rem 0.55rem;">📈 Desmos</button>
+            </div>
+          </div>
+
+          <!-- Reading passage (65-75 ch width, 18px) -->
+          <div class="reading-passage-box" id="q-passage-box">
+            Đang tải dữ liệu bài học...
+          </div>
+
+          <p class="question-stem" id="q-stem-box">
+            Đang tải câu hỏi...
+          </p>
+
+          <!-- Choices list -->
+          <div class="choices-list" id="q-choices-container">
+            <!-- Rendered by app.js -->
+          </div>
+
+          <!-- Action bar before submitting -->
+          <div class="flex justify-between items-center mt-4" id="q-action-bar">
+            <button class="btn btn-outline text-sm" onclick="askAICoach()">🤖 Cần Gợi Ý? Hỏi AI Coach</button>
+            <button class="btn-primary-action" id="submit-answer-btn" onclick="submitCurrentAnswer()">Kiểm Tra Đáp Án →</button>
+          </div>
+
+          <!-- 6-Part Structured Deliberate Feedback Panel (Hidden until answered) -->
+          <div class="deliberate-feedback-panel" id="feedback-panel" style="display:none;">
+            <!-- 01 Result -->
+            <div class="feedback-result-banner success" id="fb-result-banner">
+              <div class="result-title" id="fb-result-title">✓ Chính xác! (Correct)</div>
+              <span class="text-xs font-semibold" id="fb-time-taken">Thời gian: 45s</span>
+            </div>
+
+            <!-- 02 Why -->
+            <div class="feedback-section-block">
+              <div class="feedback-section-label"><span>💡</span> 02. Vì Sao Đáp Án Này Đúng (Why)</div>
+              <p class="feedback-text" id="fb-why-text"></p>
+            </div>
+
+            <!-- 03 Why Not -->
+            <div class="feedback-section-block">
+              <div class="feedback-section-label"><span>🔍</span> 03. Phân Tích Bẫy Phương Án Nhiễu (Why Not)</div>
+              <div class="feedback-text" id="fb-whynot-container"></div>
+            </div>
+
+            <!-- 04 Thinking Strategy -->
+            <div class="feedback-section-block">
+              <div class="feedback-section-label"><span>🧠</span> 04. Khung Tư Duy Chuẩn Khảo Thí (Thinking Strategy)</div>
+              <p class="feedback-text" id="fb-strategy-text"></p>
+            </div>
+
+            <!-- 05 Error Pattern -->
+            <div class="feedback-section-block" id="fb-error-pattern-block">
+              <div class="feedback-section-label"><span>⚠️</span> 05. Nhận Diện Dạng Bẫy Tư Duy (Error Pattern)</div>
+              <span class="error-pattern-tag" id="fb-error-pattern-tag">OVER_INFERENCE</span>
+              <p class="feedback-text mt-2" id="fb-trap-text"></p>
+            </div>
+
+            <!-- 06 Lock It In (Deliberate Practice Bridge) -->
+            <div class="lock-in-bar">
+              <div>
+                <strong>06. Khắc Sâu Kiến Thức (Lock It In)</strong>
+                <p class="text-xs text-muted">Làm ngay 1 câu hỏi biến thể tương đương để củng cố phản xạ.</p>
+              </div>
+              <div class="flex gap-2">
+                <button class="btn btn-outline text-sm" onclick="trySimilarQuestion()">🔄 Thử Câu Tương Tự</button>
+                <button class="btn-primary-action text-sm" onclick="nextPracticeQuestion()">Câu Tiếp Theo →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 3: REVIEW (SPACED RETRIEVAL & ERROR ANALYSIS)
+           ═══════════════════════════════════════════════════════════════ -->
+      <section id="review" class="section-view">
+        <div class="today-header">
+          <h1 class="today-greeting">Sổ Tay Ôn Tập &amp; Truy Hồi (Review &amp; Retrieval)</h1>
+          <p class="today-subdate">Hệ thống áp dụng thuật toán lặp lại ngắt quãng (FSRS) giúp ghi nhớ dài hạn và khắc phục bẫy logic.</p>
+        </div>
+
+        <div class="review-dashboard-grid">
+          <!-- Due Today Flashcards Card -->
+          <div class="review-summary-card">
+            <span class="plan-badge">FSRS Spaced Repetition</span>
+            <div class="review-stat-number" id="review-fc-due-count">0</div>
+            <h3 style="font-size:1.15rem;font-weight:700;">Thẻ Ghi Nhớ Đến Hạn Ôn Tập</h3>
+            <p class="text-sm text-muted mb-4">Ôn tập từ vựng, tiền tố ngữ pháp và công thức toán học trước khi đường cong quên lãng giảm sút.</p>
+            <button class="btn-primary-action text-sm" onclick="startFlashcardReview()">Bắt Đầu Lật Thẻ FSRS →</button>
+          </div>
+
+          <!-- Mistake Ledger Card -->
+          <div class="review-summary-card">
+            <span class="plan-badge" style="background:#FEE2E2;color:#991B1B;">Metacognitive Error Log</span>
+            <div class="review-stat-number" id="review-mistakes-count">0</div>
+            <h3 style="font-size:1.15rem;font-weight:700;">Lỗi Sai Cần Chẩn Đoán Lại</h3>
+            <p class="text-sm text-muted mb-4">Các câu hỏi đã từng làm sai, được tự động phân loại theo bẫy tư duy để luyện lại.</p>
+            <button class="btn btn-outline text-sm" onclick="startSpacedReviewSession()">Luyện Lại Câu Đã Sai →</button>
+          </div>
+        </div>
+
+        <!-- Flashcard Interactive Stage (Hidden until activated) -->
+        <div id="flashcard-interactive-wrapper" style="display:none;margin-bottom:2.5rem;">
+          <div class="card p-6" style="background:#FAFBFD;">
+            <div class="flex justify-between items-center mb-4">
+              <span class="tag" id="fc-deck-name">Deck: Direct Hits Vocabulary</span>
+              <span class="text-xs text-muted" id="fc-progress-count">Thẻ 1 / 10</span>
+            </div>
+
+            <div class="flashcard-stage">
+              <div class="flashcard-body" id="flashcard-element" onclick="flipFlashcard()">
+                <div class="card-face card-front">
+                  <div class="text-xs text-muted mb-2 uppercase tracking-wider">MẶT TRƯỚC (NHẤP ĐỂ LẬT)</div>
+                  <h2 id="fc-front-main" style="font-size:1.85rem;font-weight:800;color:var(--color-primary);">undermine</h2>
+                  <p id="fc-front-context" class="text-muted mt-2" style="font-style:italic;">"The new evidence served to undermine the hypothesis."</p>
+                </div>
+                <div class="card-face card-back">
+                  <div class="text-xs text-muted mb-2 uppercase tracking-wider">MẶT SAU (GIẢI NGHĨA &amp; COLLOCATION)</div>
+                  <div id="fc-back-content" class="text-sm text-left" style="line-height:1.6;"></div>
+                </div>
               </div>
             </div>
 
-            <!-- Direct Contact Box for Parents -->
-            <div class="mt-4 p-4 rounded bg-primary-soft border border-primary-light">
-              <h4 class="font-bold text-sm text-primary mb-1">🤝 Cần Tư Vấn Chuyên Sâu Cùng Chuyên Gia?</h4>
-              <p class="text-xs text-muted mb-3">Đội ngũ giáo viên và chuyên gia tâm lý học đường N&amp;Mstudio sẵn sàng phân tích biểu đồ năng lực, định hướng chiến lược nộp hồ sơ du học và học bổng cho con.</p>
-              <a href="https://zalo.me/84985578385" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-xs w-full text-center">
-                💬 Chat Zalo Trực Tiếp: +98 557 8385
-              </a>
+            <div class="fsrs-button-row">
+              <button class="fsrs-btn again" onclick="rateFlashcard(1)">Again (&lt;1m)</button>
+              <button class="fsrs-btn hard" onclick="rateFlashcard(2)">Hard (1d)</button>
+              <button class="fsrs-btn good" onclick="rateFlashcard(3)">Good (3d)</button>
+              <button class="fsrs-btn easy" onclick="rateFlashcard(4)">Easy (7d)</button>
             </div>
+          </div>
+        </div>
+
+        <!-- Mistake Ledger List -->
+        <div class="card">
+          <div class="flex justify-between items-center flex-wrap gap-2 mb-4">
+            <h3 style="font-size:1.15rem;font-weight:700;">Danh Sách Lỗi Sai &amp; Bẫy Logic Gần Đây</h3>
+            <div class="flex gap-2">
+              <button class="btn btn-outline text-xs" onclick="exportErrorLogCSV()">📊 Xuất CSV Lỗi Sai</button>
+              <button class="btn btn-outline text-xs" onclick="exportAnkiTSV()">🗂️ Xuất Anki TSV</button>
+            </div>
+          </div>
+          <div id="mistakes-list-container" class="flex-col gap-2">
+            <p class="text-muted text-sm py-4 text-center">Chưa ghi nhận lỗi sai nào. Hãy tiếp tục luyện tập!</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 4: TEST & MOCK EXAMS
+           ═══════════════════════════════════════════════════════════════ -->
+      <section id="test" class="section-view">
+        <div class="today-header">
+          <h1 class="today-greeting">Thi Thử Chuẩn Khảo Thí (Test &amp; Mock Exams)</h1>
+          <p class="today-subdate">Mô phỏng chân thực áp lực phòng thi Digital SAT Adaptive (2 Mô-đun) và IELTS Timed Sprints.</p>
+        </div>
+
+        <div class="test-pack-grid">
+          <!-- SAT Full Mock 1 -->
+          <div class="test-pack-card featured">
+            <div>
+              <span class="plan-badge mb-2">Adaptive Module 1 → 2</span>
+              <h3 style="font-size:1.15rem;font-weight:800;">Digital SAT Official Practice Pack 1</h3>
+              <p class="text-xs text-muted mt-1">Đầy đủ 2 phân môn Reading &amp; Writing (54 câu) + Math (44 câu) kèm máy tính Desmos.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+              <span class="text-xs font-semibold">134 phút</span>
+              <button class="btn-primary-action text-xs" onclick="startMockTest('rw')">Vào Thi Thử →</button>
+            </div>
+          </div>
+
+          <!-- SAT Math Sprint -->
+          <div class="test-pack-card">
+            <div>
+              <span class="tag mb-2">Math Section Sprint</span>
+              <h3 style="font-size:1.15rem;font-weight:800;">Math Hard Module Sprint</h3>
+              <p class="text-xs text-muted mt-1">22 câu hỏi nâng cao Algebra &amp; Advanced Math với giới hạn 35 phút.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+              <span class="text-xs font-semibold">35 phút</span>
+              <button class="btn btn-outline text-xs" onclick="startTimedSession('math', 35, 22)">Luyện Tốc Độ →</button>
+            </div>
+          </div>
+
+          <!-- IELTS Reading Sprint -->
+          <div class="test-pack-card">
+            <div>
+              <span class="tag mb-2" style="background:#ECFDF5;color:#065F46;">IELTS Academic</span>
+              <h3 style="font-size:1.15rem;font-weight:800;">IELTS Reading Academic Sprint</h3>
+              <p class="text-xs text-muted mt-1">Bài đọc học thuật chuẩn hóa với các dạng True/False/Not Given và Headings.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+              <span class="text-xs font-semibold">20 phút</span>
+              <button class="btn btn-outline text-xs" onclick="startTimedSession('ielts', 20, 15)">Bắt Đầu Làm →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timed Exam Area (When active) -->
+        <div id="timed-exam-area" class="card hidden" style="display:none;">
+          <div class="flex justify-between items-center pb-3 mb-4 border-b border-border">
+            <div>
+              <h3 id="timed-exam-title" style="margin:0;font-weight:800;">Timed Practice</h3>
+              <span class="text-xs text-muted" id="timed-exam-status">Question 1 of 20</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="timer-badge" id="timed-timer">35:00</span>
+              <button class="btn btn-outline text-xs" onclick="toggleDesmos()">📈 Desmos</button>
+              <button class="btn btn-outline text-xs" onclick="finishTimedSession()">Nộp Bài</button>
+            </div>
+          </div>
+          <div id="timed-question-render"></div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 5: PROGRESS & PARENT COMPANION
+           ═══════════════════════════════════════════════════════════════ -->
+      <section id="progress" class="section-view">
+        <div class="today-header">
+          <h1 class="today-greeting">Phân Tích Năng Lực &amp; Góc Phụ Huynh</h1>
+          <p class="today-subdate">Chuyển hóa dữ liệu làm bài thành hành động học tập cụ thể, không phán xét, đo lường sự nỗ lực thực chất.</p>
+        </div>
+
+        <!-- Interpretive Insight Card (What changed? Why? What next?) -->
+        <div class="progress-insight-banner">
+          <span class="plan-badge">Metacognitive Insight</span>
+          <h3 style="font-size:1.2rem;font-weight:800;margin:0.4rem 0;">Điểm Sáng &amp; Mục Tiêu Bứt Phá Tiếp Theo</h3>
+          <p class="text-sm" id="progress-interpretive-text">
+            <strong>Kỹ năng tiến bộ mạnh nhất:</strong> Algebra (88% chính xác).<br>
+            <strong>Điểm cần chú ý:</strong> Nhóm câu hỏi Inferences có xu hướng mất điểm ở các lựa chọn suy diễn quá rộng.<br>
+            <strong>Khuyến nghị kế tiếp:</strong> Dành 12 phút hoàn thành 5 câu Inferences trước khi làm bài thi thử cuối tuần.
+          </p>
+        </div>
+
+        <div class="grid-2 mb-6">
+          <!-- Skill Map -->
+          <div class="card">
+            <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1rem;">Bản Đồ Làm Chủ Kỹ Năng (Skill Mastery)</h3>
+            <div id="skill-mastery-bars-container" class="flex-col gap-3">
+              <!-- Rendered by app.js -->
+            </div>
+          </div>
+
+          <!-- Consistency & Data Management -->
+          <div class="card">
+            <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1rem;">Quản Lý Dữ Liệu &amp; Hồ Sơ</h3>
+            <p class="text-sm text-muted mb-4">Toàn bộ dữ liệu học tập được lưu cục bộ an toàn trên trình duyệt của bạn.</p>
+            <div class="flex-col gap-2">
+              <button class="btn btn-outline text-sm text-left" onclick="exportUserData()">📥 Xuất Toàn Bộ Dữ Liệu Học Tập (JSON)</button>
+              <button class="btn btn-outline text-sm text-left" onclick="exportErrorLogCSV()">📊 Xuất Sổ Tay Lỗi Sai (CSV)</button>
+              <button class="btn btn-outline text-sm text-left" onclick="exportAnkiTSV()">🗂️ Xuất Bộ Thẻ Flashcard Chuẩn Anki (.txt)</button>
+              <button class="btn btn-outline text-sm text-left" style="color:var(--color-error);border-color:#FECACA;" onclick="resetAllProgress()">🗑️ Đặt Lại Tiến Độ (Reset Progress)</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dedicated Parent Companion Section -->
+        <div class="parent-companion-section">
+          <div class="flex justify-between items-start flex-wrap gap-4 mb-4">
+            <div>
+              <span class="tag-parent">👨‍👩‍👧 DÀNH RIÊNG CHO CHA MẸ ĐỒNG HÀNH</span>
+              <h2 style="font-size:1.35rem;font-weight:800;margin-top:0.35rem;">Bản Tổng Kết Tiến Độ Thực Chất Cho Phụ Huynh</h2>
+              <p class="text-xs text-muted">Đo lường sự kiên trì, số giờ tập trung và tính kỷ luật thay vì săm soi điểm số từng câu.</p>
+            </div>
+            <button class="btn btn-outline text-xs" onclick="window.print()">🖨️ In Báo Cáo Định Kỳ (Print/PDF)</button>
+          </div>
+
+          <div class="grid-4 mb-4" id="parent-metrics-grid">
+            <div class="stat-card">
+              <div class="text-muted text-xs font-bold uppercase">⏱️ Tổng Thời Gian Rèn Luyện</div>
+              <div class="text-2xl font-bold mt-1" id="parent-total-hours">0 giờ 00p</div>
+            </div>
+            <div class="stat-card">
+              <div class="text-muted text-xs font-bold uppercase">📝 Khối Lượng Câu Đã Giải</div>
+              <div class="text-2xl font-bold mt-1" id="parent-total-questions">0 câu</div>
+            </div>
+            <div class="stat-card">
+              <div class="text-muted text-xs font-bold uppercase">🔥 Kỷ Luật Tuần Này</div>
+              <div class="text-2xl font-bold mt-1" id="parent-active-days">0 ngày</div>
+            </div>
+            <div class="stat-card">
+              <div class="text-muted text-xs font-bold uppercase">🎯 Kỹ Năng Đã Master</div>
+              <div class="text-2xl font-bold mt-1" id="parent-mastered-skills">0 / 15</div>
+            </div>
+          </div>
+
+          <div class="p-4 bg-muted-light rounded text-xs text-muted" id="parent-advice-box">
+            <strong>Cẩm nang đồng hành cùng con tuổi 15–18:</strong> Tránh kiểm tra đột xuất hoặc phán xét khi con làm sai. Hãy hỏi: <em>"Hôm nay con thấy bẫy nào trong bài thú vị nhất?"</em> và đảm bảo con ngủ đủ 7–8 tiếng trước ngày thi để não bộ tái tạo năng lượng tối ưu.
           </div>
         </div>
       </section>
@@ -661,73 +546,103 @@
     </main>
   </div>
 
+  <!-- ═══════════════════════════════════════════════════════════════
+       CONTEXTUAL AI COACH MODAL & DRAWER
+       ═══════════════════════════════════════════════════════════════ -->
+  <div class="ai-coach-drawer">
+    <button class="ai-coach-trigger-btn" onclick="askAICoach()">
+      <span>🤖</span> <span>AI Tutor Trợ Giảng</span>
+    </button>
+  </div>
+
+  <div class="ai-coach-modal" id="ai-coach-modal">
+    <div class="ai-coach-box">
+      <div class="ai-coach-header">
+        <div class="flex items-center gap-2">
+          <span style="font-size:1.25rem;">🤖</span>
+          <div>
+            <h3 style="margin:0;font-size:1.05rem;font-weight:800;">N&amp;Mstudio AI Coach</h3>
+            <span class="text-xs text-muted" id="ai-context-indicator">Context: Active Question</span>
+          </div>
+        </div>
+        <button class="btn btn-outline text-xs" onclick="closeAICoach()">✕ Đóng</button>
+      </div>
+      <div class="ai-coach-content">
+        <div class="text-xs font-semibold text-muted mb-2">GỢI Ý HỎI NHANH CHO CÂU NÀY:</div>
+        <div class="ai-quick-prompts">
+          <button class="prompt-chip" onclick="askAIPrompt('explain_another_way')">💡 Giải thích theo cách khác</button>
+          <button class="prompt-chip" onclick="askAIPrompt('why_distractor_wrong')">🔍 Vì sao các phương án khác sai?</button>
+          <button class="prompt-chip" onclick="askAIPrompt('give_hint')">🧩 Cho tôi một gợi ý tư duy</button>
+          <button class="prompt-chip" onclick="askAIPrompt('show_thinking_steps')">📝 Từng bước suy luận</button>
+          <button class="prompt-chip" onclick="askAIPrompt('easier_example')">🌱 Cho một ví dụ đơn giản hơn</button>
+        </div>
+        <div class="ai-response-area" id="ai-response-content">
+          Xin chào! Tôi là Trợ giảng AI đồng hành cùng bạn. Bạn có thể nhấn vào các gợi ý bên trên hoặc chọn nội dung cần gỡ rối nhé!
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Desmos Calculator Modal -->
-  <div id="desmos-modal" class="hidden" style="position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:90;display:none;align-items:center;justify-content:center;">
-    <div class="modal-content" style="max-width:920px;width:95%;height:580px;display:flex;flex-direction:column;padding:1.25rem;">
+  <div id="desmos-modal" class="hidden" style="position:fixed;inset:0;background:rgba(21,40,59,0.7);z-index:90;display:none;align-items:center;justify-content:center;">
+    <div class="modal-content" style="max-width:920px;width:95%;height:580px;display:flex;flex-direction:column;padding:1.25rem;background:white;border-radius:var(--radius-xl);">
       <div class="flex justify-between items-center mb-2">
-        <h3 class="font-bold flex items-center gap-2" style="margin-bottom:0">
+        <h3 class="font-bold flex items-center gap-2" style="margin-bottom:0;font-size:1.1rem;">
           <span>📈</span> Desmos Graphing Calculator (Digital SAT Official Interface)
         </h3>
-        <button class="btn btn-outline text-sm" onclick="toggleDesmos()">✕ Close</button>
+        <button class="btn btn-outline text-xs" onclick="toggleDesmos()">✕ Đóng</button>
       </div>
       <iframe id="desmos-iframe" src="about:blank" style="flex:1;width:100%;border:1px solid var(--color-border);border-radius:var(--radius);background:white"></iframe>
     </div>
   </div>
 
-  <!-- Social Share Achievement Modal -->
-  <div id="share-modal" class="modal-backdrop hidden" style="position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:95;display:none;align-items:center;justify-content:center;">
-    <div class="modal-content" style="max-width:540px;width:92%;background:var(--color-surface);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow);">
+  <!-- Social Share Modal -->
+  <div id="share-modal" style="position:fixed;inset:0;background:rgba(21,40,59,0.7);z-index:95;display:none;align-items:center;justify-content:center;">
+    <div class="modal-content" style="max-width:520px;width:92%;background:var(--color-surface);border-radius:var(--radius-xl);padding:1.5rem;box-shadow:var(--shadow-lg);">
       <div class="flex justify-between items-center mb-3">
-        <h3 class="font-bold text-base flex items-center gap-2" style="margin-bottom:0">
-          <span>🏆</span> Thẻ Thành Tích Học Tập (Shareable Card)
-        </h3>
-        <button class="btn btn-outline text-sm" onclick="closeShareModal()">✕ Đóng</button>
+        <h3 style="margin:0;font-size:1.1rem;font-weight:800;">🏆 Thẻ Thành Tích Rèn Luyện</h3>
+        <button class="btn btn-outline text-xs" onclick="closeShareModal()">✕ Đóng</button>
       </div>
 
-      <!-- Preview Card for Screenshot/Sharing -->
-      <div id="share-card-preview" class="share-card-box p-6 rounded-lg text-white mb-4" style="background:linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e3a8a 100%);border:1px solid rgba(255,255,255,0.15);box-shadow:0 10px 25px -5px rgba(0,0,0,0.3);">
+      <div id="share-card-preview" style="background:#15283B;border-radius:var(--radius-lg);padding:1.5rem;color:white;margin-bottom:1rem;">
         <div class="flex justify-between items-center mb-3">
           <div class="flex items-center gap-2">
-            <img src="assets/logo.png" alt="Logo" class="share-card-logo" width="36" height="36" style="border-radius:6px;border:1px solid rgba(255,255,255,0.3);">
+            <img src="assets/logo.png" alt="Logo" width="32" height="32" style="border-radius:6px;">
             <div>
-              <div class="text-xs font-bold uppercase tracking-wider" style="color:#93c5fd;font-size:0.7rem;">N&amp;MSTUDIO EDUCATION</div>
-              <div class="text-sm font-extrabold" style="letter-spacing:0.02em;">SAT INTELLIPREP 2026</div>
+              <div class="text-xs font-bold" style="color:#93C5FD;">N&amp;MSTUDIO EDUCATION</div>
+              <div class="text-sm font-extrabold" id="share-workspace-title">Digital SAT 2026</div>
             </div>
           </div>
-          <span class="tag" style="background:rgba(255,255,255,0.18);color:#e0e7ff;border:none;font-size:0.75rem;" id="share-badge-grade">Lớp 11</span>
+          <span class="tag" style="background:rgba(255,255,255,0.15);color:white;" id="share-badge-grade">Lớp 11</span>
         </div>
 
-        <div class="text-center my-4 py-2" style="background:rgba(255,255,255,0.06);border-radius:8px;">
-          <div class="text-xs uppercase tracking-wide opacity-80 mb-1" style="color:#bfdbfe;">Lộ Trình Bứt Phá Mục Tiêu</div>
-          <div class="text-2xl font-black mb-1" id="share-headline" style="color:#ffffff;letter-spacing:0.03em;">🎯 1450+ Trajectory</div>
-          <div class="text-xs opacity-90" id="share-subline" style="color:#e0e7ff;">Đã hoàn thành 100+ câu hỏi luyện tập &amp; 80 flashcards FSRS</div>
+        <div class="text-center my-3 py-2" style="background:rgba(255,255,255,0.06);border-radius:8px;">
+          <div class="text-2xl font-black mb-1" id="share-headline">🎯 1450+ Trajectory</div>
+          <div class="text-xs text-muted" id="share-subline" style="color:#CBD5E1;">Rèn luyện có chủ đích • Kỷ luật tự thân</div>
         </div>
 
-        <div class="grid-3 text-center py-2 my-3" style="border-top:1px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.15);">
+        <div class="grid-3 text-center py-2" style="border-top:1px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.15);">
           <div>
-            <div class="text-xl font-bold" id="share-stat-q" style="color:#67e8f9;">128</div>
-            <div class="text-xs opacity-80" style="font-size:0.65rem;">CÂU ĐÃ GIẢI</div>
+            <div class="text-xl font-bold" id="share-stat-q" style="color:#38BDF8;">120</div>
+            <div class="text-2xs" style="color:#94A3B8;">CÂU ĐÃ GIẢI</div>
           </div>
           <div>
-            <div class="text-xl font-bold" id="share-stat-acc" style="color:#86efac;">86%</div>
-            <div class="text-xs opacity-80" style="font-size:0.65rem;">ĐỘ CHÍNH XÁC</div>
+            <div class="text-xl font-bold" id="share-stat-acc" style="color:#34D399;">82%</div>
+            <div class="text-2xs" style="color:#94A3B8;">ĐỘ CHÍNH XÁC</div>
           </div>
           <div>
-            <div class="text-xl font-bold" id="share-stat-skills" style="color:#fde047;">9/15</div>
-            <div class="text-xs opacity-80" style="font-size:0.65rem;">KỸ NĂNG MASTER</div>
+            <div class="text-xl font-bold" id="share-stat-skills" style="color:#FBBF24;">8/15</div>
+            <div class="text-2xs" style="color:#94A3B8;">MASTERED</div>
           </div>
         </div>
 
-        <div class="flex justify-between items-center text-xs opacity-80 pt-1" style="font-size:0.7rem;color:#cbd5e1;">
-          <span>🌱 Kỷ Luật Tự Thân • Không Ngừng Bứt Phá</span>
-          <span>Hotline: +98 557 8385 (Zalo)</span>
+        <div class="flex justify-between items-center text-2xs pt-2" style="color:#94A3B8;">
+          <span>🌱 Học từ lỗi sai • Growth Mindset</span>
+          <span>Zalo: +98 557 8385</span>
         </div>
       </div>
 
-      <div class="flex-col gap-2">
-        <button class="btn btn-primary w-full text-sm" onclick="copyShareText()">📋 Sao Chép Caption Kèm Hashtag (Facebook / Threads)</button>
-        <p class="text-xs text-muted text-center mt-2">💡 Mẹo: Nhấn phím chụp màn hình (Win + Shift + S) để lưu ảnh thẻ thành tích đăng Facebook / Instagram / Threads!</p>
-      </div>
+      <button class="btn-primary-action w-full text-sm" style="width:100%;" onclick="copyShareText()">📋 Sao Chép Caption Kèm Hashtag (Facebook / Threads)</button>
     </div>
   </div>
 
