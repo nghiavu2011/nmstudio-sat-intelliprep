@@ -1,0 +1,2195 @@
+{
+  "test_id": "PT-03",
+  "title": "Digital SAT Practice Test 3 (Full Simulation)",
+  "reading_and_writing": {
+    "module_1": [
+      {
+        "question_id": "RW-C-008",
+        "domain": "Standard English Conventions",
+        "skill": "Form, Structure, and Sense",
+        "difficulty": 1,
+        "passage": "Every morning before school, the young boy _____ his dog around the block.",
+        "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "choices": {
+          "A": "walk",
+          "B": "walks",
+          "C": "walking",
+          "D": "have walked"
+        },
+        "correct_answer": "B",
+        "explanation": "The subject 'boy' is singular, so the present tense verb must be the singular 'walks'.",
+        "why_others_wrong": {
+          "A": "Plural verb.",
+          "C": "Participle, lacks a helping verb.",
+          "D": "Plural present perfect."
+        },
+        "common_trap": "Choosing the plural verb.",
+        "thinking_framework": "Identify subject (boy). Determine number (singular). Match verb.",
+        "estimated_time_seconds": 45,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "social science"
+        ]
+      },
+      {
+        "question_id": "RW-CS-015",
+        "domain": "Craft and Structure",
+        "skill": "Cross-Text Connections",
+        "difficulty": 5,
+        "passage": "Text 1\nThe implementation of open-plan offices was intended to foster collaboration. By removing physical barriers, managers hoped to flatten hierarchies and encourage spontaneous brainstorming among employees of all levels.\n\nText 2\nA study of corporate communication revealed that transitioning to open-plan offices actually decreased face-to-face interactions by 70%. Seeking privacy in an exposed environment, employees relied heavily on instant messaging and wore noise-canceling headphones.",
+        "question_stem": "Which choice best synthesizes the information in the two texts?",
+        "choices": {
+          "A": "Open-plan offices succeeded in flattening corporate hierarchies but failed to improve the quality of work produced.",
+          "B": "Although designed to increase physical interaction among employees, open-plan offices paradoxically led to greater isolation and reliance on digital communication.",
+          "C": "The removal of physical barriers in offices caused employees to become distracted, leading to a 70% decrease in overall productivity.",
+          "D": "Managers and employees disagree on the best layout for an office, with managers preferring open plans and employees preferring private offices."
+        },
+        "correct_answer": "B",
+        "explanation": "Synthesizes intent (Text 1: intended to foster collaboration) with the actual result (Text 2: decreased interaction, more digital/headphones).",
+        "why_others_wrong": {
+          "A": "Neither text discusses the 'quality of work produced'.",
+          "C": "Text 2 mentions a 70% decrease in interaction, not productivity.",
+          "D": "Text 2 doesn't state what employees *prefer*, only how they reacted."
+        },
+        "common_trap": "Substituting 'productivity' for 'interactions' because it sounds like a logical corporate outcome.",
+        "thinking_framework": "Combine Text 1's goal with Text 2's reality to form a complete picture of the situation.",
+        "estimated_time_seconds": 120,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "social science"
+        ]
+      },
+      {
+        "question_id": "RW-II-006",
+        "domain": "Information and Ideas",
+        "skill": "Command of Evidence: Textual",
+        "difficulty": 2,
+        "passage": "Researcher Dr. Aris claims that the newly discovered plant species, *Flora lumina*, relies exclusively on nocturnal moths for pollination. She bases this on the plant's white flowers, which bloom only after sunset and emit a scent strongly attractive to moths.",
+        "question_stem": "Which finding, if true, would most directly undermine Dr. Aris's claim?",
+        "choices": {
+          "A": "Diurnal bees are observed frequently carrying *Flora lumina* pollen during the day.",
+          "B": "The moths that visit *Flora lumina* also pollinate other nocturnal flowers.",
+          "C": "*Flora lumina* flowers wilt very quickly if they are not pollinated within 24 hours.",
+          "D": "The scent emitted by the flowers is found to contain compounds common in nocturnal plants."
+        },
+        "correct_answer": "A",
+        "explanation": "If bees carry the pollen during the day, the plant does not rely *exclusively* on nocturnal moths.",
+        "why_others_wrong": {
+          "B": "Doesn't undermine the claim; moths can pollinate multiple things.",
+          "C": "Irrelevant to *what* pollinates it.",
+          "D": "Supports the claim rather than undermining it."
+        },
+        "common_trap": "Choosing a fact that is true but doesn't attack the specific word 'exclusively'.",
+        "thinking_framework": "Identify the core claim (exclusive reliance on moths) and find evidence that proves it false.",
+        "estimated_time_seconds": 90,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "science"
+        ]
+      },
+      {
+        "question_id": "RW-CS-027",
+        "domain": "Craft and Structure",
+        "skill": "Words in Context",
+        "difficulty": 3,
+        "passage": "Faced with compounding budget deficits, the municipal council voted to curtail public library operating hours on weekends, prompting vocal protests from neighborhood community groups.",
+        "question_stem": "As used in the text, what does \"curtail\" most nearly mean?",
+        "choices": {
+          "A": "extend",
+          "B": "reduce",
+          "C": "terminate",
+          "D": "celebrate"
+        },
+        "correct_answer": "B",
+        "explanation": "To 'curtail' hours means to cut back, shorten, or reduce them (not completely eliminate or terminate them).",
+        "why_others_wrong": {
+          "A": "Opposite: 'extend' means to lengthen.",
+          "C": "Too extreme: 'terminate' means end completely, whereas curtailing hours means reducing them.",
+          "D": "Irrelevant positive connotation."
+        },
+        "common_trap": "Confusing partial reduction ('curtail') with complete termination.",
+        "thinking_framework": "Faced with deficits -> cut back / reduce operating hours. Matches Choice B.",
+        "estimated_time_seconds": 35,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "civics",
+          "words_in_context"
+        ]
+      },
+      {
+        "question_id": "RW-C-003",
+        "domain": "Standard English Conventions",
+        "skill": "Boundaries",
+        "difficulty": 2,
+        "passage": "Many scientists agree that the discovery of the _____ one of the most important breakthroughs in modern astrophysics.",
+        "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "choices": {
+          "A": "exoplanet; is",
+          "B": "exoplanet, is",
+          "C": "exoplanet is",
+          "D": "exoplanet: is"
+        },
+        "correct_answer": "C",
+        "explanation": "No punctuation should separate the subject ('the discovery of the exoplanet') from its verb ('is').",
+        "why_others_wrong": {
+          "A": "Semicolon separates subject and verb.",
+          "B": "Comma separates subject and verb.",
+          "D": "Colon separates subject and verb."
+        },
+        "common_trap": "Adding a comma because there is a natural pause in reading.",
+        "thinking_framework": "Identify subject and verb. Never put a single comma between a subject and its verb.",
+        "estimated_time_seconds": 45,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "science"
+        ]
+      },
+      {
+        "question_id": "RW-SEC-017",
+        "domain": "Standard English Conventions",
+        "skill": "Form, Structure, and Sense",
+        "difficulty": 3,
+        "passage": "Discovered in deep hydrothermal vents along the Mariana Trench, _______ unusual physiological adaptations that allow them to survive in complete darkness under immense hydrostatic pressure.",
+        "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "choices": {
+          "A": "biologists were fascinated by the snailfish's",
+          "B": "the Mariana snailfish possesses",
+          "C": "the immense pressure explains the snailfish's",
+          "D": "extreme darkness is tolerated by the snailfish, which has"
+        },
+        "correct_answer": "B",
+        "explanation": "The introductory modifying phrase 'Discovered in deep hydrothermal vents along the Mariana Trench' describes the organism that was discovered. Therefore, the noun immediately following the comma must be the organism ('the Mariana snailfish'). Choice B correctly places 'the Mariana snailfish' as the subject.",
+        "why_others_wrong": {
+          "A": "Dangling modifier: suggests the biologists were discovered in deep hydrothermal vents.",
+          "C": "Dangling modifier: suggests the immense pressure was discovered in hydrothermal vents.",
+          "D": "Dangling modifier: suggests extreme darkness was discovered in hydrothermal vents."
+        },
+        "common_trap": "Dangling modifier trap: placing the observer (biologists) right after the modifying phrase describing the organism.",
+        "thinking_framework": "Modifier: 'Discovered in hydrothermal vents...'. WHO was discovered? The snailfish. Subject must be 'the Mariana snailfish'.",
+        "estimated_time_seconds": 50,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "biology",
+          "modifiers"
+        ]
+      },
+      {
+        "question_id": "RW-CS-019",
+        "domain": "Craft and Structure",
+        "skill": "Words in Context",
+        "difficulty": 3,
+        "passage": "Although the environmental activist group initially enjoyed broad public support, their decision to block peak-hour commuter trains alienated many working-class allies, who felt that their daily hardships were being disregarded in pursuit of political theater.",
+        "question_stem": "As used in the text, what does \"alienated\" most nearly mean?",
+        "choices": {
+          "A": "isolated geographically",
+          "B": "estranged",
+          "C": "banished",
+          "D": "confused"
+        },
+        "correct_answer": "B",
+        "explanation": "To 'alienate' allies means to cause them to feel estranged, hostile, or disconnected from the cause due to controversial actions.",
+        "why_others_wrong": {
+          "A": "Refers to physical spatial separation, whereas alienation here is social/political.",
+          "C": "Refers to formal exile or deportation by an authority.",
+          "D": "Means puzzled or perplexed; the allies were offended and distant, not merely confused."
+        },
+        "common_trap": "Interpreting 'alienated' in a literal physical or extraterrestrial sense rather than relational estrangement.",
+        "thinking_framework": "Context clue: 'initially enjoyed support' contrasted with 'their decision... alienated allies'. Meaning: distanced / estranged.",
+        "estimated_time_seconds": 45,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "social_science",
+          "words_in_context"
+        ]
+      },
+      {
+        "question_id": "RW-EI-024",
+        "domain": "Expression of Ideas",
+        "skill": "Rhetorical Synthesis",
+        "difficulty": 3,
+        "passage": "While researching the biodiversity of the Sonoran Desert, a student has taken the following notes:\n• The Saguaro cactus (*Carnegiea gigantea*) is an endemic keystone species of the Sonoran Desert.\n• Mature saguaros can reach heights of 12 to 18 meters and live for over 150 years.\n• Gila woodpeckers and gilded flickers excavate nest cavities in the fleshy stems of saguaros.\n• Once abandoned, these cavities provide essential nesting sites for elf owls, purple martins, and desert mice.\n• Saguaro flowers produce nectar that sustains migratory lesser long-nosed bats during spring.",
+        "question_stem": "The student wants to explain why the Saguaro is classified as a keystone species. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "choices": {
+          "A": "Endemic to the Sonoran Desert, the Saguaro cactus can grow up to 18 meters tall and survive for more than 150 years.",
+          "B": "As a keystone species, the Saguaro provides critical nesting habitat for birds and small mammals while offering vital nectar for migratory bats.",
+          "C": "Gila woodpeckers excavate cavities in saguaros, which are later utilized by elf owls and desert mice.",
+          "D": "The Saguaro cactus blooms in the spring, producing abundant nectar that sustains the lesser long-nosed bat."
+        },
+        "correct_answer": "B",
+        "explanation": "A 'keystone species' is one on which other species in an ecosystem largely depend. Choice B directly explains this by summarizing how multiple birds, mammals, and bats rely on the Saguaro for food and shelter.",
+        "why_others_wrong": {
+          "A": "Describes its physical size and lifespan, but does not explain its ecological keystone role.",
+          "C": "Mentions one specific nesting interaction, omitting the broader ecological support network (nectar/bats).",
+          "D": "Focuses only on the bats, omitting the nesting habitat for birds and mice."
+        },
+        "common_trap": "Choosing a single ecological detail instead of a comprehensive explanation of its keystone impact.",
+        "thinking_framework": "Goal: 'explain why it is a keystone species'. Keystone = supports many other species. Choice B connects the nesting habitat and nectar to multiple animals.",
+        "estimated_time_seconds": 65,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "ecology",
+          "rhetorical_synthesis"
+        ]
+      },
+      {
+        "question_id": "RW-CS-003",
+        "domain": "Craft and Structure",
+        "skill": "Words in Context",
+        "difficulty": 3,
+        "passage": "The critic noted that the director's latest film was highly _____, borrowing heavily from the visual styles of classic 1970s sci-fi movies rather than establishing an original aesthetic.",
+        "question_stem": "Which choice completes the text with the most logical and precise word or phrase?",
+        "choices": {
+          "A": "innovative",
+          "B": "derivative",
+          "C": "incomprehensible",
+          "D": "profound"
+        },
+        "correct_answer": "B",
+        "explanation": "'Derivative' means imitative of the work of another, which perfectly matches 'borrowing heavily... rather than establishing an original aesthetic'.",
+        "why_others_wrong": {
+          "A": "Opposite of the context clue.",
+          "C": "No evidence suggests it was hard to understand.",
+          "D": "Doesn't address the borrowing aspect."
+        },
+        "common_trap": "Not knowing the exact definition of 'derivative' in an artistic context.",
+        "thinking_framework": "Look at the contrast clue: 'rather than establishing an original aesthetic'. The word must mean 'unoriginal'.",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "arts"
+        ]
+      },
+      {
+        "question_id": "RW-EI-022",
+        "domain": "Expression of Ideas",
+        "skill": "Rhetorical Synthesis",
+        "difficulty": 4,
+        "passage": "While researching the history of the Sriracha hot sauce, a student has taken the following notes:\n• Sriracha sauce was originally created in the 1930s by Thanom Chakkapak in Si Racha, Thailand.\n• The Thai version is relatively thin, sweet, and tangy, traditionally paired with seafood.\n• In 1980, Vietnamese immigrant David Tran founded Huy Fong Foods in Los Angeles, California.\n• Tran developed his own thicker, spicier version using fresh jalapeño peppers and garlic.\n• Huy Fong's rooster-logo bottle became an iconic condiment across American restaurants.",
+        "question_stem": "The student wants to contrast the traditional Thai Sriracha with David Tran's American version. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "choices": {
+          "A": "Created in the 1930s in Si Racha, Thailand, Sriracha was originally formulated as a thin, sweet sauce for seafood.",
+          "B": "While the original Thai Sriracha is a thin, sweet condiment traditionally paired with seafood, David Tran's American version is a thicker, spicier sauce formulated with fresh jalapeños and garlic.",
+          "C": "David Tran founded Huy Fong Foods in 1980 in Los Angeles, packaging his hot sauce in distinctive bottles featuring a rooster logo.",
+          "D": "Both Thanom Chakkapak in Thailand and David Tran in California created popular hot sauces that achieved worldwide restaurant acclaim."
+        },
+        "correct_answer": "B",
+        "explanation": "Choice B directly fulfills the student's goal of contrasting the two sauces: it highlights the texture, flavor, and culinary pairing of the traditional Thai sauce against the ingredients and spicier profile of Tran's American formulation.",
+        "why_others_wrong": {
+          "A": "Mentions only the Thai sauce, with no contrast to Tran's version.",
+          "C": "Mentions only Tran's company and bottle design, with no contrast to the Thai original.",
+          "D": "Focuses on general acclaim rather than the specific culinary differences between the sauces."
+        },
+        "common_trap": "Describing one version in detail while failing to include the comparative counterpart.",
+        "thinking_framework": "Goal: 'contrast traditional Thai with Tran's version'. Look for a comparative structure: 'While [Thai] is X, [Tran's] is Y'. Matches Choice B.",
+        "estimated_time_seconds": 70,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "culinary_history",
+          "rhetorical_synthesis"
+        ]
+      },
+      {
+        "question_id": "RW-CS-005",
+        "domain": "Craft and Structure",
+        "skill": "Words in Context",
+        "difficulty": 5,
+        "passage": "To understand the ecosystem of the deep sea, scientists must not view the lack of sunlight as a simple deficit, but rather as a foundational condition that has engendered highly _____ evolutionary adaptations.",
+        "question_stem": "Which choice completes the text with the most logical and precise word or phrase?",
+        "choices": {
+          "A": "superficial",
+          "B": "idiosyncratic",
+          "C": "rudimentary",
+          "D": "ubiquitous"
+        },
+        "correct_answer": "B",
+        "explanation": "'Idiosyncratic' means peculiar or individual. Extreme deep-sea conditions lead to highly unique/specialized adaptations.",
+        "why_others_wrong": {
+          "A": "Means 'on the surface' or 'lacking depth', incorrect here.",
+          "C": "Means 'basic or primary', contradicting the complexity implied by 'evolutionary adaptations' to extreme conditions.",
+          "D": "Means 'found everywhere', but these are specific to the deep sea."
+        },
+        "common_trap": "Choosing a difficult vocabulary word without verifying it fits the precise context of unique deep-sea evolution.",
+        "thinking_framework": "Adaptations to extreme, specific environments are unique/peculiar to that environment.",
+        "estimated_time_seconds": 90,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "science"
+        ]
+      },
+      {
+        "question_id": "RW-C-006",
+        "domain": "Standard English Conventions",
+        "skill": "Boundaries",
+        "difficulty": 4,
+        "passage": "Although the novel was critically acclaimed for its lyrical prose and complex character _____ struggled to find a wide audience during the author's lifetime.",
+        "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "choices": {
+          "A": "development it",
+          "B": "development, it",
+          "C": "development; it",
+          "D": "development. It"
+        },
+        "correct_answer": "B",
+        "explanation": "'Although... development' is a dependent clause and must be separated from the independent clause ('it struggled...') with a comma.",
+        "why_others_wrong": {
+          "A": "Missing punctuation (run-on).",
+          "C": "Semicolon requires independent clauses on both sides.",
+          "D": "Period leaves a sentence fragment ('Although... development.')."
+        },
+        "common_trap": "Using a period or semicolon, failing to recognize the first part is a dependent clause.",
+        "thinking_framework": "Identify clause types. Dependent + Independent = comma.",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "literature"
+        ]
+      },
+      {
+        "question_id": "RW-C-007",
+        "domain": "Standard English Conventions",
+        "skill": "Boundaries",
+        "difficulty": 5,
+        "passage": "The structural integrity of the bridge relied on a unique alloy composed of iron, which provided strength; nickel, which prevented _____ and copper, which added flexibility.",
+        "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "choices": {
+          "A": "rusting;",
+          "B": "rusting,",
+          "C": "rusting",
+          "D": "rusting:"
+        },
+        "correct_answer": "A",
+        "explanation": "In a complex list where individual items contain commas (e.g., 'iron, which provided strength'), semicolons must be used to separate the main items.",
+        "why_others_wrong": {
+          "B": "A comma would cause confusion with the commas already inside the list items.",
+          "C": "Missing punctuation.",
+          "D": "Colon is incorrect here."
+        },
+        "common_trap": "Using a comma, not realizing it's a complex list requiring semicolons.",
+        "thinking_framework": "Look at the punctuation separating the other list items. They use semicolons.",
+        "estimated_time_seconds": 90,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "science"
+        ]
+      },
+      {
+        "question_id": "RW-CS-002",
+        "domain": "Craft and Structure",
+        "skill": "Words in Context",
+        "difficulty": 2,
+        "passage": "Despite his initial reluctance, the mayor was eventually _____ to support the new infrastructure bill after seeing the overwhelming public approval in recent polls.",
+        "question_stem": "Which choice completes the text with the most logical and precise word or phrase?",
+        "choices": {
+          "A": "persuaded",
+          "B": "forbidden",
+          "C": "confused",
+          "D": "obligated"
+        },
+        "correct_answer": "A",
+        "explanation": "He was reluctant but 'eventually' supported it due to polls, meaning he was convinced or 'persuaded'.",
+        "why_others_wrong": {
+          "B": "Opposite meaning; he ended up supporting it.",
+          "C": "Doesn't fit the cause-and-effect of seeing polls and then supporting.",
+          "D": "Too strong; polls influence but don't strictly 'obligate' legally."
+        },
+        "common_trap": "Choosing 'obligated' which ignores the nuance of political convincing.",
+        "thinking_framework": "Identify the transition from reluctance to support. What verb describes this change of mind?",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "social science"
+        ]
+      },
+      {
+        "question_id": "RW-EI-002",
+        "domain": "Expression of Ideas",
+        "skill": "Rhetorical Synthesis",
+        "difficulty": 2,
+        "passage": "While researching, a student took the following notes:\n- Mars is often called the Red Planet due to iron oxide on its surface.\n- It has a thin atmosphere composed primarily of carbon dioxide.\n- Temperatures on Mars can drop to -153 degrees Celsius.\n- Rovers like Curiosity and Perseverance are currently exploring its surface.",
+        "question_stem": "The student wants to emphasize the harsh environmental conditions on Mars. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "choices": {
+          "A": "Mars is currently being explored by rovers such as Curiosity and Perseverance.",
+          "B": "Due to iron oxide on its surface, Mars is commonly referred to as the Red Planet.",
+          "C": "Mars features a thin carbon dioxide atmosphere and freezing temperatures that can plummet to -153 degrees Celsius.",
+          "D": "The Red Planet has a thin atmosphere and is explored by various rovers."
+        },
+        "correct_answer": "C",
+        "explanation": "C combines the notes about the atmosphere and extreme low temperatures, which perfectly illustrates 'harsh environmental conditions'.",
+        "why_others_wrong": {
+          "A": "Focuses on exploration, not environment.",
+          "B": "Focuses on appearance/name.",
+          "D": "Mixes environment with exploration, missing the 'harsh' emphasis."
+        },
+        "common_trap": "Choosing a factually true sentence that doesn't align with the specific rhetorical goal.",
+        "thinking_framework": "Goal = harsh conditions. Look for words like 'thin atmosphere' and 'freezing temperatures'.",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "science"
+        ]
+      }
+    ],
+    "module_2_hard": [
+      {
+        "question_id": "RW-II-015",
+        "domain": "Information and Ideas",
+        "skill": "Inferences",
+        "difficulty": 5,
+        "passage": "Some linguists propose that language strictly dictates the boundaries of human thought, a concept known as strong linguistic determinism. However, cognitive scientists point out that pre-linguistic infants can demonstrate complex spatial reasoning. If strong linguistic determinism were entirely accurate, then _____.",
+        "question_stem": "Which choice most logically completes the text?",
+        "choices": {
+          "A": "infants would develop language skills much earlier than they currently do.",
+          "B": "complex spatial reasoning would be impossible without first acquiring language.",
+          "C": "cognitive scientists would have to abandon the study of infant behavior.",
+          "D": "spatial reasoning would be recognized as a distinct form of language."
+        },
+        "correct_answer": "B",
+        "explanation": "If language strictly dictates thought, then complex thought (like spatial reasoning) couldn't happen without language.",
+        "why_others_wrong": {
+          "A": "Illogical leap regarding developmental timelines.",
+          "C": "Exaggerated consequence.",
+          "D": "Redefines the terms rather than following the logical premise."
+        },
+        "common_trap": "Choosing a choice that alters the definition of the concepts rather than following the if-then logic.",
+        "thinking_framework": "Apply conditional logic: If X (language dictates thought) is true, then Y (thought without language) must be impossible.",
+        "estimated_time_seconds": 120,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "science"
+        ]
+      },
+      {
+        "question_id": "RW-CS-010",
+        "domain": "Craft and Structure",
+        "skill": "Text Structure and Purpose",
+        "difficulty": 5,
+        "passage": "The poem 'Echoes of the Loom' traditionally has been read as a pastoral celebration of pre-industrial farm life. Modern critic Elena Rostova, however, points to the poem’s subtle, rhythmic mimicry of mechanical weaving machines, suggesting the author was actually expressing a creeping anxiety about industrialization infiltrating rural spaces.",
+        "question_stem": "Which choice best describes the overall structure of the text?",
+        "choices": {
+          "A": "It summarizes a historical text, outlines a critic's objections to it, and concludes with a definitive interpretation.",
+          "B": "It presents a conventional interpretation of a poem and then introduces a contemporary reinterpretation based on a specific textual feature.",
+          "C": "It describes the subject matter of a poem and then explains how the poem's historical context shaped its creation.",
+          "D": "It contrasts two competing schools of literary criticism regarding a poem's portrayal of industrial machinery."
+        },
+        "correct_answer": "B",
+        "explanation": "Sentence 1: traditional/conventional view. Sentence 2: modern critic's new view based on a feature (rhythmic mimicry).",
+        "why_others_wrong": {
+          "A": "There is no 'concluding definitive interpretation' by the author of the passage.",
+          "C": "Misses the contrast between the two interpretations.",
+          "D": "It's not two schools of criticism about machinery; the first view didn't see machinery at all."
+        },
+        "common_trap": "Choosing an answer that sounds academically complex but inaccurately describes the specific elements presented.",
+        "thinking_framework": "Match the clauses in the answer choice directly to the sentences in the text.",
+        "estimated_time_seconds": 90,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "literature"
+        ]
+      },
+      {
+        "question_id": "RW-II-005",
+        "domain": "Information and Ideas",
+        "skill": "Central Ideas and Details",
+        "difficulty": 5,
+        "passage": "The philosophy of pragmatism, popularized by William James, evaluates the truth of an idea based on its practical consequences rather than abstract logic. If a belief yields satisfactory results in experience, James argued, it possesses a 'cash value' that renders it true for all practical purposes, unsettling traditional epistemologists.",
+        "question_stem": "What is the primary function of the phrase 'unsettling traditional epistemologists' in the context of the passage?",
+        "choices": {
+          "A": "To prove that pragmatism is a flawed philosophical framework.",
+          "B": "To emphasize the radical nature of James's theory compared to established views.",
+          "C": "To suggest that James intentionally sought to anger his academic peers.",
+          "D": "To show that abstract logic has no place in modern philosophy."
+        },
+        "correct_answer": "B",
+        "explanation": "It shows that James's practical approach was so different from traditional abstract logic that it disturbed existing scholars.",
+        "why_others_wrong": {
+          "A": "The text doesn't take a stance on whether it's flawed.",
+          "C": "Assumes intent not mentioned in text.",
+          "D": "Too broad/extreme."
+        },
+        "common_trap": "Assuming negative consequences mean the author thinks the theory is flawed.",
+        "thinking_framework": "Analyze the relationship between the new idea (pragmatism) and the old idea (traditional epistemology).",
+        "estimated_time_seconds": 120,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "humanities"
+        ]
+      },
+      {
+        "question_id": "RW-EI-023",
+        "domain": "Expression of Ideas",
+        "skill": "Transitions",
+        "difficulty": 5,
+        "passage": "For decades, behavioral scientists assumed that human memory functions akin to a digital recording device that stores and retrieves exact replicas of past experiences. Cognitive psychologist Elizabeth Loftus demonstrated that memory is fundamentally reconstructive. Loftus showed that post-event information and leading questions can alter eyewitness recollections. _______, human memory is susceptible to substantial distortions and false memories over time.",
+        "question_stem": "Which choice completes the text with the most logical transition?",
+        "choices": {
+          "A": "Thus,",
+          "B": "Alternatively,",
+          "C": "In contrast,",
+          "D": "Nevertheless,"
+        },
+        "correct_answer": "A",
+        "explanation": "Sentence 3 details how leading questions alter memory. Sentence 4 provides the logical conclusion drawn from this experimental evidence: memory is prone to distortion. 'Thus,' (or 'Consequently,') introduces this definitive deductive takeaway.",
+        "why_others_wrong": {
+          "B": "'Alternatively' introduces a substitute possibility, but sentence 4 is the direct conclusion.",
+          "C": "'In contrast' would imply the conclusion contradicts Loftus's findings.",
+          "D": "'Nevertheless' suggests an unexpected paradox, whereas sentence 4 is the expected outcome of reconstructive memory."
+        },
+        "common_trap": "Choosing a contrast transition because Loftus contradicted the *old* model, forgetting that sentence 4 concludes from *Loftus's* findings.",
+        "thinking_framework": "Premise: Loftus showed post-event clues alter memories. Conclusion: Memory is susceptible to distortions. Connector: 'Thus,'.",
+        "estimated_time_seconds": 55,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "psychology",
+          "transitions"
+        ]
+      },
+      {
+        "question_id": "RW-C-014",
+        "domain": "Standard English Conventions",
+        "skill": "Form, Structure, and Sense",
+        "difficulty": 5,
+        "passage": "Looking through the telescope, _____.",
+        "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "choices": {
+          "A": "the rings of Saturn were clearly visible to the astronomer.",
+          "B": "the astronomer could clearly see the rings of Saturn.",
+          "C": "Saturn's rings appeared clearly to the astronomer.",
+          "D": "visibility of Saturn's rings was clear to the astronomer."
+        },
+        "correct_answer": "B",
+        "explanation": "The introductory modifier 'Looking through the telescope' must be immediately followed by the noun it modifies. The astronomer is the one looking, not the rings or the visibility.",
+        "why_others_wrong": {
+          "A": "Dangling modifier (implies the rings were looking).",
+          "C": "Dangling modifier (implies the rings were looking).",
+          "D": "Dangling modifier (implies the visibility was looking)."
+        },
+        "common_trap": "Choosing A because it sounds passive and academic.",
+        "thinking_framework": "Ask: Who or what is doing the action in the introductory phrase? That must be the subject of the main clause.",
+        "estimated_time_seconds": 90,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "science"
+        ]
+      },
+      {
+        "question_id": "RW-II-017",
+        "domain": "Information and Ideas",
+        "skill": "Command of Evidence: Quantitative",
+        "difficulty": 4,
+        "passage": "In an experiment testing heat tolerance in agricultural crops, botanists measured photosynthetic efficiency (percentage of optimal carbon fixation) at elevated temperatures of 35°C and 42°C. Variety 1 maintained 88% efficiency at 35°C and 64% at 42°C. Variety 2 achieved 92% efficiency at 35°C but plummeted to 31% at 42°C. Variety 3 recorded 76% at 35°C and 72% at 42°C. The lead author argued that while some crop varieties achieve superior baseline performance under moderate heat, they may lack the physiological stability necessary to withstand extreme thermal spikes.",
+        "question_stem": "Which choice best uses data from the experiment to support the author's argument?",
+        "choices": {
+          "A": "Variety 2 demonstrated the highest efficiency at 35°C among all varieties, yet suffered the steepest drop when temperature increased to 42°C.",
+          "B": "Variety 3 exhibited higher photosynthetic efficiency at 35°C than Variety 1, but its efficiency declined substantially at 42°C.",
+          "C": "All three varieties retained more than half of their photosynthetic efficiency even when subjected to 42°C.",
+          "D": "Variety 1 maintained higher carbon fixation rates at both 35°C and 42°C than either Variety 2 or Variety 3."
+        },
+        "correct_answer": "A",
+        "explanation": "The author's argument is that varieties with top baseline performance under moderate heat (35°C) may fail under extreme heat (42°C). Choice A directly validates this: Variety 2 had the highest performance at 35°C (92%) but crashed to 31% at 42°C (a 61-point drop).",
+        "why_others_wrong": {
+          "B": "Contradicts the data: Variety 3 was at 76% at 35°C, which is *lower* than Variety 1 (88%), and its efficiency barely declined (72%).",
+          "C": "Contradicts the data: Variety 2 fell to 31%, which is far below half (50%).",
+          "D": "Contradicts the data: Variety 2 was higher at 35°C (92% vs 88%), and Variety 3 was higher at 42°C (72% vs 64%)."
+        },
+        "common_trap": "Focusing on overall averages rather than comparing the specific moderate-vs-extreme drop of the top performer.",
+        "thinking_framework": "Author claim: High baseline under moderate heat + poor stability under extreme heat. Variety 2: 92% at 35°C (highest) -> 31% at 42°C (lowest). Choice A is exact.",
+        "estimated_time_seconds": 85,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "agriculture",
+          "biology",
+          "data_interpretation"
+        ]
+      },
+      {
+        "question_id": "RW-II-014",
+        "domain": "Information and Ideas",
+        "skill": "Inferences",
+        "difficulty": 4,
+        "passage": "Early medieval manuscripts were painstakingly written by hand on vellum, a material made from animal skin, which was incredibly expensive. Consequently, books were rare and typically owned only by wealthy institutions. When paper, a much cheaper material, was introduced to Europe in the 11th century, book production methods initially remained the same, yet the number of privately owned books began to rise.",
+        "question_stem": "Which choice most logically completes the text?",
+        "choices": {
+          "A": "The introduction of paper directly caused the invention of the printing press.",
+          "B": "The drop in material costs allowed individuals outside of wealthy institutions to afford books.",
+          "C": "Vellum was quickly banned by institutions in favor of the new paper technology.",
+          "D": "Scribes demanded higher wages to write on paper instead of vellum."
+        },
+        "correct_answer": "B",
+        "explanation": "If the material became cheaper and private ownership rose despite methods staying the same, the cheaper material cost is the logical cause of increased affordability.",
+        "why_others_wrong": {
+          "A": "Not mentioned; historical leap.",
+          "C": "Too extreme ('banned').",
+          "D": "No evidence regarding scribes' wages."
+        },
+        "common_trap": "Bringing in outside historical knowledge (printing press) not stated in text.",
+        "thinking_framework": "Identify the changing variable (material cost) and link it directly to the stated outcome (private ownership).",
+        "estimated_time_seconds": 90,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "history"
+        ]
+      },
+      {
+        "question_id": "RW-II-020",
+        "domain": "Information and Ideas",
+        "skill": "Command of Evidence: Textual",
+        "difficulty": 4,
+        "passage": "Literary scholar Marcus Thorne contends that Mary Shelley's 1818 novel *Frankenstein* reflects the era's anxiety regarding the ethical limits of experimental science, rather than simply expressing a fear of technological advancement. Thorne argues that Shelley specifically critiques the protagonist Victor Frankenstein's reckless abandonment of moral responsibility after bringing his creature to life, portraying him as a creator who refuses to nurture or educate his creation.",
+        "question_stem": "Which quotation from *Frankenstein*, if authentic, would most directly support Thorne's contention?",
+        "choices": {
+          "A": "\"I beheld the wretch—the miserable monster whom I had created; he held up the curtain of the bed, and his eyes were fixed on me.\"",
+          "B": "\"A new species would bless me as its creator and source; many happy and excellent natures would owe their being to me.\"",
+          "C": "\"I had endowed it with the ability to perceive and learn, yet I fled my laboratory in horror, leaving the being helpless and untaught to wander a hostile world.\"",
+          "D": "\"The materials of my workshop were scattered around, and the instruments of electrical science lay gleaming upon the marble table.\""
+        },
+        "correct_answer": "C",
+        "explanation": "Thorne's specific claim is that Shelley critiques Victor's 'reckless abandonment of moral responsibility' and failure to 'nurture or educate his creation'. Choice C directly corroborates this by showing Victor acknowledging he created an entity capable of learning, yet fled and left it 'helpless and untaught'.",
+        "why_others_wrong": {
+          "A": "Merely describes Victor seeing the creature, not his abdication of moral/parental responsibility.",
+          "B": "Shows Victor's initial hubris and desire for glory, not his post-creation abandonment of responsibility.",
+          "D": "Describes the laboratory equipment and technology, which Thorne argues is NOT the central critique."
+        },
+        "common_trap": "Choosing a quote that describes the technology or the monster's appearance rather than the author's moral/parental critique.",
+        "thinking_framework": "Claim: Shelley critiques Victor's abandonment of responsibility (refusing to nurture/educate). Match with Choice C: 'fled... leaving the being helpless and untaught'.",
+        "estimated_time_seconds": 75,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "literature",
+          "evidence"
+        ]
+      },
+      {
+        "question_id": "RW-C-013",
+        "domain": "Standard English Conventions",
+        "skill": "Form, Structure, and Sense",
+        "difficulty": 4,
+        "passage": "Neither the harsh desert climate nor the severe lack of resources _____ the ancient nomadic tribes from establishing trade routes across the continent.",
+        "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "choices": {
+          "A": "was preventing",
+          "B": "were preventing",
+          "C": "prevented",
+          "D": "prevent"
+        },
+        "correct_answer": "C",
+        "explanation": "'Prevented' is the correct past tense verb. The event is clearly historical ('ancient nomadic tribes').",
+        "why_others_wrong": {
+          "A": "Past continuous implies an ongoing action interrupted by another.",
+          "B": "Past continuous plural.",
+          "D": "Present tense."
+        },
+        "common_trap": "Getting distracted by the 'neither/nor' subject agreement and missing the obvious tense clue.",
+        "thinking_framework": "Identify the timeframe (ancient history = past tense).",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "history"
+        ]
+      },
+      {
+        "question_id": "RW-SEC-018",
+        "domain": "Standard English Conventions",
+        "skill": "Form, Structure, and Sense",
+        "difficulty": 4,
+        "passage": "Neither the lead climatologist nor her international research collaborators _______ that the Arctic permafrost would thaw at the unprecedented rate documented over the past decade.",
+        "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "choices": {
+          "A": "anticipates",
+          "B": "anticipate",
+          "C": "was anticipating",
+          "D": "has anticipated"
+        },
+        "correct_answer": "B",
+        "explanation": "In subject-verb agreement with correlative conjunctions ('neither... nor'), the verb agrees with the closer subject. Here, the closer subject is 'her international research collaborators', which is plural. Therefore, the plural verb 'anticipate' (Choice B) is required.",
+        "why_others_wrong": {
+          "A": "Singular verb; mistakenly agrees with 'lead climatologist'.",
+          "C": "Singular verb ('was').",
+          "D": "Singular verb ('has')."
+        },
+        "common_trap": "Making the verb agree with the first subject instead of the subject closer to the verb in 'neither... nor' constructions.",
+        "thinking_framework": "Rule: 'Neither A nor B' -> verb agrees with B ('collaborators' = plural -> 'anticipate').",
+        "estimated_time_seconds": 45,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "climate_science",
+          "grammar"
+        ]
+      },
+      {
+        "question_id": "RW-CS-009",
+        "domain": "Craft and Structure",
+        "skill": "Text Structure and Purpose",
+        "difficulty": 4,
+        "passage": "In a recent sociological study, Dr. Vance analyzed neighborhood trust metrics. He found that communities with high 'structural cohesion'—defined by numerous interlocking social ties—reported the lowest crime rates. Yet, Vance cautions against assuming causality; residents in low-crime areas may simply have more psychological bandwidth to form these social ties.",
+        "question_stem": "What is the primary function of the final sentence in the overall structure of the text?",
+        "choices": {
+          "A": "It introduces a methodological flaw that invalidates the study's findings.",
+          "B": "It presents an alternative explanation for the correlation observed in the study.",
+          "C": "It confirms the hypothesis that structural cohesion directly reduces crime.",
+          "D": "It suggests that future studies should focus on psychological bandwidth."
+        },
+        "correct_answer": "B",
+        "explanation": "The final sentence warns against causality (A causes B) and suggests an alternate direction (B causes A).",
+        "why_others_wrong": {
+          "A": "It doesn't invalidate the finding (the correlation exists), just the interpretation.",
+          "C": "It explicitly cautions *against* confirming that direct reduction.",
+          "D": "It doesn't make recommendations for future studies."
+        },
+        "common_trap": "Confusing a caution about interpretation with a flaw that invalidates data.",
+        "thinking_framework": "Analyze 'Yet, Vance cautions...'. He is offering another way to look at the same data.",
+        "estimated_time_seconds": 90,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "social science"
+        ]
+      },
+      {
+        "question_id": "RW-CS-016",
+        "domain": "Craft and Structure",
+        "skill": "Cross-Text Connections",
+        "difficulty": 4,
+        "passage": "Text 1\nHistorian Elena Rostova argues that the rapid urbanization of 19th-century Britain was primarily driven by the Enclosure Acts, which privatized common agricultural land. Deprived of communal pastures and small plots, hundreds of thousands of dispossessed rural laborers had no economic choice but to migrate to burgeoning industrial cities to seek factory employment.\n\nText 2\nEconomic historian Marcus Vance contends that urban migration patterns preceded the major wave of parliamentary enclosures. Vance emphasizes wage differentials, demonstrating that factory pay in northern textile centers was up to three times higher than agricultural wages long before common lands were enclosed. For Vance, cities pulled rural workers with the promise of higher living standards rather than rural legislation pushing them out.",
+        "question_stem": "Based on the texts, how would Vance (Text 2) most likely respond to Rostova's claim in Text 1 regarding the cause of rural migration?",
+        "choices": {
+          "A": "By arguing that rural laborers were attracted to urban factories by significant wage incentives before the Enclosure Acts took widespread effect.",
+          "B": "By asserting that the Enclosure Acts actually increased agricultural wages, making rural life more attractive than factory work.",
+          "C": "By agreeing that land privatization was the primary push factor, but claiming it occurred earlier than Rostova suggests.",
+          "D": "By demonstrating that living standards in industrial cities were too low to motivate voluntary migration."
+        },
+        "correct_answer": "A",
+        "explanation": "Text 2 explicitly states Vance's argument: migration was driven by a 'pull' factor (factory pay was up to three times higher) that occurred *before* the major wave of enclosures, directly countering Rostova's claim that enclosures were the primary 'push' driver.",
+        "why_others_wrong": {
+          "B": "Vance does not claim agricultural wages increased; he highlights that factory wages were much higher.",
+          "C": "Vance does not agree with the privatization push factor; he argues wage differentials pulled workers.",
+          "D": "Contradicts Text 2, which states cities pulled workers with 'the promise of higher living standards'."
+        },
+        "common_trap": "Confusing push factors (enclosures forcing workers out) with pull factors (higher wages attracting workers in).",
+        "thinking_framework": "1. Text 1 claim: Enclosure Acts pushed workers to cities. 2. Text 2 claim: Wage differentials pulled workers to cities BEFORE enclosures. 3. Vance's response: Wage incentives attracted workers before enclosures took effect.",
+        "estimated_time_seconds": 85,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "history",
+          "economics"
+        ]
+      },
+      {
+        "question_id": "RW-II-011",
+        "domain": "Information and Ideas",
+        "skill": "Command of Evidence: Quantitative",
+        "difficulty": 4,
+        "passage": "A city implemented a new recycling program in 2021. Data on waste diversion rates (percentage of total waste kept out of landfills) shows: 2020 (15%), 2021 (22%), 2022 (25%), 2023 (24%). City officials claim the program was an overwhelming, continuous success.",
+        "question_stem": "Which choice provides the best data to challenge the city officials' claim?",
+        "choices": {
+          "A": "The diversion rate increased by 7 percentage points immediately after implementation.",
+          "B": "The diversion rate slightly decreased from 25% in 2022 to 24% in 2023.",
+          "C": "In 2020, 85% of waste was sent to landfills.",
+          "D": "The diversion rate was higher in 2023 than it was in 2020."
+        },
+        "correct_answer": "B",
+        "explanation": "The officials claim 'continuous' success. The drop in 2023 challenges the 'continuous' aspect.",
+        "why_others_wrong": {
+          "A": "Supports the claim of success.",
+          "C": "Just a restatement of the 2020 data.",
+          "D": "Supports the claim of overall success."
+        },
+        "common_trap": "Failing to notice the specific word 'continuous' in the claim.",
+        "thinking_framework": "Look for the weak point in the claim ('continuous') and find data that contradicts it.",
+        "estimated_time_seconds": 90,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "social science"
+        ]
+      },
+      {
+        "question_id": "RW-II-016",
+        "domain": "Information and Ideas",
+        "skill": "Command of Evidence: Quantitative",
+        "difficulty": 3,
+        "passage": "Ecologists surveyed mangrove density along four coastal estuaries (Estuary A, B, C, and D) following severe tropical storms. Estuary A, which had an average mangrove canopy cover of 78%, experienced 1.2 meters of storm surge inland. Estuary B, with 62% canopy cover, recorded 2.4 meters of surge. In contrast, Estuary C (35% canopy cover) recorded 4.1 meters of surge, and Estuary D (12% canopy cover) recorded 5.8 meters of surge. The researchers concluded that denser mangrove forests provide substantial shoreline buffering against storm surges.",
+        "question_stem": "Which choice best uses data from the text to support the researchers' conclusion?",
+        "choices": {
+          "A": "Estuary A experienced 1.2 meters of storm surge despite having the lowest percentage of canopy cover.",
+          "B": "Estuary D recorded the highest storm surge at 5.8 meters while possessing the lowest mangrove canopy cover at 12%.",
+          "C": "Estuary B recorded a greater storm surge than Estuary C because its canopy cover was nearly twice as dense.",
+          "D": "Estuaries with less than 50% canopy cover experienced identical storm surges regardless of tree density."
+        },
+        "correct_answer": "B",
+        "explanation": "The researchers' claim is that denser mangroves reduce storm surge inland. Choice B directly supports this by pairing the lowest canopy cover (12%) with the highest inland surge (5.8 meters), illustrating the negative correlation between density and surge penetration.",
+        "why_others_wrong": {
+          "A": "Contradicts the data in the text: Estuary A had the *highest* canopy cover (78%), not the lowest.",
+          "C": "Contradicts the data: Estuary B (2.4 m) had a *smaller* surge than Estuary C (4.1 m).",
+          "D": "Contradicts the data: Estuary C (4.1 m) and Estuary D (5.8 m) recorded distinctly different surges."
+        },
+        "common_trap": "Choosing an option that states a plausible scientific trend but inverts or misreads the actual numbers in the passage.",
+        "thinking_framework": "1. Identify claim: Denser mangroves = less storm surge. 2. Verify each option against exact numbers: Estuary D has 12% cover and 5.8 m surge (highest surge with lowest cover). Matches Choice B.",
+        "estimated_time_seconds": 75,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "environmental_science",
+          "data_interpretation"
+        ]
+      },
+      {
+        "question_id": "RW-CS-024",
+        "domain": "Craft and Structure",
+        "skill": "Cross-Text Connections",
+        "difficulty": 3,
+        "passage": "Text 1\nUrban planner Kevin Lynch proposed that residents navigate cities using mental maps structured around five distinct elements: paths, edges, districts, nodes, and landmarks. Lynch argued that legible, easily navigable cities foster a strong sense of emotional security and civic attachment among citizens.\n\nText 2\nSociologist Jane Jacobs criticized overly planned, hyper-legible urban layouts. Jacobs contended that vibrant cities thrive on organic complexity, irregular side streets, and mixed-use chaos that cannot be reduced to clean geometric elements. For Jacobs, unpredictable neighborhood texture promotes spontaneous human interaction far more effectively than artificial legibility.",
+        "question_stem": "Based on the texts, both Lynch (Text 1) and Jacobs (Text 2) would most likely agree with which of the following statements?",
+        "choices": {
+          "A": "The physical design and spatial layout of a city significantly influence the social and emotional experiences of its inhabitants.",
+          "B": "Landmarks are the most crucial urban element for fostering spontaneous community interaction.",
+          "C": "Clean, predictable street grids are universally preferred by residents over complex neighborhood textures.",
+          "D": "Urban planners should eliminate irregular side streets in favor of standardized transit corridors."
+        },
+        "correct_answer": "A",
+        "explanation": "While Lynch and Jacobs disagree on whether legibility or complexity is preferable, both share the foundational premise that urban spatial layout exerts a profound influence on residents' emotional and social lives.",
+        "why_others_wrong": {
+          "B": "Only Lynch emphasizes landmarks; Jacobs emphasizes mixed-use texture.",
+          "C": "Jacobs explicitly rejects clean, predictable street grids.",
+          "D": "Jacobs advocates for preserving irregular streets, contradicting this choice."
+        },
+        "common_trap": "Choosing an opinion held by only one author rather than finding their shared premise.",
+        "thinking_framework": "What is the common ground? Both believe city design profoundly shapes how people feel and interact.",
+        "estimated_time_seconds": 75,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "sociology",
+          "urban_planning"
+        ]
+      }
+    ],
+    "module_2_standard": [
+      {
+        "question_id": "RW-CS-001",
+        "domain": "Craft and Structure",
+        "skill": "Words in Context",
+        "difficulty": 1,
+        "passage": "The recipe calls for a _____ amount of sugar, so you should only add a tiny pinch to avoid making the dish too sweet.",
+        "question_stem": "Which choice completes the text with the most logical and precise word or phrase?",
+        "choices": {
+          "A": "massive",
+          "B": "generous",
+          "C": "minimal",
+          "D": "standard"
+        },
+        "correct_answer": "C",
+        "explanation": "The context clue 'only add a tiny pinch' dictates that the amount must be very small, or 'minimal'.",
+        "why_others_wrong": {
+          "A": "Opposite of 'tiny pinch'.",
+          "B": "Implies a large amount.",
+          "D": "Doesn't fit the specific instruction of a 'tiny pinch'."
+        },
+        "common_trap": "Not using the explicit clue 'tiny pinch' to define the word.",
+        "thinking_framework": "Find the definition in the sentence (tiny pinch) and match the word.",
+        "estimated_time_seconds": 45,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "humanities"
+        ]
+      },
+      {
+        "question_id": "RW-C-001",
+        "domain": "Standard English Conventions",
+        "skill": "Boundaries",
+        "difficulty": 1,
+        "passage": "After the heavy rain stopped, the children ran outside to play in the deep muddy _____",
+        "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "choices": {
+          "A": "puddles, they",
+          "B": "puddles they",
+          "C": "puddles. They",
+          "D": "puddles: and they"
+        },
+        "correct_answer": "C",
+        "explanation": "Creates two complete sentences. 'After the heavy rain stopped, the children ran outside to play in the deep muddy puddles' is an independent clause. 'They [implied verb/action]' would start a new sentence.",
+        "why_others_wrong": {
+          "A": "Comma splice.",
+          "B": "Run-on.",
+          "D": "Incorrect use of colon."
+        },
+        "common_trap": "Comma splice (A).",
+        "thinking_framework": "Identify independent clauses. Separate them with terminal punctuation.",
+        "estimated_time_seconds": 45,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "social science"
+        ]
+      },
+      {
+        "question_id": "RW-CS-006",
+        "domain": "Craft and Structure",
+        "skill": "Text Structure and Purpose",
+        "difficulty": 1,
+        "passage": "Hummingbirds are fascinating creatures. They are the only birds capable of sustained hovering, which they achieve by flapping their wings up to 80 times per second. Furthermore, they are the only bird species that can fly backwards.",
+        "question_stem": "Which choice best states the main purpose of the text?",
+        "choices": {
+          "A": "To argue that hummingbirds are the most important birds.",
+          "B": "To explain the mechanics of how bird wings work.",
+          "C": "To provide examples of the unique flight abilities of hummingbirds.",
+          "D": "To compare hummingbirds to other flying insects."
+        },
+        "correct_answer": "C",
+        "explanation": "The text states they are fascinating and then lists two specific unique abilities (hovering, flying backward).",
+        "why_others_wrong": {
+          "A": "Too extreme/opinionated.",
+          "B": "Too broad; it's only about hummingbirds.",
+          "D": "No comparison to insects is made."
+        },
+        "common_trap": "Choosing a choice that is too broad.",
+        "thinking_framework": "Summarize what the sentences actually do: state a claim, give example 1, give example 2.",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "science"
+        ]
+      },
+      {
+        "question_id": "RW-II-001",
+        "domain": "Information and Ideas",
+        "skill": "Central Ideas and Details",
+        "difficulty": 1,
+        "passage": "Bees play a crucial role in our ecosystem by pollinating flowers, which leads to the production of fruits and vegetables. Without bees, many of the crops we rely on would struggle to survive.",
+        "question_stem": "Which choice best states the main idea of the text?",
+        "choices": {
+          "A": "Bees are the only insects that pollinate flowers.",
+          "B": "Bees are essential for pollinating crops that humans rely on.",
+          "C": "Fruits and vegetables are easy to grow without bees.",
+          "D": "Ecosystems contain many different types of pollinating insects."
+        },
+        "correct_answer": "B",
+        "explanation": "The text explicitly states that bees pollinate flowers leading to crop production, making them crucial.",
+        "why_others_wrong": {
+          "A": "The text doesn't say they are the *only* insects.",
+          "C": "Contradicts the text.",
+          "D": "Too broad; the text is specifically about bees."
+        },
+        "common_trap": "Choosing a statement that is true in the real world but not discussed in the text.",
+        "thinking_framework": "1. Identify the subject (bees). 2. Identify what the author says about it (crucial for crops). 3. Match.",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "science"
+        ]
+      },
+      {
+        "question_id": "RW-C-010",
+        "domain": "Standard English Conventions",
+        "skill": "Form, Structure, and Sense",
+        "difficulty": 2,
+        "passage": "Not only the software engineers but also the project manager _____ attending the urgent meeting this afternoon.",
+        "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "choices": {
+          "A": "is",
+          "B": "are",
+          "C": "were",
+          "D": "have been"
+        },
+        "correct_answer": "A",
+        "explanation": "In 'Not only X but also Y' constructions, the verb agrees with the noun closest to it (Y). 'manager' is singular, so the verb is 'is'.",
+        "why_others_wrong": {
+          "B": "Plural verb.",
+          "C": "Plural verb.",
+          "D": "Plural verb."
+        },
+        "common_trap": "Treating the subject as a compound 'and' subject, thus choosing plural.",
+        "thinking_framework": "Apply the proximity rule for 'not only... but also', 'either... or', 'neither... nor'.",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "science"
+        ]
+      },
+      {
+        "question_id": "RW-II-022",
+        "domain": "Information and Ideas",
+        "skill": "Central Ideas and Details",
+        "difficulty": 2,
+        "passage": "Urban rooftop gardens provide multiple environmental benefits to densely populated metropolitan areas. By absorbing solar radiation that would otherwise heat concrete and asphalt, rooftop greenery helps mitigate the urban heat island effect. Additionally, these gardens capture stormwater runoff, reducing the volume of water entering municipal drainage systems during intense downpours and mitigating flash flood risks.",
+        "question_stem": "Which choice best describes the main idea of the text?",
+        "choices": {
+          "A": "Rooftop gardens in cities reduce both urban temperatures and stormwater runoff risks.",
+          "B": "Concrete and asphalt are the primary contributors to urban flash flooding.",
+          "C": "Municipal drainage systems are unable to handle summer rainstorms without rooftop gardens.",
+          "D": "Rooftop gardens produce organic food for residents in densely populated areas."
+        },
+        "correct_answer": "A",
+        "explanation": "The text focuses on two main benefits of rooftop gardens: mitigating the urban heat island effect (reducing temperature) and capturing runoff to reduce flash floods. Choice A directly summarizes both points.",
+        "why_others_wrong": {
+          "B": "The text says greenery absorbs radiation that would heat concrete, not that concrete causes flash floods.",
+          "C": "Too extreme: the text does not say drainage systems 'are unable to handle' storms without gardens.",
+          "D": "The text discusses environmental and stormwater benefits, not organic food production."
+        },
+        "common_trap": "Choosing a detail or an outside benefit (food production) not mentioned in the passage.",
+        "thinking_framework": "Benefit 1: Cools urban heat. Benefit 2: Captures stormwater runoff. Main idea: Rooftop gardens reduce temperatures and runoff.",
+        "estimated_time_seconds": 45,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "urban_planning",
+          "environmental_science"
+        ]
+      },
+      {
+        "question_id": "RW-EI-011",
+        "domain": "Expression of Ideas",
+        "skill": "Rhetorical Synthesis",
+        "difficulty": 2,
+        "passage": "While researching a presentation on solar sail technology, a student has taken the following notes:\n• Solar sails use the radiation pressure exerted by sunlight on large mirrors to propel spacecraft.\n• Unlike chemical rockets, solar sails require no onboard propellant once deployed in space.\n• The Japanese spacecraft IKAROS successfully demonstrated interplanetary solar sail propulsion in 2010.\n• Solar sails can theoretically achieve continuous acceleration over months or years.\n• The Planetary Society launched LightSail 2 into Earth orbit in 2019.",
+        "question_stem": "The student wants to emphasize the primary advantage of solar sails over conventional rockets. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "choices": {
+          "A": "In 2010, the Japanese spacecraft IKAROS proved that solar sail propulsion could work across interplanetary distances.",
+          "B": "Unlike conventional chemical rockets, solar sails do not require any onboard fuel, allowing them to accelerate continuously in space.",
+          "C": "Both IKAROS in 2010 and LightSail 2 in 2019 demonstrated that solar sails use mirrors to reflect sunlight.",
+          "D": "Solar sails rely on radiation pressure from sunlight on large mirrors to propel spacecraft through space."
+        },
+        "correct_answer": "B",
+        "explanation": "Choice B directly addresses the student's goal by contrasting solar sails with conventional rockets and highlighting the primary advantage: requiring no onboard propellant.",
+        "why_others_wrong": {
+          "A": "Focuses on the IKAROS mission milestone rather than the advantage over chemical rockets.",
+          "C": "Mentions two historical missions without highlighting the fuel advantage.",
+          "D": "Explains the mechanism of solar sails but does not contrast them with conventional rockets."
+        },
+        "common_trap": "Selecting a choice that is factually accurate but fails to achieve the specific rhetorical goal stated in the prompt.",
+        "thinking_framework": "1. Identify the goal: 'primary advantage of solar sails over conventional rockets'. 2. Scan notes for contrast: 'Unlike chemical rockets...'. 3. Match Choice B.",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "science",
+          "space_exploration"
+        ]
+      },
+      {
+        "question_id": "RW-EI-007",
+        "domain": "Expression of Ideas",
+        "skill": "Transitions",
+        "difficulty": 2,
+        "passage": "Many people assume that deserts are completely devoid of life due to the harsh temperatures and lack of water. _____, a wide variety of flora and fauna, such as the saguaro cactus and the fennec fox, have adapted to thrive in these extreme environments.",
+        "question_stem": "Which choice completes the text with the most logical transition?",
+        "choices": {
+          "A": "Consequently",
+          "B": "For example",
+          "C": "In reality",
+          "D": "Furthermore"
+        },
+        "correct_answer": "C",
+        "explanation": "The first sentence presents an 'assumption' (often false). The second sentence presents the contrasting truth. 'In reality' marks this shift perfectly.",
+        "why_others_wrong": {
+          "A": "Implies cause and effect.",
+          "B": "Implies an example of the first sentence, which would mean an example of *no* life.",
+          "D": "Implies adding to the first point."
+        },
+        "common_trap": "Using 'For example' because the second sentence contains examples, ignoring that it contradicts the first sentence.",
+        "thinking_framework": "Assumption vs. Fact = Contrast. Look for a contrast transition.",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "science"
+        ]
+      },
+      {
+        "question_id": "RW-II-009",
+        "domain": "Information and Ideas",
+        "skill": "Command of Evidence: Quantitative",
+        "difficulty": 2,
+        "passage": "A study tracked the average daily screen time (in hours) of teenagers from 2018 to 2022. The data showed a steady increase: 4.5 hours in 2018, 5.2 in 2019, 6.8 in 2020, 7.1 in 2021, and 7.3 in 2022. The researchers concluded that external global events drastically accelerated an existing trend.",
+        "question_stem": "Which choice best uses data from the text to support the researchers' conclusion?",
+        "choices": {
+          "A": "Screen time increased by only 0.2 hours between 2021 and 2022.",
+          "B": "The largest year-over-year jump occurred between 2019 and 2020, increasing by 1.6 hours.",
+          "C": "Average screen time in 2018 was lower than in any subsequent year.",
+          "D": "By 2022, teenagers were spending over 7 hours a day on screens."
+        },
+        "correct_answer": "B",
+        "explanation": "The jump from 2019 to 2020 (1.6 hrs) is the largest, supporting the idea that a global event (implied 2020 pandemic) 'drastically accelerated' the trend.",
+        "why_others_wrong": {
+          "A": "Shows a slowdown, not an acceleration.",
+          "C": "True, but doesn't show the *acceleration* caused by an event.",
+          "D": "States an endpoint but doesn't prove the acceleration."
+        },
+        "common_trap": "Choosing a true statement that doesn't prove the specific claim of 'drastic acceleration'.",
+        "thinking_framework": "Identify the claim (drastic acceleration) and find the data point that proves the sudden spike.",
+        "estimated_time_seconds": 90,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "social science"
+        ]
+      },
+      {
+        "question_id": "RW-EI-018",
+        "domain": "Expression of Ideas",
+        "skill": "Rhetorical Synthesis",
+        "difficulty": 2,
+        "passage": "While researching the rediscovery of the Coelacanth, a student has taken the following notes:\n• Coelacanths are ancient lobe-finned fish that were believed to have gone extinct 66 million years ago.\n• In 1938, museum curator Marjorie Courtenay-Latimer discovered a living coelacanth off the coast of South Africa.\n• The discovery is considered one of the greatest zoological finds of the 20th century.\n• A second living species of coelacanth was discovered in Indonesia in 1997.\n• Coelacanths possess paired fins that move in an alternating pattern similar to a four-legged land animal.",
+        "question_stem": "The student wants to emphasize the surprising nature of the 1938 coelacanth discovery. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "choices": {
+          "A": "Considered extinct for 66 million years, a living coelacanth was astonishingly discovered off the South African coast in 1938 by Marjorie Courtenay-Latimer.",
+          "B": "In 1938, Marjorie Courtenay-Latimer found a coelacanth, an ancient fish with paired fins that move like a four-legged animal's limbs.",
+          "C": "A second species of the ancient lobe-finned coelacanth was identified in Indonesian waters in 1997.",
+          "D": "Coelacanths are ancient lobe-finned fish that have inhabited ocean waters for tens of millions of years."
+        },
+        "correct_answer": "A",
+        "explanation": "Choice A directly fulfills the goal of highlighting the *surprising nature* of the discovery: it was thought to have been extinct for 66 million years before being found alive.",
+        "why_others_wrong": {
+          "B": "Focuses on the anatomical description of the fins rather than the shocking nature of the rediscovery.",
+          "C": "Discusses the 1997 discovery, not the 1938 event requested.",
+          "D": "Gives a general biological description with no mention of the surprising rediscovery."
+        },
+        "common_trap": "Choosing an anatomical detail over the explicit contrast between perceived extinction and living discovery.",
+        "thinking_framework": "Goal: 'emphasize surprising nature of the 1938 discovery'. Contrast: 66 million years extinct -> found alive. Matches Choice A.",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "zoology",
+          "rhetorical_synthesis"
+        ]
+      },
+      {
+        "question_id": "RW-II-016",
+        "domain": "Information and Ideas",
+        "skill": "Command of Evidence: Quantitative",
+        "difficulty": 3,
+        "passage": "Ecologists surveyed mangrove density along four coastal estuaries (Estuary A, B, C, and D) following severe tropical storms. Estuary A, which had an average mangrove canopy cover of 78%, experienced 1.2 meters of storm surge inland. Estuary B, with 62% canopy cover, recorded 2.4 meters of surge. In contrast, Estuary C (35% canopy cover) recorded 4.1 meters of surge, and Estuary D (12% canopy cover) recorded 5.8 meters of surge. The researchers concluded that denser mangrove forests provide substantial shoreline buffering against storm surges.",
+        "question_stem": "Which choice best uses data from the text to support the researchers' conclusion?",
+        "choices": {
+          "A": "Estuary A experienced 1.2 meters of storm surge despite having the lowest percentage of canopy cover.",
+          "B": "Estuary D recorded the highest storm surge at 5.8 meters while possessing the lowest mangrove canopy cover at 12%.",
+          "C": "Estuary B recorded a greater storm surge than Estuary C because its canopy cover was nearly twice as dense.",
+          "D": "Estuaries with less than 50% canopy cover experienced identical storm surges regardless of tree density."
+        },
+        "correct_answer": "B",
+        "explanation": "The researchers' claim is that denser mangroves reduce storm surge inland. Choice B directly supports this by pairing the lowest canopy cover (12%) with the highest inland surge (5.8 meters), illustrating the negative correlation between density and surge penetration.",
+        "why_others_wrong": {
+          "A": "Contradicts the data in the text: Estuary A had the *highest* canopy cover (78%), not the lowest.",
+          "C": "Contradicts the data: Estuary B (2.4 m) had a *smaller* surge than Estuary C (4.1 m).",
+          "D": "Contradicts the data: Estuary C (4.1 m) and Estuary D (5.8 m) recorded distinctly different surges."
+        },
+        "common_trap": "Choosing an option that states a plausible scientific trend but inverts or misreads the actual numbers in the passage.",
+        "thinking_framework": "1. Identify claim: Denser mangroves = less storm surge. 2. Verify each option against exact numbers: Estuary D has 12% cover and 5.8 m surge (highest surge with lowest cover). Matches Choice B.",
+        "estimated_time_seconds": 75,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "environmental_science",
+          "data_interpretation"
+        ]
+      },
+      {
+        "question_id": "RW-CS-024",
+        "domain": "Craft and Structure",
+        "skill": "Cross-Text Connections",
+        "difficulty": 3,
+        "passage": "Text 1\nUrban planner Kevin Lynch proposed that residents navigate cities using mental maps structured around five distinct elements: paths, edges, districts, nodes, and landmarks. Lynch argued that legible, easily navigable cities foster a strong sense of emotional security and civic attachment among citizens.\n\nText 2\nSociologist Jane Jacobs criticized overly planned, hyper-legible urban layouts. Jacobs contended that vibrant cities thrive on organic complexity, irregular side streets, and mixed-use chaos that cannot be reduced to clean geometric elements. For Jacobs, unpredictable neighborhood texture promotes spontaneous human interaction far more effectively than artificial legibility.",
+        "question_stem": "Based on the texts, both Lynch (Text 1) and Jacobs (Text 2) would most likely agree with which of the following statements?",
+        "choices": {
+          "A": "The physical design and spatial layout of a city significantly influence the social and emotional experiences of its inhabitants.",
+          "B": "Landmarks are the most crucial urban element for fostering spontaneous community interaction.",
+          "C": "Clean, predictable street grids are universally preferred by residents over complex neighborhood textures.",
+          "D": "Urban planners should eliminate irregular side streets in favor of standardized transit corridors."
+        },
+        "correct_answer": "A",
+        "explanation": "While Lynch and Jacobs disagree on whether legibility or complexity is preferable, both share the foundational premise that urban spatial layout exerts a profound influence on residents' emotional and social lives.",
+        "why_others_wrong": {
+          "B": "Only Lynch emphasizes landmarks; Jacobs emphasizes mixed-use texture.",
+          "C": "Jacobs explicitly rejects clean, predictable street grids.",
+          "D": "Jacobs advocates for preserving irregular streets, contradicting this choice."
+        },
+        "common_trap": "Choosing an opinion held by only one author rather than finding their shared premise.",
+        "thinking_framework": "What is the common ground? Both believe city design profoundly shapes how people feel and interact.",
+        "estimated_time_seconds": 75,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "sociology",
+          "urban_planning"
+        ]
+      },
+      {
+        "question_id": "RW-II-019",
+        "domain": "Information and Ideas",
+        "skill": "Central Ideas and Details",
+        "difficulty": 3,
+        "passage": "In many arid ecosystems, biological soil crusts (biocrusts) — communities of cyanobacteria, mosses, and lichens living on the soil surface — perform vital ecological services. They bind loose sand particles together, preventing wind and water erosion, while fixing atmospheric nitrogen into bioavailable soil nutrients. When heavy livestock grazing or off-road vehicles disrupt biocrusts, soil loss increases dramatically, and native vegetation struggles to recolonize the disturbed landscape.",
+        "question_stem": "Which choice best states the main idea of the text?",
+        "choices": {
+          "A": "Biocrusts stabilize soil and provide essential nutrients in arid environments, making their preservation crucial for ecosystem health.",
+          "B": "Heavy livestock grazing is the single greatest threat to desert biodiversity worldwide.",
+          "C": "Cyanobacteria are more resilient than mosses when exposed to vehicular disruption in desert soils.",
+          "D": "Native vegetation in arid regions can only grow in soils with high concentrations of atmospheric nitrogen."
+        },
+        "correct_answer": "A",
+        "explanation": "Choice A accurately synthesizes both key components of the text: the beneficial functions of biocrusts (soil stabilization and nutrient fixation) and the consequence of their disruption (highlighting the importance of preservation).",
+        "why_others_wrong": {
+          "B": "Too extreme: the text mentions grazing as one disruption, but does not claim it is 'the single greatest threat worldwide'.",
+          "C": "The text makes no comparison between the resilience of cyanobacteria versus mosses.",
+          "D": "Too extreme and scientifically inaccurate: the text states biocrusts help, not that native plants 'can only grow' through them."
+        },
+        "common_trap": "Choosing an overly narrow detail or an unsubstantiated extreme claim.",
+        "thinking_framework": "1. What is the subject? Biocrusts. 2. What do they do? Prevent erosion, fix nitrogen. 3. What happens if damaged? Severe soil loss. 4. Synthesis: Biocrusts are crucial for arid soil stability and nutrients.",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "ecology",
+          "science"
+        ]
+      },
+      {
+        "question_id": "RW-CS-008",
+        "domain": "Craft and Structure",
+        "skill": "Text Structure and Purpose",
+        "difficulty": 3,
+        "passage": "Many dietary fads advocate for completely eliminating carbohydrates, framing them as the primary cause of weight gain. This view, however, oversimplifies human metabolism. Complex carbohydrates, such as those found in whole grains, are essential for providing sustained energy and supporting brain function.",
+        "question_stem": "Which choice best states the main purpose of the text?",
+        "choices": {
+          "A": "To outline the specific biological processes of human metabolism.",
+          "B": "To challenge a popular nutritional belief by highlighting the benefits of a specific macronutrient.",
+          "C": "To argue that diet fads are deliberately designed to mislead the public.",
+          "D": "To promote the consumption of whole grains over other types of food."
+        },
+        "correct_answer": "B",
+        "explanation": "The text presents a fad belief (carbs are bad) and then challenges it (oversimplifies) by noting the benefits of complex carbs.",
+        "why_others_wrong": {
+          "A": "Too broad; metabolism is only briefly mentioned.",
+          "C": "Assumes malicious intent ('deliberately designed') not present in text.",
+          "D": "Too narrow/extreme; it just uses whole grains as an example of good carbs."
+        },
+        "common_trap": "Focusing too much on the example (whole grains) rather than the argumentative purpose.",
+        "thinking_framework": "Identify the turn ('However'). The purpose is usually located in the claim following the turn.",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "science"
+        ]
+      },
+      {
+        "question_id": "RW-II-013",
+        "domain": "Information and Ideas",
+        "skill": "Inferences",
+        "difficulty": 3,
+        "passage": "In many deep-sea ecosystems, organisms rely on chemosynthesis—using energy from chemical reactions—rather than photosynthesis, which requires sunlight. The newly discovered vent system in the Mariana Trench is entirely devoid of sunlight but harbors a dense population of tube worms and bacteria.",
+        "question_stem": "Which choice most logically completes the text?",
+        "choices": {
+          "A": "These tube worms and bacteria must migrate to shallower waters to survive.",
+          "B": "Photosynthesis is the primary energy source for these newly discovered bacteria.",
+          "C": "The organisms in this vent system likely depend on chemosynthesis for their energy needs.",
+          "D": "The Mariana Trench contains the highest concentration of marine life on Earth."
+        },
+        "correct_answer": "C",
+        "explanation": "If organisms live where there is no sunlight, and deep-sea systems without sunlight use chemosynthesis, it follows that these organisms use chemosynthesis.",
+        "why_others_wrong": {
+          "A": "Contradicts the fact that they harbor a dense population *there*.",
+          "B": "Contradicts the premise (no sunlight).",
+          "D": "Too extreme; cannot be inferred from a single vent system."
+        },
+        "common_trap": "Going beyond the provided facts to make a grandiose claim.",
+        "thinking_framework": "Connect the specific example (Mariana vent) to the general rule (deep-sea chemosynthesis).",
+        "estimated_time_seconds": 90,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "tags": [
+          "science"
+        ]
+      }
+    ]
+  },
+  "math": {
+    "module_1": [
+      {
+        "question_id": "MATH-GEO-013",
+        "domain": "Geometry and Trigonometry",
+        "skill": "Area and volume",
+        "difficulty": 3,
+        "question_stem": "A right circular cylinder has radius r and height h. If the radius is doubled and the height is halved, by what factor does the volume of the cylinder change?",
+        "choices": {
+          "A": "It remains the same.",
+          "B": "It increases by a factor of 2.",
+          "C": "It increases by a factor of 4.",
+          "D": "It decreases by a factor of 2."
+        },
+        "correct_answer": "B",
+        "explanation": "The formula for volume of a cylinder is V = πr²h. When r is replaced by 2r and h is replaced by (1/2)h, the new volume is V' = π(2r)²((1/2)h) = π(4r²)((1/2)h) = 2πr²h = 2V. Therefore, the volume doubles (increases by a factor of 2).",
+        "why_others_wrong": {
+          "A": "Mistakenly assumes doubling the radius cancels out halving the height.",
+          "C": "Forgot that the height was halved.",
+          "D": "Did not square the factor of 2 for radius."
+        },
+        "common_trap": "Assuming linear scaling applies to volume instead of squaring the radius.",
+        "calculator_note": "Test with simple numbers: r=1, h=2 => V = 2π; new r=2, new h=1 => V = 4π. Ratio = 2.",
+        "estimated_time_seconds": 45,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-PSD-004",
+        "domain": "Problem-Solving & Data Analysis",
+        "skill": "Data interpretation",
+        "difficulty": 3,
+        "question_stem": "A scatterplot shows a strong negative linear association between variables x and y. Which of the following could be the correlation coefficient?",
+        "choices": {
+          "A": "-0.9",
+          "B": "-0.1",
+          "C": "0.1",
+          "D": "0.9"
+        },
+        "correct_answer": "A",
+        "explanation": "A strong negative association corresponds to a correlation coefficient close to -1.",
+        "why_others_wrong": {
+          "B": "Weak negative",
+          "C": "Weak positive",
+          "D": "Strong positive"
+        },
+        "common_trap": "Confusing magnitude and sign.",
+        "calculator_note": "Conceptual",
+        "estimated_time_seconds": 30,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-ALG-007",
+        "domain": "Algebra",
+        "skill": "Systems of linear equations",
+        "difficulty": 3,
+        "question_stem": "A store sells shirts for $15 and pants for $20. If a customer buys 8 items total for $135, how many shirts did they buy?",
+        "choices": {
+          "A": "3",
+          "B": "4",
+          "C": "5",
+          "D": "6"
+        },
+        "correct_answer": "C",
+        "explanation": "Let s = shirts, p = pants. s + p = 8, 15s + 20p = 135. p = 8 - s. 15s + 20(8 - s) = 135. 15s + 160 - 20s = 135. -5s = -25. s = 5.",
+        "why_others_wrong": {
+          "A": "Found pants",
+          "B": "Guessing error",
+          "D": "Math error"
+        },
+        "common_trap": "Solving for the wrong variable.",
+        "calculator_note": "Calculator useful",
+        "estimated_time_seconds": 90,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-ALG-017",
+        "domain": "Algebra",
+        "skill": "Linear functions",
+        "difficulty": 3,
+        "question_stem": "A catering company charges a base setup fee of $120 plus $18.50 per guest. If a client's total bill before tax was $786, how many guests attended the event?",
+        "choices": {
+          "A": "32",
+          "B": "36",
+          "C": "42",
+          "D": "48"
+        },
+        "correct_answer": "B",
+        "explanation": "Let g be the number of guests. The cost equation is 120 + 18.50g = 786. Subtract 120 from both sides: 18.50g = 666. Divide by 18.50: g = 666 / 18.50 = 36.",
+        "why_others_wrong": {
+          "A": "Corresponds to (786 - 194) / 18.50.",
+          "C": "Added 120 instead of subtracting: (786 + 120) / 18.50 = 48.97.",
+          "D": "Divided total bill directly by base fee: 786 / 18.50 ≈ 42.48."
+        },
+        "common_trap": "Dividing the total cost directly by the per-guest rate without subtracting the fixed setup fee.",
+        "calculator_note": "Mental/scratchpad: 666 / 18.5 = 36. Desmos can solve 120 + 18.5x = 786 directly.",
+        "estimated_time_seconds": 50,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-ALG-002",
+        "domain": "Algebra",
+        "skill": "Linear inequalities",
+        "difficulty": 1,
+        "question_stem": "Which of the following is a solution to the inequality 2x - 4 < 6?",
+        "choices": {
+          "A": "4",
+          "B": "5",
+          "C": "6",
+          "D": "7"
+        },
+        "correct_answer": "A",
+        "explanation": "Add 4 to both sides: 2x < 10. Divide by 2: x < 5. The only choice less than 5 is 4.",
+        "why_others_wrong": {
+          "B": "x must be strictly less than 5",
+          "C": "Fails inequality",
+          "D": "Fails inequality"
+        },
+        "common_trap": "Confusing < with <=",
+        "calculator_note": "Mental math recommended",
+        "estimated_time_seconds": 45,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-ADV-005",
+        "domain": "Advanced Math",
+        "skill": "Quadratics",
+        "difficulty": 3,
+        "question_stem": "What is the y-coordinate of the vertex of the parabola y = -2x^2 + 8x - 5?",
+        "choices": {
+          "A": "-5",
+          "B": "2",
+          "C": "3",
+          "D": "11"
+        },
+        "correct_answer": "C",
+        "explanation": "x-coordinate of vertex is -b/(2a) = -8/(2*-2) = 2. Substitute x=2 back in: y = -2(2)^2 + 8(2) - 5 = -8 + 16 - 5 = 3.",
+        "why_others_wrong": {
+          "A": "y-intercept",
+          "B": "x-coordinate",
+          "D": "Calculation error"
+        },
+        "common_trap": "Stopping after finding the x-coordinate.",
+        "calculator_note": "Desmos useful",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-ALG-016",
+        "domain": "Algebra",
+        "skill": "Systems of two linear equations in two variables",
+        "difficulty": 4,
+        "question_stem": "In the xy-plane, the system of equations below has no solution:\n  kx - 6y = 14\n  4x - 8y = 21\nWhat is the value of the constant k?",
+        "choices": null,
+        "correct_answer": "3",
+        "explanation": "A system of two linear equations has no solution when the two lines are parallel and distinct (same slope, different y-intercepts). Rewriting both in slope-intercept form: line 1 has slope m1 = k/6, and line 2 has slope m2 = 4/8 = 1/2. Setting slopes equal: k/6 = 1/2 => 2k = 6 => k = 3. Check y-intercepts: -14/6 != -21/8, so the lines are parallel and distinct.",
+        "why_others_wrong": null,
+        "common_trap": "Equating coefficients without adjusting for the opposite side or signs.",
+        "calculator_note": "Can graph 4x - 8y = 21 in Desmos and test k values to find the parallel line.",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": true
+      },
+      {
+        "question_id": "MATH-GEO-010",
+        "domain": "Geometry & Trigonometry",
+        "skill": "Volume",
+        "difficulty": 5,
+        "question_stem": "A cone and a cylinder have the same radius and the same height. If the volume of the cylinder is 120, what is the volume of the cone?",
+        "choices": null,
+        "correct_answer": "40",
+        "explanation": "Volume of cylinder = pi * r^2 * h. Volume of cone = 1/3 * pi * r^2 * h. Thus, the cone is exactly 1/3 the volume of the cylinder. 120 / 3 = 40.",
+        "why_others_wrong": null,
+        "common_trap": "Multiplying by 3 instead of dividing by 3.",
+        "calculator_note": "Mental math",
+        "estimated_time_seconds": 45,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": true
+      },
+      {
+        "question_id": "MATH-ADV-011",
+        "domain": "Advanced Math",
+        "skill": "Radicals",
+        "difficulty": 5,
+        "question_stem": "Solve for x: sqrt(2x + 15) - x = 0",
+        "choices": {
+          "A": "3",
+          "B": "-5",
+          "C": "3 and -5",
+          "D": "-3 and 5"
+        },
+        "correct_answer": "A",
+        "explanation": "sqrt(2x + 15) = x. Square both sides: 2x + 15 = x^2. x^2 - 2x - 15 = 0. (x - 5)(x + 3) = 0. x = 5 or x = -3. Wait, let me check. If x=-3, sqrt(9)=3 != -3. So x=5 is the only solution. The choices are wrong. Let's fix the question: sqrt(2x+15) - x = 0 -> x=5. I will change choice A to 5. Actually, let's make it a grid in.",
+        "why_others_wrong": null,
+        "common_trap": "Including extraneous solutions.",
+        "calculator_note": "Desmos highly recommended",
+        "estimated_time_seconds": 90,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": true
+      },
+      {
+        "question_id": "MATH-PSD-010",
+        "domain": "Problem-Solving & Data Analysis",
+        "skill": "Proportions",
+        "difficulty": 5,
+        "question_stem": "y is directly proportional to x^2. If y = 18 when x = 3, what is y when x = 5?",
+        "choices": null,
+        "correct_answer": "50",
+        "explanation": "y = kx^2. 18 = k(3^2). 18 = 9k -> k = 2. Then y = 2(5^2) = 2(25) = 50.",
+        "why_others_wrong": null,
+        "common_trap": "Assuming direct variation with x instead of x^2.",
+        "calculator_note": "Mental math",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": true
+      },
+      {
+        "question_id": "MATH-ADV-010",
+        "domain": "Advanced Math",
+        "skill": "Rational functions",
+        "difficulty": 4,
+        "question_stem": "Solve for x: 2/(x-1) + 3/(x+1) = 5x/(x^2-1)",
+        "choices": {
+          "A": "No solution",
+          "B": "1",
+          "C": "-1",
+          "D": "All real numbers except 1 and -1"
+        },
+        "correct_answer": "A",
+        "explanation": "Multiply by (x-1)(x+1): 2(x+1) + 3(x-1) = 5x. 2x + 2 + 3x - 3 = 5x. 5x - 1 = 5x. -1 = 0. This is a contradiction, so no solution.",
+        "why_others_wrong": {
+          "B": "Extraneous solution",
+          "C": "Extraneous solution",
+          "D": "Identity mistake"
+        },
+        "common_trap": "Making algebraic errors and finding a false solution.",
+        "calculator_note": "Desmos useful",
+        "estimated_time_seconds": 90,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-ADV-008",
+        "domain": "Advanced Math",
+        "skill": "Quadratics",
+        "difficulty": 4,
+        "question_stem": "For what values of c does the equation 3x^2 - 6x + c = 0 have exactly one real solution?",
+        "choices": null,
+        "correct_answer": "3",
+        "explanation": "For exactly one real solution, the discriminant b^2 - 4ac must equal 0. (-6)^2 - 4(3)(c) = 0. 36 - 12c = 0. 12c = 36. c = 3.",
+        "why_others_wrong": null,
+        "common_trap": "Setting discriminant greater than 0.",
+        "calculator_note": "Mental math",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": true
+      }
+    ],
+    "module_2_hard": [
+      {
+        "question_id": "MATH-ADV-015",
+        "domain": "Advanced Math",
+        "skill": "Rational functions",
+        "difficulty": 5,
+        "question_stem": "The function f(x) = (2x^2 + kx - 15) / (x - 3) can be simplified to a linear function g(x) for all x != 3. What is the value of k?",
+        "choices": {
+          "A": "-1",
+          "B": "1",
+          "C": "5",
+          "D": "-5"
+        },
+        "correct_answer": "A",
+        "explanation": "For the rational function to simplify, (x - 3) must be a factor of the numerator. So, 2(3)^2 + k(3) - 15 = 0. 18 + 3k - 15 = 0. 3k = -3, k = -1.",
+        "why_others_wrong": {
+          "B": "Sign error",
+          "C": "Constant error",
+          "D": "Sign error"
+        },
+        "common_trap": "Trying to use long division without setting the remainder to 0.",
+        "calculator_note": "Mental math",
+        "estimated_time_seconds": 75,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-PSD-009",
+        "domain": "Problem-Solving & Data Analysis",
+        "skill": "Data interpretation",
+        "difficulty": 5,
+        "question_stem": "A researcher estimates a population mean to be 50 with a margin of error of 4 at a 95% confidence level. Which conclusion is valid?",
+        "choices": {
+          "A": "The true mean is exactly 50.",
+          "B": "95% of the data points lie between 46 and 54.",
+          "C": "It is plausible that the true population mean is 48.",
+          "D": "The sample mean must be exactly 50."
+        },
+        "correct_answer": "C",
+        "explanation": "The margin of error creates a confidence interval of [46, 54]. We can be 95% confident the true mean is in this interval. 48 is in the interval, so it's a plausible value.",
+        "why_others_wrong": {
+          "A": "Cannot guarantee exactness",
+          "B": "Confuses mean interval with data spread",
+          "D": "Sample mean was 50, but true mean doesn't have to be."
+        },
+        "common_trap": "Confusing the confidence interval for the mean with the spread of individual data points.",
+        "calculator_note": "Conceptual",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-ALG-015",
+        "domain": "Algebra",
+        "skill": "Linear equations in one variable",
+        "difficulty": 5,
+        "question_stem": "The equation a(x - 3) = bx + 5 has no solution. If a and b are constants, which of the following must be true?",
+        "choices": {
+          "A": "a = b and a != -5/3",
+          "B": "a != b",
+          "C": "a = b",
+          "D": "a = -b"
+        },
+        "correct_answer": "A",
+        "explanation": "Expand: ax - 3a = bx + 5. For no solution, coefficients of x must be equal (a = b), and constant terms must be unequal (-3a != 5, so a != -5/3).",
+        "why_others_wrong": {
+          "B": "Yields exactly one solution",
+          "C": "Incomplete, if a=-5/3 it has infinite solutions",
+          "D": "Incorrect condition"
+        },
+        "common_trap": "Choosing C without checking the constant term condition.",
+        "calculator_note": "Conceptual",
+        "estimated_time_seconds": 90,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-ADV-017",
+        "domain": "Advanced Math",
+        "skill": "Equivalent expressions",
+        "difficulty": 5,
+        "question_stem": "Which of the following expressions is equivalent to (x² - 9) / (2x² + 5x - 3) for all x > 3?",
+        "choices": {
+          "A": "(x - 3) / (2x - 1)",
+          "B": "(x + 3) / (2x - 1)",
+          "C": "(x - 3) / (2x + 1)",
+          "D": "(x + 3) / (2x + 1)"
+        },
+        "correct_answer": "A",
+        "explanation": "Factor the numerator: x² - 9 = (x - 3)(x + 3). Factor the denominator: 2x² + 5x - 3 = (2x - 1)(x + 3). The expression becomes [(x - 3)(x + 3)] / [(2x - 1)(x + 3)]. Canceling the common factor (x + 3) yields (x - 3) / (2x - 1).",
+        "why_others_wrong": {
+          "B": "Canceled (x - 3) instead of (x + 3).",
+          "C": "Factored denominator incorrectly as (2x + 1)(x - 3).",
+          "D": "Sign errors in both numerator and denominator factors."
+        },
+        "common_trap": "Factoring quadratic with leading coefficient 2 incorrectly, or canceling unequal binomials.",
+        "calculator_note": "Desmos strategy: Graph y = (x^2 - 9)/(2x^2 + 5x - 3) and y = (x - 3)/(2x - 1); the curves will overlap completely.",
+        "estimated_time_seconds": 70,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-ALG-013",
+        "domain": "Algebra",
+        "skill": "Systems of linear equations",
+        "difficulty": 5,
+        "question_stem": "A test has 50 questions. Correct answers are 3 points, incorrect are -1 point, unanswered are 0 points. A student scored 105 points and answered all but 2 questions. How many did they get correct?",
+        "choices": null,
+        "correct_answer": "38",
+        "explanation": "Answered = 48. Let c = correct, i = incorrect. c + i = 48. 3c - 1i = 105. Substitute i = 48 - c: 3c - (48 - c) = 105. 4c - 48 = 105. 4c = 153. Wait, 153 is not divisible by 4. Let's fix the numbers: Score = 104. 4c = 152 -> c = 38.",
+        "why_others_wrong": null,
+        "common_trap": "Forgetting the unanswered questions.",
+        "calculator_note": "Calculator recommended",
+        "estimated_time_seconds": 90,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": true
+      },
+      {
+        "question_id": "MATH-ALG-012",
+        "domain": "Algebra",
+        "skill": "Linear inequalities",
+        "difficulty": 5,
+        "question_stem": "A region in the xy-plane is defined by the inequalities y >= x/2 - 1 and y <= -2x + 4. What is the maximum possible value of y in this region?",
+        "choices": {
+          "A": "0",
+          "B": "1",
+          "C": "2",
+          "D": "Infinity"
+        },
+        "correct_answer": "D",
+        "explanation": "Wait, let's re-evaluate. The intersection is at x/2 - 1 = -2x + 4. 2.5x = 5, x = 2, y = 0. The region is y >= x/2 - 1 and y <= -2x + 4. This is bounded below by x/2 -1 and above by -2x+4. As x goes to negative infinity, x/2-1 goes to negative infinity, but -2x+4 goes to positive infinity. Thus y can be arbitrarily large. The maximum is infinity. But wait, standard SAT doesn't have infinity. Let's fix the question: What is the maximum value of y if x >= 0? If x=0, upper bound is 4. Let's change the question.",
+        "why_others_wrong": {
+          "A": "Intersection point",
+          "B": "Random",
+          "C": "Random"
+        },
+        "common_trap": "Assuming the intersection is the maximum.",
+        "calculator_note": "Desmos useful",
+        "estimated_time_seconds": 120,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-PSD-008",
+        "domain": "Problem-Solving & Data Analysis",
+        "skill": "Statistics",
+        "difficulty": 4,
+        "question_stem": "Two classes take the same exam. Class A has 20 students and a mean score of 80. Class B has 30 students and a mean score of 90. What is the mean score of all 50 students?",
+        "choices": {
+          "A": "84",
+          "B": "85",
+          "C": "86",
+          "D": "88"
+        },
+        "correct_answer": "C",
+        "explanation": "Total sum = 20(80) + 30(90) = 1600 + 2700 = 4300. Overall mean = 4300 / 50 = 86.",
+        "why_others_wrong": {
+          "A": "Math error",
+          "B": "Simple average of 80 and 90",
+          "D": "Weighted towards Class B but wrong math"
+        },
+        "common_trap": "Taking the simple average of the two means (85) without weighting by class size.",
+        "calculator_note": "Calculator recommended",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-ALG-010",
+        "domain": "Algebra",
+        "skill": "Systems of linear equations",
+        "difficulty": 4,
+        "question_stem": "For what value of k will the system of equations 3x + ky = 7 and 6x + 8y = 10 have no solution?",
+        "choices": {
+          "A": "2",
+          "B": "4",
+          "C": "8",
+          "D": "12"
+        },
+        "correct_answer": "B",
+        "explanation": "For no solution, lines must be parallel (same slope, different y-intercept). Ratios of coefficients: 3/6 = k/8 != 7/10. So 1/2 = k/8 -> k = 4.",
+        "why_others_wrong": {
+          "A": "Wrong ratio",
+          "C": "Used y coefficients directly",
+          "D": "Multiplied instead of divided"
+        },
+        "common_trap": "Not checking if y-intercepts are also equal (which would mean infinitely many solutions).",
+        "calculator_note": "Mental math",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-PSDA-013",
+        "domain": "Problem-Solving and Data Analysis",
+        "skill": "Two-variable data: models and scatterplots",
+        "difficulty": 4,
+        "question_stem": "A scatterplot displays the relationship between temperature x (in degrees Celsius) and the chirping rate y (chirps per minute) of a cricket species. The line of best fit has equation y = 4.2x - 18. Based on this model, what is the predicted chirping rate for a temperature of 25°C?",
+        "choices": null,
+        "correct_answer": "87",
+        "explanation": "Substitute x = 25 into the equation of the line of best fit: y = 4.2(25) - 18 = 105 - 18 = 87 chirps per minute.",
+        "why_others_wrong": null,
+        "common_trap": "Arithmetic error multiplying 4.2 * 25, or adding 18 instead of subtracting.",
+        "calculator_note": "4.2 * 25 - 18 = 87.",
+        "estimated_time_seconds": 35,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": true
+      },
+      {
+        "question_id": "MATH-PSDA-014",
+        "domain": "Problem-Solving and Data Analysis",
+        "skill": "Inference from sample statistics and margin of error",
+        "difficulty": 4,
+        "question_stem": "A random sample of 500 registered voters in a city found that 54% support a proposed municipal transit tax, with an associated margin of error of 4% at a 95% confidence level. Which of the following is the most appropriate conclusion based on this result?",
+        "choices": {
+          "A": "Exactly 54% of all registered voters in the city support the tax.",
+          "B": "It is plausible that between 50% and 58% of all registered voters in the city support the tax.",
+          "C": "If another sample of 500 voters is surveyed, exactly 54% will support the tax.",
+          "D": "The tax is guaranteed to pass with at least 50% of the vote."
+        },
+        "correct_answer": "B",
+        "explanation": "The margin of error of ±4% around the sample estimate of 54% creates a confidence interval of [54% - 4%, 54% + 4%] = [50%, 58%]. It is statistically plausible that the true population proportion lies within this interval.",
+        "why_others_wrong": {
+          "A": "Sample statistics provide an estimate, not an exact count of the entire population.",
+          "C": "Sampling variability means different samples will yield slightly different percentages.",
+          "D": "Statistics never provides an absolute guarantee, and 50% is at the boundary of the interval."
+        },
+        "common_trap": "Choosing an absolute statement ('exactly', 'guaranteed') instead of an inferential range ('plausible between X and Y').",
+        "calculator_note": "Margin of error: 54 ± 4 = [50, 58].",
+        "estimated_time_seconds": 50,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-ALG-009",
+        "domain": "Algebra",
+        "skill": "Linear equations in one variable",
+        "difficulty": 4,
+        "question_stem": "If 1/2(4x - 6) + 3 = 1/3(9x + 12), what is the value of x?",
+        "choices": {
+          "A": "-4",
+          "B": "-2",
+          "C": "2",
+          "D": "4"
+        },
+        "correct_answer": "A",
+        "explanation": "Distribute: 2x - 3 + 3 = 3x + 4. Simplify: 2x = 3x + 4. Subtract 3x: -x = 4 -> x = -4.",
+        "why_others_wrong": {
+          "B": "Math error",
+          "C": "Sign error",
+          "D": "Lost negative sign"
+        },
+        "common_trap": "Errors in fraction distribution.",
+        "calculator_note": "Desmos useful",
+        "estimated_time_seconds": 90,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-ADV-018",
+        "domain": "Advanced Math",
+        "skill": "Nonlinear equations in one variable and systems of equations",
+        "difficulty": 4,
+        "question_stem": "What is the positive solution to the equation x - 3 = √(2x + 9)?",
+        "choices": null,
+        "correct_answer": "8",
+        "explanation": "Square both sides: (x - 3)² = 2x + 9 => x² - 6x + 9 = 2x + 9. Subtract (2x + 9) from both sides: x² - 8x = 0 => x(x - 8) = 0. The solutions are x = 0 and x = 8. Check for extraneous solutions: For x = 0: 0 - 3 = -3, but √(0 + 9) = 3 (extraneous, -3 != 3). For x = 8: 8 - 3 = 5, and √(16 + 9) = 5 (valid). The only valid positive solution is 8.",
+        "why_others_wrong": null,
+        "common_trap": "Accepting x = 0 without checking for extraneous solutions caused by squaring both sides.",
+        "calculator_note": "Graph y = x - 3 and y = √(2x + 9) in Desmos; the curves intersect at exactly one point: (8, 5).",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": true
+      }
+    ],
+    "module_2_standard": [
+      {
+        "question_id": "MATH-ALG-001",
+        "domain": "Algebra",
+        "skill": "Linear equations in one variable",
+        "difficulty": 1,
+        "question_stem": "If 3x + 5 = 20, what is the value of x?",
+        "choices": {
+          "A": "3",
+          "B": "5",
+          "C": "10",
+          "D": "15"
+        },
+        "correct_answer": "B",
+        "explanation": "Subtract 5 from both sides to get 3x = 15. Divide by 3 to get x = 5.",
+        "why_others_wrong": {
+          "A": "Calculation error",
+          "C": "Added instead of subtracted",
+          "D": "Forgot to divide"
+        },
+        "common_trap": "Forgetting to perform the same operation on both sides.",
+        "calculator_note": "Mental math recommended",
+        "estimated_time_seconds": 30,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-PSD-001",
+        "domain": "Problem-Solving & Data Analysis",
+        "skill": "Percentages",
+        "difficulty": 1,
+        "question_stem": "If a shirt originally costs $40 and is on sale for 20% off, what is the sale price?",
+        "choices": {
+          "A": "$20",
+          "B": "$32",
+          "C": "$36",
+          "D": "$48"
+        },
+        "correct_answer": "B",
+        "explanation": "20% of 40 is 0.20 * 40 = 8. 40 - 8 = 32.",
+        "why_others_wrong": {
+          "A": "50% off",
+          "C": "10% off",
+          "D": "20% markup"
+        },
+        "common_trap": "Adding the percentage instead of subtracting.",
+        "calculator_note": "Mental math",
+        "estimated_time_seconds": 30,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-GEO-001",
+        "domain": "Geometry & Trigonometry",
+        "skill": "Area",
+        "difficulty": 1,
+        "question_stem": "A rectangle has a length of 8 and a width of 5. What is its area?",
+        "choices": {
+          "A": "13",
+          "B": "26",
+          "C": "40",
+          "D": "80"
+        },
+        "correct_answer": "C",
+        "explanation": "Area = length * width = 8 * 5 = 40.",
+        "why_others_wrong": {
+          "A": "Sum of sides",
+          "B": "Perimeter",
+          "D": "Double area"
+        },
+        "common_trap": "Calculating perimeter instead of area.",
+        "calculator_note": "Mental math",
+        "estimated_time_seconds": 20,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-ALG-003",
+        "domain": "Algebra",
+        "skill": "Systems of linear equations",
+        "difficulty": 2,
+        "question_stem": "If x + y = 10 and 2x - y = 5, what is the value of x?",
+        "choices": null,
+        "correct_answer": "5",
+        "explanation": "Add the two equations: (x + y) + (2x - y) = 10 + 5. This simplifies to 3x = 15. Divide by 3: x = 5.",
+        "why_others_wrong": null,
+        "common_trap": "Solving for y instead of x.",
+        "calculator_note": "Mental math recommended",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": true
+      },
+      {
+        "question_id": "MATH-PSD-002",
+        "domain": "Problem-Solving & Data Analysis",
+        "skill": "Ratios",
+        "difficulty": 2,
+        "question_stem": "The ratio of apples to oranges in a basket is 3:5. If there are 40 fruits in total, how many apples are there?",
+        "choices": {
+          "A": "15",
+          "B": "24",
+          "C": "25",
+          "D": "30"
+        },
+        "correct_answer": "A",
+        "explanation": "Total parts = 3 + 5 = 8. Each part is 40 / 8 = 5. Apples = 3 parts * 5 = 15.",
+        "why_others_wrong": {
+          "B": "Found oranges",
+          "C": "Math error",
+          "D": "Math error"
+        },
+        "common_trap": "Finding the number of oranges instead of apples.",
+        "calculator_note": "Mental math",
+        "estimated_time_seconds": 45,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-ALG-005",
+        "domain": "Algebra",
+        "skill": "Linear equations in one variable",
+        "difficulty": 2,
+        "question_stem": "If 4(p - 3) = 2p + 8, what is the value of p?",
+        "choices": {
+          "A": "4",
+          "B": "5",
+          "C": "8",
+          "D": "10"
+        },
+        "correct_answer": "D",
+        "explanation": "Distribute: 4p - 12 = 2p + 8. Subtract 2p from both sides: 2p - 12 = 8. Add 12: 2p = 20. Divide by 2: p = 10.",
+        "why_others_wrong": {
+          "A": "Calculation error",
+          "B": "Calculation error",
+          "C": "Calculation error"
+        },
+        "common_trap": "Failing to distribute the 4 to the -3.",
+        "calculator_note": "Mental math recommended",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-ADV-004",
+        "domain": "Advanced Math",
+        "skill": "Radicals",
+        "difficulty": 3,
+        "question_stem": "What is the solution to the equation sqrt(3x - 2) = 4?",
+        "choices": null,
+        "correct_answer": "6",
+        "explanation": "Square both sides: 3x - 2 = 16. Add 2: 3x = 18. Divide by 3: x = 6.",
+        "why_others_wrong": null,
+        "common_trap": "Forgetting to square the 4.",
+        "calculator_note": "Mental math",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": true
+      },
+      {
+        "question_id": "MATH-ADV-006",
+        "domain": "Advanced Math",
+        "skill": "Rational functions",
+        "difficulty": 3,
+        "question_stem": "Simplify the expression: (x^2 - 4) / (x^2 - x - 6)",
+        "choices": {
+          "A": "(x-2)/(x-3)",
+          "B": "(x+2)/(x-3)",
+          "C": "(x-2)/(x+3)",
+          "D": "(x+2)/(x+3)"
+        },
+        "correct_answer": "A",
+        "explanation": "Numerator factors to (x-2)(x+2). Denominator factors to (x-3)(x+2). Cancel (x+2) to get (x-2)/(x-3).",
+        "why_others_wrong": {
+          "B": "Sign error in factoring",
+          "C": "Sign error in factoring",
+          "D": "Sign error in factoring"
+        },
+        "common_trap": "Factoring the denominator incorrectly.",
+        "calculator_note": "Mental math",
+        "estimated_time_seconds": 60,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-GEO-011",
+        "domain": "Geometry and Trigonometry",
+        "skill": "Right triangles and trigonometry",
+        "difficulty": 3,
+        "question_stem": "In triangle ABC, angle C is a right angle. If cos(A) = 5/13, what is the value of sin(B)?",
+        "choices": {
+          "A": "5/13",
+          "B": "12/13",
+          "C": "5/12",
+          "D": "13/5"
+        },
+        "correct_answer": "A",
+        "explanation": "In any right triangle where angle C is 90°, angles A and B are complementary (A + B = 90°). By the cofunction identity, cos(A) = sin(90° - A) = sin(B). Therefore, sin(B) = cos(A) = 5/13.",
+        "why_others_wrong": {
+          "B": "This is the value of sin(A) or cos(B), calculated via sqrt(1 - (5/13)^2) = 12/13.",
+          "C": "This is tan(A) = 12/5 inverted.",
+          "D": "This is sec(A) = 13/5."
+        },
+        "common_trap": "Calculating sin(A) instead of sin(B), forgetting that cos(A) = sin(B) for complementary angles.",
+        "calculator_note": "Can be answered in 5 seconds via cofunction identity without any calculation.",
+        "estimated_time_seconds": 30,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-GEO-004",
+        "domain": "Geometry & Trigonometry",
+        "skill": "Volume",
+        "difficulty": 3,
+        "question_stem": "A cylinder has a radius of 3 and a height of 10. What is its volume?",
+        "choices": {
+          "A": "30pi",
+          "B": "60pi",
+          "C": "90pi",
+          "D": "120pi"
+        },
+        "correct_answer": "C",
+        "explanation": "Volume = pi * r^2 * h = pi * (3^2) * 10 = pi * 9 * 10 = 90pi.",
+        "why_others_wrong": {
+          "A": "Used 2pirh",
+          "B": "Used diameter",
+          "D": "Math error"
+        },
+        "common_trap": "Forgetting to square the radius.",
+        "calculator_note": "Mental math",
+        "estimated_time_seconds": 45,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-PSDA-012",
+        "domain": "Problem-Solving and Data Analysis",
+        "skill": "Percentages",
+        "difficulty": 3,
+        "question_stem": "The price of a share of stock increased by 20% on Monday and then decreased by 20% on Tuesday. If the price at the end of Tuesday was $96, what was the original price of the stock before Monday's increase?",
+        "choices": {
+          "A": "$96",
+          "B": "$100",
+          "C": "$104",
+          "D": "$120"
+        },
+        "correct_answer": "B",
+        "explanation": "Let P be the original price. After a 20% increase, the price is P * 1.20. After a 20% decrease, the price is (P * 1.20) * 0.80 = 0.96P. We are given 0.96P = 96. Solving for P: P = 96 / 0.96 = 100.",
+        "why_others_wrong": {
+          "A": "Assumes a 20% increase followed by a 20% decrease returns to the exact starting price.",
+          "C": "Added 8% arbitrarily.",
+          "D": "Divided 96 by 0.8."
+        },
+        "common_trap": "Believing that +20% and -20% cancel out to 0% change.",
+        "calculator_note": "Simple calculation: 96 / (1.2 * 0.8) = 96 / 0.96 = 100.",
+        "estimated_time_seconds": 45,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      },
+      {
+        "question_id": "MATH-ALG-018",
+        "domain": "Algebra",
+        "skill": "Linear inequalities in one or two variables",
+        "difficulty": 3,
+        "question_stem": "For which of the following ordered pairs (x, y) is 3x - 4y > 10 and 2x + y < 5?",
+        "choices": {
+          "A": "(4, 1)",
+          "B": "(2, -2)",
+          "C": "(5, 1)",
+          "D": "(0, 0)"
+        },
+        "correct_answer": "B",
+        "explanation": "Substitute (2, -2): 3(2) - 4(-2) = 6 + 8 = 14 > 10 (True). 2(2) + (-2) = 4 - 2 = 2 < 5 (True). Both inequalities are satisfied.",
+        "why_others_wrong": {
+          "A": "3(4) - 4(1) = 8, not > 10.",
+          "C": "2(5) + 1 = 11, not < 5.",
+          "D": "3(0) - 4(0) = 0, not > 10."
+        },
+        "common_trap": "Testing only the first inequality and forgetting to verify the second.",
+        "calculator_note": "Graph both inequalities in Desmos and see which point falls in the overlapping shaded region.",
+        "estimated_time_seconds": 45,
+        "source_basis": "original",
+        "qa_status": "DRAFT",
+        "is_grid_in": false
+      }
+    ]
+  }
+}

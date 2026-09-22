@@ -1,0 +1,52 @@
+{
+  "grammar_rules": {
+    "boundaries": [
+      {
+        "rule": "Comma Splice Prevention",
+        "description": "Two independent clauses cannot be joined by a comma alone.",
+        "allowed_fixes": [
+          "Period + Capital Letter: [Independent Clause 1]. [Independent Clause 2].",
+          "Semicolon: [Independent Clause 1]; [Independent Clause 2].",
+          "Comma + FANBOYS: [Independent Clause 1], and/but/so [Independent Clause 2].",
+          "Subordinating Conjunction: Although [Clause 1], [Independent Clause 2]."
+        ],
+        "sat_trap": "Using however, therefore, or furthermore with only a comma. These are conjunctive adverbs and require a semicolon or period: '; however,' or '. However,'."
+      },
+      {
+        "rule": "Colons and Single Dashes",
+        "description": "A colon or single dash must be preceded by an independent clause.",
+        "usage": "Use to introduce a list, an explanation, or an emphatic conclusion.",
+        "sat_trap": "Placing a colon after 'such as', 'including', or a verb like 'is' or 'are'."
+      },
+      {
+        "rule": "Paired Dashes and Commas",
+        "description": "Non-essential elements (appositives, parenthetical phrases) must be set off by matching punctuation on both sides: comma...comma or dash...dash.",
+        "sat_trap": "Mixing a comma on one side with a dash on the other."
+      }
+    ],
+    "form_structure_sense": [
+      {
+        "rule": "Subject-Verb Agreement Across Prepositional Phrases",
+        "description": "The subject and verb must agree in number. Words between the subject and verb (especially prepositional phrases) do not change the subject's number.",
+        "example": "The collection of rare artifacts [is / are] -> 'collection' is singular, so 'is' is correct.",
+        "sat_trap": "Making the verb agree with the noun inside the prepositional phrase ('artifacts') instead of the true subject ('collection')."
+      },
+      {
+        "rule": "Dangling and Misplaced Modifiers",
+        "description": "An introductory modifying phrase must be immediately followed by the noun it modifies.",
+        "example": "Having completed the lab experiment, the results were analyzed by Dr. Tran. (INCORRECT: the results didn't complete the lab). -> Having completed the lab experiment, Dr. Tran analyzed the results. (CORRECT)",
+        "sat_trap": "Placing the object of the action immediately after the comma instead of the actor."
+      },
+      {
+        "rule": "Parallel Structure",
+        "description": "Items in a list or comparison must share the same grammatical form.",
+        "example": "She enjoys hiking, swimming, and to ride bicycles. (INCORRECT) -> She enjoys hiking, swimming, and riding bicycles. (CORRECT)"
+      },
+      {
+        "rule": "Pronoun-Antecedent Agreement & Ambiguity",
+        "description": "Pronouns must clearly refer to a specific, singular/plural noun.",
+        "sat_trap": "Using 'they' or 'it' when there are two plausible antecedent nouns, creating ambiguity."
+      }
+    ]
+  }
+}

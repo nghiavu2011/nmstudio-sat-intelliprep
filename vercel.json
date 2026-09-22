@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "name": "nmstudio-sat-intelliprep",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "headers": { "cache-control": "public, max-age=31536000, immutable" },
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/css/(.*)",
+      "headers": { "cache-control": "public, max-age=86400, stale-while-revalidate=604800" },
+      "dest": "/css/$1"
+    },
+    {
+      "src": "/js/(.*)",
+      "headers": { "cache-control": "public, max-age=86400, stale-while-revalidate=604800" },
+      "dest": "/js/$1"
+    },
+    {
+      "src": "/data/(.*)",
+      "headers": { "cache-control": "public, max-age=86400, stale-while-revalidate=604800" },
+      "dest": "/data/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}

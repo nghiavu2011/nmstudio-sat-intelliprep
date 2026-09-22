@@ -1,0 +1,118 @@
+{
+  "reading_and_writing": {
+    "words_in_context": {
+      "label": "Words in Context",
+      "label_vi": "Từ vựng trong Ngữ cảnh",
+      "steps": [
+        {"step": 1, "en": "Ignore the answer choices first.", "vi": "Bỏ qua các đáp án trước."},
+        {"step": 2, "en": "Read the sentence and determine the local meaning/tone the word needs to convey.", "vi": "Đọc câu và xác định nghĩa/sắc thái mà từ cần truyền đạt trong ngữ cảnh."},
+        {"step": 3, "en": "Predict a simple replacement word in your own words.", "vi": "Dự đoán một từ thay thế đơn giản bằng từ ngữ của bạn."},
+        {"step": 4, "en": "Compare your prediction to each answer choice.", "vi": "So sánh dự đoán với từng đáp án."},
+        {"step": 5, "en": "Reject choices that fit the dictionary meaning but NOT this specific context.", "vi": "Loại bỏ đáp án đúng nghĩa từ điển nhưng KHÔNG phù hợp ngữ cảnh cụ thể này."}
+      ],
+      "key_reminder": "The SAT tests contextual meaning, not dictionary definitions."
+    },
+    "inference": {
+      "label": "Inferences",
+      "label_vi": "Suy luận",
+      "steps": [
+        {"step": 1, "en": "Identify what the text actually states (explicit information).", "vi": "Xác định những gì văn bản thực sự nói (thông tin rõ ràng)."},
+        {"step": 2, "en": "Determine the smallest justified conclusion — what MUST be true.", "vi": "Xác định kết luận nhỏ nhất có cơ sở — điều GÌ PHẢI đúng."},
+        {"step": 3, "en": "Reject answers that require assumptions beyond the text.", "vi": "Loại bỏ đáp án đòi hỏi giả định ngoài văn bản."},
+        {"step": 4, "en": "Choose the answer most directly supported by the passage.", "vi": "Chọn đáp án được hỗ trợ trực tiếp nhất từ đoạn văn."}
+      ],
+      "key_reminder": "SAT inferences are conservative — choose the answer that requires the LEAST leap from the text."
+    },
+    "textual_evidence": {
+      "label": "Command of Evidence: Textual",
+      "label_vi": "Sử dụng Bằng chứng: Văn bản",
+      "steps": [
+        {"step": 1, "en": "Identify the exact claim or conclusion being tested.", "vi": "Xác định chính xác nhận định hoặc kết luận đang được kiểm tra."},
+        {"step": 2, "en": "Search the passage for evidence that DIRECTLY supports (or weakens) that claim.", "vi": "Tìm trong đoạn văn bằng chứng TRỰC TIẾP hỗ trợ (hoặc làm yếu) nhận định đó."},
+        {"step": 3, "en": "Reject evidence that is merely related but does not directly address the claim.", "vi": "Loại bỏ bằng chứng chỉ liên quan nhưng không trực tiếp nói về nhận định."}
+      ],
+      "key_reminder": "Related ≠ Supporting. The evidence must directly address the specific claim."
+    },
+    "quantitative_evidence": {
+      "label": "Command of Evidence: Quantitative",
+      "label_vi": "Sử dụng Bằng chứng: Định lượng",
+      "steps": [
+        {"step": 1, "en": "Identify the claim being made.", "vi": "Xác định nhận định được đưa ra."},
+        {"step": 2, "en": "Read the axes, units, categories, and labels carefully.", "vi": "Đọc kỹ các trục, đơn vị, danh mục và nhãn."},
+        {"step": 3, "en": "Determine the exact data relationship (increase, decrease, comparison, trend).", "vi": "Xác định mối quan hệ dữ liệu chính xác (tăng, giảm, so sánh, xu hướng)."},
+        {"step": 4, "en": "Match the data to the claim — does the data actually support it?", "vi": "Đối chiếu dữ liệu với nhận định — dữ liệu có thực sự hỗ trợ không?"}
+      ],
+      "key_reminder": "Always check units and scale. A claim about 'most' requires comparing ALL categories, not just two."
+    },
+    "cross_text": {
+      "label": "Cross-Text Connections",
+      "label_vi": "Liên kết giữa các Văn bản",
+      "steps": [
+        {"step": 1, "en": "Summarize Text 1's position in a few words.", "vi": "Tóm tắt quan điểm của Văn bản 1 trong vài từ."},
+        {"step": 2, "en": "Summarize Text 2's position in a few words.", "vi": "Tóm tắt quan điểm của Văn bản 2 trong vài từ."},
+        {"step": 3, "en": "Determine the relationship: agreement, disagreement, qualification, extension?", "vi": "Xác định mối quan hệ: đồng ý, bất đồng, bổ sung điều kiện, mở rộng?"},
+        {"step": 4, "en": "Select the answer that accurately describes this relationship.", "vi": "Chọn đáp án mô tả chính xác mối quan hệ này."}
+      ],
+      "key_reminder": "Focus on HOW the authors relate, not just WHAT they say."
+    },
+    "transitions": {
+      "label": "Transitions",
+      "label_vi": "Từ nối / Chuyển tiếp",
+      "steps": [
+        {"step": 1, "en": "Ignore the proposed transition word.", "vi": "Bỏ qua từ nối được đề xuất."},
+        {"step": 2, "en": "Read the sentences before and after the blank.", "vi": "Đọc câu trước và sau chỗ trống."},
+        {"step": 3, "en": "Determine the logical relationship: addition, contrast, cause, effect, example, continuation, conclusion?", "vi": "Xác định mối quan hệ logic: bổ sung, tương phản, nguyên nhân, kết quả, ví dụ, tiếp tục, kết luận?"},
+        {"step": 4, "en": "Choose the transition that matches this relationship.", "vi": "Chọn từ nối phù hợp với mối quan hệ này."}
+      ],
+      "key_reminder": "The relationship between ideas determines the transition — not the other way around."
+    },
+    "rhetorical_synthesis": {
+      "label": "Rhetorical Synthesis",
+      "label_vi": "Tổng hợp Tu từ",
+      "steps": [
+        {"step": 1, "en": "Read the requested GOAL first (what the writer wants to accomplish).", "vi": "Đọc MỤC TIÊU trước (người viết muốn đạt được gì)."},
+        {"step": 2, "en": "Identify which notes are RELEVANT to that specific goal.", "vi": "Xác định ghi chú nào LIÊN QUAN đến mục tiêu cụ thể đó."},
+        {"step": 3, "en": "Reject answer choices that include true but IRRELEVANT information.", "vi": "Loại đáp án chứa thông tin đúng nhưng KHÔNG LIÊN QUAN."},
+        {"step": 4, "en": "Select the choice that best achieves the stated goal using relevant notes.", "vi": "Chọn đáp án đạt được mục tiêu tốt nhất bằng các ghi chú liên quan."}
+      ],
+      "key_reminder": "True ≠ Relevant. Information must serve the stated goal."
+    },
+    "conventions": {
+      "label": "Standard English Conventions",
+      "label_vi": "Quy tắc Tiếng Anh Chuẩn",
+      "steps": [
+        {"step": 1, "en": "Identify the sentence boundaries and clause structure.", "vi": "Xác định ranh giới câu và cấu trúc mệnh đề."},
+        {"step": 2, "en": "Check for: subject-verb agreement, pronoun reference, modifier placement, parallelism, verb tense/form.", "vi": "Kiểm tra: hòa hợp chủ-vị, đại từ, vị trí bổ nghĩa, song song, thì/dạng động từ."},
+        {"step": 3, "en": "For punctuation: determine if you need a period/semicolon (independent clauses), comma (dependent), colon (list/explanation), or no punctuation.", "vi": "Về dấu câu: xác định cần dấu chấm/chấm phẩy (mệnh đề độc lập), dấu phẩy (phụ thuộc), hai chấm (liệt kê/giải thích), hay không cần dấu."},
+        {"step": 4, "en": "Select the answer that creates a grammatically correct AND clear sentence.", "vi": "Chọn đáp án tạo câu đúng ngữ pháp VÀ rõ ràng."}
+      ],
+      "key_reminder": "Two independent clauses need a period, semicolon, or conjunction — NEVER just a comma (comma splice)."
+    }
+  },
+  "math": {
+    "general_framework": {
+      "label": "Math Problem-Solving Framework",
+      "label_vi": "Quy trình Giải Toán",
+      "steps": [
+        {"step": "GIVEN", "en": "What information is provided? List all known values, equations, and conditions.", "vi": "Thông tin gì được cho? Liệt kê tất cả giá trị, phương trình và điều kiện đã biết."},
+        {"step": "TARGET", "en": "What exactly must you find? Identify the specific value, expression, or relationship asked for.", "vi": "Cần tìm chính xác gì? Xác định giá trị, biểu thức hoặc quan hệ cụ thể được yêu cầu."},
+        {"step": "MODEL", "en": "What equation or relationship connects GIVEN to TARGET? Set up the math.", "vi": "Phương trình hoặc quan hệ nào kết nối GIVEN với TARGET? Thiết lập phép tính."},
+        {"step": "SOLVE", "en": "Use the shortest reliable method. Show key steps.", "vi": "Sử dụng phương pháp ngắn nhất và đáng tin cậy. Trình bày các bước chính."},
+        {"step": "VERIFY", "en": "Check: units, sign, domain, reasonableness, and answer choice compatibility.", "vi": "Kiểm tra: đơn vị, dấu, miền xác định, tính hợp lý, và sự phù hợp với đáp án."}
+      ]
+    },
+    "calculator_decision": {
+      "label": "Calculator / Desmos Decision Guide",
+      "label_vi": "Hướng dẫn Sử dụng Máy tính / Desmos",
+      "rules": [
+        {"situation": "Simple arithmetic or algebra", "decision": "Mental math / by hand", "vi": "Tính nhẩm / làm tay"},
+        {"situation": "Graphing two functions to find intersection", "decision": "Use Desmos", "vi": "Dùng Desmos"},
+        {"situation": "Checking a quadratic or polynomial solution", "decision": "Desmos graph or table", "vi": "Đồ thị hoặc bảng Desmos"},
+        {"situation": "Systems of equations with messy numbers", "decision": "Desmos (graph both lines)", "vi": "Desmos (vẽ cả hai đường)"},
+        {"situation": "Statistical regression or line of best fit", "decision": "Desmos regression", "vi": "Hồi quy Desmos"},
+        {"situation": "Conceptual understanding question", "decision": "NO calculator — think first", "vi": "KHÔNG dùng máy tính — suy nghĩ trước"},
+        {"situation": "Verifying your algebraic answer", "decision": "Plug values into Desmos", "vi": "Thay giá trị vào Desmos để kiểm tra"}
+      ]
+    }
+  }
+}

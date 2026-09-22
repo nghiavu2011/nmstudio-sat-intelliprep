@@ -1,0 +1,329 @@
+{
+  "diagnostic": {
+    "version": "1.0",
+    "description": "Compact initial diagnostic to estimate mastery per skill",
+    "total_questions": 30,
+    "estimated_time_minutes": 25,
+    "instructions": {
+      "en": "This short diagnostic helps us understand your current level. Answer each question to the best of your ability. There is no penalty for wrong answers.",
+      "vi": "Bài chẩn đoán ngắn này giúp chúng tôi hiểu trình độ hiện tại của bạn. Trả lời từng câu hỏi hết khả năng. Không bị trừ điểm khi trả lời sai."
+    }
+  },
+  "questions": [
+    {
+      "q_id": "DIAG-RW-01",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": 2,
+      "passage": "The archaeologist's discovery was considered seminal because it fundamentally changed how researchers understood early human migration patterns across Southeast Asia.",
+      "question_stem": "As used in the text, what does \"seminal\" most nearly mean?",
+      "choices": {"A": "Partial", "B": "Groundbreaking", "C": "Controversial", "D": "Predictable"},
+      "correct_answer": "B",
+      "estimated_time_seconds": 45
+    },
+    {
+      "q_id": "DIAG-RW-02",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": 4,
+      "passage": "Although the critic acknowledged the novel's ambitious scope, she found its execution wanting, noting that the author's tendency to digress into lengthy philosophical tangents attenuated the narrative tension that had been so carefully built in the opening chapters.",
+      "question_stem": "As used in the text, what does \"attenuated\" most nearly mean?",
+      "choices": {"A": "Strengthened", "B": "Redirected", "C": "Weakened", "D": "Complicated"},
+      "correct_answer": "C",
+      "estimated_time_seconds": 60
+    },
+    {
+      "q_id": "DIAG-RW-03",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": 2,
+      "passage": "In the Mekong Delta region of Vietnam, farmers have increasingly adopted integrated rice-shrimp farming systems. During the wet season, farmers grow rice in flooded paddies. When the dry season brings saltwater intrusion, they switch to shrimp cultivation in the same fields. This dual-use approach allows farmers to maintain income year-round while reducing the economic risk associated with relying on a single crop.",
+      "question_stem": "Which choice best states the main idea of the text?",
+      "choices": {"A": "Rice farming in Vietnam is declining due to saltwater intrusion.", "B": "Integrated rice-shrimp farming provides Vietnamese farmers with year-round economic stability.", "C": "Shrimp cultivation is more profitable than rice farming in the Mekong Delta.", "D": "Climate change is forcing Vietnamese farmers to abandon traditional agriculture."},
+      "correct_answer": "B",
+      "estimated_time_seconds": 60
+    },
+    {
+      "q_id": "DIAG-RW-04",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": 4,
+      "passage": "Historian Tara Nguyen argues that the traditional narrative of the Silk Road as primarily a trade route oversimplifies its historical significance. While commerce certainly drove the establishment of these pathways, Nguyen contends that the routes' most lasting impact was cultural and intellectual exchange. She points to the spread of Buddhist art forms from India through Central Asia to China, noting that local artisans didn't merely copy foreign styles but synthesized them with indigenous traditions, creating entirely new aesthetic traditions.",
+      "question_stem": "Which choice best describes the main idea of the text?",
+      "choices": {"A": "Buddhist art spread unchanged from India to China via the Silk Road.", "B": "The Silk Road's cultural and intellectual exchanges were more historically significant than its commercial function.", "C": "Tara Nguyen has discovered that the Silk Road was not actually used for trade.", "D": "Local artisans along the Silk Road were superior to Indian Buddhist artists."},
+      "correct_answer": "B",
+      "estimated_time_seconds": 75
+    },
+    {
+      "q_id": "DIAG-RW-05",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": 3,
+      "passage": "A recent study found that students who took handwritten notes during lectures performed significantly better on conceptual questions in later exams compared to students who typed their notes on laptops. The researchers noted that laptop users tended to transcribe lectures verbatim, while hand-writers, unable to keep up with the speaker's pace, were forced to process and rephrase the material in their own words.",
+      "question_stem": "Which choice most logically completes the text's reasoning about why handwritten notes may be more effective?",
+      "choices": {"A": "Laptop users were distracted by social media during lectures.", "B": "The physical act of writing activates different brain regions than typing.", "C": "Rephrasing material requires deeper cognitive processing than verbatim copying.", "D": "Handwritten notes are easier to review before exams."},
+      "correct_answer": "C",
+      "estimated_time_seconds": 60
+    },
+    {
+      "q_id": "DIAG-RW-06",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence: Textual",
+      "difficulty": 3,
+      "passage": "Marine biologist Dr. Linh Tran has proposed that coral reef ecosystems in the South China Sea are more resilient to rising ocean temperatures than previously believed. She points to observations of certain coral species that have survived prolonged heat events by expelling their current symbiotic algae and forming new partnerships with more heat-tolerant algae strains — a process she terms 'symbiont shuffling.'",
+      "question_stem": "Which finding, if true, would most directly support Dr. Tran's claim about coral resilience?",
+      "choices": {"A": "Coral reefs in cooler waters have not experienced significant bleaching events.", "B": "Some coral species exposed to sustained high temperatures showed recovery rates of 70% within two years through symbiont replacement.", "C": "Ocean acidification poses a greater threat to coral reefs than temperature increases.", "D": "Government conservation programs have successfully reduced pollution near several reef systems."},
+      "correct_answer": "B",
+      "estimated_time_seconds": 75
+    },
+    {
+      "q_id": "DIAG-RW-07",
+      "domain": "Craft and Structure",
+      "skill": "Text Structure and Purpose",
+      "difficulty": 3,
+      "passage": "For decades, linguists assumed that all human languages shared a common set of universal features — a view championed by Noam Chomsky's theory of Universal Grammar. However, recent fieldwork with isolated languages in the Amazon basin and Papua New Guinea has revealed structures that challenge several supposedly universal principles. The language Pirahã, for instance, appears to lack recursion, a feature Chomsky considered essential to all human language.",
+      "question_stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {"A": "It provides a specific example that challenges the theory discussed earlier in the passage.", "B": "It introduces a new theory that replaces Universal Grammar.", "C": "It explains why Chomsky developed the theory of Universal Grammar.", "D": "It summarizes the main findings of recent linguistic fieldwork."},
+      "correct_answer": "A",
+      "estimated_time_seconds": 60
+    },
+    {
+      "q_id": "DIAG-RW-08",
+      "domain": "Craft and Structure",
+      "skill": "Cross-Text Connections",
+      "difficulty": 4,
+      "passage": "Text 1: Economist David Park argues that automation will ultimately create more jobs than it eliminates. He points to historical precedent: the introduction of ATMs, for example, actually led to an increase in bank teller employment because it allowed banks to open more branches at lower cost.\n\nText 2: Labor researcher Maria Santos counters that the current wave of automation differs fundamentally from previous technological shifts. Unlike earlier machines that automated physical tasks, artificial intelligence can replicate cognitive skills — precisely the capabilities that allowed displaced workers to transition into new roles in the past.",
+      "question_stem": "Based on the texts, how would Santos (Text 2) most likely respond to Park's argument in Text 1?",
+      "choices": {"A": "She would agree that automation creates new jobs but argue that these jobs pay less.", "B": "She would argue that the ATM example is misleading because current AI automation targets cognitive abilities that were previously safe from automation.", "C": "She would accept Park's historical analysis but add that government intervention is also needed.", "D": "She would reject Park's claim entirely and argue that ATMs actually reduced employment."},
+      "correct_answer": "B",
+      "estimated_time_seconds": 90
+    },
+    {
+      "q_id": "DIAG-RW-09",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": 2,
+      "passage": "The Japanese art of kintsugi involves repairing broken pottery with gold-infused lacquer, transforming damage into a visible part of the object's history. _______, many contemporary artists have adopted this philosophy, deliberately incorporating imperfections into their work as aesthetic features rather than flaws.",
+      "question_stem": "Which choice completes the text with the most logical transition?",
+      "choices": {"A": "Nevertheless,", "B": "In contrast,", "C": "Similarly,", "D": "For instance,"},
+      "correct_answer": "C",
+      "estimated_time_seconds": 45
+    },
+    {
+      "q_id": "DIAG-RW-10",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": 4,
+      "passage": "Researchers initially hypothesized that the ancient city's decline was caused by prolonged drought. Subsequent geological analysis, however, revealed that the region experienced above-average rainfall during the period of the city's collapse. _______, the researchers revised their theory, proposing that excessive flooding — not drought — may have destabilized the city's agricultural systems.",
+      "question_stem": "Which choice completes the text with the most logical transition?",
+      "choices": {"A": "Furthermore,", "B": "Accordingly,", "C": "Meanwhile,", "D": "Regardless,"},
+      "correct_answer": "B",
+      "estimated_time_seconds": 60
+    },
+    {
+      "q_id": "DIAG-RW-11",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": 3,
+      "passage": "While researching a presentation on renewable energy adoption in Southeast Asia, a student has taken the following notes:\n• Vietnam installed 16.5 GW of solar capacity between 2019 and 2021.\n• This made Vietnam the world's third-largest solar market by installed capacity.\n• Most installations were utility-scale solar farms in southern provinces.\n• Vietnam's tropical climate provides an average of 5-6 hours of peak sunshine daily.\n• The government offered generous feed-in tariffs that ended in December 2020.",
+      "question_stem": "The student wants to emphasize the rapid growth of Vietnam's solar energy sector. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {"A": "Vietnam's tropical climate, which provides 5-6 hours of daily peak sunshine, makes the country well-suited for solar energy development.", "B": "In just two years, Vietnam installed 16.5 GW of solar capacity, vaulting it to become the world's third-largest solar market.", "C": "Most of Vietnam's solar installations are utility-scale solar farms located in the country's southern provinces.", "D": "The Vietnamese government's feed-in tariff program, which ended in December 2020, initially encouraged solar investment."},
+      "correct_answer": "B",
+      "estimated_time_seconds": 75
+    },
+    {
+      "q_id": "DIAG-RW-12",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": 2,
+      "passage": "The museum's new exhibition features artifacts from the Bronze _______ it includes tools, weapons, and jewelry dating back over 3,000 years.",
+      "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {"A": "Age,", "B": "Age;", "C": "Age", "D": "Age:"},
+      "correct_answer": "B",
+      "estimated_time_seconds": 30
+    },
+    {
+      "q_id": "DIAG-RW-13",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": 4,
+      "passage": "The phenomenon known as 'code-switching' — alternating between two or more languages or dialects in a single _______ is not a sign of linguistic confusion but rather evidence of sophisticated language competence.",
+      "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {"A": "conversation —", "B": "conversation;", "C": "conversation,", "D": "conversation"},
+      "correct_answer": "A",
+      "estimated_time_seconds": 45
+    },
+    {
+      "q_id": "DIAG-RW-14",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": 2,
+      "passage": "Each of the three research teams _______ submitted its preliminary findings to the journal for peer review.",
+      "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {"A": "have", "B": "has", "C": "are", "D": "were"},
+      "correct_answer": "B",
+      "estimated_time_seconds": 30
+    },
+    {
+      "q_id": "DIAG-RW-15",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": 4,
+      "passage": "The architect Frank Lloyd Wright believed that buildings should be designed not as impositions on the landscape but as natural extensions of _______ his most famous work, Fallingwater, was built directly over a waterfall in rural Pennsylvania.",
+      "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {"A": "it, and", "B": "it;", "C": "them, and", "D": "it:"},
+      "correct_answer": "B",
+      "estimated_time_seconds": 60
+    },
+    {
+      "q_id": "DIAG-MATH-01",
+      "domain": "Algebra",
+      "skill": "Linear equations in one variable",
+      "difficulty": 1,
+      "question_stem": "If 3x + 7 = 22, what is the value of x?",
+      "choices": {"A": "3", "B": "5", "C": "7", "D": "15"},
+      "correct_answer": "B",
+      "estimated_time_seconds": 30
+    },
+    {
+      "q_id": "DIAG-MATH-02",
+      "domain": "Algebra",
+      "skill": "Systems of linear equations",
+      "difficulty": 3,
+      "question_stem": "A store sells notebooks for $3 each and pens for $2 each. If a student buys a total of 12 items and spends $31, how many notebooks did the student buy?",
+      "choices": {"A": "5", "B": "7", "C": "8", "D": "9"},
+      "correct_answer": "B",
+      "estimated_time_seconds": 90
+    },
+    {
+      "q_id": "DIAG-MATH-03",
+      "domain": "Algebra",
+      "skill": "Linear inequalities",
+      "difficulty": 3,
+      "question_stem": "A taxi charges a flat fee of $3.50 plus $2.25 per mile. If a passenger has at most $25 to spend on a taxi ride, what is the maximum number of complete miles the passenger can travel?",
+      "choices": {"A": "8", "B": "9", "C": "10", "D": "11"},
+      "correct_answer": "B",
+      "estimated_time_seconds": 60
+    },
+    {
+      "q_id": "DIAG-MATH-04",
+      "domain": "Advanced Math",
+      "skill": "Quadratic equations",
+      "difficulty": 2,
+      "question_stem": "What are the solutions to the equation x² - 5x + 6 = 0?",
+      "choices": {"A": "x = 1 and x = 6", "B": "x = 2 and x = 3", "C": "x = -2 and x = -3", "D": "x = -1 and x = 6"},
+      "correct_answer": "B",
+      "estimated_time_seconds": 45
+    },
+    {
+      "q_id": "DIAG-MATH-05",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear functions",
+      "difficulty": 4,
+      "question_stem": "The function f(x) = 2(3)^x models the number of bacteria in a culture after x hours. By what factor does the number of bacteria increase every 2 hours?",
+      "choices": {"A": "3", "B": "6", "C": "8", "D": "9"},
+      "correct_answer": "D",
+      "estimated_time_seconds": 60
+    },
+    {
+      "q_id": "DIAG-MATH-06",
+      "domain": "Advanced Math",
+      "skill": "Equivalent expressions",
+      "difficulty": 3,
+      "question_stem": "Which expression is equivalent to (2x + 3)(x - 4) - (x² - x + 2)?",
+      "choices": {"A": "x² - 6x - 14", "B": "x² - 4x - 14", "C": "x² - 4x - 10", "D": "x² - 6x - 10"},
+      "correct_answer": "B",
+      "estimated_time_seconds": 90
+    },
+    {
+      "q_id": "DIAG-MATH-07",
+      "domain": "Problem-Solving and Data Analysis",
+      "skill": "Ratios and proportions",
+      "difficulty": 2,
+      "question_stem": "A recipe calls for 3 cups of flour for every 2 cups of sugar. If a baker uses 9 cups of flour, how many cups of sugar are needed?",
+      "choices": {"A": "4", "B": "5", "C": "6", "D": "7"},
+      "correct_answer": "C",
+      "estimated_time_seconds": 30
+    },
+    {
+      "q_id": "DIAG-MATH-08",
+      "domain": "Problem-Solving and Data Analysis",
+      "skill": "Percentages",
+      "difficulty": 3,
+      "question_stem": "A laptop originally priced at $800 is first discounted by 20%, then the sale price is further reduced by 10%. What is the final price?",
+      "choices": {"A": "$560", "B": "$576", "C": "$600", "D": "$640"},
+      "correct_answer": "B",
+      "estimated_time_seconds": 60
+    },
+    {
+      "q_id": "DIAG-MATH-09",
+      "domain": "Problem-Solving and Data Analysis",
+      "skill": "Statistics",
+      "difficulty": 4,
+      "question_stem": "A data set has 5 values: 12, 15, 18, 22, and x. If the mean of the data set is 17, what is the median?",
+      "choices": {"A": "15", "B": "17", "C": "18", "D": "22"},
+      "correct_answer": "C",
+      "estimated_time_seconds": 75
+    },
+    {
+      "q_id": "DIAG-MATH-10",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Area and volume",
+      "difficulty": 2,
+      "question_stem": "A rectangular garden has a length of 12 meters and a width of 8 meters. A walking path 1 meter wide surrounds the garden. What is the area of the walking path alone?",
+      "choices": {"A": "40 m²", "B": "44 m²", "C": "96 m²", "D": "140 m²"},
+      "correct_answer": "B",
+      "estimated_time_seconds": 60
+    },
+    {
+      "q_id": "DIAG-MATH-11",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Right triangles and trigonometry",
+      "difficulty": 3,
+      "question_stem": "In a right triangle, one acute angle measures 30° and the hypotenuse is 10 cm. What is the length of the side opposite the 30° angle?",
+      "choices": {"A": "5 cm", "B": "5√2 cm", "C": "5√3 cm", "D": "10√3 cm"},
+      "correct_answer": "A",
+      "estimated_time_seconds": 45
+    },
+    {
+      "q_id": "DIAG-MATH-12",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Circles",
+      "difficulty": 4,
+      "question_stem": "A circle has center (3, -2) and passes through the point (7, 1). What is the equation of the circle?",
+      "choices": {"A": "(x - 3)² + (y + 2)² = 5", "B": "(x - 3)² + (y + 2)² = 25", "C": "(x + 3)² + (y - 2)² = 25", "D": "(x - 3)² + (y + 2)² = 7"},
+      "correct_answer": "B",
+      "estimated_time_seconds": 75
+    },
+    {
+      "q_id": "DIAG-MATH-13",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear equations",
+      "difficulty": 5,
+      "question_stem": "For what value of k does the equation x² + kx + 9 = 0 have exactly one real solution?",
+      "choices": {"A": "3 only", "B": "6 only", "C": "-6 only", "D": "6 or -6"},
+      "correct_answer": "D",
+      "estimated_time_seconds": 60
+    },
+    {
+      "q_id": "DIAG-MATH-14",
+      "domain": "Algebra",
+      "skill": "Linear functions",
+      "difficulty": 4,
+      "question_stem": "The function f(x) = mx + b passes through the points (2, 11) and (5, 23). What is f(0)?",
+      "choices": {"A": "3", "B": "4", "C": "5", "D": "7"},
+      "correct_answer": "A",
+      "estimated_time_seconds": 75
+    },
+    {
+      "q_id": "DIAG-MATH-15",
+      "domain": "Problem-Solving and Data Analysis",
+      "skill": "Probability",
+      "difficulty": 3,
+      "question_stem": "A bag contains 4 red marbles, 6 blue marbles, and 5 green marbles. If two marbles are drawn at random without replacement, what is the probability that both are blue?",
+      "choices": {"A": "1/7", "B": "2/15", "C": "4/25", "D": "6/15"},
+      "correct_answer": "A",
+      "estimated_time_seconds": 75
+    }
+  ]
+}

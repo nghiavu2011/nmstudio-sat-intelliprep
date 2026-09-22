@@ -1,0 +1,714 @@
+[
+  {
+    "question_id": "RW-EI-001",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical Synthesis",
+    "difficulty": 1,
+    "passage": "While researching, a student took the following notes:\n- The Eiffel Tower is in Paris, France.\n- It was completed in 1889.\n- It is 330 meters tall.\n- It was designed by Gustave Eiffel.",
+    "question_stem": "The student wants to introduce the designer of the Eiffel Tower. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": {
+      "A": "The Eiffel Tower, located in Paris, France, is 330 meters tall.",
+      "B": "Completed in 1889, the Eiffel Tower is a famous landmark in France.",
+      "C": "The Eiffel Tower was designed by Gustave Eiffel.",
+      "D": "Gustave Eiffel designed a 330-meter-tall structure in 1889."
+    },
+    "correct_answer": "C",
+    "explanation": "C directly and clearly introduces the designer, matching the specific goal.",
+    "why_others_wrong": {
+      "A": "Does not mention the designer.",
+      "B": "Does not mention the designer.",
+      "D": "Fails to name the Eiffel Tower, making the introduction incomplete."
+    },
+    "common_trap": "Choosing a choice that includes the most facts, even if they don't serve the specific goal.",
+    "thinking_framework": "Identify the goal (introduce designer). Find the choice that fulfills ONLY that goal clearly.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "history"
+    ]
+  },
+  {
+    "question_id": "RW-EI-002",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical Synthesis",
+    "difficulty": 2,
+    "passage": "While researching, a student took the following notes:\n- Mars is often called the Red Planet due to iron oxide on its surface.\n- It has a thin atmosphere composed primarily of carbon dioxide.\n- Temperatures on Mars can drop to -153 degrees Celsius.\n- Rovers like Curiosity and Perseverance are currently exploring its surface.",
+    "question_stem": "The student wants to emphasize the harsh environmental conditions on Mars. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": {
+      "A": "Mars is currently being explored by rovers such as Curiosity and Perseverance.",
+      "B": "Due to iron oxide on its surface, Mars is commonly referred to as the Red Planet.",
+      "C": "Mars features a thin carbon dioxide atmosphere and freezing temperatures that can plummet to -153 degrees Celsius.",
+      "D": "The Red Planet has a thin atmosphere and is explored by various rovers."
+    },
+    "correct_answer": "C",
+    "explanation": "C combines the notes about the atmosphere and extreme low temperatures, which perfectly illustrates 'harsh environmental conditions'.",
+    "why_others_wrong": {
+      "A": "Focuses on exploration, not environment.",
+      "B": "Focuses on appearance/name.",
+      "D": "Mixes environment with exploration, missing the 'harsh' emphasis."
+    },
+    "common_trap": "Choosing a factually true sentence that doesn't align with the specific rhetorical goal.",
+    "thinking_framework": "Goal = harsh conditions. Look for words like 'thin atmosphere' and 'freezing temperatures'.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-EI-003",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical Synthesis",
+    "difficulty": 3,
+    "passage": "While researching, a student took the following notes:\n- Marie Curie discovered radium and polonium.\n- She was the first woman to win a Nobel Prize.\n- She is the only person to win a Nobel Prize in two different scientific fields (Physics and Chemistry).\n- Her research on radioactivity led to the development of X-rays.",
+    "question_stem": "The student wants to emphasize the unique, unprecedented nature of Curie's achievements in the scientific community. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": {
+      "A": "Marie Curie discovered radium and polonium, which led to the development of X-rays.",
+      "B": "Not only was Marie Curie the first woman to win a Nobel Prize, but she remains the only person to win in two different scientific fields.",
+      "C": "Marie Curie won a Nobel Prize in Physics and another in Chemistry for her work on radioactivity.",
+      "D": "The development of X-rays was made possible by Marie Curie's groundbreaking discoveries."
+    },
+    "correct_answer": "B",
+    "explanation": "B uses 'first woman' and 'only person', directly emphasizing the 'unique, unprecedented nature' of her achievements.",
+    "why_others_wrong": {
+      "A": "Emphasizes scientific impact, not the unprecedented nature of the awards.",
+      "C": "States facts without the context of them being unique ('only person').",
+      "D": "Emphasizes practical application (X-rays)."
+    },
+    "common_trap": "Focusing on her most famous scientific contribution rather than the specific prompt goal (unprecedented nature).",
+    "thinking_framework": "Match 'unprecedented' to words like 'first' and 'only'.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "history",
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-EI-004",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical Synthesis",
+    "difficulty": 4,
+    "passage": "While researching, a student took the following notes:\n- The axolotl is a type of salamander native to Lake Xochimilco in Mexico.\n- Unlike most amphibians, it exhibits neoteny, keeping its larval features (like gills) into adulthood.\n- It has remarkable regenerative abilities, able to regrow limbs, heart tissue, and parts of its brain.\n- It is critically endangered due to urbanization and water pollution.",
+    "question_stem": "The student wants to contrast the axolotl's physical resilience with its ecological vulnerability. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": {
+      "A": "The axolotl, native to Mexico, keeps its larval features into adulthood but is critically endangered by pollution.",
+      "B": "Despite its ability to regrow vital organs and limbs, the axolotl is critically endangered in the wild due to urbanization and pollution.",
+      "C": "The axolotl has remarkable regenerative abilities, and unlike most amphibians, it exhibits neoteny.",
+      "D": "Urbanization and water pollution have severely impacted the axolotl, a salamander that can regrow its heart tissue."
+    },
+    "correct_answer": "B",
+    "explanation": "B explicitly contrasts ('Despite...') the physical resilience (regrowing organs) with the ecological vulnerability (endangered due to pollution).",
+    "why_others_wrong": {
+      "A": "Contrasts appearance (neoteny) with vulnerability, missing 'resilience'.",
+      "C": "Missing the ecological vulnerability entirely.",
+      "D": "Mentions both facts but lacks the strong rhetorical contrast requested."
+    },
+    "common_trap": "Selecting a sentence that contains both facts but fails to logically contrast them.",
+    "thinking_framework": "Goal = contrast physical resilience with ecological vulnerability. Look for contrast words (Despite, while) connecting the right facts.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-EI-005",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical Synthesis",
+    "difficulty": 5,
+    "passage": "While researching, a student took the following notes:\n- 'Gonzo journalism' is a style of reporting where the reporter becomes part of the story.\n- It was pioneered by Hunter S. Thompson in the 1970s.\n- It abandons traditional objectivity in favor of first-person narrative and personal emotion.\n- Critics argue it blurs the line between fiction and non-fiction, making it unreliable.\n- Supporters claim it captures a deeper, more visceral truth than dry, objective reporting.",
+    "question_stem": "The student wants to provide an objective overview of the debate surrounding Gonzo journalism's validity. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": {
+      "A": "Pioneered by Hunter S. Thompson, Gonzo journalism abandons objectivity to capture a deeper, more visceral truth than traditional reporting.",
+      "B": "Because it abandons objectivity, Gonzo journalism is often criticized for blurring the lines between fiction and non-fiction.",
+      "C": "While detractors argue that Gonzo journalism's lack of objectivity makes it unreliable, proponents maintain that this first-person approach captures a more profound truth.",
+      "D": "Gonzo journalism, a style where the reporter becomes part of the story, is highly controversial among critics and supporters alike."
+    },
+    "correct_answer": "C",
+    "explanation": "C perfectly synthesizes both sides of the debate (detractors/unreliable vs. proponents/profound truth) while maintaining an objective overview.",
+    "why_others_wrong": {
+      "A": "Takes the side of the supporters.",
+      "B": "Takes the side of the critics.",
+      "D": "Mentions it's controversial but fails to explain *what* the debate actually is based on the notes."
+    },
+    "common_trap": "Choosing a sentence that defines the term rather than outlining the specific debate about its validity.",
+    "thinking_framework": "Goal = overview of debate. Must include both the pro (deeper truth) and the con (unreliable).",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "humanities"
+    ]
+  },
+  {
+    "question_id": "RW-EI-006",
+    "domain": "Expression of Ideas",
+    "skill": "Transitions",
+    "difficulty": 1,
+    "passage": "The recipe requires the cake to bake for exactly 35 minutes. _____, you should prepare the frosting while waiting for the timer to go off.",
+    "question_stem": "Which choice completes the text with the most logical transition?",
+    "choices": {
+      "A": "However",
+      "B": "Therefore",
+      "C": "In contrast",
+      "D": "Similarly"
+    },
+    "correct_answer": "B",
+    "explanation": "'Therefore' indicates a logical consequence. Because you have a 35-minute wait, it makes sense to use that time to make frosting.",
+    "why_others_wrong": {
+      "A": "Implies contrast, which doesn't fit.",
+      "C": "Implies contrast.",
+      "D": "Implies a comparison, but this is a sequence of actions."
+    },
+    "common_trap": "Picking a transition that sounds professional but implies the wrong logical relationship.",
+    "thinking_framework": "Sentence 1 is a situation. Sentence 2 is a logical next step based on that situation. Cause -> Effect = Therefore.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "social science"
+    ]
+  },
+  {
+    "question_id": "RW-EI-007",
+    "domain": "Expression of Ideas",
+    "skill": "Transitions",
+    "difficulty": 2,
+    "passage": "Many people assume that deserts are completely devoid of life due to the harsh temperatures and lack of water. _____, a wide variety of flora and fauna, such as the saguaro cactus and the fennec fox, have adapted to thrive in these extreme environments.",
+    "question_stem": "Which choice completes the text with the most logical transition?",
+    "choices": {
+      "A": "Consequently",
+      "B": "For example",
+      "C": "In reality",
+      "D": "Furthermore"
+    },
+    "correct_answer": "C",
+    "explanation": "The first sentence presents an 'assumption' (often false). The second sentence presents the contrasting truth. 'In reality' marks this shift perfectly.",
+    "why_others_wrong": {
+      "A": "Implies cause and effect.",
+      "B": "Implies an example of the first sentence, which would mean an example of *no* life.",
+      "D": "Implies adding to the first point."
+    },
+    "common_trap": "Using 'For example' because the second sentence contains examples, ignoring that it contradicts the first sentence.",
+    "thinking_framework": "Assumption vs. Fact = Contrast. Look for a contrast transition.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-EI-008",
+    "domain": "Expression of Ideas",
+    "skill": "Transitions",
+    "difficulty": 3,
+    "passage": "During the Renaissance, artists began utilizing linear perspective to create an illusion of depth on a flat canvas. _____, architects of the period started designing buildings with symmetrical facades and mathematically precise proportions.",
+    "question_stem": "Which choice completes the text with the most logical transition?",
+    "choices": {
+      "A": "Likewise",
+      "B": "However",
+      "C": "As a result",
+      "D": "Instead"
+    },
+    "correct_answer": "A",
+    "explanation": "Both sentences describe parallel trends in Renaissance art/design (mathematical precision in painting, mathematical precision in architecture). 'Likewise' connects similar ideas.",
+    "why_others_wrong": {
+      "B": "No contrast is present.",
+      "C": "The painters using perspective didn't *cause* architects to use symmetry.",
+      "D": "No substitution is happening."
+    },
+    "common_trap": "Choosing 'As a result' assuming one artistic movement directly caused the other.",
+    "thinking_framework": "Trend A in painting. Trend B in architecture. They are similar and parallel. Use a comparison transition.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "arts"
+    ]
+  },
+  {
+    "question_id": "RW-EI-009",
+    "domain": "Expression of Ideas",
+    "skill": "Transitions",
+    "difficulty": 4,
+    "passage": "The startup's initial marketing strategy relied heavily on aggressive social media campaigns aimed at teenagers. The conversion rate, however, remained abysmally low. _____, the marketing team pivoted to focus on long-form email newsletters targeting working professionals.",
+    "question_stem": "Which choice completes the text with the most logical transition?",
+    "choices": {
+      "A": "Nevertheless",
+      "B": "Subsequently",
+      "C": "In other words",
+      "D": "For instance"
+    },
+    "correct_answer": "B",
+    "explanation": "'Subsequently' means 'after that'. It establishes a chronological sequence: they tried one thing, it failed, and *subsequently* they tried a new thing.",
+    "why_others_wrong": {
+      "A": "Implies they did it *despite* the low conversion rate, but they did it *because* of it.",
+      "C": "The second strategy is not a restatement of the first.",
+      "D": "The new strategy is not an example of the old one."
+    },
+    "common_trap": "Choosing 'Nevertheless' because the paragraph features a failure, misinterpreting the logical flow.",
+    "thinking_framework": "Event A happened. Event B happened next as a reaction. Look for a sequential or causal transition.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "social science"
+    ]
+  },
+  {
+    "question_id": "RW-EI-010",
+    "domain": "Expression of Ideas",
+    "skill": "Transitions",
+    "difficulty": 5,
+    "passage": "To accurately date ancient geological formations, scientists often measure the decay of radioactive isotopes like Uranium-238. This method is highly reliable for rocks that are billions of years old. _____, it is virtually useless for dating relatively recent archaeological artifacts, for which Carbon-14 dating is preferred.",
+    "question_stem": "Which choice completes the text with the most logical transition?",
+    "choices": {
+      "A": "Indeed",
+      "B": "By extension",
+      "C": "Conversely",
+      "D": "Consequently"
+    },
+    "correct_answer": "C",
+    "explanation": "The text contrasts a situation where the method is 'highly reliable' with a situation where it is 'virtually useless'. 'Conversely' perfectly highlights this opposite application.",
+    "why_others_wrong": {
+      "A": "Used for emphasis/agreement, not contrast.",
+      "B": "Used to extend a point to a related area, not show a contrary point.",
+      "D": "Implies cause and effect."
+    },
+    "common_trap": "Choosing 'By extension' thinking it means 'in other applications', missing the sharp contrast in effectiveness.",
+    "thinking_framework": "Highly reliable (positive) vs. Virtually useless (negative). Needs a strong contrast transition.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-EI-011",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical Synthesis",
+    "difficulty": 2,
+    "passage": "While researching a presentation on solar sail technology, a student has taken the following notes:\n• Solar sails use the radiation pressure exerted by sunlight on large mirrors to propel spacecraft.\n• Unlike chemical rockets, solar sails require no onboard propellant once deployed in space.\n• The Japanese spacecraft IKAROS successfully demonstrated interplanetary solar sail propulsion in 2010.\n• Solar sails can theoretically achieve continuous acceleration over months or years.\n• The Planetary Society launched LightSail 2 into Earth orbit in 2019.",
+    "question_stem": "The student wants to emphasize the primary advantage of solar sails over conventional rockets. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": {
+      "A": "In 2010, the Japanese spacecraft IKAROS proved that solar sail propulsion could work across interplanetary distances.",
+      "B": "Unlike conventional chemical rockets, solar sails do not require any onboard fuel, allowing them to accelerate continuously in space.",
+      "C": "Both IKAROS in 2010 and LightSail 2 in 2019 demonstrated that solar sails use mirrors to reflect sunlight.",
+      "D": "Solar sails rely on radiation pressure from sunlight on large mirrors to propel spacecraft through space."
+    },
+    "correct_answer": "B",
+    "explanation": "Choice B directly addresses the student's goal by contrasting solar sails with conventional rockets and highlighting the primary advantage: requiring no onboard propellant.",
+    "why_others_wrong": {
+      "A": "Focuses on the IKAROS mission milestone rather than the advantage over chemical rockets.",
+      "C": "Mentions two historical missions without highlighting the fuel advantage.",
+      "D": "Explains the mechanism of solar sails but does not contrast them with conventional rockets."
+    },
+    "common_trap": "Selecting a choice that is factually accurate but fails to achieve the specific rhetorical goal stated in the prompt.",
+    "thinking_framework": "1. Identify the goal: 'primary advantage of solar sails over conventional rockets'. 2. Scan notes for contrast: 'Unlike chemical rockets...'. 3. Match Choice B.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science",
+      "space_exploration"
+    ]
+  },
+  {
+    "question_id": "RW-EI-012",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical Synthesis",
+    "difficulty": 3,
+    "passage": "While researching ancient agricultural terracing, a student has taken the following notes:\n• The Banaue Rice Terraces in the Philippines were carved into mountainsides by ancestors of the Ifugao people.\n• Constructed roughly 2,000 years ago, they are fed by an ancient rainforest irrigation system.\n• Terraced farming prevents soil erosion on steep slopes by slowing rainwater runoff.\n• Similar terracing systems were developed independently by the Inca in the Andean mountains of South America.\n• The Inca terraces, known as andenes, absorbed daytime solar heat to protect crops from freezing night temperatures.",
+    "question_stem": "The student wants to introduce both the Banaue terraces and the Incan andenes to an audience unfamiliar with either. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": {
+      "A": "Developed independently across the globe, the Ifugao's Banaue terraces in the Philippines and the Inca's andenes in South America are ancient mountainside systems designed for high-altitude agriculture.",
+      "B": "The Banaue Rice Terraces were built 2,000 years ago in the Philippines, whereas the Incan andenes absorbed solar heat during the day to protect plants from cold night air.",
+      "C": "Ancient farmers in the Philippines prevented soil erosion on steep slopes by creating elaborate stone and mud terraces fed by rainforest streams.",
+      "D": "Both the Ifugao people and the Inca used rainforest irrigation systems to maintain sustainable crop yields on steep mountain slopes."
+    },
+    "correct_answer": "A",
+    "explanation": "Choice A introduces both systems (Banaue terraces and Incan andenes), specifies their geographical origins (Philippines and South America), and provides the overarching concept (ancient mountainside agricultural systems) suitable for an unfamiliar audience.",
+    "why_others_wrong": {
+      "B": "Contrasts specific technical details (construction age vs thermal absorption) rather than introducing both systems broadly.",
+      "C": "Mentions only the Philippine terraces and completely omits the Incan andenes.",
+      "D": "Inaccurately claims that the Inca used rainforest irrigation (notes specify the Ifugao used rainforest streams, while Incan andenes were in the Andes)."
+    },
+    "common_trap": "Choosing an answer that mixes up specific facts from different notes.",
+    "thinking_framework": "Goal: 'introduce both systems to an unfamiliar audience'. Look for a balanced, introductory sentence naming both cultures, locations, and purposes.",
+    "estimated_time_seconds": 75,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "history",
+      "anthropology"
+    ]
+  },
+  {
+    "question_id": "RW-EI-013",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical Synthesis",
+    "difficulty": 4,
+    "passage": "While researching bioacoustics in tropical rainforests, a student has taken the following notes:\n• Ecologist Dr. Amanda Santos uses autonomous recording units (ARUs) to capture rainforest soundscapes in Borneo.\n• Traditional biodiversity surveys require physical trapping or visual identification, which disrupts wildlife.\n• ARUs record continuous audio across a 24-hour cycle, capturing vocalizations of birds, amphibians, and mammals.\n• Machine learning algorithms analyze acoustic frequency spectra to detect elusive or endangered species.\n• In a 2023 study, Santos's algorithm identified the calls of the rare Bornean ground-cuckoo without human presence in the forest.",
+    "question_stem": "The student wants to present Dr. Santos's research methodology to an audience of conservation biologists. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": {
+      "A": "In a 2023 study, Dr. Amanda Santos detected the elusive Bornean ground-cuckoo, an endangered bird species inhabiting tropical forests.",
+      "B": "By deploying autonomous recording units to capture continuous 24-hour audio and analyzing the soundscapes with machine learning algorithms, Dr. Amanda Santos monitors rainforest biodiversity without disrupting wildlife.",
+      "C": "Traditional wildlife surveys that rely on trapping and visual identification can now be replaced because machine learning algorithms are more accurate.",
+      "D": "Dr. Amanda Santos's research in Borneo demonstrates that acoustic frequency spectra can be recorded using automated hardware."
+    },
+    "correct_answer": "B",
+    "explanation": "Choice B comprehensively summarizes Santos's methodology: the hardware tool (autonomous recording units), the data capture method (continuous 24-hour audio), the analytical technique (machine learning), and the methodological benefit (non-invasive monitoring).",
+    "why_others_wrong": {
+      "A": "Focuses on a specific finding (ground-cuckoo detection) rather than the overall methodology.",
+      "C": "Makes an overgeneralized claim not stated in the notes (that traditional surveys 'can now be replaced because algorithms are more accurate').",
+      "D": "Too vague and incomplete; omits the machine learning analysis and the non-disruptive conservation objective."
+    },
+    "common_trap": "Choosing a single exciting finding instead of a description of the methodology.",
+    "thinking_framework": "Goal: 'present methodology to conservation biologists'. Must describe HOW the research is conducted and WHY it is advantageous.",
+    "estimated_time_seconds": 80,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "biology",
+      "technology"
+    ]
+  },
+  {
+    "question_id": "RW-EI-014",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical Synthesis",
+    "difficulty": 5,
+    "passage": "While researching the architectural acoustics of ancient Greek theaters, a student has taken the following notes:\n• The Theater of Epidaurus, constructed in the 4th century BCE, seats up to 14,000 spectators.\n• Performers' voices from the orchestra floor can be heard clearly in the highest rows without modern amplification.\n• Researchers at Georgia Tech discovered that the theater's limestone seats act as acoustic acoustic filters.\n• The limestone benches absorb low-frequency sounds (below 500 Hz), which correspond to crowd murmurs and wind noise.\n• High-frequency vocal sounds reflect off the stone tiers, reinforcing the actor's voice as it travels upward.",
+    "question_stem": "The student wants to explain the physical mechanism behind the exceptional acoustics at Epidaurus. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": {
+      "A": "Constructed in the 4th century BCE, the Theater of Epidaurus is renowned because all 14,000 spectators can hear actors without electronic amplification.",
+      "B": "The theater's extraordinary acoustics result from its limestone seats, which filter out low-frequency background noise while reflecting high-frequency vocal sounds toward the upper rows.",
+      "C": "Georgia Tech researchers discovered that ancient Greek architects preferred limestone because it absorbed crowd murmurs.",
+      "D": "At Epidaurus, actors could project their voices from the orchestra floor to 14,000 people because the wind noise was naturally eliminated by the surrounding hillside."
+    },
+    "correct_answer": "B",
+    "explanation": "Choice B precisely identifies the physical mechanism: the selective acoustic behavior of the limestone seats (absorbing low-frequency noise and reflecting high-frequency voice signals).",
+    "why_others_wrong": {
+      "A": "States the historical fact and the acoustic result, but does NOT explain the physical mechanism.",
+      "C": "Makes an unjustified claim about the architects' preferences and leaves out the reflection of vocal frequencies.",
+      "D": "Attributes the noise elimination to the hillside rather than the limestone seats described in the notes."
+    },
+    "common_trap": "Confusing the observable phenomenon (spectators can hear clearly) with the underlying physical mechanism (filtering and reflection).",
+    "thinking_framework": "Goal: 'explain the physical mechanism'. Look for the scientific explanation: limestone acts as acoustic filter, absorbing low-frequency murmurs and reflecting high-frequency voices.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "physics",
+      "architecture",
+      "history"
+    ]
+  },
+  {
+    "question_id": "RW-EI-015",
+    "domain": "Expression of Ideas",
+    "skill": "Transitions",
+    "difficulty": 3,
+    "passage": "In traditional economics, models frequently assumed that human consumers make strictly rational decisions that maximize personal utility. _______, empirical findings in behavioral economics have revealed that cognitive biases, such as loss aversion and anchoring, systematically lead people to make suboptimal choices.",
+    "question_stem": "Which choice completes the text with the most logical transition?",
+    "choices": {
+      "A": "In addition,",
+      "B": "Consequently,",
+      "C": "However,",
+      "D": "Specifically,"
+    },
+    "correct_answer": "C",
+    "explanation": "The first sentence describes the traditional assumption of rational decision-making. The second sentence presents evidence showing that humans systematically make suboptimal choices due to biases. This represents a contrast, making 'However,' the most logical connector.",
+    "why_others_wrong": {
+      "A": "'In addition' indicates continuation or adding similar ideas, but here the ideas conflict.",
+      "B": "'Consequently' indicates a cause-and-effect relationship, but behavioral findings do not result from traditional assumptions.",
+      "D": "'Specifically' introduces a detailed elaboration of the preceding claim, whereas this sentence introduces a contradictory finding."
+    },
+    "common_trap": "Choosing an addition transition when the two ideas present contrasting schools of thought.",
+    "thinking_framework": "1. Sentence 1: Humans assumed rational. 2. Sentence 2: Evidence shows humans act irrationally. 3. Relationship: Contrast. 4. Choice: 'However,'.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "economics",
+      "psychology"
+    ]
+  },
+  {
+    "question_id": "RW-EI-016",
+    "domain": "Expression of Ideas",
+    "skill": "Transitions",
+    "difficulty": 4,
+    "passage": "During deep sleep, the brain's glymphatic system expands, permitting cerebrospinal fluid to flush through neural tissue and clear away metabolic waste products like amyloid-beta. _______, individuals who experience chronic sleep deprivation demonstrate a significantly higher accumulation of toxic proteins associated with neurodegenerative disorders.",
+    "question_stem": "Which choice completes the text with the most logical transition?",
+    "choices": {
+      "A": "Nonetheless,",
+      "B": "Correspondingly,",
+      "C": "In contrast,",
+      "D": "Alternately,"
+    },
+    "correct_answer": "B",
+    "explanation": "The first sentence explains the physiological mechanism: sleep enables the clearing of toxic waste. The second sentence describes the direct, expected corollary: lacking sleep leads to toxic protein buildup. 'Correspondingly' (or 'Accordingly') expresses this direct parallel cause-and-effect relationship.",
+    "why_others_wrong": {
+      "A": "'Nonetheless' implies a concession or unexpected outcome, but the second sentence follows directly from the first.",
+      "C": "'In contrast' would be used if comparing two different subjects, but here the second sentence is a logical extension of the sleep mechanism.",
+      "D": "'Alternately' suggests a different option or substitute, which is incorrect in this scientific context."
+    },
+    "common_trap": "Treating the lack of sleep as a contradiction rather than a direct negative application of the same mechanism.",
+    "thinking_framework": "Sentence 1: Sleep cleans toxins. Sentence 2: No sleep = toxic buildup. Relationship: Direct corollary / consequence ('Correspondingly').",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "neuroscience",
+      "biology"
+    ]
+  },
+  {
+    "question_id": "RW-EI-017",
+    "domain": "Expression of Ideas",
+    "skill": "Transitions",
+    "difficulty": 3,
+    "passage": "Many terrestrial plants absorb heavy metals from contaminated soils through their root systems, a process utilized in environmental remediation. _______, certain hyperaccumulating species, like alpine pennycress, can concentrate thousands of milligrams of nickel and zinc per kilogram of leaf tissue without suffering toxic side effects.",
+    "question_stem": "Which choice completes the text with the most logical transition?",
+    "choices": {
+      "A": "In fact,",
+      "B": "On the other hand,",
+      "C": "Consequently,",
+      "D": "Regardless,"
+    },
+    "correct_answer": "A",
+    "explanation": "Sentence 1 states that plants absorb heavy metals. Sentence 2 intensifies this general claim with an extreme, remarkable example (hyperaccumulating species concentrating thousands of milligrams). 'In fact,' (or 'Indeed,') introduces this emphatic reinforcement.",
+    "why_others_wrong": {
+      "B": "'On the other hand' suggests a contrast, but alpine pennycress exemplifies and exceeds the phenomenon.",
+      "C": "'Consequently' suggests alpine pennycress became a hyperaccumulator *because* plants absorb metals, confusing cause and effect with illustrative emphasis.",
+      "D": "'Regardless' indicates concession, which is inappropriate here."
+    },
+    "common_trap": "Choosing a contrast transition when sentence 2 is actually an emphatic extension/example of sentence 1.",
+    "thinking_framework": "Sentence 1: Plants absorb metals. Sentence 2: Some plants store insane amounts! Relationship: Emphatic confirmation ('In fact,').",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "botany",
+      "transitions"
+    ]
+  },
+  {
+    "question_id": "RW-EI-018",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical Synthesis",
+    "difficulty": 2,
+    "passage": "While researching the rediscovery of the Coelacanth, a student has taken the following notes:\n• Coelacanths are ancient lobe-finned fish that were believed to have gone extinct 66 million years ago.\n• In 1938, museum curator Marjorie Courtenay-Latimer discovered a living coelacanth off the coast of South Africa.\n• The discovery is considered one of the greatest zoological finds of the 20th century.\n• A second living species of coelacanth was discovered in Indonesia in 1997.\n• Coelacanths possess paired fins that move in an alternating pattern similar to a four-legged land animal.",
+    "question_stem": "The student wants to emphasize the surprising nature of the 1938 coelacanth discovery. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": {
+      "A": "Considered extinct for 66 million years, a living coelacanth was astonishingly discovered off the South African coast in 1938 by Marjorie Courtenay-Latimer.",
+      "B": "In 1938, Marjorie Courtenay-Latimer found a coelacanth, an ancient fish with paired fins that move like a four-legged animal's limbs.",
+      "C": "A second species of the ancient lobe-finned coelacanth was identified in Indonesian waters in 1997.",
+      "D": "Coelacanths are ancient lobe-finned fish that have inhabited ocean waters for tens of millions of years."
+    },
+    "correct_answer": "A",
+    "explanation": "Choice A directly fulfills the goal of highlighting the *surprising nature* of the discovery: it was thought to have been extinct for 66 million years before being found alive.",
+    "why_others_wrong": {
+      "B": "Focuses on the anatomical description of the fins rather than the shocking nature of the rediscovery.",
+      "C": "Discusses the 1997 discovery, not the 1938 event requested.",
+      "D": "Gives a general biological description with no mention of the surprising rediscovery."
+    },
+    "common_trap": "Choosing an anatomical detail over the explicit contrast between perceived extinction and living discovery.",
+    "thinking_framework": "Goal: 'emphasize surprising nature of the 1938 discovery'. Contrast: 66 million years extinct -> found alive. Matches Choice A.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "zoology",
+      "rhetorical_synthesis"
+    ]
+  },
+  {
+    "question_id": "RW-EI-019",
+    "domain": "Expression of Ideas",
+    "skill": "Transitions",
+    "difficulty": 4,
+    "passage": "During the Middle Bronze Age, the Minoan civilization on Crete built unfortified palaces featuring grand courtyards and open colonnades, reflecting a society secure from foreign invasion. _______, the contemporary Mycenaean citadels of mainland Greece were enclosed by massive cyclopean stone walls up to eight meters thick, indicating persistent military conflict.",
+    "question_stem": "Which choice completes the text with the most logical transition?",
+    "choices": {
+      "A": "Similarly,",
+      "B": "By contrast,",
+      "C": "Accordingly,",
+      "D": "For example,"
+    },
+    "correct_answer": "B",
+    "explanation": "The text contrasts Minoan unfortified, open palaces (reflecting security) with Mycenaean heavily fortified cyclopean citadels (reflecting warfare). 'By contrast,' accurately captures this sharp architectural difference.",
+    "why_others_wrong": {
+      "A": "'Similarly' would imply both civilizations built identical fortifications.",
+      "C": "'Accordingly' indicates a consequence, but Mycenaean architecture did not result from Minoan peace.",
+      "D": "'For example' would mean Mycenae is an example of Minoan unfortified architecture, which is the opposite of reality."
+    },
+    "common_trap": "Missing the direct architectural opposition: unfortified open colonnades vs massive stone walls.",
+    "thinking_framework": "Minoans = no walls, peaceful. Mycenaeans = massive 8m walls, warlike. Relationship: Direct contrast ('By contrast,').",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "archaeology",
+      "transitions"
+    ]
+  },
+  {
+    "question_id": "RW-EI-020",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical Synthesis",
+    "difficulty": 3,
+    "passage": "While researching the James Webb Space Telescope (JWST), a student has taken the following notes:\n• The JWST was launched on December 25, 2021, and orbits the Sun at Lagrange point 2 (L2).\n• It observes the cosmos in the infrared spectrum, allowing it to penetrate cosmic dust clouds.\n• In July 2022, NASA released JWST's first deep-field image, showing the galaxy cluster SMACS 0723.\n• The image revealed galaxies that formed more than 13 billion years ago, shortly after the Big Bang.\n• JWST's primary mirror has a diameter of 6.5 meters, compared to Hubble's 2.4-meter mirror.",
+    "question_stem": "The student wants to highlight the telescope's capability to study the early universe. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": {
+      "A": "Launched in December 2021 to orbit the Sun at L2, the JWST has a primary mirror measuring 6.5 meters across.",
+      "B": "By observing in the infrared spectrum, the JWST captured images of the galaxy cluster SMACS 0723 as it existed over 13 billion years ago, offering unprecedented views of the early universe.",
+      "C": "The JWST's 6.5-meter mirror is significantly larger than the Hubble Space Telescope's 2.4-meter mirror.",
+      "D": "NASA released the JWST's first deep-field image in July 2022, demonstrating that the observatory operates at Lagrange point 2."
+    },
+    "correct_answer": "B",
+    "explanation": "Choice B explicitly achieves the goal of highlighting the capability to study the early universe by noting its infrared capability and its observation of galaxies formed over 13 billion years ago.",
+    "why_others_wrong": {
+      "A": "Focuses on launch date, orbit, and mirror diameter with zero mention of the early universe.",
+      "C": "Focuses exclusively on the mirror size comparison with Hubble.",
+      "D": "Mentions the release date and orbital position without referencing the early universe."
+    },
+    "common_trap": "Selecting a choice that highlights hardware specifications rather than the requested scientific research goal.",
+    "thinking_framework": "Goal: 'highlight capability to study early universe'. Look for: 13 billion years ago, galaxies shortly after Big Bang. Matches Choice B.",
+    "estimated_time_seconds": 65,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "astronomy",
+      "rhetorical_synthesis"
+    ]
+  },
+  {
+    "question_id": "RW-EI-021",
+    "domain": "Expression of Ideas",
+    "skill": "Transitions",
+    "difficulty": 4,
+    "passage": "To safeguard passenger safety in automated vehicles, software engineers implement redundant sensor arrays combining lidar, radar, and optical cameras. _______, each sensor type possesses unique physical limitations: optical cameras struggle in dense fog, radar lacks high spatial resolution, and lidar performance degrades during torrential downpours.",
+    "question_stem": "Which choice completes the text with the most logical transition?",
+    "choices": {
+      "A": "Even so,",
+      "B": "Furthermore,",
+      "C": "In conclusion,",
+      "D": "Likewise,"
+    },
+    "correct_answer": "A",
+    "explanation": "Sentence 1 explains that engineers combine multiple sensors to ensure safety. Sentence 2 presents the complication that every sensor has specific vulnerabilities. 'Even so,' (or 'Nevertheless,') acknowledges the counterweight: despite the redundancy, limitations persist.",
+    "why_others_wrong": {
+      "B": "'Furthermore' would mean adding another safety measure, but sentence 2 presents challenges.",
+      "C": "'In conclusion' indicates a final summarizing deduction, which is inappropriate here.",
+      "D": "'Likewise' indicates a parallel similarity, but the sentences present a solution followed by persistent limitations."
+    },
+    "common_trap": "Treating the explanation of sensor limitations as a continuation of safety features.",
+    "thinking_framework": "Sentence 1: Engineers use redundant sensors for safety. Sentence 2: Every sensor still has flaws. Relationship: Concession / contrast ('Even so,').",
+    "estimated_time_seconds": 50,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "technology",
+      "transitions"
+    ]
+  },
+  {
+    "question_id": "RW-EI-022",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical Synthesis",
+    "difficulty": 4,
+    "passage": "While researching the history of the Sriracha hot sauce, a student has taken the following notes:\n• Sriracha sauce was originally created in the 1930s by Thanom Chakkapak in Si Racha, Thailand.\n• The Thai version is relatively thin, sweet, and tangy, traditionally paired with seafood.\n• In 1980, Vietnamese immigrant David Tran founded Huy Fong Foods in Los Angeles, California.\n• Tran developed his own thicker, spicier version using fresh jalapeño peppers and garlic.\n• Huy Fong's rooster-logo bottle became an iconic condiment across American restaurants.",
+    "question_stem": "The student wants to contrast the traditional Thai Sriracha with David Tran's American version. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": {
+      "A": "Created in the 1930s in Si Racha, Thailand, Sriracha was originally formulated as a thin, sweet sauce for seafood.",
+      "B": "While the original Thai Sriracha is a thin, sweet condiment traditionally paired with seafood, David Tran's American version is a thicker, spicier sauce formulated with fresh jalapeños and garlic.",
+      "C": "David Tran founded Huy Fong Foods in 1980 in Los Angeles, packaging his hot sauce in distinctive bottles featuring a rooster logo.",
+      "D": "Both Thanom Chakkapak in Thailand and David Tran in California created popular hot sauces that achieved worldwide restaurant acclaim."
+    },
+    "correct_answer": "B",
+    "explanation": "Choice B directly fulfills the student's goal of contrasting the two sauces: it highlights the texture, flavor, and culinary pairing of the traditional Thai sauce against the ingredients and spicier profile of Tran's American formulation.",
+    "why_others_wrong": {
+      "A": "Mentions only the Thai sauce, with no contrast to Tran's version.",
+      "C": "Mentions only Tran's company and bottle design, with no contrast to the Thai original.",
+      "D": "Focuses on general acclaim rather than the specific culinary differences between the sauces."
+    },
+    "common_trap": "Describing one version in detail while failing to include the comparative counterpart.",
+    "thinking_framework": "Goal: 'contrast traditional Thai with Tran's version'. Look for a comparative structure: 'While [Thai] is X, [Tran's] is Y'. Matches Choice B.",
+    "estimated_time_seconds": 70,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "culinary_history",
+      "rhetorical_synthesis"
+    ]
+  },
+  {
+    "question_id": "RW-EI-023",
+    "domain": "Expression of Ideas",
+    "skill": "Transitions",
+    "difficulty": 5,
+    "passage": "For decades, behavioral scientists assumed that human memory functions akin to a digital recording device that stores and retrieves exact replicas of past experiences. Cognitive psychologist Elizabeth Loftus demonstrated that memory is fundamentally reconstructive. Loftus showed that post-event information and leading questions can alter eyewitness recollections. _______, human memory is susceptible to substantial distortions and false memories over time.",
+    "question_stem": "Which choice completes the text with the most logical transition?",
+    "choices": {
+      "A": "Thus,",
+      "B": "Alternatively,",
+      "C": "In contrast,",
+      "D": "Nevertheless,"
+    },
+    "correct_answer": "A",
+    "explanation": "Sentence 3 details how leading questions alter memory. Sentence 4 provides the logical conclusion drawn from this experimental evidence: memory is prone to distortion. 'Thus,' (or 'Consequently,') introduces this definitive deductive takeaway.",
+    "why_others_wrong": {
+      "B": "'Alternatively' introduces a substitute possibility, but sentence 4 is the direct conclusion.",
+      "C": "'In contrast' would imply the conclusion contradicts Loftus's findings.",
+      "D": "'Nevertheless' suggests an unexpected paradox, whereas sentence 4 is the expected outcome of reconstructive memory."
+    },
+    "common_trap": "Choosing a contrast transition because Loftus contradicted the *old* model, forgetting that sentence 4 concludes from *Loftus's* findings.",
+    "thinking_framework": "Premise: Loftus showed post-event clues alter memories. Conclusion: Memory is susceptible to distortions. Connector: 'Thus,'.",
+    "estimated_time_seconds": 55,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "psychology",
+      "transitions"
+    ]
+  },
+  {
+    "question_id": "RW-EI-024",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical Synthesis",
+    "difficulty": 3,
+    "passage": "While researching the biodiversity of the Sonoran Desert, a student has taken the following notes:\n• The Saguaro cactus (*Carnegiea gigantea*) is an endemic keystone species of the Sonoran Desert.\n• Mature saguaros can reach heights of 12 to 18 meters and live for over 150 years.\n• Gila woodpeckers and gilded flickers excavate nest cavities in the fleshy stems of saguaros.\n• Once abandoned, these cavities provide essential nesting sites for elf owls, purple martins, and desert mice.\n• Saguaro flowers produce nectar that sustains migratory lesser long-nosed bats during spring.",
+    "question_stem": "The student wants to explain why the Saguaro is classified as a keystone species. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": {
+      "A": "Endemic to the Sonoran Desert, the Saguaro cactus can grow up to 18 meters tall and survive for more than 150 years.",
+      "B": "As a keystone species, the Saguaro provides critical nesting habitat for birds and small mammals while offering vital nectar for migratory bats.",
+      "C": "Gila woodpeckers excavate cavities in saguaros, which are later utilized by elf owls and desert mice.",
+      "D": "The Saguaro cactus blooms in the spring, producing abundant nectar that sustains the lesser long-nosed bat."
+    },
+    "correct_answer": "B",
+    "explanation": "A 'keystone species' is one on which other species in an ecosystem largely depend. Choice B directly explains this by summarizing how multiple birds, mammals, and bats rely on the Saguaro for food and shelter.",
+    "why_others_wrong": {
+      "A": "Describes its physical size and lifespan, but does not explain its ecological keystone role.",
+      "C": "Mentions one specific nesting interaction, omitting the broader ecological support network (nectar/bats).",
+      "D": "Focuses only on the bats, omitting the nesting habitat for birds and mice."
+    },
+    "common_trap": "Choosing a single ecological detail instead of a comprehensive explanation of its keystone impact.",
+    "thinking_framework": "Goal: 'explain why it is a keystone species'. Keystone = supports many other species. Choice B connects the nesting habitat and nectar to multiple animals.",
+    "estimated_time_seconds": 65,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "ecology",
+      "rhetorical_synthesis"
+    ]
+  }
+]

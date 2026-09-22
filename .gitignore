@@ -1,0 +1,19 @@
+# OS & Editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Node & Python
+node_modules/
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+
+# Temp & Scratch
+scratch/
+.system_generated/
+*.tmp
+*.bak

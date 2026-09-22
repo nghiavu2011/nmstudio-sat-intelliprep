@@ -1,0 +1,92 @@
+[
+  {
+    "card_id": "FC-TRA-001",
+    "type": "transition",
+    "difficulty": 1,
+    "front": {"word": "However", "category": "Contrast"},
+    "back": {"function": "Shows a contrast or exception to the previous idea.", "synonyms": ["nevertheless", "on the other hand", "conversely"], "example": "The movie received terrible reviews. However, it was a box office success."},
+    "skill": "Transitions",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-TRA-002",
+    "type": "transition",
+    "difficulty": 1,
+    "front": {"word": "Therefore", "category": "Cause and Effect"},
+    "back": {"function": "Shows that the second idea is a result of the first.", "synonyms": ["consequently", "thus", "as a result", "hence"], "example": "It was raining heavily. Therefore, the game was canceled."},
+    "skill": "Transitions",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-TRA-003",
+    "type": "transition",
+    "difficulty": 2,
+    "front": {"word": "Furthermore", "category": "Addition"},
+    "back": {"function": "Adds more information in the same direction as the previous thought.", "synonyms": ["moreover", "in addition", "additionally"], "example": "The car is fuel-efficient. Furthermore, it is very reliable."},
+    "skill": "Transitions",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-TRA-004",
+    "type": "transition",
+    "difficulty": 2,
+    "front": {"word": "For instance", "category": "Example"},
+    "back": {"function": "Introduces a specific example illustrating the previous general point.", "synonyms": ["for example", "to illustrate", "namely"], "example": "She loves outdoor activities. For instance, she goes hiking every weekend."},
+    "skill": "Transitions",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-TRA-005",
+    "type": "transition",
+    "difficulty": 3,
+    "front": {"word": "Instead", "category": "Contrast (Alternative)"},
+    "back": {"function": "Shows that one thing is happening in place of another.", "synonyms": ["rather", "alternatively"], "example": "They didn't go to the beach. Instead, they stayed home and watched a movie."},
+    "skill": "Transitions",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-TRA-006",
+    "type": "transition",
+    "difficulty": 3,
+    "front": {"word": "Similarly", "category": "Comparison"},
+    "back": {"function": "Shows how two things are alike.", "synonyms": ["likewise", "in the same way"], "example": "Dogs require a lot of attention. Similarly, cats need interaction to thrive."},
+    "skill": "Transitions",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-TRA-007",
+    "type": "transition",
+    "difficulty": 4,
+    "front": {"word": "Subsequently", "category": "Time / Sequence"},
+    "back": {"function": "Indicates that something happened after the previous event.", "synonyms": ["afterward", "next", "later"], "example": "He failed his first exam. Subsequently, he hired a tutor."},
+    "skill": "Transitions",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-TRA-008",
+    "type": "transition",
+    "difficulty": 4,
+    "front": {"word": "Granted", "category": "Concession"},
+    "back": {"function": "Admits a point is true before presenting a contrasting argument.", "synonyms": ["admittedly", "of course"], "example": "Granted, the new software has bugs, but it's much faster than the old version."},
+    "skill": "Transitions",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-TRA-009",
+    "type": "transition",
+    "difficulty": 5,
+    "front": {"word": "Accordingly", "category": "Cause and Effect"},
+    "back": {"function": "Shows an action taken logically based on the previous information.", "synonyms": ["therefore", "appropriately"], "example": "The dress code is formal. Accordingly, he wore a tuxedo."},
+    "skill": "Transitions",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-TRA-010",
+    "type": "transition",
+    "difficulty": 5,
+    "front": {"word": "That is", "category": "Clarification"},
+    "back": {"function": "Provides further clarification or rephrases the previous idea.", "synonyms": ["in other words", "specifically", "to clarify"], "example": "She is a polyglot. That is, she speaks several languages fluently."},
+    "skill": "Transitions",
+    "source": "original"
+  }
+]

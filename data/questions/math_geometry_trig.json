@@ -1,0 +1,347 @@
+[
+  {
+    "question_id": "MATH-GEO-001",
+    "domain": "Geometry & Trigonometry",
+    "skill": "Area",
+    "difficulty": 1,
+    "question_stem": "A rectangle has a length of 8 and a width of 5. What is its area?",
+    "choices": {
+      "A": "13",
+      "B": "26",
+      "C": "40",
+      "D": "80"
+    },
+    "correct_answer": "C",
+    "explanation": "Area = length * width = 8 * 5 = 40.",
+    "why_others_wrong": {
+      "A": "Sum of sides",
+      "B": "Perimeter",
+      "D": "Double area"
+    },
+    "common_trap": "Calculating perimeter instead of area.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 20,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-GEO-002",
+    "domain": "Geometry & Trigonometry",
+    "skill": "Angles",
+    "difficulty": 2,
+    "question_stem": "Lines l and m are parallel and intersected by a transversal. If one interior angle measures 110 degrees, what is the measure of the adjacent interior angle?",
+    "choices": {
+      "A": "70",
+      "B": "90",
+      "C": "110",
+      "D": "180"
+    },
+    "correct_answer": "A",
+    "explanation": "Consecutive interior angles sum to 180. 180 - 110 = 70.",
+    "why_others_wrong": {
+      "B": "Right angle",
+      "C": "Corresponding angle",
+      "D": "Total sum"
+    },
+    "common_trap": "Assuming all angles are equal.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 30,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-GEO-003",
+    "domain": "Geometry & Trigonometry",
+    "skill": "Triangles",
+    "difficulty": 2,
+    "question_stem": "In a right triangle, the lengths of the legs are 6 and 8. What is the length of the hypotenuse?",
+    "choices": null,
+    "correct_answer": "10",
+    "explanation": "Use the Pythagorean theorem: a^2 + b^2 = c^2. 6^2 + 8^2 = 36 + 64 = 100. sqrt(100) = 10.",
+    "why_others_wrong": null,
+    "common_trap": "Adding the legs directly (14).",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-GEO-004",
+    "domain": "Geometry & Trigonometry",
+    "skill": "Volume",
+    "difficulty": 3,
+    "question_stem": "A cylinder has a radius of 3 and a height of 10. What is its volume?",
+    "choices": {
+      "A": "30pi",
+      "B": "60pi",
+      "C": "90pi",
+      "D": "120pi"
+    },
+    "correct_answer": "C",
+    "explanation": "Volume = pi * r^2 * h = pi * (3^2) * 10 = pi * 9 * 10 = 90pi.",
+    "why_others_wrong": {
+      "A": "Used 2pirh",
+      "B": "Used diameter",
+      "D": "Math error"
+    },
+    "common_trap": "Forgetting to square the radius.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-GEO-005",
+    "domain": "Geometry & Trigonometry",
+    "skill": "Coordinate geometry",
+    "difficulty": 3,
+    "question_stem": "What is the distance between the points (1, 2) and (4, 6) in the xy-plane?",
+    "choices": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "7"
+    },
+    "correct_answer": "C",
+    "explanation": "Distance = sqrt((4-1)^2 + (6-2)^2) = sqrt(3^2 + 4^2) = sqrt(9 + 16) = sqrt(25) = 5.",
+    "why_others_wrong": {
+      "A": "x distance",
+      "B": "y distance",
+      "D": "Sum of distances"
+    },
+    "common_trap": "Adding the differences instead of squaring.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-GEO-006",
+    "domain": "Geometry & Trigonometry",
+    "skill": "Trig ratios",
+    "difficulty": 4,
+    "question_stem": "In right triangle ABC with right angle B, sin(A) = 3/5. What is cos(C)?",
+    "choices": {
+      "A": "3/5",
+      "B": "4/5",
+      "C": "3/4",
+      "D": "4/3"
+    },
+    "correct_answer": "A",
+    "explanation": "In a right triangle, the sine of an acute angle is equal to the cosine of its complement. Since A and C are complementary, sin(A) = cos(C) = 3/5.",
+    "why_others_wrong": {
+      "B": "This is cos(A)",
+      "C": "This is tan(A)",
+      "D": "This is cot(A)"
+    },
+    "common_trap": "Thinking you need to find the missing side and calculate cos(C) from scratch, which takes longer and risks error.",
+    "calculator_note": "Conceptual",
+    "estimated_time_seconds": 30,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-GEO-007",
+    "domain": "Geometry & Trigonometry",
+    "skill": "Circles",
+    "difficulty": 4,
+    "question_stem": "The equation of a circle is x^2 + y^2 - 6x + 8y = 0. What is the radius of the circle?",
+    "choices": null,
+    "correct_answer": "5",
+    "explanation": "Complete the square: (x^2 - 6x + 9) + (y^2 + 8y + 16) = 9 + 16. (x - 3)^2 + (y + 4)^2 = 25. The radius squared is 25, so radius = 5.",
+    "why_others_wrong": null,
+    "common_trap": "Stating 25 as the radius instead of taking the square root.",
+    "calculator_note": "Desmos useful",
+    "estimated_time_seconds": 75,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-GEO-008",
+    "domain": "Geometry & Trigonometry",
+    "skill": "Triangles",
+    "difficulty": 5,
+    "question_stem": "In triangle XYZ, XY = 7 and YZ = 10. Which of the following could NOT be the length of XZ?",
+    "choices": {
+      "A": "4",
+      "B": "10",
+      "C": "15",
+      "D": "18"
+    },
+    "correct_answer": "D",
+    "explanation": "By the Triangle Inequality Theorem, the third side must be strictly between the difference and sum of the other two sides. 10 - 7 < XZ < 10 + 7, so 3 < XZ < 17. 18 is outside this range.",
+    "why_others_wrong": {
+      "A": "Valid length",
+      "B": "Valid length",
+      "C": "Valid length"
+    },
+    "common_trap": "Forgetting the triangle inequality theorem.",
+    "calculator_note": "Conceptual",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-GEO-009",
+    "domain": "Geometry & Trigonometry",
+    "skill": "Circles",
+    "difficulty": 5,
+    "question_stem": "A circle has a circumference of 12pi. An arc on this circle has a length of 2pi. What is the measure of the central angle subtended by this arc, in degrees?",
+    "choices": {
+      "A": "30",
+      "B": "60",
+      "C": "90",
+      "D": "120"
+    },
+    "correct_answer": "B",
+    "explanation": "The ratio of arc length to circumference equals the ratio of the central angle to 360. 2pi / 12pi = x / 360. 1/6 = x / 360. x = 60.",
+    "why_others_wrong": {
+      "A": "Math error",
+      "C": "Math error",
+      "D": "Math error"
+    },
+    "common_trap": "Confusing arc length with area of a sector.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-GEO-010",
+    "domain": "Geometry & Trigonometry",
+    "skill": "Volume",
+    "difficulty": 5,
+    "question_stem": "A cone and a cylinder have the same radius and the same height. If the volume of the cylinder is 120, what is the volume of the cone?",
+    "choices": null,
+    "correct_answer": "40",
+    "explanation": "Volume of cylinder = pi * r^2 * h. Volume of cone = 1/3 * pi * r^2 * h. Thus, the cone is exactly 1/3 the volume of the cylinder. 120 / 3 = 40.",
+    "why_others_wrong": null,
+    "common_trap": "Multiplying by 3 instead of dividing by 3.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-GEO-011",
+    "domain": "Geometry and Trigonometry",
+    "skill": "Right triangles and trigonometry",
+    "difficulty": 3,
+    "question_stem": "In triangle ABC, angle C is a right angle. If cos(A) = 5/13, what is the value of sin(B)?",
+    "choices": {
+      "A": "5/13",
+      "B": "12/13",
+      "C": "5/12",
+      "D": "13/5"
+    },
+    "correct_answer": "A",
+    "explanation": "In any right triangle where angle C is 90°, angles A and B are complementary (A + B = 90°). By the cofunction identity, cos(A) = sin(90° - A) = sin(B). Therefore, sin(B) = cos(A) = 5/13.",
+    "why_others_wrong": {
+      "B": "This is the value of sin(A) or cos(B), calculated via sqrt(1 - (5/13)^2) = 12/13.",
+      "C": "This is tan(A) = 12/5 inverted.",
+      "D": "This is sec(A) = 13/5."
+    },
+    "common_trap": "Calculating sin(A) instead of sin(B), forgetting that cos(A) = sin(B) for complementary angles.",
+    "calculator_note": "Can be answered in 5 seconds via cofunction identity without any calculation.",
+    "estimated_time_seconds": 30,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-GEO-012",
+    "domain": "Geometry and Trigonometry",
+    "skill": "Circles",
+    "difficulty": 4,
+    "question_stem": "In the xy-plane, the circle with equation x² + y² - 6x + 8y = 24 has center (h, k) and radius r. What is the value of h + k + r?",
+    "choices": null,
+    "correct_answer": "6",
+    "explanation": "Complete the square for x and y: (x² - 6x + 9) + (y² + 8y + 16) = 24 + 9 + 16 => (x - 3)² + (y + 4)² = 49. The center is (h, k) = (3, -4), and radius r = sqrt(49) = 7. Thus, h + k + r = 3 + (-4) + 7 = 6.",
+    "why_others_wrong": null,
+    "common_trap": "Forgetting to take the square root of 49 to find the radius, or mixing up signs of h and k.",
+    "calculator_note": "Graph the equation in Desmos to immediately observe the center at (3, -4) and radius 7.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-GEO-013",
+    "domain": "Geometry and Trigonometry",
+    "skill": "Area and volume",
+    "difficulty": 3,
+    "question_stem": "A right circular cylinder has radius r and height h. If the radius is doubled and the height is halved, by what factor does the volume of the cylinder change?",
+    "choices": {
+      "A": "It remains the same.",
+      "B": "It increases by a factor of 2.",
+      "C": "It increases by a factor of 4.",
+      "D": "It decreases by a factor of 2."
+    },
+    "correct_answer": "B",
+    "explanation": "The formula for volume of a cylinder is V = πr²h. When r is replaced by 2r and h is replaced by (1/2)h, the new volume is V' = π(2r)²((1/2)h) = π(4r²)((1/2)h) = 2πr²h = 2V. Therefore, the volume doubles (increases by a factor of 2).",
+    "why_others_wrong": {
+      "A": "Mistakenly assumes doubling the radius cancels out halving the height.",
+      "C": "Forgot that the height was halved.",
+      "D": "Did not square the factor of 2 for radius."
+    },
+    "common_trap": "Assuming linear scaling applies to volume instead of squaring the radius.",
+    "calculator_note": "Test with simple numbers: r=1, h=2 => V = 2π; new r=2, new h=1 => V = 4π. Ratio = 2.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-GEO-014",
+    "domain": "Geometry and Trigonometry",
+    "skill": "Lines, angles, and triangles",
+    "difficulty": 4,
+    "question_stem": "In triangle PQR, PQ = PR and the measure of angle P is 40°. If point S lies on side QR such that PS is perpendicular to QR, what is the measure, in degrees, of angle QPS?",
+    "choices": null,
+    "correct_answer": "20",
+    "explanation": "Since PQ = PR, triangle PQR is isosceles with base QR. The altitude PS from vertex P to base QR bisects the vertex angle P. Therefore, angle QPS = (1/2) * angle P = (1/2) * 40° = 20°.",
+    "why_others_wrong": null,
+    "common_trap": "Finding angle PQS (which is 70°) instead of angle QPS.",
+    "calculator_note": "Draw and label a quick sketch on scratch paper.",
+    "estimated_time_seconds": 40,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-GEO-015",
+    "domain": "Geometry and Trigonometry",
+    "skill": "Circles",
+    "difficulty": 5,
+    "question_stem": "A circle in the xy-plane has center (2, -1). If the line y = 3 is tangent to the circle, which of the following is an equation of the circle?",
+    "choices": {
+      "A": "(x - 2)² + (y + 1)² = 4",
+      "B": "(x - 2)² + (y + 1)² = 16",
+      "C": "(x + 2)² + (y - 1)² = 16",
+      "D": "(x - 2)² + (y + 1)² = 9"
+    },
+    "correct_answer": "B",
+    "explanation": "The distance from the center (2, -1) to the horizontal tangent line y = 3 is the radius r. r = |3 - (-1)| = 4. The standard equation of the circle is (x - h)² + (y - k)² = r², which gives (x - 2)² + (y - (-1))² = 4² => (x - 2)² + (y + 1)² = 16.",
+    "why_others_wrong": {
+      "A": "Used r = 2 instead of r = 4, or forgot to square the radius.",
+      "C": "Inverted the signs of the center coordinates (h, k).",
+      "D": "Used r = 3."
+    },
+    "common_trap": "Confusing the radius value r with r² in the equation.",
+    "calculator_note": "Graph y = 3 and the choices in Desmos to see which circle touches the line at exactly one point.",
+    "estimated_time_seconds": 50,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  }
+]

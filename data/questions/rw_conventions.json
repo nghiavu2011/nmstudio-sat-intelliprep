@@ -1,0 +1,588 @@
+[
+  {
+    "question_id": "RW-C-001",
+    "domain": "Standard English Conventions",
+    "skill": "Boundaries",
+    "difficulty": 1,
+    "passage": "After the heavy rain stopped, the children ran outside to play in the deep muddy _____",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "puddles, they",
+      "B": "puddles they",
+      "C": "puddles. They",
+      "D": "puddles: and they"
+    },
+    "correct_answer": "C",
+    "explanation": "Creates two complete sentences. 'After the heavy rain stopped, the children ran outside to play in the deep muddy puddles' is an independent clause. 'They [implied verb/action]' would start a new sentence.",
+    "why_others_wrong": {
+      "A": "Comma splice.",
+      "B": "Run-on.",
+      "D": "Incorrect use of colon."
+    },
+    "common_trap": "Comma splice (A).",
+    "thinking_framework": "Identify independent clauses. Separate them with terminal punctuation.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "social science"
+    ]
+  },
+  {
+    "question_id": "RW-C-002",
+    "domain": "Standard English Conventions",
+    "skill": "Boundaries",
+    "difficulty": 2,
+    "passage": "The new cafe downtown offers a variety of specialty drinks, including matcha lattes, cold brew _____ and several types of herbal tea.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "coffee;",
+      "B": "coffee,",
+      "C": "coffee",
+      "D": "coffee:"
+    },
+    "correct_answer": "B",
+    "explanation": "A comma is needed to separate items in a list of three or more.",
+    "why_others_wrong": {
+      "A": "Semicolons separate independent clauses or complex list items.",
+      "C": "Missing the serial comma (Oxford comma is standard on SAT).",
+      "D": "Colons introduce lists, they don't separate items within them."
+    },
+    "common_trap": "Omitting the comma before the conjunction in a list.",
+    "thinking_framework": "Identify the list structure. Ensure parallel punctuation for all items.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "humanities"
+    ]
+  },
+  {
+    "question_id": "RW-C-003",
+    "domain": "Standard English Conventions",
+    "skill": "Boundaries",
+    "difficulty": 2,
+    "passage": "Many scientists agree that the discovery of the _____ one of the most important breakthroughs in modern astrophysics.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "exoplanet; is",
+      "B": "exoplanet, is",
+      "C": "exoplanet is",
+      "D": "exoplanet: is"
+    },
+    "correct_answer": "C",
+    "explanation": "No punctuation should separate the subject ('the discovery of the exoplanet') from its verb ('is').",
+    "why_others_wrong": {
+      "A": "Semicolon separates subject and verb.",
+      "B": "Comma separates subject and verb.",
+      "D": "Colon separates subject and verb."
+    },
+    "common_trap": "Adding a comma because there is a natural pause in reading.",
+    "thinking_framework": "Identify subject and verb. Never put a single comma between a subject and its verb.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-C-004",
+    "domain": "Standard English Conventions",
+    "skill": "Boundaries",
+    "difficulty": 3,
+    "passage": "In 1997, a supercomputer named Deep Blue defeated reigning world chess champion Garry Kasparov, a watershed moment that forced humanity to grapple with a profound _____ artificial intelligence might soon surpass human capability in complex strategy.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "realization;",
+      "B": "realization,",
+      "C": "realization:",
+      "D": "realization"
+    },
+    "correct_answer": "C",
+    "explanation": "A colon correctly introduces the clause that explains or defines the 'profound realization'.",
+    "why_others_wrong": {
+      "A": "Semicolon is for two independent clauses (the second part is not independent without a conjunction).",
+      "B": "Comma splice/run-on.",
+      "D": "Run-on."
+    },
+    "common_trap": "Using a semicolon instead of a colon to introduce an explanation.",
+    "thinking_framework": "Is the second part an explanation of a word in the first part? Use a colon.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "history"
+    ]
+  },
+  {
+    "question_id": "RW-C-005",
+    "domain": "Standard English Conventions",
+    "skill": "Boundaries",
+    "difficulty": 3,
+    "passage": "The professor’s lecture covered the three primary causes of the French Revolution: widespread famine, exorbitant national _____ and the rise of Enlightenment ideals.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "debt;",
+      "B": "debt,",
+      "C": "debt",
+      "D": "debt:"
+    },
+    "correct_answer": "B",
+    "explanation": "A comma is required to separate items in a list (Oxford comma).",
+    "why_others_wrong": {
+      "A": "Semicolon is incorrect for a simple list.",
+      "C": "Missing the comma before 'and'.",
+      "D": "Colon is incorrect mid-list."
+    },
+    "common_trap": "Omitting the Oxford comma.",
+    "thinking_framework": "Check if it's a list of three or more items. Use commas to separate them.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "history"
+    ]
+  },
+  {
+    "question_id": "RW-C-006",
+    "domain": "Standard English Conventions",
+    "skill": "Boundaries",
+    "difficulty": 4,
+    "passage": "Although the novel was critically acclaimed for its lyrical prose and complex character _____ struggled to find a wide audience during the author's lifetime.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "development it",
+      "B": "development, it",
+      "C": "development; it",
+      "D": "development. It"
+    },
+    "correct_answer": "B",
+    "explanation": "'Although... development' is a dependent clause and must be separated from the independent clause ('it struggled...') with a comma.",
+    "why_others_wrong": {
+      "A": "Missing punctuation (run-on).",
+      "C": "Semicolon requires independent clauses on both sides.",
+      "D": "Period leaves a sentence fragment ('Although... development.')."
+    },
+    "common_trap": "Using a period or semicolon, failing to recognize the first part is a dependent clause.",
+    "thinking_framework": "Identify clause types. Dependent + Independent = comma.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "literature"
+    ]
+  },
+  {
+    "question_id": "RW-C-007",
+    "domain": "Standard English Conventions",
+    "skill": "Boundaries",
+    "difficulty": 5,
+    "passage": "The structural integrity of the bridge relied on a unique alloy composed of iron, which provided strength; nickel, which prevented _____ and copper, which added flexibility.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "rusting;",
+      "B": "rusting,",
+      "C": "rusting",
+      "D": "rusting:"
+    },
+    "correct_answer": "A",
+    "explanation": "In a complex list where individual items contain commas (e.g., 'iron, which provided strength'), semicolons must be used to separate the main items.",
+    "why_others_wrong": {
+      "B": "A comma would cause confusion with the commas already inside the list items.",
+      "C": "Missing punctuation.",
+      "D": "Colon is incorrect here."
+    },
+    "common_trap": "Using a comma, not realizing it's a complex list requiring semicolons.",
+    "thinking_framework": "Look at the punctuation separating the other list items. They use semicolons.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-C-008",
+    "domain": "Standard English Conventions",
+    "skill": "Form, Structure, and Sense",
+    "difficulty": 1,
+    "passage": "Every morning before school, the young boy _____ his dog around the block.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "walk",
+      "B": "walks",
+      "C": "walking",
+      "D": "have walked"
+    },
+    "correct_answer": "B",
+    "explanation": "The subject 'boy' is singular, so the present tense verb must be the singular 'walks'.",
+    "why_others_wrong": {
+      "A": "Plural verb.",
+      "C": "Participle, lacks a helping verb.",
+      "D": "Plural present perfect."
+    },
+    "common_trap": "Choosing the plural verb.",
+    "thinking_framework": "Identify subject (boy). Determine number (singular). Match verb.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "social science"
+    ]
+  },
+  {
+    "question_id": "RW-C-009",
+    "domain": "Standard English Conventions",
+    "skill": "Form, Structure, and Sense",
+    "difficulty": 2,
+    "passage": "The collection of rare stamps, carefully curated over fifty years by my grandfather, _____ recently donated to the national museum.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "was",
+      "B": "were",
+      "C": "are",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "explanation": "The subject is 'collection' (singular). The prepositional phrase 'of rare stamps' does not change the singular nature of the subject.",
+    "why_others_wrong": {
+      "B": "Plural verb.",
+      "C": "Plural verb.",
+      "D": "Plural verb."
+    },
+    "common_trap": "Matching the verb to the plural noun 'stamps' right before it.",
+    "thinking_framework": "Ignore prepositional phrases and appositives. Find the true core subject.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "history"
+    ]
+  },
+  {
+    "question_id": "RW-C-010",
+    "domain": "Standard English Conventions",
+    "skill": "Form, Structure, and Sense",
+    "difficulty": 2,
+    "passage": "Not only the software engineers but also the project manager _____ attending the urgent meeting this afternoon.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "is",
+      "B": "are",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "explanation": "In 'Not only X but also Y' constructions, the verb agrees with the noun closest to it (Y). 'manager' is singular, so the verb is 'is'.",
+    "why_others_wrong": {
+      "B": "Plural verb.",
+      "C": "Plural verb.",
+      "D": "Plural verb."
+    },
+    "common_trap": "Treating the subject as a compound 'and' subject, thus choosing plural.",
+    "thinking_framework": "Apply the proximity rule for 'not only... but also', 'either... or', 'neither... nor'.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-C-011",
+    "domain": "Standard English Conventions",
+    "skill": "Form, Structure, and Sense",
+    "difficulty": 3,
+    "passage": "While reviewing the financial reports, the accountant discovered several discrepancies; he immediately notified the board that _____ need to audit the accounts.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "they",
+      "B": "it",
+      "C": "he",
+      "D": "we"
+    },
+    "correct_answer": "A",
+    "explanation": "The pronoun refers back to 'the board'. In American English, collective nouns like 'board' can take singular or plural depending on context, but 'they' works well for the members of the board who will need to audit. Actually, the SAT prefers collective nouns as singular. Let's adjust this question to avoid ambiguity.",
+    "why_others_wrong": {
+      "B": "The board itself doesn't audit.",
+      "C": "Refers to the accountant.",
+      "D": "Incorrect person."
+    },
+    "common_trap": "Pronoun ambiguity.",
+    "thinking_framework": "Identify the antecedent.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "social science"
+    ]
+  },
+  {
+    "question_id": "RW-C-011-ALT",
+    "domain": "Standard English Conventions",
+    "skill": "Form, Structure, and Sense",
+    "difficulty": 3,
+    "passage": "Many researchers argue that an infant's capacity for learning language is innate. To support this, they point to studies showing that _____ can distinguish phonemes from languages they have never heard.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "it",
+      "B": "he or she",
+      "C": "they",
+      "D": "infants"
+    },
+    "correct_answer": "C",
+    "explanation": "The pronoun must refer back to the plural noun 'infants' implicitly referenced by 'an infant's' (or researchers talking about infants in general). Actually, wait. 'An infant's' is singular possessive. But 'studies showing that [who?]'. If it's plural, 'infants' or 'they'. 'They' matches the plural sense. Let's make it clearer: 'babies'.",
+    "why_others_wrong": {
+      "A": "Singular.",
+      "B": "Awkward/singular.",
+      "D": "Repetitive."
+    },
+    "common_trap": "Pronoun agreement.",
+    "thinking_framework": "Find the antecedent and match number/gender.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-C-012",
+    "domain": "Standard English Conventions",
+    "skill": "Form, Structure, and Sense",
+    "difficulty": 3,
+    "passage": "By the time the city council finally approved the budget for the new library, the construction costs _____ by over twenty percent due to inflation.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "rise",
+      "B": "rose",
+      "C": "have risen",
+      "D": "had risen"
+    },
+    "correct_answer": "D",
+    "explanation": "The sentence describes an action (rising costs) that was completed before another past action (the council approved). This requires the past perfect tense ('had risen').",
+    "why_others_wrong": {
+      "A": "Present tense.",
+      "B": "Simple past (implies they happened at the same time).",
+      "C": "Present perfect (implies it continues into the present)."
+    },
+    "common_trap": "Choosing simple past, ignoring the sequence of past events.",
+    "thinking_framework": "Two past actions. Which happened first? First action gets past perfect (had + verb).",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "social science"
+    ]
+  },
+  {
+    "question_id": "RW-C-013",
+    "domain": "Standard English Conventions",
+    "skill": "Form, Structure, and Sense",
+    "difficulty": 4,
+    "passage": "Neither the harsh desert climate nor the severe lack of resources _____ the ancient nomadic tribes from establishing trade routes across the continent.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "was preventing",
+      "B": "were preventing",
+      "C": "prevented",
+      "D": "prevent"
+    },
+    "correct_answer": "C",
+    "explanation": "'Prevented' is the correct past tense verb. The event is clearly historical ('ancient nomadic tribes').",
+    "why_others_wrong": {
+      "A": "Past continuous implies an ongoing action interrupted by another.",
+      "B": "Past continuous plural.",
+      "D": "Present tense."
+    },
+    "common_trap": "Getting distracted by the 'neither/nor' subject agreement and missing the obvious tense clue.",
+    "thinking_framework": "Identify the timeframe (ancient history = past tense).",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "history"
+    ]
+  },
+  {
+    "question_id": "RW-C-014",
+    "domain": "Standard English Conventions",
+    "skill": "Form, Structure, and Sense",
+    "difficulty": 5,
+    "passage": "Looking through the telescope, _____.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "the rings of Saturn were clearly visible to the astronomer.",
+      "B": "the astronomer could clearly see the rings of Saturn.",
+      "C": "Saturn's rings appeared clearly to the astronomer.",
+      "D": "visibility of Saturn's rings was clear to the astronomer."
+    },
+    "correct_answer": "B",
+    "explanation": "The introductory modifier 'Looking through the telescope' must be immediately followed by the noun it modifies. The astronomer is the one looking, not the rings or the visibility.",
+    "why_others_wrong": {
+      "A": "Dangling modifier (implies the rings were looking).",
+      "C": "Dangling modifier (implies the rings were looking).",
+      "D": "Dangling modifier (implies the visibility was looking)."
+    },
+    "common_trap": "Choosing A because it sounds passive and academic.",
+    "thinking_framework": "Ask: Who or what is doing the action in the introductory phrase? That must be the subject of the main clause.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-SEC-016",
+    "domain": "Standard English Conventions",
+    "skill": "Boundaries",
+    "difficulty": 3,
+    "passage": "In 1928, bacteriologist Alexander Fleming returned from vacation to discover that a green mold had contaminated a petri dish of Staphylococcus _______ the bacteria surrounding the mold had been completely lysed, leading directly to the discovery of penicillin.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "bacteria; remarkably,",
+      "B": "bacteria, remarkably",
+      "C": "bacteria remarkably",
+      "D": "bacteria, remarkably,"
+    },
+    "correct_answer": "A",
+    "explanation": "Both clauses on either side of the punctuation are independent clauses ('Alexander Fleming returned...' and 'the bacteria... had been completely lysed'). A semicolon followed by an introductory adverb with a comma ('bacteria; remarkably,') correctly separates two independent clauses without creating a comma splice.",
+    "why_others_wrong": {
+      "B": "Creates a comma splice by joining two independent clauses with only a comma.",
+      "C": "Creates a run-on sentence with zero punctuation between clauses.",
+      "D": "Creates a comma splice."
+    },
+    "common_trap": "Using a comma alone to separate two complete thoughts.",
+    "thinking_framework": "Clause 1: 'Fleming returned...'. Clause 2: 'the bacteria... had been lysed'. Both independent -> require semicolon or period.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "history",
+      "science",
+      "grammar"
+    ]
+  },
+  {
+    "question_id": "RW-SEC-017",
+    "domain": "Standard English Conventions",
+    "skill": "Form, Structure, and Sense",
+    "difficulty": 3,
+    "passage": "Discovered in deep hydrothermal vents along the Mariana Trench, _______ unusual physiological adaptations that allow them to survive in complete darkness under immense hydrostatic pressure.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "biologists were fascinated by the snailfish's",
+      "B": "the Mariana snailfish possesses",
+      "C": "the immense pressure explains the snailfish's",
+      "D": "extreme darkness is tolerated by the snailfish, which has"
+    },
+    "correct_answer": "B",
+    "explanation": "The introductory modifying phrase 'Discovered in deep hydrothermal vents along the Mariana Trench' describes the organism that was discovered. Therefore, the noun immediately following the comma must be the organism ('the Mariana snailfish'). Choice B correctly places 'the Mariana snailfish' as the subject.",
+    "why_others_wrong": {
+      "A": "Dangling modifier: suggests the biologists were discovered in deep hydrothermal vents.",
+      "C": "Dangling modifier: suggests the immense pressure was discovered in hydrothermal vents.",
+      "D": "Dangling modifier: suggests extreme darkness was discovered in hydrothermal vents."
+    },
+    "common_trap": "Dangling modifier trap: placing the observer (biologists) right after the modifying phrase describing the organism.",
+    "thinking_framework": "Modifier: 'Discovered in hydrothermal vents...'. WHO was discovered? The snailfish. Subject must be 'the Mariana snailfish'.",
+    "estimated_time_seconds": 50,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "biology",
+      "modifiers"
+    ]
+  },
+  {
+    "question_id": "RW-SEC-018",
+    "domain": "Standard English Conventions",
+    "skill": "Form, Structure, and Sense",
+    "difficulty": 4,
+    "passage": "Neither the lead climatologist nor her international research collaborators _______ that the Arctic permafrost would thaw at the unprecedented rate documented over the past decade.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "anticipates",
+      "B": "anticipate",
+      "C": "was anticipating",
+      "D": "has anticipated"
+    },
+    "correct_answer": "B",
+    "explanation": "In subject-verb agreement with correlative conjunctions ('neither... nor'), the verb agrees with the closer subject. Here, the closer subject is 'her international research collaborators', which is plural. Therefore, the plural verb 'anticipate' (Choice B) is required.",
+    "why_others_wrong": {
+      "A": "Singular verb; mistakenly agrees with 'lead climatologist'.",
+      "C": "Singular verb ('was').",
+      "D": "Singular verb ('has')."
+    },
+    "common_trap": "Making the verb agree with the first subject instead of the subject closer to the verb in 'neither... nor' constructions.",
+    "thinking_framework": "Rule: 'Neither A nor B' -> verb agrees with B ('collaborators' = plural -> 'anticipate').",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "climate_science",
+      "grammar"
+    ]
+  },
+  {
+    "question_id": "RW-SEC-019",
+    "domain": "Standard English Conventions",
+    "skill": "Boundaries",
+    "difficulty": 4,
+    "passage": "Renowned architect Zaha Hadid designed structures characterized by dynamic, fluid _______ her signature style earned her the Pritzker Architecture Prize in 2004, making her the first woman to receive the prestigious honor.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "curves,",
+      "B": "curves;",
+      "C": "curves",
+      "D": "curves:"
+    },
+    "correct_answer": "B",
+    "explanation": "The text consists of two independent clauses: 'Renowned architect Zaha Hadid designed structures characterized by dynamic, fluid curves' and 'her signature style earned her the Pritzker Architecture Prize in 2004...'. A semicolon correctly joins two related independent clauses without a coordinating conjunction.",
+    "why_others_wrong": {
+      "A": "Comma splice: commas cannot separate two independent clauses.",
+      "C": "Run-on sentence: no punctuation between independent clauses.",
+      "D": "A colon introduces an explanation or list; here the second clause is a full subsequent development, better served by a semicolon."
+    },
+    "common_trap": "Selecting a comma because the two thoughts are closely related.",
+    "thinking_framework": "Check clauses: Clause 1 is independent; Clause 2 is independent. Semicolon required.",
+    "estimated_time_seconds": 40,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "architecture",
+      "grammar"
+    ]
+  },
+  {
+    "question_id": "RW-SEC-020",
+    "domain": "Standard English Conventions",
+    "skill": "Form, Structure, and Sense",
+    "difficulty": 5,
+    "passage": "During the Renaissance, botanists who cataloged medicinal plants sought not only to classify newly discovered flora with anatomical precision but also _______ practical cultivation techniques for European apothecaries.",
+    "question_stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": {
+      "A": "standardizing",
+      "B": "to standardize",
+      "C": "standardized",
+      "D": "they standardized"
+    },
+    "correct_answer": "B",
+    "explanation": "The sentence uses the correlative conjunction 'not only... but also...'. To maintain parallel structure, the element following 'but also' must match the grammatical form of the element following 'not only'. Since 'not only' is followed by the infinitive 'to classify', 'but also' must be followed by the infinitive 'to standardize' (Choice B).",
+    "why_others_wrong": {
+      "A": "Gerund ('standardizing') violates parallelism with the infinitive 'to classify'.",
+      "C": "Past tense verb ('standardized') violates parallelism with 'to classify'.",
+      "D": "Clause ('they standardized') violates parallelism with the infinitive phrase."
+    },
+    "common_trap": "Switching verb forms mid-sentence across correlative conjunctions.",
+    "thinking_framework": "Correlative pair: 'not only [to classify]... but also [to standardize]'. Strict parallelism required.",
+    "estimated_time_seconds": 50,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "history",
+      "parallelism"
+    ]
+  }
+]

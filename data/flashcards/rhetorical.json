@@ -1,0 +1,92 @@
+[
+  {
+    "card_id": "FC-RHE-001",
+    "type": "rhetorical",
+    "difficulty": 2,
+    "front": {"concept": "Main Purpose vs. Main Idea", "example": "Question: What is the main purpose of the passage?"},
+    "back": {"definition": "Main Idea is WHAT the passage is about. Main Purpose is WHY the author wrote it.", "strategy": "Look for active verbs in the answer choices (e.g., 'To argue', 'To explain', 'To criticize'). Ask yourself: what is the author trying to achieve?"},
+    "skill": "Text Structure and Purpose",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-RHE-002",
+    "type": "rhetorical",
+    "difficulty": 3,
+    "front": {"concept": "Function of a Sentence", "example": "Question: Which choice best describes the function of the underlined sentence in the text as a whole?"},
+    "back": {"definition": "How a specific sentence contributes to the author's argument or the paragraph's structure.", "strategy": "Read the sentence before and after. Does it provide an example? Introduce a counterargument? Summarize a finding? The correct answer will match this structural role."},
+    "skill": "Text Structure and Purpose",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-RHE-003",
+    "type": "rhetorical",
+    "difficulty": 3,
+    "front": {"concept": "Cross-Text Connections (Text 1 vs Text 2)", "example": "Question: Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1?"},
+    "back": {"definition": "Analyzing how two short texts relate to each other (agree, disagree, qualify).", "strategy": "Identify the core argument of EACH text first. Find the specific point of overlap. Determine if they are in harmony, direct opposition, or partial agreement."},
+    "skill": "Cross-Text Connections",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-RHE-004",
+    "type": "rhetorical",
+    "difficulty": 4,
+    "front": {"concept": "Quantitative Evidence (Graphs/Tables)", "example": "Question: Which choice most effectively uses data from the table to complete the statement?"},
+    "back": {"definition": "Using numerical data to support or complete a claim.", "strategy": "The correct answer MUST be factually true according to the graph AND logically support the specific claim being made in the paragraph. Don't just pick a true fact; pick the RELEVANT true fact."},
+    "skill": "Command of Evidence",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-RHE-005",
+    "type": "rhetorical",
+    "difficulty": 4,
+    "front": {"concept": "Textual Evidence", "example": "Question: Which quotation from the poem most effectively illustrates the claim?"},
+    "back": {"definition": "Selecting the quote that directly proves the prompt's premise.", "strategy": "Treat the claim as a checklist. The correct quote must contain evidence for EVERY part of the claim, not just mention the same topic."},
+    "skill": "Command of Evidence",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-RHE-006",
+    "type": "rhetorical",
+    "difficulty": 3,
+    "front": {"concept": "Words in Context (Tone)", "example": "Why did the author use the word 'demolish' instead of 'disprove'?"},
+    "back": {"definition": "Analyzing how word choice affects tone and impact.", "strategy": "'Demolish' carries a much stronger, more aggressive tone than 'disprove'. Words in context questions often test the degree of intensity or the specific connotation (positive/negative)."},
+    "skill": "Words in Context",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-RHE-007",
+    "type": "rhetorical",
+    "difficulty": 5,
+    "front": {"concept": "Logical Transition (Blank at the End)", "example": "Question: Which choice most logically completes the text?"},
+    "back": {"definition": "Concluding a paragraph logically based on the premises provided.", "strategy": "Do not introduce new outside knowledge. The conclusion MUST be an inescapable logical deduction from the specific facts presented in the preceding sentences."},
+    "skill": "Inferences",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-RHE-008",
+    "type": "rhetorical",
+    "difficulty": 2,
+    "front": {"concept": "Point of View (POV)", "example": "First person vs. Third person omniscient"},
+    "back": {"definition": "The perspective from which the story is told.", "strategy": "Look for pronouns ('I', 'we' vs 'he', 'they'). Pay attention to whether the narrator knows the inner thoughts of all characters (omniscient) or just one (limited)."},
+    "skill": "Text Structure and Purpose",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-RHE-009",
+    "type": "rhetorical",
+    "difficulty": 4,
+    "front": {"concept": "Concession and Rebuttal", "example": "While some argue X, Y is actually true."},
+    "back": {"definition": "Acknowledging an opposing view before shooting it down.", "strategy": "This is a powerful rhetorical device. It shows the author is reasonable (concession) but ultimately reinforces their own argument (rebuttal). Look for this structure in function questions."},
+    "skill": "Text Structure and Purpose",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-RHE-010",
+    "type": "rhetorical",
+    "difficulty": 5,
+    "front": {"concept": "Synthesizing Information", "example": "Combining notes to accomplish a specific goal (e.g., 'introduce the scientist and her major discovery')."},
+    "back": {"definition": "Rhetorical Synthesis questions give you bullet points and ask you to achieve a specific goal.", "strategy": "Ignore the bullet points initially! Read the GOAL first. Then evaluate each answer choice to see if it accomplishes that exact goal. The correct answer might not use all the notes."},
+    "skill": "Rhetorical Synthesis",
+    "source": "original"
+  }
+]

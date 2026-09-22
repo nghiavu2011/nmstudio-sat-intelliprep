@@ -1,0 +1,51 @@
+{
+  "black_book_principles": {
+    "core_rule": "The Rule of Absolute Objectivity: Because the SAT is a standardized exam, exactly one choice is 100% defensible based strictly on the text/prompt. Every wrong choice is not merely 'less good'—it is demonstrably, objectively WRONG.",
+    "reading_and_writing_distractors": [
+      {
+        "name": "The Half-Right Trap (Restatement with Distortion)",
+        "mechanism": "The choice borrows familiar keywords directly from the passage to feel comfortable, but alters a critical detail, relationship, or qualifier.",
+        "how_to_spot": "Look for choices that sound very familiar from the text. Check every single word in the choice: if even ONE word is unsupported, the entire choice is wrong.",
+        "antidote": "Do not select by keyword matching. Verify that the entire claim matches the author's precise assertion."
+      },
+      {
+        "name": "The Outside Knowledge Trap (True in Reality, Absent in Text)",
+        "mechanism": "The choice presents a fact that is scientifically, historically, or logically true in real life, but the passage never mentions or supports it.",
+        "how_to_spot": "Ask yourself: 'Did the author explicitly state this in these 50-100 words, or do I know this from my biology/history class?'",
+        "antidote": "If the passage didn't say it, it does NOT exist on the SAT. Eliminate immediately."
+      },
+      {
+        "name": "The Extreme / Unsupported Extrapolation Trap",
+        "mechanism": "The choice takes a modest claim in the text and magnifies it into an absolute statement using words like 'always', 'never', 'solely', 'completely', or 'guarantees'.",
+        "how_to_spot": "Flag extreme absolute qualifiers. The College Board rarely makes extreme claims unless the text explicitly used that exact extreme language.",
+        "antidote": "Prefer moderated, defensible phrasing ('suggests', 'tends to', 'can indicate') unless the text is absolute."
+      },
+      {
+        "name": "The Reversed Relationship Trap",
+        "mechanism": "The choice inverts cause and effect, or attributes a perspective to the author that the author was actually quoting someone else to refute.",
+        "how_to_spot": "Identify who said what, and verify the direction of the arrow: did X cause Y, or did Y cause X?",
+        "antidote": "Trace the grammatical subject and object in the text before reading the choices."
+      }
+    ],
+    "math_distractors": [
+      {
+        "name": "The Intermediate Step Trap (Solving for the Wrong Value)",
+        "mechanism": "The question asks for 3x - 2 or the value of y, but the student solves for x and picks the choice corresponding to x.",
+        "how_to_spot": "Always circle or write down the TARGET quantity before beginning scratch work.",
+        "antidote": "Perform the 'Target Check' before bubbling: 'Did I answer what was asked, or just find x?'"
+      },
+      {
+        "name": "The Distribution & Sign Trap",
+        "mechanism": "Failing to distribute a negative sign across parentheses, e.g., -(2x - 5) mistakenly written as -2x - 5 instead of -2x + 5.",
+        "how_to_spot": "Be hyper-vigilant whenever a negative sign precedes parentheses or a fraction.",
+        "antidote": "Write out the explicit multiplication step on scratch paper: (-1)*(2x) + (-1)*(-5)."
+      },
+      {
+        "name": "The Unit & Rate Mismatch Trap",
+        "mechanism": "Solving in minutes when the question asks for hours, or providing a percentage instead of a decimal.",
+        "how_to_spot": "Underline the unit in the final sentence of the prompt.",
+        "antidote": "Do dimensional analysis: multiply by (1 hour / 60 min) explicitly."
+      }
+    ]
+  }
+}

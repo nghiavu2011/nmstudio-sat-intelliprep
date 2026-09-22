@@ -1,0 +1,92 @@
+[
+  {
+    "card_id": "FC-VOC-001",
+    "type": "vocabulary",
+    "difficulty": 2,
+    "front": {"word": "undermine", "context": "The new evidence served to undermine the researcher's original hypothesis."},
+    "back": {"meaning": "To weaken or damage gradually", "word_family": ["undermining", "undermined"], "contrast": "Not 'underscore' (to emphasize) or 'underpin' (to support)", "example": "Budget cuts undermined the school's ability to offer advanced courses."},
+    "skill": "Words in Context",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-VOC-002",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "front": {"word": "pragmatic", "context": "The mayor took a pragmatic approach to the budget crisis, prioritizing immediate needs over long-term ideals."},
+    "back": {"meaning": "Dealing with things sensibly and realistically", "word_family": ["pragmatism", "pragmatist"], "contrast": "Not 'idealistic' or 'theoretical'", "example": "We need a pragmatic solution, not a philosophical debate."},
+    "skill": "Words in Context",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-VOC-003",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "front": {"word": "ambivalent", "context": "She felt ambivalent about the job offer; the salary was great, but the commute was terrible."},
+    "back": {"meaning": "Having mixed feelings or contradictory ideas", "word_family": ["ambivalence"], "contrast": "Not 'indifferent' (not caring). Ambivalent means you care but are torn.", "example": "Voters remain ambivalent about the proposed tax reform."},
+    "skill": "Words in Context",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-VOC-004",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {"word": "corroborate", "context": "Multiple witnesses were able to corroborate the defendant's alibi."},
+    "back": {"meaning": "To confirm or give support to", "word_family": ["corroboration", "corroborative"], "contrast": "Not 'contradict' or 'refute'", "example": "The lab results corroborated the doctor's initial diagnosis."},
+    "skill": "Words in Context",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-VOC-005",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {"word": "lucid", "context": "The professor gave a lucid explanation of quantum mechanics that even beginners could understand."},
+    "back": {"meaning": "Expressed clearly; easy to understand", "word_family": ["lucidity", "lucidly"], "contrast": "Not 'obscure' or 'muddled'", "example": "He remained lucid despite his high fever."},
+    "skill": "Words in Context",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-VOC-006",
+    "type": "vocabulary",
+    "difficulty": 5,
+    "front": {"word": "ephemeral", "context": "The beauty of the cherry blossoms is ephemeral, lasting only a few weeks each spring."},
+    "back": {"meaning": "Lasting for a very short time", "word_family": ["ephemerality"], "contrast": "Not 'permanent' or 'perpetual'", "example": "Fame in the internet age is often ephemeral."},
+    "skill": "Words in Context",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-VOC-007",
+    "type": "vocabulary",
+    "difficulty": 5,
+    "front": {"word": "mitigate", "context": "The government launched a new program to mitigate the effects of climate change."},
+    "back": {"meaning": "To make less severe, serious, or painful", "word_family": ["mitigation", "unmitigated"], "contrast": "Not 'exacerbate' (to make worse)", "example": "Planting trees helps mitigate soil erosion."},
+    "skill": "Words in Context",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-VOC-008",
+    "type": "vocabulary",
+    "difficulty": 2,
+    "front": {"word": "profound", "context": "The discovery had a profound impact on the field of medicine."},
+    "back": {"meaning": "Very great or intense; having deep meaning", "word_family": ["profoundly", "profundity"], "contrast": "Not 'superficial' or 'shallow'", "example": "She felt a profound sense of loss."},
+    "skill": "Words in Context",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-VOC-009",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "front": {"word": "anecdote", "context": "He opened his speech with a humorous anecdote about his first day at work."},
+    "back": {"meaning": "A short amusing or interesting story about a real incident or person", "word_family": ["anecdotal"], "contrast": "Often contrasted with 'empirical data' (anecdotes are just stories, not hard data)", "example": "Her book is filled with personal anecdotes."},
+    "skill": "Words in Context",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-VOC-010",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {"word": "disparate", "context": "The committee was made up of individuals from disparate backgrounds."},
+    "back": {"meaning": "Essentially different in kind; not allowing comparison", "word_family": ["disparity"], "contrast": "Not 'homogeneous' or 'similar'", "example": "They managed to combine disparate elements into a unified whole."},
+    "skill": "Words in Context",
+    "source": "original"
+  }
+]

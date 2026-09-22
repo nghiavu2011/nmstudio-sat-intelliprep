@@ -1,0 +1,64 @@
+{
+  "academic_roots": [
+    {
+      "root": "chron / chrono",
+      "origin": "Greek",
+      "meaning": "time",
+      "sat_words": [
+        {"word": "anachronism", "meaning": "something out of its proper historical time period", "context": "The appearance of a smartphone in the period film was an obvious anachronism."},
+        {"word": "synchronize", "meaning": "to occur or operate at the same time", "context": "The researchers synchronized their data loggers to record temperature shifts simultaneously."},
+        {"word": "chronic", "meaning": "persisting for a long time or constantly recurring", "context": "Chronic exposure to low-level noise impairs cognitive development in children."}
+      ]
+    },
+    {
+      "root": "tract",
+      "origin": "Latin",
+      "meaning": "draw, pull",
+      "sat_words": [
+        {"word": "retract", "meaning": "to withdraw a statement, claim, or promise", "context": "The journal retracted the paper after discovering fabricated experimental data."},
+        {"word": "intractable", "meaning": "hard to control, manage, or manipulate", "context": "The mathematical problem proved intractable using conventional analytical methods."},
+        {"word": "protract", "meaning": "to extend or prolong in duration", "context": "Protracted diplomatic negotiations finally led to a ceasefire agreement."}
+      ]
+    },
+    {
+      "root": "spec / spic",
+      "origin": "Latin",
+      "meaning": "look, see",
+      "sat_words": [
+        {"word": "circumspect", "meaning": "wary, cautious, looking at all circumstances", "context": "Officials were circumspect about projecting economic growth during the volatile quarter."},
+        {"word": "perspicacious", "meaning": "having keen mental perception and discernment", "context": "Her perspicacious analysis of market trends predicted the housing downturn months in advance."},
+        {"word": "conspicuous", "meaning": "easily seen, attracting notice", "context": "The bird's conspicuous plumage makes it vulnerable to aerial predators."}
+      ]
+    },
+    {
+      "root": "gen / gener",
+      "origin": "Greek/Latin",
+      "meaning": "birth, produce, kind",
+      "sat_words": [
+        {"word": "heterogeneous", "meaning": "diverse in character or content", "context": "The sample population was heterogeneous, encompassing individuals from twelve distinct ecosystems."},
+        {"word": "engender", "meaning": "to cause or give rise to a feeling, situation, or condition", "context": "The policy changes engendered widespread skepticism among academic researchers."},
+        {"word": "indigenous", "meaning": "originating or occurring naturally in a particular place", "context": "The indigenous flora of the island evolved in isolation from mainland competitors."}
+      ]
+    },
+    {
+      "root": "equi / equa",
+      "origin": "Latin",
+      "meaning": "equal, even",
+      "sat_words": [
+        {"word": "equitable", "meaning": "fair, just, and impartial", "context": "An equitable distribution of educational resources is essential for closing the achievement gap."},
+        {"word": "equivocal", "meaning": "open to more than one interpretation; ambiguous", "context": "The preliminary trial results were equivocal, necessitating further controlled testing."},
+        {"word": "equanimity", "meaning": "mental calmness, composure, and evenness of temper", "context": "She maintained her equanimity despite hostile questioning from the committee."}
+      ]
+    },
+    {
+      "root": "bene / bon",
+      "origin": "Latin",
+      "meaning": "good, well",
+      "sat_words": [
+        {"word": "beneficent", "meaning": "generous or doing good", "context": "The foundation's beneficent funding supported clean water initiatives across rural provinces."},
+        {"word": "benign", "meaning": "gentle, harmless, or non-malignant", "context": "The environmental impact of the small solar installation was considered relatively benign."},
+        {"word": "benevolent", "meaning": "well-meaning, kindly", "context": "Historians debate whether the ruler's autocratic policies were genuinely benevolent."}
+      ]
+    }
+  ]
+}

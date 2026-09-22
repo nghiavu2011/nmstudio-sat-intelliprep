@@ -1,0 +1,92 @@
+[
+  {
+    "card_id": "FC-GRA-001",
+    "type": "grammar",
+    "difficulty": 2,
+    "front": {"concept": "Semicolon usage", "example": "She loves reading; however, he prefers movies."},
+    "back": {"rule": "Use a semicolon to join two independent clauses (complete sentences).", "tip": "It functions identically to a period. If you can't replace the semicolon with a period, it's wrong.", "common_error": "Using a semicolon between an independent and dependent clause."},
+    "skill": "Boundaries",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-GRA-002",
+    "type": "grammar",
+    "difficulty": 2,
+    "front": {"concept": "Subject-Verb Agreement (Interrupting Phrases)", "example": "The group of students [is/are] going to the museum."},
+    "back": {"rule": "The verb must agree with the subject, not the noun in the interrupting phrase.", "tip": "Cross out the prepositional phrase ('of students'). Subject 'group' is singular -> 'is'.", "common_error": "Matching the verb to the closest noun ('students are')."},
+    "skill": "Form, Structure, and Sense",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-GRA-003",
+    "type": "grammar",
+    "difficulty": 3,
+    "front": {"concept": "Comma Splice", "example": "I went to the store, I bought some milk."},
+    "back": {"rule": "You cannot join two independent clauses with just a comma.", "tip": "Fix it with a period, a semicolon, or a comma + FANBOYS conjunction (and, but, so...).", "common_error": "Picking an answer choice that leaves the comma splice uncorrected."},
+    "skill": "Boundaries",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-GRA-004",
+    "type": "grammar",
+    "difficulty": 3,
+    "front": {"concept": "Dangling Modifier", "example": "Walking down the street, the trees were beautiful."},
+    "back": {"rule": "A modifying phrase at the beginning of a sentence must immediately be followed by the noun it modifies.", "tip": "The trees weren't walking! Fix: 'Walking down the street, I saw the beautiful trees.'", "common_error": "Ignoring the logical subject of the introductory phrase."},
+    "skill": "Form, Structure, and Sense",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-GRA-005",
+    "type": "grammar",
+    "difficulty": 4,
+    "front": {"concept": "Colon usage", "example": "I need three things: eggs, milk, and bread."},
+    "back": {"rule": "A colon must follow an independent clause (a complete thought).", "tip": "What comes after the colon can be a list, a single word, or another sentence, as long as what comes before is a full sentence.", "common_error": "Using a colon after 'such as' or 'including'."},
+    "skill": "Boundaries",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-GRA-006",
+    "type": "grammar",
+    "difficulty": 4,
+    "front": {"concept": "Parallel Structure", "example": "He likes hiking, swimming, and [to ride/riding] his bike."},
+    "back": {"rule": "Items in a list must be in the same grammatical form.", "tip": "Match the -ing forms: hiking, swimming, and RIDING.", "common_error": "Mixing infinitives ('to ride') with gerunds ('swimming')."},
+    "skill": "Form, Structure, and Sense",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-GRA-007",
+    "type": "grammar",
+    "difficulty": 2,
+    "front": {"concept": "Its vs. It's", "example": "The dog wagged [its/it's] tail."},
+    "back": {"rule": "Its = possessive. It's = it is.", "tip": "Try replacing it with 'it is'. 'The dog wagged it is tail' doesn't make sense, so use 'its'.", "common_error": "Using 'it's' for possession."},
+    "skill": "Form, Structure, and Sense",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-GRA-008",
+    "type": "grammar",
+    "difficulty": 5,
+    "front": {"concept": "Essential vs. Non-essential Clauses", "example": "My brother[,] John[,] is a doctor."},
+    "back": {"rule": "Use commas around non-essential information. No commas for essential information.", "tip": "If I only have one brother, his name is non-essential (use commas). If I have multiple brothers, 'John' specifies which one, so it's essential (no commas).", "common_error": "Using only one comma instead of two."},
+    "skill": "Boundaries",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-GRA-009",
+    "type": "grammar",
+    "difficulty": 3,
+    "front": {"concept": "Pronoun-Antecedent Agreement", "example": "Every student must bring [their/his or her] book."},
+    "back": {"rule": "Pronouns must match their antecedent in number.", "tip": "Historically, 'every student' is singular, so 'his or her' was preferred. However, SAT now accepts 'their' as a singular pronoun for unspecified gender.", "common_error": "Using 'their' for a clearly singular entity like a corporation ('The company updated their policy' -> 'its policy')."},
+    "skill": "Form, Structure, and Sense",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-GRA-010",
+    "type": "grammar",
+    "difficulty": 4,
+    "front": {"concept": "Single Dash Usage", "example": "There was only one thing left to do - run."},
+    "back": {"rule": "A single dash can be used exactly like a colon to introduce an explanation, list, or dramatic pause.", "tip": "The clause before the single dash MUST be independent (a full sentence).", "common_error": "Confusing it with double dashes, which function like commas for non-essential info."},
+    "skill": "Boundaries",
+    "source": "original"
+  }
+]

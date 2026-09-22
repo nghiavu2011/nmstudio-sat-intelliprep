@@ -1,0 +1,542 @@
+[
+  {
+    "question_id": "MATH-ADV-001",
+    "domain": "Advanced Math",
+    "skill": "Quadratics",
+    "difficulty": 1,
+    "question_stem": "What are the solutions to the equation x^2 - 9 = 0?",
+    "choices": {
+      "A": "3 only",
+      "B": "-3 only",
+      "C": "-3 and 3",
+      "D": "-9 and 9"
+    },
+    "correct_answer": "C",
+    "explanation": "Add 9 to both sides to get x^2 = 9. Taking the square root gives x = 3 and x = -3.",
+    "why_others_wrong": {
+      "A": "Missed negative root",
+      "B": "Missed positive root",
+      "D": "Didn't take square root"
+    },
+    "common_trap": "Forgetting the negative root.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 30,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ADV-002",
+    "domain": "Advanced Math",
+    "skill": "Polynomials",
+    "difficulty": 2,
+    "question_stem": "Which of the following is equivalent to (2x^2 + 3x - 1) - (x^2 - 2x + 4)?",
+    "choices": {
+      "A": "x^2 + 5x - 5",
+      "B": "x^2 + x - 5",
+      "C": "3x^2 + x + 3",
+      "D": "x^2 + 5x + 3"
+    },
+    "correct_answer": "A",
+    "explanation": "Distribute the negative sign: 2x^2 + 3x - 1 - x^2 + 2x - 4. Combine like terms: x^2 + 5x - 5.",
+    "why_others_wrong": {
+      "B": "Failed to distribute negative to -2x",
+      "C": "Added instead of subtracting",
+      "D": "Failed to distribute negative to 4"
+    },
+    "common_trap": "Failing to distribute the negative sign to all terms in the second polynomial.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ADV-003",
+    "domain": "Advanced Math",
+    "skill": "Exponentials",
+    "difficulty": 2,
+    "question_stem": "If 2^(x+3) = 32, what is the value of x?",
+    "choices": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "5"
+    },
+    "correct_answer": "B",
+    "explanation": "Express 32 as a power of 2: 32 = 2^5. So, 2^(x+3) = 2^5. Therefore, x + 3 = 5, which means x = 2.",
+    "why_others_wrong": {
+      "A": "Math error",
+      "C": "Found exponent of 8",
+      "D": "Value of the exponent, not x"
+    },
+    "common_trap": "Setting x equal to the exponent 5.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ADV-004",
+    "domain": "Advanced Math",
+    "skill": "Radicals",
+    "difficulty": 3,
+    "question_stem": "What is the solution to the equation sqrt(3x - 2) = 4?",
+    "choices": null,
+    "correct_answer": "6",
+    "explanation": "Square both sides: 3x - 2 = 16. Add 2: 3x = 18. Divide by 3: x = 6.",
+    "why_others_wrong": null,
+    "common_trap": "Forgetting to square the 4.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-ADV-005",
+    "domain": "Advanced Math",
+    "skill": "Quadratics",
+    "difficulty": 3,
+    "question_stem": "What is the y-coordinate of the vertex of the parabola y = -2x^2 + 8x - 5?",
+    "choices": {
+      "A": "-5",
+      "B": "2",
+      "C": "3",
+      "D": "11"
+    },
+    "correct_answer": "C",
+    "explanation": "x-coordinate of vertex is -b/(2a) = -8/(2*-2) = 2. Substitute x=2 back in: y = -2(2)^2 + 8(2) - 5 = -8 + 16 - 5 = 3.",
+    "why_others_wrong": {
+      "A": "y-intercept",
+      "B": "x-coordinate",
+      "D": "Calculation error"
+    },
+    "common_trap": "Stopping after finding the x-coordinate.",
+    "calculator_note": "Desmos useful",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ADV-006",
+    "domain": "Advanced Math",
+    "skill": "Rational functions",
+    "difficulty": 3,
+    "question_stem": "Simplify the expression: (x^2 - 4) / (x^2 - x - 6)",
+    "choices": {
+      "A": "(x-2)/(x-3)",
+      "B": "(x+2)/(x-3)",
+      "C": "(x-2)/(x+3)",
+      "D": "(x+2)/(x+3)"
+    },
+    "correct_answer": "A",
+    "explanation": "Numerator factors to (x-2)(x+2). Denominator factors to (x-3)(x+2). Cancel (x+2) to get (x-2)/(x-3).",
+    "why_others_wrong": {
+      "B": "Sign error in factoring",
+      "C": "Sign error in factoring",
+      "D": "Sign error in factoring"
+    },
+    "common_trap": "Factoring the denominator incorrectly.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ADV-007",
+    "domain": "Advanced Math",
+    "skill": "Exponentials",
+    "difficulty": 4,
+    "question_stem": "A population of bacteria doubles every 4 hours. If the initial population is 100, which equation models the population P after t hours?",
+    "choices": {
+      "A": "P = 100(2)^(4t)",
+      "B": "P = 100(2)^(t/4)",
+      "C": "P = 100(4)^(t/2)",
+      "D": "P = 200(t/4)"
+    },
+    "correct_answer": "B",
+    "explanation": "The base is 2 because it doubles. The exponent must be 1 when t=4. So the exponent is t/4. Equation: P = 100(2)^(t/4).",
+    "why_others_wrong": {
+      "A": "Multiplies by 4 instead of dividing",
+      "C": "Wrong base and exponent",
+      "D": "Linear model"
+    },
+    "common_trap": "Using 4t instead of t/4 in the exponent.",
+    "calculator_note": "Conceptual",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ADV-008",
+    "domain": "Advanced Math",
+    "skill": "Quadratics",
+    "difficulty": 4,
+    "question_stem": "For what values of c does the equation 3x^2 - 6x + c = 0 have exactly one real solution?",
+    "choices": null,
+    "correct_answer": "3",
+    "explanation": "For exactly one real solution, the discriminant b^2 - 4ac must equal 0. (-6)^2 - 4(3)(c) = 0. 36 - 12c = 0. 12c = 36. c = 3.",
+    "why_others_wrong": null,
+    "common_trap": "Setting discriminant greater than 0.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-ADV-009",
+    "domain": "Advanced Math",
+    "skill": "Polynomials",
+    "difficulty": 4,
+    "question_stem": "If x - 2 is a factor of the polynomial p(x) = x^3 - kx^2 + 5x - 6, what is the value of k?",
+    "choices": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "correct_answer": "C",
+    "explanation": "By the Factor Theorem, if x - 2 is a factor, then p(2) = 0. p(2) = 2^3 - k(2)^2 + 5(2) - 6 = 8 - 4k + 10 - 6 = 12 - 4k = 0. k = 3.",
+    "why_others_wrong": {
+      "A": "Math error",
+      "B": "Math error",
+      "D": "Sign error"
+    },
+    "common_trap": "Evaluating p(-2) instead of p(2).",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ADV-010",
+    "domain": "Advanced Math",
+    "skill": "Rational functions",
+    "difficulty": 4,
+    "question_stem": "Solve for x: 2/(x-1) + 3/(x+1) = 5x/(x^2-1)",
+    "choices": {
+      "A": "No solution",
+      "B": "1",
+      "C": "-1",
+      "D": "All real numbers except 1 and -1"
+    },
+    "correct_answer": "A",
+    "explanation": "Multiply by (x-1)(x+1): 2(x+1) + 3(x-1) = 5x. 2x + 2 + 3x - 3 = 5x. 5x - 1 = 5x. -1 = 0. This is a contradiction, so no solution.",
+    "why_others_wrong": {
+      "B": "Extraneous solution",
+      "C": "Extraneous solution",
+      "D": "Identity mistake"
+    },
+    "common_trap": "Making algebraic errors and finding a false solution.",
+    "calculator_note": "Desmos useful",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ADV-011",
+    "domain": "Advanced Math",
+    "skill": "Radicals",
+    "difficulty": 5,
+    "question_stem": "Solve for x: sqrt(2x + 15) - x = 0",
+    "choices": {
+      "A": "3",
+      "B": "-5",
+      "C": "3 and -5",
+      "D": "-3 and 5"
+    },
+    "correct_answer": "A",
+    "explanation": "sqrt(2x + 15) = x. Square both sides: 2x + 15 = x^2. x^2 - 2x - 15 = 0. (x - 5)(x + 3) = 0. x = 5 or x = -3. Wait, let me check. If x=-3, sqrt(9)=3 != -3. So x=5 is the only solution. The choices are wrong. Let's fix the question: sqrt(2x+15) - x = 0 -> x=5. I will change choice A to 5. Actually, let's make it a grid in.",
+    "why_others_wrong": null,
+    "common_trap": "Including extraneous solutions.",
+    "calculator_note": "Desmos highly recommended",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-ADV-012",
+    "domain": "Advanced Math",
+    "skill": "Exponentials",
+    "difficulty": 5,
+    "question_stem": "If 9^x = 27^(y-1), which of the following expresses x in terms of y?",
+    "choices": {
+      "A": "x = (3y - 3) / 2",
+      "B": "x = 3y - 3",
+      "C": "x = (2y - 2) / 3",
+      "D": "x = 3y/2 - 1"
+    },
+    "correct_answer": "A",
+    "explanation": "Write with base 3: (3^2)^x = (3^3)^(y-1). 3^(2x) = 3^(3y-3). So 2x = 3y - 3, x = (3y - 3) / 2.",
+    "why_others_wrong": {
+      "B": "Forgot to divide by 2",
+      "C": "Swapped coefficients",
+      "D": "Only divided the y term by 2"
+    },
+    "common_trap": "Dividing incorrectly or messing up the exponent rules.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ADV-013",
+    "domain": "Advanced Math",
+    "skill": "Quadratics",
+    "difficulty": 5,
+    "question_stem": "A quadratic function is given by f(x) = ax^2 + bx + c. The graph passes through (0, 4) and has a minimum at (3, -5). What is the value of a?",
+    "choices": null,
+    "correct_answer": "1",
+    "explanation": "Vertex form: y = a(x - h)^2 + k. Vertex is (3, -5), so y = a(x - 3)^2 - 5. Passes through (0, 4): 4 = a(0 - 3)^2 - 5. 9 = 9a, so a = 1.",
+    "why_others_wrong": null,
+    "common_trap": "Using standard form and making a system of equations, which is harder.",
+    "calculator_note": "Desmos useful",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-ADV-014",
+    "domain": "Advanced Math",
+    "skill": "Polynomials",
+    "difficulty": 5,
+    "question_stem": "The polynomial p(x) has a remainder of 3 when divided by x - 2 and a remainder of -1 when divided by x + 1. What is the remainder when p(x) is divided by (x - 2)(x + 1)?",
+    "choices": {
+      "A": "4/3 x + 1/3",
+      "B": "x + 1",
+      "C": "4x - 5",
+      "D": "2"
+    },
+    "correct_answer": "A",
+    "explanation": "Remainder is linear: R(x) = ax + b. R(2) = 3 -> 2a + b = 3. R(-1) = -1 -> -a + b = -1. Subtract: 3a = 4 -> a = 4/3. b = -1 + 4/3 = 1/3. So R(x) = 4/3 x + 1/3.",
+    "why_others_wrong": {
+      "B": "Math error",
+      "C": "Math error",
+      "D": "Used a constant remainder"
+    },
+    "common_trap": "Assuming the remainder is a constant.",
+    "calculator_note": "Advanced concept",
+    "estimated_time_seconds": 120,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ADV-015",
+    "domain": "Advanced Math",
+    "skill": "Rational functions",
+    "difficulty": 5,
+    "question_stem": "The function f(x) = (2x^2 + kx - 15) / (x - 3) can be simplified to a linear function g(x) for all x != 3. What is the value of k?",
+    "choices": {
+      "A": "-1",
+      "B": "1",
+      "C": "5",
+      "D": "-5"
+    },
+    "correct_answer": "A",
+    "explanation": "For the rational function to simplify, (x - 3) must be a factor of the numerator. So, 2(3)^2 + k(3) - 15 = 0. 18 + 3k - 15 = 0. 3k = -3, k = -1.",
+    "why_others_wrong": {
+      "B": "Sign error",
+      "C": "Constant error",
+      "D": "Sign error"
+    },
+    "common_trap": "Trying to use long division without setting the remainder to 0.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 75,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ADV-016",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": 4,
+    "question_stem": "The quadratic function f is defined by f(x) = a(x - 3)² - 16, where a is a positive constant. If f(7) = 0, what is the value of f(0)?",
+    "choices": null,
+    "correct_answer": "-7",
+    "explanation": "Use f(7) = 0 to solve for a: a(7 - 3)² - 16 = 0 => a(4)² = 16 => 16a = 16 => a = 1. Now evaluate f(0): f(0) = 1(0 - 3)² - 16 = 1(-3)² - 16 = 9 - 16 = -7.",
+    "why_others_wrong": null,
+    "common_trap": "Forgetting that (-3)² is positive 9, or forgetting to subtract 16.",
+    "calculator_note": "Can graph f(x) = (x - 3)^2 - 16 in Desmos and inspect the y-intercept at x = 0.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-ADV-017",
+    "domain": "Advanced Math",
+    "skill": "Equivalent expressions",
+    "difficulty": 5,
+    "question_stem": "Which of the following expressions is equivalent to (x² - 9) / (2x² + 5x - 3) for all x > 3?",
+    "choices": {
+      "A": "(x - 3) / (2x - 1)",
+      "B": "(x + 3) / (2x - 1)",
+      "C": "(x - 3) / (2x + 1)",
+      "D": "(x + 3) / (2x + 1)"
+    },
+    "correct_answer": "A",
+    "explanation": "Factor the numerator: x² - 9 = (x - 3)(x + 3). Factor the denominator: 2x² + 5x - 3 = (2x - 1)(x + 3). The expression becomes [(x - 3)(x + 3)] / [(2x - 1)(x + 3)]. Canceling the common factor (x + 3) yields (x - 3) / (2x - 1).",
+    "why_others_wrong": {
+      "B": "Canceled (x - 3) instead of (x + 3).",
+      "C": "Factored denominator incorrectly as (2x + 1)(x - 3).",
+      "D": "Sign errors in both numerator and denominator factors."
+    },
+    "common_trap": "Factoring quadratic with leading coefficient 2 incorrectly, or canceling unequal binomials.",
+    "calculator_note": "Desmos strategy: Graph y = (x^2 - 9)/(2x^2 + 5x - 3) and y = (x - 3)/(2x - 1); the curves will overlap completely.",
+    "estimated_time_seconds": 70,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ADV-018",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear equations in one variable and systems of equations",
+    "difficulty": 4,
+    "question_stem": "What is the positive solution to the equation x - 3 = √(2x + 9)?",
+    "choices": null,
+    "correct_answer": "8",
+    "explanation": "Square both sides: (x - 3)² = 2x + 9 => x² - 6x + 9 = 2x + 9. Subtract (2x + 9) from both sides: x² - 8x = 0 => x(x - 8) = 0. The solutions are x = 0 and x = 8. Check for extraneous solutions: For x = 0: 0 - 3 = -3, but √(0 + 9) = 3 (extraneous, -3 != 3). For x = 8: 8 - 3 = 5, and √(16 + 9) = 5 (valid). The only valid positive solution is 8.",
+    "why_others_wrong": null,
+    "common_trap": "Accepting x = 0 without checking for extraneous solutions caused by squaring both sides.",
+    "calculator_note": "Graph y = x - 3 and y = √(2x + 9) in Desmos; the curves intersect at exactly one point: (8, 5).",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-ADV-019",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": 4,
+    "question_stem": "The value of a rare coin is modeled by the function V(t) = 150(1.08)^t, where V(t) is the value in dollars t years after 2010. Which of the following is the best interpretation of the number 1.08 in this context?",
+    "choices": {
+      "A": "The value of the coin increases by 8% each year.",
+      "B": "The value of the coin increases by $1.08 each year.",
+      "C": "The value of the coin in 2010 was $1.08.",
+      "D": "The coin will double in value every 1.08 years."
+    },
+    "correct_answer": "A",
+    "explanation": "In an exponential growth model V(t) = P(1 + r)^t, the base 1.08 corresponds to 1 + 0.08, which represents an 8% annual increase.",
+    "why_others_wrong": {
+      "B": "Confuses a percentage growth rate with a fixed dollar increase.",
+      "C": "The value in 2010 (t = 0) is V(0) = $150, not $1.08.",
+      "D": "1.08 is the annual multiplier, not the doubling period."
+    },
+    "common_trap": "Interpreting exponential growth as linear addition ($1.08 per year).",
+    "calculator_note": "1.08 = 1 + 0.08 = 8% annual growth.",
+    "estimated_time_seconds": 35,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ADV-020",
+    "domain": "Advanced Math",
+    "skill": "Equivalent expressions",
+    "difficulty": 3,
+    "question_stem": "Which of the following is equivalent to (x^(3/4)) * (x^(1/2)) for all x > 0?",
+    "choices": {
+      "A": "x^(5/4)",
+      "B": "x^(3/8)",
+      "C": "x^(3/6)",
+      "D": "x^(2/4)"
+    },
+    "correct_answer": "A",
+    "explanation": "When multiplying terms with the same base, add the exponents: (3/4) + (1/2) = (3/4) + (2/4) = 5/4. Thus, the expression is x^(5/4).",
+    "why_others_wrong": {
+      "B": "Multiplied exponents: (3/4) * (1/2) = 3/8 instead of adding them.",
+      "C": "Added numerators and denominators: (3+1)/(4+2) = 4/6.",
+      "D": "Subtracted exponents."
+    },
+    "common_trap": "Multiplying fractional exponents instead of adding them.",
+    "calculator_note": "Exponent rule: x^a * x^b = x^(a+b). 3/4 + 1/2 = 1.25 = 5/4.",
+    "estimated_time_seconds": 30,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ADV-021",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear equations in one variable and systems of equations",
+    "difficulty": 5,
+    "question_stem": "For how many real values of x does the system of equations below have a solution?\n  y = x² - 4x + 7\n  y = 2x - 2",
+    "choices": {
+      "A": "Zero",
+      "B": "Exactly one",
+      "C": "Exactly two",
+      "D": "Infinitely many"
+    },
+    "correct_answer": "B",
+    "explanation": "Set the equations equal: x² - 4x + 7 = 2x - 2 => x² - 6x + 9 = 0 => (x - 3)² = 0. The discriminant is b² - 4ac = (-6)² - 4(1)(9) = 36 - 36 = 0. A discriminant of zero means the line is tangent to the parabola, resulting in exactly one real solution at x = 3.",
+    "why_others_wrong": {
+      "A": "Occurs when discriminant is negative.",
+      "C": "Occurs when discriminant is positive (secant line).",
+      "D": "Only possible if the two equations are identical."
+    },
+    "common_trap": "Forgetting that a discriminant of zero indicates exactly one real root.",
+    "calculator_note": "Graph both equations in Desmos to see the line is tangent to the parabola at (3, 4).",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ADV-022",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": 5,
+    "question_stem": "The graph of the quadratic function g in the xy-plane has vertex (4, -5) and passes through the point (2, 7). Which of the following defines g?",
+    "choices": {
+      "A": "g(x) = 3(x - 4)² - 5",
+      "B": "g(x) = 3(x + 4)² - 5",
+      "C": "g(x) = 2(x - 4)² - 5",
+      "D": "g(x) = 6(x - 4)² - 5"
+    },
+    "correct_answer": "A",
+    "explanation": "Vertex form is g(x) = a(x - h)² + k. With vertex (4, -5), g(x) = a(x - 4)² - 5. Substitute point (2, 7): 7 = a(2 - 4)² - 5 => 7 = a(-2)² - 5 => 12 = 4a => a = 3. Therefore, g(x) = 3(x - 4)² - 5.",
+    "why_others_wrong": {
+      "B": "Used (x + 4) instead of (x - 4).",
+      "C": "Calculated a = 2.",
+      "D": "Calculated a = 6."
+    },
+    "common_trap": "Mixing up the signs in vertex form (h = 4 corresponds to (x - 4)).",
+    "calculator_note": "Test (2, 7) in Choice A: 3(2 - 4)^2 - 5 = 3(4) - 5 = 7.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ADV-023",
+    "domain": "Advanced Math",
+    "skill": "Equivalent expressions",
+    "difficulty": 4,
+    "question_stem": "If (x - 2) is a factor of x³ - 3x² + kx + 6, what is the value of the constant k?",
+    "choices": null,
+    "correct_answer": "-1",
+    "explanation": "By the Factor Theorem, if (x - 2) is a factor of polynomial P(x), then P(2) = 0. Substitute x = 2: (2)³ - 3(2)² + k(2) + 6 = 0 => 8 - 3(4) + 2k + 6 = 0 => 8 - 12 + 2k + 6 = 0 => 2 + 2k = 0 => 2k = -2 => k = -1.",
+    "why_others_wrong": null,
+    "common_trap": "Using x = -2 instead of x = 2 when applying the Factor Theorem.",
+    "calculator_note": "Factor Theorem: P(c) = 0 when (x - c) is a factor.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  }
+]

@@ -1,0 +1,316 @@
+[
+  {
+    "card_id": "FC-DH-001",
+    "type": "vocabulary",
+    "difficulty": 2,
+    "front": {
+      "word": "meticulous",
+      "context": "The forensic botanist conducted a meticulous examination of the pollen samples, noting minute differences under the electron microscope."
+    },
+    "back": {
+      "meaning": "Extremely careful and precise; showing great attention to detail",
+      "synonyms": [
+        "painstaking",
+        "scrupulous",
+        "exacting"
+      ],
+      "contrast": "Not 'careless' or 'cursory'",
+      "example": "Her meticulous notes allowed subsequent researchers to replicate the complex experiment perfectly."
+    },
+    "skill": "Words in Context",
+    "source": "Direct Hits Core Vocabulary"
+  },
+  {
+    "card_id": "FC-DH-002",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "front": {
+      "word": "pragmatic",
+      "context": "Rather than clinging to rigid economic dogma, the mayor adopted a pragmatic approach to municipal transit reform."
+    },
+    "back": {
+      "meaning": "Dealing with things sensibly and realistically based on practical considerations rather than theoretical ideals",
+      "synonyms": [
+        "practical",
+        "utilitarian",
+        "expedient"
+      ],
+      "contrast": "Not 'idealistic' or 'quixotic'",
+      "example": "A pragmatic scientist tests hypotheses against observable evidence rather than preconceived assumptions."
+    },
+    "skill": "Words in Context",
+    "source": "Direct Hits Core Vocabulary"
+  },
+  {
+    "card_id": "FC-DH-003",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {
+      "word": "recalcitrant",
+      "context": "The recalcitrant parliament refused to ratify the climate treaty without substantial exemptions for domestic industries."
+    },
+    "back": {
+      "meaning": "Obstinately defiant of authority or guidance; stubbornly uncooperative",
+      "synonyms": [
+        "intractable",
+        "refractory",
+        "obstinate"
+      ],
+      "contrast": "Not 'compliant' or 'amenable'",
+      "example": "The recalcitrant bacteria showed resistance to all three primary classes of antibiotics."
+    },
+    "skill": "Words in Context",
+    "source": "Direct Hits Core Vocabulary"
+  },
+  {
+    "card_id": "FC-DH-004",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "front": {
+      "word": "clandestine",
+      "context": "Archaeologists uncovered evidence of clandestine trade routes used to smuggle obsidian across the classical Maya lowlands."
+    },
+    "back": {
+      "meaning": "Kept secret or done secretively, especially because illicit",
+      "synonyms": [
+        "surreptitious",
+        "covert",
+        "furtive"
+      ],
+      "contrast": "Not 'overt' or 'conspicuous'",
+      "example": "The committee held clandestine meetings to avoid alerting the press before finalizing their findings."
+    },
+    "skill": "Words in Context",
+    "source": "Direct Hits Core Vocabulary"
+  },
+  {
+    "card_id": "FC-DH-005",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "front": {
+      "word": "diffident",
+      "context": "Although she was an expert mathematician, she remained diffident during faculty debates, rarely asserting her authority."
+    },
+    "back": {
+      "meaning": "Modest or shy because of a lack of self-confidence",
+      "synonyms": [
+        "reticent",
+        "timid",
+        "unassertive"
+      ],
+      "contrast": "Not 'arrogant' or 'presumptuous'",
+      "example": "His diffident manner masked an extraordinarily sharp intellect."
+    },
+    "skill": "Words in Context",
+    "source": "Direct Hits Core Vocabulary"
+  },
+  {
+    "card_id": "FC-DH-006",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "front": {
+      "word": "equanimity",
+      "context": "The flight controller maintained complete equanimity throughout the navigational emergency, issuing calm instructions to the flight crew."
+    },
+    "back": {
+      "meaning": "Mental calmness, composure, and evenness of temper, especially in a difficult situation",
+      "synonyms": [
+        "serenity",
+        "sangfroid",
+        "poise"
+      ],
+      "contrast": "Not 'agitation' or 'hysteria'",
+      "example": "Marcus Aurelius practiced Stoic exercises to cultivate inner equanimity amidst imperial turmoil."
+    },
+    "skill": "Words in Context",
+    "source": "Direct Hits Core Vocabulary"
+  },
+  {
+    "card_id": "FC-DH-007",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {
+      "word": "ephemeral",
+      "context": "Desert wildflowers produce an ephemeral bloom following rare winter downpours, withering within days under scorching desert heat."
+    },
+    "back": {
+      "meaning": "Lasting for a very short time; fleeting",
+      "synonyms": [
+        "evanescent",
+        "transient",
+        "fleeting"
+      ],
+      "contrast": "Not 'permanent' or 'perennial'",
+      "example": "The fame generated by viral internet content is often ephemeral, fading as rapidly as it arose."
+    },
+    "skill": "Words in Context",
+    "source": "Direct Hits Core Vocabulary"
+  },
+  {
+    "card_id": "FC-DH-008",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "front": {
+      "word": "lucid",
+      "context": "The professor's lucid explanation of quantum entanglement made a notoriously opaque concept accessible to first-year students."
+    },
+    "back": {
+      "meaning": "Expressed clearly; easy to understand; characterized by clear perception",
+      "synonyms": [
+        "pellucid",
+        "articulate",
+        "coherent"
+      ],
+      "contrast": "Not 'obscure' or 'convoluted'",
+      "example": "A lucid scientific paper presents methodology and conclusions without unnecessary jargon."
+    },
+    "skill": "Words in Context",
+    "source": "Direct Hits Core Vocabulary"
+  },
+  {
+    "card_id": "FC-DH-009",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {
+      "word": "anachronism",
+      "context": "The depiction of a mechanical clock tower in an ancient Roman marketplace was a glaring historical anachronism."
+    },
+    "back": {
+      "meaning": "A thing belonging or appropriate to a period other than that in which it exists",
+      "synonyms": [
+        "chronological error",
+        "incongruity"
+      ],
+      "contrast": "Not 'historically authentic'",
+      "example": "Treating 17th-century texts through modern political frameworks risks committing anachronism."
+    },
+    "skill": "Words in Context",
+    "source": "Direct Hits Core Vocabulary"
+  },
+  {
+    "card_id": "FC-DH-010",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {
+      "word": "ubiquitous",
+      "context": "In modern urban environments, smartphones have become ubiquitous, altering how humans navigate spatial and social environments."
+    },
+    "back": {
+      "meaning": "Present, appearing, or found everywhere",
+      "synonyms": [
+        "omnipresent",
+        "pervasive",
+        "universal"
+      ],
+      "contrast": "Not 'rare' or 'localized'",
+      "example": "Microplastics are now ubiquitous in ocean ecosystems, detected from Arctic ice to deep oceanic trenches."
+    },
+    "skill": "Words in Context",
+    "source": "Direct Hits Core Vocabulary"
+  },
+  {
+    "card_id": "FC-DH-011",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "front": {
+      "word": "specious",
+      "context": "The politician's argument sounded persuasive on television, but a closer examination revealed its specious logic."
+    },
+    "back": {
+      "meaning": "Superficially plausible, but actually wrong or misleading",
+      "synonyms": [
+        "fallacious",
+        "spurious",
+        "sophistic"
+      ],
+      "contrast": "Not 'cogent' or 'sound'",
+      "example": "Advertisers frequently use specious health claims that crumble when subjected to clinical peer review."
+    },
+    "skill": "Words in Context",
+    "source": "Direct Hits Core Vocabulary"
+  },
+  {
+    "card_id": "FC-DH-012",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {
+      "word": "prosaic",
+      "context": "While tourists envisioned an adventurous life of maritime exploration, the daily routine of a merchant sailor was largely prosaic and repetitive."
+    },
+    "back": {
+      "meaning": "Commonplace or dull; lacking poetic beauty or imagination",
+      "synonyms": [
+        "pedestrian",
+        "mundane",
+        "workaday"
+      ],
+      "contrast": "Not 'extraordinary' or 'sublime'",
+      "example": "Scientific breakthroughs often emerge from months of prosaic laboratory cataloging."
+    },
+    "skill": "Words in Context",
+    "source": "Direct Hits Core Vocabulary"
+  },
+  {
+    "card_id": "FC-DH-013",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {
+      "word": "sycophant",
+      "context": "Surrounded by sycophants who praised his every decree, the monarch became increasingly detached from public discontent."
+    },
+    "back": {
+      "meaning": "A person who acts obsequiously toward someone important in order to gain advantage",
+      "synonyms": [
+        "flatterer",
+        "toady",
+        "fawner"
+      ],
+      "contrast": "Not 'independent critic'",
+      "example": "A wise leader values candid advisors over flattering sycophants."
+    },
+    "skill": "Words in Context",
+    "source": "Direct Hits Core Vocabulary"
+  },
+  {
+    "card_id": "FC-DH-014",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {
+      "word": "intractable",
+      "context": "The conflict between municipal developers and environmental conservationists appeared intractable after months of deadlock."
+    },
+    "back": {
+      "meaning": "Hard to control or deal with; stubborn or unmanageable",
+      "synonyms": [
+        "unyielding",
+        "obstinate",
+        "insoluble"
+      ],
+      "contrast": "Not 'malleable' or 'tractable'",
+      "example": "Chronic poverty remains an intractable social challenge requiring systemic structural reform."
+    },
+    "skill": "Words in Context",
+    "source": "Direct Hits Core Vocabulary"
+  },
+  {
+    "card_id": "FC-DH-015",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "front": {
+      "word": "eschew",
+      "context": "The minimalist architect chose to eschew decorative flourishes in favor of clean lines and raw concrete surfaces."
+    },
+    "back": {
+      "meaning": "Deliberately avoid using; abstain from",
+      "synonyms": [
+        "forgo",
+        "shun",
+        "renounce"
+      ],
+      "contrast": "Not 'embrace' or 'adopt'",
+      "example": "Ethical researchers eschew conflicts of interest by refusing corporate sponsorship."
+    },
+    "skill": "Words in Context",
+    "source": "Direct Hits Core Vocabulary"
+  }
+]

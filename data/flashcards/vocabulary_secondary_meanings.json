@@ -1,0 +1,257 @@
+[
+  {
+    "card_id": "FC-SEC-001",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "front": {
+      "word": "table (verb)",
+      "context": "Due to time constraints, the legislative committee voted to table the environmental amendment until the next legislative session."
+    },
+    "back": {
+      "meaning": "To postpone consideration of a topic or proposal indefinitely or until later",
+      "primary_meaning": "A piece of furniture with a flat top and legs",
+      "sat_trap": "Students assume 'table' means to present or discuss; in American parliamentary English, it means to shelve or postpone.",
+      "example": "The board decided to table the budget vote until audit figures were verified."
+    },
+    "skill": "Words in Context",
+    "source": "SAT Power Vocab (Secondary Meanings)"
+  },
+  {
+    "card_id": "FC-SEC-002",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "front": {
+      "word": "compromise (verb)",
+      "context": "A single cracked seal compromised the submarine's hull integrity, forcing an immediate ascent."
+    },
+    "back": {
+      "meaning": "To weaken, undermine, or expose to danger/risk",
+      "primary_meaning": "An agreement reached by mutual concession",
+      "sat_trap": "Assuming it means reaching an amicable agreement; on the SAT it often means 'to damage or endanger'.",
+      "example": "Chemotherapy can compromise the patient's immune system."
+    },
+    "skill": "Words in Context",
+    "source": "SAT Power Vocab (Secondary Meanings)"
+  },
+  {
+    "card_id": "FC-SEC-003",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {
+      "word": "qualify (verb)",
+      "context": "The climatologist qualified her prediction, stating that rising sea levels would accelerate only if polar ice shelf collapse continued at current rates."
+    },
+    "back": {
+      "meaning": "To limit, moderate, or add conditions/exceptions to a statement",
+      "primary_meaning": "To meet the requirements for a job or contest",
+      "sat_trap": "Assuming it means passing a test; on the SAT it almost always means 'to state with qualifications or limitations'.",
+      "example": "The author qualified his endorsement by noting several experimental design flaws."
+    },
+    "skill": "Words in Context",
+    "source": "SAT Power Vocab (Secondary Meanings)"
+  },
+  {
+    "card_id": "FC-SEC-004",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {
+      "word": "patent (adjective)",
+      "context": "The defendant's claim of ignorance was a patent falsehood, disproved by dozens of timestamped emails."
+    },
+    "back": {
+      "meaning": "Easily recognizable; obvious, blatant, or evident",
+      "primary_meaning": "A government license conferring an exclusive right to an invention",
+      "sat_trap": "Interpreting it as an intellectual property document rather than 'glaringly obvious'.",
+      "example": "The judge dismissed the lawsuit, noting the plaintiff's patent lack of standing."
+    },
+    "skill": "Words in Context",
+    "source": "SAT Power Vocab (Secondary Meanings)"
+  },
+  {
+    "card_id": "FC-SEC-005",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "front": {
+      "word": "champion (verb)",
+      "context": "Throughout her career, the senator championed legislation to expand public access to high-speed broadband."
+    },
+    "back": {
+      "meaning": "To support, defend, or fight for a cause or principle vigorously",
+      "primary_meaning": "A person who has defeated all rivals in a competition",
+      "sat_trap": "Assuming it is a noun meaning winner; as a verb it means 'to advocate for'.",
+      "example": "Rachel Carson championed the modern environmental movement through her landmark book Silent Spring."
+    },
+    "skill": "Words in Context",
+    "source": "SAT Power Vocab (Secondary Meanings)"
+  },
+  {
+    "card_id": "FC-SEC-006",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {
+      "word": "plastic (adjective)",
+      "context": "During early childhood, neural architecture is remarkably plastic, adapting readily to sensory input and environmental stimuli."
+    },
+    "back": {
+      "meaning": "Easily shaped or molded; flexible, adaptable, or malleable",
+      "primary_meaning": "Synthetic polymer material used for bottles and packaging",
+      "sat_trap": "Assuming it means fake or synthetic; in biology/psychology it means 'capable of being deformed or reshaped'.",
+      "example": "Neuroplasticity refers to the brain's plastic capacity to reorganize synaptic connections."
+    },
+    "skill": "Words in Context",
+    "source": "SAT Power Vocab (Secondary Meanings)"
+  },
+  {
+    "card_id": "FC-SEC-007",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {
+      "word": "currency (noun)",
+      "context": "The theory of continental drift gained widespread currency among geologists only after seafloor spreading was documented in the 1960s."
+    },
+    "back": {
+      "meaning": "General acceptance, prevalence, or widespread circulation of an idea",
+      "primary_meaning": "A system of money in common use",
+      "sat_trap": "Assuming it refers to dollars or coins; here it refers to an idea being widely accepted.",
+      "example": "The concept of emotional intelligence has gained immense currency in modern corporate management."
+    },
+    "skill": "Words in Context",
+    "source": "SAT Power Vocab (Secondary Meanings)"
+  },
+  {
+    "card_id": "FC-SEC-008",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "front": {
+      "word": "pedestrian (adjective)",
+      "context": "Critics dismissed the novel's pedestrian plot, noting that its predictable twists offered nothing original to the mystery genre."
+    },
+    "back": {
+      "meaning": "Lacking inspiration or excitement; dull, ordinary, or commonplace",
+      "primary_meaning": "A person walking along a road",
+      "sat_trap": "Assuming it refers to walking; as an adjective it means 'prosaic, unimaginative, or mediocre'.",
+      "example": "Despite its stellar cast, the movie was hampered by pedestrian dialogue."
+    },
+    "skill": "Words in Context",
+    "source": "SAT Power Vocab (Secondary Meanings)"
+  },
+  {
+    "card_id": "FC-SEC-009",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {
+      "word": "intimate (verb)",
+      "context": "Although the diplomat did not make an explicit threat, his measured tone intimated that economic sanctions were imminent."
+    },
+    "back": {
+      "meaning": "To state or suggest indirectly; to hint at",
+      "primary_meaning": "Closely acquainted; familiar, private",
+      "sat_trap": "Pronounced IN-tuh-mayt; means 'to imply or insinuate', not 'close/cozy'.",
+      "example": "The CEO intimated that layoffs would be necessary if third-quarter revenues fell short."
+    },
+    "skill": "Words in Context",
+    "source": "SAT Power Vocab (Secondary Meanings)"
+  },
+  {
+    "card_id": "FC-SEC-010",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {
+      "word": "affect (verb)",
+      "context": "To blend in with the aristocratic court, the merchant affected an elaborate, formal accent that fooled no one."
+    },
+    "back": {
+      "meaning": "To pretend to feel or possess; to put on a false appearance of",
+      "primary_meaning": "To have an effect on; make a difference to",
+      "sat_trap": "Assuming it means 'to influence'; here it means 'to feign or pretend'.",
+      "example": "He affected an air of indifference, though he was secretly overjoyed by the praise."
+    },
+    "skill": "Words in Context",
+    "source": "SAT Power Vocab (Secondary Meanings)"
+  },
+  {
+    "card_id": "FC-SEC-011",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {
+      "word": "appropriate (verb)",
+      "context": "The revolutionary government appropriated private estates and converted them into collective agricultural communes."
+    },
+    "back": {
+      "meaning": "To take possession of something, often without permission or legally by authority",
+      "primary_meaning": "Suitable or proper in the circumstances (adjective)",
+      "sat_trap": "Pronounced uh-PRO-pree-ayt (verb); means 'to seize or confiscate', not 'fitting/proper'.",
+      "example": "Congress appropriated $50 million for emergency flood relief."
+    },
+    "skill": "Words in Context",
+    "source": "SAT Power Vocab (Secondary Meanings)"
+  },
+  {
+    "card_id": "FC-SEC-012",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "front": {
+      "word": "flag (verb)",
+      "context": "As the marathon entered its twentieth mile under midday heat, the runner's endurance began to flag noticeably."
+    },
+    "back": {
+      "meaning": "To become tired, weaker, or less enthusiastic; to decline",
+      "primary_meaning": "A piece of cloth with a design used as a national symbol",
+      "sat_trap": "Assuming it refers to a banner or marking something; here it means 'to droop or weaken'.",
+      "example": "Student attention flagged during the three-hour lecture on agricultural tariffs."
+    },
+    "skill": "Words in Context",
+    "source": "SAT Power Vocab (Secondary Meanings)"
+  },
+  {
+    "card_id": "FC-SEC-013",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {
+      "word": "temper (verb)",
+      "context": "The senior diplomat urged the prime minister to temper his fiery rhetoric with calls for bilateral de-escalation."
+    },
+    "back": {
+      "meaning": "To act as a neutralizing or moderating counterforce; to soften or dilute",
+      "primary_meaning": "A person's state of mind seen in terms of being angry or calm",
+      "sat_trap": "Assuming it refers to anger/rage; as a verb it means 'to moderate or balance'.",
+      "example": "Experience had tempered his youthful idealism with pragmatic caution."
+    },
+    "skill": "Words in Context",
+    "source": "SAT Power Vocab (Secondary Meanings)"
+  },
+  {
+    "card_id": "FC-SEC-014",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "front": {
+      "word": "check (verb)",
+      "context": "Predatory ladybugs were introduced into the citrus orchards to check the exponential growth of aphid populations."
+    },
+    "back": {
+      "meaning": "To stop or slow the progress of something; to curb or restrain",
+      "primary_meaning": "To examine the accuracy or condition of something",
+      "sat_trap": "Assuming it means verifying or inspecting; in academic texts it often means 'to restrain or halt'.",
+      "example": "The constitutional system of checks and balances was designed to check executive overreach."
+    },
+    "skill": "Words in Context",
+    "source": "SAT Power Vocab (Secondary Meanings)"
+  },
+  {
+    "card_id": "FC-SEC-015",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "front": {
+      "word": "reservation (noun)",
+      "context": "While the faculty committee supported the tenure application in principle, several members expressed serious reservations about his teaching evaluations."
+    },
+    "back": {
+      "meaning": "A feeling of doubt or uncertainty about a plan or statement",
+      "primary_meaning": "An arrangement by which accommodations are secured in advance",
+      "sat_trap": "Assuming it refers to hotel booking or Native land; here it means 'doubts or hesitations'.",
+      "example": "She accepted the job offer without reservation."
+    },
+    "skill": "Words in Context",
+    "source": "SAT Power Vocab (Secondary Meanings)"
+  }
+]

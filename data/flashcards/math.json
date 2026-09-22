@@ -1,0 +1,92 @@
+[
+  {
+    "card_id": "FC-MAT-001",
+    "type": "math",
+    "difficulty": 1,
+    "front": {"concept": "Slope Formula", "formula": "Given points (x1, y1) and (x2, y2)"},
+    "back": {"rule": "m = (y2 - y1) / (x2 - x1)", "tip": "Rise over run! Always subtract in the same order for both numerator and denominator.", "common_error": "Putting x's on top and y's on the bottom."},
+    "skill": "Algebra",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-MAT-002",
+    "type": "math",
+    "difficulty": 2,
+    "front": {"concept": "Vertex Form of a Parabola", "formula": "y = a(x - h)^2 + k"},
+    "back": {"rule": "The vertex is (h, k).", "tip": "Notice the negative sign in front of the 'h'. If the equation is y = 3(x + 2)^2 - 5, the vertex is (-2, -5).", "common_error": "Getting the sign of the x-coordinate wrong."},
+    "skill": "Advanced Math",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-MAT-003",
+    "type": "math",
+    "difficulty": 3,
+    "front": {"concept": "Discriminant", "formula": "For ax^2 + bx + c = 0, what does b^2 - 4ac tell you?"},
+    "back": {"rule": "If > 0: Two real solutions. If = 0: One real solution. If < 0: No real solutions.", "tip": "The discriminant is the part under the square root in the quadratic formula.", "common_error": "Using it to find the actual solutions rather than the number of solutions."},
+    "skill": "Advanced Math",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-MAT-004",
+    "type": "math",
+    "difficulty": 2,
+    "front": {"concept": "Exponential Growth/Decay", "formula": "y = a(b)^x"},
+    "back": {"rule": "a = initial amount, b = growth/decay factor.", "tip": "If growing by 20%, b = 1.20. If decreasing by 20%, b = 0.80.", "common_error": "Using just 0.20 for a 20% increase instead of 1.20."},
+    "skill": "Problem-Solving & Data Analysis",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-MAT-005",
+    "type": "math",
+    "difficulty": 4,
+    "front": {"concept": "Circle Equation", "formula": "(x - h)^2 + (y - k)^2 = r^2"},
+    "back": {"rule": "Center is (h, k) and radius is r.", "tip": "You often have to 'complete the square' to get an equation into this form.", "common_error": "Forgetting to take the square root of the constant side to find the radius."},
+    "skill": "Geometry & Trigonometry",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-MAT-006",
+    "type": "math",
+    "difficulty": 3,
+    "front": {"concept": "SOH CAH TOA", "formula": "Right triangle trigonometry ratios"},
+    "back": {"rule": "Sin = Opp/Hyp, Cos = Adj/Hyp, Tan = Opp/Adj", "tip": "The SAT frequently tests the property that sin(x) = cos(90 - x).", "common_error": "Mixing up opposite and adjacent sides relative to the angle."},
+    "skill": "Geometry & Trigonometry",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-MAT-007",
+    "type": "math",
+    "difficulty": 3,
+    "front": {"concept": "Difference of Squares", "formula": "x^2 - y^2 = ?"},
+    "back": {"rule": "(x - y)(x + y)", "tip": "Instantly recognize things like x^2 - 16 as (x - 4)(x + 4). It saves huge amounts of time on factoring.", "common_error": "Applying it to sums of squares (x^2 + y^2), which doesn't factor over real numbers."},
+    "skill": "Advanced Math",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-MAT-008",
+    "type": "math",
+    "difficulty": 4,
+    "front": {"concept": "Sum of Solutions (Quadratics)", "formula": "For ax^2 + bx + c = 0, what is the sum of the roots?"},
+    "back": {"rule": "Sum = -b / a", "tip": "You don't need to find the individual roots to find their sum! (Product of roots is c / a)", "common_error": "Calculating roots manually, which wastes time and risks arithmetic errors."},
+    "skill": "Advanced Math",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-MAT-009",
+    "type": "math",
+    "difficulty": 2,
+    "front": {"concept": "Percentage Change", "formula": "How to calculate percent increase or decrease?"},
+    "back": {"rule": "((New - Old) / Old) * 100", "tip": "Always divide by the ORIGINAL (old) value.", "common_error": "Dividing by the new value instead of the old value."},
+    "skill": "Problem-Solving & Data Analysis",
+    "source": "original"
+  },
+  {
+    "card_id": "FC-MAT-010",
+    "type": "math",
+    "difficulty": 5,
+    "front": {"concept": "Extraneous Solutions", "formula": "When solving radical or rational equations..."},
+    "back": {"rule": "You MUST plug your answers back into the original equation to check.", "tip": "Squaring both sides of an equation can introduce false answers. Denominators can't be zero.", "common_error": "Picking an answer choice that includes a mathematically invalid solution."},
+    "skill": "Advanced Math",
+    "source": "original"
+  }
+]

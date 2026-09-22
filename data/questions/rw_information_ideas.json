@@ -1,0 +1,649 @@
+[
+  {
+    "question_id": "RW-II-001",
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "difficulty": 1,
+    "passage": "Bees play a crucial role in our ecosystem by pollinating flowers, which leads to the production of fruits and vegetables. Without bees, many of the crops we rely on would struggle to survive.",
+    "question_stem": "Which choice best states the main idea of the text?",
+    "choices": {
+      "A": "Bees are the only insects that pollinate flowers.",
+      "B": "Bees are essential for pollinating crops that humans rely on.",
+      "C": "Fruits and vegetables are easy to grow without bees.",
+      "D": "Ecosystems contain many different types of pollinating insects."
+    },
+    "correct_answer": "B",
+    "explanation": "The text explicitly states that bees pollinate flowers leading to crop production, making them crucial.",
+    "why_others_wrong": {
+      "A": "The text doesn't say they are the *only* insects.",
+      "C": "Contradicts the text.",
+      "D": "Too broad; the text is specifically about bees."
+    },
+    "common_trap": "Choosing a statement that is true in the real world but not discussed in the text.",
+    "thinking_framework": "1. Identify the subject (bees). 2. Identify what the author says about it (crucial for crops). 3. Match.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-II-002",
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "difficulty": 2,
+    "passage": "During the Industrial Revolution, the advent of the steam engine dramatically changed transportation. Trains could move goods across the country much faster than horse-drawn wagons, leading to rapid economic growth in areas previously isolated.",
+    "question_stem": "According to the text, what was one result of the steam engine's invention?",
+    "choices": {
+      "A": "Horse-drawn wagons became completely obsolete.",
+      "B": "Economic growth occurred in formerly isolated areas.",
+      "C": "The Industrial Revolution began immediately.",
+      "D": "People stopped traveling long distances."
+    },
+    "correct_answer": "B",
+    "explanation": "The text directly states that faster transport of goods led to rapid economic growth in previously isolated areas.",
+    "why_others_wrong": {
+      "A": "Too extreme; the text doesn't say they became *completely* obsolete.",
+      "C": "The text says this happened *during* the Industrial Revolution, not that it started it.",
+      "D": "Contradicts the implication that transportation improved."
+    },
+    "common_trap": "Choosing extreme language like 'completely'.",
+    "thinking_framework": "Scan text for cause-and-effect relationships tied to the steam engine.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "history"
+    ]
+  },
+  {
+    "question_id": "RW-II-003",
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "difficulty": 3,
+    "passage": "In 1928, Alexander Fleming noticed that mold had contaminated one of his petri dishes, killing the surrounding bacteria. Rather than discarding the dish, he investigated further, eventually isolating penicillin. This serendipitous event revolutionized modern medicine.",
+    "question_stem": "Which choice best states the main idea of the text?",
+    "choices": {
+      "A": "Alexander Fleming was a sloppy scientist who let mold contaminate his work.",
+      "B": "Penicillin is the most important medical discovery of the 20th century.",
+      "C": "A chance observation of a contaminated petri dish led to a revolutionary medical breakthrough.",
+      "D": "Bacteria can easily be killed by various types of mold found in laboratories."
+    },
+    "correct_answer": "C",
+    "explanation": "It accurately summarizes the entire narrative: a chance event (serendipity) leading to isolation of penicillin (breakthrough).",
+    "why_others_wrong": {
+      "A": "Mischaracterizes the tone and focus.",
+      "B": "Too extreme/opinionated; text just says it 'revolutionized'.",
+      "D": "Too broad; focus is specifically on Fleming's discovery."
+    },
+    "common_trap": "Choosing an overly broad scientific claim.",
+    "thinking_framework": "Synthesize the narrative arc into a single main point.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science",
+      "history"
+    ]
+  },
+  {
+    "question_id": "RW-II-004",
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "difficulty": 4,
+    "passage": "Many urban planners advocate for '15-minute cities,' where residents can access most daily needs within a short walk or bike ride. Critics argue this model could increase localized gentrification. Proponents, however, counter that equitable zoning can prevent displacement while reducing carbon emissions.",
+    "question_stem": "Which choice best summarizes the debate presented in the text?",
+    "choices": {
+      "A": "Urban planners agree that 15-minute cities will eliminate carbon emissions entirely.",
+      "B": "While the 15-minute city model offers environmental benefits, it faces concerns about potential gentrification, which supporters believe can be managed.",
+      "C": "Critics of 15-minute cities believe the model is fundamentally flawed because it forces residents to bike rather than drive.",
+      "D": "Gentrification is an unavoidable consequence of designing cities for walking and biking."
+    },
+    "correct_answer": "B",
+    "explanation": "B captures both the criticism (gentrification) and the proponents' counterargument (management via zoning + benefits).",
+    "why_others_wrong": {
+      "A": "Too extreme ('eliminate entirely').",
+      "C": "Misrepresents the critics' argument.",
+      "D": "Ignores the proponents' view that it can be prevented."
+    },
+    "common_trap": "Focusing only on the critics or only on the proponents.",
+    "thinking_framework": "Identify the multiple perspectives in the text and find the choice that encompasses all of them.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "social science"
+    ]
+  },
+  {
+    "question_id": "RW-II-005",
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "difficulty": 5,
+    "passage": "The philosophy of pragmatism, popularized by William James, evaluates the truth of an idea based on its practical consequences rather than abstract logic. If a belief yields satisfactory results in experience, James argued, it possesses a 'cash value' that renders it true for all practical purposes, unsettling traditional epistemologists.",
+    "question_stem": "What is the primary function of the phrase 'unsettling traditional epistemologists' in the context of the passage?",
+    "choices": {
+      "A": "To prove that pragmatism is a flawed philosophical framework.",
+      "B": "To emphasize the radical nature of James's theory compared to established views.",
+      "C": "To suggest that James intentionally sought to anger his academic peers.",
+      "D": "To show that abstract logic has no place in modern philosophy."
+    },
+    "correct_answer": "B",
+    "explanation": "It shows that James's practical approach was so different from traditional abstract logic that it disturbed existing scholars.",
+    "why_others_wrong": {
+      "A": "The text doesn't take a stance on whether it's flawed.",
+      "C": "Assumes intent not mentioned in text.",
+      "D": "Too broad/extreme."
+    },
+    "common_trap": "Assuming negative consequences mean the author thinks the theory is flawed.",
+    "thinking_framework": "Analyze the relationship between the new idea (pragmatism) and the old idea (traditional epistemology).",
+    "estimated_time_seconds": 120,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "humanities"
+    ]
+  },
+  {
+    "question_id": "RW-II-006",
+    "domain": "Information and Ideas",
+    "skill": "Command of Evidence: Textual",
+    "difficulty": 2,
+    "passage": "Researcher Dr. Aris claims that the newly discovered plant species, *Flora lumina*, relies exclusively on nocturnal moths for pollination. She bases this on the plant's white flowers, which bloom only after sunset and emit a scent strongly attractive to moths.",
+    "question_stem": "Which finding, if true, would most directly undermine Dr. Aris's claim?",
+    "choices": {
+      "A": "Diurnal bees are observed frequently carrying *Flora lumina* pollen during the day.",
+      "B": "The moths that visit *Flora lumina* also pollinate other nocturnal flowers.",
+      "C": "*Flora lumina* flowers wilt very quickly if they are not pollinated within 24 hours.",
+      "D": "The scent emitted by the flowers is found to contain compounds common in nocturnal plants."
+    },
+    "correct_answer": "A",
+    "explanation": "If bees carry the pollen during the day, the plant does not rely *exclusively* on nocturnal moths.",
+    "why_others_wrong": {
+      "B": "Doesn't undermine the claim; moths can pollinate multiple things.",
+      "C": "Irrelevant to *what* pollinates it.",
+      "D": "Supports the claim rather than undermining it."
+    },
+    "common_trap": "Choosing a fact that is true but doesn't attack the specific word 'exclusively'.",
+    "thinking_framework": "Identify the core claim (exclusive reliance on moths) and find evidence that proves it false.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-II-007",
+    "domain": "Information and Ideas",
+    "skill": "Command of Evidence: Textual",
+    "difficulty": 3,
+    "passage": "Historians have long assumed that the ancient settlement of Karia was primarily an agricultural hub. However, recent excavations uncovered massive slag heaps and remnants of smelting furnaces, prompting a revised theory about the settlement's primary economic driver.",
+    "question_stem": "Which choice best describes data that would support the revised theory?",
+    "choices": {
+      "A": "Evidence of large-scale irrigation systems surrounding the settlement.",
+      "B": "An abundance of ancient coins from distant regions found near the furnaces.",
+      "C": "Written records detailing the export of refined metal goods from Karia.",
+      "D": "Fossilized remains of diverse crops in the town center."
+    },
+    "correct_answer": "C",
+    "explanation": "Written records of metal export would strongly support the theory that metalworking (smelting) was the primary economic driver.",
+    "why_others_wrong": {
+      "A": "Supports the old agricultural theory.",
+      "B": "Supports trade, but doesn't explicitly link it to the metal goods.",
+      "D": "Supports the old agricultural theory."
+    },
+    "common_trap": "Choosing evidence for the old theory instead of the revised one.",
+    "thinking_framework": "Identify the revised theory (metalworking economy) and find the most direct proof.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "history"
+    ]
+  },
+  {
+    "question_id": "RW-II-008",
+    "domain": "Information and Ideas",
+    "skill": "Command of Evidence: Textual",
+    "difficulty": 4,
+    "passage": "A literary critic argues that author Mary Shelley uses the Arctic setting in *Frankenstein* not merely as a backdrop, but as a symbolic representation of scientific overreach—a barren, hostile environment where human ambition is ultimately frozen and destroyed.",
+    "question_stem": "Which quotation from the novel best supports the critic's argument?",
+    "choices": {
+      "A": "'The cold is excessive, and many of my unfortunate comrades have already found a grave amidst this scene of desolation.'",
+      "B": "'I try in vain to be persuaded that the pole is the seat of frost and desolation; it ever presents itself to my imagination as the region of beauty and delight.'",
+      "C": "'Here, in this ice-bound purgatory, my thirst for knowledge met its immovable boundary, crushing my grand designs under a glacier of despair.'",
+      "D": "'We advanced into the frozen sea, surrounded by ice, which closed in the ship on all sides, scarcely leaving her the sea-room in which she floated.'"
+    },
+    "correct_answer": "C",
+    "explanation": "Choice C explicitly connects the frozen environment ('ice-bound purgatory', 'glacier') to the destruction of human ambition ('thirst for knowledge met its immovable boundary', 'crushing my grand designs').",
+    "why_others_wrong": {
+      "A": "Shows it's hostile, but doesn't connect to scientific ambition.",
+      "B": "Contradicts the 'barren, hostile' claim.",
+      "D": "Describes the setting without the symbolic link to ambition."
+    },
+    "common_trap": "Choosing a quote that only describes the setting without addressing the symbolic meaning.",
+    "thinking_framework": "Match both parts of the critic's claim: Arctic setting + destruction of scientific ambition.",
+    "estimated_time_seconds": 120,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "literature"
+    ]
+  },
+  {
+    "question_id": "RW-II-009",
+    "domain": "Information and Ideas",
+    "skill": "Command of Evidence: Quantitative",
+    "difficulty": 2,
+    "passage": "A study tracked the average daily screen time (in hours) of teenagers from 2018 to 2022. The data showed a steady increase: 4.5 hours in 2018, 5.2 in 2019, 6.8 in 2020, 7.1 in 2021, and 7.3 in 2022. The researchers concluded that external global events drastically accelerated an existing trend.",
+    "question_stem": "Which choice best uses data from the text to support the researchers' conclusion?",
+    "choices": {
+      "A": "Screen time increased by only 0.2 hours between 2021 and 2022.",
+      "B": "The largest year-over-year jump occurred between 2019 and 2020, increasing by 1.6 hours.",
+      "C": "Average screen time in 2018 was lower than in any subsequent year.",
+      "D": "By 2022, teenagers were spending over 7 hours a day on screens."
+    },
+    "correct_answer": "B",
+    "explanation": "The jump from 2019 to 2020 (1.6 hrs) is the largest, supporting the idea that a global event (implied 2020 pandemic) 'drastically accelerated' the trend.",
+    "why_others_wrong": {
+      "A": "Shows a slowdown, not an acceleration.",
+      "C": "True, but doesn't show the *acceleration* caused by an event.",
+      "D": "States an endpoint but doesn't prove the acceleration."
+    },
+    "common_trap": "Choosing a true statement that doesn't prove the specific claim of 'drastic acceleration'.",
+    "thinking_framework": "Identify the claim (drastic acceleration) and find the data point that proves the sudden spike.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "social science"
+    ]
+  },
+  {
+    "question_id": "RW-II-010",
+    "domain": "Information and Ideas",
+    "skill": "Command of Evidence: Quantitative",
+    "difficulty": 3,
+    "passage": "To test the efficiency of solar panels in different climates, engineers measured energy output in City X (arid) and City Y (humid). Despite receiving identical hours of sunlight, panels in City X produced 15% more energy. Engineers hypothesize that high humidity in City Y scatters solar radiation, reducing panel efficiency.",
+    "question_stem": "Which finding from a follow-up study would most directly support the engineers' hypothesis?",
+    "choices": {
+      "A": "Panels in City Y produced more energy during dry weeks than during highly humid weeks.",
+      "B": "City X experiences higher average temperatures than City Y.",
+      "C": "Panels in a third city, City Z, which is both humid and cloudy, produced the least energy.",
+      "D": "Dust accumulation on panels in City X required more frequent cleaning."
+    },
+    "correct_answer": "A",
+    "explanation": "If energy output increases when humidity drops in the same city, it directly links humidity to reduced efficiency.",
+    "why_others_wrong": {
+      "B": "Introduces a new variable (temperature) rather than addressing humidity.",
+      "C": "Cloudiness is a confounding variable, weakening the direct link to humidity.",
+      "D": "Irrelevant to the humidity hypothesis."
+    },
+    "common_trap": "Choosing an answer with confounding variables (like clouds).",
+    "thinking_framework": "Isolate the variable (humidity) and find data showing its direct effect on the outcome.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-II-011",
+    "domain": "Information and Ideas",
+    "skill": "Command of Evidence: Quantitative",
+    "difficulty": 4,
+    "passage": "A city implemented a new recycling program in 2021. Data on waste diversion rates (percentage of total waste kept out of landfills) shows: 2020 (15%), 2021 (22%), 2022 (25%), 2023 (24%). City officials claim the program was an overwhelming, continuous success.",
+    "question_stem": "Which choice provides the best data to challenge the city officials' claim?",
+    "choices": {
+      "A": "The diversion rate increased by 7 percentage points immediately after implementation.",
+      "B": "The diversion rate slightly decreased from 25% in 2022 to 24% in 2023.",
+      "C": "In 2020, 85% of waste was sent to landfills.",
+      "D": "The diversion rate was higher in 2023 than it was in 2020."
+    },
+    "correct_answer": "B",
+    "explanation": "The officials claim 'continuous' success. The drop in 2023 challenges the 'continuous' aspect.",
+    "why_others_wrong": {
+      "A": "Supports the claim of success.",
+      "C": "Just a restatement of the 2020 data.",
+      "D": "Supports the claim of overall success."
+    },
+    "common_trap": "Failing to notice the specific word 'continuous' in the claim.",
+    "thinking_framework": "Look for the weak point in the claim ('continuous') and find data that contradicts it.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "social science"
+    ]
+  },
+  {
+    "question_id": "RW-II-012",
+    "domain": "Information and Ideas",
+    "skill": "Inferences",
+    "difficulty": 1,
+    "passage": "Every time it rains heavily, the small creek behind Sarah's house overflows its banks and floods the bottom of her garden. The weather forecast predicts severe, continuous thunderstorms for the next three days.",
+    "question_stem": "Which choice most logically completes the text?",
+    "choices": {
+      "A": "Sarah will decide to sell her house.",
+      "B": "The creek will likely overflow and flood Sarah's garden.",
+      "C": "The thunderstorms will bypass Sarah's neighborhood.",
+      "D": "Sarah's garden will benefit from the extra water."
+    },
+    "correct_answer": "B",
+    "explanation": "Given the premise (heavy rain = flood) and the forecast (heavy rain), the logical conclusion is a flood.",
+    "why_others_wrong": {
+      "A": "Requires an illogical leap.",
+      "C": "Contradicts the forecast.",
+      "D": "Subjective value judgment not supported by text."
+    },
+    "common_trap": "Adding outside assumptions.",
+    "thinking_framework": "A + B = C. Rain causes flood + rain is coming = flood is coming.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-II-013",
+    "domain": "Information and Ideas",
+    "skill": "Inferences",
+    "difficulty": 3,
+    "passage": "In many deep-sea ecosystems, organisms rely on chemosynthesis—using energy from chemical reactions—rather than photosynthesis, which requires sunlight. The newly discovered vent system in the Mariana Trench is entirely devoid of sunlight but harbors a dense population of tube worms and bacteria.",
+    "question_stem": "Which choice most logically completes the text?",
+    "choices": {
+      "A": "These tube worms and bacteria must migrate to shallower waters to survive.",
+      "B": "Photosynthesis is the primary energy source for these newly discovered bacteria.",
+      "C": "The organisms in this vent system likely depend on chemosynthesis for their energy needs.",
+      "D": "The Mariana Trench contains the highest concentration of marine life on Earth."
+    },
+    "correct_answer": "C",
+    "explanation": "If organisms live where there is no sunlight, and deep-sea systems without sunlight use chemosynthesis, it follows that these organisms use chemosynthesis.",
+    "why_others_wrong": {
+      "A": "Contradicts the fact that they harbor a dense population *there*.",
+      "B": "Contradicts the premise (no sunlight).",
+      "D": "Too extreme; cannot be inferred from a single vent system."
+    },
+    "common_trap": "Going beyond the provided facts to make a grandiose claim.",
+    "thinking_framework": "Connect the specific example (Mariana vent) to the general rule (deep-sea chemosynthesis).",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-II-014",
+    "domain": "Information and Ideas",
+    "skill": "Inferences",
+    "difficulty": 4,
+    "passage": "Early medieval manuscripts were painstakingly written by hand on vellum, a material made from animal skin, which was incredibly expensive. Consequently, books were rare and typically owned only by wealthy institutions. When paper, a much cheaper material, was introduced to Europe in the 11th century, book production methods initially remained the same, yet the number of privately owned books began to rise.",
+    "question_stem": "Which choice most logically completes the text?",
+    "choices": {
+      "A": "The introduction of paper directly caused the invention of the printing press.",
+      "B": "The drop in material costs allowed individuals outside of wealthy institutions to afford books.",
+      "C": "Vellum was quickly banned by institutions in favor of the new paper technology.",
+      "D": "Scribes demanded higher wages to write on paper instead of vellum."
+    },
+    "correct_answer": "B",
+    "explanation": "If the material became cheaper and private ownership rose despite methods staying the same, the cheaper material cost is the logical cause of increased affordability.",
+    "why_others_wrong": {
+      "A": "Not mentioned; historical leap.",
+      "C": "Too extreme ('banned').",
+      "D": "No evidence regarding scribes' wages."
+    },
+    "common_trap": "Bringing in outside historical knowledge (printing press) not stated in text.",
+    "thinking_framework": "Identify the changing variable (material cost) and link it directly to the stated outcome (private ownership).",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "history"
+    ]
+  },
+  {
+    "question_id": "RW-II-015",
+    "domain": "Information and Ideas",
+    "skill": "Inferences",
+    "difficulty": 5,
+    "passage": "Some linguists propose that language strictly dictates the boundaries of human thought, a concept known as strong linguistic determinism. However, cognitive scientists point out that pre-linguistic infants can demonstrate complex spatial reasoning. If strong linguistic determinism were entirely accurate, then _____.",
+    "question_stem": "Which choice most logically completes the text?",
+    "choices": {
+      "A": "infants would develop language skills much earlier than they currently do.",
+      "B": "complex spatial reasoning would be impossible without first acquiring language.",
+      "C": "cognitive scientists would have to abandon the study of infant behavior.",
+      "D": "spatial reasoning would be recognized as a distinct form of language."
+    },
+    "correct_answer": "B",
+    "explanation": "If language strictly dictates thought, then complex thought (like spatial reasoning) couldn't happen without language.",
+    "why_others_wrong": {
+      "A": "Illogical leap regarding developmental timelines.",
+      "C": "Exaggerated consequence.",
+      "D": "Redefines the terms rather than following the logical premise."
+    },
+    "common_trap": "Choosing a choice that alters the definition of the concepts rather than following the if-then logic.",
+    "thinking_framework": "Apply conditional logic: If X (language dictates thought) is true, then Y (thought without language) must be impossible.",
+    "estimated_time_seconds": 120,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-II-016",
+    "domain": "Information and Ideas",
+    "skill": "Command of Evidence: Quantitative",
+    "difficulty": 3,
+    "passage": "Ecologists surveyed mangrove density along four coastal estuaries (Estuary A, B, C, and D) following severe tropical storms. Estuary A, which had an average mangrove canopy cover of 78%, experienced 1.2 meters of storm surge inland. Estuary B, with 62% canopy cover, recorded 2.4 meters of surge. In contrast, Estuary C (35% canopy cover) recorded 4.1 meters of surge, and Estuary D (12% canopy cover) recorded 5.8 meters of surge. The researchers concluded that denser mangrove forests provide substantial shoreline buffering against storm surges.",
+    "question_stem": "Which choice best uses data from the text to support the researchers' conclusion?",
+    "choices": {
+      "A": "Estuary A experienced 1.2 meters of storm surge despite having the lowest percentage of canopy cover.",
+      "B": "Estuary D recorded the highest storm surge at 5.8 meters while possessing the lowest mangrove canopy cover at 12%.",
+      "C": "Estuary B recorded a greater storm surge than Estuary C because its canopy cover was nearly twice as dense.",
+      "D": "Estuaries with less than 50% canopy cover experienced identical storm surges regardless of tree density."
+    },
+    "correct_answer": "B",
+    "explanation": "The researchers' claim is that denser mangroves reduce storm surge inland. Choice B directly supports this by pairing the lowest canopy cover (12%) with the highest inland surge (5.8 meters), illustrating the negative correlation between density and surge penetration.",
+    "why_others_wrong": {
+      "A": "Contradicts the data in the text: Estuary A had the *highest* canopy cover (78%), not the lowest.",
+      "C": "Contradicts the data: Estuary B (2.4 m) had a *smaller* surge than Estuary C (4.1 m).",
+      "D": "Contradicts the data: Estuary C (4.1 m) and Estuary D (5.8 m) recorded distinctly different surges."
+    },
+    "common_trap": "Choosing an option that states a plausible scientific trend but inverts or misreads the actual numbers in the passage.",
+    "thinking_framework": "1. Identify claim: Denser mangroves = less storm surge. 2. Verify each option against exact numbers: Estuary D has 12% cover and 5.8 m surge (highest surge with lowest cover). Matches Choice B.",
+    "estimated_time_seconds": 75,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "environmental_science",
+      "data_interpretation"
+    ]
+  },
+  {
+    "question_id": "RW-II-017",
+    "domain": "Information and Ideas",
+    "skill": "Command of Evidence: Quantitative",
+    "difficulty": 4,
+    "passage": "In an experiment testing heat tolerance in agricultural crops, botanists measured photosynthetic efficiency (percentage of optimal carbon fixation) at elevated temperatures of 35°C and 42°C. Variety 1 maintained 88% efficiency at 35°C and 64% at 42°C. Variety 2 achieved 92% efficiency at 35°C but plummeted to 31% at 42°C. Variety 3 recorded 76% at 35°C and 72% at 42°C. The lead author argued that while some crop varieties achieve superior baseline performance under moderate heat, they may lack the physiological stability necessary to withstand extreme thermal spikes.",
+    "question_stem": "Which choice best uses data from the experiment to support the author's argument?",
+    "choices": {
+      "A": "Variety 2 demonstrated the highest efficiency at 35°C among all varieties, yet suffered the steepest drop when temperature increased to 42°C.",
+      "B": "Variety 3 exhibited higher photosynthetic efficiency at 35°C than Variety 1, but its efficiency declined substantially at 42°C.",
+      "C": "All three varieties retained more than half of their photosynthetic efficiency even when subjected to 42°C.",
+      "D": "Variety 1 maintained higher carbon fixation rates at both 35°C and 42°C than either Variety 2 or Variety 3."
+    },
+    "correct_answer": "A",
+    "explanation": "The author's argument is that varieties with top baseline performance under moderate heat (35°C) may fail under extreme heat (42°C). Choice A directly validates this: Variety 2 had the highest performance at 35°C (92%) but crashed to 31% at 42°C (a 61-point drop).",
+    "why_others_wrong": {
+      "B": "Contradicts the data: Variety 3 was at 76% at 35°C, which is *lower* than Variety 1 (88%), and its efficiency barely declined (72%).",
+      "C": "Contradicts the data: Variety 2 fell to 31%, which is far below half (50%).",
+      "D": "Contradicts the data: Variety 2 was higher at 35°C (92% vs 88%), and Variety 3 was higher at 42°C (72% vs 64%)."
+    },
+    "common_trap": "Focusing on overall averages rather than comparing the specific moderate-vs-extreme drop of the top performer.",
+    "thinking_framework": "Author claim: High baseline under moderate heat + poor stability under extreme heat. Variety 2: 92% at 35°C (highest) -> 31% at 42°C (lowest). Choice A is exact.",
+    "estimated_time_seconds": 85,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "agriculture",
+      "biology",
+      "data_interpretation"
+    ]
+  },
+  {
+    "question_id": "RW-II-018",
+    "domain": "Information and Ideas",
+    "skill": "Inferences",
+    "difficulty": 4,
+    "passage": "In many social mammal species, cooperative breeding — in which non-breeding individuals help care for offspring — is thought to evolve primarily through kin selection, where helpers indirectly pass on their genes by assisting close relatives. However, in a 10-year study of banded mongooses, biologists discovered that helpers frequently assist pups to whom they are no more closely related than to average members of the group. Furthermore, helpers that provide the most food to pups are significantly more likely to receive defensive support from those same individuals once the pups reach adulthood.",
+    "question_stem": "Which choice most logically completes the text's discussion?",
+    "choices": {
+      "A": "cooperative breeding in banded mongooses is driven by reciprocal altruism rather than strictly by kin selection.",
+      "B": "young pups are capable of recognizing their biological parents despite the cooperative rearing system.",
+      "C": "banded mongooses that refuse to feed pups are eventually expelled from the social group.",
+      "D": "kin selection is an obsolete theoretical concept that cannot explain mammalian social behavior."
+    },
+    "correct_answer": "A",
+    "explanation": "The passage provides two key facts: (1) helpers assist pups that are NOT close relatives (undermining kin selection as the primary cause), and (2) helpers receive future support from the pups they helped once those pups grow up (mutual reciprocal benefit). Therefore, it is logically justified to conclude that cooperative breeding in this species is driven by reciprocal altruism rather than solely kin selection.",
+    "why_others_wrong": {
+      "B": "The text does not discuss whether pups recognize their biological parents.",
+      "C": "There is zero mention of expulsion or punishment for non-helping mongooses in the text.",
+      "D": "Too extreme; the text shows that kin selection is not the primary driver *in this specific case*, not that the entire theory is obsolete across all species."
+    },
+    "common_trap": "Choosing an overly broad or speculative conclusion not restricted to the specific evidence presented.",
+    "thinking_framework": "1. Fact 1: Helpers help non-relatives (rules out kin selection alone). 2. Fact 2: Helped pups repay helpers in adulthood (reciprocity). 3. Conclusion: Reciprocal altruism explains this behavior.",
+    "estimated_time_seconds": 75,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "zoology",
+      "evolution"
+    ]
+  },
+  {
+    "question_id": "RW-II-019",
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "difficulty": 3,
+    "passage": "In many arid ecosystems, biological soil crusts (biocrusts) — communities of cyanobacteria, mosses, and lichens living on the soil surface — perform vital ecological services. They bind loose sand particles together, preventing wind and water erosion, while fixing atmospheric nitrogen into bioavailable soil nutrients. When heavy livestock grazing or off-road vehicles disrupt biocrusts, soil loss increases dramatically, and native vegetation struggles to recolonize the disturbed landscape.",
+    "question_stem": "Which choice best states the main idea of the text?",
+    "choices": {
+      "A": "Biocrusts stabilize soil and provide essential nutrients in arid environments, making their preservation crucial for ecosystem health.",
+      "B": "Heavy livestock grazing is the single greatest threat to desert biodiversity worldwide.",
+      "C": "Cyanobacteria are more resilient than mosses when exposed to vehicular disruption in desert soils.",
+      "D": "Native vegetation in arid regions can only grow in soils with high concentrations of atmospheric nitrogen."
+    },
+    "correct_answer": "A",
+    "explanation": "Choice A accurately synthesizes both key components of the text: the beneficial functions of biocrusts (soil stabilization and nutrient fixation) and the consequence of their disruption (highlighting the importance of preservation).",
+    "why_others_wrong": {
+      "B": "Too extreme: the text mentions grazing as one disruption, but does not claim it is 'the single greatest threat worldwide'.",
+      "C": "The text makes no comparison between the resilience of cyanobacteria versus mosses.",
+      "D": "Too extreme and scientifically inaccurate: the text states biocrusts help, not that native plants 'can only grow' through them."
+    },
+    "common_trap": "Choosing an overly narrow detail or an unsubstantiated extreme claim.",
+    "thinking_framework": "1. What is the subject? Biocrusts. 2. What do they do? Prevent erosion, fix nitrogen. 3. What happens if damaged? Severe soil loss. 4. Synthesis: Biocrusts are crucial for arid soil stability and nutrients.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "ecology",
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-II-020",
+    "domain": "Information and Ideas",
+    "skill": "Command of Evidence: Textual",
+    "difficulty": 4,
+    "passage": "Literary scholar Marcus Thorne contends that Mary Shelley's 1818 novel *Frankenstein* reflects the era's anxiety regarding the ethical limits of experimental science, rather than simply expressing a fear of technological advancement. Thorne argues that Shelley specifically critiques the protagonist Victor Frankenstein's reckless abandonment of moral responsibility after bringing his creature to life, portraying him as a creator who refuses to nurture or educate his creation.",
+    "question_stem": "Which quotation from *Frankenstein*, if authentic, would most directly support Thorne's contention?",
+    "choices": {
+      "A": "\"I beheld the wretch—the miserable monster whom I had created; he held up the curtain of the bed, and his eyes were fixed on me.\"",
+      "B": "\"A new species would bless me as its creator and source; many happy and excellent natures would owe their being to me.\"",
+      "C": "\"I had endowed it with the ability to perceive and learn, yet I fled my laboratory in horror, leaving the being helpless and untaught to wander a hostile world.\"",
+      "D": "\"The materials of my workshop were scattered around, and the instruments of electrical science lay gleaming upon the marble table.\""
+    },
+    "correct_answer": "C",
+    "explanation": "Thorne's specific claim is that Shelley critiques Victor's 'reckless abandonment of moral responsibility' and failure to 'nurture or educate his creation'. Choice C directly corroborates this by showing Victor acknowledging he created an entity capable of learning, yet fled and left it 'helpless and untaught'.",
+    "why_others_wrong": {
+      "A": "Merely describes Victor seeing the creature, not his abdication of moral/parental responsibility.",
+      "B": "Shows Victor's initial hubris and desire for glory, not his post-creation abandonment of responsibility.",
+      "D": "Describes the laboratory equipment and technology, which Thorne argues is NOT the central critique."
+    },
+    "common_trap": "Choosing a quote that describes the technology or the monster's appearance rather than the author's moral/parental critique.",
+    "thinking_framework": "Claim: Shelley critiques Victor's abandonment of responsibility (refusing to nurture/educate). Match with Choice C: 'fled... leaving the being helpless and untaught'.",
+    "estimated_time_seconds": 75,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "literature",
+      "evidence"
+    ]
+  },
+  {
+    "question_id": "RW-II-021",
+    "domain": "Information and Ideas",
+    "skill": "Inferences",
+    "difficulty": 4,
+    "passage": "In an investigation of visual camouflage in cephalopods, researchers observed cuttlefish placed in tanks with varying substrate patterns: solid gray, fine checkerboards, and large irregular stones. When over small checkerboards, the cuttlefish produced fine mottle skin patterns matching the scale of the checks. However, when placed in complete darkness, cuttlefish on checkerboards displayed a uniform resting coloration regardless of the tactile texture of the substrate beneath their tentacles.",
+    "question_stem": "Which choice most logically completes the text's reasoning?",
+    "choices": {
+      "A": "tactile feedback from the seafloor is the primary sensory mechanism triggering cephalopod camouflage.",
+      "B": "cuttlefish rely on visual sensory input rather than tactile perception to coordinate substrate-matching skin patterns.",
+      "C": "cuttlefish are incapable of detecting different substrate textures with their tentacles.",
+      "D": "cephalopod camouflage is an entirely subconscious reflex that operates independently of the nervous system."
+    },
+    "correct_answer": "B",
+    "explanation": "The experiment demonstrates that cuttlefish match the visual scale of substrates when they can see them, but fail to do so in total darkness even though their tentacles are touching the substrate. This justifies the conclusion that their camouflage coordination depends on visual input rather than tactile cues.",
+    "why_others_wrong": {
+      "A": "Directly contradicted by the darkness experiment, where tactile contact alone failed to trigger camouflage.",
+      "C": "Too broad: the tentacles may detect texture for other purposes (feeding, gripping); the experiment only shows tactile cues don't trigger camouflage.",
+      "D": "Unsubstantiated speculation unsupported by the passage."
+    },
+    "common_trap": "Generalizing that cuttlefish cannot feel texture at all, rather than recognizing that texture alone does not drive their camouflage response.",
+    "thinking_framework": "Observation 1: Cuttlefish camouflage matches visual pattern. Observation 2: In darkness, touching the pattern produces no camouflage. Inference: Camouflage relies on vision, not touch.",
+    "estimated_time_seconds": 70,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "zoology",
+      "neurobiology"
+    ]
+  },
+  {
+    "question_id": "RW-II-022",
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "difficulty": 2,
+    "passage": "Urban rooftop gardens provide multiple environmental benefits to densely populated metropolitan areas. By absorbing solar radiation that would otherwise heat concrete and asphalt, rooftop greenery helps mitigate the urban heat island effect. Additionally, these gardens capture stormwater runoff, reducing the volume of water entering municipal drainage systems during intense downpours and mitigating flash flood risks.",
+    "question_stem": "Which choice best describes the main idea of the text?",
+    "choices": {
+      "A": "Rooftop gardens in cities reduce both urban temperatures and stormwater runoff risks.",
+      "B": "Concrete and asphalt are the primary contributors to urban flash flooding.",
+      "C": "Municipal drainage systems are unable to handle summer rainstorms without rooftop gardens.",
+      "D": "Rooftop gardens produce organic food for residents in densely populated areas."
+    },
+    "correct_answer": "A",
+    "explanation": "The text focuses on two main benefits of rooftop gardens: mitigating the urban heat island effect (reducing temperature) and capturing runoff to reduce flash floods. Choice A directly summarizes both points.",
+    "why_others_wrong": {
+      "B": "The text says greenery absorbs radiation that would heat concrete, not that concrete causes flash floods.",
+      "C": "Too extreme: the text does not say drainage systems 'are unable to handle' storms without gardens.",
+      "D": "The text discusses environmental and stormwater benefits, not organic food production."
+    },
+    "common_trap": "Choosing a detail or an outside benefit (food production) not mentioned in the passage.",
+    "thinking_framework": "Benefit 1: Cools urban heat. Benefit 2: Captures stormwater runoff. Main idea: Rooftop gardens reduce temperatures and runoff.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "urban_planning",
+      "environmental_science"
+    ]
+  }
+]

@@ -1,0 +1,347 @@
+[
+  {
+    "question_id": "MATH-PSD-001",
+    "domain": "Problem-Solving & Data Analysis",
+    "skill": "Percentages",
+    "difficulty": 1,
+    "question_stem": "If a shirt originally costs $40 and is on sale for 20% off, what is the sale price?",
+    "choices": {
+      "A": "$20",
+      "B": "$32",
+      "C": "$36",
+      "D": "$48"
+    },
+    "correct_answer": "B",
+    "explanation": "20% of 40 is 0.20 * 40 = 8. 40 - 8 = 32.",
+    "why_others_wrong": {
+      "A": "50% off",
+      "C": "10% off",
+      "D": "20% markup"
+    },
+    "common_trap": "Adding the percentage instead of subtracting.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 30,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-PSD-002",
+    "domain": "Problem-Solving & Data Analysis",
+    "skill": "Ratios",
+    "difficulty": 2,
+    "question_stem": "The ratio of apples to oranges in a basket is 3:5. If there are 40 fruits in total, how many apples are there?",
+    "choices": {
+      "A": "15",
+      "B": "24",
+      "C": "25",
+      "D": "30"
+    },
+    "correct_answer": "A",
+    "explanation": "Total parts = 3 + 5 = 8. Each part is 40 / 8 = 5. Apples = 3 parts * 5 = 15.",
+    "why_others_wrong": {
+      "B": "Found oranges",
+      "C": "Math error",
+      "D": "Math error"
+    },
+    "common_trap": "Finding the number of oranges instead of apples.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-PSD-003",
+    "domain": "Problem-Solving & Data Analysis",
+    "skill": "Rates",
+    "difficulty": 2,
+    "question_stem": "A car travels 150 miles in 2.5 hours. At this rate, how far will it travel in 4 hours?",
+    "choices": null,
+    "correct_answer": "240",
+    "explanation": "Speed = 150 / 2.5 = 60 miles per hour. Distance in 4 hours = 60 * 4 = 240 miles.",
+    "why_others_wrong": null,
+    "common_trap": "Dividing instead of multiplying for the final step.",
+    "calculator_note": "Calculator useful",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-PSD-004",
+    "domain": "Problem-Solving & Data Analysis",
+    "skill": "Data interpretation",
+    "difficulty": 3,
+    "question_stem": "A scatterplot shows a strong negative linear association between variables x and y. Which of the following could be the correlation coefficient?",
+    "choices": {
+      "A": "-0.9",
+      "B": "-0.1",
+      "C": "0.1",
+      "D": "0.9"
+    },
+    "correct_answer": "A",
+    "explanation": "A strong negative association corresponds to a correlation coefficient close to -1.",
+    "why_others_wrong": {
+      "B": "Weak negative",
+      "C": "Weak positive",
+      "D": "Strong positive"
+    },
+    "common_trap": "Confusing magnitude and sign.",
+    "calculator_note": "Conceptual",
+    "estimated_time_seconds": 30,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-PSD-005",
+    "domain": "Problem-Solving & Data Analysis",
+    "skill": "Statistics",
+    "difficulty": 3,
+    "question_stem": "A set of 5 numbers has a mean of 12. If the number 18 is added to the set, what is the new mean?",
+    "choices": {
+      "A": "13",
+      "B": "14",
+      "C": "15",
+      "D": "18"
+    },
+    "correct_answer": "A",
+    "explanation": "Sum of 5 numbers = 5 * 12 = 60. New sum = 60 + 18 = 78. New mean = 78 / 6 = 13.",
+    "why_others_wrong": {
+      "B": "Math error",
+      "C": "Divided by 5",
+      "D": "Added to mean"
+    },
+    "common_trap": "Forgetting to increment the count of numbers to 6.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-PSD-006",
+    "domain": "Problem-Solving & Data Analysis",
+    "skill": "Probability",
+    "difficulty": 4,
+    "question_stem": "A bag contains red, blue, and green marbles. The probability of drawing a red marble is 1/4 and a blue marble is 2/5. If there are 14 green marbles, how many total marbles are in the bag?",
+    "choices": null,
+    "correct_answer": "40",
+    "explanation": "P(Red) + P(Blue) + P(Green) = 1. 1/4 + 2/5 + P(Green) = 1. 5/20 + 8/20 = 13/20. So P(Green) = 7/20. Since 7/20 of Total = 14, Total = 14 * 20 / 7 = 40.",
+    "why_others_wrong": null,
+    "common_trap": "Calculating the fraction of green correctly but failing to solve for the total.",
+    "calculator_note": "Calculator useful",
+    "estimated_time_seconds": 75,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-PSD-007",
+    "domain": "Problem-Solving & Data Analysis",
+    "skill": "Percentages",
+    "difficulty": 4,
+    "question_stem": "A price is increased by 20%, and then the new price is decreased by 20%. The final price is what percent of the original price?",
+    "choices": {
+      "A": "96%",
+      "B": "100%",
+      "C": "104%",
+      "D": "120%"
+    },
+    "correct_answer": "A",
+    "explanation": "Let price be 100. Increase 20%: 120. Decrease 20% of 120: 120 - 24 = 96. 96 is 96% of 100.",
+    "why_others_wrong": {
+      "B": "Assume they cancel out",
+      "C": "Added 4",
+      "D": "Just one change"
+    },
+    "common_trap": "Assuming the changes cancel out completely to 100%.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-PSD-008",
+    "domain": "Problem-Solving & Data Analysis",
+    "skill": "Statistics",
+    "difficulty": 4,
+    "question_stem": "Two classes take the same exam. Class A has 20 students and a mean score of 80. Class B has 30 students and a mean score of 90. What is the mean score of all 50 students?",
+    "choices": {
+      "A": "84",
+      "B": "85",
+      "C": "86",
+      "D": "88"
+    },
+    "correct_answer": "C",
+    "explanation": "Total sum = 20(80) + 30(90) = 1600 + 2700 = 4300. Overall mean = 4300 / 50 = 86.",
+    "why_others_wrong": {
+      "A": "Math error",
+      "B": "Simple average of 80 and 90",
+      "D": "Weighted towards Class B but wrong math"
+    },
+    "common_trap": "Taking the simple average of the two means (85) without weighting by class size.",
+    "calculator_note": "Calculator recommended",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-PSD-009",
+    "domain": "Problem-Solving & Data Analysis",
+    "skill": "Data interpretation",
+    "difficulty": 5,
+    "question_stem": "A researcher estimates a population mean to be 50 with a margin of error of 4 at a 95% confidence level. Which conclusion is valid?",
+    "choices": {
+      "A": "The true mean is exactly 50.",
+      "B": "95% of the data points lie between 46 and 54.",
+      "C": "It is plausible that the true population mean is 48.",
+      "D": "The sample mean must be exactly 50."
+    },
+    "correct_answer": "C",
+    "explanation": "The margin of error creates a confidence interval of [46, 54]. We can be 95% confident the true mean is in this interval. 48 is in the interval, so it's a plausible value.",
+    "why_others_wrong": {
+      "A": "Cannot guarantee exactness",
+      "B": "Confuses mean interval with data spread",
+      "D": "Sample mean was 50, but true mean doesn't have to be."
+    },
+    "common_trap": "Confusing the confidence interval for the mean with the spread of individual data points.",
+    "calculator_note": "Conceptual",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-PSD-010",
+    "domain": "Problem-Solving & Data Analysis",
+    "skill": "Proportions",
+    "difficulty": 5,
+    "question_stem": "y is directly proportional to x^2. If y = 18 when x = 3, what is y when x = 5?",
+    "choices": null,
+    "correct_answer": "50",
+    "explanation": "y = kx^2. 18 = k(3^2). 18 = 9k -> k = 2. Then y = 2(5^2) = 2(25) = 50.",
+    "why_others_wrong": null,
+    "common_trap": "Assuming direct variation with x instead of x^2.",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-PSDA-011",
+    "domain": "Problem-Solving and Data Analysis",
+    "skill": "Probability and conditional probability",
+    "difficulty": 3,
+    "question_stem": "A survey of 120 college students recorded their major and whether they participate in varsity athletics:\n• STEM: 15 athletes, 45 non-athletes (Total: 60)\n• Humanities: 10 athletes, 50 non-athletes (Total: 60)\nIf a student is selected at random from among the athletes, what is the probability that the student is a STEM major?",
+    "choices": {
+      "A": "15/120",
+      "B": "15/60",
+      "C": "15/25",
+      "D": "25/120"
+    },
+    "correct_answer": "C",
+    "explanation": "This is conditional probability: P(STEM | Athlete). The condition restricts the sample space to athletes only. Total athletes = 15 (STEM) + 10 (Humanities) = 25. Number of STEM athletes = 15. Therefore, the probability is 15/25 (or 3/5).",
+    "why_others_wrong": {
+      "A": "Calculated P(STEM and Athlete) relative to the total student population: 15/120.",
+      "B": "Divided by total STEM students (60) instead of total athletes: 15/60.",
+      "D": "Calculated total probability of being an athlete: 25/120."
+    },
+    "common_trap": "Using the total population (120) or row total as the denominator instead of the restricted conditional group (athletes = 25).",
+    "calculator_note": "Identify the restricted denominator first: 'from among the athletes' = 25.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-PSDA-012",
+    "domain": "Problem-Solving and Data Analysis",
+    "skill": "Percentages",
+    "difficulty": 3,
+    "question_stem": "The price of a share of stock increased by 20% on Monday and then decreased by 20% on Tuesday. If the price at the end of Tuesday was $96, what was the original price of the stock before Monday's increase?",
+    "choices": {
+      "A": "$96",
+      "B": "$100",
+      "C": "$104",
+      "D": "$120"
+    },
+    "correct_answer": "B",
+    "explanation": "Let P be the original price. After a 20% increase, the price is P * 1.20. After a 20% decrease, the price is (P * 1.20) * 0.80 = 0.96P. We are given 0.96P = 96. Solving for P: P = 96 / 0.96 = 100.",
+    "why_others_wrong": {
+      "A": "Assumes a 20% increase followed by a 20% decrease returns to the exact starting price.",
+      "C": "Added 8% arbitrarily.",
+      "D": "Divided 96 by 0.8."
+    },
+    "common_trap": "Believing that +20% and -20% cancel out to 0% change.",
+    "calculator_note": "Simple calculation: 96 / (1.2 * 0.8) = 96 / 0.96 = 100.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-PSDA-013",
+    "domain": "Problem-Solving and Data Analysis",
+    "skill": "Two-variable data: models and scatterplots",
+    "difficulty": 4,
+    "question_stem": "A scatterplot displays the relationship between temperature x (in degrees Celsius) and the chirping rate y (chirps per minute) of a cricket species. The line of best fit has equation y = 4.2x - 18. Based on this model, what is the predicted chirping rate for a temperature of 25°C?",
+    "choices": null,
+    "correct_answer": "87",
+    "explanation": "Substitute x = 25 into the equation of the line of best fit: y = 4.2(25) - 18 = 105 - 18 = 87 chirps per minute.",
+    "why_others_wrong": null,
+    "common_trap": "Arithmetic error multiplying 4.2 * 25, or adding 18 instead of subtracting.",
+    "calculator_note": "4.2 * 25 - 18 = 87.",
+    "estimated_time_seconds": 35,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-PSDA-014",
+    "domain": "Problem-Solving and Data Analysis",
+    "skill": "Inference from sample statistics and margin of error",
+    "difficulty": 4,
+    "question_stem": "A random sample of 500 registered voters in a city found that 54% support a proposed municipal transit tax, with an associated margin of error of 4% at a 95% confidence level. Which of the following is the most appropriate conclusion based on this result?",
+    "choices": {
+      "A": "Exactly 54% of all registered voters in the city support the tax.",
+      "B": "It is plausible that between 50% and 58% of all registered voters in the city support the tax.",
+      "C": "If another sample of 500 voters is surveyed, exactly 54% will support the tax.",
+      "D": "The tax is guaranteed to pass with at least 50% of the vote."
+    },
+    "correct_answer": "B",
+    "explanation": "The margin of error of ±4% around the sample estimate of 54% creates a confidence interval of [54% - 4%, 54% + 4%] = [50%, 58%]. It is statistically plausible that the true population proportion lies within this interval.",
+    "why_others_wrong": {
+      "A": "Sample statistics provide an estimate, not an exact count of the entire population.",
+      "C": "Sampling variability means different samples will yield slightly different percentages.",
+      "D": "Statistics never provides an absolute guarantee, and 50% is at the boundary of the interval."
+    },
+    "common_trap": "Choosing an absolute statement ('exactly', 'guaranteed') instead of an inferential range ('plausible between X and Y').",
+    "calculator_note": "Margin of error: 54 ± 4 = [50, 58].",
+    "estimated_time_seconds": 50,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-PSDA-015",
+    "domain": "Problem-Solving and Data Analysis",
+    "skill": "Ratios, rates, proportional relationships, and units",
+    "difficulty": 4,
+    "question_stem": "A water filtration system processes 45 gallons of water every 12 minutes. At this constant rate, how many hours will it take to process 900 gallons of water?",
+    "choices": null,
+    "correct_answer": "4",
+    "explanation": "First find the processing rate in gallons per minute: 45 gallons / 12 minutes = 3.75 gallons/min. To process 900 gallons: 900 / 3.75 = 240 minutes. Convert minutes to hours: 240 / 60 = 4 hours. Alternatively: 900 / 45 = 20 intervals of 12 minutes = 240 minutes = 4 hours.",
+    "why_others_wrong": null,
+    "common_trap": "Giving the answer in minutes (240) instead of converting to the requested unit of hours.",
+    "calculator_note": "(900 / 45) * 12 / 60 = 4.",
+    "estimated_time_seconds": 50,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  }
+]

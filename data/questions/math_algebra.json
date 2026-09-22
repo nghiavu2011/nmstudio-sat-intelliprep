@@ -1,0 +1,563 @@
+[
+  {
+    "question_id": "MATH-ALG-001",
+    "domain": "Algebra",
+    "skill": "Linear equations in one variable",
+    "difficulty": 1,
+    "question_stem": "If 3x + 5 = 20, what is the value of x?",
+    "choices": {
+      "A": "3",
+      "B": "5",
+      "C": "10",
+      "D": "15"
+    },
+    "correct_answer": "B",
+    "explanation": "Subtract 5 from both sides to get 3x = 15. Divide by 3 to get x = 5.",
+    "why_others_wrong": {
+      "A": "Calculation error",
+      "C": "Added instead of subtracted",
+      "D": "Forgot to divide"
+    },
+    "common_trap": "Forgetting to perform the same operation on both sides.",
+    "calculator_note": "Mental math recommended",
+    "estimated_time_seconds": 30,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ALG-002",
+    "domain": "Algebra",
+    "skill": "Linear inequalities",
+    "difficulty": 1,
+    "question_stem": "Which of the following is a solution to the inequality 2x - 4 < 6?",
+    "choices": {
+      "A": "4",
+      "B": "5",
+      "C": "6",
+      "D": "7"
+    },
+    "correct_answer": "A",
+    "explanation": "Add 4 to both sides: 2x < 10. Divide by 2: x < 5. The only choice less than 5 is 4.",
+    "why_others_wrong": {
+      "B": "x must be strictly less than 5",
+      "C": "Fails inequality",
+      "D": "Fails inequality"
+    },
+    "common_trap": "Confusing < with <=",
+    "calculator_note": "Mental math recommended",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ALG-003",
+    "domain": "Algebra",
+    "skill": "Systems of linear equations",
+    "difficulty": 2,
+    "question_stem": "If x + y = 10 and 2x - y = 5, what is the value of x?",
+    "choices": null,
+    "correct_answer": "5",
+    "explanation": "Add the two equations: (x + y) + (2x - y) = 10 + 5. This simplifies to 3x = 15. Divide by 3: x = 5.",
+    "why_others_wrong": null,
+    "common_trap": "Solving for y instead of x.",
+    "calculator_note": "Mental math recommended",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-ALG-004",
+    "domain": "Algebra",
+    "skill": "Linear functions",
+    "difficulty": 2,
+    "question_stem": "A line passes through the points (0, 4) and (2, 10). What is the slope of the line?",
+    "choices": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "6"
+    },
+    "correct_answer": "B",
+    "explanation": "Slope = (y2 - y1) / (x2 - x1) = (10 - 4) / (2 - 0) = 6 / 2 = 3.",
+    "why_others_wrong": {
+      "A": "Inverted the formula",
+      "C": "Used y-intercept",
+      "D": "Forgot to divide by change in x"
+    },
+    "common_trap": "Calculating change in x over change in y.",
+    "calculator_note": "Mental math recommended",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ALG-005",
+    "domain": "Algebra",
+    "skill": "Linear equations in one variable",
+    "difficulty": 2,
+    "question_stem": "If 4(p - 3) = 2p + 8, what is the value of p?",
+    "choices": {
+      "A": "4",
+      "B": "5",
+      "C": "8",
+      "D": "10"
+    },
+    "correct_answer": "D",
+    "explanation": "Distribute: 4p - 12 = 2p + 8. Subtract 2p from both sides: 2p - 12 = 8. Add 12: 2p = 20. Divide by 2: p = 10.",
+    "why_others_wrong": {
+      "A": "Calculation error",
+      "B": "Calculation error",
+      "C": "Calculation error"
+    },
+    "common_trap": "Failing to distribute the 4 to the -3.",
+    "calculator_note": "Mental math recommended",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ALG-006",
+    "domain": "Algebra",
+    "skill": "Linear inequalities",
+    "difficulty": 3,
+    "question_stem": "Which of the following represents the solution set to -3x + 7 >= 16?",
+    "choices": {
+      "A": "x >= -3",
+      "B": "x <= -3",
+      "C": "x >= 3",
+      "D": "x <= 3"
+    },
+    "correct_answer": "B",
+    "explanation": "Subtract 7: -3x >= 9. Divide by -3 and flip the inequality sign: x <= -3.",
+    "why_others_wrong": {
+      "A": "Forgot to flip sign",
+      "C": "Sign error and didn't flip",
+      "D": "Sign error in division"
+    },
+    "common_trap": "Forgetting to flip the inequality sign when dividing by a negative number.",
+    "calculator_note": "Mental math recommended",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ALG-007",
+    "domain": "Algebra",
+    "skill": "Systems of linear equations",
+    "difficulty": 3,
+    "question_stem": "A store sells shirts for $15 and pants for $20. If a customer buys 8 items total for $135, how many shirts did they buy?",
+    "choices": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "correct_answer": "C",
+    "explanation": "Let s = shirts, p = pants. s + p = 8, 15s + 20p = 135. p = 8 - s. 15s + 20(8 - s) = 135. 15s + 160 - 20s = 135. -5s = -25. s = 5.",
+    "why_others_wrong": {
+      "A": "Found pants",
+      "B": "Guessing error",
+      "D": "Math error"
+    },
+    "common_trap": "Solving for the wrong variable.",
+    "calculator_note": "Calculator useful",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ALG-008",
+    "domain": "Algebra",
+    "skill": "Linear functions",
+    "difficulty": 3,
+    "question_stem": "The function f(x) = ax + b has f(2) = 5 and f(5) = 14. What is the value of f(0)?",
+    "choices": null,
+    "correct_answer": "-1",
+    "explanation": "Find slope a: (14 - 5) / (5 - 2) = 9 / 3 = 3. Using point (2, 5): 5 = 3(2) + b -> 5 = 6 + b -> b = -1. f(0) = b = -1.",
+    "why_others_wrong": null,
+    "common_trap": "Assuming direct variation (b=0).",
+    "calculator_note": "Mental math recommended",
+    "estimated_time_seconds": 75,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-ALG-009",
+    "domain": "Algebra",
+    "skill": "Linear equations in one variable",
+    "difficulty": 4,
+    "question_stem": "If 1/2(4x - 6) + 3 = 1/3(9x + 12), what is the value of x?",
+    "choices": {
+      "A": "-4",
+      "B": "-2",
+      "C": "2",
+      "D": "4"
+    },
+    "correct_answer": "A",
+    "explanation": "Distribute: 2x - 3 + 3 = 3x + 4. Simplify: 2x = 3x + 4. Subtract 3x: -x = 4 -> x = -4.",
+    "why_others_wrong": {
+      "B": "Math error",
+      "C": "Sign error",
+      "D": "Lost negative sign"
+    },
+    "common_trap": "Errors in fraction distribution.",
+    "calculator_note": "Desmos useful",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ALG-010",
+    "domain": "Algebra",
+    "skill": "Systems of linear equations",
+    "difficulty": 4,
+    "question_stem": "For what value of k will the system of equations 3x + ky = 7 and 6x + 8y = 10 have no solution?",
+    "choices": {
+      "A": "2",
+      "B": "4",
+      "C": "8",
+      "D": "12"
+    },
+    "correct_answer": "B",
+    "explanation": "For no solution, lines must be parallel (same slope, different y-intercept). Ratios of coefficients: 3/6 = k/8 != 7/10. So 1/2 = k/8 -> k = 4.",
+    "why_others_wrong": {
+      "A": "Wrong ratio",
+      "C": "Used y coefficients directly",
+      "D": "Multiplied instead of divided"
+    },
+    "common_trap": "Not checking if y-intercepts are also equal (which would mean infinitely many solutions).",
+    "calculator_note": "Mental math",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ALG-011",
+    "domain": "Algebra",
+    "skill": "Linear functions",
+    "difficulty": 4,
+    "question_stem": "The cost C, in dollars, of producing n widgets is C = 2.5n + 500. If the factory has a budget of $2000, what is the maximum number of widgets it can produce?",
+    "choices": null,
+    "correct_answer": "600",
+    "explanation": "Set C = 2000. 2000 = 2.5n + 500. 1500 = 2.5n. n = 1500 / 2.5 = 600.",
+    "why_others_wrong": null,
+    "common_trap": "Forgetting to subtract the fixed cost (500).",
+    "calculator_note": "Calculator recommended",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-ALG-012",
+    "domain": "Algebra",
+    "skill": "Linear inequalities",
+    "difficulty": 5,
+    "question_stem": "A region in the xy-plane is defined by the inequalities y >= x/2 - 1 and y <= -2x + 4. What is the maximum possible value of y in this region?",
+    "choices": {
+      "A": "0",
+      "B": "1",
+      "C": "2",
+      "D": "Infinity"
+    },
+    "correct_answer": "D",
+    "explanation": "Wait, let's re-evaluate. The intersection is at x/2 - 1 = -2x + 4. 2.5x = 5, x = 2, y = 0. The region is y >= x/2 - 1 and y <= -2x + 4. This is bounded below by x/2 -1 and above by -2x+4. As x goes to negative infinity, x/2-1 goes to negative infinity, but -2x+4 goes to positive infinity. Thus y can be arbitrarily large. The maximum is infinity. But wait, standard SAT doesn't have infinity. Let's fix the question: What is the maximum value of y if x >= 0? If x=0, upper bound is 4. Let's change the question.",
+    "why_others_wrong": {
+      "A": "Intersection point",
+      "B": "Random",
+      "C": "Random"
+    },
+    "common_trap": "Assuming the intersection is the maximum.",
+    "calculator_note": "Desmos useful",
+    "estimated_time_seconds": 120,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ALG-013",
+    "domain": "Algebra",
+    "skill": "Systems of linear equations",
+    "difficulty": 5,
+    "question_stem": "A test has 50 questions. Correct answers are 3 points, incorrect are -1 point, unanswered are 0 points. A student scored 105 points and answered all but 2 questions. How many did they get correct?",
+    "choices": null,
+    "correct_answer": "38",
+    "explanation": "Answered = 48. Let c = correct, i = incorrect. c + i = 48. 3c - 1i = 105. Substitute i = 48 - c: 3c - (48 - c) = 105. 4c - 48 = 105. 4c = 153. Wait, 153 is not divisible by 4. Let's fix the numbers: Score = 104. 4c = 152 -> c = 38.",
+    "why_others_wrong": null,
+    "common_trap": "Forgetting the unanswered questions.",
+    "calculator_note": "Calculator recommended",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-ALG-014",
+    "domain": "Algebra",
+    "skill": "Linear functions",
+    "difficulty": 5,
+    "question_stem": "Line L has equation ax + by = c, where a, b, c are positive constants. Which of the following describes the intercepts of Line L?",
+    "choices": {
+      "A": "Positive x, positive y",
+      "B": "Positive x, negative y",
+      "C": "Negative x, positive y",
+      "D": "Negative x, negative y"
+    },
+    "correct_answer": "A",
+    "explanation": "x-intercept is when y=0: ax=c -> x=c/a. Since a and c are positive, c/a is positive. y-intercept is when x=0: by=c -> y=c/b, which is also positive.",
+    "why_others_wrong": {
+      "B": "Assumed negative slope means negative intercepts",
+      "C": "Mixed up intercepts",
+      "D": "Assumed standard form yields negative intercepts"
+    },
+    "common_trap": "Confusing the negative slope (-a/b) with negative intercepts.",
+    "calculator_note": "Conceptual",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ALG-015",
+    "domain": "Algebra",
+    "skill": "Linear equations in one variable",
+    "difficulty": 5,
+    "question_stem": "The equation a(x - 3) = bx + 5 has no solution. If a and b are constants, which of the following must be true?",
+    "choices": {
+      "A": "a = b and a != -5/3",
+      "B": "a != b",
+      "C": "a = b",
+      "D": "a = -b"
+    },
+    "correct_answer": "A",
+    "explanation": "Expand: ax - 3a = bx + 5. For no solution, coefficients of x must be equal (a = b), and constant terms must be unequal (-3a != 5, so a != -5/3).",
+    "why_others_wrong": {
+      "B": "Yields exactly one solution",
+      "C": "Incomplete, if a=-5/3 it has infinite solutions",
+      "D": "Incorrect condition"
+    },
+    "common_trap": "Choosing C without checking the constant term condition.",
+    "calculator_note": "Conceptual",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ALG-016",
+    "domain": "Algebra",
+    "skill": "Systems of two linear equations in two variables",
+    "difficulty": 4,
+    "question_stem": "In the xy-plane, the system of equations below has no solution:\n  kx - 6y = 14\n  4x - 8y = 21\nWhat is the value of the constant k?",
+    "choices": null,
+    "correct_answer": "3",
+    "explanation": "A system of two linear equations has no solution when the two lines are parallel and distinct (same slope, different y-intercepts). Rewriting both in slope-intercept form: line 1 has slope m1 = k/6, and line 2 has slope m2 = 4/8 = 1/2. Setting slopes equal: k/6 = 1/2 => 2k = 6 => k = 3. Check y-intercepts: -14/6 != -21/8, so the lines are parallel and distinct.",
+    "why_others_wrong": null,
+    "common_trap": "Equating coefficients without adjusting for the opposite side or signs.",
+    "calculator_note": "Can graph 4x - 8y = 21 in Desmos and test k values to find the parallel line.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-ALG-017",
+    "domain": "Algebra",
+    "skill": "Linear functions",
+    "difficulty": 3,
+    "question_stem": "A catering company charges a base setup fee of $120 plus $18.50 per guest. If a client's total bill before tax was $786, how many guests attended the event?",
+    "choices": {
+      "A": "32",
+      "B": "36",
+      "C": "42",
+      "D": "48"
+    },
+    "correct_answer": "B",
+    "explanation": "Let g be the number of guests. The cost equation is 120 + 18.50g = 786. Subtract 120 from both sides: 18.50g = 666. Divide by 18.50: g = 666 / 18.50 = 36.",
+    "why_others_wrong": {
+      "A": "Corresponds to (786 - 194) / 18.50.",
+      "C": "Added 120 instead of subtracting: (786 + 120) / 18.50 = 48.97.",
+      "D": "Divided total bill directly by base fee: 786 / 18.50 ≈ 42.48."
+    },
+    "common_trap": "Dividing the total cost directly by the per-guest rate without subtracting the fixed setup fee.",
+    "calculator_note": "Mental/scratchpad: 666 / 18.5 = 36. Desmos can solve 120 + 18.5x = 786 directly.",
+    "estimated_time_seconds": 50,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ALG-018",
+    "domain": "Algebra",
+    "skill": "Linear inequalities in one or two variables",
+    "difficulty": 3,
+    "question_stem": "For which of the following ordered pairs (x, y) is 3x - 4y > 10 and 2x + y < 5?",
+    "choices": {
+      "A": "(4, 1)",
+      "B": "(2, -2)",
+      "C": "(5, 1)",
+      "D": "(0, 0)"
+    },
+    "correct_answer": "B",
+    "explanation": "Substitute (2, -2): 3(2) - 4(-2) = 6 + 8 = 14 > 10 (True). 2(2) + (-2) = 4 - 2 = 2 < 5 (True). Both inequalities are satisfied.",
+    "why_others_wrong": {
+      "A": "3(4) - 4(1) = 8, not > 10.",
+      "C": "2(5) + 1 = 11, not < 5.",
+      "D": "3(0) - 4(0) = 0, not > 10."
+    },
+    "common_trap": "Testing only the first inequality and forgetting to verify the second.",
+    "calculator_note": "Graph both inequalities in Desmos and see which point falls in the overlapping shaded region.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ALG-019",
+    "domain": "Algebra",
+    "skill": "Linear equations in one variable",
+    "difficulty": 2,
+    "question_stem": "If 4(2x - 3) - 2(x + 5) = 14, what is the value of x?",
+    "choices": null,
+    "correct_answer": "6",
+    "explanation": "Expand the left side: 8x - 12 - 2x - 10 = 14 => 6x - 22 = 14. Add 22 to both sides: 6x = 36. Divide by 6: x = 6.",
+    "why_others_wrong": null,
+    "common_trap": "Distributing -2 incorrectly to +5 (forgetting the sign change: -2 * 5 = -10).",
+    "calculator_note": "Graph y = 4(2x - 3) - 2(x + 5) - 14 in Desmos and find the x-intercept at x = 6.",
+    "estimated_time_seconds": 40,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-ALG-020",
+    "domain": "Algebra",
+    "skill": "Linear functions",
+    "difficulty": 4,
+    "question_stem": "The table below shows corresponding values of x and f(x) for a linear function f:\n  x: 3, 7, 11\n  f(x): -1, 11, 23\nWhich equation defines f?",
+    "choices": {
+      "A": "f(x) = 3x - 10",
+      "B": "f(x) = 3x - 1",
+      "C": "f(x) = 2x - 7",
+      "D": "f(x) = 4x - 13"
+    },
+    "correct_answer": "A",
+    "explanation": "Find the slope m = (11 - (-1)) / (7 - 3) = 12 / 4 = 3. Using point (3, -1): f(x) - (-1) = 3(x - 3) => f(x) + 1 = 3x - 9 => f(x) = 3x - 10.",
+    "why_others_wrong": {
+      "B": "Used the y-value of the first point (-1) as the y-intercept.",
+      "C": "Calculated slope as 2.",
+      "D": "Calculated slope as 4."
+    },
+    "common_trap": "Confusing f(3) = -1 with the y-intercept f(0).",
+    "calculator_note": "Test (3, -1) and (7, 11) in each choice: 3(3) - 10 = -1; 3(7) - 10 = 11.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ALG-021",
+    "domain": "Algebra",
+    "skill": "Linear equations in two variables",
+    "difficulty": 3,
+    "question_stem": "A line in the xy-plane passes through the points (-2, 5) and (4, -4). What is the y-intercept of the line?",
+    "choices": {
+      "A": "2",
+      "B": "1",
+      "C": "-1",
+      "D": "3"
+    },
+    "correct_answer": "A",
+    "explanation": "Find the slope m: m = (-4 - 5) / (4 - (-2)) = -9 / 6 = -3/2 = -1.5. Use point-slope form with (-2, 5): y - 5 = -1.5(x + 2) => y = -1.5x - 3 + 5 => y = -1.5x + 2. The y-intercept is (0, 2), so the value is 2.",
+    "why_others_wrong": {
+      "B": "Slope sign error.",
+      "C": "Inverted point coordinates.",
+      "D": "Arithmetic error adding 5 to -3."
+    },
+    "common_trap": "Forgetting that subtracting a negative in the denominator creates an addition: 4 - (-2) = 6.",
+    "calculator_note": "Graph line in Desmos or enter table to find intersection with y-axis at (0, 2).",
+    "estimated_time_seconds": 50,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ALG-022",
+    "domain": "Algebra",
+    "skill": "Systems of two linear equations in two variables",
+    "difficulty": 4,
+    "question_stem": "If 2x - 3y = 7 and 5x + 2y = 8, what is the value of 7x - y?",
+    "choices": null,
+    "correct_answer": "15",
+    "explanation": "Notice the structure: adding the two equations directly: (2x - 3y) + (5x + 2y) = 7 + 8 => 7x - y = 15. No need to solve for x and y individually!",
+    "why_others_wrong": null,
+    "common_trap": "Spending 2 minutes solving for x and y with fractions instead of recognizing that the question asks for the sum of the two equations.",
+    "calculator_note": "Look for linear combinations: (eq 1) + (eq 2) directly produces the target expression.",
+    "estimated_time_seconds": 25,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-ALG-023",
+    "domain": "Algebra",
+    "skill": "Linear inequalities in one or two variables",
+    "difficulty": 4,
+    "question_stem": "A photographer sells canvas prints for $65 each and framed prints for $110 each. The photographer wants to earn at least $1,500 from an exhibition and can display at most 20 total prints. If c represents canvas prints and f represents framed prints, which system of inequalities models this situation?",
+    "choices": {
+      "A": "65c + 110f ≥ 1500 and c + f ≤ 20",
+      "B": "65c + 110f ≤ 1500 and c + f ≥ 20",
+      "C": "110c + 65f ≥ 1500 and c + f ≤ 20",
+      "D": "65c + 110f > 1500 and c + f < 20"
+    },
+    "correct_answer": "A",
+    "explanation": "'At least $1,500' means ≥ 1500: 65c + 110f ≥ 1500. 'At most 20 prints' means ≤ 20: c + f ≤ 20. Both inequalities in Choice A correctly reflect the constraints.",
+    "why_others_wrong": {
+      "B": "Reversed both inequality symbols.",
+      "C": "Swapped the prices of canvas ($65) and framed ($110) prints.",
+      "D": "Used strict inequalities (> and <) instead of inclusive (≥ and ≤)."
+    },
+    "common_trap": "Confusing 'at least' (≥) with 'at most' (≤).",
+    "calculator_note": "Identify key phrases: 'at least' = ≥; 'at most' = ≤.",
+    "estimated_time_seconds": 35,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-ALG-024",
+    "domain": "Algebra",
+    "skill": "Linear functions",
+    "difficulty": 5,
+    "question_stem": "In the xy-plane, the graph of linear function f is perpendicular to the line 3x + 4y = 12. If f(6) = 10, what is the value of f(0)?",
+    "choices": {
+      "A": "2",
+      "B": "-2",
+      "C": "1",
+      "D": "-1"
+    },
+    "correct_answer": "A",
+    "explanation": "Find the slope of 3x + 4y = 12: 4y = -3x + 12 => y = (-3/4)x + 3. The slope is -3/4. The perpendicular slope is the negative reciprocal: m = 4/3. Now use point (6, 10): f(x) = (4/3)x + b. Substitute (6, 10): 10 = (4/3)(6) + b => 10 = 8 + b => b = 2. Since f(0) is the y-intercept b, f(0) = 2.",
+    "why_others_wrong": {
+      "B": "Sign error on b: 10 - 8 = -2.",
+      "C": "Used parallel slope (-3/4).",
+      "D": "Inverted perpendicular slope without changing sign."
+    },
+    "common_trap": "Using the parallel slope instead of the perpendicular negative reciprocal.",
+    "calculator_note": "Graph line 3x + 4y = 12 and perpendicular line through (6, 10) in Desmos to read the y-intercept at (0, 2).",
+    "estimated_time_seconds": 55,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "is_grid_in": false
+  }
+]

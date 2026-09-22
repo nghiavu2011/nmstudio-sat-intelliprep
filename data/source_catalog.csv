@@ -1,0 +1,62 @@
+source_id,filename,path,format,size_bytes,title,author_publisher,year,language,sat_era,subject,classification,relevance,status
+SRC-001,SAT_2018_Edition_2017.pdf,SAT_2018_Edition_2017.pdf,PDF,34309548,SAT 2018 Edition,Kaplan,2017,en,NEW_SAT_2016,"Reading,Writing,Math",C_LEGACY_BUT_USEFUL,HIGH,ACCESSIBLE
+SRC-002,1barron_s_new_sat.pdf,1barron_s_new_sat.pdf,PDF,24206769,Barron's New SAT,Barron's,2016,en,NEW_SAT_2016,"Reading,Writing,Math",C_LEGACY_BUT_USEFUL,HIGH,ACCESSIBLE
+SRC-003,black_christopher_anestis_mark_mcgraw_hill_education_sat_201.pdf,black_christopher_anestis_mark_mcgraw_hill_education_sat_201.pdf,PDF,65668030,McGraw-Hill Education SAT,"Christopher Black, Mark Anestis / McGraw-Hill",2016,en,NEW_SAT_2016,"Reading,Writing,Math",C_LEGACY_BUT_USEFUL,HIGH,ACCESSIBLE
+SRC-004,the_new_sat_1_500_practice_questions.pdf,the_new_sat_1_500_practice_questions.pdf,PDF,67244266,The New SAT 1500 Practice Questions,Unknown,2016,en,NEW_SAT_2016,"Reading,Writing,Math",C_LEGACY_BUT_USEFUL,HIGH,ACCESSIBLE
+SRC-005,6_sat_practice_tests.pdf,6 SAT Practice Tests/6_sat_practice_tests.pdf,PDF,61202616,6 SAT Practice Tests,Unknown,2016,en,NEW_SAT_2016,"Reading,Writing,Math",C_LEGACY_BUT_USEFUL,HIGH,ACCESSIBLE
+SRC-006,1119215846.epub,"1,001 SAT Practice Questions For Dummies/1119215846.epub",EPUB,10136551,"1,001 SAT Practice Questions For Dummies",Wiley,2015,en,NEW_SAT_2016,"Reading,Writing,Math",C_LEGACY_BUT_USEFUL,MEDIUM,ACCESSIBLE
+SRC-007,Mike_Barrett-SAT_Prep_Black_Book.pdf,Mike_Barrett-SAT_Prep_Black_Book_The_Most_Effectiv.pdf,PDF,1918517,SAT Prep Black Book,Mike Barrett / SAT Tutoring,2013,en,OLD_SAT_PRE2016,Strategy,C_LEGACY_BUT_USEFUL,MEDIUM,ACCESSIBLE
+SRC-008,Master the SAT 2015 - Peterson's.epub,Master the SAT 2015 - Peterson's.epub,EPUB,11078702,Master the SAT 2015,Peterson's,2015,en,OLD_SAT_PRE2016,"Reading,Writing,Math",D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-009,SAT Power Vocab 2017.pdf,"SAT Power Vocab_ A Complete Guide...(2017).pdf",PDF,18710233,SAT Power Vocab,Princeton Review,2017,en,NEW_SAT_2016,Vocabulary,D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-010,Direct Hits Core Vocabulary.pdf,Direct Hits Core Vocabulary for SAT 2011 Edition.pdf,PDF,21019629,Direct Hits Core Vocabulary for SAT,Direct Hits,2011,en,OLD_SAT_PRE2016,Vocabulary,D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-011,Vocabulary_Cartoons_SAT.pdf,Vocabulary_Cartoons_SAT.pdf,PDF,9570590,Vocabulary Cartoons SAT,New Monic Books,2005,en,OLD_SAT_PRE2016,Vocabulary,D_SUPPLEMENTARY,LOW,ACCESSIBLE
+SRC-012,25903680-Sat-250-Words.pdf,250 words/25903680-Sat-250-Words-Practice-Book.pdf,PDF,1918054,SAT 250 Words Practice Book,Unknown,2010,en,OLD_SAT_PRE2016,Vocabulary,D_SUPPLEMENTARY,LOW,ACCESSIBLE
+SRC-013,500-sat-vocab.pdf,SAT English Vocabulary/Resources/500-sat-vocab.pdf,PDF,28327671,500 SAT Vocabulary,Unknown,2015,en,NEW_SAT_2016,Vocabulary,D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-014,Defining Twilight.pdf,Defining Twilight.pdf,PDF,3724439,Defining Twilight: Vocabulary Workbook,Brian Leaf / Cliffs Notes,2009,en,OLD_SAT_PRE2016,Vocabulary,D_SUPPLEMENTARY,LOW,ACCESSIBLE
+SRC-015,Def New Moon.pdf,Def New Moon.pdf,PDF,2382962,Defining New Moon: Vocabulary Workbook,Brian Leaf / Cliffs Notes,2010,en,OLD_SAT_PRE2016,Vocabulary,D_SUPPLEMENTARY,LOW,ACCESSIBLE
+SRC-016,Defining Breaking Dawn.pdf,"(Defining Series)...Breaking Dawn...(2010).pdf",PDF,1431315,Defining Breaking Dawn: Vocabulary Workbook,Brian Leaf / Cliffs Notes,2010,en,OLD_SAT_PRE2016,Vocabulary,D_SUPPLEMENTARY,LOW,ACCESSIBLE
+SRC-017,Defining Eclipse.pdf,"(Defining Series)...Eclipse...(2010).pdf",PDF,992835,Defining Eclipse: Vocabulary Workbook,Brian Leaf / Cliffs Notes,2010,en,OLD_SAT_PRE2016,Vocabulary,D_SUPPLEMENTARY,LOW,ACCESSIBLE
+SRC-018,SAT-PSAT Word Games.PDF,SAT-PSAT Word Games.PDF,PDF,3245797,SAT-PSAT Word Games,Unknown,2005,en,OLD_SAT_PRE2016,Vocabulary,D_SUPPLEMENTARY,LOW,ACCESSIBLE
+SRC-019,Barron's SAT Writing Workbook.epub,"Barron's SAT Writing Workbook, 3rd Edition...(2012).epub",EPUB,3361730,"Barron's SAT Writing Workbook, 3rd Edition",Barron's,2012,en,OLD_SAT_PRE2016,"Writing,Grammar",D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-020,SAT_Writing.pdf,SAT_Writing.pdf,PDF,3124168,SAT Writing,Unknown,2010,en,OLD_SAT_PRE2016,"Writing,Grammar",D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-021,Private Tutor SAT Writing.pdf,Private Tutor SAT Writing.pdf,PDF,4986820,Private Tutor SAT Writing,Unknown,2012,en,OLD_SAT_PRE2016,Writing,D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-022,Ace the SAT Writing.pdf,"Ace the SAT Writing/[Tamra_B._Orr]...pdf",PDF,1724454,Ace the SAT Writing,Tamra B. Orr,2008,en,OLD_SAT_PRE2016,Writing,D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-023,Peterson's Master Writing.pdf,"Master Writing/Peterson's...SAT...(2004).pdf",PDF,1132573,Peterson's Master Writing for the SAT,Peterson's,2004,en,OLD_SAT_PRE2016,Writing,D_SUPPLEMENTARY,LOW,ACCESSIBLE
+SRC-024,Gruber's SAT Reading Workbook.pdf,"Complete SAT Reading Workbook/Gary Gruber...(2009).pdf",PDF,2353127,Gruber's Complete SAT Reading Workbook,Gary Gruber,2009,en,OLD_SAT_PRE2016,Reading,D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-025,Mastering SAT Critical Reading.pdf,"Thomas R. Davenport...(2006).pdf",PDF,1002724,Mastering the SAT Critical Reading Test,Thomas R. Davenport / Cliffs Notes,2006,en,OLD_SAT_PRE2016,Reading,D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-026,Peterson's Master Critical Reading.pdf,"Peterson - Master Critical Reading/Peterson's...(2008).pdf",PDF,1898299,"Peterson's Master Critical Reading, 2nd Edition",Peterson's,2008,en,OLD_SAT_PRE2016,Reading,D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-027,Are You Ready SAT ACT.epub,"Are You Ready.../080412521XReady.epub",EPUB,11137165,Are You Ready for the SAT & ACT: Critical Reading,Unknown,2014,en,OLD_SAT_PRE2016,Reading,D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-028,Powerscore LSAT Reading Comp.pdf,Powerscore_LSAT_Reading_Comprehension_2020.pdf,PDF,5653870,PowerScore LSAT Reading Comprehension,PowerScore,2020,en,NOT_SAT,Reading,D_SUPPLEMENTARY,LOW,ACCESSIBLE
+SRC-029,SAT Math Prep Course.pdf,Jeff Kolby-SAT Math Prep Course-Nova Press (2010).pdf,PDF,7109312,SAT Math Prep Course,Jeff Kolby / Nova Press,2010,en,OLD_SAT_PRE2016,Math,D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-030,Math Workout for the SAT.pdf,_College_Test_Preparation_Princeton_Review-Math_Wo.pdf,PDF,13818694,Math Workout for the SAT,Princeton Review,2016,en,NEW_SAT_2016,Math,C_LEGACY_BUT_USEFUL,HIGH,ACCESSIBLE
+SRC-031,Cracking SAT Math 2 Subject Test.pdf,"(College Test Preparation)...Math 2...(2014).pdf",PDF,25034938,Cracking the SAT Math 2 Subject Test,Princeton Review,2014,en,SUBJECT_TEST,Math,D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-032,Barron's SAT Math Level 2.epub,barrons_sat_subject_test_math_level_2_10th_edition.epub,EPUB,4142680,"Barron's SAT Subject Test Math Level 2, 10th Ed",Barron's,2014,en,SUBJECT_TEST,Math,D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-033,SAT Math Essentials.pdf,book5s.com_.../SAT Math Essentials.pdf,PDF,4244646,SAT Math Essentials,LearningExpress,2006,en,OLD_SAT_PRE2016,Math,D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-034,SAT Writing Essentials.pdf,book5s.com_.../SAT Writing Essentials.pdf,PDF,744802,SAT Writing Essentials,LearningExpress,2006,en,OLD_SAT_PRE2016,"Writing,Grammar",D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-035,501 Logic and Reasoning.pdf,book5s.com_.../-501 Challenging Logic...(2006).pdf,PDF,2235006,501 Challenging Logic and Reasoning Problems,LearningExpress,2006,en,NOT_SAT,"Logic,Reasoning",D_SUPPLEMENTARY,LOW,ACCESSIBLE
+SRC-036,Critical Thinking Skills.pdf,book5s.com_.../(Critical Thinking...)...(2007).pdf,PDF,4440545,Critical Thinking Skills Success in 20 Minutes a Day,LearningExpress,2007,en,NOT_SAT,Critical Thinking,D_SUPPLEMENTARY,LOW,ACCESSIBLE
+SRC-037,Acing the SAT 2006.pdf,book5s.com_.../Learning Express-Acing the Sat 2006...(2006).pdf,PDF,2363578,Acing the SAT 2006,LearningExpress,2006,en,OLD_SAT_PRE2016,"Reading,Writing,Math",E_OUTDATED_FORMAT,LOW,ACCESSIBLE
+SRC-038,10 Secrets High School Test.pdf,book5s.com_.../10-Secrets-High-School-Test.pdf,PDF,548216,10 Secrets to High School Test Success,Unknown,2005,en,NOT_SAT,Study Skills,F_IRRELEVANT,NONE,ACCESSIBLE
+SRC-039,Cracking the SAT 2012.pdf,"Cracking the SAT, 2012 Edition/...Princeton Review.pdf",PDF,33573363,"Cracking the SAT, 2012 Edition",Princeton Review,2012,en,OLD_SAT_PRE2016,"Reading,Writing,Math",D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-040,picture these.pdf,PTswinaf/picture these.pdf,PDF,49876050,Picture These SAT Words in a Flash,Unknown,2007,en,OLD_SAT_PRE2016,Vocabulary,D_SUPPLEMENTARY,LOW,ACCESSIBLE
+SRC-041,Up_Your_Score.pdf,Up_Your_Score.pdf,PDF,6102135,Up Your Score,Unknown,2016,en,NEW_SAT_2016,"Strategy,All",C_LEGACY_BUT_USEFUL,MEDIUM,ACCESSIBLE
+SRC-042,Princeton Review 500 PSAT.pdf,Princeton_Review_500_PSAT_Practice_Questions.pdf,PDF,37107686,Princeton Review 500 PSAT Practice Questions,Princeton Review,2016,en,NEW_SAT_2016,"Reading,Writing,Math",C_LEGACY_BUT_USEFUL,MEDIUM,ACCESSIBLE
+SRC-043,SAT Official Guide 2nd Ed.pdf,SAT Ofiicial Guide 2nd Edition-P001-378-optimized.pdf,PDF,45226866,SAT Official Guide 2nd Edition (partial),College Board,2009,en,OLD_SAT_PRE2016,"Reading,Writing,Math",E_OUTDATED_FORMAT,LOW,ACCESSIBLE
+SRC-044,cracking_the_sat.pdf,cracking_the_sat.pdf,PDF,89157874,Cracking the SAT,Princeton Review,2015,en,TRANSITION,"Reading,Writing,Math",D_SUPPLEMENTARY,MEDIUM,ACCESSIBLE
+SRC-045,sat14pf.pdf,sat14pf.pdf,PDF,65592233,SAT 2014 Prep,Unknown,2014,en,OLD_SAT_PRE2016,All,E_OUTDATED_FORMAT,LOW,ACCESSIBLE
+SRC-046,sat_sharon_weiner_green.pdf,sat_sharon_weiner_green.pdf,PDF,28837296,SAT (Sharon Weiner Green),Sharon Weiner Green / Barron's,2012,en,OLD_SAT_PRE2016,All,E_OUTDATED_FORMAT,LOW,ACCESSIBLE
+SRC-047,0768928222MasterSAT.pdf,0768928222MasterSAT.pdf,PDF,74559684,Master the SAT,Peterson's,2008,en,OLD_SAT_PRE2016,All,E_OUTDATED_FORMAT,LOW,ACCESSIBLE
+SRC-048,SAT_2009.pdf,"SAT,_2009_.pdf",PDF,11832692,SAT 2009,Unknown,2009,en,OLD_SAT_PRE2016,All,E_OUTDATED_FORMAT,LOW,ACCESSIBLE
+SRC-049,McGraw-Hill SAT 2011.pdf,"Christopher Black...(2010).pdf",PDF,4568357,"McGraw-Hill's SAT, 2011 Edition","Christopher Black, Mark Anestis / McGraw-Hill",2010,en,OLD_SAT_PRE2016,All,E_OUTDATED_FORMAT,LOW,ACCESSIBLE
+SRC-050,36 Official LSAT Tests (87 files),36 Official SAT Tests/36 Official LSAT Tests/,PDF/DOC,43000000,36 Official LSAT Tests + Explanations,LSAC / Kaplan,2005,en,NOT_SAT,LSAT,F_IRRELEVANT,NONE,ACCESSIBLE
+SRC-051,Cracking SAT World History.pdf,Cracking the SAT World History Subject Test.pdf,PDF,11469909,Cracking the SAT World History Subject Test,Princeton Review,2013,en,SUBJECT_TEST,History,F_IRRELEVANT,NONE,ACCESSIBLE
+SRC-052,Cracking SAT Literature.epub,Cracking the SAT Subject Test in Literature_ 1.epub,EPUB,54219831,Cracking the SAT Subject Test in Literature,Princeton Review,2013,en,SUBJECT_TEST,Literature,F_IRRELEVANT,NONE,ACCESSIBLE
+SRC-053,TOEFL materials,book5s.com_.../(TOEFL...).pdf,PDF,976262,TOEFL Exam Success / Essentials,LearningExpress,2007,en,NOT_SAT,TOEFL,F_IRRELEVANT,NONE,ACCESSIBLE
+SRC-054,GRE/GED/GMAT/CBEST/ACT materials,book5s.com_.../various,PDF,14013048,Various non-SAT test prep,Various,2007,en,NOT_SAT,Other Tests,F_IRRELEVANT,NONE,ACCESSIBLE
+SRC-055,How to Study.pdf,book5s.com_.../Gail Wood-How to Study...(2000).pdf,PDF,2157751,How to Study,Gail Wood / LearningExpress,2000,en,NOT_SAT,Study Skills,F_IRRELEVANT,NONE,ACCESSIBLE
+SRC-056,sat-reading-n-writing-prep.7z,sat-reading-n-writing-prep.7z,7Z,8590506,SAT Reading & Writing Prep,Kaplan Publishing,2020,en,NEW_SAT_2016,"Reading,Writing",C_LEGACY_BUT_USEFUL,HIGH,ACCESSIBLE
+SRC-057,1150837003.rar,Peterson - Master Critical Reading/1150837003.rar,RAR,1761316,Unknown (companion to Master Critical Reading),Unknown,Unknown,Unknown,UNKNOWN,Unknown,G_UNREADABLE,UNKNOWN,COMPRESSED_NO_EXTRACTOR
+SRC-058,1150797382.rar,"Word Puzzles.../1150797382.rar",RAR,1381028,Word Puzzles to Decode the New SAT,McGraw-Hill,2004,en,OLD_SAT_PRE2016,Vocabulary,G_UNREADABLE,LOW,COMPRESSED_NO_EXTRACTOR
+SRC-059,SAT AudioLearn (22 ch),sataulprep/2013 SAT prep/,MP3,337331808,SAT AudioLearn (Unabridged),AudioLearn,2013,en,OLD_SAT_PRE2016,All,G_UNREADABLE,LOW,AUDIO_ONLY
+SRC-060,SAT Vocabulary AudioLearn (14 ch),savocau/2013 SAT Vocabulary AudioLearn/,MP3,211443872,2013 SAT Vocabulary AudioLearn,SAT Test Prep Team,2013,en,OLD_SAT_PRE2016,Vocabulary,G_UNREADABLE,LOW,AUDIO_ONLY
+SRC-061,SAT English Vocabulary Videos (13 vids),SAT English Vocabulary/,MP4,349937737,SAT English Vocabulary Video Course,Unknown,2016,en,NEW_SAT_2016,Vocabulary,G_UNREADABLE,MEDIUM,VIDEO_ONLY

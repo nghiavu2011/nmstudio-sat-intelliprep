@@ -1,0 +1,799 @@
+[
+  {
+    "question_id": "RW-CS-001",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "difficulty": 1,
+    "passage": "The recipe calls for a _____ amount of sugar, so you should only add a tiny pinch to avoid making the dish too sweet.",
+    "question_stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": {
+      "A": "massive",
+      "B": "generous",
+      "C": "minimal",
+      "D": "standard"
+    },
+    "correct_answer": "C",
+    "explanation": "The context clue 'only add a tiny pinch' dictates that the amount must be very small, or 'minimal'.",
+    "why_others_wrong": {
+      "A": "Opposite of 'tiny pinch'.",
+      "B": "Implies a large amount.",
+      "D": "Doesn't fit the specific instruction of a 'tiny pinch'."
+    },
+    "common_trap": "Not using the explicit clue 'tiny pinch' to define the word.",
+    "thinking_framework": "Find the definition in the sentence (tiny pinch) and match the word.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "humanities"
+    ]
+  },
+  {
+    "question_id": "RW-CS-002",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "difficulty": 2,
+    "passage": "Despite his initial reluctance, the mayor was eventually _____ to support the new infrastructure bill after seeing the overwhelming public approval in recent polls.",
+    "question_stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": {
+      "A": "persuaded",
+      "B": "forbidden",
+      "C": "confused",
+      "D": "obligated"
+    },
+    "correct_answer": "A",
+    "explanation": "He was reluctant but 'eventually' supported it due to polls, meaning he was convinced or 'persuaded'.",
+    "why_others_wrong": {
+      "B": "Opposite meaning; he ended up supporting it.",
+      "C": "Doesn't fit the cause-and-effect of seeing polls and then supporting.",
+      "D": "Too strong; polls influence but don't strictly 'obligate' legally."
+    },
+    "common_trap": "Choosing 'obligated' which ignores the nuance of political convincing.",
+    "thinking_framework": "Identify the transition from reluctance to support. What verb describes this change of mind?",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "social science"
+    ]
+  },
+  {
+    "question_id": "RW-CS-003",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "difficulty": 3,
+    "passage": "The critic noted that the director's latest film was highly _____, borrowing heavily from the visual styles of classic 1970s sci-fi movies rather than establishing an original aesthetic.",
+    "question_stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": {
+      "A": "innovative",
+      "B": "derivative",
+      "C": "incomprehensible",
+      "D": "profound"
+    },
+    "correct_answer": "B",
+    "explanation": "'Derivative' means imitative of the work of another, which perfectly matches 'borrowing heavily... rather than establishing an original aesthetic'.",
+    "why_others_wrong": {
+      "A": "Opposite of the context clue.",
+      "C": "No evidence suggests it was hard to understand.",
+      "D": "Doesn't address the borrowing aspect."
+    },
+    "common_trap": "Not knowing the exact definition of 'derivative' in an artistic context.",
+    "thinking_framework": "Look at the contrast clue: 'rather than establishing an original aesthetic'. The word must mean 'unoriginal'.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "arts"
+    ]
+  },
+  {
+    "question_id": "RW-CS-004",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "difficulty": 4,
+    "passage": "The CEO's attempt to assuage the angry shareholders was entirely _____; her vague promises only inflamed their frustrations further.",
+    "question_stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": {
+      "A": "successful",
+      "B": "transparent",
+      "C": "ineffectual",
+      "D": "vindictive"
+    },
+    "correct_answer": "C",
+    "explanation": "'Ineffectual' means not producing the desired effect. Since her promises 'inflamed their frustrations further', the attempt to assuage them failed.",
+    "why_others_wrong": {
+      "A": "Opposite of what happened.",
+      "B": "Doesn't fit the consequence (inflaming frustrations).",
+      "D": "She made 'vague promises', which isn't inherently vengeful (vindictive)."
+    },
+    "common_trap": "Choosing 'transparent' thinking it means her lies were obvious, but 'ineffectual' directly addresses the failure to achieve the goal.",
+    "thinking_framework": "Identify the goal (assuage) and the result (inflamed). The word must describe a failed effort.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "social science"
+    ]
+  },
+  {
+    "question_id": "RW-CS-005",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "difficulty": 5,
+    "passage": "To understand the ecosystem of the deep sea, scientists must not view the lack of sunlight as a simple deficit, but rather as a foundational condition that has engendered highly _____ evolutionary adaptations.",
+    "question_stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": {
+      "A": "superficial",
+      "B": "idiosyncratic",
+      "C": "rudimentary",
+      "D": "ubiquitous"
+    },
+    "correct_answer": "B",
+    "explanation": "'Idiosyncratic' means peculiar or individual. Extreme deep-sea conditions lead to highly unique/specialized adaptations.",
+    "why_others_wrong": {
+      "A": "Means 'on the surface' or 'lacking depth', incorrect here.",
+      "C": "Means 'basic or primary', contradicting the complexity implied by 'evolutionary adaptations' to extreme conditions.",
+      "D": "Means 'found everywhere', but these are specific to the deep sea."
+    },
+    "common_trap": "Choosing a difficult vocabulary word without verifying it fits the precise context of unique deep-sea evolution.",
+    "thinking_framework": "Adaptations to extreme, specific environments are unique/peculiar to that environment.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-CS-006",
+    "domain": "Craft and Structure",
+    "skill": "Text Structure and Purpose",
+    "difficulty": 1,
+    "passage": "Hummingbirds are fascinating creatures. They are the only birds capable of sustained hovering, which they achieve by flapping their wings up to 80 times per second. Furthermore, they are the only bird species that can fly backwards.",
+    "question_stem": "Which choice best states the main purpose of the text?",
+    "choices": {
+      "A": "To argue that hummingbirds are the most important birds.",
+      "B": "To explain the mechanics of how bird wings work.",
+      "C": "To provide examples of the unique flight abilities of hummingbirds.",
+      "D": "To compare hummingbirds to other flying insects."
+    },
+    "correct_answer": "C",
+    "explanation": "The text states they are fascinating and then lists two specific unique abilities (hovering, flying backward).",
+    "why_others_wrong": {
+      "A": "Too extreme/opinionated.",
+      "B": "Too broad; it's only about hummingbirds.",
+      "D": "No comparison to insects is made."
+    },
+    "common_trap": "Choosing a choice that is too broad.",
+    "thinking_framework": "Summarize what the sentences actually do: state a claim, give example 1, give example 2.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-CS-007",
+    "domain": "Craft and Structure",
+    "skill": "Text Structure and Purpose",
+    "difficulty": 2,
+    "passage": "In 1911, the Mona Lisa was stolen from the Louvre. Before the theft, the painting was respected in the art world but largely unknown to the general public. However, the ensuing global media frenzy catapulted the artwork into international fame, making it the cultural icon it is today.",
+    "question_stem": "Which choice best describes the overall structure of the text?",
+    "choices": {
+      "A": "It presents a historical event, describes the state of things before the event, and then explains the event's lasting impact.",
+      "B": "It argues that a famous painting was stolen, explains how it was recovered, and details its current value.",
+      "C": "It describes the artist who painted the Mona Lisa, explains his techniques, and outlines his influence.",
+      "D": "It presents a problem faced by a museum, proposes a solution, and evaluates the results."
+    },
+    "correct_answer": "A",
+    "explanation": "Sentence 1: event (theft). Sentence 2: before event (unknown). Sentence 3: impact (media frenzy made it an icon).",
+    "why_others_wrong": {
+      "B": "Recovery and value are not mentioned.",
+      "C": "The artist is not mentioned.",
+      "D": "No problem/solution framework is present."
+    },
+    "common_trap": "Adding outside knowledge about the painting instead of focusing strictly on the text's structure.",
+    "thinking_framework": "Map each sentence to its function and find the matching choice.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "history",
+      "arts"
+    ]
+  },
+  {
+    "question_id": "RW-CS-008",
+    "domain": "Craft and Structure",
+    "skill": "Text Structure and Purpose",
+    "difficulty": 3,
+    "passage": "Many dietary fads advocate for completely eliminating carbohydrates, framing them as the primary cause of weight gain. This view, however, oversimplifies human metabolism. Complex carbohydrates, such as those found in whole grains, are essential for providing sustained energy and supporting brain function.",
+    "question_stem": "Which choice best states the main purpose of the text?",
+    "choices": {
+      "A": "To outline the specific biological processes of human metabolism.",
+      "B": "To challenge a popular nutritional belief by highlighting the benefits of a specific macronutrient.",
+      "C": "To argue that diet fads are deliberately designed to mislead the public.",
+      "D": "To promote the consumption of whole grains over other types of food."
+    },
+    "correct_answer": "B",
+    "explanation": "The text presents a fad belief (carbs are bad) and then challenges it (oversimplifies) by noting the benefits of complex carbs.",
+    "why_others_wrong": {
+      "A": "Too broad; metabolism is only briefly mentioned.",
+      "C": "Assumes malicious intent ('deliberately designed') not present in text.",
+      "D": "Too narrow/extreme; it just uses whole grains as an example of good carbs."
+    },
+    "common_trap": "Focusing too much on the example (whole grains) rather than the argumentative purpose.",
+    "thinking_framework": "Identify the turn ('However'). The purpose is usually located in the claim following the turn.",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-CS-009",
+    "domain": "Craft and Structure",
+    "skill": "Text Structure and Purpose",
+    "difficulty": 4,
+    "passage": "In a recent sociological study, Dr. Vance analyzed neighborhood trust metrics. He found that communities with high 'structural cohesion'—defined by numerous interlocking social ties—reported the lowest crime rates. Yet, Vance cautions against assuming causality; residents in low-crime areas may simply have more psychological bandwidth to form these social ties.",
+    "question_stem": "What is the primary function of the final sentence in the overall structure of the text?",
+    "choices": {
+      "A": "It introduces a methodological flaw that invalidates the study's findings.",
+      "B": "It presents an alternative explanation for the correlation observed in the study.",
+      "C": "It confirms the hypothesis that structural cohesion directly reduces crime.",
+      "D": "It suggests that future studies should focus on psychological bandwidth."
+    },
+    "correct_answer": "B",
+    "explanation": "The final sentence warns against causality (A causes B) and suggests an alternate direction (B causes A).",
+    "why_others_wrong": {
+      "A": "It doesn't invalidate the finding (the correlation exists), just the interpretation.",
+      "C": "It explicitly cautions *against* confirming that direct reduction.",
+      "D": "It doesn't make recommendations for future studies."
+    },
+    "common_trap": "Confusing a caution about interpretation with a flaw that invalidates data.",
+    "thinking_framework": "Analyze 'Yet, Vance cautions...'. He is offering another way to look at the same data.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "social science"
+    ]
+  },
+  {
+    "question_id": "RW-CS-010",
+    "domain": "Craft and Structure",
+    "skill": "Text Structure and Purpose",
+    "difficulty": 5,
+    "passage": "The poem 'Echoes of the Loom' traditionally has been read as a pastoral celebration of pre-industrial farm life. Modern critic Elena Rostova, however, points to the poem’s subtle, rhythmic mimicry of mechanical weaving machines, suggesting the author was actually expressing a creeping anxiety about industrialization infiltrating rural spaces.",
+    "question_stem": "Which choice best describes the overall structure of the text?",
+    "choices": {
+      "A": "It summarizes a historical text, outlines a critic's objections to it, and concludes with a definitive interpretation.",
+      "B": "It presents a conventional interpretation of a poem and then introduces a contemporary reinterpretation based on a specific textual feature.",
+      "C": "It describes the subject matter of a poem and then explains how the poem's historical context shaped its creation.",
+      "D": "It contrasts two competing schools of literary criticism regarding a poem's portrayal of industrial machinery."
+    },
+    "correct_answer": "B",
+    "explanation": "Sentence 1: traditional/conventional view. Sentence 2: modern critic's new view based on a feature (rhythmic mimicry).",
+    "why_others_wrong": {
+      "A": "There is no 'concluding definitive interpretation' by the author of the passage.",
+      "C": "Misses the contrast between the two interpretations.",
+      "D": "It's not two schools of criticism about machinery; the first view didn't see machinery at all."
+    },
+    "common_trap": "Choosing an answer that sounds academically complex but inaccurately describes the specific elements presented.",
+    "thinking_framework": "Match the clauses in the answer choice directly to the sentences in the text.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "literature"
+    ]
+  },
+  {
+    "question_id": "RW-CS-011",
+    "domain": "Craft and Structure",
+    "skill": "Cross-Text Connections",
+    "difficulty": 2,
+    "passage": "Text 1\nMany cities are replacing traditional traffic lights with roundabouts. Studies show that roundabouts reduce fatal collisions by up to 90% because they force drivers to slow down and travel in the same direction.\n\nText 2\nWhile roundabouts may be mathematically safer, they are a nightmare for pedestrians. Navigating a continuous flow of cars without the explicit 'walk' signal provided by a traditional traffic light is intimidating and dangerous for those on foot.",
+    "question_stem": "Based on the texts, how would the author of Text 2 most likely respond to the statistics presented in Text 1?",
+    "choices": {
+      "A": "By arguing that the studies in Text 1 are based on flawed data.",
+      "B": "By agreeing that roundabouts are safer overall, but emphasizing they neglect pedestrian safety.",
+      "C": "By claiming that traffic lights are actually more effective at slowing cars down.",
+      "D": "By suggesting that roundabouts should be removed completely from all cities."
+    },
+    "correct_answer": "B",
+    "explanation": "Text 2 concedes roundabouts 'may be mathematically safer' (agreeing with Text 1's stats) but focuses on the negative impact on pedestrians.",
+    "why_others_wrong": {
+      "A": "Text 2 doesn't challenge the math/data.",
+      "C": "Text 2 doesn't claim this.",
+      "D": "Too extreme; Text 2 just points out a specific problem."
+    },
+    "common_trap": "Assuming Text 2 completely disagrees with everything in Text 1.",
+    "thinking_framework": "Identify the overlap. Text 2 accepts Text 1's premise but adds a caveat.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "social science"
+    ]
+  },
+  {
+    "question_id": "RW-CS-012",
+    "domain": "Craft and Structure",
+    "skill": "Cross-Text Connections",
+    "difficulty": 3,
+    "passage": "Text 1\nThe discovery of the 'hobbit' species (*Homo floresiensis*) in Indonesia disrupted the linear narrative of human evolution. Their small brain size, combined with evidence of advanced tool use, suggests that brain architecture, not just volume, dictates cognitive ability.\n\nText 2\nRecent analyses of *Homo floresiensis* tools show they are remarkably similar to those made by modern humans (*Homo sapiens*) who passed through the region. It is highly probable the 'hobbits' did not invent these tools, but merely scavenged them.",
+    "question_stem": "Based on the texts, how would the author of Text 2 most likely view the conclusion drawn in Text 1?",
+    "choices": {
+      "A": "They would reject the conclusion that *H. floresiensis* possessed advanced cognitive abilities based on tool use.",
+      "B": "They would agree that brain architecture is more important than brain volume.",
+      "C": "They would argue that *H. floresiensis* actually had a much larger brain than previously thought.",
+      "D": "They would support the idea that human evolution is a linear narrative."
+    },
+    "correct_answer": "A",
+    "explanation": "Text 1 says tool use proves advanced cognition. Text 2 says they didn't make the tools (they scavenged them). Therefore, Text 2 would reject the idea that tool use proves their advanced cognition.",
+    "why_others_wrong": {
+      "B": "Text 2 undermines the evidence used to make this claim.",
+      "C": "Text 2 doesn't mention brain size.",
+      "D": "Text 2 only addresses the tools, not the linear narrative."
+    },
+    "common_trap": "Choosing an answer about brain size when the disagreement is specifically about the origin of the tools.",
+    "thinking_framework": "Identify what Text 1 bases its conclusion on (tool use). See how Text 2 attacks that specific basis (scavenged, not made).",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "question_id": "RW-CS-013",
+    "domain": "Craft and Structure",
+    "skill": "Cross-Text Connections",
+    "difficulty": 4,
+    "passage": "Text 1\nHistorical fiction must prioritize historical accuracy over narrative pacing. If an author alters real events to make a story more exciting, they betray the reader's trust and distort history.\n\nText 2\nThe primary duty of any novelist is to entertain. While historical fiction uses the past as a setting, it is ultimately art, not a textbook. Minor chronological adjustments are acceptable if they serve the emotional truth of the characters.",
+    "question_stem": "Which choice best describes the relationship between the two texts?",
+    "choices": {
+      "A": "Text 2 provides a specific example of the phenomenon criticized in Text 1.",
+      "B": "Text 2 argues for a fundamentally different prioritization of the elements discussed in Text 1.",
+      "C": "Text 2 agrees with the premise of Text 1 but applies it to a different genre of literature.",
+      "D": "Text 1 and Text 2 both conclude that historical fiction is an inherently flawed genre."
+    },
+    "correct_answer": "B",
+    "explanation": "Text 1 prioritizes accuracy over narrative/entertainment. Text 2 prioritizes entertainment/narrative over strict accuracy. They hold opposing priorities.",
+    "why_others_wrong": {
+      "A": "Text 2 doesn't provide a specific book as an example.",
+      "C": "They disagree, and both are about historical fiction.",
+      "D": "Neither claims the genre is flawed, just how it should be written."
+    },
+    "common_trap": "Looking for complete disagreement and choosing an overly extreme choice (like D).",
+    "thinking_framework": "Compare the core thesis of each text regarding the balance of history vs. fiction.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "humanities",
+      "arts"
+    ]
+  },
+  {
+    "question_id": "RW-CS-014",
+    "domain": "Craft and Structure",
+    "skill": "Cross-Text Connections",
+    "difficulty": 5,
+    "passage": "Text 1\nEconomic theory asserts that individuals always act rationally to maximize utility. In a free market, this rational self-interest leads to optimal resource allocation, as consumers consistently choose the best product at the lowest price.\n\nText 2\nBehavioral economists have documented the 'decoy effect,' where consumers change their preference between two options when presented with a third, asymmetrically dominated option. This cognitive bias demonstrates that context heavily influences purchasing decisions.",
+    "question_stem": "Based on the texts, how does Text 2 relate to the assertions in Text 1?",
+    "choices": {
+      "A": "Text 2 provides a theoretical framework that perfectly explains the consumer behavior described in Text 1.",
+      "B": "Text 2 introduces empirical evidence that contradicts the assumption of consistent, rational decision-making in Text 1.",
+      "C": "Text 2 argues that the 'decoy effect' is a rational strategy used by consumers to maximize utility.",
+      "D": "Text 2 suggests that optimal resource allocation is only possible when consumers are presented with three options."
+    },
+    "correct_answer": "B",
+    "explanation": "Text 1 claims consumers are strictly rational and consistent. Text 2 shows they are influenced by cognitive biases (decoy effect), contradicting Text 1.",
+    "why_others_wrong": {
+      "A": "It contradicts, it doesn't explain.",
+      "C": "Text 2 calls it a 'cognitive bias', not a rational strategy.",
+      "D": "Misinterprets the decoy effect entirely."
+    },
+    "common_trap": "Misunderstanding the 'decoy effect' and assuming it's a tool for rational choice.",
+    "thinking_framework": "Text 1 = humans rational. Text 2 = humans irrational/biased. Therefore, Text 2 contradicts Text 1.",
+    "estimated_time_seconds": 120,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "social science"
+    ]
+  },
+  {
+    "question_id": "RW-CS-015",
+    "domain": "Craft and Structure",
+    "skill": "Cross-Text Connections",
+    "difficulty": 5,
+    "passage": "Text 1\nThe implementation of open-plan offices was intended to foster collaboration. By removing physical barriers, managers hoped to flatten hierarchies and encourage spontaneous brainstorming among employees of all levels.\n\nText 2\nA study of corporate communication revealed that transitioning to open-plan offices actually decreased face-to-face interactions by 70%. Seeking privacy in an exposed environment, employees relied heavily on instant messaging and wore noise-canceling headphones.",
+    "question_stem": "Which choice best synthesizes the information in the two texts?",
+    "choices": {
+      "A": "Open-plan offices succeeded in flattening corporate hierarchies but failed to improve the quality of work produced.",
+      "B": "Although designed to increase physical interaction among employees, open-plan offices paradoxically led to greater isolation and reliance on digital communication.",
+      "C": "The removal of physical barriers in offices caused employees to become distracted, leading to a 70% decrease in overall productivity.",
+      "D": "Managers and employees disagree on the best layout for an office, with managers preferring open plans and employees preferring private offices."
+    },
+    "correct_answer": "B",
+    "explanation": "Synthesizes intent (Text 1: intended to foster collaboration) with the actual result (Text 2: decreased interaction, more digital/headphones).",
+    "why_others_wrong": {
+      "A": "Neither text discusses the 'quality of work produced'.",
+      "C": "Text 2 mentions a 70% decrease in interaction, not productivity.",
+      "D": "Text 2 doesn't state what employees *prefer*, only how they reacted."
+    },
+    "common_trap": "Substituting 'productivity' for 'interactions' because it sounds like a logical corporate outcome.",
+    "thinking_framework": "Combine Text 1's goal with Text 2's reality to form a complete picture of the situation.",
+    "estimated_time_seconds": 120,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "social science"
+    ]
+  },
+  {
+    "question_id": "RW-CS-016",
+    "domain": "Craft and Structure",
+    "skill": "Cross-Text Connections",
+    "difficulty": 4,
+    "passage": "Text 1\nHistorian Elena Rostova argues that the rapid urbanization of 19th-century Britain was primarily driven by the Enclosure Acts, which privatized common agricultural land. Deprived of communal pastures and small plots, hundreds of thousands of dispossessed rural laborers had no economic choice but to migrate to burgeoning industrial cities to seek factory employment.\n\nText 2\nEconomic historian Marcus Vance contends that urban migration patterns preceded the major wave of parliamentary enclosures. Vance emphasizes wage differentials, demonstrating that factory pay in northern textile centers was up to three times higher than agricultural wages long before common lands were enclosed. For Vance, cities pulled rural workers with the promise of higher living standards rather than rural legislation pushing them out.",
+    "question_stem": "Based on the texts, how would Vance (Text 2) most likely respond to Rostova's claim in Text 1 regarding the cause of rural migration?",
+    "choices": {
+      "A": "By arguing that rural laborers were attracted to urban factories by significant wage incentives before the Enclosure Acts took widespread effect.",
+      "B": "By asserting that the Enclosure Acts actually increased agricultural wages, making rural life more attractive than factory work.",
+      "C": "By agreeing that land privatization was the primary push factor, but claiming it occurred earlier than Rostova suggests.",
+      "D": "By demonstrating that living standards in industrial cities were too low to motivate voluntary migration."
+    },
+    "correct_answer": "A",
+    "explanation": "Text 2 explicitly states Vance's argument: migration was driven by a 'pull' factor (factory pay was up to three times higher) that occurred *before* the major wave of enclosures, directly countering Rostova's claim that enclosures were the primary 'push' driver.",
+    "why_others_wrong": {
+      "B": "Vance does not claim agricultural wages increased; he highlights that factory wages were much higher.",
+      "C": "Vance does not agree with the privatization push factor; he argues wage differentials pulled workers.",
+      "D": "Contradicts Text 2, which states cities pulled workers with 'the promise of higher living standards'."
+    },
+    "common_trap": "Confusing push factors (enclosures forcing workers out) with pull factors (higher wages attracting workers in).",
+    "thinking_framework": "1. Text 1 claim: Enclosure Acts pushed workers to cities. 2. Text 2 claim: Wage differentials pulled workers to cities BEFORE enclosures. 3. Vance's response: Wage incentives attracted workers before enclosures took effect.",
+    "estimated_time_seconds": 85,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "history",
+      "economics"
+    ]
+  },
+  {
+    "question_id": "RW-CS-017",
+    "domain": "Craft and Structure",
+    "skill": "Cross-Text Connections",
+    "difficulty": 5,
+    "passage": "Text 1\nNeuroscientist Dr. Kenji Sato advocates for brain-computer interfaces (BCIs) that use non-invasive electroencephalography (EEG) caps. Sato contends that non-invasive BCIs avoid the severe medical risks of craniotomies and tissue inflammation while offering sufficient spatial resolution to decode broad motor intentions, such as steering a wheelchair or selecting on-screen text.\n\nText 2\nBioengineer Dr. Maya Lin argues that non-invasive EEG signals are inevitably degraded as electrical impulses pass through the skull and scalp, creating an insurmountable 'signal-to-noise' barrier. Lin maintains that restoring nuanced dexterity — such as individual finger articulation in robotic prosthetic hands — is fundamentally impossible without intracortical microelectrode arrays implanted directly into the motor cortex.",
+    "question_stem": "Based on the texts, in what way does Lin (Text 2) qualify the claims made by Sato (Text 1)?",
+    "choices": {
+      "A": "Lin denies that non-invasive BCIs have any practical utility, whereas Sato believes they can decode all forms of neural activity.",
+      "B": "Lin argues that non-invasive BCIs cannot achieve the high-resolution neural decoding needed for fine motor control, whereas Sato considers non-invasive resolution adequate for broader motor tasks.",
+      "C": "Lin asserts that craniotomies carry no meaningful medical risks, directly contradicting Sato's safety concerns.",
+      "D": "Lin believes that skull tissue enhances electrical impulses, whereas Sato claims bone attenuates neural signals."
+    },
+    "correct_answer": "B",
+    "explanation": "Sato claims non-invasive BCIs have 'sufficient spatial resolution to decode broad motor intentions' (like steering). Lin qualifies this by arguing that because signals degrade through the skull, non-invasive BCIs cannot achieve the nuanced dexterity (like individual finger articulation) that implanted arrays allow.",
+    "why_others_wrong": {
+      "A": "Too extreme: Lin does not deny broad utility, she specifically argues against nuanced dexterity; Sato also explicitly mentions 'broad motor intentions', not all forms.",
+      "C": "Lin does not discuss whether craniotomies carry risks; she focuses on signal quality.",
+      "D": "Inverts the physics: both acknowledge skull degradation; Lin emphasizes that it creates an insurmountable barrier for fine control."
+    },
+    "common_trap": "Assuming the second author completely dismisses the first, rather than identifying the specific technical boundary where the two perspectives diverge.",
+    "thinking_framework": "1. Sato: Non-invasive is safe and adequate for BROAD tasks. 2. Lin: Signal degrades through skull; non-invasive CANNOT do FINE/NUANCED dexterity. 3. Qualification: Non-invasive works for broad, but fails for fine motor control.",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "neuroscience",
+      "bioengineering"
+    ]
+  },
+  {
+    "question_id": "RW-CS-018",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "difficulty": 2,
+    "passage": "To verify the integrity of the concrete bridge piers, engineers conducted ultrasonic pulse velocity tests. The non-destructive testing confirmed that the internal structural integrity of the piers remained sound despite decades of river current abrasion.",
+    "question_stem": "As used in the text, what does \"sound\" most nearly mean?",
+    "choices": {
+      "A": "audible",
+      "B": "undamaged",
+      "C": "thorough",
+      "D": "logical"
+    },
+    "correct_answer": "B",
+    "explanation": "In this engineering context, the structural integrity of the piers is 'sound', meaning it is in good physical condition and undamaged despite abrasion.",
+    "why_others_wrong": {
+      "A": "Refers to acoustic sound, which is irrelevant to physical structural health.",
+      "C": "Means exhaustive or detailed, which does not describe the physical condition of a bridge pier.",
+      "D": "Refers to sound reasoning or arguments, not physical structures."
+    },
+    "common_trap": "Choosing a common dictionary definition ('audible' or 'logical') that does not fit the mechanical/structural context.",
+    "thinking_framework": "Replace 'sound' with a blank: 'the structural integrity remained [blank]'. Prediction: intact / undamaged. Matches Choice B.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "engineering",
+      "words_in_context"
+    ]
+  },
+  {
+    "question_id": "RW-CS-019",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "difficulty": 3,
+    "passage": "Although the environmental activist group initially enjoyed broad public support, their decision to block peak-hour commuter trains alienated many working-class allies, who felt that their daily hardships were being disregarded in pursuit of political theater.",
+    "question_stem": "As used in the text, what does \"alienated\" most nearly mean?",
+    "choices": {
+      "A": "isolated geographically",
+      "B": "estranged",
+      "C": "banished",
+      "D": "confused"
+    },
+    "correct_answer": "B",
+    "explanation": "To 'alienate' allies means to cause them to feel estranged, hostile, or disconnected from the cause due to controversial actions.",
+    "why_others_wrong": {
+      "A": "Refers to physical spatial separation, whereas alienation here is social/political.",
+      "C": "Refers to formal exile or deportation by an authority.",
+      "D": "Means puzzled or perplexed; the allies were offended and distant, not merely confused."
+    },
+    "common_trap": "Interpreting 'alienated' in a literal physical or extraterrestrial sense rather than relational estrangement.",
+    "thinking_framework": "Context clue: 'initially enjoyed support' contrasted with 'their decision... alienated allies'. Meaning: distanced / estranged.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "social_science",
+      "words_in_context"
+    ]
+  },
+  {
+    "question_id": "RW-CS-020",
+    "domain": "Craft and Structure",
+    "skill": "Text Structure and Purpose",
+    "difficulty": 3,
+    "passage": "In 1911, physicist Ernest Rutherford fired alpha particles at a thin sheet of gold foil. Most particles passed directly through, but a small fraction deflected at extreme angles. This startling result led Rutherford to discard J.J. Thomson's 'plum pudding' model of the atom and propose that mass and positive charge are concentrated in a tiny, dense nucleus.",
+    "question_stem": "Which choice best describes the primary purpose of the text?",
+    "choices": {
+      "A": "To describe an experimental observation and the theoretical breakthrough it prompted.",
+      "B": "To argue that Rutherford's experimental methodology was superior to that of Thomson.",
+      "C": "To explain the industrial applications of alpha particle radiation.",
+      "D": "To contrast the properties of gold foil with those of other metallic elements."
+    },
+    "correct_answer": "A",
+    "explanation": "The text describes an experiment (alpha particles fired at gold foil), notes the surprising observation (unexpected deflections), and concludes with the theoretical breakthrough (discovery of the atomic nucleus).",
+    "why_others_wrong": {
+      "B": "The text is an objective historical account, not an argumentative defense of methodology.",
+      "C": "No industrial applications are mentioned.",
+      "D": "No comparison with other metals is made."
+    },
+    "common_trap": "Focusing on a single technical component rather than the narrative arc of the paragraph.",
+    "thinking_framework": "1. What happens first? Experiment described. 2. What happens next? Anomaly discovered. 3. What is the climax? New model proposed. Choice A summarizes this trajectory.",
+    "estimated_time_seconds": 50,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "physics",
+      "history_of_science"
+    ]
+  },
+  {
+    "question_id": "RW-CS-021",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "difficulty": 4,
+    "passage": "The economist argued that the sudden surge in speculative cryptocurrency trading was largely driven by retail investors seeking to hedge against currency depreciation, rather than an authentic appraisal of underlying blockchain utility.",
+    "question_stem": "As used in the text, what does \"appraisal\" most nearly mean?",
+    "choices": {
+      "A": "evaluation",
+      "B": "approval",
+      "C": "celebration",
+      "D": "criticism"
+    },
+    "correct_answer": "A",
+    "explanation": "In financial and economic contexts, 'appraisal' means an objective evaluation or assessment of worth, value, or utility.",
+    "why_others_wrong": {
+      "B": "Means permission or favorable regard, not analytical assessment.",
+      "C": "Means joyful recognition, which is not an analytical financial process.",
+      "D": "Means finding fault, whereas appraisal is neutral evaluation."
+    },
+    "common_trap": "Confusing 'appraisal' (assessment) with 'praise' or 'approval'.",
+    "thinking_framework": "Economic valuation of utility = assessment / evaluation. Matches Choice A.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "economics",
+      "words_in_context"
+    ]
+  },
+  {
+    "question_id": "RW-CS-022",
+    "domain": "Craft and Structure",
+    "skill": "Text Structure and Purpose",
+    "difficulty": 4,
+    "passage": "For decades, palaeontologists debated whether sauropods — the gigantic, long-necked dinosaurs — held their necks horizontally to graze on low shrubs or vertically to reach high canopy foliage. Recently, biomechanical modeling of sauropod vertebrae combined with fossil blood-pressure estimates has provided compelling evidence: the immense cardiovascular pressure required to pump blood eight meters upward into a vertically elevated head would have exceeded the capacity of any known vertebrate heart.",
+    "question_stem": "Which choice best describes the function of the underlined phrase (\"the immense cardiovascular pressure required to pump blood eight meters upward into a vertically elevated head would have exceeded the capacity of any known vertebrate heart\") in the text as a whole?",
+    "choices": {
+      "A": "It presents physiological evidence that challenges the hypothesis that sauropods maintained vertical neck postures.",
+      "B": "It proves that sauropods possessed a unique circulatory system unlike any modern animal.",
+      "C": "It introduces a new debate concerning the cardiovascular evolution of prehistoric reptiles.",
+      "D": "It refutes the claim that biomechanical modeling can be reliably applied to extinct species."
+    },
+    "correct_answer": "A",
+    "explanation": "The underlined phrase provides specific physiological calculations (cardiovascular pressure limits) that challenge/undermine the vertical neck hypothesis introduced in the first sentence.",
+    "why_others_wrong": {
+      "B": "The text states the required pressure *exceeded* known vertebrate capacities, suggesting they did *not* hold their necks vertically, rather than proving an exotic circulatory system.",
+      "C": "The phrase resolves or informs the existing neck-posture debate; it does not launch an unrelated debate.",
+      "D": "The text relies on biomechanical modeling as evidence; it does not refute it."
+    },
+    "common_trap": "Overinterpreting an anatomical limit as proof of a new anatomical feature.",
+    "thinking_framework": "1. Debate: Horizontal vs vertical necks. 2. Underlined evidence: Vertical requires impossible heart pressure. 3. Function: Challenges vertical neck hypothesis.",
+    "estimated_time_seconds": 65,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "paleontology",
+      "text_structure"
+    ]
+  },
+  {
+    "question_id": "RW-CS-023",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "difficulty": 5,
+    "passage": "The novelist's prose was celebrated not for ornate embellishment, but for its austere precision; every adjective was deployed with clinical economy, allowing the raw emotional gravity of the narrative to emerge unencumbered by authorial self-indulgence.",
+    "question_stem": "As used in the text, what does \"austere\" most nearly mean?",
+    "choices": {
+      "A": "harsh and punitive",
+      "B": "simple and unadorned",
+      "C": "gloomy",
+      "D": "inexperienced"
+    },
+    "correct_answer": "B",
+    "explanation": "In an aesthetic or stylistic literary context, 'austere' means simple, unadorned, and stripped of unnecessary decoration (contrasted directly with 'ornate embellishment').",
+    "why_others_wrong": {
+      "A": "Means strict or punishing, which does not describe stylistic conciseness.",
+      "C": "Means melancholy, which confuses emotional tone with stylistic minimalism.",
+      "D": "Means novice, whereas the author's precision is described as masterful."
+    },
+    "common_trap": "Choosing 'harsh' or 'gloomy' instead of the aesthetic definition of 'unadorned'.",
+    "thinking_framework": "Contrast: 'not for ornate embellishment, but for its austere precision'. Opposite of ornate = simple, unadorned.",
+    "estimated_time_seconds": 50,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "literature",
+      "words_in_context"
+    ]
+  },
+  {
+    "question_id": "RW-CS-024",
+    "domain": "Craft and Structure",
+    "skill": "Cross-Text Connections",
+    "difficulty": 3,
+    "passage": "Text 1\nUrban planner Kevin Lynch proposed that residents navigate cities using mental maps structured around five distinct elements: paths, edges, districts, nodes, and landmarks. Lynch argued that legible, easily navigable cities foster a strong sense of emotional security and civic attachment among citizens.\n\nText 2\nSociologist Jane Jacobs criticized overly planned, hyper-legible urban layouts. Jacobs contended that vibrant cities thrive on organic complexity, irregular side streets, and mixed-use chaos that cannot be reduced to clean geometric elements. For Jacobs, unpredictable neighborhood texture promotes spontaneous human interaction far more effectively than artificial legibility.",
+    "question_stem": "Based on the texts, both Lynch (Text 1) and Jacobs (Text 2) would most likely agree with which of the following statements?",
+    "choices": {
+      "A": "The physical design and spatial layout of a city significantly influence the social and emotional experiences of its inhabitants.",
+      "B": "Landmarks are the most crucial urban element for fostering spontaneous community interaction.",
+      "C": "Clean, predictable street grids are universally preferred by residents over complex neighborhood textures.",
+      "D": "Urban planners should eliminate irregular side streets in favor of standardized transit corridors."
+    },
+    "correct_answer": "A",
+    "explanation": "While Lynch and Jacobs disagree on whether legibility or complexity is preferable, both share the foundational premise that urban spatial layout exerts a profound influence on residents' emotional and social lives.",
+    "why_others_wrong": {
+      "B": "Only Lynch emphasizes landmarks; Jacobs emphasizes mixed-use texture.",
+      "C": "Jacobs explicitly rejects clean, predictable street grids.",
+      "D": "Jacobs advocates for preserving irregular streets, contradicting this choice."
+    },
+    "common_trap": "Choosing an opinion held by only one author rather than finding their shared premise.",
+    "thinking_framework": "What is the common ground? Both believe city design profoundly shapes how people feel and interact.",
+    "estimated_time_seconds": 75,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "sociology",
+      "urban_planning"
+    ]
+  },
+  {
+    "question_id": "RW-CS-025",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "difficulty": 4,
+    "passage": "The diplomatic treaty proved fragile because key provisions regarding maritime boundaries were deliberately cast in ambiguous language to secure immediate signatures, merely deferring contentious disagreements rather than resolving them.",
+    "question_stem": "As used in the text, what does \"cast\" most nearly mean?",
+    "choices": {
+      "A": "thrown",
+      "B": "molded in metal",
+      "C": "formulated",
+      "D": "assigned actors to"
+    },
+    "correct_answer": "C",
+    "explanation": "To 'cast' provisions in ambiguous language means to formulate, express, or phrase them in that manner.",
+    "why_others_wrong": {
+      "A": "Literal physical tossing, which does not apply to legal clauses.",
+      "B": "Industrial metallurgical casting, which is irrelevant to treaty texts.",
+      "D": "Theatrical casting, which is unrelated to legal drafting."
+    },
+    "common_trap": "Selecting the common physical or dramatic meanings of 'cast' rather than the linguistic meaning of phrasing/formulating.",
+    "thinking_framework": "'cast in ambiguous language' = expressed / formulated in ambiguous words.",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "political_science",
+      "words_in_context"
+    ]
+  },
+  {
+    "question_id": "RW-CS-026",
+    "domain": "Craft and Structure",
+    "skill": "Text Structure and Purpose",
+    "difficulty": 5,
+    "passage": "In *The Structure of Scientific Revolutions*, Thomas Kuhn argued that science does not progress via a steady, cumulative accumulation of facts. Instead, scientific disciplines operate within prevailing 'paradigms' — shared frameworks of assumptions and experimental standards. Over time, anomalies accumulate that the reigning paradigm cannot explain. Eventually, these anomalies trigger a crisis, culminating in a revolutionary 'paradigm shift' that redefines the discipline from its foundations.",
+    "question_stem": "Which choice best describes the overall development of the passage?",
+    "choices": {
+      "A": "It rejects a conventional historical model, introduces a replacement theoretical concept, and outlines the sequential stages of that process.",
+      "B": "It presents two competing scientific theories and provides empirical evidence to resolve the disagreement.",
+      "C": "It chronicles the biography of a prominent philosopher and evaluates his impact on modern laboratory practices.",
+      "D": "It describes a specific historical scientific crisis and analyzes why researchers failed to resolve it."
+    },
+    "correct_answer": "A",
+    "explanation": "The passage begins by rejecting the conventional view (science as steady cumulative accumulation), introduces Kuhn's replacement model ('paradigms'), and then outlines the sequential process (anomalies accumulate -> crisis -> paradigm shift).",
+    "why_others_wrong": {
+      "B": "The passage outlines a philosophy of scientific progress, not two competing empirical theories with data.",
+      "C": "The text discusses Kuhn's theory, not his personal biography.",
+      "D": "No single historical crisis is detailed; the text describes an abstract general model."
+    },
+    "common_trap": "Confusing a philosophical model of science with a specific empirical scientific dispute.",
+    "thinking_framework": "Structure: 1. Deny cumulative model. 2. Introduce paradigm concept. 3. Trace sequence: anomalies -> crisis -> shift. Matches Choice A.",
+    "estimated_time_seconds": 75,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "philosophy_of_science",
+      "text_structure"
+    ]
+  },
+  {
+    "question_id": "RW-CS-027",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "difficulty": 3,
+    "passage": "Faced with compounding budget deficits, the municipal council voted to curtail public library operating hours on weekends, prompting vocal protests from neighborhood community groups.",
+    "question_stem": "As used in the text, what does \"curtail\" most nearly mean?",
+    "choices": {
+      "A": "extend",
+      "B": "reduce",
+      "C": "terminate",
+      "D": "celebrate"
+    },
+    "correct_answer": "B",
+    "explanation": "To 'curtail' hours means to cut back, shorten, or reduce them (not completely eliminate or terminate them).",
+    "why_others_wrong": {
+      "A": "Opposite: 'extend' means to lengthen.",
+      "C": "Too extreme: 'terminate' means end completely, whereas curtailing hours means reducing them.",
+      "D": "Irrelevant positive connotation."
+    },
+    "common_trap": "Confusing partial reduction ('curtail') with complete termination.",
+    "thinking_framework": "Faced with deficits -> cut back / reduce operating hours. Matches Choice B.",
+    "estimated_time_seconds": 35,
+    "source_basis": "original",
+    "qa_status": "DRAFT",
+    "tags": [
+      "civics",
+      "words_in_context"
+    ]
+  }
+]
