@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>N&amp;Mstudio_Education — IELTS / SAT Intelligent Learning OS</title>
-  <meta name="description" content="Hệ thống luyện thi Digital SAT & IELTS Academic thông minh dành riêng cho học sinh THPT (Lớp 10-12) và Phụ huynh đồng hành.">
-  <meta name="keywords" content="Digital SAT 2026, IELTS Academic, N&amp;Mstudio Education, Luyện thi SAT, Spaced Repetition, FSRS, Desmos">
+  <title>N&amp;Mstudio_Education — SAT IntelliPrep | Hệ Thống Luyện Thi Digital SAT 2026 Chuyên Sâu</title>
+  <meta name="description" content="Hệ thống luyện thi Digital SAT 2026 thông minh dành riêng cho học sinh THPT (Lớp 10-12) bứt phá 1500+ và Phụ huynh đồng hành.">
+  <meta name="keywords" content="Digital SAT 2026, SAT IntelliPrep, N&amp;Mstudio Education, Luyện thi SAT, Spaced Repetition, FSRS, Desmos, Ivy League">
   <meta name="author" content="N&amp;Mstudio_Education">
   <meta name="theme-color" content="#15283B">
 
@@ -15,8 +15,8 @@
 
   <!-- OpenGraph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="N&amp;Mstudio_Education — IELTS / SAT Intelligent Learning OS">
-  <meta property="og:description" content="Nền tảng luyện thi chuẩn học thuật Calm Academic Intelligence dành cho học sinh THPT bứt phá 1500+ SAT và 7.5+ IELTS.">
+  <meta property="og:title" content="N&amp;Mstudio_Education — SAT IntelliPrep | Digital SAT 2026">
+  <meta property="og:description" content="Nền tảng luyện thi Digital SAT chuẩn học thuật Calm Academic Intelligence dành cho học sinh THPT bứt phá 1500+.">
   <meta property="og:image" content="assets/logo.png">
 
   <!-- Typography: Be Vietnam Pro (Calm Academic Standard) -->
@@ -33,14 +33,16 @@
     <div class="modal-content" style="background:var(--color-surface);border-radius:var(--radius-xl);padding:2rem;max-width:500px;width:90%;box-shadow:var(--shadow-lg);border:1px solid var(--color-border);">
       <div class="text-center mb-4">
         <img src="assets/logo.png" alt="N&amp;Mstudio Logo" width="56" height="56" style="border-radius:12px;margin-bottom:0.5rem;">
-        <h2 style="font-size:1.35rem;font-weight:800;">Chào mừng bạn đến với N&amp;Mstudio</h2>
-        <p class="text-muted" style="font-size:0.85rem;">Thiết lập hồ sơ để hệ thống cá nhân hóa lộ trình học tập.</p>
+        <h2 style="font-size:1.35rem;font-weight:800;">Chào mừng bạn đến với SAT IntelliPrep</h2>
+        <p class="text-muted" style="font-size:0.85rem;">Thiết lập mục tiêu để hệ thống cá nhân hóa lộ trình Digital SAT 2026.</p>
       </div>
       
-      <label style="font-weight:700;font-size:0.85rem;display:block;margin-bottom:0.35rem;">Chương Trình Mục Tiêu</label>
-      <select id="setup-workspace" style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius);border:1.5px solid var(--color-border);margin-bottom:1rem;">
-        <option value="sat" selected>Digital SAT 2026 (Mục tiêu 1450 - 1550+)</option>
-        <option value="ielts">IELTS Academic (Mục tiêu Band 7.0 - 8.0+)</option>
+      <label style="font-weight:700;font-size:0.85rem;display:block;margin-bottom:0.35rem;">Mục Tiêu Điểm Số SAT (Target Score)</label>
+      <select id="setup-target-score" style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius);border:1.5px solid var(--color-border);margin-bottom:1rem;">
+        <option value="1500+" selected>1500+ (Ivy League, Top 20 Đại học Mỹ, Học bổng toàn phần)</option>
+        <option value="1400+">1400+ (Top 50 Mỹ, FTU / RMIT / NEU xét tuyển thẳng)</option>
+        <option value="1300+">1300+ (Học bổng các trường Đại học Quốc tế)</option>
+        <option value="1200+">1200+ (Khởi đầu vững chắc, củng cố nền tảng)</option>
       </select>
 
       <label style="font-weight:700;font-size:0.85rem;display:block;margin-bottom:0.35rem;">Khối Lớp Hiện Tại</label>
@@ -57,7 +59,7 @@
         <option value="advanced">Nâng cao (100% tiếng Anh nguyên bản)</option>
       </select>
 
-      <button id="setup-submit" class="btn-primary-action w-full" style="width:100%;">Bắt Đầu Lộ Trình Học Tập 🚀</button>
+      <button id="setup-submit" class="btn-primary-action w-full" style="width:100%;">Bắt Đầu Lộ Trình SAT 1500+ 🚀</button>
     </div>
   </div>
 
@@ -70,17 +72,14 @@
           <img src="assets/logo.png" alt="Logo" class="brand-logo-img">
           <div class="brand-name-wrap">
             <span class="brand-title">N&amp;Mstudio_Education</span>
-            <span class="brand-tagline">Intelligent Learning OS</span>
+            <span class="brand-tagline">SAT IntelliPrep OS</span>
           </div>
         </div>
 
-        <!-- Workspace Selector -->
-        <div class="workspace-selector-box">
-          <span class="workspace-label">Chương Trình:</span>
-          <select id="workspace-select" class="workspace-select" onchange="switchWorkspace(this.value)">
-            <option value="sat">Digital SAT 2026</option>
-            <option value="ielts">IELTS Academic</option>
-          </select>
+        <!-- Digital SAT Core Indicator -->
+        <div class="sat-core-pill">
+          <span class="badge-dot"></span>
+          <span class="sat-pill-text">Digital SAT 2026 Core</span>
         </div>
 
         <!-- 5-Destination Primary Navigation -->
@@ -113,7 +112,7 @@
           <h1 class="today-greeting" id="today-greeting-text">Chào bạn! Chúc bạn một ngày học tập tập trung.</h1>
           <div class="today-subdate flex items-center justify-between flex-wrap gap-2">
             <span class="date-display"></span>
-            <span class="plan-badge" id="current-workspace-badge">Digital SAT Workspace</span>
+            <span class="plan-badge" id="current-workspace-badge">🎯 Digital SAT 2026 Core • Lộ Trình 1500+</span>
           </div>
         </div>
 
@@ -338,7 +337,16 @@
             <span class="plan-badge">FSRS Spaced Repetition</span>
             <div class="review-stat-number" id="review-fc-due-count">0</div>
             <h3 style="font-size:1.15rem;font-weight:700;">Thẻ Ghi Nhớ Đến Hạn Ôn Tập</h3>
-            <p class="text-sm text-muted mb-4">Ôn tập từ vựng, tiền tố ngữ pháp và công thức toán học trước khi đường cong quên lãng giảm sút.</p>
+            <p class="text-sm text-muted mb-2">Ôn tập từ vựng Direct Hits, quy tắc ngữ pháp và công thức toán học trước khi đường cong quên lãng giảm sút.</p>
+            
+            <!-- Quick Deck Switchers -->
+            <div class="flex gap-1 flex-wrap mb-3">
+              <button class="btn btn-outline text-2xs" onclick="startFlashcardReview('vocabulary_direct_hits')">📖 Vocab Direct Hits</button>
+              <button class="btn btn-outline text-2xs" onclick="startFlashcardReview('math')">📐 Math Formulas</button>
+              <button class="btn btn-outline text-2xs" onclick="startFlashcardReview('grammar')">✍️ Conventions</button>
+              <button class="btn btn-outline text-2xs" onclick="startFlashcardReview('mistakes')">🧠 Lỗi Sai Của Tôi</button>
+            </div>
+
             <button class="btn-primary-action text-sm" onclick="startFlashcardReview()">Bắt Đầu Lật Thẻ FSRS →</button>
           </div>
 
@@ -387,9 +395,10 @@
         <div class="card">
           <div class="flex justify-between items-center flex-wrap gap-2 mb-4">
             <h3 style="font-size:1.15rem;font-weight:700;">Danh Sách Lỗi Sai &amp; Bẫy Logic Gần Đây</h3>
-            <div class="flex gap-2">
-              <button class="btn btn-outline text-xs" onclick="exportErrorLogCSV()">📊 Xuất CSV Lỗi Sai</button>
-              <button class="btn btn-outline text-xs" onclick="exportAnkiTSV()">🗂️ Xuất Anki TSV</button>
+            <div class="flex gap-2 flex-wrap">
+              <button class="btn btn-outline text-xs" onclick="exportPDFReport('workbook')">📑 Sổ Tay Lỗi Sai (PDF/A4)</button>
+              <button class="btn btn-outline text-xs" onclick="openAnkiModal()">🗂️ Xuất Anki TSV</button>
+              <button class="btn btn-outline text-xs" onclick="exportErrorLogCSV()">📊 Xuất CSV</button>
             </div>
           </div>
           <div id="mistakes-list-container" class="flex-col gap-2">
@@ -404,10 +413,10 @@
       <section id="test" class="section-view">
         <div class="today-header">
           <h1 class="today-greeting">Thi Thử Chuẩn Khảo Thí (Test &amp; Mock Exams)</h1>
-          <p class="today-subdate">Mô phỏng chân thực áp lực phòng thi Digital SAT Adaptive (2 Mô-đun) và IELTS Timed Sprints.</p>
+          <p class="today-subdate">Mô phỏng chân thực áp lực phòng thi Digital SAT 2026 Adaptive (2 Mô-đun) và các kịch bản luyện tốc độ chuyên sâu.</p>
         </div>
 
-        <!-- Dynamic Test Pack Grid (Populated by app.js based on SAT vs IELTS workspace) -->
+        <!-- Dynamic Test Pack Grid (Populated by app.js based on SAT workspace) -->
         <div class="test-pack-grid" id="test-pack-grid">
           <!-- Rendered dynamically by renderTest() -->
         </div>
@@ -489,9 +498,11 @@
             <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1rem;">Quản Lý Dữ Liệu &amp; Hồ Sơ</h3>
             <p class="text-sm text-muted mb-4">Toàn bộ dữ liệu học tập được lưu cục bộ an toàn trên trình duyệt của bạn.</p>
             <div class="flex-col gap-2">
-              <button class="btn btn-outline text-sm text-left" onclick="exportUserData()">📥 Xuất Toàn Bộ Dữ Liệu Học Tập (JSON)</button>
-              <button class="btn btn-outline text-sm text-left" onclick="exportErrorLogCSV()">📊 Xuất Sổ Tay Lỗi Sai (CSV)</button>
-              <button class="btn btn-outline text-sm text-left" onclick="exportAnkiTSV()">🗂️ Xuất Bộ Thẻ Flashcard Chuẩn Anki (.txt)</button>
+              <button class="btn btn-outline text-sm text-left" onclick="exportPDFReport('parent')">📑 In Báo Cáo Năng Lực Dành Cho Phụ Huynh (Print / PDF)</button>
+              <button class="btn btn-outline text-sm text-left" onclick="exportPDFReport('workbook')">📑 In Sổ Tay Chẩn Đoán Lỗi Sai SAT (Print / PDF)</button>
+              <button class="btn btn-outline text-sm text-left" onclick="openAnkiModal()">🗂️ Xuất Kho Thẻ Anki (.tsv / UTF-8 BOM)</button>
+              <button class="btn btn-outline text-sm text-left" onclick="exportUserData()">📥 Sao Lưu Toàn Bộ Dữ Liệu Học Tập (JSON)</button>
+              <button class="btn btn-outline text-sm text-left" onclick="exportErrorLogCSV()">📊 Xuất File Dữ Liệu Lỗi Sai (CSV)</button>
               <button class="btn btn-outline text-sm text-left" style="color:var(--color-error);border-color:#FECACA;" onclick="resetAllProgress()">🗑️ Đặt Lại Tiến Độ (Reset Progress)</button>
             </div>
           </div>
@@ -505,7 +516,7 @@
               <h2 style="font-size:1.35rem;font-weight:800;margin-top:0.35rem;">Bản Tổng Kết Tiến Độ Thực Chất Cho Phụ Huynh</h2>
               <p class="text-xs text-muted">Đo lường sự kiên trì, số giờ tập trung và tính kỷ luật thay vì săm soi điểm số từng câu.</p>
             </div>
-            <button class="btn btn-outline text-xs" onclick="window.print()">🖨️ In Báo Cáo Định Kỳ (Print/PDF)</button>
+            <button class="btn btn-outline text-xs" onclick="exportPDFReport('parent')">🖨️ In Báo Cáo Định Kỳ (Print/PDF)</button>
           </div>
 
           <div class="grid-4 mb-4" id="parent-metrics-grid">
@@ -635,6 +646,68 @@
       <button class="btn-primary-action w-full text-sm" style="width:100%;" onclick="copyShareText()">📋 Sao Chép Caption Kèm Hashtag (Facebook / Threads)</button>
     </div>
   </div>
+
+  <!-- Anki Deck Export Modal -->
+  <div id="anki-export-modal" style="position:fixed;inset:0;background:rgba(21,40,59,0.7);z-index:95;display:none;align-items:center;justify-content:center;">
+    <div class="modal-content" style="max-width:540px;width:92%;background:var(--color-surface);border-radius:var(--radius-xl);padding:1.75rem;box-shadow:var(--shadow-lg);">
+      <div class="flex justify-between items-center mb-3">
+        <div class="flex items-center gap-2">
+          <span style="font-size:1.4rem;">🗂️</span>
+          <div>
+            <h3 style="margin:0;font-size:1.15rem;font-weight:800;">Xuất Bộ Thẻ Ghi Nhớ Chuẩn Anki (.tsv)</h3>
+            <p class="text-xs text-muted" style="margin:0;">Định dạng chuẩn UTF-8 BOM, tương thích 100% Anki Desktop &amp; AnkiMobile.</p>
+          </div>
+        </div>
+        <button class="btn btn-outline text-xs" onclick="closeAnkiModal()">✕ Đóng</button>
+      </div>
+
+      <p class="text-xs text-muted mb-4" style="line-height:1.5;">
+        Chọn bộ thẻ bạn muốn tải về. Mở Anki &rarr; <code>File</code> &rarr; <code>Import</code> &rarr; chọn file vừa tải. Đánh dấu <em>"Allow HTML in fields"</em> để hiển thị màu sắc và bẫy tư duy trực quan.
+      </p>
+
+      <div class="flex-col gap-3">
+        <button class="btn btn-outline text-sm text-left flex justify-between items-center p-3" onclick="exportAnkiDeck('vocab')">
+          <div>
+            <strong>📖 Bộ 1: SAT Vocabulary Direct Hits &amp; Secondary Meanings</strong>
+            <div class="text-xs text-muted">Từ vựng học thuật tần suất cao, collocations, ngữ cảnh chuẩn và bẫy nghĩa phụ</div>
+          </div>
+          <span class="plan-badge text-2xs">Tải .TSV ↓</span>
+        </button>
+
+        <button class="btn btn-outline text-sm text-left flex justify-between items-center p-3" onclick="exportAnkiDeck('math')">
+          <div>
+            <strong>📐 Bộ 2: SAT Math Core Formulas &amp; Desmos Hacks</strong>
+            <div class="text-xs text-muted">Công thức trọng tâm Algebra, Parabola, Lượng giác &amp; mẹo bấm máy Desmos</div>
+          </div>
+          <span class="plan-badge text-2xs">Tải .TSV ↓</span>
+        </button>
+
+        <button class="btn btn-outline text-sm text-left flex justify-between items-center p-3" onclick="exportAnkiDeck('grammar')">
+          <div>
+            <strong>✍️ Bộ 3: SAT Grammar Rules &amp; Rhetorical Transitions</strong>
+            <div class="text-xs text-muted">Quy tắc dấu câu (Boundaries), Subject-Verb, Modifier &amp; từ nối chuyển ý</div>
+          </div>
+          <span class="plan-badge text-2xs">Tải .TSV ↓</span>
+        </button>
+
+        <button class="btn btn-outline text-sm text-left flex justify-between items-center p-3" onclick="exportAnkiDeck('mistakes')">
+          <div>
+            <strong>🧠 Bộ 4: Thẻ Chẩn Đoán Lỗi Sai Cá Nhân Của Bạn</strong>
+            <div class="text-xs text-muted">Sinh tự động từ lịch sử câu làm sai: Bóc tách lỗi bạn đã chọn vs tư duy chuẩn</div>
+          </div>
+          <span class="plan-badge text-2xs" style="background:#FEE2E2;color:#991B1B;border-color:#FCA5A5;">Tải .TSV ↓</span>
+        </button>
+      </div>
+
+      <div class="mt-4 pt-3 border-t border-border flex justify-between items-center text-2xs text-muted">
+        <span>Mã hóa UTF-8 BOM • Có sẵn Tag phân loại #SAT</span>
+        <button class="btn btn-outline text-xs" onclick="closeAnkiModal()">Đã Hiểu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dedicated Print Portal (Populated dynamically on window.print) -->
+  <div id="print-portal" style="display:none;"></div>
 
   <script src="js/app.js"></script>
 </body>

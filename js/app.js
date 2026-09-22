@@ -1,13 +1,13 @@
 /* ═══════════════════════════════════════════════════════════════
-   N&Mstudio_Education — Intelligent Learning OS
-   Main Application Logic: Multi-Workspace (SAT / IELTS),
-   5-Destination Navigation, 6-Stage Deliberate Feedback, FSRS Spaced Review,
-   Contextual AI Coach & Interpretive Progress Analytics
+   N&Mstudio_Education — SAT IntelliPrep OS (Digital SAT 2026)
+   Main Application Logic: Pure Digital SAT Focus, 5-Destination Nav,
+   6-Stage Deliberate Feedback, FSRS Spaced Review, Deep Anki TSV &
+   A4 PDF Export Engines, 6 Specialized SAT Exam Scenarios
    ═══════════════════════════════════════════════════════════════ */
 
-const DB_KEY = 'nmstudio_learning_os_v2';
+const DB_KEY = 'nmstudio_sat_os_v3';
 
-// ── Skill Taxonomies ──
+// ── 15 Digital SAT Skills Taxonomy ──
 const SAT_SKILLS = [
   'Central Ideas and Details', 'Command of Evidence: Textual', 'Command of Evidence: Quantitative',
   'Inferences', 'Words in Context', 'Text Structure and Purpose', 'Cross-Text Connections',
@@ -15,60 +15,49 @@ const SAT_SKILLS = [
   'Algebra', 'Advanced Math', 'Problem-Solving and Data Analysis', 'Geometry and Trigonometry'
 ];
 
-const IELTS_SKILLS = [
-  'True / False / Not Given', 'Yes / No / Not Given', 'Matching Headings',
-  'Summary Completion', 'Multiple Choice', 'Matching Features',
-  'Task 1 Data Description & Synthesis', 'Task 2 Academic Cohesion & Hedging'
-];
-
-// ── State Persistence (Alibaba OCR - Defensive Robustness) ──
+// ── State Persistence (Alibaba OCR - Defensive Robustness & Migration) ──
 function loadState() {
   try {
-    const raw = localStorage.getItem(DB_KEY);
+    // 1. Try v3 key
+    let raw = localStorage.getItem(DB_KEY);
+    // 2. Fallback to v2 key if migrating
+    if (!raw) raw = localStorage.getItem('nmstudio_learning_os_v2');
+
     if (raw) {
       const parsed = JSON.parse(raw);
-      if (parsed && typeof parsed === 'object') return parsed;
+      if (parsed && typeof parsed === 'object') {
+        // Migration from multi-workspace v2 to pure SAT v3
+        if (parsed.workspaces && parsed.workspaces.sat) {
+          const satWS = parsed.workspaces.sat;
+          return {
+            profile: parsed.profile || { grade: '11', level: 'intermediate', targetScore: '1500+' },
+            skills: satWS.skills || {},
+            errors: satWS.errors || [],
+            flashcardState: satWS.flashcardState || {},
+            sessionLog: satWS.sessionLog || []
+          };
+        }
+        if (parsed.skills && parsed.errors) {
+          if (!parsed.profile) parsed.profile = { grade: '11', level: 'intermediate', targetScore: '1500+' };
+          if (!parsed.profile.targetScore) parsed.profile.targetScore = '1500+';
+          return parsed;
+        }
+      }
     }
   } catch (e) {
     console.warn('Corrupted state detected in localStorage, fallback to default:', e);
   }
+
   return {
-    activeWorkspace: 'sat', // 'sat' | 'ielts'
-    profile: null,          // { grade, level, setupDate }
-    workspaces: {
-      sat: {
-        skills: {},         // { skillName: { correct, total, history: [] } }
-        errors: [],         // { question_id, domain, skill, answer, correct_answer, error_type, timestamp }
-        flashcardState: {}, // { card_id: { ease, interval, due, reviews } }
-        sessionLog: []
-      },
-      ielts: {
-        skills: {},
-        errors: [],
-        flashcardState: {},
-        sessionLog: []
-      }
-    }
+    profile: null, // { grade: '11', level: 'intermediate', targetScore: '1500+' }
+    skills: {},
+    errors: [],
+    flashcardState: {},
+    sessionLog: []
   };
 }
 
 let db = loadState();
-
-// Backward compatibility migration if upgrading from v1
-if (!db.workspaces) {
-  const oldSkills = db.skills || {};
-  const oldErrors = db.errors || [];
-  const oldFc = db.flashcardState || {};
-  const oldLog = db.sessionLog || [];
-  db = {
-    activeWorkspace: 'sat',
-    profile: db.profile || null,
-    workspaces: {
-      sat: { skills: oldSkills, errors: oldErrors, flashcardState: oldFc, sessionLog: oldLog },
-      ielts: { skills: {}, errors: [], flashcardState: {}, sessionLog: [] }
-    }
-  };
-}
 
 function save() {
   try {
@@ -79,7 +68,7 @@ function save() {
 }
 
 function getCurWS() {
-  return db.workspaces[db.activeWorkspace] || db.workspaces.sat;
+  return db;
 }
 
 // ── Security Helper: Prevent XSS (Alibaba OCR - Security) ──
@@ -108,41 +97,9 @@ const SAT_Q_FILES = {
   'math-geo': 'data/questions/math_geometry_trig.json'
 };
 
-const SAT_FC_FILES = [
-  'vocabulary', 'grammar', 'transitions', 'rhetorical',
-  'math', 'vocabulary_direct_hits', 'vocabulary_secondary_meanings'
-];
-
 async function loadQuestions(key) {
   if (qCache[key]) return qCache[key];
   try {
-    if (key.startsWith('ielts')) {
-      if (!qCache['ielts_master']) {
-        const r = await fetch('data/ielts/ielts_questions.json');
-        const d = await r.json();
-        qCache['ielts_master'] = d.questions || d;
-      }
-      const master = qCache['ielts_master'] || [];
-      if (key === 'ielts' || key === 'ielts-all') {
-        qCache[key] = master;
-      } else if (key === 'ielts-tfng') {
-        qCache[key] = master.filter(q => q.skill === 'True / False / Not Given' || q.skill === 'Yes / No / Not Given');
-      } else if (key === 'ielts-headings') {
-        qCache[key] = master.filter(q => q.skill === 'Matching Headings');
-      } else if (key === 'ielts-summary') {
-        qCache[key] = master.filter(q => q.skill === 'Summary Completion');
-      } else if (key === 'ielts-mcq') {
-        qCache[key] = master.filter(q => q.skill === 'Multiple Choice' || q.skill === 'Matching Features');
-      } else if (key === 'ielts-task1') {
-        qCache[key] = master.filter(q => q.skill === 'Task 1 Data Description & Synthesis');
-      } else if (key === 'ielts-task2') {
-        qCache[key] = master.filter(q => q.skill === 'Task 2 Academic Cohesion & Hedging');
-      } else {
-        qCache[key] = master;
-      }
-      return qCache[key];
-    }
-
     let url = SAT_Q_FILES[key];
     if (!url) url = SAT_Q_FILES['rw-info'];
 
@@ -157,11 +114,36 @@ async function loadQuestions(key) {
 }
 
 async function loadFlashcards(type) {
+  if (type === 'mistakes') {
+    const errs = db.errors || [];
+    if (!errs.length) {
+      return [{
+        card_id: 'FC-EMPTY-ERR',
+        category: 'Personal Mistakes',
+        front: { word: 'Chưa có lỗi sai nào!', context: 'Hãy làm bài thi hoặc luyện tập để tự động tạo thẻ lỗi sai.' },
+        back: { vietnamese: 'Tuyệt vời!', definition: 'Tiếp tục duy trì phong độ giải bài.' }
+      }];
+    }
+    return errs.map((e, idx) => ({
+      card_id: `FC-ERR-${idx}`,
+      category: 'Personal Mistakes',
+      skill: e.skill,
+      front: {
+        word: `[CÂU SAI #${idx + 1}] ${e.question_id}`,
+        phonetic: `[${e.error_type || 'COGNITIVE_DISTRACTOR'}]`,
+        context: `Kỹ năng: ${e.skill} · Lựa chọn của bạn: ${e.answer}`
+      },
+      back: {
+        vietnamese: `Đáp án đúng: ${e.correct_answer}`,
+        definition: `Bẫy nhận thức: ${e.error_type || 'COGNITIVE_DISTRACTOR'}`,
+        academic_tip: `Hãy đối chiếu kỹ ranh giới logic của đoạn văn và không mở rộng suy diễn quá phạm vi tác giả cung cấp.`
+      }
+    }));
+  }
+
   if (fcCache[type]) return fcCache[type];
   try {
-    let url = `data/flashcards/${type}.json`;
-    if (type === 'ielts' || type === 'ielts-awl') url = 'data/ielts/ielts_flashcards.json';
-
+    const url = `data/flashcards/${type}.json`;
     const r = await fetch(url);
     const d = await r.json();
     fcCache[type] = d.cards || d;
@@ -187,15 +169,14 @@ function init() {
 
   // Setup submit handler
   $('#setup-submit')?.addEventListener('click', () => {
-    db.activeWorkspace = $('#setup-workspace').value || 'sat';
     db.profile = {
-      grade: $('#setup-grade').value || '11',
-      level: $('#setup-level').value || 'intermediate',
+      targetScore: $('#setup-target-score')?.value || '1500+',
+      grade: $('#setup-grade')?.value || '11',
+      level: $('#setup-level')?.value || 'intermediate',
       setupDate: new Date().toISOString()
     };
     save();
     modal.style.display = 'none';
-    syncWorkspaceUI();
     handleRoute();
   });
 
@@ -210,12 +191,6 @@ function init() {
     handleRoute();
   });
 
-  // Sync workspace selector dropdown
-  const wsSelect = $('#workspace-select');
-  if (wsSelect) {
-    wsSelect.value = db.activeWorkspace || 'sat';
-  }
-
   // Set date
   const now = new Date();
   const dateStr = now.toLocaleDateString('vi-VN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
@@ -223,62 +198,7 @@ function init() {
 
   // Router listener
   window.addEventListener('hashchange', handleRoute);
-  syncWorkspaceUI();
   handleRoute();
-}
-
-// ── Workspace Switcher ──
-window.switchWorkspace = function(ws) {
-  if (ws !== 'sat' && ws !== 'ielts') ws = 'sat';
-  db.activeWorkspace = ws;
-  save();
-  syncWorkspaceUI();
-  handleRoute();
-};
-
-function syncWorkspaceUI() {
-  const ws = db.activeWorkspace;
-  const wsSelect = $('#workspace-select');
-  if (wsSelect) wsSelect.value = ws;
-
-  const badge = $('#current-workspace-badge');
-  if (badge) {
-    badge.textContent = ws === 'sat' ? 'Digital SAT 2026 Workspace' : 'IELTS Academic Workspace';
-  }
-
-  const shareTitle = $('#share-workspace-title');
-  if (shareTitle) {
-    shareTitle.textContent = ws === 'sat' ? 'Digital SAT 2026' : 'IELTS Academic';
-  }
-
-  // Update Practice Domain Tabs for SAT vs IELTS
-  const domainTabsContainer = $('#practice-domain-tabs');
-  if (domainTabsContainer) {
-    if (ws === 'sat') {
-      domainTabsContainer.innerHTML = `
-        <button class="domain-tab-btn active" data-domain="rw-info" onclick="selectDomainTab('rw-info')">Information &amp; Ideas</button>
-        <button class="domain-tab-btn" data-domain="rw-craft" onclick="selectDomainTab('rw-craft')">Craft &amp; Structure</button>
-        <button class="domain-tab-btn" data-domain="rw-expr" onclick="selectDomainTab('rw-expr')">Expression</button>
-        <button class="domain-tab-btn" data-domain="rw-conv" onclick="selectDomainTab('rw-conv')">Conventions</button>
-        <button class="domain-tab-btn" data-domain="math-alg" onclick="selectDomainTab('math-alg')">Algebra</button>
-        <button class="domain-tab-btn" data-domain="math-adv" onclick="selectDomainTab('math-adv')">Advanced Math</button>
-        <button class="domain-tab-btn" data-domain="math-psda" onclick="selectDomainTab('math-psda')">Problem Solving</button>
-        <button class="domain-tab-btn" data-domain="math-geo" onclick="selectDomainTab('math-geo')">Geometry &amp; Trig</button>
-      `;
-      $('#practice-desmos-btn')?.classList.remove('hidden');
-    } else {
-      domainTabsContainer.innerHTML = `
-        <button class="domain-tab-btn active" data-domain="ielts-all" onclick="selectDomainTab('ielts-all')">Tất Cả Kỹ Năng</button>
-        <button class="domain-tab-btn" data-domain="ielts-tfng" onclick="selectDomainTab('ielts-tfng')">Reading: T/F/NG &amp; Y/N/NG</button>
-        <button class="domain-tab-btn" data-domain="ielts-headings" onclick="selectDomainTab('ielts-headings')">Reading: Matching Headings</button>
-        <button class="domain-tab-btn" data-domain="ielts-summary" onclick="selectDomainTab('ielts-summary')">Reading: Summary &amp; Gap Fill</button>
-        <button class="domain-tab-btn" data-domain="ielts-mcq" onclick="selectDomainTab('ielts-mcq')">Reading: Multiple Choice</button>
-        <button class="domain-tab-btn" data-domain="ielts-task1" onclick="selectDomainTab('ielts-task1')">Writing: Task 1 Synthesis</button>
-        <button class="domain-tab-btn" data-domain="ielts-task2" onclick="selectDomainTab('ielts-task2')">Writing: Task 2 Cohesion</button>
-      `;
-      $('#practice-desmos-btn')?.classList.add('hidden');
-    }
-  }
 }
 
 // ── 5-Destination Hash Routing ──
@@ -316,15 +236,11 @@ function handleRoute() {
 // SECTION 1: TODAY (LEARNING COMMAND CENTER)
 // ═══════════════════════════════════════════════════════════════
 function renderToday() {
-  const ws = getCurWS();
-  const isSAT = db.activeWorkspace === 'sat';
-
-  // Compute accuracy & question stats
   let totalQ = 0, totalCorrect = 0;
-  let weakSkill = isSAT ? 'Inferences' : 'True / False / Not Given';
+  let weakSkill = 'Inferences';
   let minAcc = 100;
 
-  Object.entries(ws.skills || {}).forEach(([skill, s]) => {
+  Object.entries(db.skills || {}).forEach(([skill, s]) => {
     totalQ += (s.total || 0);
     totalCorrect += (s.correct || 0);
     if (s.total >= 2) {
@@ -345,7 +261,7 @@ function renderToday() {
   if (focusReason) {
     focusReason.textContent = totalQ > 0 
       ? `Độ chính xác hiện tại là ${minAcc === 100 ? overallAcc : minAcc}% — hoàn thành bài luyện 12 phút để nâng cao.`
-      : (isSAT ? 'Kỹ năng nền tảng quan trọng nhất trong cấu trúc Digital SAT 2026.' : 'Kỹ năng bẫy paraphrase cốt lõi trong IELTS Reading.');
+      : 'Kỹ năng nền tảng quan trọng nhất trong cấu trúc Digital SAT 2026.';
   }
 
   // Update Trajectory Card
@@ -357,7 +273,7 @@ function renderToday() {
   // Update Error Trap Alert Card
   const trapName = $('#trap-alert-name');
   if (trapName) {
-    trapName.textContent = isSAT ? 'Over-Inference & Extreme Scope' : 'True / False / Not Given Paraphrase Gap';
+    trapName.textContent = 'Over-Inference & Extreme Scope Trap';
   }
 }
 
@@ -375,9 +291,7 @@ let selectedChoice = null;
 let questionStartTime = Date.now();
 
 async function loadPracticeSession(domainKey = null) {
-  const isSAT = db.activeWorkspace === 'sat';
-  const key = domainKey || (isSAT ? 'rw-info' : 'ielts-all');
-
+  const key = domainKey || 'rw-info';
   practicePool = await loadQuestions(key);
   if (!practicePool || practicePool.length === 0) {
     practicePool = await loadQuestions('rw-info');
@@ -405,6 +319,12 @@ function renderCurrentQuestion() {
   // Reset UI
   $('#q-skill-display').textContent = q.skill || q.domain || 'Deliberate Practice';
   $('#q-difficulty-display').textContent = `Difficulty: Level ${q.difficulty || 3}`;
+
+  const isMath = (q.domain || '').toLowerCase().includes('math') || (q.skill || '').toLowerCase().includes('algebra') || (q.skill || '').toLowerCase().includes('geometry');
+  const desmosBtn = $('#practice-desmos-btn');
+  if (desmosBtn) {
+    desmosBtn.style.display = isMath ? 'inline-block' : 'none';
+  }
 
   const passageBox = $('#q-passage-box');
   if (q.passage) {
@@ -450,108 +370,108 @@ function renderCurrentQuestion() {
 
 window.selectChoice = function(letter) {
   selectedChoice = letter;
-  $$('.answer-option').forEach(opt => {
-    opt.classList.toggle('selected', opt.dataset.choice === letter);
+  $$('.answer-option').forEach(btn => {
+    btn.classList.toggle('selected', btn.dataset.choice === letter);
   });
 };
 
-window.submitCurrentAnswer() = function() {
-  if (!currentQuestion) return;
+window.submitCurrentAnswer = function() {
+  const q = currentQuestion;
+  if (!q) return;
 
-  let answer = selectedChoice;
-  if (currentQuestion.is_grid_in) {
+  let userAns = selectedChoice;
+  if (!userAns && q.is_grid_in) {
     const input = $('#grid-in-input');
-    if (input) answer = input.value.trim();
+    userAns = input ? input.value.trim() : null;
   }
 
-  if (!answer) {
-    alert('Vui lòng chọn hoặc nhập câu trả lời trước khi kiểm tra.');
+  if (!userAns) {
+    alert('Vui lòng chọn một phương án trả lời trước khi kiểm tra!');
     return;
   }
 
-  const correct = String(answer).trim().toLowerCase() === String(currentQuestion.correct_answer).trim().toLowerCase();
-  const timeTakenSec = Math.max(1, Math.round((Date.now() - questionStartTime) / 1000));
-  const ws = getCurWS();
+  const timeTakenSec = Math.round((Date.now() - questionStartTime) / 1000);
+  const isCorrect = String(userAns).trim().toLowerCase() === String(q.correct_answer).trim().toLowerCase();
 
-  // Record to skills progress
-  const skill = currentQuestion.skill || 'General';
-  if (!ws.skills[skill]) ws.skills[skill] = { correct: 0, total: 0, history: [] };
-  ws.skills[skill].total++;
-  if (correct) ws.skills[skill].correct++;
-  ws.skills[skill].history.push({ correct, timestamp: Date.now(), timeTakenSec });
+  // Update DB Skills Stats
+  const skill = q.skill || 'General';
+  if (!db.skills[skill]) db.skills[skill] = { correct: 0, total: 0, history: [] };
+  db.skills[skill].total++;
+  if (isCorrect) db.skills[skill].correct++;
+  db.skills[skill].history.push({ correct: isCorrect, timestamp: Date.now(), timeTakenSec });
 
-  // Record error if wrong
-  if (!correct) {
-    ws.errors.unshift({
-      question_id: currentQuestion.question_id || 'Q-' + Date.now(),
-      domain: currentQuestion.domain || 'Reading',
+  // Record Error if incorrect
+  if (!isCorrect) {
+    db.errors.unshift({
+      question_id: q.question_id || 'PRACTICE-Q',
+      domain: q.domain || 'Digital SAT',
       skill: skill,
-      answer: answer,
-      correct_answer: currentQuestion.correct_answer,
-      error_type: currentQuestion.error_type || 'COGNITIVE_DISTRACTOR',
+      answer: userAns,
+      correct_answer: q.correct_answer,
+      error_type: q.error_type || 'COGNITIVE_DISTRACTOR',
       timestamp: Date.now()
     });
-    if (ws.errors.length > 100) ws.errors.pop();
+    if (db.errors.length > 100) db.errors.pop();
   }
   save();
 
-  // Highlight choices
-  $$('.answer-option').forEach(opt => {
-    const ch = opt.dataset.choice;
-    if (ch === currentQuestion.correct_answer) opt.classList.add('correct');
-    else if (ch === answer && !correct) opt.classList.add('wrong');
-  });
-
-  // ── Render 6-Stage Deliberate Feedback ──
-  renderDeliberateFeedback(correct, timeTakenSec);
+  // Display 6-Part Feedback
+  showDeliberateFeedback(isCorrect, userAns, q, timeTakenSec);
 };
 
-function renderDeliberateFeedback(correct, timeTakenSec) {
-  const q = currentQuestion;
+function showDeliberateFeedback(isCorrect, userAns, q, timeTakenSec) {
   const panel = $('#feedback-panel');
   if (!panel) return;
 
-  // 01 Result
+  $('#q-action-bar').style.display = 'none';
+  panel.style.display = 'block';
+
+  // 01 Result Banner
   const banner = $('#fb-result-banner');
   const title = $('#fb-result-title');
-  if (banner && title) {
-    banner.className = `feedback-result-banner ${correct ? 'success' : 'review'}`;
-    title.textContent = correct ? '✓ Chính xác! (Correct)' : '⚠️ Cần Xem Lại & Khắc Phục (Needs Review)';
-  }
   const timeEl = $('#fb-time-taken');
-  if (timeEl) timeEl.textContent = `Thời gian thực hiện: ${timeTakenSec}s`;
 
-  // 02 Why
-  const whyEl = $('#fb-why-text');
-  if (whyEl) whyEl.textContent = q.explanation || 'Đáp án đúng dựa trên bằng chứng trực tiếp từ đoạn văn.';
+  banner.className = `feedback-result-banner ${isCorrect ? 'success' : 'error'}`;
+  title.innerHTML = isCorrect 
+    ? `✓ Chính xác! (Correct: ${escapeHTML(q.correct_answer)})`
+    : `⚠️ Chưa chính xác. Bạn chọn [${escapeHTML(userAns)}] · Đáp án đúng là [${escapeHTML(q.correct_answer)}]`;
+  timeEl.textContent = `Thời gian hoàn thành: ${timeTakenSec}s`;
 
-  // 03 Why Not (Distractor analysis)
-  const whyNotContainer = $('#fb-whynot-container');
-  if (whyNotContainer) {
-    if (q.why_others_wrong && typeof q.why_others_wrong === 'object') {
-      whyNotContainer.innerHTML = Object.entries(q.why_others_wrong).map(([letter, reason]) => `
-        <div style="margin-bottom:0.4rem;">
-          <strong>Phương án ${letter}:</strong> ${escapeHTML(reason)}
-        </div>
-      `).join('');
-    } else {
-      whyNotContainer.innerHTML = 'Các phương án còn lại chứa bẫy suy diễn vượt phạm vi hoặc thông tin không được văn bản xác thực.';
-    }
+  // 02 Why (Correct Evidence)
+  $('#fb-why-text').textContent = q.explanation || 'Đáp án này đối chiếu chuẩn xác với dữ kiện và tiền đề tác giả đã cung cấp.';
+
+  // 03 Why Not (Distractors analysis)
+  const whyNotBox = $('#fb-whynot-container');
+  if (q.why_others_wrong && typeof q.why_others_wrong === 'object') {
+    whyNotBox.innerHTML = Object.entries(q.why_others_wrong).map(([letter, reason]) => `
+      <div class="mb-1"><strong>Phương án ${letter}:</strong> ${escapeHTML(reason)}</div>
+    `).join('');
+  } else {
+    whyNotBox.innerHTML = 'Các phương án còn lại chứa bẫy suy diễn mở rộng quá đà (Over-Inference) hoặc đảo ngược mối quan hệ logic.';
   }
 
   // 04 Thinking Strategy
-  const stratEl = $('#fb-strategy-text');
-  if (stratEl) stratEl.textContent = q.thinking_framework || 'Đối chiếu 3 điểm chốt: Chủ ngữ, Trạng thái logic và Điều kiện giới hạn.';
+  $('#fb-strategy-text').textContent = q.thinking_framework || 'Khung tư duy: Xác định tiền đề (GIVEN) → Giới hạn phạm vi (BOUNDARY) → Đối chiếu trực tiếp (VERIFY).';
 
-  // 05 Error Pattern
-  const trapTag = $('#fb-error-pattern-tag');
-  const trapText = $('#fb-trap-text');
-  if (trapTag) trapTag.textContent = q.error_type || (correct ? 'MASTERY' : 'OVER_INFERENCE');
-  if (trapText) trapText.textContent = q.common_trap || 'Bẫy thường gặp: Lựa chọn câu có từ ngữ giống đề bài nhưng đổi hướng lập luận.';
+  // 05 Error Pattern / Trap
+  const trapBlock = $('#fb-error-pattern-block');
+  if (!isCorrect) {
+    trapBlock.style.display = 'block';
+    $('#fb-error-pattern-tag').textContent = q.error_type || 'COGNITIVE_DISTRACTOR';
+    $('#fb-trap-text').textContent = q.common_trap || 'Bẫy nhận thức phổ biến: Lựa chọn câu có từ ngữ giống bài đọc nhưng ý nghĩa đã bị biến đổi.';
+  } else {
+    trapBlock.style.display = 'none';
+  }
 
-  // Show panel, hide submit
-  $('#q-action-bar').style.display = 'none';
-  panel.style.display = 'block';
+  // Highlight choices
+  $$('.answer-option').forEach(btn => {
+    const c = btn.dataset.choice;
+    btn.classList.remove('selected');
+    if (c === q.correct_answer) btn.classList.add('correct');
+    else if (c === userAns && !isCorrect) btn.classList.add('wrong');
+  });
+
+  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 window.nextPracticeQuestion = function() {
@@ -560,12 +480,16 @@ window.nextPracticeQuestion = function() {
 };
 
 window.trySimilarQuestion = function() {
-  const currentSkill = currentQuestion?.skill;
-  const similar = practicePool.filter(q => q.skill === currentSkill && q.question_id !== currentQuestion?.question_id);
-  if (similar.length > 0) {
-    currentPracticeIdx = practicePool.indexOf(similar[0]);
+  const curSkill = currentQuestion ? currentQuestion.skill : null;
+  if (!curSkill) { nextPracticeQuestion(); return; }
+
+  const candidates = practicePool.filter((q, idx) => idx !== currentPracticeIdx && q.skill === curSkill);
+  if (candidates.length > 0) {
+    const pick = candidates[Math.floor(Math.random() * candidates.length)];
+    currentPracticeIdx = practicePool.indexOf(pick);
     renderCurrentQuestion();
   } else {
+    alert('Đã giải quyết hết câu cùng kỹ năng trong gói này, chuyển sang câu kế tiếp!');
     nextPracticeQuestion();
   }
 };
@@ -575,15 +499,10 @@ window.trySimilarQuestion = function() {
 // ═══════════════════════════════════════════════════════════════
 let flashcardDeck = [];
 let currentCardIdx = 0;
-let currentFcType = null;
+let currentFcType = 'vocabulary_direct_hits';
 
 async function renderReview(deckType = null) {
-  const ws = getCurWS();
-  const isSAT = db.activeWorkspace === 'sat';
-
-  if (!deckType) {
-    currentFcType = isSAT ? 'vocabulary_direct_hits' : 'ielts';
-  } else {
+  if (deckType) {
     currentFcType = deckType;
   }
 
@@ -592,7 +511,7 @@ async function renderReview(deckType = null) {
   let dueCount = 0;
   const now = Date.now();
   flashcardDeck.forEach(c => {
-    const s = ws.flashcardState[c.card_id];
+    const s = db.flashcardState[c.card_id];
     if (!s || !s.due || s.due <= now) dueCount++;
   });
 
@@ -600,23 +519,22 @@ async function renderReview(deckType = null) {
   if (dueEl) dueEl.textContent = dueCount || flashcardDeck.length;
 
   const errEl = $('#review-mistakes-count');
-  if (errEl) errEl.textContent = (ws.errors || []).length;
+  if (errEl) errEl.textContent = (db.errors || []).length;
 
   // Render Mistake Ledger
   renderMistakeLedger();
 }
 
 function renderMistakeLedger() {
-  const ws = getCurWS();
   const container = $('#mistakes-list-container');
   if (!container) return;
 
-  if (!ws.errors || ws.errors.length === 0) {
+  if (!db.errors || db.errors.length === 0) {
     container.innerHTML = '<p class="text-muted text-sm py-4 text-center">Chưa ghi nhận lỗi sai nào. Hãy tiếp tục luyện tập!</p>';
     return;
   }
 
-  container.innerHTML = ws.errors.slice(0, 10).map((err, idx) => `
+  container.innerHTML = db.errors.slice(0, 10).map(err => `
     <div class="mistake-item-card">
       <div>
         <div class="flex items-center gap-2 mb-1">
@@ -638,6 +556,7 @@ window.startFlashcardReview = function(deckType = null) {
   wrapper.style.display = 'block';
   currentCardIdx = 0;
   if (deckType) {
+    currentFcType = deckType;
     renderReview(deckType).then(() => renderFlashcardCard());
   } else {
     renderFlashcardCard();
@@ -654,7 +573,7 @@ function renderFlashcardCard() {
   // Deck label
   const deckEl = $('#fc-deck-name');
   if (deckEl) {
-    deckEl.textContent = c.category ? `Deck: ${c.category}` : (db.activeWorkspace === 'sat' ? 'Deck: Direct Hits Vocabulary' : 'Deck: IELTS Academic Word List');
+    deckEl.textContent = c.category ? `Deck: ${c.category}` : 'Deck: Direct Hits Vocabulary';
   }
 
   // Front
@@ -665,6 +584,9 @@ function renderFlashcardCard() {
       const phonetic = c.front.phonetic ? `<span style="font-size:1.05rem;color:var(--color-muted-dark);display:block;margin-top:0.35rem;font-family:monospace;font-weight:500;">${escapeHTML(c.front.phonetic)}</span>` : '';
       frontMain.innerHTML = `${escapeHTML(c.front.word)} ${phonetic}`;
       frontContext.textContent = c.front.context ? `"${c.front.context}"` : '';
+    } else if (c.front.concept) {
+      frontMain.textContent = c.front.concept;
+      frontContext.textContent = c.front.formula || '';
     } else if (c.front.phrase) {
       frontMain.textContent = c.front.phrase;
       frontContext.textContent = c.front.function ? `Chức năng: ${c.front.function}` : '';
@@ -681,14 +603,29 @@ function renderFlashcardCard() {
       if (c.back.vietnamese) {
         bHtml += `<div style="font-size:1.15rem;font-weight:700;color:var(--color-primary);margin-bottom:0.5rem;">${escapeHTML(c.back.vietnamese)}</div>`;
       }
+      if (c.back.rule) {
+        bHtml += `<div style="margin-bottom:0.4rem;font-weight:bold;color:#1D4ED8;">${escapeHTML(c.back.rule)}</div>`;
+      }
+      if (c.back.meaning) {
+        bHtml += `<div style="margin-bottom:0.4rem;color:var(--color-ink);"><strong>Ý nghĩa:</strong> ${escapeHTML(c.back.meaning)}</div>`;
+      }
       if (c.back.definition) {
         bHtml += `<div style="margin-bottom:0.4rem;color:var(--color-ink);"><strong>Định nghĩa học thuật:</strong> ${escapeHTML(c.back.definition)}</div>`;
+      }
+      if (c.back.synonyms && Array.isArray(c.back.synonyms)) {
+        bHtml += `<div style="margin-bottom:0.4rem;"><strong>Từ đồng nghĩa:</strong> <span style="color:#0284C7;font-weight:600;">${escapeHTML(c.back.synonyms.join(' • '))}</span></div>`;
       }
       if (c.back.collocations && Array.isArray(c.back.collocations)) {
         bHtml += `<div style="margin-bottom:0.4rem;"><strong>Cụm từ đi kèm (Collocations):</strong> <span style="color:#0284C7;font-weight:600;">${escapeHTML(c.back.collocations.join(' • '))}</span></div>`;
       }
-      if (c.back.example) {
-        bHtml += `<div style="margin-bottom:0.4rem;font-style:italic;color:var(--color-muted-dark);"><strong>Ví dụ chuẩn Band 8+:</strong> "${escapeHTML(c.back.example)}"</div>`;
+      if (c.back.contrast) {
+        bHtml += `<div style="margin-bottom:0.4rem;color:#C74A4A;"><strong>Tránh nhầm lẫn:</strong> ${escapeHTML(c.back.contrast)}</div>`;
+      }
+      if (c.back.tip) {
+        bHtml += `<div style="margin-top:0.4rem;padding:0.45rem 0.65rem;background:#EFF6FF;border-radius:var(--radius);font-size:0.8rem;color:#1E3A8A;">💡 <strong>Mẹo Desmos / Tư duy:</strong> ${escapeHTML(c.back.tip)}</div>`;
+      }
+      if (c.back.common_error) {
+        bHtml += `<div style="margin-top:0.4rem;padding:0.45rem 0.65rem;background:#FEF2F2;border-radius:var(--radius);font-size:0.8rem;color:#991B1B;">⚠️ <strong>Bẫy phổ biến:</strong> ${escapeHTML(c.back.common_error)}</div>`;
       }
       if (c.back.academic_tip) {
         bHtml += `<div style="margin-top:0.5rem;padding:0.45rem 0.65rem;background:var(--color-canvas);border-radius:var(--radius);border:1px solid var(--color-border);font-size:0.8rem;color:var(--color-ink);">💡 <strong>Mẹo sư phạm:</strong> ${escapeHTML(c.back.academic_tip)}</div>`;
@@ -712,8 +649,7 @@ window.flipFlashcard = function() {
 window.rateFlashcard = function(rating) {
   const c = flashcardDeck[currentCardIdx];
   if (c) {
-    const ws = getCurWS();
-    const cur = ws.flashcardState[c.card_id] || { ease: 2.5, interval: 1, reviews: 0 };
+    const cur = db.flashcardState[c.card_id] || { ease: 2.5, interval: 1, reviews: 0 };
     cur.reviews++;
     // FSRS interval scaling
     if (rating === 1) cur.interval = 1;
@@ -721,7 +657,7 @@ window.rateFlashcard = function(rating) {
     else if (rating === 3) cur.interval = Math.max(2, cur.interval * 2.2);
     else if (rating === 4) cur.interval = Math.max(4, cur.interval * 3.5);
     cur.due = Date.now() + cur.interval * 86400000;
-    ws.flashcardState[c.card_id] = cur;
+    db.flashcardState[c.card_id] = cur;
     save();
   }
 
@@ -741,7 +677,7 @@ window.retryMistakeItem = function(skillName) {
 };
 
 // ═══════════════════════════════════════════════════════════════
-// SECTION 4: TEST & MOCK EXAMS (FULL EXAM ENGINE)
+// SECTION 4: TEST & MOCK EXAMS (6 SPECIALIZED SAT SCENARIOS)
 // ═══════════════════════════════════════════════════════════════
 let activeExam = {
   testId: null,
@@ -757,7 +693,6 @@ let activeExam = {
 };
 
 function renderTest() {
-  const isSAT = db.activeWorkspace === 'sat';
   const grid = $('#test-pack-grid');
   if (!grid) return;
 
@@ -768,132 +703,85 @@ function renderTest() {
   if (resultsArea) resultsArea.style.display = 'none';
   grid.style.display = 'grid';
 
-  if (isSAT) {
-    grid.innerHTML = `
-      <div class="test-pack-card featured">
-        <div>
-          <span class="plan-badge mb-2">Digital SAT Full Simulation</span>
-          <h3 style="font-size:1.15rem;font-weight:800;">Digital SAT Official Practice Pack 1</h3>
-          <p class="text-xs text-muted mt-1">Trọn vẹn 2 Module Reading &amp; Writing + 2 Module Math (98 câu), bám sát khảo thí College Board 2026.</p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
-          <span class="text-xs font-semibold">134 phút · 98 câu</span>
-          <button class="btn-primary-action text-xs" onclick="startMockExam('sat', 'sat-pt1')">Vào Thi Thử →</button>
-        </div>
+  grid.innerHTML = `
+    <!-- Scenario 1: Full Adaptive Mock Exam -->
+    <div class="test-pack-card featured">
+      <div>
+        <span class="plan-badge mb-2">Digital SAT Full Adaptive Exam</span>
+        <h3 style="font-size:1.15rem;font-weight:800;">Digital SAT Official Practice Pack 1</h3>
+        <p class="text-xs text-muted mt-1">Trọn vẹn 2 Module Reading &amp; Writing + 2 Module Math (54 câu khảo thí phân loại cao), mô phỏng cơ chế chia nhánh thích ứng chuẩn College Board 2026.</p>
       </div>
+      <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+        <span class="text-xs font-semibold">65 phút · 54 câu</span>
+        <button class="btn-primary-action text-xs" onclick="startMockExam('sat', 'sat-pt1')">Vào Thi Thử →</button>
+      </div>
+    </div>
 
-      <div class="test-pack-card">
-        <div>
-          <span class="tag mb-2">Digital SAT Mock 2</span>
-          <h3 style="font-size:1.15rem;font-weight:800;">Digital SAT Official Practice Pack 2</h3>
-          <p class="text-xs text-muted mt-1">Bộ đề chuẩn hóa số 2 với cấu trúc phân hóa thích ứng cao (Adaptive Test).</p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
-          <span class="text-xs font-semibold">134 phút · 98 câu</span>
-          <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-pt2')">Vào Thi Thử →</button>
-        </div>
+    <!-- Scenario 2: Trap Buster Sprint -->
+    <div class="test-pack-card">
+      <div>
+        <span class="tag mb-2" style="background:#FEE2E2;color:#991B1B;">Trap Buster Sprint</span>
+        <h3 style="font-size:1.15rem;font-weight:800;">Trap Buster: Khắc Chế Bẫy Tư Duy</h3>
+        <p class="text-xs text-muted mt-1">10 câu hỏi bẫy kinh điển: Over-Inference, Scope Shift, Faulty Comparison và Dấu câu Comma Splice.</p>
       </div>
+      <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+        <span class="text-xs font-semibold">15 phút · 10 câu</span>
+        <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-trap-buster')">Khắc Chế Bẫy →</button>
+      </div>
+    </div>
 
-      <div class="test-pack-card">
-        <div>
-          <span class="tag mb-2">Digital SAT Mock 3</span>
-          <h3 style="font-size:1.15rem;font-weight:800;">Digital SAT Official Practice Pack 3</h3>
-          <p class="text-xs text-muted mt-1">Bộ đề nâng cao tập trung kiểm tra tốc độ tư duy và kỹ năng phân tích phản biện.</p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
-          <span class="text-xs font-semibold">134 phút · 98 câu</span>
-          <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-pt3')">Vào Thi Thử →</button>
-        </div>
+    <!-- Scenario 3: Desmos Speed Mastery -->
+    <div class="test-pack-card">
+      <div>
+        <span class="tag mb-2" style="background:#ECFDF5;color:#065F46;">Desmos Speed Mastery</span>
+        <h3 style="font-size:1.15rem;font-weight:800;">Desmos Speed Hacks &amp; Fast Solver</h3>
+        <p class="text-xs text-muted mt-1">12 câu hỏi Algebra &amp; Parabolas giải siêu tốc bằng máy tính đồ thị Desmos (hệ phương trình, số nghiệm, cực trị).</p>
       </div>
+      <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+        <span class="text-xs font-semibold">15 phút · 12 câu</span>
+        <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-desmos-mastery')">Bấm Máy Desmos →</button>
+      </div>
+    </div>
 
-      <div class="test-pack-card">
-        <div>
-          <span class="tag mb-2" style="background:#EFF6FF;color:#1D4ED8;">Math Hard Sprint</span>
-          <h3 style="font-size:1.15rem;font-weight:800;">Math Hard Module Sprint</h3>
-          <p class="text-xs text-muted mt-1">22 câu hỏi phân loại cao (Level 4-5) Algebra &amp; Advanced Math với máy tính Desmos.</p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
-          <span class="text-xs font-semibold">35 phút · 22 câu</span>
-          <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-math-sprint')">Luyện Tốc Độ →</button>
-        </div>
+    <!-- Scenario 4: Vocabulary Direct Hits Marathon -->
+    <div class="test-pack-card">
+      <div>
+        <span class="tag mb-2" style="background:#FEF3C7;color:#92400E;">Vocab Direct Hits</span>
+        <h3 style="font-size:1.15rem;font-weight:800;">Vocabulary Direct Hits Marathon</h3>
+        <p class="text-xs text-muted mt-1">15 câu Words in Context &amp; Nghĩa phụ (Secondary Meanings) học thuật nâng cao xuất hiện dày đặc trong đề SAT.</p>
       </div>
+      <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+        <span class="text-xs font-semibold">15 phút · 15 câu</span>
+        <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-vocab-marathon')">Luyện Marathon →</button>
+      </div>
+    </div>
 
-      <div class="test-pack-card">
-        <div>
-          <span class="tag mb-2" style="background:#EFF6FF;color:#1D4ED8;">RW Section Sprint</span>
-          <h3 style="font-size:1.15rem;font-weight:800;">Reading &amp; Writing Sprint</h3>
-          <p class="text-xs text-muted mt-1">27 câu hỏi trọn vẹn 1 Module với các dạng Inferences, Evidence và Craft &amp; Structure.</p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
-          <span class="text-xs font-semibold">32 phút · 27 câu</span>
-          <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-rw-sprint')">Luyện Tốc Độ →</button>
-        </div>
+    <!-- Scenario 5: Hard Module Math Sprint -->
+    <div class="test-pack-card">
+      <div>
+        <span class="tag mb-2" style="background:#EFF6FF;color:#1D4ED8;">Math Level 4-5</span>
+        <h3 style="font-size:1.15rem;font-weight:800;">Hard Module Math Sprint</h3>
+        <p class="text-xs text-muted mt-1">22 câu hỏi phân loại cao (Level 4-5) Advanced Math, Hàm số phi tuyến và Hình học - Lượng giác bứt phá 780-800.</p>
       </div>
+      <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+        <span class="text-xs font-semibold">35 phút · 22 câu</span>
+        <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-math-sprint')">Chinh Phục 800 Math →</button>
+      </div>
+    </div>
 
-      <div class="test-pack-card">
-        <div>
-          <span class="tag mb-2">Quick 10-Min</span>
-          <h3 style="font-size:1.15rem;font-weight:800;">Speed Diagnostic 10 Phút</h3>
-          <p class="text-xs text-muted mt-1">10 câu hỏi ngẫu nhiên tổng hợp để khởi động não bộ trước buổi học.</p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
-          <span class="text-xs font-semibold">10 phút · 10 câu</span>
-          <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-quick-sprint')">Khởi Động →</button>
-        </div>
+    <!-- Scenario 6: Hard Module Reading & Writing Sprint -->
+    <div class="test-pack-card">
+      <div>
+        <span class="tag mb-2" style="background:#EFF6FF;color:#1D4ED8;">RW Level 4-5</span>
+        <h3 style="font-size:1.15rem;font-weight:800;">Hard Module Reading &amp; Writing Sprint</h3>
+        <p class="text-xs text-muted mt-1">27 câu hỏi phân hóa đỉnh cao: Inferences phức tạp, Bằng chứng định lượng (Command of Evidence) và Cross-Text.</p>
       </div>
-    `;
-  } else {
-    // IELTS Workspace
-    grid.innerHTML = `
-      <div class="test-pack-card featured">
-        <div>
-          <span class="plan-badge mb-2" style="background:#ECFDF5;color:#065F46;border-color:#A7F3D0;">IELTS Full Reading Mock</span>
-          <h3 style="font-size:1.15rem;font-weight:800;">IELTS Academic Reading Test 1</h3>
-          <p class="text-xs text-muted mt-1">Mô phỏng chân thực 60 phút gồm 3 bài đọc học thuật: Biomimetics Architecture, Cave Art &amp; Writing, Deep Neural Syntax.</p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
-          <span class="text-xs font-semibold">60 phút · 20 câu</span>
-          <button class="btn-primary-action text-xs" onclick="startMockExam('ielts', 'ielts-pt1')">Vào Thi Thử →</button>
-        </div>
+      <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+        <span class="text-xs font-semibold">32 phút · 27 câu</span>
+        <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-rw-sprint')">Bứt Phá 750+ RW →</button>
       </div>
-
-      <div class="test-pack-card">
-        <div>
-          <span class="tag mb-2" style="background:#ECFDF5;color:#065F46;">IELTS Full Reading Mock 2</span>
-          <h3 style="font-size:1.15rem;font-weight:800;">IELTS Academic Reading Test 2</h3>
-          <p class="text-xs text-muted mt-1">3 bài đọc học thuật nâng cao: Hydrokinetic Marine Energy, Behavioral Nudges, và Transgenerational Epigenetics.</p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
-          <span class="text-xs font-semibold">60 phút · 20 câu</span>
-          <button class="btn btn-outline text-xs" onclick="startMockExam('ielts', 'ielts-pt2')">Vào Thi Thử →</button>
-        </div>
-      </div>
-
-      <div class="test-pack-card">
-        <div>
-          <span class="tag mb-2" style="background:#ECFDF5;color:#065F46;">IELTS Reading Sprint</span>
-          <h3 style="font-size:1.15rem;font-weight:800;">Reading T/F/NG &amp; Headings Sprint</h3>
-          <p class="text-xs text-muted mt-1">12 câu hỏi tập trung rèn luyện phản xạ bẫy paraphrase và tóm tắt đoạn văn.</p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
-          <span class="text-xs font-semibold">20 phút · 12 câu</span>
-          <button class="btn btn-outline text-xs" onclick="startMockExam('ielts', 'ielts-reading-sprint')">Luyện Tốc Độ →</button>
-        </div>
-      </div>
-
-      <div class="test-pack-card">
-        <div>
-          <span class="tag mb-2" style="background:#FEF3C7;color:#92400E;">Writing Strategy Sprint</span>
-          <h3 style="font-size:1.15rem;font-weight:800;">Writing Task 1 &amp; 2 Masterclass Sprint</h3>
-          <p class="text-xs text-muted mt-1">10 câu hỏi chiến lược tổng hợp biểu đồ Task 1 và cấu trúc lập luận, hedging Task 2 chuẩn Band 8+.</p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
-          <span class="text-xs font-semibold">25 phút · 10 câu</span>
-          <button class="btn btn-outline text-xs" onclick="startMockExam('ielts', 'ielts-writing-sprint')">Rèn Lập Luận →</button>
-        </div>
-      </div>
-    `;
-  }
+    </div>
+  `;
 }
 
 window.startMockExam = async function(examType, testId) {
@@ -903,77 +791,62 @@ window.startMockExam = async function(examType, testId) {
   let durationMinutes = 60;
 
   try {
-    if (testId === 'sat-pt1') {
-      const r = await fetch('data/practice_tests/practice_test_1.json');
+    if (testId === 'sat-pt1' || testId === 'sat-pt2' || testId === 'sat-pt3') {
+      const num = testId.replace('sat-pt', '');
+      const r = await fetch(`data/practice_tests/practice_test_${num}.json`);
       const d = await r.json();
-      title = d.title || 'Digital SAT Official Practice Test 1';
-      durationMinutes = 60;
+      title = d.title || `Digital SAT Official Practice Test ${num}`;
+      durationMinutes = 65;
       const rw1 = d.reading_and_writing?.module_1 || [];
-      const rw2 = d.reading_and_writing?.module_2 || [];
+      const rw2 = d.reading_and_writing?.module_2_hard || d.reading_and_writing?.module_2 || [];
       const m1 = d.math?.module_1 || [];
-      const m2 = d.math?.module_2 || [];
+      const m2 = d.math?.module_2_hard || d.math?.module_2 || [];
       questions = [...rw1, ...rw2, ...m1, ...m2];
-    } else if (testId === 'sat-pt2') {
-      const r = await fetch('data/practice_tests/practice_test_2.json');
-      const d = await r.json();
-      title = d.title || 'Digital SAT Official Practice Test 2';
-      durationMinutes = 60;
-      const rw1 = d.reading_and_writing?.module_1 || [];
-      const rw2 = d.reading_and_writing?.module_2 || [];
-      const m1 = d.math?.module_1 || [];
-      const m2 = d.math?.module_2 || [];
-      questions = [...rw1, ...rw2, ...m1, ...m2];
-    } else if (testId === 'sat-pt3') {
-      const r = await fetch('data/practice_tests/practice_test_3.json');
-      const d = await r.json();
-      title = d.title || 'Digital SAT Official Practice Test 3';
-      durationMinutes = 60;
-      const rw1 = d.reading_and_writing?.module_1 || [];
-      const rw2 = d.reading_and_writing?.module_2 || [];
-      const m1 = d.math?.module_1 || [];
-      const m2 = d.math?.module_2 || [];
-      questions = [...rw1, ...rw2, ...m1, ...m2];
+    } else if (testId === 'sat-trap-buster') {
+      title = 'Trap Buster: Khắc Chế Bẫy Tư Duy (10 Câu)';
+      durationMinutes = 15;
+      const info = await loadQuestions('rw-info');
+      const craft = await loadQuestions('rw-craft');
+      const conv = await loadQuestions('rw-conv');
+      const pool = [
+        ...info.filter(q => q.skill === 'Inferences' || q.difficulty >= 4),
+        ...craft.filter(q => q.skill === 'Cross-Text Connections' || q.difficulty >= 4),
+        ...conv.filter(q => q.skill === 'Boundaries')
+      ];
+      questions = pool.slice(0, 10);
+    } else if (testId === 'sat-desmos-mastery') {
+      title = 'Desmos Speed Hacks & Fast Solver (12 Câu)';
+      durationMinutes = 15;
+      const alg = await loadQuestions('math-alg');
+      const adv = await loadQuestions('math-adv');
+      questions = [...alg.slice(0, 6), ...adv.slice(0, 6)];
+    } else if (testId === 'sat-vocab-marathon') {
+      title = 'Vocabulary Direct Hits Marathon (15 Câu)';
+      durationMinutes = 15;
+      const craft = await loadQuestions('rw-craft');
+      questions = craft.filter(q => q.skill === 'Words in Context').slice(0, 15);
     } else if (testId === 'sat-math-sprint') {
-      title = 'Math Hard Module Sprint (Level 4-5)';
+      title = 'Hard Module Math Sprint (Level 4-5 • 22 Câu)';
       durationMinutes = 35;
       const adv = await loadQuestions('math-adv');
+      const geo = await loadQuestions('math-geo');
       const alg = await loadQuestions('math-alg');
-      questions = [...adv.slice(0, 12), ...alg.slice(0, 10)];
+      const hardPool = [
+        ...adv.filter(q => q.difficulty >= 4),
+        ...geo.filter(q => q.difficulty >= 4),
+        ...alg.filter(q => q.difficulty >= 4)
+      ];
+      questions = hardPool.slice(0, 22);
     } else if (testId === 'sat-rw-sprint') {
-      title = 'Reading & Writing Module 1 Sprint';
+      title = 'Hard Module Reading & Writing Sprint (Level 4-5 • 27 Câu)';
       durationMinutes = 32;
       const info = await loadQuestions('rw-info');
       const craft = await loadQuestions('rw-craft');
-      questions = [...info.slice(0, 14), ...craft.slice(0, 13)];
-    } else if (testId === 'sat-quick-sprint') {
-      title = 'Speed Diagnostic 10 Phút';
-      durationMinutes = 10;
-      const pool = await loadQuestions('rw-info');
-      questions = pool.slice(0, 10);
-    } else if (testId === 'ielts-pt1') {
-      const r = await fetch('data/ielts/ielts_practice_test_1.json');
-      const d = await r.json();
-      title = d.title || 'IELTS Academic Reading Simulation 1';
-      durationMinutes = d.duration_minutes || 60;
-      questions = d.questions || [];
-      (d.passages || []).forEach(p => { passages[p.passage_id] = p; });
-    } else if (testId === 'ielts-pt2') {
-      const r = await fetch('data/ielts/ielts_practice_test_2.json');
-      const d = await r.json();
-      title = d.title || 'IELTS Academic Reading Simulation 2';
-      durationMinutes = d.duration_minutes || 60;
-      questions = d.questions || [];
-      (d.passages || []).forEach(p => { passages[p.passage_id] = p; });
-    } else if (testId === 'ielts-reading-sprint') {
-      title = 'IELTS Reading T/F/NG & Headings Sprint';
-      durationMinutes = 20;
-      const all = await loadQuestions('ielts-all');
-      questions = all.filter(q => q.domain === 'Reading').slice(0, 12);
-    } else if (testId === 'ielts-writing-sprint') {
-      title = 'IELTS Writing Task 1 & 2 Masterclass Sprint';
-      durationMinutes = 25;
-      const all = await loadQuestions('ielts-all');
-      questions = all.filter(q => q.domain === 'Writing').slice(0, 10);
+      const hardPool = [
+        ...info.filter(q => q.difficulty >= 4),
+        ...craft.filter(q => q.difficulty >= 4)
+      ];
+      questions = hardPool.slice(0, 27);
     }
   } catch (e) {
     console.error('Failed to load exam data:', e);
@@ -1000,122 +873,54 @@ window.startMockExam = async function(examType, testId) {
     timerInterval: null
   };
 
-  // Start Timer
-  clearInterval(activeExam.timerInterval);
-  activeExam.timerInterval = setInterval(() => {
-    if (activeExam.secondsRemaining <= 0) {
-      clearInterval(activeExam.timerInterval);
-      alert('Đã hết thời gian làm bài! Hệ thống tự động nộp bài để chấm điểm.');
-      finishTimedSession();
-      return;
-    }
-    activeExam.secondsRemaining--;
-    updateTimerDisplay();
-  }, 1000);
-
-  // Switch views
+  // Switch UI view to Exam Mode
   $('#test-pack-grid').style.display = 'none';
-  const resultsArea = $('#timed-results-area');
-  if (resultsArea) resultsArea.style.display = 'none';
-  $('#timed-exam-area').style.display = 'block';
+  const examArea = $('#timed-exam-area');
+  examArea.style.display = 'block';
 
-  // Toggle Desmos button visibility
-  const desmosBtn = $('#timed-desmos-btn');
-  if (desmosBtn) {
-    desmosBtn.classList.toggle('hidden', examType !== 'sat');
-  }
+  $('#timed-exam-badge').textContent = 'Digital SAT Simulation';
+  $('#timed-exam-title').textContent = title;
 
-  updateTimerDisplay();
-  renderExamCurrentQuestion();
-  window.scrollTo(0, 0);
+  // Render question palette & first question
+  renderExamPalette();
+  renderExamQuestion(0);
+
+  // Start Countdown Timer
+  startExamTimer();
 };
 
-function updateTimerDisplay() {
-  const timerEl = $('#timed-timer');
-  if (!timerEl) return;
-  const s = activeExam.secondsRemaining;
-  const hrs = Math.floor(s / 3600);
-  const mins = Math.floor((s % 3600) / 60);
-  const secs = s % 60;
-  if (hrs > 0) {
-    timerEl.textContent = `${String(hrs).padStart(2, '0')}:${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
-  } else {
-    timerEl.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
-  }
-  timerEl.classList.toggle('warning', s <= 300);
+function startExamTimer() {
+  if (activeExam.timerInterval) clearInterval(activeExam.timerInterval);
+  updateTimerDisplay();
+
+  activeExam.timerInterval = setInterval(() => {
+    activeExam.secondsRemaining--;
+    updateTimerDisplay();
+
+    if (activeExam.secondsRemaining <= 0) {
+      clearInterval(activeExam.timerInterval);
+      alert('Hết giờ làm bài! Hệ thống đang tự động nộp bài và phân tích kết quả.');
+      finishTimedSession();
+    }
+  }, 1000);
 }
 
-function renderExamCurrentQuestion() {
-  const q = activeExam.questions[activeExam.currentIdx];
-  if (!q) return;
+function updateTimerDisplay() {
+  const el = $('#timed-timer');
+  if (!el) return;
 
-  $('#timed-exam-title').textContent = activeExam.title;
-  $('#timed-exam-status').textContent = `Câu ${activeExam.currentIdx + 1} / ${activeExam.questions.length} (${q.skill || q.domain})`;
+  const sec = Math.max(0, activeExam.secondsRemaining);
+  const m = Math.floor(sec / 60);
+  const s = sec % 60;
+  el.textContent = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
 
-  // Render Palette
-  renderExamPalette();
-
-  // Check passage
-  let passageText = q.passage || '';
-  if (!passageText && q.passage_id && activeExam.passages[q.passage_id]) {
-    const pObj = activeExam.passages[q.passage_id];
-    passageText = `<strong>${escapeHTML(pObj.title || '')}</strong>\n\n${escapeHTML(pObj.text || '')}`;
-  }
-
-  const renderContainer = $('#timed-question-render');
-  const curAns = activeExam.userAnswers[activeExam.currentIdx] || '';
-
-  let choicesHtml = '';
-  if (q.choices) {
-    choicesHtml = Object.entries(q.choices).map(([letter, text]) => `
-      <button class="answer-option ${curAns === letter ? 'selected' : ''}" onclick="selectExamChoice('${letter}')">
-        <span class="choice-letter">${letter}</span>
-        <span class="choice-text">${escapeHTML(text)}</span>
-      </button>
-    `).join('');
-  } else if (q.is_grid_in) {
-    choicesHtml = `
-      <div style="padding:1rem 0;">
-        <label class="text-sm font-semibold text-muted block mb-2">Nhập kết quả số (Student-Produced Response):</label>
-        <input type="text" id="exam-gridin-input" class="grid-in-input" value="${escapeHTML(curAns)}" placeholder="e.g. 12 or 4.5" oninput="selectExamChoice(this.value.trim())" />
-      </div>
-    `;
-  }
-
-  if (passageText) {
-    renderContainer.innerHTML = `
-      <div class="exam-split-layout">
-        <div class="exam-passage-pane">
-          <div style="white-space: pre-wrap; font-family: var(--font-body); line-height:1.75;">${passageText}</div>
-        </div>
-        <div class="exam-question-pane">
-          <div class="text-base font-semibold mb-4" style="line-height:1.6;">${escapeHTML(q.question_stem || '')}</div>
-          <div class="flex-col gap-2">${choicesHtml}</div>
-        </div>
-      </div>
-    `;
+  if (sec <= 300) {
+    el.style.color = 'var(--color-error)';
+    el.style.borderColor = 'var(--color-error)';
   } else {
-    renderContainer.innerHTML = `
-      <div style="max-width:760px;margin:0 auto;padding-top:1rem;">
-        <div class="text-base font-semibold mb-4" style="line-height:1.6;">${escapeHTML(q.question_stem || '')}</div>
-        <div class="flex-col gap-2">${choicesHtml}</div>
-      </div>
-    `;
+    el.style.color = 'var(--color-ink)';
+    el.style.borderColor = 'var(--color-border)';
   }
-
-  // Update Flag Button
-  const isFlagged = !!activeExam.flags[activeExam.currentIdx];
-  const flagBtn = $('#timed-flag-btn');
-  if (flagBtn) {
-    flagBtn.textContent = isFlagged ? '🚩 Bỏ Đánh Dấu' : '🚩 Đánh Dấu';
-    flagBtn.style.color = isFlagged ? 'var(--color-warning)' : '';
-  }
-
-  // Update Answered Count & Next/Prev buttons
-  const ansCount = Object.keys(activeExam.userAnswers).length;
-  $('#timed-answered-count').textContent = `${ansCount}/${activeExam.questions.length} đã trả lời`;
-  $('#timed-prev-btn').disabled = (activeExam.currentIdx === 0);
-  $('#timed-next-btn').disabled = (activeExam.currentIdx === activeExam.questions.length - 1);
 }
 
 function renderExamPalette() {
@@ -1124,81 +929,144 @@ function renderExamPalette() {
 
   container.innerHTML = activeExam.questions.map((q, idx) => {
     const isCurrent = idx === activeExam.currentIdx;
-    const isAns = activeExam.userAnswers[idx] !== undefined && activeExam.userAnswers[idx] !== '';
-    const isFlag = !!activeExam.flags[idx];
+    const isAnswered = activeExam.userAnswers[idx] !== undefined && activeExam.userAnswers[idx] !== null;
+    const isFlagged = !!activeExam.flags[idx];
 
     let cls = 'palette-q-btn';
     if (isCurrent) cls += ' current';
-    if (isAns) cls += ' answered';
-    if (isFlag) cls += ' flagged';
+    if (isAnswered) cls += ' answered';
+    if (isFlagged) cls += ' flagged';
 
     return `<button class="${cls}" onclick="jumpToExamQuestion(${idx})">${idx + 1}</button>`;
   }).join('');
-}
 
-window.selectExamChoice = function(choice) {
-  activeExam.userAnswers[activeExam.currentIdx] = choice;
-  // Update choice button UI
-  $$('#timed-question-render .answer-option').forEach(opt => {
-    opt.classList.toggle('selected', opt.querySelector('.choice-letter')?.textContent.trim() === choice);
-  });
-  renderExamPalette();
+  // Update answered count
   const ansCount = Object.keys(activeExam.userAnswers).length;
   $('#timed-answered-count').textContent = `${ansCount}/${activeExam.questions.length} đã trả lời`;
+  $('#timed-exam-status').textContent = `Câu ${activeExam.currentIdx + 1} / ${activeExam.questions.length}`;
+}
+
+function renderExamQuestion(idx) {
+  activeExam.currentIdx = idx;
+  const q = activeExam.questions[idx];
+  if (!q) return;
+
+  const renderArea = $('#timed-question-render');
+  if (!renderArea) return;
+
+  const isMath = (q.domain || '').toLowerCase().includes('math') || (q.skill || '').toLowerCase().includes('algebra') || (q.skill || '').toLowerCase().includes('geometry');
+  const desmosBtn = $('#timed-desmos-btn');
+  if (desmosBtn) {
+    if (isMath) desmosBtn.classList.remove('hidden');
+    else desmosBtn.classList.add('hidden');
+  }
+
+  // Update flag button state
+  const flagBtn = $('#timed-flag-btn');
+  if (flagBtn) {
+    flagBtn.textContent = activeExam.flags[idx] ? '🚩 Bỏ Đánh Dấu' : '🚩 Đánh Dấu';
+  }
+
+  // Handle Passage
+  let passageContent = q.passage || '';
+  if (!passageContent && q.passage_id && activeExam.passages[q.passage_id]) {
+    passageContent = activeExam.passages[q.passage_id].text;
+  }
+
+  // Choices or Grid-in
+  let choicesHtml = '';
+  const userAns = activeExam.userAnswers[idx];
+
+  if (q.choices) {
+    choicesHtml = Object.entries(q.choices).map(([letter, text]) => {
+      const isSelected = userAns === letter;
+      return `
+        <button class="answer-option ${isSelected ? 'selected' : ''}" onclick="selectExamAnswer('${letter}')">
+          <span class="choice-letter">${letter}</span>
+          <span class="choice-text">${escapeHTML(text)}</span>
+        </button>
+      `;
+    }).join('');
+  } else if (q.is_grid_in) {
+    choicesHtml = `
+      <div style="padding:1rem 0;">
+        <label class="text-sm font-semibold text-muted block mb-2">Nhập kết quả số (Student-Produced Response):</label>
+        <input type="text" class="grid-in-input" value="${escapeHTML(userAns || '')}" onchange="selectExamAnswer(this.value)" placeholder="e.g. 4.5 or 12" />
+      </div>
+    `;
+  }
+
+  renderArea.innerHTML = `
+    <div class="exam-split-layout">
+      ${passageContent ? `
+        <div class="exam-passage-pane">
+          <div class="text-xs text-muted mb-2 font-bold uppercase tracking-wider">Đoạn Văn Bài Thi:</div>
+          <div style="line-height:1.7;">${escapeHTML(passageContent)}</div>
+        </div>
+      ` : ''}
+      <div class="exam-question-pane" style="${!passageContent ? 'grid-column: 1 / -1; max-width:800px; margin:0 auto;' : ''}">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="skill-pill">${escapeHTML(q.skill || q.domain || 'Digital SAT')}</span>
+          <span class="difficulty-tag">Level ${q.difficulty || 3}</span>
+        </div>
+        <p class="question-stem mb-4">${escapeHTML(q.question_stem || '')}</p>
+        <div class="choices-list">${choicesHtml}</div>
+      </div>
+    </div>
+  `;
+
+  renderExamPalette();
+}
+
+window.jumpToExamQuestion = function(idx) {
+  renderExamQuestion(idx);
+};
+
+window.selectExamAnswer = function(ans) {
+  activeExam.userAnswers[activeExam.currentIdx] = ans;
+  renderExamPalette();
+  // Re-highlight options in current question
+  $$('#timed-question-render .answer-option').forEach(btn => {
+    btn.classList.toggle('selected', btn.querySelector('.choice-letter')?.textContent === ans);
+  });
 };
 
 window.toggleExamFlag = function() {
-  activeExam.flags[activeExam.currentIdx] = !activeExam.flags[activeExam.currentIdx];
-  renderExamCurrentQuestion();
-};
-
-window.jumpToExamQuestion = function(idx) {
-  if (idx >= 0 && idx < activeExam.questions.length) {
-    activeExam.currentIdx = idx;
-    renderExamCurrentQuestion();
+  const idx = activeExam.currentIdx;
+  activeExam.flags[idx] = !activeExam.flags[idx];
+  renderExamPalette();
+  const flagBtn = $('#timed-flag-btn');
+  if (flagBtn) {
+    flagBtn.textContent = activeExam.flags[idx] ? '🚩 Bỏ Đánh Dấu' : '🚩 Đánh Dấu';
   }
 };
 
 window.prevTimedQuestion = function() {
   if (activeExam.currentIdx > 0) {
-    activeExam.currentIdx--;
-    renderExamCurrentQuestion();
+    renderExamQuestion(activeExam.currentIdx - 1);
   }
 };
 
 window.nextTimedQuestion = function() {
   if (activeExam.currentIdx < activeExam.questions.length - 1) {
-    activeExam.currentIdx++;
-    renderExamCurrentQuestion();
+    renderExamQuestion(activeExam.currentIdx + 1);
   }
 };
 
 window.exitTimedSession = function() {
-  if (confirm('Bạn có chắc chắn muốn thoát khỏi bài thi thử? Mọi câu trả lời chưa nộp sẽ bị hủy.')) {
-    clearInterval(activeExam.timerInterval);
+  if (confirm('Bạn có chắc chắn muốn thoát bài thi? Tiến trình bài làm hiện tại sẽ không được lưu.')) {
+    if (activeExam.timerInterval) clearInterval(activeExam.timerInterval);
     $('#timed-exam-area').style.display = 'none';
     $('#test-pack-grid').style.display = 'grid';
   }
 };
 
 window.finishTimedSession = function() {
-  const total = activeExam.questions.length;
-  const answered = Object.keys(activeExam.userAnswers).length;
-  const unanswered = total - answered;
+  if (activeExam.timerInterval) clearInterval(activeExam.timerInterval);
 
-  if (activeExam.secondsRemaining > 0 && unanswered > 0) {
-    if (!confirm(`Bạn còn ${unanswered} câu chưa trả lời. Bạn có chắc chắn muốn nộp bài ngay bây giờ?`)) {
-      return;
-    }
-  }
-
-  clearInterval(activeExam.timerInterval);
-  const timeSpentSec = activeExam.durationSec - activeExam.secondsRemaining;
-
-  // Grade test
   let correctCount = 0;
-  const ws = getCurWS();
-  const isSAT = db.activeWorkspace === 'sat';
+  const total = activeExam.questions.length;
+  const timeSpentSec = activeExam.durationSec - activeExam.secondsRemaining;
 
   activeExam.questions.forEach((q, idx) => {
     const userAns = activeExam.userAnswers[idx];
@@ -1207,23 +1075,23 @@ window.finishTimedSession = function() {
 
     // Update skill progress in background
     const skill = q.skill || 'General';
-    if (!ws.skills[skill]) ws.skills[skill] = { correct: 0, total: 0, history: [] };
-    ws.skills[skill].total++;
-    if (isCorrect) ws.skills[skill].correct++;
-    ws.skills[skill].history.push({ correct: isCorrect, timestamp: Date.now(), timeTakenSec: Math.round(timeSpentSec / total) });
+    if (!db.skills[skill]) db.skills[skill] = { correct: 0, total: 0, history: [] };
+    db.skills[skill].total++;
+    if (isCorrect) db.skills[skill].correct++;
+    db.skills[skill].history.push({ correct: isCorrect, timestamp: Date.now(), timeTakenSec: Math.round(timeSpentSec / total) });
 
     // Record to errors if wrong
     if (!isCorrect && userAns) {
-      ws.errors.unshift({
+      db.errors.unshift({
         question_id: q.question_id || 'EXAM-Q-' + idx,
-        domain: q.domain || (isSAT ? 'Reading and Writing' : 'Reading'),
+        domain: q.domain || 'Digital SAT',
         skill: skill,
         answer: userAns,
         correct_answer: q.correct_answer,
         error_type: q.error_type || 'COGNITIVE_DISTRACTOR',
         timestamp: Date.now()
       });
-      if (ws.errors.length > 100) ws.errors.pop();
+      if (db.errors.length > 100) db.errors.pop();
     }
   });
 
@@ -1239,33 +1107,16 @@ function showTestResults(correct, total, timeSpentSec) {
   if (!resultsArea) return;
   resultsArea.style.display = 'block';
 
-  const isSAT = db.activeWorkspace === 'sat';
   const pct = Math.round((correct / total) * 100);
-
-  // Scaled Score or Band Score calculation
-  let scoreTitle = '';
-  let scoreSub = '';
-  if (isSAT) {
-    const scaledScore = Math.min(1600, Math.max(400, Math.round(400 + (correct / total) * 1200)));
-    scoreTitle = `${scaledScore} / 1600`;
-    scoreSub = `Độ chính xác: ${pct}% · Trả lời đúng ${correct}/${total} câu · Thời gian: ${Math.floor(timeSpentSec / 60)}m ${timeSpentSec % 60}s`;
-  } else {
-    let band = '5.0';
-    if (pct >= 90) band = '8.5 - 9.0';
-    else if (pct >= 80) band = '7.5 - 8.0';
-    else if (pct >= 70) band = '6.5 - 7.0';
-    else if (pct >= 60) band = '6.0';
-    else if (pct >= 50) band = '5.5';
-    scoreTitle = `IELTS Band ${band}`;
-    scoreSub = `Độ chính xác: ${pct}% · Trả lời đúng ${correct}/${total} câu · Thời gian: ${Math.floor(timeSpentSec / 60)}m ${timeSpentSec % 60}s`;
-  }
+  const scaledScore = Math.min(1600, Math.max(400, Math.round(400 + (correct / total) * 1200)));
+  const scoreTitle = `${scaledScore} / 1600`;
+  const scoreSub = `Độ chính xác: ${pct}% · Trả lời đúng ${correct}/${total} câu · Thời gian làm bài: ${Math.floor(timeSpentSec / 60)}m ${timeSpentSec % 60}s`;
 
   // Generate Review Accordion HTML
   const reviewHtml = activeExam.questions.map((q, idx) => {
     const userAns = activeExam.userAnswers[idx] || 'Chưa trả lời';
     const isCorrect = userAns !== 'Chưa trả lời' && String(userAns).trim().toLowerCase() === String(q.correct_answer).trim().toLowerCase();
 
-    // Why others wrong
     let whyNot = '';
     if (q.why_others_wrong && typeof q.why_others_wrong === 'object') {
       whyNot = Object.entries(q.why_others_wrong).map(([k, v]) => `<div><strong>Phương án ${k}:</strong> ${escapeHTML(v)}</div>`).join('');
@@ -1303,12 +1154,12 @@ function showTestResults(correct, total, timeSpentSec) {
 
   resultsArea.innerHTML = `
     <div class="test-score-banner">
-      <span class="plan-badge mb-2" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Kết Quả Khảo Thí</span>
+      <span class="plan-badge mb-2" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Kết Quả Khảo Thí Digital SAT</span>
       <div class="test-score-number">${scoreTitle}</div>
       <p class="text-sm" style="color:#E2E8F0;">${scoreSub}</p>
       <div class="flex justify-center gap-3 mt-4 flex-wrap">
         <button class="btn btn-outline" style="color:white;border-color:white;" onclick="closeTestResults()">Quay Về Danh Sách Đề</button>
-        <button class="btn" style="background:white;color:var(--color-ink);font-weight:700;" onclick="window.print()">🖨️ In Bảng Điểm (Print/PDF)</button>
+        <button class="btn" style="background:white;color:var(--color-ink);font-weight:700;" onclick="exportPDFReport('scorecard')">🖨️ In Phiếu Điểm (Print/PDF)</button>
       </div>
     </div>
 
@@ -1325,11 +1176,11 @@ window.closeTestResults = function() {
   renderTest();
 };
 
-window.startTimedSession = function(mode, minutes, count) {
-  startMockExam(db.activeWorkspace, mode === 'math' ? 'sat-math-sprint' : (mode === 'ielts' ? 'ielts-reading-sprint' : 'sat-quick-sprint'));
+window.startTimedSession = function(mode) {
+  startMockExam('sat', mode === 'math' ? 'sat-math-sprint' : 'sat-rw-sprint');
 };
 
-window.startMockTest = function(section) {
+window.startMockTest = function() {
   startMockExam('sat', 'sat-pt1');
 };
 
@@ -1337,15 +1188,11 @@ window.startMockTest = function(section) {
 // SECTION 5: PROGRESS & PARENT COMPANION
 // ═══════════════════════════════════════════════════════════════
 function renderProgress() {
-  const ws = getCurWS();
-  const isSAT = db.activeWorkspace === 'sat';
-  const skillsList = isSAT ? SAT_SKILLS : IELTS_SKILLS;
-
   // Skill Mastery Bars
   const container = $('#skill-mastery-bars-container');
   if (container) {
-    container.innerHTML = skillsList.map(skill => {
-      const s = ws.skills[skill] || { correct: 0, total: 0 };
+    container.innerHTML = SAT_SKILLS.map(skill => {
+      const s = db.skills[skill] || { correct: 0, total: 0 };
       const pct = s.total > 0 ? Math.round((s.correct / s.total) * 100) : 0;
       const colorClass = pct >= 75 ? 'bg-success' : pct >= 50 ? 'bg-warning' : 'bg-error';
       return `
@@ -1364,7 +1211,7 @@ function renderProgress() {
 
   // Parent Companion stats
   let totalMin = 0, totalQ = 0, masteredCount = 0;
-  Object.values(ws.skills || {}).forEach(s => {
+  Object.values(db.skills || {}).forEach(s => {
     totalQ += (s.total || 0);
     if (s.total >= 3 && (s.correct / s.total) >= 0.75) masteredCount++;
   });
@@ -1373,7 +1220,7 @@ function renderProgress() {
   $('#parent-total-hours').textContent = `${Math.floor(totalMin / 60)}h ${totalMin % 60}m`;
   $('#parent-total-questions').textContent = `${totalQ} câu`;
   $('#parent-active-days').textContent = totalQ > 0 ? `${Math.min(7, Math.ceil(totalQ / 15))} ngày` : '0 ngày';
-  $('#parent-mastered-skills').textContent = `${masteredCount} / ${skillsList.length}`;
+  $('#parent-mastered-skills').textContent = `${masteredCount} / ${SAT_SKILLS.length}`;
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -1458,9 +1305,8 @@ window.openShareModal = function() {
   const modal = $('#share-modal');
   if (!modal) return;
 
-  const ws = getCurWS();
   let totalQ = 0, totalCorrect = 0, masteredCount = 0;
-  Object.values(ws.skills || {}).forEach(s => {
+  Object.values(db.skills || {}).forEach(s => {
     totalQ += (s.total || 0);
     totalCorrect += (s.correct || 0);
     if (s.total >= 3 && (s.correct / s.total) >= 0.75) masteredCount++;
@@ -1479,14 +1325,13 @@ window.closeShareModal = function() {
 };
 
 window.copyShareText = function() {
-  const wsName = db.activeWorkspace === 'sat' ? 'Digital SAT 2026' : 'IELTS Academic';
-  const caption = `🎯 Hôm nay mình vừa hoàn thành bài rèn luyện trên N&Mstudio_Education — Intelligent Learning OS (${wsName})!
+  const caption = `🎯 Hôm nay mình vừa hoàn thành bài rèn luyện trên N&Mstudio_Education — SAT IntelliPrep OS (Mục tiêu: 1500+ Digital SAT)!
 
-🌱 "Mỗi lỗi sai là một bước tiến gần hơn tới mục tiêu 1500+ SAT / 7.5+ IELTS."
+🌱 "Mỗi lỗi sai được chẩn đoán là một bước tiến gần hơn tới điểm số tối đa."
 👉 Khám phá nền tảng: https://sat-intelliprep.nmstudio.edu.vn
 💬 Hotline Zalo hỗ trợ: +98 557 8385
 
-#NandMstudio #DigitalSAT #IELTSAcademic #GrowthMindset`;
+#NandMstudio #DigitalSAT #SATIntelliPrep #GrowthMindset #IvyLeague`;
 
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(caption).then(() => {
@@ -1497,22 +1342,341 @@ window.copyShareText = function() {
   }
 };
 
-// ── Data Management Exports ──
+// ── Anki Modal & Deep TSV Export Engine (Ponytail Zero-Bloat) ──
+window.openAnkiModal = function() {
+  const m = $('#anki-export-modal');
+  if (m) m.style.display = 'flex';
+};
+
+window.closeAnkiModal = function() {
+  const m = $('#anki-export-modal');
+  if (m) m.style.display = 'none';
+};
+
+window.exportAnkiDeck = async function(type) {
+  let cards = [];
+  let filename = '';
+  let deckTag = '#SAT';
+
+  if (type === 'vocab') {
+    const d1 = await loadFlashcards('vocabulary_direct_hits');
+    const d2 = await loadFlashcards('vocabulary_secondary_meanings');
+    const d3 = await loadFlashcards('vocabulary');
+    cards = [...d1, ...d2, ...d3];
+    filename = 'SAT_Vocab_Direct_Hits';
+    deckTag = '#SAT::Vocab::DirectHits';
+  } else if (type === 'math') {
+    cards = await loadFlashcards('math');
+    filename = 'SAT_Math_Formulas_Desmos';
+    deckTag = '#SAT::Math::Formulas';
+  } else if (type === 'grammar') {
+    const g = await loadFlashcards('grammar');
+    const t = await loadFlashcards('transitions');
+    const r = await loadFlashcards('rhetorical');
+    cards = [...g, ...t, ...r];
+    filename = 'SAT_Grammar_Transitions';
+    deckTag = '#SAT::Conventions::Writing';
+  } else if (type === 'mistakes') {
+    const errs = db.errors || [];
+    if (!errs.length) {
+      alert('Bạn chưa có lỗi sai nào trong hệ thống! Hãy tiếp tục làm bài luyện tập.');
+      return;
+    }
+    cards = errs.map((e, idx) => ({
+      card_id: `ERR-${idx}`,
+      front: {
+        word: `[CÂU SAI #${idx + 1}] ${e.question_id}`,
+        context: `Kỹ năng: ${e.skill} · Lựa chọn của bạn: ${e.answer}`
+      },
+      back: {
+        vietnamese: `Đáp án đúng: ${e.correct_answer}`,
+        definition: `Bẫy nhận thức: ${e.error_type || 'COGNITIVE_DISTRACTOR'}`,
+        academic_tip: `Rút kinh nghiệm: Đối chiếu trực tiếp với bằng chứng trong bài đọc, không phóng đại suy luận.`
+      }
+    }));
+    filename = 'SAT_My_Mistake_Workbook';
+    deckTag = '#SAT::MyMistakes';
+  }
+
+  if (!cards.length) {
+    alert('Không tìm thấy dữ liệu thẻ ghi nhớ.');
+    return;
+  }
+
+  // Generate standard TSV with Anki headers and UTF-8 BOM
+  const headerLines = [
+    '#separator:tab',
+    '#html:true',
+    '#tags column:3'
+  ];
+
+  const cardRows = cards.map(c => {
+    let front = '';
+    if (c.front) {
+      if (c.front.word) {
+        front = `<h3>${escapeHTML(c.front.word)}</h3>`;
+        if (c.front.phonetic) front += `<div style="color:#64748B;"><em>${escapeHTML(c.front.phonetic)}</em></div>`;
+        if (c.front.context) front += `<p style="margin-top:8px;">"${escapeHTML(c.front.context)}"</p>`;
+      } else if (c.front.concept) {
+        front = `<h3>${escapeHTML(c.front.concept)}</h3>`;
+        if (c.front.formula) front += `<p style="color:#1D4ED8;font-weight:bold;">${escapeHTML(c.front.formula)}</p>`;
+      } else if (c.front.phrase) {
+        front = `<h3>${escapeHTML(c.front.phrase)}</h3>`;
+        if (c.front.function) front += `<p>${escapeHTML(c.front.function)}</p>`;
+      }
+    }
+
+    let back = '';
+    if (typeof c.back === 'string') {
+      back = escapeHTML(c.back);
+    } else if (c.back) {
+      const parts = [];
+      if (c.back.vietnamese) parts.push(`<div style="font-size:1.1em;font-weight:bold;color:#16866A;">${escapeHTML(c.back.vietnamese)}</div>`);
+      if (c.back.rule) parts.push(`<div><strong>Quy tắc:</strong> ${escapeHTML(c.back.rule)}</div>`);
+      if (c.back.meaning) parts.push(`<div><strong>Nghĩa học thuật:</strong> ${escapeHTML(c.back.meaning)}</div>`);
+      if (c.back.definition) parts.push(`<div><strong>Giải thích:</strong> ${escapeHTML(c.back.definition)}</div>`);
+      if (c.back.synonyms && Array.isArray(c.back.synonyms)) parts.push(`<div><strong>Đồng nghĩa:</strong> ${escapeHTML(c.back.synonyms.join(', '))}</div>`);
+      if (c.back.contrast) parts.push(`<div><strong>Phân biệt:</strong> ${escapeHTML(c.back.contrast)}</div>`);
+      if (c.back.tip) parts.push(`<div style="background:#EFF6FF;padding:6px;border-radius:4px;">💡 <strong>Mẹo:</strong> ${escapeHTML(c.back.tip)}</div>`);
+      if (c.back.academic_tip) parts.push(`<div style="background:#EFF6FF;padding:6px;border-radius:4px;">💡 <strong>Mẹo sư phạm:</strong> ${escapeHTML(c.back.academic_tip)}</div>`);
+      if (c.back.common_error) parts.push(`<div style="background:#FEF2F2;padding:6px;border-radius:4px;color:#991B1B;">⚠️ <strong>Bẫy thường gặp:</strong> ${escapeHTML(c.back.common_error)}</div>`);
+      back = parts.join('<br>');
+    }
+
+    // Clean any newlines inside fields to <br> so TSV rows stay single lines
+    front = front.replace(/\t/g, ' ').replace(/\r?\n/g, '<br>');
+    back = back.replace(/\t/g, ' ').replace(/\r?\n/g, '<br>');
+
+    return `${front}\t${back}\t${deckTag}`;
+  });
+
+  const tsvContent = '\uFEFF' + [...headerLines, ...cardRows].join('\n');
+  const blob = new Blob([tsvContent], { type: 'text/tab-separated-values;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `${filename}_${new Date().toISOString().slice(0, 10)}.tsv`;
+  a.click();
+  URL.revokeObjectURL(url);
+
+  closeAnkiModal();
+  alert(`Đã xuất thành công ${cards.length} thẻ vào file ${a.download}! Bạn hãy mở Anki và Import vào để học nhé.`);
+};
+
+// ── PDF & Printable Reports Engine (Clean A4 Academic Standard) ──
+window.exportPDFReport = function(type) {
+  const portal = $('#print-portal');
+  if (!portal) return;
+
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('vi-VN', { year: 'numeric', month: 'long', day: 'numeric' });
+  const grade = db.profile?.grade || '11';
+  const targetScore = db.profile?.targetScore || '1500+';
+
+  if (type === 'parent') {
+    // Parent Progress Report
+    let totalQ = 0, totalCorrect = 0, masteredCount = 0;
+    Object.values(db.skills || {}).forEach(s => {
+      totalQ += (s.total || 0);
+      totalCorrect += (s.correct || 0);
+      if (s.total >= 3 && (s.correct / s.total) >= 0.75) masteredCount++;
+    });
+    const overallAcc = totalQ > 0 ? Math.round((totalCorrect / totalQ) * 100) : 0;
+    const totalHours = (totalQ * 1.5 / 60).toFixed(1);
+
+    const skillsRows = SAT_SKILLS.map(skill => {
+      const s = db.skills[skill] || { correct: 0, total: 0 };
+      const pct = s.total > 0 ? Math.round((s.correct / s.total) * 100) : 0;
+      let status = 'Chưa làm';
+      let statusColor = '#64748B';
+      if (s.total > 0) {
+        if (pct >= 75) { status = 'Mastered (Vững)'; statusColor = '#16866A'; }
+        else if (pct >= 50) { status = 'Developing (Tiến bộ)'; statusColor = '#B7791F'; }
+        else { status = 'Needs Focus (Cần củng cố)'; statusColor = '#C74A4A'; }
+      }
+      return `
+        <tr>
+          <td><strong>${escapeHTML(skill)}</strong></td>
+          <td style="text-align:center;">${s.total} câu</td>
+          <td style="text-align:center;font-weight:bold;">${pct}%</td>
+          <td style="text-align:center;color:${statusColor};font-weight:bold;">${status}</td>
+        </tr>
+      `;
+    }).join('');
+
+    portal.innerHTML = `
+      <div class="print-doc-header">
+        <div class="print-brand-left">
+          <img src="assets/logo.png" alt="Logo">
+          <div>
+            <div class="print-doc-title">N&amp;Mstudio_Education — BẢN BÁO CÁO NĂNG LỰC DÀNH CHO PHỤ HUYNH</div>
+            <div class="print-doc-sub">Hệ Thống Luyện Thi Digital SAT 2026 Chuyên Sâu • Đánh Giá Tiến Bộ Thực Chất</div>
+          </div>
+        </div>
+        <div class="print-doc-meta-right">
+          <div>Học sinh: <strong>Lớp ${grade}</strong></div>
+          <div>Mục tiêu: <strong style="color:#1D4ED8;">${targetScore}</strong></div>
+          <div>Ngày xuất: ${dateStr}</div>
+        </div>
+      </div>
+
+      <div class="print-metric-grid">
+        <div class="print-metric-box">
+          <div class="print-metric-val">${totalHours}h</div>
+          <div class="print-metric-lbl">Tổng giờ tập trung</div>
+        </div>
+        <div class="print-metric-box">
+          <div class="print-metric-val">${totalQ}</div>
+          <div class="print-metric-lbl">Khối lượng câu đã giải</div>
+        </div>
+        <div class="print-metric-box">
+          <div class="print-metric-val">${overallAcc}%</div>
+          <div class="print-metric-lbl">Độ chính xác thực tế</div>
+        </div>
+        <div class="print-metric-box">
+          <div class="print-metric-val">${masteredCount}/${SAT_SKILLS.length}</div>
+          <div class="print-metric-lbl">Kỹ năng đã làm chủ</div>
+        </div>
+      </div>
+
+      <div class="print-section-heading">BẢNG TIẾN TRÌNH 15 KỸ NĂNG KHẢO THÍ DIGITAL SAT 2026</div>
+      <table class="print-table">
+        <thead>
+          <tr>
+            <th>Kỹ Năng Khảo Thí</th>
+            <th style="text-align:center;width:100px;">Đã Thực Hành</th>
+            <th style="text-align:center;width:100px;">Chính Xác</th>
+            <th style="text-align:center;width:180px;">Trạng Thái Năng Lực</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${skillsRows}
+        </tbody>
+      </table>
+
+      <div class="print-section-heading">GÓC ĐỒNG HÀNH &amp; TÂM LÝ SƯ PHẠM DÀNH CHO PHỤ HUYNH</div>
+      <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:12px;font-size:0.85rem;line-height:1.6;color:#334155;">
+        <p><strong>1. Trọng tâm là nỗ lực và sự kiên trì:</strong> Trong kỳ thi Digital SAT, việc làm sai là điều tất yếu trong quá trình hiệu chỉnh tư duy. Phụ huynh nên khen ngợi tính kỷ luật rèn luyện hàng ngày thay vì chỉ chú trọng điểm số từng bài thi thử.</p>
+        <p style="margin-top:6px;"><strong>2. Quản lý năng lượng &amp; giấc ngủ:</strong> Giai đoạn thi SAT đòi hỏi não bộ xử lý thông tin với mật độ dày đặc. Hãy đảm bảo con ngủ đủ 7-8 tiếng mỗi ngày để củng cố trí nhớ dài hạn (Spaced Retrieval).</p>
+      </div>
+
+      <div class="print-footer-notice">
+        <span>N&amp;Mstudio_Education — Nền tảng học thuật chuẩn Calm Academic</span>
+        <span>Hotline Zalo Cố Vấn: <strong>+98 557 8385</strong></span>
+      </div>
+    `;
+  } else if (type === 'workbook') {
+    // Cognitive Mistake Workbook
+    const errs = db.errors || [];
+    let errCards = '';
+
+    if (!errs.length) {
+      errCards = '<p style="text-align:center;color:#64748B;padding:2rem;">Chưa có dữ liệu lỗi sai được ghi nhận. Học sinh hãy tiếp tục rèn luyện trong phần Practice hoặc Test!</p>';
+    } else {
+      errCards = errs.map((e, idx) => `
+        <div class="print-mistake-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #E2E8F0;padding-bottom:6px;margin-bottom:8px;">
+            <div>
+              <strong style="color:#1E3A8A;">#${idx + 1}. Câu hỏi: ${escapeHTML(e.question_id)}</strong>
+              <span style="background:#EFF6FF;color:#1D4ED8;padding:2px 8px;border-radius:12px;font-size:0.75rem;margin-left:8px;font-weight:bold;">${escapeHTML(e.skill)}</span>
+            </div>
+            <div style="font-size:0.75rem;color:#64748B;">Ngày ghi nhận: ${new Date(e.timestamp).toLocaleDateString('vi-VN')}</div>
+          </div>
+          
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:0.85rem;margin-bottom:8px;">
+            <div style="background:#FEF2F2;border:1px solid #FECACA;border-radius:6px;padding:8px;color:#991B1B;">
+              <strong>Lựa chọn của bạn:</strong> <code>${escapeHTML(e.answer)}</code> (Chưa chính xác)
+            </div>
+            <div style="background:#ECFDF5;border:1px solid #A7F3D0;border-radius:6px;padding:8px;color:#065F46;">
+              <strong>Đáp án đúng:</strong> <code>${escapeHTML(e.correct_answer)}</code> (Chuẩn khảo thí)
+            </div>
+          </div>
+
+          <div style="font-size:0.82rem;line-height:1.5;color:#334155;">
+            <div><strong>⚠️ Bản chất bẫy nhận thức (Cognitive Trap):</strong> <span style="background:#FEF3C7;color:#92400E;padding:1px 6px;border-radius:4px;font-weight:bold;">${escapeHTML(e.error_type || 'COGNITIVE_DISTRACTOR')}</span></div>
+            <div style="margin-top:4px;"><strong>🧠 Khung tư duy khắc phục:</strong> Khoanh vùng phạm vi bằng chứng, đối chiếu trực tiếp từ ngữ đoạn văn, tuyệt đối không suy diễn vượt quá tiền đề tác giả đã xác lập.</div>
+            <div style="margin-top:6px;border-top:1px dashed #CBD5E1;padding-top:4px;color:#64748B;font-style:italic;">
+              <strong>Ghi chú rút kinh nghiệm cá nhân:</strong> ............................................................................................................................................
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    portal.innerHTML = `
+      <div class="print-doc-header">
+        <div class="print-brand-left">
+          <img src="assets/logo.png" alt="Logo">
+          <div>
+            <div class="print-doc-title">N&amp;Mstudio_Education — SỔ TAY CHẨN ĐOÁN LỖI SAI DIGITAL SAT 2026</div>
+            <div class="print-doc-sub">Metacognitive Error Diagnosis &amp; Reasoning Frameworks</div>
+          </div>
+        </div>
+        <div class="print-doc-meta-right">
+          <div>Học sinh: <strong>Lớp ${grade}</strong></div>
+          <div>Tổng số lỗi sai đã ghi nhận: <strong>${errs.length}</strong></div>
+          <div>Ngày xuất: ${dateStr}</div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:1rem;background:#F1F5F9;border-radius:6px;padding:10px;font-size:0.8rem;color:#475569;">
+        <strong>NGUYÊN TẮC HỌC TẬP TỪ LỖI SAI:</strong> "Một lỗi sai được chẩn đoán sâu sắc có giá trị hơn 10 câu làm đúng một cách tình cờ." Mỗi câu hỏi dưới đây đã được phân loại theo bẫy nhận thức cụ thể để bạn không bao giờ lặp lại bẫy tương tự trong phòng thi thật.
+      </div>
+
+      ${errCards}
+
+      <div class="print-footer-notice">
+        <span>N&amp;Mstudio_Education • Hotline Zalo: +98 557 8385</span>
+        <span>Chúc bạn bứt phá 1500+ Digital SAT!</span>
+      </div>
+    `;
+  } else if (type === 'scorecard') {
+    // Test Scorecard Print
+    portal.innerHTML = `
+      <div class="print-doc-header">
+        <div class="print-brand-left">
+          <img src="assets/logo.png" alt="Logo">
+          <div>
+            <div class="print-doc-title">N&amp;Mstudio_Education — PHIẾU BÁO ĐIỂM THI THỬ DIGITAL SAT</div>
+            <div class="print-doc-sub">${escapeHTML(activeExam.title || 'Digital SAT Official Practice Test')}</div>
+          </div>
+        </div>
+        <div class="print-doc-meta-right">
+          <div>Ngày thi: ${dateStr}</div>
+          <div>Mục tiêu: <strong>${targetScore}</strong></div>
+        </div>
+      </div>
+
+      <div id="print-scorecard-body">
+        ${$('#timed-results-area') ? $('#timed-results-area').innerHTML : ''}
+      </div>
+
+      <div class="print-footer-notice">
+        <span>N&amp;Mstudio_Education — Khảo thí Digital SAT 2026</span>
+        <span>Hotline Zalo Cố Vấn: +98 557 8385</span>
+      </div>
+    `;
+  }
+
+  // Trigger browser native print
+  window.print();
+};
+
+// ── Data Management Backup & Reset ──
 window.exportUserData = function() {
   const blob = new Blob([JSON.stringify(db, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `nmstudio_learning_data_${new Date().toISOString().slice(0, 10)}.json`;
+  a.download = `nmstudio_sat_progress_${new Date().toISOString().slice(0, 10)}.json`;
   a.click();
   URL.revokeObjectURL(url);
 };
 
 window.exportErrorLogCSV = function() {
-  const ws = getCurWS();
-  if (!ws.errors || !ws.errors.length) { alert('Chưa có dữ liệu lỗi sai.'); return; }
+  if (!db.errors || !db.errors.length) { alert('Chưa có dữ liệu lỗi sai.'); return; }
   const headers = ['question_id', 'domain', 'skill', 'answer', 'correct_answer', 'error_type', 'date'];
-  const rows = ws.errors.map(e => [
+  const rows = db.errors.map(e => [
     e.question_id, `"${e.domain}"`, `"${e.skill}"`, `"${e.answer}"`, `"${e.correct_answer}"`, e.error_type, new Date(e.timestamp).toLocaleDateString()
   ]);
   const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
@@ -1520,35 +1684,15 @@ window.exportErrorLogCSV = function() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `nmstudio_mistakes_${new Date().toISOString().slice(0, 10)}.csv`;
+  a.download = `nmstudio_sat_mistakes_${new Date().toISOString().slice(0, 10)}.csv`;
   a.click();
   URL.revokeObjectURL(url);
-};
-
-window.exportAnkiTSV = async function() {
-  const cards = await loadFlashcards(db.activeWorkspace === 'sat' ? 'vocabulary_direct_hits' : 'ielts');
-  if (!cards.length) { alert('Không có thẻ flashcard.'); return; }
-  
-  const lines = cards.map(c => {
-    let front = c.front?.word || c.front?.phrase || '';
-    if (c.front?.context) front += `<br><small><i>"${c.front.context}"</i></small>`;
-    let back = typeof c.back === 'string' ? c.back : Object.entries(c.back || {}).map(([k, v]) => `<b>${k}:</b> ${Array.isArray(v) ? v.join(', ') : v}`).join('<br>');
-    return `${front.replace(/\t/g, ' ')}\t${back.replace(/\t/g, ' ')}\t${db.activeWorkspace.toUpperCase()}`;
-  });
-
-  const blob = new Blob([lines.join('\n')], { type: 'text/tab-separated-values;charset=utf-8;' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = `nmstudio_anki_${db.activeWorkspace}_${new Date().toISOString().slice(0, 10)}.txt`;
-  a.click();
-  URL.revokeObjectURL(url);
-  alert(`Đã xuất thành công ${cards.length} thẻ Anki TSV! Mở Anki -> File -> Import để nạp vào học.`);
 };
 
 window.resetAllProgress = function() {
-  if (!confirm('Bạn có chắc chắn muốn đặt lại toàn bộ tiến độ học tập? Hành động này không thể hoàn tác.')) return;
+  if (!confirm('Bạn có chắc chắn muốn đặt lại toàn bộ tiến độ học tập SAT? Hành động này không thể hoàn tác.')) return;
   localStorage.removeItem(DB_KEY);
+  localStorage.removeItem('nmstudio_learning_os_v2');
   location.reload();
 };
 
@@ -1557,6 +1701,7 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
     closeAICoach();
     closeShareModal();
+    closeAnkiModal();
     const desmos = $('#desmos-modal');
     if (desmos && !desmos.classList.contains('hidden')) toggleDesmos();
   }
