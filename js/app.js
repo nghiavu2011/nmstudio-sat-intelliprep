@@ -16,9 +16,9 @@ const SAT_SKILLS = [
 ];
 
 const IELTS_SKILLS = [
-  'True / False / Not Given', 'Matching Headings', 'Summary Completion',
-  'Task 1 Data Description & Synthesis', 'Task 2 Academic Cohesion & Hedging',
-  'Academic Lexical Resource', 'Coherence & Cohesion'
+  'True / False / Not Given', 'Yes / No / Not Given', 'Matching Headings',
+  'Summary Completion', 'Multiple Choice', 'Matching Features',
+  'Task 1 Data Description & Synthesis', 'Task 2 Academic Cohesion & Hedging'
 ];
 
 // ── State Persistence (Alibaba OCR - Defensive Robustness) ──
@@ -116,8 +116,34 @@ const SAT_FC_FILES = [
 async function loadQuestions(key) {
   if (qCache[key]) return qCache[key];
   try {
+    if (key.startsWith('ielts')) {
+      if (!qCache['ielts_master']) {
+        const r = await fetch('data/ielts/ielts_questions.json');
+        const d = await r.json();
+        qCache['ielts_master'] = d.questions || d;
+      }
+      const master = qCache['ielts_master'] || [];
+      if (key === 'ielts' || key === 'ielts-all') {
+        qCache[key] = master;
+      } else if (key === 'ielts-tfng') {
+        qCache[key] = master.filter(q => q.skill === 'True / False / Not Given' || q.skill === 'Yes / No / Not Given');
+      } else if (key === 'ielts-headings') {
+        qCache[key] = master.filter(q => q.skill === 'Matching Headings');
+      } else if (key === 'ielts-summary') {
+        qCache[key] = master.filter(q => q.skill === 'Summary Completion');
+      } else if (key === 'ielts-mcq') {
+        qCache[key] = master.filter(q => q.skill === 'Multiple Choice' || q.skill === 'Matching Features');
+      } else if (key === 'ielts-task1') {
+        qCache[key] = master.filter(q => q.skill === 'Task 1 Data Description & Synthesis');
+      } else if (key === 'ielts-task2') {
+        qCache[key] = master.filter(q => q.skill === 'Task 2 Academic Cohesion & Hedging');
+      } else {
+        qCache[key] = master;
+      }
+      return qCache[key];
+    }
+
     let url = SAT_Q_FILES[key];
-    if (key === 'ielts' || key === 'ielts-all') url = 'data/ielts/ielts_questions.json';
     if (!url) url = SAT_Q_FILES['rw-info'];
 
     const r = await fetch(url);
@@ -242,9 +268,13 @@ function syncWorkspaceUI() {
       $('#practice-desmos-btn')?.classList.remove('hidden');
     } else {
       domainTabsContainer.innerHTML = `
-        <button class="domain-tab-btn active" data-domain="ielts-all" onclick="selectDomainTab('ielts-all')">All Academic Skills</button>
-        <button class="domain-tab-btn" data-domain="ielts-reading" onclick="selectDomainTab('ielts-all')">Reading (T/F/NG &amp; Headings)</button>
-        <button class="domain-tab-btn" data-domain="ielts-writing" onclick="selectDomainTab('ielts-all')">Writing (Tasks 1 &amp; 2)</button>
+        <button class="domain-tab-btn active" data-domain="ielts-all" onclick="selectDomainTab('ielts-all')">Tất Cả Kỹ Năng</button>
+        <button class="domain-tab-btn" data-domain="ielts-tfng" onclick="selectDomainTab('ielts-tfng')">Reading: T/F/NG &amp; Y/N/NG</button>
+        <button class="domain-tab-btn" data-domain="ielts-headings" onclick="selectDomainTab('ielts-headings')">Reading: Matching Headings</button>
+        <button class="domain-tab-btn" data-domain="ielts-summary" onclick="selectDomainTab('ielts-summary')">Reading: Summary &amp; Gap Fill</button>
+        <button class="domain-tab-btn" data-domain="ielts-mcq" onclick="selectDomainTab('ielts-mcq')">Reading: Multiple Choice</button>
+        <button class="domain-tab-btn" data-domain="ielts-task1" onclick="selectDomainTab('ielts-task1')">Writing: Task 1 Synthesis</button>
+        <button class="domain-tab-btn" data-domain="ielts-task2" onclick="selectDomainTab('ielts-task2')">Writing: Task 2 Cohesion</button>
       `;
       $('#practice-desmos-btn')?.classList.add('hidden');
     }
@@ -545,14 +575,19 @@ window.trySimilarQuestion = function() {
 // ═══════════════════════════════════════════════════════════════
 let flashcardDeck = [];
 let currentCardIdx = 0;
+let currentFcType = null;
 
-async function renderReview() {
+async function renderReview(deckType = null) {
   const ws = getCurWS();
   const isSAT = db.activeWorkspace === 'sat';
 
-  // Flashcards due count
-  const fcType = isSAT ? 'vocabulary_direct_hits' : 'ielts';
-  flashcardDeck = await loadFlashcards(fcType);
+  if (!deckType) {
+    currentFcType = isSAT ? 'vocabulary_direct_hits' : 'ielts';
+  } else {
+    currentFcType = deckType;
+  }
+
+  flashcardDeck = await loadFlashcards(currentFcType);
 
   let dueCount = 0;
   const now = Date.now();
@@ -597,12 +632,16 @@ function renderMistakeLedger() {
   `).join('');
 }
 
-window.startFlashcardReview = function() {
+window.startFlashcardReview = function(deckType = null) {
   const wrapper = $('#flashcard-interactive-wrapper');
   if (!wrapper) return;
   wrapper.style.display = 'block';
   currentCardIdx = 0;
-  renderFlashcardCard();
+  if (deckType) {
+    renderReview(deckType).then(() => renderFlashcardCard());
+  } else {
+    renderFlashcardCard();
+  }
 };
 
 function renderFlashcardCard() {
@@ -612,12 +651,19 @@ function renderFlashcardCard() {
   $('#fc-progress-count').textContent = `Thẻ ${currentCardIdx + 1} / ${flashcardDeck.length}`;
   $('#flashcard-element')?.classList.remove('flipped');
 
+  // Deck label
+  const deckEl = $('#fc-deck-name');
+  if (deckEl) {
+    deckEl.textContent = c.category ? `Deck: ${c.category}` : (db.activeWorkspace === 'sat' ? 'Deck: Direct Hits Vocabulary' : 'Deck: IELTS Academic Word List');
+  }
+
   // Front
   const frontMain = $('#fc-front-main');
   const frontContext = $('#fc-front-context');
   if (c.front) {
     if (c.front.word) {
-      frontMain.textContent = c.front.word;
+      const phonetic = c.front.phonetic ? `<span style="font-size:1.05rem;color:var(--color-muted-dark);display:block;margin-top:0.35rem;font-family:monospace;font-weight:500;">${escapeHTML(c.front.phonetic)}</span>` : '';
+      frontMain.innerHTML = `${escapeHTML(c.front.word)} ${phonetic}`;
       frontContext.textContent = c.front.context ? `"${c.front.context}"` : '';
     } else if (c.front.phrase) {
       frontMain.textContent = c.front.phrase;
@@ -631,11 +677,30 @@ function renderFlashcardCard() {
     if (typeof c.back === 'string') {
       backBox.innerHTML = escapeHTML(c.back);
     } else {
-      backBox.innerHTML = Object.entries(c.back).map(([k, v]) => `
-        <div style="margin-bottom:0.35rem;">
-          <strong>${escapeHTML(k)}:</strong> ${Array.isArray(v) ? escapeHTML(v.join(', ')) : escapeHTML(v)}
-        </div>
-      `).join('');
+      let bHtml = '';
+      if (c.back.vietnamese) {
+        bHtml += `<div style="font-size:1.15rem;font-weight:700;color:var(--color-primary);margin-bottom:0.5rem;">${escapeHTML(c.back.vietnamese)}</div>`;
+      }
+      if (c.back.definition) {
+        bHtml += `<div style="margin-bottom:0.4rem;color:var(--color-ink);"><strong>Định nghĩa học thuật:</strong> ${escapeHTML(c.back.definition)}</div>`;
+      }
+      if (c.back.collocations && Array.isArray(c.back.collocations)) {
+        bHtml += `<div style="margin-bottom:0.4rem;"><strong>Cụm từ đi kèm (Collocations):</strong> <span style="color:#0284C7;font-weight:600;">${escapeHTML(c.back.collocations.join(' • '))}</span></div>`;
+      }
+      if (c.back.example) {
+        bHtml += `<div style="margin-bottom:0.4rem;font-style:italic;color:var(--color-muted-dark);"><strong>Ví dụ chuẩn Band 8+:</strong> "${escapeHTML(c.back.example)}"</div>`;
+      }
+      if (c.back.academic_tip) {
+        bHtml += `<div style="margin-top:0.5rem;padding:0.45rem 0.65rem;background:var(--color-canvas);border-radius:var(--radius);border:1px solid var(--color-border);font-size:0.8rem;color:var(--color-ink);">💡 <strong>Mẹo sư phạm:</strong> ${escapeHTML(c.back.academic_tip)}</div>`;
+      }
+      if (!bHtml) {
+        bHtml = Object.entries(c.back).map(([k, v]) => `
+          <div style="margin-bottom:0.35rem;">
+            <strong>${escapeHTML(k)}:</strong> ${Array.isArray(v) ? escapeHTML(v.join(', ')) : escapeHTML(v)}
+          </div>
+        `).join('');
+      }
+      backBox.innerHTML = bHtml;
     }
   }
 }
@@ -676,37 +741,596 @@ window.retryMistakeItem = function(skillName) {
 };
 
 // ═══════════════════════════════════════════════════════════════
-// SECTION 4: TEST & MOCK EXAMS
+// SECTION 4: TEST & MOCK EXAMS (FULL EXAM ENGINE)
 // ═══════════════════════════════════════════════════════════════
+let activeExam = {
+  testId: null,
+  title: '',
+  durationSec: 0,
+  secondsRemaining: 0,
+  questions: [],
+  passages: {},
+  userAnswers: {},
+  flags: {},
+  currentIdx: 0,
+  timerInterval: null
+};
+
 function renderTest() {
-  // Test section ready
+  const isSAT = db.activeWorkspace === 'sat';
+  const grid = $('#test-pack-grid');
+  if (!grid) return;
+
+  // Restore view if coming back
+  const examArea = $('#timed-exam-area');
+  const resultsArea = $('#timed-results-area');
+  if (examArea) examArea.style.display = 'none';
+  if (resultsArea) resultsArea.style.display = 'none';
+  grid.style.display = 'grid';
+
+  if (isSAT) {
+    grid.innerHTML = `
+      <div class="test-pack-card featured">
+        <div>
+          <span class="plan-badge mb-2">Digital SAT Full Simulation</span>
+          <h3 style="font-size:1.15rem;font-weight:800;">Digital SAT Official Practice Pack 1</h3>
+          <p class="text-xs text-muted mt-1">Trọn vẹn 2 Module Reading &amp; Writing + 2 Module Math (98 câu), bám sát khảo thí College Board 2026.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+          <span class="text-xs font-semibold">134 phút · 98 câu</span>
+          <button class="btn-primary-action text-xs" onclick="startMockExam('sat', 'sat-pt1')">Vào Thi Thử →</button>
+        </div>
+      </div>
+
+      <div class="test-pack-card">
+        <div>
+          <span class="tag mb-2">Digital SAT Mock 2</span>
+          <h3 style="font-size:1.15rem;font-weight:800;">Digital SAT Official Practice Pack 2</h3>
+          <p class="text-xs text-muted mt-1">Bộ đề chuẩn hóa số 2 với cấu trúc phân hóa thích ứng cao (Adaptive Test).</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+          <span class="text-xs font-semibold">134 phút · 98 câu</span>
+          <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-pt2')">Vào Thi Thử →</button>
+        </div>
+      </div>
+
+      <div class="test-pack-card">
+        <div>
+          <span class="tag mb-2">Digital SAT Mock 3</span>
+          <h3 style="font-size:1.15rem;font-weight:800;">Digital SAT Official Practice Pack 3</h3>
+          <p class="text-xs text-muted mt-1">Bộ đề nâng cao tập trung kiểm tra tốc độ tư duy và kỹ năng phân tích phản biện.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+          <span class="text-xs font-semibold">134 phút · 98 câu</span>
+          <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-pt3')">Vào Thi Thử →</button>
+        </div>
+      </div>
+
+      <div class="test-pack-card">
+        <div>
+          <span class="tag mb-2" style="background:#EFF6FF;color:#1D4ED8;">Math Hard Sprint</span>
+          <h3 style="font-size:1.15rem;font-weight:800;">Math Hard Module Sprint</h3>
+          <p class="text-xs text-muted mt-1">22 câu hỏi phân loại cao (Level 4-5) Algebra &amp; Advanced Math với máy tính Desmos.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+          <span class="text-xs font-semibold">35 phút · 22 câu</span>
+          <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-math-sprint')">Luyện Tốc Độ →</button>
+        </div>
+      </div>
+
+      <div class="test-pack-card">
+        <div>
+          <span class="tag mb-2" style="background:#EFF6FF;color:#1D4ED8;">RW Section Sprint</span>
+          <h3 style="font-size:1.15rem;font-weight:800;">Reading &amp; Writing Sprint</h3>
+          <p class="text-xs text-muted mt-1">27 câu hỏi trọn vẹn 1 Module với các dạng Inferences, Evidence và Craft &amp; Structure.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+          <span class="text-xs font-semibold">32 phút · 27 câu</span>
+          <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-rw-sprint')">Luyện Tốc Độ →</button>
+        </div>
+      </div>
+
+      <div class="test-pack-card">
+        <div>
+          <span class="tag mb-2">Quick 10-Min</span>
+          <h3 style="font-size:1.15rem;font-weight:800;">Speed Diagnostic 10 Phút</h3>
+          <p class="text-xs text-muted mt-1">10 câu hỏi ngẫu nhiên tổng hợp để khởi động não bộ trước buổi học.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+          <span class="text-xs font-semibold">10 phút · 10 câu</span>
+          <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-quick-sprint')">Khởi Động →</button>
+        </div>
+      </div>
+    `;
+  } else {
+    // IELTS Workspace
+    grid.innerHTML = `
+      <div class="test-pack-card featured">
+        <div>
+          <span class="plan-badge mb-2" style="background:#ECFDF5;color:#065F46;border-color:#A7F3D0;">IELTS Full Reading Mock</span>
+          <h3 style="font-size:1.15rem;font-weight:800;">IELTS Academic Reading Test 1</h3>
+          <p class="text-xs text-muted mt-1">Mô phỏng chân thực 60 phút gồm 3 bài đọc học thuật: Biomimetics Architecture, Cave Art &amp; Writing, Deep Neural Syntax.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+          <span class="text-xs font-semibold">60 phút · 20 câu</span>
+          <button class="btn-primary-action text-xs" onclick="startMockExam('ielts', 'ielts-pt1')">Vào Thi Thử →</button>
+        </div>
+      </div>
+
+      <div class="test-pack-card">
+        <div>
+          <span class="tag mb-2" style="background:#ECFDF5;color:#065F46;">IELTS Full Reading Mock 2</span>
+          <h3 style="font-size:1.15rem;font-weight:800;">IELTS Academic Reading Test 2</h3>
+          <p class="text-xs text-muted mt-1">3 bài đọc học thuật nâng cao: Hydrokinetic Marine Energy, Behavioral Nudges, và Transgenerational Epigenetics.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+          <span class="text-xs font-semibold">60 phút · 20 câu</span>
+          <button class="btn btn-outline text-xs" onclick="startMockExam('ielts', 'ielts-pt2')">Vào Thi Thử →</button>
+        </div>
+      </div>
+
+      <div class="test-pack-card">
+        <div>
+          <span class="tag mb-2" style="background:#ECFDF5;color:#065F46;">IELTS Reading Sprint</span>
+          <h3 style="font-size:1.15rem;font-weight:800;">Reading T/F/NG &amp; Headings Sprint</h3>
+          <p class="text-xs text-muted mt-1">12 câu hỏi tập trung rèn luyện phản xạ bẫy paraphrase và tóm tắt đoạn văn.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+          <span class="text-xs font-semibold">20 phút · 12 câu</span>
+          <button class="btn btn-outline text-xs" onclick="startMockExam('ielts', 'ielts-reading-sprint')">Luyện Tốc Độ →</button>
+        </div>
+      </div>
+
+      <div class="test-pack-card">
+        <div>
+          <span class="tag mb-2" style="background:#FEF3C7;color:#92400E;">Writing Strategy Sprint</span>
+          <h3 style="font-size:1.15rem;font-weight:800;">Writing Task 1 &amp; 2 Masterclass Sprint</h3>
+          <p class="text-xs text-muted mt-1">10 câu hỏi chiến lược tổng hợp biểu đồ Task 1 và cấu trúc lập luận, hedging Task 2 chuẩn Band 8+.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
+          <span class="text-xs font-semibold">25 phút · 10 câu</span>
+          <button class="btn btn-outline text-xs" onclick="startMockExam('ielts', 'ielts-writing-sprint')">Rèn Lập Luận →</button>
+        </div>
+      </div>
+    `;
+  }
 }
 
-let timedInterval = null;
-let timedSecRemaining = 0;
+window.startMockExam = async function(examType, testId) {
+  let questions = [];
+  let passages = {};
+  let title = '';
+  let durationMinutes = 60;
 
-window.startTimedSession = async function(mode, minutes, count) {
-  const isSAT = db.activeWorkspace === 'sat';
-  const pool = isSAT ? await loadQuestions('rw-info') : await loadQuestions('ielts-all');
+  try {
+    if (testId === 'sat-pt1') {
+      const r = await fetch('data/practice_tests/practice_test_1.json');
+      const d = await r.json();
+      title = d.title || 'Digital SAT Official Practice Test 1';
+      durationMinutes = 60;
+      const rw1 = d.reading_and_writing?.module_1 || [];
+      const rw2 = d.reading_and_writing?.module_2 || [];
+      const m1 = d.math?.module_1 || [];
+      const m2 = d.math?.module_2 || [];
+      questions = [...rw1, ...rw2, ...m1, ...m2];
+    } else if (testId === 'sat-pt2') {
+      const r = await fetch('data/practice_tests/practice_test_2.json');
+      const d = await r.json();
+      title = d.title || 'Digital SAT Official Practice Test 2';
+      durationMinutes = 60;
+      const rw1 = d.reading_and_writing?.module_1 || [];
+      const rw2 = d.reading_and_writing?.module_2 || [];
+      const m1 = d.math?.module_1 || [];
+      const m2 = d.math?.module_2 || [];
+      questions = [...rw1, ...rw2, ...m1, ...m2];
+    } else if (testId === 'sat-pt3') {
+      const r = await fetch('data/practice_tests/practice_test_3.json');
+      const d = await r.json();
+      title = d.title || 'Digital SAT Official Practice Test 3';
+      durationMinutes = 60;
+      const rw1 = d.reading_and_writing?.module_1 || [];
+      const rw2 = d.reading_and_writing?.module_2 || [];
+      const m1 = d.math?.module_1 || [];
+      const m2 = d.math?.module_2 || [];
+      questions = [...rw1, ...rw2, ...m1, ...m2];
+    } else if (testId === 'sat-math-sprint') {
+      title = 'Math Hard Module Sprint (Level 4-5)';
+      durationMinutes = 35;
+      const adv = await loadQuestions('math-adv');
+      const alg = await loadQuestions('math-alg');
+      questions = [...adv.slice(0, 12), ...alg.slice(0, 10)];
+    } else if (testId === 'sat-rw-sprint') {
+      title = 'Reading & Writing Module 1 Sprint';
+      durationMinutes = 32;
+      const info = await loadQuestions('rw-info');
+      const craft = await loadQuestions('rw-craft');
+      questions = [...info.slice(0, 14), ...craft.slice(0, 13)];
+    } else if (testId === 'sat-quick-sprint') {
+      title = 'Speed Diagnostic 10 Phút';
+      durationMinutes = 10;
+      const pool = await loadQuestions('rw-info');
+      questions = pool.slice(0, 10);
+    } else if (testId === 'ielts-pt1') {
+      const r = await fetch('data/ielts/ielts_practice_test_1.json');
+      const d = await r.json();
+      title = d.title || 'IELTS Academic Reading Simulation 1';
+      durationMinutes = d.duration_minutes || 60;
+      questions = d.questions || [];
+      (d.passages || []).forEach(p => { passages[p.passage_id] = p; });
+    } else if (testId === 'ielts-pt2') {
+      const r = await fetch('data/ielts/ielts_practice_test_2.json');
+      const d = await r.json();
+      title = d.title || 'IELTS Academic Reading Simulation 2';
+      durationMinutes = d.duration_minutes || 60;
+      questions = d.questions || [];
+      (d.passages || []).forEach(p => { passages[p.passage_id] = p; });
+    } else if (testId === 'ielts-reading-sprint') {
+      title = 'IELTS Reading T/F/NG & Headings Sprint';
+      durationMinutes = 20;
+      const all = await loadQuestions('ielts-all');
+      questions = all.filter(q => q.domain === 'Reading').slice(0, 12);
+    } else if (testId === 'ielts-writing-sprint') {
+      title = 'IELTS Writing Task 1 & 2 Masterclass Sprint';
+      durationMinutes = 25;
+      const all = await loadQuestions('ielts-all');
+      questions = all.filter(q => q.domain === 'Writing').slice(0, 10);
+    }
+  } catch (e) {
+    console.error('Failed to load exam data:', e);
+    alert('Không thể nạp dữ liệu đề thi. Vui lòng thử lại!');
+    return;
+  }
 
-  practicePool = pool.slice(0, count);
-  currentPracticeIdx = 0;
-  location.hash = '#practice';
+  if (!questions || questions.length === 0) {
+    alert('Đề thi đang được cập nhật!');
+    return;
+  }
 
-  timedSecRemaining = minutes * 60;
-  clearInterval(timedInterval);
-  timedInterval = setInterval(() => {
-    if (timedSecRemaining <= 0) {
-      clearInterval(timedInterval);
-      alert('Hết giờ làm bài!');
+  // Initialize activeExam state
+  activeExam = {
+    testId,
+    title,
+    durationSec: durationMinutes * 60,
+    secondsRemaining: durationMinutes * 60,
+    questions,
+    passages,
+    userAnswers: {},
+    flags: {},
+    currentIdx: 0,
+    timerInterval: null
+  };
+
+  // Start Timer
+  clearInterval(activeExam.timerInterval);
+  activeExam.timerInterval = setInterval(() => {
+    if (activeExam.secondsRemaining <= 0) {
+      clearInterval(activeExam.timerInterval);
+      alert('Đã hết thời gian làm bài! Hệ thống tự động nộp bài để chấm điểm.');
+      finishTimedSession();
       return;
     }
-    timedSecRemaining--;
+    activeExam.secondsRemaining--;
+    updateTimerDisplay();
   }, 1000);
+
+  // Switch views
+  $('#test-pack-grid').style.display = 'none';
+  const resultsArea = $('#timed-results-area');
+  if (resultsArea) resultsArea.style.display = 'none';
+  $('#timed-exam-area').style.display = 'block';
+
+  // Toggle Desmos button visibility
+  const desmosBtn = $('#timed-desmos-btn');
+  if (desmosBtn) {
+    desmosBtn.classList.toggle('hidden', examType !== 'sat');
+  }
+
+  updateTimerDisplay();
+  renderExamCurrentQuestion();
+  window.scrollTo(0, 0);
+};
+
+function updateTimerDisplay() {
+  const timerEl = $('#timed-timer');
+  if (!timerEl) return;
+  const s = activeExam.secondsRemaining;
+  const hrs = Math.floor(s / 3600);
+  const mins = Math.floor((s % 3600) / 60);
+  const secs = s % 60;
+  if (hrs > 0) {
+    timerEl.textContent = `${String(hrs).padStart(2, '0')}:${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+  } else {
+    timerEl.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+  }
+  timerEl.classList.toggle('warning', s <= 300);
+}
+
+function renderExamCurrentQuestion() {
+  const q = activeExam.questions[activeExam.currentIdx];
+  if (!q) return;
+
+  $('#timed-exam-title').textContent = activeExam.title;
+  $('#timed-exam-status').textContent = `Câu ${activeExam.currentIdx + 1} / ${activeExam.questions.length} (${q.skill || q.domain})`;
+
+  // Render Palette
+  renderExamPalette();
+
+  // Check passage
+  let passageText = q.passage || '';
+  if (!passageText && q.passage_id && activeExam.passages[q.passage_id]) {
+    const pObj = activeExam.passages[q.passage_id];
+    passageText = `<strong>${escapeHTML(pObj.title || '')}</strong>\n\n${escapeHTML(pObj.text || '')}`;
+  }
+
+  const renderContainer = $('#timed-question-render');
+  const curAns = activeExam.userAnswers[activeExam.currentIdx] || '';
+
+  let choicesHtml = '';
+  if (q.choices) {
+    choicesHtml = Object.entries(q.choices).map(([letter, text]) => `
+      <button class="answer-option ${curAns === letter ? 'selected' : ''}" onclick="selectExamChoice('${letter}')">
+        <span class="choice-letter">${letter}</span>
+        <span class="choice-text">${escapeHTML(text)}</span>
+      </button>
+    `).join('');
+  } else if (q.is_grid_in) {
+    choicesHtml = `
+      <div style="padding:1rem 0;">
+        <label class="text-sm font-semibold text-muted block mb-2">Nhập kết quả số (Student-Produced Response):</label>
+        <input type="text" id="exam-gridin-input" class="grid-in-input" value="${escapeHTML(curAns)}" placeholder="e.g. 12 or 4.5" oninput="selectExamChoice(this.value.trim())" />
+      </div>
+    `;
+  }
+
+  if (passageText) {
+    renderContainer.innerHTML = `
+      <div class="exam-split-layout">
+        <div class="exam-passage-pane">
+          <div style="white-space: pre-wrap; font-family: var(--font-body); line-height:1.75;">${passageText}</div>
+        </div>
+        <div class="exam-question-pane">
+          <div class="text-base font-semibold mb-4" style="line-height:1.6;">${escapeHTML(q.question_stem || '')}</div>
+          <div class="flex-col gap-2">${choicesHtml}</div>
+        </div>
+      </div>
+    `;
+  } else {
+    renderContainer.innerHTML = `
+      <div style="max-width:760px;margin:0 auto;padding-top:1rem;">
+        <div class="text-base font-semibold mb-4" style="line-height:1.6;">${escapeHTML(q.question_stem || '')}</div>
+        <div class="flex-col gap-2">${choicesHtml}</div>
+      </div>
+    `;
+  }
+
+  // Update Flag Button
+  const isFlagged = !!activeExam.flags[activeExam.currentIdx];
+  const flagBtn = $('#timed-flag-btn');
+  if (flagBtn) {
+    flagBtn.textContent = isFlagged ? '🚩 Bỏ Đánh Dấu' : '🚩 Đánh Dấu';
+    flagBtn.style.color = isFlagged ? 'var(--color-warning)' : '';
+  }
+
+  // Update Answered Count & Next/Prev buttons
+  const ansCount = Object.keys(activeExam.userAnswers).length;
+  $('#timed-answered-count').textContent = `${ansCount}/${activeExam.questions.length} đã trả lời`;
+  $('#timed-prev-btn').disabled = (activeExam.currentIdx === 0);
+  $('#timed-next-btn').disabled = (activeExam.currentIdx === activeExam.questions.length - 1);
+}
+
+function renderExamPalette() {
+  const container = $('#timed-palette-container');
+  if (!container) return;
+
+  container.innerHTML = activeExam.questions.map((q, idx) => {
+    const isCurrent = idx === activeExam.currentIdx;
+    const isAns = activeExam.userAnswers[idx] !== undefined && activeExam.userAnswers[idx] !== '';
+    const isFlag = !!activeExam.flags[idx];
+
+    let cls = 'palette-q-btn';
+    if (isCurrent) cls += ' current';
+    if (isAns) cls += ' answered';
+    if (isFlag) cls += ' flagged';
+
+    return `<button class="${cls}" onclick="jumpToExamQuestion(${idx})">${idx + 1}</button>`;
+  }).join('');
+}
+
+window.selectExamChoice = function(choice) {
+  activeExam.userAnswers[activeExam.currentIdx] = choice;
+  // Update choice button UI
+  $$('#timed-question-render .answer-option').forEach(opt => {
+    opt.classList.toggle('selected', opt.querySelector('.choice-letter')?.textContent.trim() === choice);
+  });
+  renderExamPalette();
+  const ansCount = Object.keys(activeExam.userAnswers).length;
+  $('#timed-answered-count').textContent = `${ansCount}/${activeExam.questions.length} đã trả lời`;
+};
+
+window.toggleExamFlag = function() {
+  activeExam.flags[activeExam.currentIdx] = !activeExam.flags[activeExam.currentIdx];
+  renderExamCurrentQuestion();
+};
+
+window.jumpToExamQuestion = function(idx) {
+  if (idx >= 0 && idx < activeExam.questions.length) {
+    activeExam.currentIdx = idx;
+    renderExamCurrentQuestion();
+  }
+};
+
+window.prevTimedQuestion = function() {
+  if (activeExam.currentIdx > 0) {
+    activeExam.currentIdx--;
+    renderExamCurrentQuestion();
+  }
+};
+
+window.nextTimedQuestion = function() {
+  if (activeExam.currentIdx < activeExam.questions.length - 1) {
+    activeExam.currentIdx++;
+    renderExamCurrentQuestion();
+  }
+};
+
+window.exitTimedSession = function() {
+  if (confirm('Bạn có chắc chắn muốn thoát khỏi bài thi thử? Mọi câu trả lời chưa nộp sẽ bị hủy.')) {
+    clearInterval(activeExam.timerInterval);
+    $('#timed-exam-area').style.display = 'none';
+    $('#test-pack-grid').style.display = 'grid';
+  }
+};
+
+window.finishTimedSession = function() {
+  const total = activeExam.questions.length;
+  const answered = Object.keys(activeExam.userAnswers).length;
+  const unanswered = total - answered;
+
+  if (activeExam.secondsRemaining > 0 && unanswered > 0) {
+    if (!confirm(`Bạn còn ${unanswered} câu chưa trả lời. Bạn có chắc chắn muốn nộp bài ngay bây giờ?`)) {
+      return;
+    }
+  }
+
+  clearInterval(activeExam.timerInterval);
+  const timeSpentSec = activeExam.durationSec - activeExam.secondsRemaining;
+
+  // Grade test
+  let correctCount = 0;
+  const ws = getCurWS();
+  const isSAT = db.activeWorkspace === 'sat';
+
+  activeExam.questions.forEach((q, idx) => {
+    const userAns = activeExam.userAnswers[idx];
+    const isCorrect = userAns && String(userAns).trim().toLowerCase() === String(q.correct_answer).trim().toLowerCase();
+    if (isCorrect) correctCount++;
+
+    // Update skill progress in background
+    const skill = q.skill || 'General';
+    if (!ws.skills[skill]) ws.skills[skill] = { correct: 0, total: 0, history: [] };
+    ws.skills[skill].total++;
+    if (isCorrect) ws.skills[skill].correct++;
+    ws.skills[skill].history.push({ correct: isCorrect, timestamp: Date.now(), timeTakenSec: Math.round(timeSpentSec / total) });
+
+    // Record to errors if wrong
+    if (!isCorrect && userAns) {
+      ws.errors.unshift({
+        question_id: q.question_id || 'EXAM-Q-' + idx,
+        domain: q.domain || (isSAT ? 'Reading and Writing' : 'Reading'),
+        skill: skill,
+        answer: userAns,
+        correct_answer: q.correct_answer,
+        error_type: q.error_type || 'COGNITIVE_DISTRACTOR',
+        timestamp: Date.now()
+      });
+      if (ws.errors.length > 100) ws.errors.pop();
+    }
+  });
+
+  save();
+
+  // Display Score & Review Area
+  showTestResults(correctCount, total, timeSpentSec);
+};
+
+function showTestResults(correct, total, timeSpentSec) {
+  $('#timed-exam-area').style.display = 'none';
+  const resultsArea = $('#timed-results-area');
+  if (!resultsArea) return;
+  resultsArea.style.display = 'block';
+
+  const isSAT = db.activeWorkspace === 'sat';
+  const pct = Math.round((correct / total) * 100);
+
+  // Scaled Score or Band Score calculation
+  let scoreTitle = '';
+  let scoreSub = '';
+  if (isSAT) {
+    const scaledScore = Math.min(1600, Math.max(400, Math.round(400 + (correct / total) * 1200)));
+    scoreTitle = `${scaledScore} / 1600`;
+    scoreSub = `Độ chính xác: ${pct}% · Trả lời đúng ${correct}/${total} câu · Thời gian: ${Math.floor(timeSpentSec / 60)}m ${timeSpentSec % 60}s`;
+  } else {
+    let band = '5.0';
+    if (pct >= 90) band = '8.5 - 9.0';
+    else if (pct >= 80) band = '7.5 - 8.0';
+    else if (pct >= 70) band = '6.5 - 7.0';
+    else if (pct >= 60) band = '6.0';
+    else if (pct >= 50) band = '5.5';
+    scoreTitle = `IELTS Band ${band}`;
+    scoreSub = `Độ chính xác: ${pct}% · Trả lời đúng ${correct}/${total} câu · Thời gian: ${Math.floor(timeSpentSec / 60)}m ${timeSpentSec % 60}s`;
+  }
+
+  // Generate Review Accordion HTML
+  const reviewHtml = activeExam.questions.map((q, idx) => {
+    const userAns = activeExam.userAnswers[idx] || 'Chưa trả lời';
+    const isCorrect = userAns !== 'Chưa trả lời' && String(userAns).trim().toLowerCase() === String(q.correct_answer).trim().toLowerCase();
+
+    // Why others wrong
+    let whyNot = '';
+    if (q.why_others_wrong && typeof q.why_others_wrong === 'object') {
+      whyNot = Object.entries(q.why_others_wrong).map(([k, v]) => `<div><strong>Phương án ${k}:</strong> ${escapeHTML(v)}</div>`).join('');
+    } else {
+      whyNot = 'Các phương án còn lại chứa bẫy suy diễn vượt quá phạm vi hoặc sai lệch logic.';
+    }
+
+    return `
+      <div class="test-review-q-item ${isCorrect ? 'correct' : 'incorrect'}">
+        <div class="flex justify-between items-center mb-2 flex-wrap gap-2">
+          <div class="flex items-center gap-2">
+            <span class="skill-pill text-xs">Câu ${idx + 1}: ${escapeHTML(q.skill || q.domain)}</span>
+            <span class="text-xs font-semibold ${isCorrect ? 'text-success' : 'text-error'}">
+              ${isCorrect ? '✓ Đúng' : '⚠️ Sai'}
+            </span>
+          </div>
+          <span class="text-xs text-muted">Bạn chọn: <strong>${escapeHTML(userAns)}</strong> | Đáp án đúng: <strong class="text-success">${escapeHTML(q.correct_answer)}</strong></span>
+        </div>
+        <p class="text-sm font-semibold mb-2">${escapeHTML(q.question_stem || '')}</p>
+        
+        <!-- 6-Stage Deliberate Feedback Expansion -->
+        <details class="text-xs mt-2" style="background:var(--color-canvas);border-radius:var(--radius);padding:0.75rem;border:1px solid var(--color-border);">
+          <summary class="font-bold cursor-pointer text-primary">📖 Xem Bóc Tách Bẫy Lỗi &amp; Khung Tư Duy Chi Tiết</summary>
+          <div class="mt-3 flex-col gap-2" style="line-height:1.6;">
+            <div><strong class="text-success">02 Bằng chứng đáp án đúng:</strong> ${escapeHTML(q.explanation || '')}</div>
+            <div class="mt-1"><strong>03 Phân tích bẫy phương án sai:</strong><div class="pl-2 mt-1">${whyNot}</div></div>
+            <div class="mt-1"><strong>04 Khung tư duy:</strong> ${escapeHTML(q.thinking_framework || 'Đối chiếu ngữ nghĩa và ranh giới logic')}</div>
+            <div class="mt-1"><strong>05 Bẫy nhận thức:</strong> <span class="error-pattern-tag" style="margin-top:0;">${escapeHTML(q.error_type || 'COGNITIVE_DISTRACTOR')}</span> — ${escapeHTML(q.common_trap || '')}</div>
+            ${q.socratic_prompt ? `<div class="mt-1" style="color:var(--color-primary);"><strong>06 Gợi mở Socratic:</strong> <em>"${escapeHTML(q.socratic_prompt)}"</em></div>` : ''}
+          </div>
+        </details>
+      </div>
+    `;
+  }).join('');
+
+  resultsArea.innerHTML = `
+    <div class="test-score-banner">
+      <span class="plan-badge mb-2" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Kết Quả Khảo Thí</span>
+      <div class="test-score-number">${scoreTitle}</div>
+      <p class="text-sm" style="color:#E2E8F0;">${scoreSub}</p>
+      <div class="flex justify-center gap-3 mt-4 flex-wrap">
+        <button class="btn btn-outline" style="color:white;border-color:white;" onclick="closeTestResults()">Quay Về Danh Sách Đề</button>
+        <button class="btn" style="background:white;color:var(--color-ink);font-weight:700;" onclick="window.print()">🖨️ In Bảng Điểm (Print/PDF)</button>
+      </div>
+    </div>
+
+    <h3 style="font-size:1.2rem;font-weight:800;margin-bottom:1rem;">Bóc Tách Toàn Bộ Bài Làm &amp; Chẩn Đoán Lỗi Nhận Thức</h3>
+    <div class="flex-col gap-3">${reviewHtml}</div>
+  `;
+
+  window.scrollTo(0, 0);
+}
+
+window.closeTestResults = function() {
+  $('#timed-results-area').style.display = 'none';
+  $('#test-pack-grid').style.display = 'grid';
+  renderTest();
+};
+
+window.startTimedSession = function(mode, minutes, count) {
+  startMockExam(db.activeWorkspace, mode === 'math' ? 'sat-math-sprint' : (mode === 'ielts' ? 'ielts-reading-sprint' : 'sat-quick-sprint'));
 };
 
 window.startMockTest = function(section) {
-  startTimedSession(section, 32, 27);
+  startMockExam('sat', 'sat-pt1');
 };
 
 // ═══════════════════════════════════════════════════════════════

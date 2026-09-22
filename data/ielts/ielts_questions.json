@@ -1,6 +1,7 @@
 {
   "exam": "IELTS Academic",
   "version": "2026",
+  "total_questions": 30,
   "questions": [
     {
       "question_id": "IELTS-RD-001",
@@ -15,23 +16,208 @@
         "C": "NOT GIVEN"
       },
       "correct_answer": "A",
-      "explanation": "The text explicitly states that the termites 'maintain nest temperatures within a fraction of a degree while exterior temperatures fluctuate wildly from 35°C... to below freezing'. 'Within a fraction of a degree' directly matches 'remains virtually constant'. Therefore, the statement is TRUE.",
+      "explanation": "The text explicitly states that the termites 'maintain nest temperatures within a fraction of a degree while exterior temperatures fluctuate wildly'. 'Within a fraction of a degree' directly matches 'remains virtually constant'. Therefore, the statement is TRUE.",
       "why_others_wrong": {
         "B": "Incorrect because the passage directly confirms constant internal temperatures rather than contradicting it.",
-        "C": "Incorrect because specific factual evidence for internal vs. external temperature stability is fully documented in the paragraph."
+        "C": "Incorrect because specific factual evidence for internal vs. external temperature stability is documented in the text."
       },
+      "socratic_prompt": "What does 'within a fraction of a degree' tell you about the temperature variation inside the mounds?",
       "common_trap": "Overlooking synonym paraphrases: 'within a fraction of a degree' = 'virtually constant'.",
       "thinking_framework": "IELTS True/False/Not Given: Match three factual checkpoints: 1. Subject (termite mound temperature), 2. Direction/State (constant), 3. Condition (external fluctuations). All three are affirmed.",
       "error_type": "PARAPHRASE_RECOGNITION",
       "estimated_time_seconds": 75,
       "source_basis": "original_academic",
-      "tags": ["architecture", "biomimetics", "reading"]
+      "tags": [
+        "architecture",
+        "biomimetics",
+        "reading"
+      ]
     },
     {
       "question_id": "IELTS-RD-002",
       "domain": "Reading",
-      "skill": "Matching Headings",
+      "skill": "True / False / Not Given",
+      "difficulty": 3,
+      "passage": "Luminescent deep-sea organisms have evolved sophisticated luciferin-luciferase enzymatic pathways that convert chemical energy into cold light with nearly 98 percent quantum efficiency. In contrast, standard domestic incandescent bulbs convert barely five percent of their energy intake into visible illumination, dissipating the remainder as thermal waste. Marine researchers hypothesize that bioluminescent flashes serve multifaceted survival imperatives, encompassing predator deterrence, conspecific recognition, and predatory luring. However, direct in situ physiological measurements of bathypelagic species remain scarce due to the prohibitive hydrostatic pressures encountered below 3,000 meters.",
+      "question_stem": "Deep-sea bioluminescent biochemical systems lose most of their input energy as heat.",
+      "choices": {
+        "A": "TRUE",
+        "B": "FALSE",
+        "C": "NOT GIVEN"
+      },
+      "correct_answer": "B",
+      "explanation": "The text states that luminescent organisms convert energy into light with 'nearly 98 percent quantum efficiency' producing 'cold light', while incandescent bulbs dissipate energy as thermal waste. Thus bioluminescence loses very little energy as heat, directly contradicting the statement.",
+      "why_others_wrong": {
+        "A": "Contradicts the explicit fact that bioluminescence achieves 98% efficiency with cold light.",
+        "C": "Incorrect because the passage gives exact quantum efficiency numbers proving the opposite."
+      },
+      "socratic_prompt": "If a system is 98% efficient and produces 'cold light', does it lose *most* of its energy as heat?",
+      "common_trap": "Confusing the description of incandescent light bulbs (which lose 95% as heat) with the bioluminescent organisms.",
+      "thinking_framework": "Check subject reference: Does the statement refer to organisms or incandescent bulbs?",
+      "error_type": "SUBJECT_CONFUSION",
+      "estimated_time_seconds": 75,
+      "source_basis": "original_academic",
+      "tags": [
+        "marine_biology",
+        "biochemistry",
+        "reading"
+      ]
+    },
+    {
+      "question_id": "IELTS-RD-003",
+      "domain": "Reading",
+      "skill": "True / False / Not Given",
       "difficulty": 4,
+      "passage": "Dendroclimatology utilizes the annual growth rings of long-lived tree species, such as the bristlecone pine (Pinus longaeva), to reconstruct past terrestrial climates. Ring width correlates primarily with ambient temperature and precipitation during the vegetative growing season. In dendrochronological laboratories, cross-dating techniques eliminate anomalies caused by missing or false double rings. While high-altitude specimens frequently correlate with growing-season minimum temperatures, lowland riparian trees are predominantly driven by hydrologic variability.",
+      "question_stem": "Bristlecone pine specimens harvested from lower valleys are more expensive to analyze than high-altitude trees.",
+      "choices": {
+        "A": "TRUE",
+        "B": "FALSE",
+        "C": "NOT GIVEN"
+      },
+      "correct_answer": "C",
+      "explanation": "The passage discusses how high-altitude trees correlate with minimum temperatures and lowland riparian trees with hydrology, but it never mentions the cost or expense of analyzing either specimen. Therefore, the answer is NOT GIVEN.",
+      "why_others_wrong": {
+        "A": "There is zero mention of financial costs or equipment expense in the text.",
+        "B": "We cannot say it is false because no monetary comparison is stated at all."
+      },
+      "socratic_prompt": "Does the passage say anything about financial costs, laboratory fees, or expense?",
+      "common_trap": "Assuming that because lowland trees have different moisture drivers, they must require more expensive analysis.",
+      "thinking_framework": "Look for the key metric: 'cost / expensive'. If the metric is completely missing from the text, choose NOT GIVEN.",
+      "error_type": "UNWARRANTED_ASSUMPTION",
+      "estimated_time_seconds": 70,
+      "source_basis": "original_academic",
+      "tags": [
+        "climatology",
+        "dendrochronology",
+        "reading"
+      ]
+    },
+    {
+      "question_id": "IELTS-RD-004",
+      "domain": "Reading",
+      "skill": "True / False / Not Given",
+      "difficulty": 4,
+      "passage": "Recent excavations at Göbekli Tepe in southeastern Anatolia have challenged the traditional archaeological paradigm that monumental megalithic architecture was strictly a byproduct of sedentary agrarian societies. Radiocarbon dating of colluvium deposits surrounding the enclosures places their construction around 9500 BCE, preceding the regional domestication of emmer wheat and einkorn. Osteological evidence from the site reveals thousands of fractured wild animal bones—primarily gazelle and aurochs—with zero anatomical markers of domesticated livestock.",
+      "question_stem": "The megalithic structures at Göbekli Tepe were erected after local populations had mastered crop cultivation.",
+      "choices": {
+        "A": "TRUE",
+        "B": "FALSE",
+        "C": "NOT GIVEN"
+      },
+      "correct_answer": "B",
+      "explanation": "The passage states that the construction (circa 9500 BCE) 'preceded the regional domestication of emmer wheat and einkorn'. 'Preceded' means occurred before, so saying they were erected 'after' cultivation directly contradicts the passage.",
+      "why_others_wrong": {
+        "A": "Incorrect because 'preceded' means before, which directly contradicts 'after'.",
+        "C": "Incorrect because chronological sequence is explicitly specified with 'preceded the regional domestication'."
+      },
+      "socratic_prompt": "What does the verb 'preceded' mean in terms of time order?",
+      "common_trap": "Failing to recognize 'preceded' as an antonymous temporal relationship to 'after'.",
+      "thinking_framework": "Temporal ordering: Event A (Megaliths) preceded Event B (Crop domestication). Therefore, A occurred BEFORE B, not after.",
+      "error_type": "CHRONOLOGICAL_INVERSION",
+      "estimated_time_seconds": 75,
+      "source_basis": "original_academic",
+      "tags": [
+        "archaeology",
+        "neolithic",
+        "reading"
+      ]
+    },
+    {
+      "question_id": "IELTS-RD-005",
+      "domain": "Reading",
+      "skill": "True / False / Not Given",
+      "difficulty": 5,
+      "passage": "The hypothesis of linguistic relativity, often termed the Sapir-Whorf hypothesis, posits that the grammatical categories and lexical taxonomies of a specific tongue influence the habitual cognitive patterns of its native speakers. Early radical formulations, which asserted that language rigidly imprisons cognitive potential, were widely rejected by cognitive neuroscientists in the late twentieth century. However, contemporary 'neo-Whorfian' empirical studies utilize reaction-time color categorization tests and spatial navigation paradigms to demonstrate subtle, statistically significant differences in perceptual processing speed between linguistic groups, though these do not constitute cognitive incapacity.",
+      "question_stem": "Modern cognitive researchers agree that language completely determines and restricts what thoughts a human mind can formulate.",
+      "choices": {
+        "A": "TRUE",
+        "B": "FALSE",
+        "C": "NOT GIVEN"
+      },
+      "correct_answer": "B",
+      "explanation": "The text states that the view that language 'rigidly imprisons cognitive potential' was 'widely rejected', and that modern studies show differences in speed that 'do not constitute cognitive incapacity'. Therefore, modern researchers do NOT agree with complete determination.",
+      "why_others_wrong": {
+        "A": "Contradicts the passage: radical linguistic determinism was rejected, and modern studies confirm it does NOT restrict thoughts.",
+        "C": "The consensus rejecting rigid determinism is directly documented in the text."
+      },
+      "socratic_prompt": "Notice extreme words in the stem: 'completely determines and restricts'. What does the passage say about the 'radical' formulation?",
+      "common_trap": "Conflating subtle differences in speed (neo-Whorfian) with rigid cognitive imprisonment (early radical view).",
+      "thinking_framework": "Detect extreme scope: 'completely determines' vs. 'subtle differences in perceptual processing speed'. Extreme claims are FALSE when text proves moderation.",
+      "error_type": "EXTREME_QUALIFIER",
+      "estimated_time_seconds": 80,
+      "source_basis": "original_academic",
+      "tags": [
+        "linguistics",
+        "cognitive_science",
+        "reading"
+      ]
+    },
+    {
+      "question_id": "IELTS-RD-006",
+      "domain": "Reading",
+      "skill": "Yes / No / Not Given",
+      "difficulty": 4,
+      "passage": "Advocates of geoengineering suggest that solar radiation management, specifically stratospheric aerosol injection, represents an indispensable backstop against catastrophic climate tipping points. In my assessment, such techno-optimism is fundamentally reckless. Dispersing millions of tonnes of sulfur dioxide into the upper atmosphere may indeed diminish mean global thermal anomalies, but it would inevitably destabilize monsoonal circulation patterns across South Asia and Sub-Saharan Africa, jeopardizing the caloric sustenance of two billion people without mitigating ocean acidification in the slightest.",
+      "question_stem": "The author considers solar radiation management to be an unacceptably perilous approach to global warming.",
+      "choices": {
+        "A": "YES",
+        "B": "NO",
+        "C": "NOT GIVEN"
+      },
+      "correct_answer": "A",
+      "explanation": "The author explicitly asserts: 'In my assessment, such techno-optimism is fundamentally reckless' and details severe threats to food security and weather stability. This directly aligns with 'an unacceptably perilous approach'.",
+      "why_others_wrong": {
+        "B": "The author clearly criticizes the approach as 'fundamentally reckless', agreeing with the statement.",
+        "C": "The author's personal judgment is explicitly and emphatically stated."
+      },
+      "socratic_prompt": "What does the author call techno-optimism? How does 'fundamentally reckless' match 'unacceptably perilous'?",
+      "common_trap": "Focusing on the advocates' arguments mentioned in sentence 1 rather than the author's own claim ('In my assessment...').",
+      "thinking_framework": "Author's Voice Identifier: Locate first-person evaluation markers ('In my assessment', 'I argue') to separate the author's stance from quoted viewpoints.",
+      "error_type": "VOICE_ATTRIBUTION",
+      "estimated_time_seconds": 80,
+      "source_basis": "original_academic",
+      "tags": [
+        "environmental_science",
+        "geoengineering",
+        "reading"
+      ]
+    },
+    {
+      "question_id": "IELTS-RD-007",
+      "domain": "Reading",
+      "skill": "Yes / No / Not Given",
+      "difficulty": 4,
+      "passage": "In evaluating corporate environmental, social, and governance (ESG) disclosures, one must remain acutely skeptical of self-reported metrics. All too often, corporate sustainability reports function as marketing veneer, selectively highlighting micro-initiatives while obfuscating core supply-chain externalities. Without mandatory third-party forensic auditing and statutory penalties for fraudulent greenwashing, voluntary ESG standards will remain largely ineffectual at curbing systemic ecological degradation.",
+      "question_stem": "Voluntary sustainability reporting has already succeeded in substantially curtailing industrial pollution.",
+      "choices": {
+        "A": "YES",
+        "B": "NO",
+        "C": "NOT GIVEN"
+      },
+      "correct_answer": "B",
+      "explanation": "The writer argues that voluntary ESG standards are 'largely ineffectual at curbing systemic ecological degradation' and serve as a 'marketing veneer'. This directly contradicts the statement that they have 'succeeded in substantially curtailing industrial pollution'.",
+      "why_others_wrong": {
+        "A": "Directly contradicts the writer's thesis that voluntary reporting is 'largely ineffectual'.",
+        "C": "The writer's verdict on voluntary standards is clearly stated."
+      },
+      "socratic_prompt": "What adjective does the writer use for voluntary ESG standards? ('largely ineffectual'). Does that mean success or failure?",
+      "common_trap": "Confusing the existence of corporate ESG reports with actual real-world success in pollution reduction.",
+      "thinking_framework": "Claim Comparison: 'Succeeded in curtailing' vs. 'Largely ineffectual at curbing'. Opposite directions mean NO.",
+      "error_type": "DIRECTIONAL_CONTRADICTION",
+      "estimated_time_seconds": 75,
+      "source_basis": "original_academic",
+      "tags": [
+        "corporate_governance",
+        "ecology",
+        "reading"
+      ]
+    },
+    {
+      "question_id": "IELTS-RD-008",
+      "domain": "Reading",
+      "skill": "Matching Headings",
+      "difficulty": 3,
       "passage": "Urban agroforestry—integrating trees and woody perennials into municipal agriculture—is gaining momentum across temperate metropolitan regions. Beyond producing food, urban tree canopies alleviate the urban heat island effect, attenuate stormwater runoff, and sequester atmospheric carbon. Nevertheless, municipal planners frequently encounter bureaucratic friction regarding subterranean utility conflicts, zoning ordinances dating to industrial-era segregation of land uses, and complex liability frameworks surrounding municipal tree maintenance.",
       "question_stem": "Which heading best summarizes the paragraph?",
       "choices": {
@@ -41,21 +227,90 @@
         "D": "Economic profitability of commercial city tree farms"
       },
       "correct_answer": "A",
-      "explanation": "The paragraph is structured into two core halves: the environmental benefits (alleviating heat islands, stormwater attenuation, carbon capture) followed by the counterbalancing regulatory/legal challenges (zoning ordinances, subterranean utilities, liability). Option A captures both sides comprehensively.",
+      "explanation": "The paragraph is structured into two core halves: the environmental benefits (heat islands, stormwater, carbon capture) followed by the counterbalancing regulatory/legal challenges (zoning ordinances, subterranean utilities, liability). Option A captures both sides comprehensively.",
       "why_others_wrong": {
         "B": "Too narrow: industrial zoning is only cited as one historical cause of regulatory friction.",
         "C": "Distractor: stormwater filtration is a minor detail, not the main theme.",
         "D": "Out of scope: the paragraph focuses on municipal sustainability, not commercial tree farming profitability."
       },
+      "socratic_prompt": "Notice the transition word 'Nevertheless'. What two contrasting aspects does the author connect?",
       "common_trap": "Selecting a heading based on a single supporting sentence rather than the structural dual-theme (Benefits + Obstacles).",
       "thinking_framework": "Heading Matcher: Identify Topic Sentence + Pivot Indicator ('Nevertheless') + Concluding Synthesizer.",
       "error_type": "OVER_GENERALIZATION",
       "estimated_time_seconds": 90,
       "source_basis": "original_academic",
-      "tags": ["urban_planning", "ecology", "reading"]
+      "tags": [
+        "urban_planning",
+        "ecology",
+        "reading"
+      ]
     },
     {
-      "question_id": "IELTS-RD-003",
+      "question_id": "IELTS-RD-009",
+      "domain": "Reading",
+      "skill": "Matching Headings",
+      "difficulty": 4,
+      "passage": "For centuries, the decline of the Classic Maya civilization was attributed to catastrophic warfare or sudden socio-political collapse. However, high-resolution sediment cores extracted from Lake Chichancanab tell a more nuanced story. Geochemical analysis of titanium concentrations and gypsum deposits indicates a series of megadroughts between 800 and 1000 CE, coinciding with the abandonment of major urban centers. As rainfall declined by up to 50 percent, the intricate system of aguadas (reservoirs) and agricultural terraces failed to sustain the dense populations of Tikal and Calakmul, ultimately sparking gradual dispersion rather than an abrupt apocalypse.",
+      "question_stem": "Which heading best captures the essence of this passage?",
+      "choices": {
+        "A": "Paleoclimatic sedimentary evidence reinterpreting a classic societal disintegration",
+        "B": "The engineering supremacy of ancient Mayan water filtration networks",
+        "C": "Contradictory theories regarding the architectural evolution of Tikal",
+        "D": "The geopolitical conflicts between competing lowland city-states"
+      },
+      "correct_answer": "A",
+      "explanation": "The passage highlights how scientific sedimentary evidence (sediment cores, geochemical titanium/gypsum analysis) has revised the understanding of the Classic Maya decline from abrupt warfare to climatic megadroughts and gradual dispersal.",
+      "why_others_wrong": {
+        "B": "Water reservoirs are mentioned as failing under drought, not celebrated for supremacy.",
+        "C": "Focuses on climate and demographic decline, not architectural development.",
+        "D": "Warfare is explicitly downplayed in favor of environmental causation."
+      },
+      "socratic_prompt": "What tool did researchers use (sediment cores) and what established historical idea did it change?",
+      "common_trap": "Choosing an option that mentions 'warfare' or 'engineering' based on background knowledge rather than the text's core paleoclimatic discovery.",
+      "thinking_framework": "Synthesis Formula: Scientific Methodology (Sediment cores) + Historical Subject (Mayan decline) + Paradigm Shift (Reinterpretation).",
+      "error_type": "PARTIAL_FOCUS",
+      "estimated_time_seconds": 90,
+      "source_basis": "original_academic",
+      "tags": [
+        "archaeology",
+        "paleoclimatology",
+        "reading"
+      ]
+    },
+    {
+      "question_id": "IELTS-RD-010",
+      "domain": "Reading",
+      "skill": "Matching Headings",
+      "difficulty": 4,
+      "passage": "The rapid digitization of rare manuscripts has undeniably democratized scholarship, granting researchers worldwide immediate access to digitized codices once sequestered in monastic vaults. Yet, material culture theorists caution that digitization inevitably strips away the haptic and tactile dimensions of paleography. The weight of parchment, the tactile texture of animal hair versus flesh side, the scent of oak gall ink, and microscopic variations in quill pressure convey crucial codicological information that two-dimensional digital pixels cannot replicate.",
+      "question_stem": "Which heading is most appropriate for this section?",
+      "choices": {
+        "A": "The intrinsic limitations of digital surrogates in codicological research",
+        "B": "Cost reductions in high-resolution scanning technologies for libraries",
+        "C": "Techniques for chemically analyzing historic oak gall inks",
+        "D": "The preservation protocols of medieval monastic scriptoriums"
+      },
+      "correct_answer": "A",
+      "explanation": "While acknowledging the benefit of digitization, the central focus of the paragraph (introduced by 'Yet') is the lost sensory and tactile dimensions of physical manuscripts that digital images fail to capture.",
+      "why_others_wrong": {
+        "B": "Scanning costs are never discussed.",
+        "C": "Oak gall ink is only mentioned as a physical texture detail, not an analytical protocol.",
+        "D": "Scriptorium preservation is not the topic; modern researchers assessing digital vs. physical artifacts is."
+      },
+      "socratic_prompt": "What does the passage say digital pixels *cannot* replicate? How does that relate to 'limitations'?",
+      "common_trap": "Selecting an overly positive heading about democratization, ignoring the crucial turn after 'Yet'.",
+      "thinking_framework": "Concessive Pivot: Thesis starts after 'Yet / However'. Identify the negative critique ('strips away', 'cannot replicate').",
+      "error_type": "PIVOT_NEGLECTION",
+      "estimated_time_seconds": 85,
+      "source_basis": "original_academic",
+      "tags": [
+        "paleography",
+        "digital_humanities",
+        "reading"
+      ]
+    },
+    {
+      "question_id": "IELTS-RD-011",
       "domain": "Reading",
       "skill": "Summary Completion",
       "difficulty": 3,
@@ -74,12 +329,303 @@
         "C": "Mitotic refers to cellular division types, not sequence composition.",
         "D": "Nutritional refers to environmental stressors."
       },
+      "socratic_prompt": "Look at the words right before 'sequence' in the passage: 'without mutating the fundamental ______ sequence'.",
       "common_trap": "Picking adjacent nouns ('histone') instead of the specific modifier of 'sequence'.",
-      "thinking_framework": "Summary Gap Fill: Check grammatical category (noun/adjective modifying 'sequence') and scan for the negation marker ('without changing').",
+      "thinking_framework": "Summary Gap Fill: Check grammatical category (noun/adjective modifying 'sequence') and scan for the negation marker ('without mutating').",
       "error_type": "LEXICAL_PRECISION",
       "estimated_time_seconds": 60,
       "source_basis": "original_academic",
-      "tags": ["genetics", "biology", "reading"]
+      "tags": [
+        "genetics",
+        "biology",
+        "reading"
+      ]
+    },
+    {
+      "question_id": "IELTS-RD-012",
+      "domain": "Reading",
+      "skill": "Summary Completion",
+      "difficulty": 4,
+      "passage": "In subterranean karst topography, speleothems—mineral deposits formed in caves, including stalactites and stalagmites—serve as exceptional terrestrial archives of past moisture regimes. As rainwater percolates through overlying soil horizons, it absorbs carbon dioxide, forming carbonic acid that dissolves limestone bedrock. Upon reaching the cave ceiling, the solution degasses carbon dioxide into the cave atmosphere, precipitating calcite crystals. The ratio of stable oxygen isotopes (18O to 16O) locked within these crystalline laminae directly mirrors regional paleoprecipitation levels during deposit formation.",
+      "question_stem": "Calcite begins to deposit on cave roofs when percolating water releases ______ into the surrounding subterranean air.",
+      "choices": {
+        "A": "carbon dioxide",
+        "B": "oxygen isotopes",
+        "C": "carbonic acid",
+        "D": "limestone bedrock"
+      },
+      "correct_answer": "A",
+      "explanation": "The text states: 'Upon reaching the cave ceiling, the solution degasses carbon dioxide into the cave atmosphere, precipitating calcite crystals.' 'Degasses' is directly paraphrased by 'releases', and 'cave atmosphere' by 'subterranean air'.",
+      "why_others_wrong": {
+        "B": "Oxygen isotopes are locked inside calcite crystals, not released into the air.",
+        "C": "Carbonic acid is formed in the soil, not released into cave air.",
+        "D": "Limestone bedrock is the solid rock being dissolved."
+      },
+      "socratic_prompt": "What does the text say the solution 'degasses' into the cave atmosphere?",
+      "common_trap": "Selecting 'carbonic acid' because it was mentioned earlier in the chemical chain.",
+      "thinking_framework": "Process Tracking: 1. Rain absorbs CO2 -> 2. Acid dissolves bedrock -> 3. Solution degasses CO2 into cave air -> 4. Calcite precipitates.",
+      "error_type": "PROCESS_STAGE_CONFUSION",
+      "estimated_time_seconds": 75,
+      "source_basis": "original_academic",
+      "tags": [
+        "geology",
+        "speleology",
+        "reading"
+      ]
+    },
+    {
+      "question_id": "IELTS-RD-013",
+      "domain": "Reading",
+      "skill": "Summary Completion",
+      "difficulty": 4,
+      "passage": "In cognitive psychology, the term 'working memory' refers to a multi-component neural system responsible for transient holding and manipulation of verbal and visuospatial information. Alan Baddeley's seminal model partitions this system into a supervisory 'central executive' and two subordinate slave systems: the phonological loop, which processes acoustic speech signals, and the visuospatial sketchpad, which handles mental imagery. Later revisions incorporated an 'episodic buffer' that integrates disparate sensory modalities into coherent, chronological representations before long-term consolidation.",
+      "question_stem": "According to the revised model, the component that synthesizes multi-sensory inputs into temporally ordered episodes is the ______.",
+      "choices": {
+        "A": "episodic buffer",
+        "B": "phonological loop",
+        "C": "visuospatial sketchpad",
+        "D": "central executive"
+      },
+      "correct_answer": "A",
+      "explanation": "The passage states that later revisions added an 'episodic buffer' which 'integrates disparate sensory modalities into coherent, chronological representations'. 'Temporally ordered' matches 'chronological', and 'synthesizes multi-sensory inputs' matches 'integrates disparate sensory modalities'.",
+      "why_others_wrong": {
+        "B": "The phonological loop only processes acoustic and speech signals.",
+        "C": "The visuospatial sketchpad handles mental imagery only.",
+        "D": "The central executive is the supervisory attentional controller, not the multi-sensory buffer."
+      },
+      "socratic_prompt": "Which component is explicitly credited with making 'coherent, chronological representations' from different senses?",
+      "common_trap": "Choosing 'central executive' because it sounds like the most powerful or coordinating component.",
+      "thinking_framework": "Component Function Mapping: Identify the specific entity tied to the functional description (chronological multi-sensory integration = episodic buffer).",
+      "error_type": "SUBSYSTEM_MISATTRIBUTION",
+      "estimated_time_seconds": 70,
+      "source_basis": "original_academic",
+      "tags": [
+        "psychology",
+        "neuroscience",
+        "reading"
+      ]
+    },
+    {
+      "question_id": "IELTS-RD-014",
+      "domain": "Reading",
+      "skill": "Multiple Choice",
+      "difficulty": 3,
+      "passage": "The phenomenon of island dwarfism, or insular dwarfism, is an evolutionary process whereby large continental vertebrates stranded on isolated landmasses experience a progressive reduction in mean body size across generations. Biologists attribute this adaptation primarily to ecological resource constraints: small land areas support limited primary biomass, favoring smaller individuals with reduced metabolic requirements. Concurrently, the absence of apex continental carnivores removes the selective pressure for large physical stature as a defensive mechanism. Classic instances include the extinct Sicilian dwarf elephant (Palaeoloxodon falconeri), which stood barely one meter tall.",
+      "question_stem": "According to the passage, which factor contributes to the decrease in animal body size on islands?",
+      "choices": {
+        "A": "A scarcity of available nutritional resources combined with diminished predatory threat",
+        "B": "Severe inbreeding depression resulting from geographical reproductive isolation",
+        "C": "Exposure to maritime tropical diseases that stunt vertebrate skeletal growth",
+        "D": "Competition against highly specialized indigenous bird species"
+      },
+      "correct_answer": "A",
+      "explanation": "The author cites two primary causes: 1. 'ecological resource constraints' (scarcity of resources) and 2. 'the absence of apex continental carnivores removes the selective pressure for large physical stature' (diminished predator threat). Option A combines both accurately.",
+      "why_others_wrong": {
+        "B": "Inbreeding is neither mentioned nor cited as the cause of adaptive dwarfism.",
+        "C": "Maritime diseases are completely absent from the text.",
+        "D": "Competition with birds is never mentioned."
+      },
+      "socratic_prompt": "What two ecological factors are highlighted in the second and third sentences?",
+      "common_trap": "Injecting outside knowledge about inbreeding on islands instead of following the author's explicit causal factors.",
+      "thinking_framework": "Causal Pair Extraction: Factor 1 (Food limits) + Factor 2 (Lack of predators). Check which option pairs these exact two factors.",
+      "error_type": "EXTRANEOUS_KNOWLEDGE",
+      "estimated_time_seconds": 75,
+      "source_basis": "original_academic",
+      "tags": [
+        "evolutionary_biology",
+        "ecology",
+        "reading"
+      ]
+    },
+    {
+      "question_id": "IELTS-RD-015",
+      "domain": "Reading",
+      "skill": "Multiple Choice",
+      "difficulty": 4,
+      "passage": "Historically, economists treated technological innovation as an 'exogenous' variable—an unprompted windfall of scientific discovery that arrived from outside economic models like manna from heaven. Paul Romer’s endogenous growth theory fundamentally revolutionized this view by conceptualizing knowledge as a non-rival, partially excludable good. Unlike physical machinery or raw materials, which exhibit diminishing marginal returns, ideas can be utilized simultaneously by unlimited actors without depletion. Romer demonstrated that deliberate market incentives, such as patent protections and research subsidies, dictate the actual velocity of technological creation.",
+      "question_stem": "Why does Paul Romer characterize knowledge as fundamentally different from physical capital?",
+      "choices": {
+        "A": "It can be deployed by multiple economic participants concurrently without suffering exhaustion.",
+        "B": "It is completely immune to any legal or institutional ownership claims.",
+        "C": "It generates immediate financial returns without requiring upfront capital investment.",
+        "D": "It depreciates faster than conventional industrial factory equipment."
+      },
+      "correct_answer": "A",
+      "explanation": "The text explains that knowledge is a 'non-rival' good, meaning 'ideas can be utilized simultaneously by unlimited actors without depletion'. Option A is an exact academic paraphrase of this non-rival property.",
+      "why_others_wrong": {
+        "B": "Directly contradicted: Romer characterizes it as 'partially excludable' through patent protections, not immune to ownership.",
+        "C": "The text notes research requires subsidies and incentives; it does not say returns are instantaneous.",
+        "D": "Depreciation is not the distinguishing factor; non-depletion during simultaneous use is."
+      },
+      "socratic_prompt": "What does the passage say happens when ideas are 'utilized simultaneously by unlimited actors'?",
+      "common_trap": "Choosing B because of 'non-rival', confusing non-rivalry with non-excludability (patents provide excludability).",
+      "thinking_framework": "Economic Concept Decoding: 'Non-rival' = simultaneous use without depletion ('deployed concurrently without suffering exhaustion').",
+      "error_type": "ECONOMIC_DEFINITION_SLIP",
+      "estimated_time_seconds": 85,
+      "source_basis": "original_academic",
+      "tags": [
+        "economics",
+        "innovation",
+        "reading"
+      ]
+    },
+    {
+      "question_id": "IELTS-RD-016",
+      "domain": "Reading",
+      "skill": "Multiple Choice",
+      "difficulty": 5,
+      "passage": "In the philosophy of science, Thomas Kuhn argued in 'The Structure of Scientific Revolutions' that scientific advancement does not proceed via the steady, cumulative accumulation of verified facts portrayed in textbooks. Rather, normal science operates within an established 'paradigm'—a consensus framework of theories, instruments, and metaphysical commitments. Over time, experimental anomalies accumulate that resist assimilation into the reigning paradigm. Initially dismissed as experimental error, these crises eventually prompt a 'paradigm shift': a non-cumulative, incommensurable gestalt switch wherein the scientific community reinterprets its fundamental world view.",
+      "question_stem": "What is Kuhn's central thesis regarding scientific revolutions?",
+      "choices": {
+        "A": "They represent discontinuous conceptual reorganizations rather than linear incremental discoveries.",
+        "B": "They demonstrate that all past scientific beliefs were fraudulent hoaxes designed by political elites.",
+        "C": "They prove that laboratory experiments are entirely subjective and incapable of revealing empirical truths.",
+        "D": "They occur on predictable, mathematically measurable centenary timetables across all scientific fields."
+      },
+      "correct_answer": "A",
+      "explanation": "Kuhn rejects 'the steady, cumulative accumulation of verified facts' (linear incremental discoveries) and argues that revolutions are 'non-cumulative, incommensurable gestalt switch' (discontinuous conceptual reorganizations). Option A captures this central dichotomy perfectly.",
+      "why_others_wrong": {
+        "B": "Absurd exaggeration: Kuhn never suggests science is a fraudulent hoax.",
+        "C": "Kuhn emphasizes that experimental anomalies trigger the crisis; he does not claim experiments are useless or entirely subjective.",
+        "D": "No mathematical or centenary timetables are mentioned anywhere in Kuhn's thesis."
+      },
+      "socratic_prompt": "Compare 'steady, cumulative accumulation' with 'gestalt switch' and 'non-cumulative'. Which option captures that contrast?",
+      "common_trap": "Confusing Kuhn's critique of linear progress with nihilistic rejection of empirical science altogether.",
+      "thinking_framework": "Contrast Analysis: Orthodoxy (Linear / Cumulative) vs. Kuhn's Thesis (Discontinuous / Paradigm Shift).",
+      "error_type": "EXTREME_RELATIVISM",
+      "estimated_time_seconds": 90,
+      "source_basis": "original_academic",
+      "tags": [
+        "philosophy_of_science",
+        "epistemology",
+        "reading"
+      ]
+    },
+    {
+      "question_id": "IELTS-RD-017",
+      "domain": "Reading",
+      "skill": "Matching Features",
+      "difficulty": 4,
+      "passage": "Sociologist Emile Durkheim classified suicide into four distinct sociological categories based on social integration and moral regulation. 'Egoistic suicide' occurs when an individual experiences profound social isolation, feeling detached from communal networks. 'Altruistic suicide' arises from excessive integration, where personal identity is completely subordinated to collective group loyalty, as seen in military kamikaze pilots. 'Anomic suicide' stems from rapid societal breakdown or deregulation, leaving people without clear moral guideposts during economic crashes. Finally, 'fatalistic suicide' results from over-regulation and oppressive tyranny, where an individual perceives no escape from unyielding social rules.",
+      "question_stem": "According to Durkheim's framework, which form of suicide occurs when an individual feels completely separated from communal social ties?",
+      "choices": {
+        "A": "Egoistic suicide",
+        "B": "Altruistic suicide",
+        "C": "Anomic suicide",
+        "D": "Fatalistic suicide"
+      },
+      "correct_answer": "A",
+      "explanation": "The text defines 'egoistic suicide' as occurring 'when an individual experiences profound social isolation, feeling detached from communal networks.' This directly matches the question stem.",
+      "why_others_wrong": {
+        "B": "Altruistic suicide is caused by excessive social integration, the exact opposite of separation.",
+        "C": "Anomic suicide is caused by moral deregulation and economic crisis.",
+        "D": "Fatalistic suicide is caused by oppressive social rules."
+      },
+      "socratic_prompt": "Which category corresponds to low integration and profound social isolation?",
+      "common_trap": "Confusing anomic (lack of moral rules) with egoistic (lack of social attachment).",
+      "thinking_framework": "Typological Mapping: Egoistic = Low integration (isolation); Altruistic = High integration; Anomic = Low regulation; Fatalistic = High regulation.",
+      "error_type": "TYPOLOGY_CONFUSION",
+      "estimated_time_seconds": 70,
+      "source_basis": "original_academic",
+      "tags": [
+        "sociology",
+        "theory",
+        "reading"
+      ]
+    },
+    {
+      "question_id": "IELTS-RD-018",
+      "domain": "Reading",
+      "skill": "Matching Features",
+      "difficulty": 4,
+      "passage": "In behavioral neurology, aphasias—acquired speech impairments—are differentiated by neuroanatomical localization. Patients with Broca's aphasia suffer damage to the left inferior frontal gyrus; their speech comprehension remains largely intact, but spoken output is halting, agrammatic, and labored. Conversely, Wernicke's aphasia, caused by lesions in the left superior temporal gyrus, impairs language comprehension; patients speak with effortless grammatical fluency and prosody, yet their utterances are semantic 'word salad' devoid of coherent meaning.",
+      "question_stem": "A patient whose speech is grammatically fluent but lacks coherent meaning most likely has damage to the ______.",
+      "choices": {
+        "A": "left superior temporal gyrus (Wernicke's area)",
+        "B": "left inferior frontal gyrus (Broca's area)",
+        "C": "occipital visual cortex",
+        "D": "cerebellar motor coordination vermis"
+      },
+      "correct_answer": "A",
+      "explanation": "The text states that Wernicke's aphasia, 'caused by lesions in the left superior temporal gyrus', results in patients who 'speak with effortless grammatical fluency... yet their utterances are semantic \"word salad\" devoid of coherent meaning.'",
+      "why_others_wrong": {
+        "B": "Broca's aphasia causes halting, labored speech, not fluent speech.",
+        "C": "Occipital visual cortex processes vision, not speech aphasia.",
+        "D": "Cerebellum coordinates physical movement, not linguistic semantic coherence."
+      },
+      "socratic_prompt": "Which condition features fluent speech that is nevertheless meaningless word salad? (Wernicke's). Where is the lesion located?",
+      "common_trap": "Inverting Broca's (motor expressive impairment) and Wernicke's (sensory comprehension impairment).",
+      "thinking_framework": "Neurological Feature Matrix: Fluent + Meaningless = Wernicke's = Left superior temporal gyrus. Halting + Meaningful = Broca's = Left inferior frontal gyrus.",
+      "error_type": "NEUROLOGICAL_INVERSION",
+      "estimated_time_seconds": 75,
+      "source_basis": "original_academic",
+      "tags": [
+        "neuroscience",
+        "aphasia",
+        "reading"
+      ]
+    },
+    {
+      "question_id": "IELTS-RD-019",
+      "domain": "Reading",
+      "skill": "True / False / Not Given",
+      "difficulty": 3,
+      "passage": "The rediscovery of Gregor Mendel’s 1866 paper on pea plant inheritance in 1900 by Hugo de Vries, Carl Correns, and Erich von Tschermak is widely regarded as the birth of modern genetics. Mendel had deduced the existence of discrete heritable 'factors'—now known as genes—that segregate independently during gamete formation. For over three decades, however, Mendel's published findings had languished in provincial Moravian scientific journals, completely unacknowledged by Charles Darwin and mainstream Victorian naturalists.",
+      "question_stem": "Charles Darwin read Gregor Mendel's paper on genetics shortly after its initial publication in 1866.",
+      "choices": {
+        "A": "TRUE",
+        "B": "FALSE",
+        "C": "NOT GIVEN"
+      },
+      "correct_answer": "B",
+      "explanation": "The text directly states that Mendel's findings 'languished in provincial Moravian scientific journals, completely unacknowledged by Charles Darwin'. This contradicts the claim that Darwin read it shortly after 1866.",
+      "why_others_wrong": {
+        "A": "Directly contradicts 'completely unacknowledged by Charles Darwin'.",
+        "C": "Darwin's lack of engagement with the paper is explicitly recorded."
+      },
+      "socratic_prompt": "What does 'completely unacknowledged by Charles Darwin' mean in terms of whether he read it?",
+      "common_trap": "Assuming that because Darwin and Mendel were contemporaries, they must have corresponded.",
+      "thinking_framework": "Historical Factual Verification: 'completely unacknowledged' -> Did not read or cite -> FALSE.",
+      "error_type": "HISTORICAL_FALSE_CORRESPONDENCE",
+      "estimated_time_seconds": 65,
+      "source_basis": "original_academic",
+      "tags": [
+        "history_of_science",
+        "genetics",
+        "reading"
+      ]
+    },
+    {
+      "question_id": "IELTS-RD-020",
+      "domain": "Reading",
+      "skill": "Summary Completion",
+      "difficulty": 4,
+      "passage": "Tectonically active rift valleys provide unique geochemical environments for the synthesis of prebiotic organic molecules. At alkaline hydrothermal vents along the Mid-Atlantic Ridge, such as the Lost City field, serpentinization reactions between seawater and ultramafic mantle peridotite produce hydrogen-rich effluent at high temperatures. In the presence of dissolved carbon dioxide and iron-nickel catalysts, this alkaline effluent spontaneously reduces carbon compounds into short-chain formate and methane, generating proton concentration gradients across micro-porous inorganic chimneys that remarkably parallel the bioenergetic mechanisms of primitive cellular life.",
+      "question_stem": "At alkaline hydrothermal vents, chemical reactions between seawater and mantle peridotite generate an outflow containing abundant ______.",
+      "choices": {
+        "A": "hydrogen",
+        "B": "calcite crystals",
+        "C": "dissolved limestone",
+        "D": "chlorofluorocarbons"
+      },
+      "correct_answer": "A",
+      "explanation": "The text states that reactions between seawater and ultramafic mantle peridotite 'produce hydrogen-rich effluent at high temperatures.' 'Effluent' means outflow, and 'hydrogen-rich' means containing abundant hydrogen.",
+      "why_others_wrong": {
+        "B": "Calcite crystals are from cave speleothems.",
+        "C": "Limestone dissolution occurs in karst caves, not seafloor hydrothermal vents.",
+        "D": "CFCs are synthetic modern refrigerants."
+      },
+      "socratic_prompt": "What does the text say the 'effluent' (outflow) is rich in? (hydrogen-rich effluent).",
+      "common_trap": "Selecting minerals or synthetic chemicals from other topics.",
+      "thinking_framework": "Scientific Term Paraphrase: 'effluent' = outflow; 'hydrogen-rich' = containing abundant hydrogen.",
+      "error_type": "PARAPHRASE_RECOGNITION",
+      "estimated_time_seconds": 70,
+      "source_basis": "original_academic",
+      "tags": [
+        "geochemistry",
+        "origin_of_life",
+        "reading"
+      ]
     },
     {
       "question_id": "IELTS-WR-001",
@@ -95,26 +641,159 @@
         "D": "Overall, Denmark went up, Germany went up, Spain went up and UK also increased slightly."
       },
       "correct_answer": "A",
-      "explanation": "An Band 8+ Task 1 Overview must highlight key general trends and standout comparative features (broad upward trend + Denmark's dominant growth and leadership transition) without mechanical data listing or personal opinions.",
+      "explanation": "A Band 8+ Task 1 Overview must highlight key general trends and standout comparative features (broad upward trend + Denmark's dominant growth and leadership transition) without mechanical data listing or personal opinions.",
       "why_others_wrong": {
-        "B": "Lists mechanical statistics with zero synthesis; belongs in body paragraphs, not the overview.",
+        "B": "Lists mechanical statistics with zero synthesis; numbers belong in body paragraphs, not the overview.",
         "C": "Personal opinion / stance is strictly penalized in Academic Task 1.",
         "D": "Repetitive, simplistic sentence structure lacking cohesive synthesis."
       },
+      "socratic_prompt": "Should a Task 1 overview contain raw data numbers, personal thoughts, or a broad macro-summary?",
       "common_trap": "Writing specific numbers into the Overview or including personal commentary.",
       "thinking_framework": "Task 1 Overview Formula: [Overall Signpost] + [General Collective Trend] + [Key Divergence / Extremum].",
       "error_type": "ACADEMIC_REGISTER",
       "estimated_time_seconds": 80,
       "source_basis": "original_academic",
-      "tags": ["writing", "task1", "academic_style"]
+      "tags": [
+        "writing",
+        "task1",
+        "academic_style"
+      ]
     },
     {
       "question_id": "IELTS-WR-002",
       "domain": "Writing",
+      "skill": "Task 1 Data Description & Synthesis",
+      "difficulty": 4,
+      "passage": "Scenario: Describing a flow-chart process illustrating the closed-loop recycling of polyethylene terephthalate (PET) plastic bottles into textile-grade polyester yarn.",
+      "question_stem": "Which sentence demonstrates the most advanced passive voice transformation and sequential cohesion?",
+      "choices": {
+        "A": "Once mechanically sorted and steam-cleaned of adhesive contaminants, the collected PET containers are shredded into uniform flakes prior to being extruded into fine filaments.",
+        "B": "First workers sort the bottles by hand, and then a machine washes them, and after that they cut them into tiny pieces.",
+        "C": "The bottles are shredded, and then they melt them, which creates yarn that people can weave into clothing.",
+        "D": "Shredding happens after sorting, and extrusion is the next thing that is done by the factory to make clothes."
+      },
+      "correct_answer": "A",
+      "explanation": "Option A utilizes participial clauses ('Once mechanically sorted and steam-cleaned...'), appropriate technical passive voice ('are shredded', 'being extruded'), and academic vocabulary ('adhesive contaminants', 'uniform flakes', 'fine filaments').",
+      "why_others_wrong": {
+        "B": "Colloquial active voice ('workers sort', 'machine washes') inappropriate for formal process descriptions.",
+        "C": "Inconsistent shift from passive to active pronoun 'they melt them'.",
+        "D": "Clunky, informal nominalization ('Shredding happens', 'the next thing that is done')."
+      },
+      "socratic_prompt": "In an industrial process, do we emphasize who is doing the work ('workers') or the stages the materials undergo?",
+      "common_trap": "Using informal conversational transitions ('and then', 'after that') instead of subordinate participial clauses ('Once sorted... prior to being extruded').",
+      "thinking_framework": "Process Writing Protocol: Passive voice + Technical Lexicon + Subordinated Chronological Conjunctions (Once / Prior to / Following).",
+      "error_type": "REGISTER_AND_COHESION",
+      "estimated_time_seconds": 85,
+      "source_basis": "original_academic",
+      "tags": [
+        "writing",
+        "task1",
+        "process"
+      ]
+    },
+    {
+      "question_id": "IELTS-WR-003",
+      "domain": "Writing",
+      "skill": "Task 1 Data Description & Synthesis",
+      "difficulty": 4,
+      "passage": "Visual Data Scenario: A bar chart compares government expenditure on public healthcare across six OECD nations as a percentage of gross domestic product (GDP) in 2023. The United States leads at 16.5%, while Japan and Germany follow closely at 11.5% and 11.2% respectively.",
+      "question_stem": "Which sentence expresses a complex comparative relationship with high lexical precision?",
+      "choices": {
+        "A": "Healthcare spending in the United States outstripped that of its nearest economic peers by a substantial margin, allocating nearly five percentage points more of its GDP than either Germany or Japan.",
+        "B": "The US spent 16.5% and Japan spent 11.5% so the US spent way more money on hospitals than Japan did.",
+        "C": "Germany spent almost the same as Japan, but the US was the biggest country spending money.",
+        "D": "In comparison to everyone else, America's healthcare was extremely expensive and wasted lots of GDP percentage."
+      },
+      "correct_answer": "A",
+      "explanation": "Option A uses precise comparative verbs ('outstripped'), comparative pronouns ('that of its nearest economic peers'), and accurately notes the difference ('nearly five percentage points more of its GDP') instead of confusing 'percent' with 'percentage points'.",
+      "why_others_wrong": {
+        "B": "Uses colloquial phrases ('way more money') and introduces unverified external concepts ('hospitals').",
+        "C": "Simplistic phrasing ('biggest country spending money') conflates total expenditure with GDP share.",
+        "D": "Contains subjective value judgments ('wasted lots of GDP') which violate Task 1 objectivity."
+      },
+      "socratic_prompt": "How do you distinguish between 'percent' and 'percentage points' when comparing two percentages?",
+      "common_trap": "Confusing 'percent' with 'percentage points' or making subjective editorial comments.",
+      "thinking_framework": "Task 1 Comparative Syntax: Subject + [Comparative Verb: outstripped/eclipsed] + [Reference Pronoun: that of / those of] + [Exact Differential in percentage points].",
+      "error_type": "PERCENTAGE_PRECISION",
+      "estimated_time_seconds": 85,
+      "source_basis": "original_academic",
+      "tags": [
+        "writing",
+        "task1",
+        "comparisons"
+      ]
+    },
+    {
+      "question_id": "IELTS-WR-004",
+      "domain": "Writing",
+      "skill": "Task 1 Data Description & Synthesis",
+      "difficulty": 5,
+      "passage": "Visual Scenario: Comparing two maps illustrating the architectural transformation of an urban coastal district between 1995 and 2025, showing the conversion of industrial docklands into commercial marina facilities and high-density residential towers.",
+      "question_stem": "Which sentence most accurately describes spatial development and functional rezoning?",
+      "choices": {
+        "A": "Over the thirty-year span, the disused industrial docklands were completely redeveloped, with obsolete warehouse facilities being demolished to make way for high-density residential complexes and a recreational marina.",
+        "B": "The factories disappeared and many nice new houses were constructed near the water where people can keep boats.",
+        "C": "In 1995 there were docks, but in 2025 people decided to clean it up and turn it into rich houses.",
+        "D": "The district expanded a lot and destroyed nature to construct modern buildings for the maritime economy."
+      },
+      "correct_answer": "A",
+      "explanation": "Option A employs academic architectural vocabulary ('disused industrial docklands', 'obsolete warehouse facilities', 'demolished to make way for', 'high-density residential complexes') with appropriate temporal framing.",
+      "why_others_wrong": {
+        "B": "Informal tone ('factories disappeared', 'nice new houses') lacking band 8+ lexical resource.",
+        "C": "Colloquial speculation ('people decided to clean it up and turn it into rich houses').",
+        "D": "Makes unsubstantiated moral claims ('destroyed nature') not visible on typical topographic maps."
+      },
+      "socratic_prompt": "What formal verbs and noun phrases best describe replacing old warehouses with new apartment buildings?",
+      "common_trap": "Using informal conversational phrasing or speculating on human intentions rather than describing physical spatial changes.",
+      "thinking_framework": "Map Transformation Protocol: [Temporal Bracket] + [Initial State Entity: disused/obsolete] + [Transformation Verb: redeveloped/demolished] + [Purpose: to make way for] + [Final State Entity].",
+      "error_type": "SPATIAL_LEXICAL_RESOURCE",
+      "estimated_time_seconds": 90,
+      "source_basis": "original_academic",
+      "tags": [
+        "writing",
+        "task1",
+        "map_comparison"
+      ]
+    },
+    {
+      "question_id": "IELTS-WR-009",
+      "domain": "Writing",
+      "skill": "Task 1 Data Description & Synthesis",
+      "difficulty": 4,
+      "passage": "Visual Scenario: Two pie charts depicting domestic household water consumption in Australia in 2004 and 2024. Garden irrigation declined from 38% to 22%, whereas kitchen and bathroom recycling usage rose from 8% to 26%.",
+      "question_stem": "Which sentence best groups and contrasts these proportional changes?",
+      "choices": {
+        "A": "While outdoor irrigation formerly constituted the lion's share of household consumption in 2004, it experienced a marked contraction by 2024, inversely mirrored by a more than threefold expansion in recycled indoor water usage.",
+        "B": "Garden watering was 38% and then 22%, and recycled water was 8% and then 26%, which shows people changed their habits.",
+        "C": "Gardens are very bad for Australia because they waste too much fresh drinking water.",
+        "D": "The pie charts show lots of different slices of water that changed over twenty years."
+      },
+      "correct_answer": "A",
+      "explanation": "Option A uses sophisticated analytical language ('constituted the lion's share', 'marked contraction', 'inversely mirrored by a more than threefold expansion') to contrast the two reciprocal trends seamlessly.",
+      "why_others_wrong": {
+        "B": "Mechanical reporting of numbers without comparative synthesis.",
+        "C": "Biased personal opinion prohibited in Task 1.",
+        "D": "Informal, imprecise vocabulary ('lots of different slices')."
+      },
+      "socratic_prompt": "What phrases describe when one category shrinks while another related category grows threefold?",
+      "common_trap": "Listing data point by data point instead of synthesizing inverse proportional shifts.",
+      "thinking_framework": "Proportional Synthesis: [Category A Contraction: from lion's share] + [Inverse Mirroring] + [Category B Expansion: threefold increase].",
+      "error_type": "PROPORTIONAL_SYNTHESIS_GAP",
+      "estimated_time_seconds": 85,
+      "source_basis": "original_academic",
+      "tags": [
+        "writing",
+        "task1",
+        "pie_charts"
+      ]
+    },
+    {
+      "question_id": "IELTS-WR-005",
+      "domain": "Writing",
       "skill": "Task 2 Academic Cohesion & Hedging",
       "difficulty": 4,
       "passage": "Topic: Some educators argue that university curricula should focus entirely on job-specific technical skills rather than broad theoretical humanities.",
-      "question_stem": "Which thesis and topic sentence achieves the highest academic sophistication through appropriate hedging and concession?",
+      "question_stem": "Which thesis statement achieves the highest academic sophistication through appropriate hedging and concession?",
       "choices": {
         "A": "While vocational training undeniably enhances immediate graduate employability, overemphasizing technical specialization risks eroding critical thinking and adaptive capacity in an evolving labor market.",
         "B": "Humanities are 100% better than technical skills and all universities must stop teaching technology.",
@@ -128,12 +807,145 @@
         "C": "Unilateral, elementary sentence with no concession or depth.",
         "D": "Vague colloquial phrasing ('teach everything', 'different minds')."
       },
+      "socratic_prompt": "Which sentence balances the benefits of technical skills against the risks of neglecting critical thinking?",
       "common_trap": "Using sweeping absolute statements (always, never, 100%) instead of modal hedges (tends to, risks, potentially).",
       "thinking_framework": "IELTS Task 2 Hedging Principle: Concession Clause ('Although/While...') + Counter-argument with Modal Verbs.",
       "error_type": "HEDGING_AND_REGISTER",
       "estimated_time_seconds": 90,
       "source_basis": "original_academic",
-      "tags": ["writing", "task2", "cohesion"]
+      "tags": [
+        "writing",
+        "task2",
+        "cohesion"
+      ]
+    },
+    {
+      "question_id": "IELTS-WR-006",
+      "domain": "Writing",
+      "skill": "Task 2 Academic Cohesion & Hedging",
+      "difficulty": 4,
+      "passage": "Topic: In many countries, the proportion of elderly citizens is increasing rapidly. Does this demographic shift create more opportunities or more societal burdens?",
+      "question_stem": "Which topic sentence provides the most effective cohesion and topical focus for a body paragraph addressing economic strain?",
+      "choices": {
+        "A": "Chief among the economic ramifications is the fiscal pressure placed on pension reserves and public healthcare infrastructures by an expanding dependency ratio.",
+        "B": "Old people cost a lot of money for governments because they get sick very often.",
+        "C": "Secondly, I will talk about how healthcare is expensive for old people in many nations.",
+        "D": "There are lots of problems with this situation that society cannot easily solve."
+      },
+      "correct_answer": "A",
+      "explanation": "Option A employs high-level formal signposting ('Chief among the economic ramifications is...'), sophisticated economic terminology ('fiscal pressure', 'pension reserves', 'expanding dependency ratio'), and strict objectivity.",
+      "why_others_wrong": {
+        "B": "Colloquial and pejorative phrasing ('Old people cost a lot of money').",
+        "C": "Mechanical meta-announcement ('Secondly, I will talk about...') penalized in Band 7+ criteria.",
+        "D": "Empty, non-specific generalities without topic definition."
+      },
+      "socratic_prompt": "Does an academic essay announce what the writer 'will talk about', or does it state the analytical point directly?",
+      "common_trap": "Using conversational signposts ('I will talk about') or imprecise slang ('lots of problems').",
+      "thinking_framework": "Topic Sentence Architecture: [Signpost Category: Chief among the economic ramifications] + [Core Mechanism: fiscal pressure on public infrastructure] + [Demographic Cause: expanding dependency ratio].",
+      "error_type": "TOPIC_SENTENCE_SIGNPOSTING",
+      "estimated_time_seconds": 80,
+      "source_basis": "original_academic",
+      "tags": [
+        "writing",
+        "task2",
+        "demographics"
+      ]
+    },
+    {
+      "question_id": "IELTS-WR-007",
+      "domain": "Writing",
+      "skill": "Task 2 Academic Cohesion & Hedging",
+      "difficulty": 5,
+      "passage": "Topic: Automated artificial intelligence systems are progressively replacing human professionals in medical diagnostic interpretation. To what extent do you consider this a beneficial development?",
+      "question_stem": "Which counter-argument refutation demonstrates superior cohesive development and balanced academic critique?",
+      "choices": {
+        "A": "Although algorithmic diagnostic tools demonstrate superior speed in identifying radiological anomalies, human clinical oversight remains indispensable to contextualize findings within a patient's idiosyncratic medical history and psychosomatic needs.",
+        "B": "Computers can make mistakes so doctors must never trust AI under any circumstance.",
+        "C": "AI is super smart and fast, but humans have feelings and empathy which is much nicer.",
+        "D": "Some people like AI doctors and some do not, but in the future robots will probably win."
+      },
+      "correct_answer": "A",
+      "explanation": "Option A demonstrates masterful concession ('Although algorithmic tools demonstrate superior speed...'), technical accuracy ('radiological anomalies'), and sophisticated qualification ('contextualize findings within a patient's idiosyncratic medical history').",
+      "why_others_wrong": {
+        "B": "Absolute prohibition ('must never trust AI under any circumstance') ignores all nuance.",
+        "C": "Informal vocabulary ('super smart', 'much nicer') inappropriate for academic register.",
+        "D": "Vague conversational speculation without analytical substance."
+      },
+      "socratic_prompt": "What academic terms describe the unique human doctor role? Notice 'contextualize', 'idiosyncratic', 'psychosomatic'.",
+      "common_trap": "Creating a false black-and-white dilemma ('AI vs. Humans') instead of synthesizing complementary strengths.",
+      "thinking_framework": "Counter-Argument Synthesis: Concession to AI capability ('superior speed in anomaly detection') + Crucial delimitation of human judgment ('contextualizing idiosyncratic clinical needs').",
+      "error_type": "BALANCED_REFUTATION",
+      "estimated_time_seconds": 90,
+      "source_basis": "original_academic",
+      "tags": [
+        "writing",
+        "task2",
+        "artificial_intelligence"
+      ]
+    },
+    {
+      "question_id": "IELTS-WR-008",
+      "domain": "Writing",
+      "skill": "Task 2 Academic Cohesion & Hedging",
+      "difficulty": 5,
+      "passage": "Topic: Global consumer culture is increasingly creating a homogenous lifestyle across diverse traditional societies. Is this a positive or negative trend?",
+      "question_stem": "Which concluding paragraph achieves optimal synthesis without introducing extraneous new arguments?",
+      "choices": {
+        "A": "In conclusion, while cultural globalization facilitates unprecedented international interconnectedness, the attendant erosion of indigenous languages and artisanal heritage represents an irreplaceable cultural loss that warrants robust protective policy.",
+        "B": "In summary, the world is becoming identical everywhere and governments should immediately ban all foreign fast-food chains.",
+        "C": "To conclude, globalization is bad and next year I predict that several major countries will leave the United Nations.",
+        "D": "Overall, everyone buys the same sneakers and listens to the same music because of American movies."
+      },
+      "correct_answer": "A",
+      "explanation": "Option A summarizes the dual aspects presented in the essay ('interconnectedness' vs. 'erosion of indigenous languages and heritage') and offers a measured concluding judgment without introducing new random predictions.",
+      "why_others_wrong": {
+        "B": "Extreme policy hyperbole ('ban all foreign fast-food chains') that is unsubstantiated.",
+        "C": "Introduces entirely new extraneous political speculation ('countries will leave the UN').",
+        "D": "Informal and reductionist ('buys the same sneakers')."
+      },
+      "socratic_prompt": "Does an academic conclusion introduce brand new predictions, or does it synthesize the essay's core ideas into a final balanced judgment?",
+      "common_trap": "Introducing new evidence or extreme apocalyptic scenarios in the concluding paragraph.",
+      "thinking_framework": "Conclusion Synthesis: Restate core tension ('interconnectedness vs. cultural loss') + Reiterate reasoned judgment + Propose balanced perspective.",
+      "error_type": "CONCLUSION_NEW_ARGUMENT",
+      "estimated_time_seconds": 85,
+      "source_basis": "original_academic",
+      "tags": [
+        "writing",
+        "task2",
+        "globalization"
+      ]
+    },
+    {
+      "question_id": "IELTS-WR-010",
+      "domain": "Writing",
+      "skill": "Task 2 Academic Cohesion & Hedging",
+      "difficulty": 4,
+      "passage": "Topic: Governments should place higher taxes on sugary beverages and processed junk foods to reduce childhood obesity rates. To what extent do you agree or disagree?",
+      "question_stem": "Which sentence provides the most compelling causal reasoning linking fiscal penalties to behavioral changes?",
+      "choices": {
+        "A": "By increasing the retail price elasticity of ultra-processed consumables, targeted excise taxes disincentivize habitual impulse purchases while generating dedicated municipal revenue to subsidize fresh agricultural produce.",
+        "B": "If candy costs more money, children will not have enough coins in their pockets so they will stop getting fat.",
+        "C": "Taxes are good because nobody likes junk food anyway and dentists hate sugar.",
+        "D": "Governments must force supermarkets to throw away all chocolate bars to protect kids' health."
+      },
+      "correct_answer": "A",
+      "explanation": "Option A establishes high-level economic causal logic ('retail price elasticity', 'excise taxes disincentivize habitual impulse purchases', 'subsidize fresh agricultural produce') with academic detachment.",
+      "why_others_wrong": {
+        "B": "Simplistic, childish phrasing ('not have enough coins in their pockets').",
+        "C": "Sweeping irrational generalization ('nobody likes junk food anyway').",
+        "D": "Draconian policy proposal not asked by the question."
+      },
+      "socratic_prompt": "How does economic terminology like 'price elasticity' and 'excise taxes' strengthen an argument about public health taxes?",
+      "common_trap": "Writing emotional or childish arguments about coins and candy instead of economic public policy mechanisms.",
+      "thinking_framework": "Causal Policy Mechanism: Excise Tax -> Price Elasticity Shift -> Reduction in Impulse Consumption + Revenue Reinvestment.",
+      "error_type": "COLLOQUIAL_SIMPLIFICATION",
+      "estimated_time_seconds": 85,
+      "source_basis": "original_academic",
+      "tags": [
+        "writing",
+        "task2",
+        "public_health"
+      ]
     }
   ]
 }

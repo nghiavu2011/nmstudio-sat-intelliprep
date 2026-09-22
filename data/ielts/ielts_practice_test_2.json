@@ -1,0 +1,490 @@
+{
+  "test_id": "IELTS-MOCK-02",
+  "title": "IELTS Academic Full Reading Simulation 2",
+  "exam": "IELTS Academic",
+  "duration_minutes": 60,
+  "total_questions": 20,
+  "passages": [
+    {
+      "passage_id": "IELTS-P2-01",
+      "title": "Passage 1: Marine Hydrokinetic Energy and Deep-Ocean Current Harnessing",
+      "text": "As global decarbonization efforts expose the intermittent vulnerabilities of onshore solar and wind power, ocean hydrokinetic energy has emerged as a compelling baseload alternative. Unlike atmospheric weather fronts, oceanic tidal currents are governed by astronomical gravitational interactions between the Earth, Moon, and Sun, rendering their volumetric flux predictable decades in advance. The energy density of moving seawater is approximately 832 times greater than that of ambient air at sea level, meaning a modest five-knot marine current exerts kinetic forces comparable to a violent gale-force atmospheric storm on mechanical turbine blades.\n\nTechnological deployment spans two primary categories: tidal barrages and submerged hydrokinetic stream turbines. Tidal barrages—resembling maritime hydroelectric dams across coastal estuaries—capture water at high tide and discharge it through conventional low-head bulb turbines during ebb tide. While proven at La Rance in France since 1966, barrages provoke severe environmental disruptions, altering sediment deposition, disrupting migratory fish corridors, and suffocating intertidal mudflat ecosystems. Consequently, modern engineering focus has decisively shifted toward open-stream axial-flow turbines anchored directly to the seabed in energetic straits, such as the Pentland Firth off northern Scotland.\n\nSubmerged turbines, however, encounter formidable material science obstacles. Seawater is an aggressive electrolyte, inducing rapid galvanic corrosion across metallic housings. Furthermore, biological fouling by barnacles, macroalgae, and tubeworms rapidly degrades hydrodynamic foil efficiency, requiring either toxic biocidal coatings or costly robotic cavitation-cleaning regimens. Additionally, deep offshore maintenance demands specialized dynamically positioned subsea vessels whose day-rates can exceed fifty thousand dollars, severely constraining the levelized cost of electricity (LCOE) compared to offshore wind."
+    },
+    {
+      "passage_id": "IELTS-P2-02",
+      "title": "Passage 2: Behavioral Economics, Heuristics, and Choice Architecture",
+      "text": "For much of the twentieth century, neoclassical welfare economics rested upon the axiom of 'Homo economicus': an idealized, hyper-rational economic agent endowed with infinite computational capacity, perfectly consistent preferences, and unyielding willpower. In the late 1970s, cognitive psychologists Daniel Kahneman and Amos Tversky systematically dismantled this orthodoxy through empirical experiments, demonstrating that human decision-making relies on fast, frugal mental shortcuts known as heuristics. While computationally efficient, heuristics produce predictable, systematic cognitive biases.\n\nChief among these is 'loss aversion', formalized in Kahneman and Tversky’s Prospect Theory. Empirical trials demonstrated that the psychological pain of losing a given sum of money (say, $100) is approximately twice as intense as the hedonic pleasure of acquiring the identical amount. Closely allied is the 'status quo bias'—a disproportionate preference for maintaining current conditions even when superior alternatives are available with negligible friction. People default to existing baselines because any departure is cognitively framed as a potential loss.\n\nRecognizing that human cognition is path-dependent and context-sensitive, behavioral economists Richard Thaler and Cass Sunstein introduced the concept of 'libertarian paternalism' and 'choice architecture'. By subtly redesigning the default environment without prohibiting any options or altering economic incentives, public institutions can 'nudge' citizens toward welfare-enhancing outcomes. A celebrated example is automatic enrollment in occupational retirement pensions. When employees are required to opt in actively, participation rates frequently languish below 40%. When companies switch the default to automatic enrollment with an option to opt out, participation routinely surges above 85%—illustrating that the friction of a single checkbox can dramatically alter life-long financial solvency."
+    },
+    {
+      "passage_id": "IELTS-P2-03",
+      "title": "Passage 3: Transgenerational Epigenetics and Non-Genomic Inheritance",
+      "text": "Classical Mendelian genetics established that physical traits and pathological susceptibilities are transmitted across generations strictly via the sequence of adenine, thymine, cytosine, and guanine bases in nuclear DNA. Under the central dogma of molecular biology, acquired somatic adaptations—such as muscles developed through exercise or tissue scars from trauma—cannot be retroactively written back into the germline genome to be passed down to offspring. This seemed to deliver a final, definitive refutation of Jean-Baptiste Lamarck's eighteenth-century hypothesis of the inheritance of acquired characteristics.\n\nOver the past two decades, however, the burgeoning discipline of environmental epigenetics has complicated this genetic determinism. Epigenetic mechanisms—primarily DNA methylation, post-translational histone acetylation, and non-coding small RNA molecules—modulate chromatin architecture, acting like molecular switches that dictate which genes are actively transcribed and which remain silenced. Crucially, environmental stresses such as famine, heavy-metal exposure, and extreme maternal psychological distress can induce persistent alterations in epigenetic marking across embryonic gametes.\n\nHistorical epidemiological records provide striking natural experiments in human populations. The Dutch Hunger Winter of 1944–1945, caused by an acute wartime food blockade imposed by occupying forces, subjected thousands of pregnant women to severe caloric starvation. Decades later, medical follow-ups revealed that children who were in utero during the peak famine exhibited significantly elevated rates of adult-onset obesity, type 2 diabetes, and cardiovascular disease compared to unexposed siblings born before or after the blockade. Molecular analysis uncovered distinctive, lifelong hypomethylation at the IGF2 (insulin-like growth factor II) locus in exposed individuals. Even more provocative are rodent experiments indicating that ancestral exposures to endocrine disruptors can alter metabolic phenotypes through the F3 generation via sperm-borne microRNAs—demonstrating transgenerational non-genomic inheritance without altering a single letter of the genetic code."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "IELTS-T2-Q01",
+      "passage_id": "IELTS-P2-01",
+      "skill": "True / False / Not Given",
+      "difficulty": 3,
+      "question_stem": "The density of seawater is greater than eight hundred times the density of air at sea level.",
+      "choices": {
+        "A": "TRUE",
+        "B": "FALSE",
+        "C": "NOT GIVEN"
+      },
+      "correct_answer": "A",
+      "explanation": "The text explicitly states: 'The energy density of moving seawater is approximately 832 times greater than that of ambient air at sea level.' 832 is greater than 800, so the statement is TRUE.",
+      "why_others_wrong": {
+        "B": "Contradicts the explicit figure of 832 times.",
+        "C": "The relative density metric is directly provided in paragraph 1."
+      },
+      "socratic_prompt": "What exact figure does the author provide for seawater energy density compared to air? (832 times). Is that > 800?",
+      "common_trap": "Hesitating because the prompt says 'greater than eight hundred' rather than repeating the exact number '832'.",
+      "thinking_framework": "Numerical Inequality Verification: 832 > 800 -> TRUE.",
+      "error_type": "PARAPHRASE_RANGE_CHECK"
+    },
+    {
+      "question_id": "IELTS-T2-Q02",
+      "passage_id": "IELTS-P2-01",
+      "skill": "True / False / Not Given",
+      "difficulty": 3,
+      "question_stem": "The tidal barrage constructed at La Rance in France was decommissioned after only five years due to fish mortality.",
+      "choices": {
+        "A": "TRUE",
+        "B": "FALSE",
+        "C": "NOT GIVEN"
+      },
+      "correct_answer": "B",
+      "explanation": "The text states that La Rance has been 'proven at La Rance in France since 1966'. Since it has been operating since 1966, the claim that it was decommissioned after five years is directly FALSE.",
+      "why_others_wrong": {
+        "A": "Directly contradicts 'proven at La Rance in France since 1966'.",
+        "C": "Its multi-decade operational history is explicitly stated."
+      },
+      "socratic_prompt": "What year has La Rance been operating since? Could it have been decommissioned after 5 years?",
+      "common_trap": "Assuming that because barrages cause fish mortality, La Rance must have been closed.",
+      "thinking_framework": "Temporal Duration Check: Operating continuously since 1966 disproves 5-year closure.",
+      "error_type": "TEMPORAL_FACT_CONFLICT"
+    },
+    {
+      "question_id": "IELTS-T2-Q03",
+      "passage_id": "IELTS-P2-01",
+      "skill": "Multiple Choice",
+      "difficulty": 4,
+      "question_stem": "Why have modern engineers increasingly favored open-stream axial-flow turbines over tidal barrages?",
+      "choices": {
+        "A": "Because tidal barrages cause major ecological degradation to estuaries and coastal mudflats.",
+        "B": "Because axial-flow turbines can be constructed entirely from cheap non-metallic plastics.",
+        "C": "Because the Moon's gravitational pull only affects open-stream turbines.",
+        "D": "Because tidal barrages require sunny weather to generate electricity."
+      },
+      "correct_answer": "A",
+      "explanation": "The text notes: 'While proven at La Rance... barrages provoke severe environmental disruptions, altering sediment deposition, disrupting migratory fish corridors, and suffocating intertidal mudflat ecosystems. Consequently, modern engineering focus has decisively shifted toward open-stream axial-flow turbines'.",
+      "why_others_wrong": {
+        "B": "Turbines use metallic housings subject to galvanic corrosion, not cheap plastics.",
+        "C": "Gravity affects all tidal movements equally.",
+        "D": "Tidal energy is driven by gravity, not sunshine."
+      },
+      "socratic_prompt": "What ecological drawbacks of tidal barrages are listed before 'Consequently'?",
+      "common_trap": "Choosing options with absurd scientific claims like sunshine powering tidal barrages.",
+      "thinking_framework": "Causal Connector Linkage: Environmental disruption of estuaries -> Consequently, shift to open-stream turbines.",
+      "error_type": "CAUSAL_EXTRACTION"
+    },
+    {
+      "question_id": "IELTS-T2-Q04",
+      "passage_id": "IELTS-P2-01",
+      "skill": "Summary Completion",
+      "difficulty": 4,
+      "question_stem": "In addition to metallic corrosion, submerged turbines suffer hydrodynamic losses when organisms such as barnacles and algae cause ______.",
+      "choices": {
+        "A": "biological fouling",
+        "B": "volumetric flux",
+        "C": "libertarian paternalism",
+        "D": "galvanic corrosion"
+      },
+      "correct_answer": "A",
+      "explanation": "Paragraph 3 notes: 'biological fouling by barnacles, macroalgae, and tubeworms rapidly degrades hydrodynamic foil efficiency'.",
+      "why_others_wrong": {
+        "B": "Volumetric flux refers to water movement in paragraph 1.",
+        "C": "Libertarian paternalism is from Passage 2 on behavioral economics.",
+        "D": "Galvanic corrosion was already mentioned for metals, not organisms."
+      },
+      "socratic_prompt": "What technical term describes marine life accumulating on underwater machinery?",
+      "common_trap": "Picking 'galvanic corrosion' which affects metals, not living barnacles and algae.",
+      "thinking_framework": "Technical Term Retrieval: Barnacles + algae on foils = 'biological fouling'.",
+      "error_type": "TECHNICAL_VOCAB_SLIP"
+    },
+    {
+      "question_id": "IELTS-T2-Q05",
+      "passage_id": "IELTS-P2-01",
+      "skill": "Multiple Choice",
+      "difficulty": 4,
+      "question_stem": "What economic factor primarily limits the cost-competitiveness (LCOE) of offshore hydrokinetic turbines?",
+      "choices": {
+        "A": "The exorbitant daily rental rates of specialized dynamic-positioning support vessels.",
+        "B": "Astronomical taxes imposed by municipal coastal harbors.",
+        "C": "The complete absence of electricity demand along coastal cities.",
+        "D": "Legal lawsuits filed by commercial shipping companies across northern Scotland."
+      },
+      "correct_answer": "A",
+      "explanation": "The text states: 'deep offshore maintenance demands specialized dynamically positioned subsea vessels whose day-rates can exceed fifty thousand dollars, severely constraining the levelized cost of electricity (LCOE)'.",
+      "why_others_wrong": {
+        "B": "Taxes are never mentioned.",
+        "C": "Coastal demand is high; offshore renewables serve coastal grids.",
+        "D": "Lawsuits are not mentioned in the passage."
+      },
+      "socratic_prompt": "What expense exceeding $50,000 per day is cited in the last sentence?",
+      "common_trap": "Blaming taxes or lawsuits when the text explicitly identifies offshore vessel day-rates.",
+      "thinking_framework": "Fact Verification: Match 'severely constraining the levelized cost...' with vessel day-rates.",
+      "error_type": "COST_FACTOR_MISIDENTIFICATION"
+    },
+    {
+      "question_id": "IELTS-T2-Q06",
+      "passage_id": "IELTS-P2-01",
+      "skill": "True / False / Not Given",
+      "difficulty": 3,
+      "question_stem": "Unlike wind patterns, oceanic tidal currents can be accurately forecasted many decades into the future.",
+      "choices": {
+        "A": "TRUE",
+        "B": "FALSE",
+        "C": "NOT GIVEN"
+      },
+      "correct_answer": "A",
+      "explanation": "The passage confirms: 'oceanic tidal currents are governed by astronomical gravitational interactions between the Earth, Moon, and Sun, rendering their volumetric flux predictable decades in advance.'",
+      "why_others_wrong": {
+        "B": "Directly contradicted by 'predictable decades in advance'.",
+        "C": "Tidal predictability is explicitly contrasted with wind intermittency."
+      },
+      "socratic_prompt": "Are tidal currents predictable decades in advance according to paragraph 1?",
+      "common_trap": "Assuming ocean weather is inherently chaotic without reading the astronomical explanation.",
+      "thinking_framework": "Direct Textual Confirmation: 'predictable decades in advance' matches 'accurately forecasted many decades into the future'.",
+      "error_type": "PARAPHRASE_CONFIRMATION"
+    },
+    {
+      "question_id": "IELTS-T2-Q07",
+      "passage_id": "IELTS-P2-02",
+      "skill": "Multiple Choice",
+      "difficulty": 4,
+      "question_stem": "What was the foundational assumption of neoclassical 'Homo economicus' that Kahneman and Tversky challenged?",
+      "choices": {
+        "A": "That humans make decisions with infinite rationality, perfect consistency, and flawless willpower.",
+        "B": "That human beings are driven entirely by altruistic religious principles.",
+        "C": "That market prices are established by chaotic luck rather than supply and demand.",
+        "D": "That all economic transactions must be recorded on clay tablets."
+      },
+      "correct_answer": "A",
+      "explanation": "Paragraph 1 defines 'Homo economicus' as 'an idealized, hyper-rational economic agent endowed with infinite computational capacity, perfectly consistent preferences, and unyielding willpower.' Kahneman and Tversky dismantled this model.",
+      "why_others_wrong": {
+        "B": "Altruistic religious principles were not part of neoclassical economic models.",
+        "C": "Supply and demand were central to neoclassical economics, not luck.",
+        "D": "Clay tablets are from the archaeology passage in Test 1."
+      },
+      "socratic_prompt": "How does the passage describe 'Homo economicus' in the opening sentence?",
+      "common_trap": "Choosing an option that describes psychological behavior rather than the neoclassical model being challenged.",
+      "thinking_framework": "Definition Lookup: 'Homo economicus' = hyper-rational agent with infinite willpower and calculation.",
+      "error_type": "THEORETICAL_MODEL_CONFUSION"
+    },
+    {
+      "question_id": "IELTS-T2-Q08",
+      "passage_id": "IELTS-P2-02",
+      "skill": "True / False / Not Given",
+      "difficulty": 4,
+      "question_stem": "According to Prospect Theory, people experience equal emotional intensity from winning $100 as from losing $100.",
+      "choices": {
+        "A": "TRUE",
+        "B": "FALSE",
+        "C": "NOT GIVEN"
+      },
+      "correct_answer": "B",
+      "explanation": "Paragraph 2 states that 'the psychological pain of losing a given sum of money (say, $100) is approximately twice as intense as the hedonic pleasure of acquiring the identical amount.' They are not equal; pain is twice as intense.",
+      "why_others_wrong": {
+        "A": "Directly contradicted by 'twice as intense'.",
+        "C": "The 2:1 asymmetry in loss aversion is an explicit centerpiece of the passage."
+      },
+      "socratic_prompt": "Is the pain of losing $100 equal to or twice as intense as winning $100?",
+      "common_trap": "Assuming a rational symmetry (equal gains and losses) instead of loss aversion asymmetry.",
+      "thinking_framework": "Asymmetry Check: Pain of Loss ≈ 2 × Pleasure of Gain. Statement claims equality -> FALSE.",
+      "error_type": "SYMMETRY_FALLACY"
+    },
+    {
+      "question_id": "IELTS-T2-Q09",
+      "passage_id": "IELTS-P2-02",
+      "skill": "Summary Completion",
+      "difficulty": 3,
+      "question_stem": "The tendency of individuals to stick with default settings because any shift is viewed as a potential loss is known as ______.",
+      "choices": {
+        "A": "status quo bias",
+        "B": "galvanic corrosion",
+        "C": "Mendelian genetics",
+        "D": "poverty of the stimulus"
+      },
+      "correct_answer": "A",
+      "explanation": "Paragraph 2 states: 'Closely allied is the \"status quo bias\"—a disproportionate preference for maintaining current conditions... because any departure is cognitively framed as a potential loss.'",
+      "why_others_wrong": {
+        "B": "Galvanic corrosion is from marine turbines.",
+        "C": "Mendelian genetics is from biology.",
+        "D": "Poverty of the stimulus is from Chomsky."
+      },
+      "socratic_prompt": "What bias describes preferring current baseline conditions over alternatives?",
+      "common_trap": "Mixing up bias terms with concepts from unrelated scientific domains.",
+      "thinking_framework": "Concept Matching: Preference for maintaining current baseline = 'status quo bias'.",
+      "error_type": "TERMINOLOGY_SELECTION"
+    },
+    {
+      "question_id": "IELTS-T2-Q10",
+      "passage_id": "IELTS-P2-02",
+      "skill": "Multiple Choice",
+      "difficulty": 4,
+      "question_stem": "What is the core philosophy behind Thaler and Sunstein's 'libertarian paternalism'?",
+      "choices": {
+        "A": "Guiding people toward beneficial choices by altering defaults without forbidding any options.",
+        "B": "Imposing severe criminal penalties on citizens who refuse to invest in pension plans.",
+        "C": "Completely eliminating all private companies and social welfare programs.",
+        "D": "Requiring citizens to pass an IQ test before voting in national elections."
+      },
+      "correct_answer": "A",
+      "explanation": "The text defines it as 'subtly redesigning the default environment without prohibiting any options or altering economic incentives, public institutions can \"nudge\" citizens toward welfare-enhancing outcomes.'",
+      "why_others_wrong": {
+        "B": "It explicitly avoids prohibiting options or imposing penalties; it is 'libertarian'.",
+        "C": "It does not eliminate private companies.",
+        "D": "Voting tests are never mentioned."
+      },
+      "socratic_prompt": "What does 'libertarian' imply in this context? (Freedom of choice remains, no bans).",
+      "common_trap": "Confusing 'paternalism' (guidance) with authoritarian bans and legal punishments.",
+      "thinking_framework": "Core Dual Concept: Libertarian (no choices banned) + Paternalism (helpful default nudge).",
+      "error_type": "POLITICAL_MISCONCEPTION"
+    },
+    {
+      "question_id": "IELTS-T2-Q11",
+      "passage_id": "IELTS-P2-02",
+      "skill": "True / False / Not Given",
+      "difficulty": 3,
+      "question_stem": "When companies shift pension systems from opt-in to automatic enrollment, employee participation rates typically decrease.",
+      "choices": {
+        "A": "TRUE",
+        "B": "FALSE",
+        "C": "NOT GIVEN"
+      },
+      "correct_answer": "B",
+      "explanation": "The passage states that when switched to automatic enrollment, 'participation routinely surges above 85%' compared to 'below 40%' for active opt-in. Thus, participation surges rather than decreases.",
+      "why_others_wrong": {
+        "A": "Directly contradicts 'routinely surges above 85%'.",
+        "C": "The statistics (40% to 85%) are explicitly provided."
+      },
+      "socratic_prompt": "Did participation go up (surge to 85%) or down when automatic enrollment was introduced?",
+      "common_trap": "Inverting the direction of the statistic (40% vs 85%).",
+      "thinking_framework": "Statistical Direction: 40% -> 85% is a massive increase, contradicting 'decrease'.",
+      "error_type": "DIRECTIONAL_CONTRADICTION"
+    },
+    {
+      "question_id": "IELTS-T2-Q12",
+      "passage_id": "IELTS-P2-02",
+      "skill": "Matching Headings",
+      "difficulty": 4,
+      "question_stem": "Which heading best fits the overall structure of Passage 2?",
+      "choices": {
+        "A": "From Rational Maximizers to Behavioral Nudges: Rethinking Human Choice",
+        "B": "The Mathematical Proof of Flawless Stock Market Predictability",
+        "C": "A Biographical Account of Richard Thaler’s Early Childhood Education",
+        "D": "How Private Corporations Steal Workers' Retirement Funds"
+      },
+      "correct_answer": "A",
+      "explanation": "Passage 2 traces the intellectual journey from neoclassical rational agents (Homo economicus) to Kahneman's cognitive biases and Thaler's behavioral nudges.",
+      "why_others_wrong": {
+        "B": "Stock market predictability is contradicted by human cognitive irrationality.",
+        "C": "Thaler's childhood is never mentioned.",
+        "D": "Pensions are presented as savings vehicles improved by nudges, not stolen funds."
+      },
+      "socratic_prompt": "What broad intellectual progression occurs from paragraph 1 to paragraph 3?",
+      "common_trap": "Focusing on one specific detail rather than the full arc from rational model to behavioral nudges.",
+      "thinking_framework": "Global Title Identification: Scope must cover both the critique of rationalism and the introduction of nudges.",
+      "error_type": "SCOPE_REDUCTION"
+    },
+    {
+      "question_id": "IELTS-T2-Q13",
+      "passage_id": "IELTS-P2-02",
+      "skill": "Multiple Choice",
+      "difficulty": 4,
+      "question_stem": "What does the pension enrollment example primarily illustrate about human decision-making?",
+      "choices": {
+        "A": "Minor administrative defaults can exert an enormous influence on significant life decisions.",
+        "B": "Most workers actively prefer losing money rather than saving for old age.",
+        "C": "Government regulations are always ignored by modern corporate employers.",
+        "D": "Human beings calculate compound interest effortlessly in their heads."
+      },
+      "correct_answer": "A",
+      "explanation": "The text concludes that the surge in participation from 40% to 85% illustrates 'that the friction of a single checkbox can dramatically alter life-long financial solvency.'",
+      "why_others_wrong": {
+        "B": "Workers do not prefer losing money; default friction was the barrier.",
+        "C": "Corporate employers adopted the default changes successfully.",
+        "D": "Contradicts paragraph 1 which showed humans lack infinite computational ability."
+      },
+      "socratic_prompt": "What does 'the friction of a single checkbox can alter life-long solvency' mean?",
+      "common_trap": "Believing people did not care about pensions, when in fact default inertia was the main driver.",
+      "thinking_framework": "Metaphor Translation: 'friction of a single checkbox' = minor administrative default.",
+      "error_type": "METAPHOR_MISUNDERSTANDING"
+    },
+    {
+      "question_id": "IELTS-T2-Q14",
+      "passage_id": "IELTS-P2-03",
+      "skill": "True / False / Not Given",
+      "difficulty": 4,
+      "question_stem": "Classical Mendelian genetics proposed that traits acquired during an organism's lifetime could alter nuclear DNA sequences in gametes.",
+      "choices": {
+        "A": "TRUE",
+        "B": "FALSE",
+        "C": "NOT GIVEN"
+      },
+      "correct_answer": "B",
+      "explanation": "Paragraph 1 states: 'Under the central dogma of molecular biology, acquired somatic adaptations... cannot be retroactively written back into the germline genome to be passed down to offspring.' Thus, classical genetics denied this, contradicting the statement.",
+      "why_others_wrong": {
+        "A": "Contradicts the text: classical genetics insisted acquired traits CANNOT be passed down.",
+        "C": "The classical refutation of Lamarck is clearly described in paragraph 1."
+      },
+      "socratic_prompt": "Did Mendelian genetics agree with Lamarck or refute him regarding acquired traits?",
+      "common_trap": "Confusing classical Mendelian genetics with the modern epigenetic findings discussed later.",
+      "thinking_framework": "Historical Paradigm Distinguisher: Classical Mendel (Strict DNA sequence only, NO acquired traits) vs. Epigenetics (Gene regulation changes).",
+      "error_type": "PARADIGM_CONFLATION"
+    },
+    {
+      "question_id": "IELTS-T2-Q15",
+      "passage_id": "IELTS-P2-03",
+      "skill": "Multiple Choice",
+      "difficulty": 4,
+      "question_stem": "How do epigenetic mechanisms regulate gene expression without mutating DNA bases?",
+      "choices": {
+        "A": "By modifying chromatin packaging and adding chemical tags that turn gene transcription on or off.",
+        "B": "By permanently deleting defective chromosomes during embryonic cell division.",
+        "C": "By injecting synthetic computer microchips into cellular mitochondria.",
+        "D": "By converting adenine and thymine bases into nitrogen fertilizers."
+      },
+      "correct_answer": "A",
+      "explanation": "The text explains: 'Epigenetic mechanisms—primarily DNA methylation, post-translational histone acetylation... modulate chromatin architecture, acting like molecular switches that dictate which genes are actively transcribed and which remain silenced.'",
+      "why_others_wrong": {
+        "B": "Epigenetics does not delete chromosomes.",
+        "C": "Microchips are sci-fi distractors.",
+        "D": "Chemical bases are not converted into agricultural fertilizers."
+      },
+      "socratic_prompt": "What metaphor does the author use for epigenetic markers? ('molecular switches that dictate transcription').",
+      "common_trap": "Assuming epigenetics alters the fundamental DNA sequence or deletes chromosomes.",
+      "thinking_framework": "Biochemical Mechanism Check: Chromatin modulation + Chemical tags (methylation) = Transcriptional control.",
+      "error_type": "BIOLOGICAL_MECHANISM_MISUNDERSTANDING"
+    },
+    {
+      "question_id": "IELTS-T2-Q16",
+      "passage_id": "IELTS-P2-03",
+      "skill": "True / False / Not Given",
+      "difficulty": 4,
+      "question_stem": "Adults who were exposed in utero to the Dutch Hunger Winter showed distinct DNA hypomethylation at the IGF2 gene locus.",
+      "choices": {
+        "A": "TRUE",
+        "B": "FALSE",
+        "C": "NOT GIVEN"
+      },
+      "correct_answer": "A",
+      "explanation": "Paragraph 3 explicitly confirms: 'Molecular analysis uncovered distinctive, lifelong hypomethylation at the IGF2 (insulin-like growth factor II) locus in exposed individuals.'",
+      "why_others_wrong": {
+        "B": "Directly contradicts the molecular finding reported in the text.",
+        "C": "The specific genetic locus (IGF2) and methylation status (hypomethylation) are documented."
+      },
+      "socratic_prompt": "Does the passage explicitly mention 'lifelong hypomethylation at the IGF2... locus'?",
+      "common_trap": "Doubt about whether historical epidemiological studies can yield specific molecular data.",
+      "thinking_framework": "Factual Verification: Direct lexical match in paragraph 3 confirms TRUE.",
+      "error_type": "DIRECT_FACT_VERIFICATION"
+    },
+    {
+      "question_id": "IELTS-T2-Q17",
+      "passage_id": "IELTS-P2-03",
+      "skill": "Summary Completion",
+      "difficulty": 4,
+      "question_stem": "Studies of the Dutch Hunger Winter revealed that fetal starvation led to higher adult rates of diabetes, heart disease, and ______.",
+      "choices": {
+        "A": "adult-onset obesity",
+        "B": "biological fouling",
+        "C": "insular dwarfism",
+        "D": "hypothetical literacy"
+      },
+      "correct_answer": "A",
+      "explanation": "The text lists: 'significantly elevated rates of adult-onset obesity, type 2 diabetes, and cardiovascular disease compared to unexposed siblings'.",
+      "why_others_wrong": {
+        "B": "Biological fouling is from marine engineering.",
+        "C": "Insular dwarfism is from evolutionary biology.",
+        "D": "Hypothetical literacy is not a medical condition."
+      },
+      "socratic_prompt": "What three health conditions are listed together in paragraph 3?",
+      "common_trap": "Confusing conditions from different scientific domains.",
+      "thinking_framework": "List Completion: 'obesity, type 2 diabetes, and cardiovascular disease'. Gap = 'adult-onset obesity'.",
+      "error_type": "LIST_ELEMENT_RETRIEVAL"
+    },
+    {
+      "question_id": "IELTS-T2-Q18",
+      "passage_id": "IELTS-P2-03",
+      "skill": "True / False / Not Given",
+      "difficulty": 5,
+      "question_stem": "Rodent experiments demonstrated that environmental exposures can affect metabolic traits down to the third generation through alterations in the nuclear genetic code.",
+      "choices": {
+        "A": "TRUE",
+        "B": "FALSE",
+        "C": "NOT GIVEN"
+      },
+      "correct_answer": "B",
+      "explanation": "The passage explicitly states that rodent experiments showed changes 'via sperm-borne microRNAs—demonstrating transgenerational non-genomic inheritance without altering a single letter of the genetic code.' Thus, saying it altered the genetic code is directly FALSE.",
+      "why_others_wrong": {
+        "A": "Directly contradicts 'without altering a single letter of the genetic code'.",
+        "C": "The preservation of the genetic code is explicitly emphasized in the final sentence."
+      },
+      "socratic_prompt": "Did the rodent study show inheritance *with* or *without* altering the genetic code?",
+      "common_trap": "Overlooking the phrase 'without altering a single letter of the genetic code'.",
+      "thinking_framework": "Negation Check: Statement claims code was altered; text says 'without altering a single letter'. Direction: FALSE.",
+      "error_type": "POLARITY_MISREAD"
+    },
+    {
+      "question_id": "IELTS-T2-Q19",
+      "passage_id": "IELTS-P2-03",
+      "skill": "Multiple Choice",
+      "difficulty": 4,
+      "question_stem": "Why did modern epigenetics partially revive interest in Jean-Baptiste Lamarck's historical ideas?",
+      "choices": {
+        "A": "Because it showed that environmental stimuli during an organism's life can exert heritable influences on offspring gene regulation.",
+        "B": "Because Lamarck was proven to have invented the electron microscope.",
+        "C": "Because Lamarck’s equations mathematically predicted the existence of DNA in 1790.",
+        "D": "Because modern biologists decided to abandon Darwinian natural selection completely."
+      },
+      "correct_answer": "A",
+      "explanation": "Lamarck hypothesized the inheritance of acquired traits. Epigenetics demonstrates that environmental stressors during life (famine, distress) can alter molecular marks that persist across generations, partially echoing Lamarck's broad concept.",
+      "why_others_wrong": {
+        "B": "Lamarck did not invent the electron microscope.",
+        "C": "Lamarck had no equations for DNA.",
+        "D": "Biologists have not abandoned Darwinian natural selection; epigenetics adds a layer of gene regulation."
+      },
+      "socratic_prompt": "What was Lamarck's main hypothesis mentioned in paragraph 1? How does environmental stress passing to offspring relate to it?",
+      "common_trap": "Believing science completely threw out Darwin to embrace Lamarck wholesale.",
+      "thinking_framework": "Historical Synthesis: Lamarck's intuition (environment affecting progeny) finds molecular backing in non-genomic epigenetic marking.",
+      "error_type": "HISTORICAL_EXTRAPOLATION"
+    },
+    {
+      "question_id": "IELTS-T2-Q20",
+      "passage_id": "IELTS-P2-03",
+      "skill": "Multiple Choice",
+      "difficulty": 4,
+      "question_stem": "What is the primary role of sperm-borne microRNAs identified in recent transgenerational rodent studies?",
+      "choices": {
+        "A": "Carrying non-genomic regulatory signals that alter metabolic phenotypes in subsequent generations.",
+        "B": "Accelerating muscular growth to help rodents evade predatory snakes.",
+        "C": "Repairing broken tail vertebrae during winter hibernation.",
+        "D": "Inactivating all paternal chromosomes during fertilization."
+      },
+      "correct_answer": "A",
+      "explanation": "The text states: 'ancestral exposures to endocrine disruptors can alter metabolic phenotypes through the F3 generation via sperm-borne microRNAs—demonstrating transgenerational non-genomic inheritance'.",
+      "why_others_wrong": {
+        "B": "Evading predatory snakes is irrelevant and fabricated.",
+        "C": "Tail repair is nowhere in the text.",
+        "D": "Inactivating all paternal chromosomes would be lethal, not transgenerational signaling."
+      },
+      "socratic_prompt": "What do sperm-borne microRNAs transmit according to the final sentence?",
+      "common_trap": "Choosing sensational survival stories (snakes) instead of molecular transmission of metabolic phenotypes.",
+      "thinking_framework": "Molecular Signal Role: Sperm microRNAs = non-genomic vehicle for ancestral metabolic programming.",
+      "error_type": "FICTIONAL_DISTRACTOR"
+    }
+  ]
+}

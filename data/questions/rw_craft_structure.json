@@ -795,5 +795,197 @@
       "civics",
       "words_in_context"
     ]
+  },
+  {
+    "question_id": "RW-CS-028",
+    "domain": "Craft and Structure",
+    "skill": "Cross-Text Connections",
+    "difficulty": 5,
+    "passage": "Text 1: Political theorist Isaiah Berlin articulated a fundamental dichotomy between negative liberty—the absence of external obstacles or coercion preventing an agent from acting—and positive liberty, which concerns the capacity of an individual to achieve self-realization and master their own destiny. Berlin cautioned that positive liberty, while superficially noble, has historically been co-opted by authoritarian regimes to justify paternalistic coercion in the name of a citizen's 'true' rational will.\n\nText 2: Philosopher Charles Taylor argues that Berlin’s rigid defense of negative liberty is untenable. Taylor contends that an individual cannot truly be called 'free' merely because there are no physical walls or legal prohibitions. If a person is paralyzed by internalized self-hatred, irrational compulsive desires, or severe addiction, they lack genuine autonomy, even in a state with zero external legal constraints. Therefore, meaningful liberty inherently requires internal self-determination—the very core of positive liberty.",
+    "question_stem": "Based on the texts, how would Charles Taylor (Text 2) most likely respond to Berlin's skepticism of positive liberty (Text 1)?",
+    "choices": {
+      "A": "By arguing that negative liberty alone provides an incomplete definition of freedom because internal psychological impediments can restrict autonomy just as effectively as legal barriers.",
+      "B": "By agreeing with Berlin that authoritarian regimes are the only entities capable of defining positive liberty for citizens.",
+      "C": "By claiming that physical walls and legal prohibitions are completely harmless and have never restricted human movement.",
+      "D": "By demanding that all negative liberties be immediately repealed in democratic constitutions."
+    },
+    "correct_answer": "A",
+    "explanation": "Taylor argues that mere absence of external obstacles (negative liberty) is insufficient, pointing out that internal compulsions or addiction impair genuine autonomy. Thus, he responds to Berlin by asserting that negative liberty alone is an incomplete definition of freedom.",
+    "why_others_wrong": {
+      "B": "Taylor defends positive liberty as genuine autonomy; he does not advocate for authoritarian regimes.",
+      "C": "Taylor never claims physical walls are harmless; he simply argues they are not the *only* restriction on freedom.",
+      "D": "Extreme distortion: advocating for positive liberty does not mean repealing negative liberty."
+    },
+    "socratic_prompt": "What does Taylor say about someone who has no legal barriers but is paralyzed by addiction? Is that person free?",
+    "common_trap": "Choosing an extreme option that turns Taylor into an authoritarian tyrant.",
+    "thinking_framework": "Cross-Text Relationship: Text 1 warns positive liberty can lead to authoritarianism. Text 2 counters that negative liberty alone is hollow because internal blockages also destroy freedom.",
+    "error_type": "EXTREME_ATTRIBUTION",
+    "estimated_time_seconds": 90,
+    "source_basis": "original",
+    "tags": [
+      "philosophy",
+      "cross_text",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "RW-CS-029",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "difficulty": 4,
+    "passage": "In her critical monograph on twentieth-century industrial design, architecture critic Reyner Banham observed that Buckminster Fuller's geodesic domes, while geometrically sublime, proved stubbornly refractory when adapted to mundane domestic habitation. Standard rectangular furniture could not nest against concave hexagonal perimeters, and internal acoustic reflections magnified the slightest whisper into a disconcerting public echo.",
+    "question_stem": "As used in the text, what does the word 'refractory' most nearly mean?",
+    "choices": {
+      "A": "Unmanageable and resistant to adaptation",
+      "B": "Transparent and allowing light through",
+      "C": "Easily shattered under thermal stress",
+      "D": "Financially profitable for developers"
+    },
+    "correct_answer": "A",
+    "explanation": "The text explains that the domes 'proved stubbornly refractory when adapted to mundane domestic habitation', giving examples of rectangular furniture failing to fit and acoustic echoes. In this context, 'refractory' means stubborn, unmanageable, or resistant to being adapted.",
+    "why_others_wrong": {
+      "B": "Confuses 'refractory' with optical 'refraction' of light.",
+      "C": "Confuses 'refractory' (heat-resistant in metallurgy) with brittle or shatterable.",
+      "D": "Financial profit is completely unrelated to furniture fit and acoustic issues."
+    },
+    "socratic_prompt": "Look at the adverb 'stubbornly' and the examples: furniture couldn't fit and echoes were magnified. Does 'refractory' mean cooperative or resistant?",
+    "common_trap": "Associating 'refractory' with optical light refraction or glass transparency.",
+    "thinking_framework": "Contextual Decoding: 'stubbornly refractory' + furniture couldn't fit -> stubborn, resistant to management/adaptation.",
+    "error_type": "SCIENTIFIC_HOMONYM_CONFUSION",
+    "estimated_time_seconds": 65,
+    "source_basis": "original",
+    "tags": [
+      "architecture",
+      "words_in_context",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "RW-CS-030",
+    "domain": "Craft and Structure",
+    "skill": "Cross-Text Connections",
+    "difficulty": 5,
+    "passage": "Text 1: Economists traditionally viewed intellectual property patents as unambiguous catalysts for innovation. By granting inventors a temporary statutory monopoly, patents ensure that innovators can recoup substantial research and development outlays without fearing immediate counterfeit duplication by free-riding competitors.\n\nText 2: Legal scholars Michele Boldrin and David Levine contest the orthodox view, pointing out that patent thickets in fields like microprocessing and biotechnology generate severe 'anti-commons' effects. When developing a single smartphone requires licensing thousands of overlapping, litigious patents held by defensive shell entities, the transaction costs and legal liabilities actually deter new entrants and stifle technological cross-pollination.",
+    "question_stem": "Which choice best describes how Text 2 relates to the perspective presented in Text 1?",
+    "choices": {
+      "A": "It challenges the view in Text 1 by illustrating how excessive and overlapping patent protections can create administrative friction that dampens innovation.",
+      "B": "It provides additional empirical evidence confirming that patent protections always accelerate consumer product launches.",
+      "C": "It accuses the authors of Text 1 of committing copyright fraud in their economic analysis.",
+      "D": "It argues that smartphones should be manufactured entirely without electronic microprocessors."
+    },
+    "correct_answer": "A",
+    "explanation": "Text 1 presents the traditional view that patents catalyze innovation. Text 2 counters that overlapping 'patent thickets' create transaction costs and liabilities that 'deter new entrants and stifle technological cross-pollination'. Thus, Text 2 challenges Text 1 by highlighting these frictions.",
+    "why_others_wrong": {
+      "B": "Text 2 directly contradicts the claim that patents always accelerate innovation.",
+      "C": "Text 2 critiques the economic theory of patent thickets, not accusing authors of personal fraud.",
+      "D": "Absurd distractor: Text 2 uses smartphones as an example of patent thickets, not advocating against microprocessors."
+    },
+    "socratic_prompt": "Does Text 2 support or criticize the idea in Text 1 that patents always boost innovation?",
+    "common_trap": "Failing to see the fundamental critique that too many patents can actually decrease innovation.",
+    "thinking_framework": "Cross-Text Dynamic: Text 1 (Patents incentivize innovation) vs. Text 2 (Patent thickets throttle innovation through friction and litigation).",
+    "error_type": "DIRECTIONAL_RELATION_MISMATCH",
+    "estimated_time_seconds": 80,
+    "source_basis": "original",
+    "tags": [
+      "economics",
+      "cross_text",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "RW-CS-031",
+    "domain": "Craft and Structure",
+    "skill": "Text Structure and Purpose",
+    "difficulty": 4,
+    "passage": "Biographer Ron Chernow begins his portrait of Alexander Hamilton by emphasizing his destitute origins in the Caribbean island of Nevis—abandoned by his father and orphaned by his mother—before recounting his meteoric ascent to become George Washington's indispensable aide-de-camp and the chief architect of the American financial system. By foregrounding Hamilton's traumatic youth, Chernow does not merely furnish biographical trivia; he establishes the psychological engine that drove Hamilton's lifelong obsession with national administrative efficiency, creditworthiness, and institutional permanence.",
+    "question_stem": "Which choice best describes the primary function of the underlined phrase (or second sentence) in the overall structure of the text?",
+    "choices": {
+      "A": "It explains how an author connects Hamilton's early personal adversity to his subsequent political and economic philosophies.",
+      "B": "It proves that Hamilton was the sole author of the United States Constitution.",
+      "C": "It demonstrates that Chernow fabricated historical records to make his book more exciting.",
+      "D": "It argues that George Washington was jealous of Hamilton's Caribbean upbringing."
+    },
+    "correct_answer": "A",
+    "explanation": "The second sentence explains Chernow's purpose in detailing Hamilton's traumatic youth: to establish 'the psychological engine' that explains Hamilton's focus on national finance, credit, and administrative permanence.",
+    "why_others_wrong": {
+      "B": "The text never claims Hamilton was the sole author of the Constitution.",
+      "C": "The text praises Chernow's analytical depth; it does not accuse him of fabrication.",
+      "D": "Washington's jealousy is nowhere mentioned."
+    },
+    "socratic_prompt": "What does the author say Chernow accomplishes by highlighting Hamilton's youth?",
+    "common_trap": "Focusing on Hamilton's famous titles rather than the structural link between his childhood trauma and his political ideals.",
+    "thinking_framework": "Rhetorical Function: Sentence 1 (Biographical detail) -> Sentence 2 (Analytical purpose: linking trauma to political philosophy).",
+    "error_type": "FUNCTION_VS_DETAIL_CONFUSION",
+    "estimated_time_seconds": 70,
+    "source_basis": "original",
+    "tags": [
+      "history",
+      "text_structure",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "RW-CS-032",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "difficulty": 4,
+    "passage": "Although the treaty was formally signed with lavish ceremonial fanfare, diplomatic historians now regard the accord as merely perfunctory; neither government had allocated budgetary appropriations to implement its demilitarization protocols, and cross-border skirmishes resumed within weeks.",
+    "question_stem": "As used in the text, what does the word 'perfunctory' most nearly mean?",
+    "choices": {
+      "A": "Carried out with minimum effort or genuine commitment",
+      "B": "Exceedingly dangerous to public safety",
+      "C": "Highly beneficial to international trade",
+      "D": "Secretly negotiated by espionage agents"
+    },
+    "correct_answer": "A",
+    "explanation": "The text states that despite the fanfare, neither government funded the treaty and fighting resumed immediately. 'Perfunctory' means done merely as a formality or routine without genuine care, effort, or conviction.",
+    "why_others_wrong": {
+      "B": "'Perfunctory' does not mean dangerous; it means superficial/formalistic.",
+      "C": "Trade benefits are contradicted by the resumption of skirmishes.",
+      "D": "The text notes 'lavish ceremonial fanfare', showing it was public, not secret."
+    },
+    "socratic_prompt": "If a treaty is signed with big ceremonies but nobody funds it or takes it seriously, how would you describe the effort put in?",
+    "common_trap": "Picking 'dangerous' because fighting resumed, rather than describing the empty nature of the treaty signing.",
+    "thinking_framework": "Contextual Semantic Clues: 'merely perfunctory' + 'neither government had allocated appropriations' -> Done as a superficial formality without real effort.",
+    "error_type": "ASSOCIATION_BY_CONSEQUENCE",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "tags": [
+      "history",
+      "words_in_context",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "RW-CS-033",
+    "domain": "Craft and Structure",
+    "skill": "Cross-Text Connections",
+    "difficulty": 5,
+    "passage": "Text 1: Paleontologist Mary Schweitzer challenged decades of fossilization dogma when she discovered preserved soft tissue structures, including flexible blood vessels and collagen fragments, inside a 68-million-year-old Tyrannosaurus rex femur. Conventional taphonomy held that organic biomolecules degrade within a few hundred thousand years. Schweitzer hypothesized that iron nanoparticles liberated from decomposing hemoglobin acted as powerful molecular cross-linkers, effectively preserving the protein structures across geological epochs.\n\nText 2: Analytical biochemist Evan Thomas cautions that extraordinary taphonomic claims require rigorous contamination controls. Thomas argues that common environmental microbes, such as biofilm-forming bacteria, can infiltrate porous fossil matrices post-excavation. Under electron microscopy, bacterial biofilms frequently form polymeric hollow tubular structures that mimic ancient capillary vessels, producing false-positive signals that masquerade as dinosaurian soft tissue.",
+    "question_stem": "Based on the texts, how would Evan Thomas (Text 2) most likely evaluate Schweitzer's claimed discovery in Text 1?",
+    "choices": {
+      "A": "He would suggest that the apparent soft tissue vessels could be artifacts of modern bacterial biofilm contamination rather than genuine preserved dinosaur proteins.",
+      "B": "He would celebrate Schweitzer's iron cross-linking hypothesis as the definitive solution to taphonomic degradation.",
+      "C": "He would argue that Tyrannosaurus rex fossils are actually modern elephant skeletons buried by hoaxes.",
+      "D": "He would assert that bacterial biofilms cannot survive in subterranean environments."
+    },
+    "correct_answer": "A",
+    "explanation": "Thomas argues in Text 2 that bacterial biofilms can infiltrate fossil bones and produce hollow tubular structures that mimic ancient capillaries, producing false-positive signals. Thus, he would evaluate Schweitzer's vessels as potential modern microbial contamination.",
+    "why_others_wrong": {
+      "B": "Contradicts Text 2: Thomas is a skeptic urging caution, not celebrating the discovery as definitive.",
+      "C": "Absurd distractor: neither author questions the identity of dinosaur fossils.",
+      "D": "Contradicts Text 2, which explicitly states bacteria infiltrate fossil matrices."
+    },
+    "socratic_prompt": "What does Thomas warn that bacterial biofilms can look like under electron microscopy?",
+    "common_trap": "Assuming scientific peers always agree with groundbreaking discoveries instead of reading the specific methodological critique in Text 2.",
+    "thinking_framework": "Critique Extraction: Schweitzer claims blood vessels preserved by iron -> Thomas warns bacterial biofilms mimic vessel structures, causing false positives.",
+    "error_type": "SKEPTICAL_REBUTTAL_ALIGNMENT",
+    "estimated_time_seconds": 85,
+    "source_basis": "original",
+    "tags": [
+      "paleontology",
+      "cross_text",
+      "hard"
+    ]
   }
 ]

@@ -343,5 +343,203 @@
     "source_basis": "original",
     "qa_status": "DRAFT",
     "is_grid_in": false
+  },
+  {
+    "question_id": "MATH-GEO-016",
+    "domain": "Geometry and Trigonometry",
+    "skill": "Circle equations",
+    "difficulty": 5,
+    "passage": null,
+    "question_stem": "The equation of a circle in the xy-plane is given by x² + y² - 10x + 6y + 9 = 0. What is the radius of the circle?",
+    "choices": {
+      "A": "5",
+      "B": "25",
+      "C": "3",
+      "D": "√34"
+    },
+    "correct_answer": "A",
+    "explanation": "Complete the square for both x and y terms: (x² - 10x + 25) + (y² + 6y + 9) = -9 + 25 + 9. This simplifies to (x - 5)² + (y + 3)² = 25. The standard form is (x - h)² + (y - k)² = r². Thus, r² = 25, which gives the radius r = √25 = 5.",
+    "why_others_wrong": {
+      "B": "25 is r², the square of the radius, not the radius itself.",
+      "C": "3 is the y-coordinate of the center with opposite sign.",
+      "D": "Arithmetic error forgetting to balance the completed square terms on the right side."
+    },
+    "socratic_prompt": "Complete the square for x² - 10x and y² + 6y. What must you add to both sides of the equation?",
+    "common_trap": "Forgetting that the equation gives r², and reporting 25 instead of √25 = 5.",
+    "thinking_framework": "Completing the Square for Circles: 1. Group terms -> 2. Add (b/2)² to both sides -> 3. Standard form (x-h)² + (y-k)² = r² -> 4. Take square root of r².",
+    "error_type": "RADIUS_SQUARED_CONFUSION",
+    "estimated_time_seconds": 65,
+    "source_basis": "original",
+    "tags": [
+      "math",
+      "geometry",
+      "circle_equations",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "MATH-GEO-017",
+    "domain": "Geometry and Trigonometry",
+    "skill": "Trigonometric ratios",
+    "difficulty": 4,
+    "passage": null,
+    "question_stem": "In a right triangle ABC, angle C is the right angle. If sin(A) = 7/25, what is the value of cos(B)?",
+    "choices": {
+      "A": "7/25",
+      "B": "24/25",
+      "C": "7/24",
+      "D": "24/7"
+    },
+    "correct_answer": "A",
+    "explanation": "In any right triangle with acute angles A and B, the angles are complementary (A + B = 90°). By the cofunction identity, sin(A) = cos(90° - A) = cos(B). Since sin(A) = 7/25, cos(B) must also equal 7/25.",
+    "why_others_wrong": {
+      "B": "24/25 is cos(A) or sin(B), not cos(B).",
+      "C": "7/24 is tan(A).",
+      "D": "24/7 is tan(B)."
+    },
+    "socratic_prompt": "What is the relationship between the sine of one acute angle and the cosine of the other acute angle in a right triangle?",
+    "common_trap": "Calculating the adjacent side 24 using the Pythagorean theorem and accidentally reporting cos(A) instead of cos(B).",
+    "thinking_framework": "Cofunction Identity: sin(A) = cos(B) whenever A and B are complementary angles in a right triangle.",
+    "error_type": "ANGLE_DESIGNATION_CONFUSION",
+    "estimated_time_seconds": 45,
+    "source_basis": "original",
+    "tags": [
+      "math",
+      "trigonometry",
+      "cofunction",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "MATH-GEO-018",
+    "domain": "Geometry and Trigonometry",
+    "skill": "Circles: Arc length and Sector area",
+    "difficulty": 5,
+    "passage": null,
+    "question_stem": "A circle has a center at point O and a radius of 12 cm. A central angle AOB measures (5π/6) radians. What is the area, in square centimeters, of the sector formed by central angle AOB?",
+    "choices": {
+      "A": "60π",
+      "B": "10π",
+      "C": "120π",
+      "D": "30π"
+    },
+    "correct_answer": "A",
+    "explanation": "The area of a sector of a circle with radius r and central angle θ in radians is given by A = (1/2)r²θ. Here, r = 12 and θ = 5π/6. A = (1/2) * (12)² * (5π / 6) = (1/2) * 144 * (5π / 6) = 72 * (5π / 6) = 12 * 5π = 60π.",
+    "why_others_wrong": {
+      "B": "10π is the arc length s = rθ = 12 * (5π/6) = 10π, not the sector area.",
+      "C": "120π forgets the 1/2 in the sector area formula (1/2 r² θ).",
+      "D": "Dividing by 2 twice."
+    },
+    "socratic_prompt": "What is the formula for the area of a sector when the angle is in radians? Notice the difference between arc length (rθ) and sector area (1/2 r²θ).",
+    "common_trap": "Calculating arc length (s = rθ) instead of sector area (A = 1/2 r²θ).",
+    "thinking_framework": "Sector Area Formula: Area = (1/2) * r² * θ_rad -> (1/2) * 144 * (5π/6) = 60π.",
+    "error_type": "ARC_LENGTH_VS_AREA_CONFUSION",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "tags": [
+      "math",
+      "geometry",
+      "radians",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "MATH-GEO-019",
+    "domain": "Geometry and Trigonometry",
+    "skill": "Circle equations",
+    "difficulty": 5,
+    "passage": null,
+    "question_stem": "In the xy-plane, the line y = 7 is tangent to a circle whose center is at (-3, 2). Which of the following is an equation of this circle?",
+    "choices": {
+      "A": "(x + 3)² + (y - 2)² = 25",
+      "B": "(x - 3)² + (y + 2)² = 25",
+      "C": "(x + 3)² + (y - 2)² = 5",
+      "D": "(x - 3)² + (y + 2)² = 49"
+    },
+    "correct_answer": "A",
+    "explanation": "The radius is the perpendicular distance from the center (-3, 2) to the tangent line y = 7. The vertical distance between y = 2 and y = 7 is |7 - 2| = 5, so r = 5 and r² = 25. With center (h, k) = (-3, 2), the circle equation is (x - (-3))² + (y - 2)² = 5² -> (x + 3)² + (y - 2)² = 25.",
+    "why_others_wrong": {
+      "B": "Sign error on center coordinates, using (x - 3) and (y + 2) which gives center (3, -2).",
+      "C": "Puts r on the right side instead of r² = 25.",
+      "D": "Sign error on center and uses r = 7 instead of the distance |7 - 2| = 5."
+    },
+    "socratic_prompt": "What is the distance between the line y = 7 and the center's y-coordinate 2? That distance is the radius!",
+    "common_trap": "Mixing up the signs in (x - h) and (y - k) for negative center coordinates.",
+    "thinking_framework": "Tangent Circle Logic: 1. Radius = Distance from center (-3, 2) to line y = 7 -> r = 5 -> 2. Standard form (x - h)² + (y - k)² = r² -> (x + 3)² + (y - 2)² = 25.",
+    "error_type": "TANGENT_DISTANCE_SIGN_ERROR",
+    "estimated_time_seconds": 55,
+    "source_basis": "original",
+    "tags": [
+      "math",
+      "geometry",
+      "tangents",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "MATH-GEO-020",
+    "domain": "Geometry and Trigonometry",
+    "skill": "Trigonometric ratios",
+    "difficulty": 4,
+    "passage": null,
+    "question_stem": "In the xy-plane, an angle θ in standard position has its terminal ray passing through the point (-8, 15). What is the value of cos(θ)?",
+    "choices": {
+      "A": "-8/17",
+      "B": "15/17",
+      "C": "-8/15",
+      "D": "8/17"
+    },
+    "correct_answer": "A",
+    "explanation": "The point is (x, y) = (-8, 15). The distance from the origin is r = √(x² + y²) = √((-8)² + 15²) = √(64 + 225) = √289 = 17. By definition of trigonometric functions on the Cartesian plane, cos(θ) = x / r = -8 / 17.",
+    "why_others_wrong": {
+      "B": "15/17 is sin(θ) = y / r.",
+      "C": "-8/15 is cot(θ) = x / y.",
+      "D": "8/17 misses the negative sign of x in Quadrant II."
+    },
+    "socratic_prompt": "In the unit circle definition, is cos(θ) equal to x/r or y/r? Remember that x is negative in Quadrant II.",
+    "common_trap": "Reporting sin(θ) instead of cos(θ), or dropping the negative sign.",
+    "thinking_framework": "Trig on Coordinate Plane: 1. Calculate hypotenuse r = √((-8)² + 15²) = 17 -> 2. cos(θ) = x / r = -8 / 17.",
+    "error_type": "QUADRANT_SIGN_DROP",
+    "estimated_time_seconds": 50,
+    "source_basis": "original",
+    "tags": [
+      "math",
+      "trigonometry",
+      "coordinates",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "MATH-GEO-021",
+    "domain": "Geometry and Trigonometry",
+    "skill": "Similar triangles and volume",
+    "difficulty": 5,
+    "passage": null,
+    "question_stem": "Two similar cylinders, Cylinder A and Cylinder B, have heights in the ratio 2 : 5. If the volume of Cylinder A is 48π cubic centimeters, what is the volume, in cubic centimeters, of Cylinder B?",
+    "choices": {
+      "A": "750π",
+      "B": "300π",
+      "C": "120π",
+      "D": "1200π"
+    },
+    "correct_answer": "A",
+    "explanation": "For any two similar three-dimensional geometric figures, if the linear ratio of corresponding dimensions (heights) is a : b, then the ratio of their volumes is a³ : b³. Here, the linear ratio is 2 : 5, so the volume ratio is 2³ : 5³ = 8 : 125. Setting up the proportion: Volume_A / Volume_B = 8 / 125. 48π / Volume_B = 8 / 125. Volume_B = 48π * (125 / 8) = 6π * 125 = 750π.",
+    "why_others_wrong": {
+      "B": "300π uses the surface area ratio 2² : 5² = 4 : 25 instead of the volume ratio 8 : 125.",
+      "C": "120π uses the linear ratio 2 : 5 instead of the cubic volume ratio.",
+      "D": "Calculation error multiplying by 16."
+    },
+    "socratic_prompt": "When 3D shapes are similar and lengths are in ratio a : b, in what ratio are their volumes? (Think cubes!).",
+    "common_trap": "Using the area ratio (squared) instead of the volume ratio (cubed).",
+    "thinking_framework": "Similarity Scaling Laws: Linear ratio = k -> Area ratio = k² -> Volume ratio = k³. Here k = 5/2, so Volume ratio = (5/2)³ = 125/8.",
+    "error_type": "DIMENSIONAL_SCALING_EXPONENT_ERROR",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "tags": [
+      "math",
+      "geometry",
+      "similar_figures",
+      "hard"
+    ]
   }
 ]

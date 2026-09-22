@@ -645,5 +645,197 @@
       "urban_planning",
       "environmental_science"
     ]
+  },
+  {
+    "question_id": "RW-II-023",
+    "domain": "Information and Ideas",
+    "skill": "Inferences",
+    "difficulty": 5,
+    "passage": "Ecologist Sarah Martinez investigated the trophic cascade triggered by reintroducing apex predators into a riparian woodland. While prior computer models predicted that apex predators would reduce herbivore populations exclusively through direct predation, Martinez's team observed that elk and deer radically altered their foraging behaviors even when predator densities were negligible. Specifically, the herbivores actively avoided steep ravine corridors with restricted sightlines—areas where predators could stage successful ambushes—even though those ravines contained the most nutrient-dense willow saplings. Consequently, vegetation recovery was heavily concentrated along topographical choke points rather than uniformly distributed across the forest.",
+    "question_stem": "Which choice most logically completes the text?",
+    "choices": {
+      "A": "herbivore foraging decisions in the woodland were governed as much by perceived predation risk as by raw caloric abundance.",
+      "B": "apex predators primarily target weak and elderly herbivores during periods of severe winter nutritional stress.",
+      "C": "willow saplings in steep ravines are biochemically inferior to those growing in wide open meadows.",
+      "D": "computer simulations of trophic cascades are fundamentally incapable of modeling any ecological interactions."
+    },
+    "correct_answer": "A",
+    "explanation": "The text shows that herbivores avoided the steep ravines despite having 'the most nutrient-dense willow saplings' because predators could ambush them there ('restricted sightlines'). This demonstrates that the fear/perceived risk of predation drove their choices over raw food abundance.",
+    "why_others_wrong": {
+      "B": "Winter stress and targeting weak/elderly animals are never mentioned in the text.",
+      "C": "Contradicts the text, which explicitly states the ravine saplings were 'the most nutrient-dense'.",
+      "D": "Extreme over-generalization: computer models missed behavioral fear landscapes, but that doesn't mean they are incapable of modeling any interactions."
+    },
+    "socratic_prompt": "Why did herbivores avoid ravines with the best food? What influenced their choice besides food quantity?",
+    "common_trap": "Choosing D due to extreme anti-computer sentiment, or C which contradicts the explicit text.",
+    "thinking_framework": "Inference Deduction: Nutrient-rich food in ravine + Herbivores avoid ravine due to ambush risk -> Risk perception overrides caloric reward.",
+    "error_type": "OVER_EXTREME_INFERENCE",
+    "estimated_time_seconds": 80,
+    "source_basis": "original",
+    "tags": [
+      "ecology",
+      "inferences",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "RW-II-024",
+    "domain": "Information and Ideas",
+    "skill": "Command of Evidence: Quantitative",
+    "difficulty": 4,
+    "passage": "Data Table: Mean Photosynthetic Yield (μmol CO2/m²/s) under Elevated Temperatures\n- Species A (Native C3 Grass): At 20°C: 28.4 | At 30°C: 31.2 | At 38°C: 14.1\n- Species B (Invasive C4 Grass): At 20°C: 19.5 | At 30°C: 34.0 | At 38°C: 38.6\n\nBotanist Elena Vance evaluated whether anticipated warming trends would facilitate the competitive displacement of native temperate grasses by invasive sub-tropical varieties. In her summary, Vance highlighted that while Species A outperformed Species B under moderate springtime baselines (20°C), Species B exhibited a physiological mechanism—C4 photosynthesis—that prevents photorespiration under severe thermal stress.",
+    "question_stem": "Which choice best uses data from the table to support Vance's conclusion?",
+    "choices": {
+      "A": "At 38°C, Species B achieved a photosynthetic yield of 38.6 μmol CO2/m²/s, more than double the 14.1 μmol CO2/m²/s recorded for Species A.",
+      "B": "At 20°C, Species A produced 28.4 μmol CO2/m²/s, which was lower than its photosynthetic yield at 38°C.",
+      "C": "Both Species A and Species B experienced their highest photosynthetic rates at exactly 30°C.",
+      "D": "Species B consistently had lower photosynthetic yield than Species A across all three tested temperature regimes."
+    },
+    "correct_answer": "A",
+    "explanation": "To support Vance's conclusion about Species B's advantage under severe heat, the data must compare the two species at 38°C. Option A accurately quotes the table (38.6 vs 14.1) showing Species B produces more than double the yield of Species A.",
+    "why_others_wrong": {
+      "B": "Factually false according to the table: Species A's yield at 20°C (28.4) was much higher than at 38°C (14.1).",
+      "C": "Factually false: Species B had its highest rate at 38°C (38.6), not 30°C.",
+      "D": "Factually false: Species B was higher at 30°C and 38°C."
+    },
+    "socratic_prompt": "What does the data show at the highest temperature (38°C) for Species B compared to Species A?",
+    "common_trap": "Misreading numbers across table columns or failing to check whether the statement is mathematically true.",
+    "thinking_framework": "Quantitative Verification: Target temperature (38°C) -> Species B (38.6) vs. Species A (14.1) -> Ratio 38.6 / 14.1 = 2.7x (> double).",
+    "error_type": "DATA_MISREAD",
+    "estimated_time_seconds": 75,
+    "source_basis": "original",
+    "tags": [
+      "botany",
+      "quantitative_evidence",
+      "table"
+    ]
+  },
+  {
+    "question_id": "RW-II-025",
+    "domain": "Information and Ideas",
+    "skill": "Inferences",
+    "difficulty": 5,
+    "passage": "Astronomers analyzing the orbital dynamics of Kuiper Belt Objects (KBOs) noted that several extreme trans-Neptunian bodies share peculiar, clustered orbital inclinations and eccentricities that cannot be explained by the gravitational perturbations of the four known gas giant planets alone. Astrophysicists Konstantin Batygin and Mike Brown hypothesized that a distant, yet undiscovered super-Earth—popularly designated Planet Nine—shepherds these objects into their observed alignments. However, skeptic Ann-Marie Madigan proposed an alternative 'collective gravity' model, demonstrating that a massive primordial disk composed of millions of small icy planetesimals could gravitationally bind itself into clustered orbits over billions of years without requiring a singular massive planet.",
+    "question_stem": "If observational infrared sky surveys ultimately confirm that the total mass of all small icy planetesimals in the outer solar system is less than one-tenth of Earth's mass, this finding would most directly",
+    "choices": {
+      "A": "undermine Madigan's collective gravity hypothesis while lending circumstantial support to the Planet Nine hypothesis.",
+      "B": "prove conclusively that Pluto must be restored to official planetary status by the International Astronomical Union.",
+      "C": "demonstrate that the Kuiper Belt Objects are moving in completely chaotic, unclustered orbits.",
+      "D": "refute the laws of universal gravitation formulated by Isaac Newton."
+    },
+    "correct_answer": "A",
+    "explanation": "Madigan's hypothesis relies on a 'massive primordial disk' generating collective gravity. If the total mass of planetesimals is tiny (< 0.1 Earth mass), there isn't enough mass to create collective gravitational clustering, thereby weakening (undermining) Madigan's hypothesis and leaving the single massive planet (Planet Nine) as the more plausible explanation.",
+    "why_others_wrong": {
+      "B": "Pluto's planetary classification is an irrelevant regulatory convention not addressed by the mass of the disk.",
+      "C": "The clustering has already been observed; small mass doesn't make the observed clustering disappear, it just refutes the collective gravity explanation.",
+      "D": "Absurdly out of scope: testing planetary models does not overthrow Newtonian physics."
+    },
+    "socratic_prompt": "What does Madigan's model need to work? (A massive disk). What happens if the disk has very little mass?",
+    "common_trap": "Confusing the phenomenon (observed clustering) with the proposed mechanism (collective disk mass vs. Planet Nine).",
+    "thinking_framework": "Competing Hypotheses Evaluation: If Mechanism B (massive disk) is starved of its required mass, Hypothesis B fails, bolstering Hypothesis A.",
+    "error_type": "COMPETING_HYPOTHESIS_FAILURE",
+    "estimated_time_seconds": 85,
+    "source_basis": "original",
+    "tags": [
+      "astronomy",
+      "inferences",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "RW-II-026",
+    "domain": "Information and Ideas",
+    "skill": "Command of Evidence: Textual",
+    "difficulty": 4,
+    "passage": "Historian Marcus Bennett argues that the collapse of the Western Roman commercial shipping network in the fifth century CE was caused less by barbarian pirate incursions than by structural deflation and localized agrarian autarky. If Bennett's thesis is historically accurate, which archaeological finding from fifth-century Mediterranean port settlements would provide the strongest corroboration?",
+    "question_stem": "Which choice best describes finding that would corroborate Bennett's claim?",
+    "choices": {
+      "A": "Excavations of storehouses revealing local coarse-ware pottery replacing imported North African terra sigillata, with no signs of weapon damage or burned shipyard structures.",
+      "B": "Sunken military warships filled with Vandals equipped with advanced iron boarding weapons and grappling hooks.",
+      "C": "A royal decree signed by Emperor Augustus regulating grain trade subsidies for Roman plebeians in the first century BCE.",
+      "D": "The sudden discovery of rich gold coin caches bearing mint marks from barbarian Germanic chieftains."
+    },
+    "correct_answer": "A",
+    "explanation": "Bennett claims the collapse was due to localized self-sufficiency (agrarian autarky) and economic deflation rather than violent pirate raids. Finding local pottery replacing imports (showing localized autarky) combined with the absence of burning or weapon damage directly corroborates his thesis.",
+    "why_others_wrong": {
+      "B": "Sunken warships with pirate weapons would support the violent pirate invasion theory, directly refuting Bennett.",
+      "C": "Augustus lived 500 years earlier (1st century BCE vs. 5th century CE), making this chronologically irrelevant.",
+      "D": "Barbarian gold coins do not prove agrarian autarky or non-violent deflation."
+    },
+    "socratic_prompt": "What physical evidence shows economic isolation (autarky) WITHOUT violence (no pirate destruction)?",
+    "common_trap": "Choosing an option that shows pirate violence because 'Rome' and 'Barbarians' are associated in popular imagination.",
+    "thinking_framework": "Corroboration Alignment: Thesis = Economic localization, NOT violence -> Archaeological proof = Local goods substitute imports + Zero burn/weapon marks.",
+    "error_type": "HYPOTHESIS_CONTRADICTION_TRAP",
+    "estimated_time_seconds": 80,
+    "source_basis": "original",
+    "tags": [
+      "history",
+      "textual_evidence",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "RW-II-027",
+    "domain": "Information and Ideas",
+    "skill": "Inferences",
+    "difficulty": 5,
+    "passage": "Neurobiologists examining memory consolidation discovered that sleep-deprived mice exhibited normal acquisition of fear conditioning when exposed to an auditory tone paired with a mild foot-shock. However, when tested 48 hours later, the sleep-deprived mice showed virtually zero freezing behavior upon hearing the tone alone, whereas control mice that slept normally froze consistently. Molecular assays of the hippocampus revealed that dendritic spine remodeling on CA1 pyramidal neurons was severely suppressed in the sleep-deprived cohort.",
+    "question_stem": "The researchers' findings most strongly imply that sleep deprivation",
+    "choices": {
+      "A": "impairs the long-term structural consolidation of associative memories without preventing immediate short-term learning.",
+      "B": "completely destroys auditory sensory perception, rendering mice permanently deaf to tone cues.",
+      "C": "enhances the physical endurance of hippocampal neurons against electrical shocks.",
+      "D": "prevents animals from experiencing any physiological fear responses during initial conditioning."
+    },
+    "correct_answer": "A",
+    "explanation": "The mice acquired fear conditioning normally during the session (immediate short-term learning was intact), but failed to freeze 48 hours later (long-term memory failed) due to suppressed dendritic spine remodeling. This directly supports option A.",
+    "why_others_wrong": {
+      "B": "Extreme exaggeration: the mice were not deaf, they just did not consolidate the associative memory.",
+      "C": "The text shows dendrite spine remodeling was suppressed (damaged/inhibited), not enhanced.",
+      "D": "Contradicted by the text: they exhibited 'normal acquisition of fear conditioning' initially."
+    },
+    "socratic_prompt": "Did the sleep-deprived mice learn the shock association during the first day? What happened 48 hours later?",
+    "common_trap": "Confusing failure of long-term memory retrieval with sensory deafness or total lack of initial fear.",
+    "thinking_framework": "Temporal Memory Phase Split: Initial Acquisition (Intact) vs. 48-Hour Retention (Ablated) -> Impairment is specific to long-term consolidation.",
+    "error_type": "TEMPORAL_PHASE_CONFLATION",
+    "estimated_time_seconds": 75,
+    "source_basis": "original",
+    "tags": [
+      "neuroscience",
+      "inferences",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "RW-II-028",
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "difficulty": 4,
+    "passage": "In many social insect colonies, task allocation emerges through decentralized self-organization rather than top-down hierarchical commands from the queen. In harvester ant (Pogonomyrmex barbatus) colonies, individual foragers assess whether to leave the nest by measuring the rate of brief antennal contacts with returning foragers carrying seeds. If food is plentiful near the nest, foragers return rapidly, increasing contact frequency and stimulating more outbound foragers. Conversely, if seeds are scarce or predators lurk outside, return intervals lengthen, and foraging activity automatically drops. Through this simple feedback loop, the colony tunes its collective metabolic investment without any single ant comprehending the global foraging landscape.",
+    "question_stem": "Which choice best describes the main idea of the passage?",
+    "choices": {
+      "A": "Harvester ant colonies dynamically regulate food-gathering effort through decentralized feedback loops based on return rates.",
+      "B": "The queen ant issues complex hormonal signals that direct each worker to specific seed foraging locations.",
+      "C": "Individual harvester ants possess sophisticated cognitive maps that calculate total regional seed supplies.",
+      "D": "Predators are the sole determining factor in whether ants choose to forage during daylight hours."
+    },
+    "correct_answer": "A",
+    "explanation": "The passage highlights how colonies allocate tasks through 'decentralized self-organization' via 'antennal contacts with returning foragers', allowing the colony to tune its investment without central leadership or global comprehension.",
+    "why_others_wrong": {
+      "B": "Directly contradicted: the text explicitly states task allocation occurs 'rather than top-down hierarchical commands from the queen'.",
+      "C": "Contradicted by 'without any single ant comprehending the global foraging landscape'.",
+      "D": "Extreme distractor: food availability and return rates are primary, not solely predators."
+    },
+    "socratic_prompt": "Does the queen ant command workers, or do workers respond locally to encounter rates?",
+    "common_trap": "Assuming the queen ant directs all colony actions, defying the text's explicit decentralization theme.",
+    "thinking_framework": "Main Idea Synthesis: Decentralized feedback (Antennal contact rate) = Collective tuning without central command.",
+    "error_type": "HIERARCHICAL_BIAS",
+    "estimated_time_seconds": 70,
+    "source_basis": "original",
+    "tags": [
+      "biology",
+      "central_ideas",
+      "hard"
+    ]
   }
 ]

@@ -1,68 +1,1869 @@
 {
-  "deck_name": "IELTS Academic Word List & Collocations",
+  "deck": "IELTS Academic Word List & Collocations (Band 8+)",
+  "total_cards": 50,
   "cards": [
     {
       "card_id": "IELTS-FC-001",
-      "type": "vocabulary",
-      "difficulty": 3,
+      "category": "Academic Word List (AWL)",
       "front": {
-        "word": "substantiate",
-        "context": "The researcher failed to substantiate her empirical claims with reproducible trial data."
+        "word": "undermine",
+        "phonetic": "/ˌʌn.dəˈmaɪn/",
+        "part_of_speech": "verb",
+        "context": "The new empirical findings served to undermine the prevailing economic doctrine."
       },
       "back": {
-        "meaning": "To provide factual evidence to support or prove the truth of an assertion (Chứng minh, xác thực)",
-        "collocations": ["substantiate a hypothesis", "empirical substantiation", "fail to substantiate"],
-        "ielts_usage": "Crucial for Writing Task 2 and Reading evidence evaluation.",
-        "example": "Subsequent environmental audits substantiated the initial findings of heavy metal contamination."
+        "vietnamese": "Làm xói mòn, làm suy yếu dần (nền tảng, luận điểm, niềm tin)",
+        "definition": "To gradually weaken or damage the foundation, credibility, or effectiveness of something.",
+        "collocations": [
+          "undermine credibility",
+          "undermine confidence",
+          "undermine an argument",
+          "subtly undermine"
+        ],
+        "example": "Selective reporting of clinical trials threatens to undermine public confidence in medical research.",
+        "synonyms": [
+          "compromise",
+          "weaken",
+          "subvert",
+          "erode"
+        ],
+        "antonyms": [
+          "bolster",
+          "substantiate",
+          "reinforce"
+        ],
+        "academic_tip": "Thường dùng trong IELTS Writing Task 2 khi phản biện (counter-argument) một luận điểm nông cạn."
       },
-      "skill": "Academic Lexical Resource"
+      "tags": [
+        "awl",
+        "writing",
+        "critical_thinking"
+      ]
     },
     {
       "card_id": "IELTS-FC-002",
-      "type": "vocabulary",
-      "difficulty": 3,
+      "category": "Academic Word List (AWL)",
       "front": {
-        "word": "mitigate",
-        "context": "Urban greening initiatives serve to mitigate the adverse microclimatic effects of concrete infrastructure."
+        "word": "substantiate",
+        "phonetic": "/səbˈstæn.ʃi.eɪt/",
+        "part_of_speech": "verb",
+        "context": "The researcher failed to substantiate the controversial hypothesis with statistical data."
       },
       "back": {
-        "meaning": "To make something less severe, harmful, or painful (Giảm thiểu tác động tiêu cực)",
-        "collocations": ["mitigate risks", "mitigate climate impacts", "mitigation strategy"],
-        "ielts_usage": "High-frequency in environmental, social, and economic Writing Task 2 essays.",
-        "example": "Strict emissions caps were instituted to mitigate further atmospheric degradation."
+        "vietnamese": "Chứng minh, cung cấp bằng chứng xác thực",
+        "definition": "To provide concrete evidence or facts to support or prove the truth of something.",
+        "collocations": [
+          "substantiate a claim",
+          "substantiate findings",
+          "substantiate allegations",
+          "empirical evidence to substantiate"
+        ],
+        "example": "Without longitudinal cohort studies, it is impossible to substantiate the causal link between social media use and juvenile depression.",
+        "synonyms": [
+          "corroborate",
+          "verify",
+          "validate",
+          "authenticate"
+        ],
+        "antonyms": [
+          "disprove",
+          "refute",
+          "undermine"
+        ],
+        "academic_tip": "Cặp từ đối lập hoàn hảo với 'undermine'. Đạt điểm cao trong tiêu chí Lexical Resource của Task 2."
       },
-      "skill": "Academic Lexical Resource"
+      "tags": [
+        "awl",
+        "writing",
+        "evidence"
+      ]
     },
     {
       "card_id": "IELTS-FC-003",
-      "type": "grammar_cohesion",
-      "difficulty": 4,
+      "category": "Academic Word List (AWL)",
       "front": {
-        "phrase": "Notwithstanding the fact that...",
-        "function": "Concession & High-Level Contrast Transition"
+        "word": "exacerbate",
+        "phonetic": "/ɪɡˈzæs.ə.beɪt/",
+        "part_of_speech": "verb",
+        "context": "Rapid urbanization without adequate wastewater infrastructure will only exacerbate urban flooding."
       },
       "back": {
-        "meaning": "In spite of the fact that / Although (Mặc dù / Bất kể thực tế rằng...)",
-        "ielts_usage": "Used in Band 8+ Writing Task 2 introduction/counter-argument paragraphs to demonstrate complex syntactic range.",
-        "example": "Notwithstanding the substantial initial capital investment, photovoltaic solar arrays deliver long-term economic dividends."
+        "vietnamese": "Làm trầm trọng thêm (vấn đề, dịch bệnh, tình trạng suy thoái)",
+        "definition": "To make a problem, situation, or negative feeling much worse.",
+        "collocations": [
+          "exacerbate the problem",
+          "exacerbate tensions",
+          "exacerbate inequalities",
+          "exacerbate symptoms"
+        ],
+        "example": "Unregulated market speculation during housing shortages only serves to exacerbate wealth inequality among younger generations.",
+        "synonyms": [
+          "aggravate",
+          "worsen",
+          "inflame",
+          "compound"
+        ],
+        "antonyms": [
+          "alleviate",
+          "mitigate",
+          "ameliorate"
+        ],
+        "academic_tip": "Dùng thay thế cho các cụm từ phổ thông như 'make things worse' trong các đề Problem-Solution."
       },
-      "skill": "Coherence & Cohesion"
+      "tags": [
+        "awl",
+        "problem_solution",
+        "writing"
+      ]
     },
     {
       "card_id": "IELTS-FC-004",
-      "type": "vocabulary",
-      "difficulty": 3,
+      "category": "Academic Word List (AWL)",
       "front": {
-        "word": "ubiquitous",
-        "context": "Handheld smart devices have become ubiquitous throughout secondary school classrooms."
+        "word": "mitigate",
+        "phonetic": "/ˈmɪt.ɪ.ɡeɪt/",
+        "part_of_speech": "verb",
+        "context": "Subsidizing public transit is an effective measure to mitigate metropolitan vehicular emissions."
       },
       "back": {
-        "meaning": "Present, appearing, or found everywhere (Phổ biến khắp nơi, nhan nhản)",
-        "collocations": ["ubiquitous presence", "become increasingly ubiquitous"],
-        "ielts_usage": "Replaces basic adjectives like 'popular' or 'very common' in Academic Writing & Speaking Part 3.",
-        "example": "Digital automated payment systems are now virtually ubiquitous across urban retail centers."
+        "vietnamese": "Giảm nhẹ, xoa dịu, hạn chế tác động tiêu cực",
+        "definition": "To make something bad, painful, or serious less severe or damaging.",
+        "collocations": [
+          "mitigate risks",
+          "mitigate the impact of",
+          "mitigate climate change",
+          "mitigate damage"
+        ],
+        "example": "Urban planners must incorporate green buffer zones to mitigate the heat island effect in tropical metropolises.",
+        "synonyms": [
+          "alleviate",
+          "attenuate",
+          "moderate",
+          "lessen"
+        ],
+        "antonyms": [
+          "exacerbate",
+          "aggravate",
+          "intensify"
+        ],
+        "academic_tip": "Từ cốt lõi cho phần Solution trong Task 2: 'Policy interventions aimed at mitigating...'"
       },
-      "skill": "Academic Lexical Resource"
+      "tags": [
+        "awl",
+        "writing",
+        "solutions"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-005",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "concomitant",
+        "phonetic": "/kənˈkɒm.ɪ.tənt/",
+        "part_of_speech": "adjective / noun",
+        "context": "Economic expansion without environmental safeguards leads to severe industrial pollution and concomitant health hazards."
+      },
+      "back": {
+        "vietnamese": "Đi kèm, đồng thời xảy ra (hậu quả kéo theo)",
+        "definition": "Naturally accompanying or associated with something.",
+        "collocations": [
+          "concomitant risks",
+          "concomitant reduction",
+          "concomitant increase",
+          "concomitant changes"
+        ],
+        "example": "The rapid proliferation of motorized vehicles brought severe air pollution and a concomitant surge in pediatric asthma.",
+        "synonyms": [
+          "attendant",
+          "accompanying",
+          "associated",
+          "concurrent"
+        ],
+        "antonyms": [
+          "unrelated",
+          "independent"
+        ],
+        "academic_tip": "Cụm danh từ '...and the concomitant risks/benefits' tạo phong thái học thuật Band 8.5+ tức thì."
+      },
+      "tags": [
+        "band8",
+        "writing",
+        "collocations"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-006",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "ubiquitous",
+        "phonetic": "/juːˈbɪk.wɪ.təs/",
+        "part_of_speech": "adjective",
+        "context": "Smartphones have become so ubiquitous that modern adolescent socialization is virtually inseparable from digital networks."
+      },
+      "back": {
+        "vietnamese": "Phổ biến khắp nơi, nhan nhản (có mặt ở mọi ngóc ngách)",
+        "definition": "Present, appearing, or found everywhere simultaneously.",
+        "collocations": [
+          "ubiquitous presence",
+          "become ubiquitous",
+          "ubiquitous computing",
+          "ubiquitous technology"
+        ],
+        "example": "The ubiquitous presence of synthetic microplastics in marine food chains poses an insidious ecological hazard.",
+        "synonyms": [
+          "omnipresent",
+          "pervasive",
+          "universal",
+          "prevalent"
+        ],
+        "antonyms": [
+          "scarce",
+          "rare",
+          "seldom"
+        ],
+        "academic_tip": "Thay thế hoàn hảo cho 'very common' hay 'everywhere' trong các đề về công nghệ và truyền thông."
+      },
+      "tags": [
+        "awl",
+        "lexical_resource",
+        "technology"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-007",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "disparate",
+        "phonetic": "/ˈdɪs.pər.ət/",
+        "part_of_speech": "adjective",
+        "context": "The multidisciplinary symposium synthesized disparate findings from genomics, meteorology, and anthropology."
+      },
+      "back": {
+        "vietnamese": "Khác biệt rõ rệt, không đồng nhất, rời rạc",
+        "definition": "Essentially different in kind; not allowing comparison.",
+        "collocations": [
+          "disparate elements",
+          "disparate data sources",
+          "disparate viewpoints",
+          "synthesize disparate"
+        ],
+        "example": "A robust legal framework must reconcile the disparate interests of multinational corporations and indigenous landholders.",
+        "synonyms": [
+          "divergent",
+          "heterogeneous",
+          "dissimilar",
+          "distinct"
+        ],
+        "antonyms": [
+          "homogeneous",
+          "identical",
+          "uniform"
+        ],
+        "academic_tip": "Dùng khi mô tả các trường phái quan điểm trái chiều hoặc dữ liệu đa nguồn trong Task 1 & 2."
+      },
+      "tags": [
+        "awl",
+        "reading",
+        "writing"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-008",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "paradigm",
+        "phonetic": "/ˈpær.ə.daɪm/",
+        "part_of_speech": "noun",
+        "context": "The transition to renewable energy necessitates a comprehensive shift in the prevailing industrial paradigm."
+      },
+      "back": {
+        "vietnamese": "Mô hình mẫu, hệ hình nhận thức, chuẩn thức tư duy",
+        "definition": "A typical example or pattern of something; a distinct set of concepts or thought patterns.",
+        "collocations": [
+          "paradigm shift",
+          "prevailing paradigm",
+          "dominant paradigm",
+          "new educational paradigm"
+        ],
+        "example": "The advent of the internet triggered a profound paradigm shift in how information is produced and disseminated.",
+        "synonyms": [
+          "framework",
+          "model",
+          "archetype",
+          "standard"
+        ],
+        "antonyms": [
+          "anomaly"
+        ],
+        "academic_tip": "'Paradigm shift' là cụm từ vàng trong IELTS Writing để mô tả những cuộc cách mạng công nghệ hoặc xã hội."
+      },
+      "tags": [
+        "awl",
+        "band8",
+        "sociology"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-009",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "imperative",
+        "phonetic": "/ɪmˈper.ə.tɪv/",
+        "part_of_speech": "adjective / noun",
+        "context": "It is an ethical imperative that developed nations subsidize climate resilience infrastructure in vulnerable coastal states."
+      },
+      "back": {
+        "vietnamese": "Cấp thiết, bắt buộc, mệnh lệnh tối thượng",
+        "definition": "Of vital importance; crucial. Or an essential or urgent duty.",
+        "collocations": [
+          "moral imperative",
+          "economic imperative",
+          "remain imperative",
+          "it is imperative that"
+        ],
+        "example": "Given the accelerating depletion of freshwater aquifers, investing in desalination technology has become an economic imperative.",
+        "synonyms": [
+          "crucial",
+          "indispensable",
+          "vital",
+          "pressing"
+        ],
+        "antonyms": [
+          "optional",
+          "trivial",
+          "dispensable"
+        ],
+        "academic_tip": "Cấu trúc: 'It is imperative that + [subject] + [bare verb]...' (Thể giả định Subjunctive) ăn điểm Grammatical Range."
+      },
+      "tags": [
+        "awl",
+        "grammar",
+        "writing"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-010",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "insidious",
+        "phonetic": "/ɪnˈsɪd.i.əs/",
+        "part_of_speech": "adjective",
+        "context": "Noise pollution is an insidious public health threat because its physiological damage accumulates undetected over decades."
+      },
+      "back": {
+        "vietnamese": "Âm thầm, tiềm tàng nguy hại (tiến triển ngấm ngầm khó phát hiện)",
+        "definition": "Proceeding in a gradual, subtle way, but with very harmful effects.",
+        "collocations": [
+          "insidious effect",
+          "insidious threat",
+          "insidious influence",
+          "insidious onset"
+        ],
+        "example": "Algorithmic bias in hiring software represents an insidious barrier to equal opportunity in modern corporations.",
+        "synonyms": [
+          "stealthy",
+          "subtle",
+          "perfidious",
+          "creeping"
+        ],
+        "antonyms": [
+          "overt",
+          "obvious",
+          "harmless"
+        ],
+        "academic_tip": "Rất hiệu quả khi miêu tả tác động tiêu cực của các vấn đề môi trường hoặc tâm lý xã hội kéo dài."
+      },
+      "tags": [
+        "awl",
+        "health",
+        "environment"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-011",
+      "category": "Band 8+ Discourse Markers",
+      "front": {
+        "word": "notwithstanding",
+        "phonetic": "/ˌnɒt.wɪðˈstæn.dɪŋ/",
+        "part_of_speech": "preposition / adverb",
+        "context": "Notwithstanding the substantial initial capital expenditure, solar energy yields significant net savings over a 25-year lifecycle."
+      },
+      "back": {
+        "vietnamese": "Mặc dù, bất kể (tương đương với In spite of / Despite nhưng trang trọng hơn)",
+        "definition": "In spite of; despite.",
+        "collocations": [
+          "notwithstanding the fact that",
+          "notwithstanding concerns",
+          "notwithstanding improvements"
+        ],
+        "example": "Notwithstanding rigorous quality controls, occasional defects still elude automated assembly-line sensors.",
+        "synonyms": [
+          "despite",
+          "in spite of",
+          "regardless of"
+        ],
+        "antonyms": [
+          "because of",
+          "owing to"
+        ],
+        "academic_tip": "Đứng đầu câu hoặc sau danh từ ('Fierce competition notwithstanding,...'). Tăng điểm Academic Register."
+      },
+      "tags": [
+        "discourse_markers",
+        "cohesion",
+        "band8"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-012",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "corroborate",
+        "phonetic": "/kəˈrɒb.ə.reɪt/",
+        "part_of_speech": "verb",
+        "context": "Recent satellite radar altimetry data corroborates the accelerated retreat of West Antarctic ice sheets."
+      },
+      "back": {
+        "vietnamese": "Làm bằng chứng xác nhận, củng cố thêm cho (lý thuyết, phát hiện)",
+        "definition": "To confirm or give support to a statement, theory, or finding with additional evidence.",
+        "collocations": [
+          "corroborate evidence",
+          "corroborate a hypothesis",
+          "corroborate findings",
+          "independent data to corroborate"
+        ],
+        "example": "Interviews with local pastoralists corroborated meteorological records indicating prolonged seasonal droughts.",
+        "synonyms": [
+          "substantiate",
+          "confirm",
+          "validate",
+          "back up"
+        ],
+        "antonyms": [
+          "contradict",
+          "disprove",
+          "refute"
+        ],
+        "academic_tip": "Thường xuyên xuất hiện trong bài đọc IELTS Reading khi tác giả thảo luận tính xác thực của nghiên cứu."
+      },
+      "tags": [
+        "awl",
+        "reading",
+        "research"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-013",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "hedging",
+        "phonetic": "/ˈhedʒ.ɪŋ/",
+        "part_of_speech": "noun",
+        "context": "Academic style requires hedging to avoid dogmatic assertions that cannot be fully verified."
+      },
+      "back": {
+        "vietnamese": "Kỹ thuật diễn đạt dè dặt, mềm dẻo (tránh khẳng định tuyệt đối 100%)",
+        "definition": "The use of cautious or non-committal language to express possibility rather than absolute certainty.",
+        "collocations": [
+          "hedging language",
+          "employ hedging",
+          "hedging devices (e.g. tend to, may, arguably)"
+        ],
+        "example": "By stating that 'excessive screen time tends to correlate with sleep disturbances' rather than 'always causes', the writer employs proper hedging.",
+        "synonyms": [
+          "qualification",
+          "caution",
+          "tentativeness"
+        ],
+        "antonyms": [
+          "dogmatism",
+          "absolutism",
+          "assertiveness"
+        ],
+        "academic_tip": "Yếu tố quyết định điểm Band 8+ trong IELTS Writing: Tránh dùng 'always/never/100%', thay bằng 'tends to, arguably, potentially'."
+      },
+      "tags": [
+        "hedging",
+        "writing",
+        "band8"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-014",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "ephemeral",
+        "phonetic": "/ɪˈfem.ər.əl/",
+        "part_of_speech": "adjective",
+        "context": "Viral social media controversies are typically ephemeral, dissipating from public memory within a matter of days."
+      },
+      "back": {
+        "vietnamese": "Phù du, chóng tàn, ngắn ngủi",
+        "definition": "Lasting for a very short time; transitory.",
+        "collocations": [
+          "ephemeral nature",
+          "ephemeral trends",
+          "ephemeral pleasures",
+          "ephemeral phenomenon"
+        ],
+        "example": "Traditional print journalism provided lasting analytical archives, whereas digital micro-blogging produces ephemeral news snippets.",
+        "synonyms": [
+          "transitory",
+          "fleeting",
+          "transient",
+          "short-lived"
+        ],
+        "antonyms": [
+          "enduring",
+          "perpetual",
+          "permanent"
+        ],
+        "academic_tip": "Đối lập với 'enduring' hoặc 'permanent'. Rất hay dùng trong các bài luận về văn hóa, thời trang, tiêu dùng."
+      },
+      "tags": [
+        "awl",
+        "culture",
+        "lexical_resource"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-015",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "homogeneous",
+        "phonetic": "/ˌhɒm.əˈdʒiː.ni.əs/",
+        "part_of_speech": "adjective",
+        "context": "Globalized retail chains have rendered modern high streets increasingly homogeneous across continents."
+      },
+      "back": {
+        "vietnamese": "Đồng nhất, cùng loại, thuần nhất",
+        "definition": "Consisting of parts or people that are all the same type.",
+        "collocations": [
+          "homogeneous culture",
+          "homogeneous society",
+          "homogeneous mixture",
+          "increasingly homogeneous"
+        ],
+        "example": "Classrooms with students from diverse linguistic backgrounds achieve richer peer learning than linguistically homogeneous cohorts.",
+        "synonyms": [
+          "uniform",
+          "consistent",
+          "standardized",
+          "unvarying"
+        ],
+        "antonyms": [
+          "heterogeneous",
+          "diverse",
+          "varied"
+        ],
+        "academic_tip": "Từ cốt lõi trong các chủ đề Globalisation, Multiculturalism, và Urbanization."
+      },
+      "tags": [
+        "awl",
+        "sociology",
+        "globalization"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-016",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "salient",
+        "phonetic": "/ˈseɪ.li.ənt/",
+        "part_of_speech": "adjective",
+        "context": "Before structuring the Task 1 overview, candidates must identify the most salient trends across the multi-line chart."
+      },
+      "back": {
+        "vietnamese": "Nổi bật nhất, đáng chú ý nhất, trọng tâm",
+        "definition": "Most noticeable or important; prominent.",
+        "collocations": [
+          "salient feature",
+          "salient point",
+          "salient characteristic",
+          "most salient trend"
+        ],
+        "example": "A salient feature of the demographic data is the rapid shrinkage of the working-age population after 2030.",
+        "synonyms": [
+          "prominent",
+          "conspicuous",
+          "pivotal",
+          "notable"
+        ],
+        "antonyms": [
+          "inconspicuous",
+          "trivial",
+          "minor"
+        ],
+        "academic_tip": "Dùng trong IELTS Task 1: 'The most salient feature of the chart is...'"
+      },
+      "tags": [
+        "awl",
+        "task1",
+        "collocations"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-017",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "pervasive",
+        "phonetic": "/pəˈveɪ.sɪv/",
+        "part_of_speech": "adjective",
+        "context": "Commercial advertising has achieved a pervasive presence in educational software platforms."
+      },
+      "back": {
+        "vietnamese": "Lan tỏa khắp nơi, thâm nhập sâu rộng",
+        "definition": "Spreading widely throughout an area or a group of people, especially of an unwelcome influence.",
+        "collocations": [
+          "pervasive influence",
+          "pervasive problem",
+          "pervasive culture",
+          "increasingly pervasive"
+        ],
+        "example": "The pervasive influence of consumer culture encourages premature materialism among school-aged children.",
+        "synonyms": [
+          "widespread",
+          "ubiquitous",
+          "omnipresent",
+          "permeating"
+        ],
+        "antonyms": [
+          "isolated",
+          "contained",
+          "localized"
+        ],
+        "academic_tip": "Thường đi với 'influence', 'presence', hoặc 'impact' để mô tả sức ảnh hưởng sâu rộng."
+      },
+      "tags": [
+        "awl",
+        "culture",
+        "writing"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-018",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "obfuscate",
+        "phonetic": "/ˈɒb.fʌs.keɪt/",
+        "part_of_speech": "verb",
+        "context": "Convoluted bureaucratic terminology is frequently deployed to obfuscate government spending priorities."
+      },
+      "back": {
+        "vietnamese": "Làm cho khó hiểu, che giấu, làm lu mờ bản chất",
+        "definition": "To deliberately make something obscure, unclear, or difficult to comprehend.",
+        "collocations": [
+          "obfuscate the truth",
+          "obfuscate issues",
+          "deliberately obfuscate",
+          "obfuscate the facts"
+        ],
+        "example": "Corporate public relations releases often obfuscate the actual ecological damage caused by overseas extraction sites.",
+        "synonyms": [
+          "obscure",
+          "blur",
+          "muddle",
+          "cloud"
+        ],
+        "antonyms": [
+          "clarify",
+          "elucidate",
+          "illuminate"
+        ],
+        "academic_tip": "Từ vựng cấp độ C2 xuất hiện thường xuyên trong IELTS Reading khi nói về truyền thông và chính sách công."
+      },
+      "tags": [
+        "c2",
+        "reading",
+        "lexical_resource"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-019",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "elucidate",
+        "phonetic": "/iˈluː.sɪ.deɪt/",
+        "part_of_speech": "verb",
+        "context": "Further genomic sequencing is essential to elucidate the precise molecular mechanisms of viral transmission."
+      },
+      "back": {
+        "vietnamese": "Làm sáng tỏ, giải thích cặn kẽ",
+        "definition": "To make something clear; to explain lucidly.",
+        "collocations": [
+          "elucidate the mechanism",
+          "elucidate the relationship",
+          "elucidate a theory",
+          "help elucidate"
+        ],
+        "example": "This research aims to elucidate how childhood bilingualism alters executive cognitive function in later adulthood.",
+        "synonyms": [
+          "clarify",
+          "illuminate",
+          "explicate",
+          "demystify"
+        ],
+        "antonyms": [
+          "obfuscate",
+          "confuse",
+          "obscure"
+        ],
+        "academic_tip": "Thay thế cho 'explain' hoặc 'make clear' khi viết về mục tiêu nghiên cứu hoặc bài viết học thuật."
+      },
+      "tags": [
+        "awl",
+        "research",
+        "writing"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-020",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "dichotomy",
+        "phonetic": "/daɪˈkɒt.ə.mi/",
+        "part_of_speech": "noun",
+        "context": "The artificial dichotomy between economic growth and environmental preservation is increasingly rejected by ecological economists."
+      },
+      "back": {
+        "vietnamese": "Sự phân đôi, thế lưỡng phân (hai mặt đối lập hoàn toàn)",
+        "definition": "A division or contrast between two things that are or are represented as being entirely opposed or distinct.",
+        "collocations": [
+          "false dichotomy",
+          "sharp dichotomy",
+          "dichotomy between A and B",
+          "transcend the dichotomy"
+        ],
+        "example": "Framing the debate as a rigid dichotomy between individual freedom and public health oversimplifies epidemiologic reality.",
+        "synonyms": [
+          "division",
+          "split",
+          "polarization",
+          "dualism"
+        ],
+        "antonyms": [
+          "harmony",
+          "unity",
+          "continuum"
+        ],
+        "academic_tip": "'A false dichotomy' (ngụy biện lưỡng phân) là vũ khí phản biện cực mạnh trong Task 2."
+      },
+      "tags": [
+        "awl",
+        "logic",
+        "writing"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-021",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "juxtapose",
+        "phonetic": "/ˌdʒʌk.stəˈpəʊz/",
+        "part_of_speech": "verb",
+        "context": "The museum exhibition juxtaposes ancient hunter-gatherer stone axes with modern robotic harvesting combines."
+      },
+      "back": {
+        "vietnamese": "Đặt cạnh nhau để so sánh, đối chiếu sự tương phản",
+        "definition": "To place two or more things side by side in order to highlight their differences or similarities.",
+        "collocations": [
+          "juxtapose A with B",
+          "starkly juxtaposed",
+          "juxtapose contrasting elements"
+        ],
+        "example": "When juxtaposed against the soaring living costs in metropolitan hubs, regional living offers clear financial relief.",
+        "synonyms": [
+          "collocate",
+          "contrast",
+          "compare side by side"
+        ],
+        "antonyms": [
+          "isolate",
+          "separate"
+        ],
+        "academic_tip": "Dùng trong Task 1 khi so sánh 2 biểu đồ hoặc 2 bản đồ: 'When juxtaposed with the 1990 map...'"
+      },
+      "tags": [
+        "awl",
+        "task1",
+        "comparisons"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-022",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "precipitous",
+        "phonetic": "/prɪˈsɪp.ɪ.təs/",
+        "part_of_speech": "adjective",
+        "context": "The introduction of automated banking triggered a precipitous decline in high-street physical branch visits."
+      },
+      "back": {
+        "vietnamese": "Dốc đứng, đột ngột giảm mạnh (nhanh và không ngờ)",
+        "definition": "Dangerously high or steep; done suddenly and without careful consideration; (of a decline) extremely rapid.",
+        "collocations": [
+          "precipitous drop",
+          "precipitous decline",
+          "precipitous fall",
+          "precipitous descent"
+        ],
+        "example": "The coastal fisheries experienced a precipitous collapse in cod biomass during the late 1980s.",
+        "synonyms": [
+          "steep",
+          "dramatic",
+          "abrupt",
+          "sharp"
+        ],
+        "antonyms": [
+          "gradual",
+          "moderate",
+          "steady"
+        ],
+        "academic_tip": "Cụm 'a precipitous drop/decline' đạt điểm 8.0 trong tiêu chí Lexical Resource của Task 1 biểu đồ."
+      },
+      "tags": [
+        "awl",
+        "task1",
+        "trends"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-023",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "plateau",
+        "phonetic": "/ˈplæt.əʊ/",
+        "part_of_speech": "verb / noun",
+        "context": "After three years of exponential increases, electric vehicle adoption in the domestic market reached a plateau in 2024."
+      },
+      "back": {
+        "vietnamese": "Chạm mức ổn định, bình nguyên, duy trì không tăng không giảm",
+        "definition": "To reach a state of little or no change after a period of activity or progress.",
+        "collocations": [
+          "reach a plateau",
+          "level off",
+          "plateau at approximately",
+          "hit a plateau"
+        ],
+        "example": "Unemployment figures plateaued at roughly 5.2% for the remainder of the fiscal year.",
+        "synonyms": [
+          "level off",
+          "stabilize",
+          "flatten out",
+          "stagnate"
+        ],
+        "antonyms": [
+          "fluctuate",
+          "accelerate",
+          "plummet"
+        ],
+        "academic_tip": "Động từ chuẩn hóa trong Task 1 để thay thế cho cụm dài 'stay the same after increasing'."
+      },
+      "tags": [
+        "awl",
+        "task1",
+        "trends"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-024",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "proliferate",
+        "phonetic": "/prəˈlɪf.ər.eɪt/",
+        "part_of_speech": "verb",
+        "context": "As access to high-speed internet expanded, remote online learning platforms began to proliferate across the globe."
+      },
+      "back": {
+        "vietnamese": "Sinh sôi nảy nở nhanh, bùng nổ số lượng",
+        "definition": "To increase rapidly in numbers; to multiply.",
+        "collocations": [
+          "proliferate rapidly",
+          "begin to proliferate",
+          "nuclear proliferation",
+          "proliferation of devices"
+        ],
+        "example": "In the absence of clear municipal zoning, unregulated street food vendors proliferated across the central business district.",
+        "synonyms": [
+          "multiply",
+          "mushroom",
+          "burgeon",
+          "escalate"
+        ],
+        "antonyms": [
+          "dwindle",
+          "diminish",
+          "decline"
+        ],
+        "academic_tip": "Thường dùng danh từ 'the rapid proliferation of...' trong phần mở bài Task 2."
+      },
+      "tags": [
+        "awl",
+        "trends",
+        "writing"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-025",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "attenuate",
+        "phonetic": "/əˈten.ju.eɪt/",
+        "part_of_speech": "verb",
+        "context": "Mangrove coastal forests significantly attenuate the destructive force of incoming tsunami waves."
+      },
+      "back": {
+        "vietnamese": "Làm yếu đi, làm giảm bớt cường độ/năng lượng",
+        "definition": "To reduce the force, effect, or value of something.",
+        "collocations": [
+          "attenuate the impact",
+          "attenuate risk",
+          "attenuate sound waves",
+          "attenuate the severity"
+        ],
+        "example": "A robust social safety net attenuates the economic shock experienced by vulnerable households during recessions.",
+        "synonyms": [
+          "dampen",
+          "mitigate",
+          "weaken",
+          "diminish"
+        ],
+        "antonyms": [
+          "amplify",
+          "intensify",
+          "aggravate"
+        ],
+        "academic_tip": "Từ vựng kỹ thuật cao cấp, xuất hiện nhiều trong IELTS Reading chủ đề vật lý, sinh thái và kinh tế."
+      },
+      "tags": [
+        "awl",
+        "science",
+        "reading"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-026",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "disingenuous",
+        "phonetic": "/ˌdɪs.ɪnˈdʒen.ju.əs/",
+        "part_of_speech": "adjective",
+        "context": "It is disingenuous for automotive corporations to claim their fossil-fuel vehicles are carbon-neutral."
+      },
+      "back": {
+        "vietnamese": "Không thật thà, thiếu chân thành (ngụy biện, vờ ngây thơ)",
+        "definition": "Not candid or sincere, typically by pretending that one knows less about something than one really does.",
+        "collocations": [
+          "disingenuous claim",
+          "disingenuous argument",
+          "it is disingenuous to suggest"
+        ],
+        "example": "Attributing national obesity purely to individual lack of willpower is a disingenuous defense of processed food manufacturers.",
+        "synonyms": [
+          "insincere",
+          "deceitful",
+          "hypocritical",
+          "duplicitous"
+        ],
+        "antonyms": [
+          "candid",
+          "frank",
+          "genuine",
+          "ingenuous"
+        ],
+        "academic_tip": "Cực kỳ sắc bén khi phê bình các luận điểm bẫy trong Reading hoặc phản biện trong Task 2."
+      },
+      "tags": [
+        "c2",
+        "critical_thinking",
+        "writing"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-027",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "antithetical",
+        "phonetic": "/ˌæn.tɪˈθet.ɪ.kəl/",
+        "part_of_speech": "adjective",
+        "context": "Monopolistic corporate market structures are fundamentally antithetical to the principles of fair consumer pricing."
+      },
+      "back": {
+        "vietnamese": "Trái ngược hoàn toàn, tương phản trực tiếp, đối lập tính chất",
+        "definition": "Directly opposed or contrasted; mutually incompatible.",
+        "collocations": [
+          "antithetical to democracy",
+          "antithetical to progress",
+          "fundamentally antithetical"
+        ],
+        "example": "Excessive governmental censorship is antithetical to the core ethos of scientific innovation and free inquiry.",
+        "synonyms": [
+          "diametrically opposed",
+          "incompatible",
+          "contradictory",
+          "irreconcilable"
+        ],
+        "antonyms": [
+          "congruent",
+          "compatible",
+          "consistent"
+        ],
+        "academic_tip": "Cấu trúc: 'A is antithetical to B' khẳng định hai khái niệm không thể song hành."
+      },
+      "tags": [
+        "c2",
+        "writing",
+        "advanced"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-028",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "indispensable",
+        "phonetic": "/ˌɪn.dɪˈspen.sə.bəl/",
+        "part_of_speech": "adjective",
+        "context": "Critical reading skills are an indispensable prerequisite for academic success at university level."
+      },
+      "back": {
+        "vietnamese": "Không thể thiếu, tối quan trọng",
+        "definition": "Absolutely necessary; essential.",
+        "collocations": [
+          "indispensable part",
+          "indispensable role",
+          "indispensable tool",
+          "prove indispensable"
+        ],
+        "example": "Empirical testing remains an indispensable component of the scientific method.",
+        "synonyms": [
+          "essential",
+          "vital",
+          "crucial",
+          "paramount"
+        ],
+        "antonyms": [
+          "dispensable",
+          "superfluous",
+          "redundant"
+        ],
+        "academic_tip": "Thay thế cho 'very important / must have' trong các bài luận về giáo dục và kỹ năng."
+      },
+      "tags": [
+        "awl",
+        "education",
+        "writing"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-029",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "conducive",
+        "phonetic": "/kənˈdjuː.sɪv/",
+        "part_of_speech": "adjective",
+        "context": "A well-ventilated, quiet library space is highly conducive to deep cognitive focus."
+      },
+      "back": {
+        "vietnamese": "Tạo điều kiện thuận lợi, có ích cho (mục tiêu gì đó)",
+        "definition": "Making a certain situation or outcome likely or possible.",
+        "collocations": [
+          "conducive to learning",
+          "conducive to health",
+          "environment conducive to",
+          "hardly conducive to"
+        ],
+        "example": "Workplace cultures that penalize failure are rarely conducive to groundbreaking creative experimentation.",
+        "synonyms": [
+          "favorable to",
+          "beneficial to",
+          "encouraging of",
+          "promotive"
+        ],
+        "antonyms": [
+          "detrimental to",
+          "hindering",
+          "unfavorable"
+        ],
+        "academic_tip": "Luôn đi kèm với giới từ 'to': 'conducive to + N / V-ing'."
+      },
+      "tags": [
+        "awl",
+        "prepositions",
+        "writing"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-030",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "democratize",
+        "phonetic": "/dɪˈmɒk.rə.taɪz/",
+        "part_of_speech": "verb",
+        "context": "Open-access digital repositories have helped democratize scientific knowledge across developing economies."
+      },
+      "back": {
+        "vietnamese": "Bình dân hóa, phổ cập hóa cho mọi người cùng tiếp cận",
+        "definition": "To make something accessible to everyone, not just an elite minority.",
+        "collocations": [
+          "democratize access to",
+          "democratize information",
+          "democratize education",
+          "democratize technology"
+        ],
+        "example": "Low-cost smartphone manufacturing has democratized financial services through mobile banking in rural Africa.",
+        "synonyms": [
+          "popularize",
+          "make universally accessible",
+          "level the playing field"
+        ],
+        "antonyms": [
+          "monopolize",
+          "restrict",
+          "privatize"
+        ],
+        "academic_tip": "Rất được ưa chuộng trong các đề luận về Technology, Education và Social Equity."
+      },
+      "tags": [
+        "awl",
+        "technology",
+        "society"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-031",
+      "category": "Band 8+ Discourse Markers",
+      "front": {
+        "word": "insofar as",
+        "phonetic": "/ɪn.səʊˈfɑːr æz/",
+        "part_of_speech": "conjunction",
+        "context": "Public subsidies are justified insofar as they yield tangible collective benefits for vulnerable demographics."
+      },
+      "back": {
+        "vietnamese": "Trong chừng mực mà, xét tới mức độ mà",
+        "definition": "To the extent that; in so far as.",
+        "collocations": [
+          "insofar as it relates to",
+          "justified insofar as",
+          "effective insofar as"
+        ],
+        "example": "Standardized examinations are valuable only insofar as they provide objective, unbiased diagnostics of student progress.",
+        "synonyms": [
+          "to the degree that",
+          "to the extent that",
+          "inasmuch as"
+        ],
+        "antonyms": [
+          "regardless of"
+        ],
+        "academic_tip": "Dùng để đặt ra điều kiện giới hạn (hedging) cho một luận điểm, thể hiện tư duy phản biện cao cấp."
+      },
+      "tags": [
+        "discourse_markers",
+        "hedging",
+        "band8"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-032",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "susceptible",
+        "phonetic": "/səˈsep.tə.bəl/",
+        "part_of_speech": "adjective",
+        "context": "Elderly individuals with chronic respiratory conditions are exceptionally susceptible to airborne pollutants."
+      },
+      "back": {
+        "vietnamese": "Dễ bị tổn thương, dễ mắc phải (bệnh, tác động xấu)",
+        "definition": "Likely or liable to be influenced or harmed by a particular thing.",
+        "collocations": [
+          "susceptible to disease",
+          "highly susceptible",
+          "susceptible to damage",
+          "susceptible to manipulation"
+        ],
+        "example": "Adolescents without strong familial support networks are especially susceptible to predatory commercial advertising.",
+        "synonyms": [
+          "vulnerable to",
+          "prone to",
+          "predisposed to",
+          "defenseless"
+        ],
+        "antonyms": [
+          "immune to",
+          "resistant to",
+          "impervious"
+        ],
+        "academic_tip": "Luôn đi kèm giới từ 'to': 'susceptible to + [noun]'."
+      },
+      "tags": [
+        "awl",
+        "health",
+        "psychology"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-033",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "unprecedented",
+        "phonetic": "/ʌnˈpres.ɪ.den.tɪd/",
+        "part_of_speech": "adjective",
+        "context": "The global temperature anomalies recorded over the past decade are completely unprecedented in modern history."
+      },
+      "back": {
+        "vietnamese": "Chưa từng có tiền lệ, chưa từng thấy trước đây",
+        "definition": "Never done or known before.",
+        "collocations": [
+          "unprecedented scale",
+          "unprecedented growth",
+          "unprecedented challenge",
+          "on an unprecedented level"
+        ],
+        "example": "The rapid deployment of mRNA vaccines represented an unprecedented triumph of international scientific collaboration.",
+        "synonyms": [
+          "unparalleled",
+          "novel",
+          "groundbreaking",
+          "unmatched"
+        ],
+        "antonyms": [
+          "precedented",
+          "conventional",
+          "customary"
+        ],
+        "academic_tip": "Từ đắt giá để nhấn mạnh quy mô lịch sử của các sự kiện hoặc xu hướng lớn trong Task 1 và Task 2."
+      },
+      "tags": [
+        "awl",
+        "writing",
+        "emphasis"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-034",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "depict",
+        "phonetic": "/dɪˈpɪkt/",
+        "part_of_speech": "verb",
+        "context": "The accompanying bar chart depicts consumer expenditure patterns across five distinct retail categories."
+      },
+      "back": {
+        "vietnamese": "Miêu tả, khắc họa, thể hiện (trên biểu đồ hoặc nghệ thuật)",
+        "definition": "To represent by a drawing, painting, or other art form; to portray or describe in words.",
+        "collocations": [
+          "depict a trend",
+          "as depicted in the graph",
+          "depict the breakdown of"
+        ],
+        "example": "The flow diagram depicts the industrial sequence required to transform sugarcane stalks into refined ethanol.",
+        "synonyms": [
+          "illustrate",
+          "delineate",
+          "portray",
+          "represent"
+        ],
+        "antonyms": [
+          "distort",
+          "misrepresent"
+        ],
+        "academic_tip": "Dùng ở câu mở đầu Task 1: 'The line graph depicts... / The diagram depicts the stages of...'"
+      },
+      "tags": [
+        "awl",
+        "task1",
+        "paraphrasing"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-035",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "fluctuate",
+        "phonetic": "/ˈflʌk.tʃu.eɪt/",
+        "part_of_speech": "verb",
+        "context": "Crude oil market prices fluctuated wildly between $60 and $115 per barrel throughout the geopolitical crisis."
+      },
+      "back": {
+        "vietnamese": "Dao động, biến động liên tục (lên xuống thất thường)",
+        "definition": "To rise and fall irregularly in number or amount.",
+        "collocations": [
+          "fluctuate wildly",
+          "fluctuate between X and Y",
+          "fluctuate considerably",
+          "minor fluctuations"
+        ],
+        "example": "While solar generation fluctuates according to daily cloud cover, nuclear output remains steady around the clock.",
+        "synonyms": [
+          "oscillate",
+          "vary",
+          "vacillate",
+          "waver"
+        ],
+        "antonyms": [
+          "stabilize",
+          "remain constant"
+        ],
+        "academic_tip": "Cần phân biệt: 'fluctuate' (dao động lên xuống nhiều lần) vs 'change' (chỉ thay đổi một chiều)."
+      },
+      "tags": [
+        "awl",
+        "task1",
+        "trends"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-036",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "predominant",
+        "phonetic": "/prɪˈdɒm.ɪ.nənt/",
+        "part_of_speech": "adjective",
+        "context": "Hydropower remained the predominant source of electrical generation in Norway, contributing over 88% of total supply."
+      },
+      "back": {
+        "vietnamese": "Chiếm ưu thế, chủ đạo, chiếm tỷ trọng vượt trội",
+        "definition": "Present as the strongest or main element.",
+        "collocations": [
+          "predominant factor",
+          "predominant role",
+          "predominant source",
+          "predominantly rural"
+        ],
+        "example": "Coal was the predominant energy source throughout the nineteenth century industrial revolution.",
+        "synonyms": [
+          "dominant",
+          "primary",
+          "foremost",
+          "preponderant"
+        ],
+        "antonyms": [
+          "minor",
+          "subsidiary",
+          "negligible"
+        ],
+        "academic_tip": "Thay thế cho 'the biggest / most common' trong Task 1 tổng hợp biểu đồ tròn và cột."
+      },
+      "tags": [
+        "awl",
+        "task1",
+        "vocabulary"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-037",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "disproportionate",
+        "phonetic": "/ˌdɪs.prəˈpɔː.ʃən.ət/",
+        "part_of_speech": "adjective",
+        "context": "Low-income neighborhoods bear a disproportionate burden of urban vehicular particulate exposure."
+      },
+      "back": {
+        "vietnamese": "Không cân xứng, quá mức so với tỷ lệ bình thường",
+        "definition": "Too large or too small in comparison with something else.",
+        "collocations": [
+          "disproportionate share",
+          "disproportionate impact",
+          "disproportionately high",
+          "disproportionate allocation"
+        ],
+        "example": "A single wealthy demographic consumes a disproportionate share of global luxury consumer goods.",
+        "synonyms": [
+          "inequitable",
+          "unequal",
+          "inordinate",
+          "skewed"
+        ],
+        "antonyms": [
+          "proportionate",
+          "equitable",
+          "commensurate"
+        ],
+        "academic_tip": "Dùng trong các bài viết về bình đẳng thu nhập, ô nhiễm môi trường và bất công xã hội."
+      },
+      "tags": [
+        "awl",
+        "task2",
+        "inequality"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-038",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "stringent",
+        "phonetic": "/ˈstrɪn.dʒənt/",
+        "part_of_speech": "adjective",
+        "context": "Without stringent emission standards enforced by punitive fines, manufacturing plants will not invest in carbon scrubbers."
+      },
+      "back": {
+        "vietnamese": "Nghiêm ngặt, chặt chẽ (luật pháp, tiêu chuẩn kiểm định)",
+        "definition": "(Of regulations, requirements, or conditions) strict, precise, and exacting.",
+        "collocations": [
+          "stringent regulations",
+          "stringent standards",
+          "stringent measures",
+          "stringent criteria"
+        ],
+        "example": "Aviation authorities enforce stringent safety audits before granting commercial airworthiness certificates.",
+        "synonyms": [
+          "rigorous",
+          "strict",
+          "exacting",
+          "inflexible"
+        ],
+        "antonyms": [
+          "lenient",
+          "lax",
+          "permissive"
+        ],
+        "academic_tip": "Thay thế cho 'very strict rules' trong các đề xuất giải pháp pháp lý ở Task 2."
+      },
+      "tags": [
+        "awl",
+        "governance",
+        "solutions"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-039",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "commensurate",
+        "phonetic": "/kəˈmen.ʃər.ət/",
+        "part_of_speech": "adjective",
+        "context": "Graduate salaries should be commensurate with the professional qualifications and specialized skills acquired."
+      },
+      "back": {
+        "vietnamese": "Tương xứng với, phù hợp với tỷ lệ/mức độ",
+        "definition": "Corresponding in size or degree; in proportion.",
+        "collocations": [
+          "commensurate with",
+          "commensurate salary",
+          "commensurate reward",
+          "not commensurate with"
+        ],
+        "example": "The economic investment in public transit was not commensurate with the monumental scale of urban congestion.",
+        "synonyms": [
+          "proportionate",
+          "equivalent",
+          "corresponding",
+          "consistent"
+        ],
+        "antonyms": [
+          "disproportionate",
+          "incommensurate"
+        ],
+        "academic_tip": "Luôn đi kèm giới từ 'with': 'commensurate with the effort/investment'."
+      },
+      "tags": [
+        "awl",
+        "economics",
+        "writing"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-040",
+      "category": "Band 8+ Discourse Markers",
+      "front": {
+        "word": "vis-à-vis",
+        "phonetic": "/ˌviːz.ɑːˈviː/",
+        "part_of_speech": "preposition",
+        "context": "The study analyzed the performance of independent schools vis-à-vis state-funded secondary academies."
+      },
+      "back": {
+        "vietnamese": "Trong mối tương quan với, so với (in relation to / compared with)",
+        "definition": "In relation to; with regard to; as compared with.",
+        "collocations": [
+          "position vis-à-vis",
+          "performance vis-à-vis",
+          "advantages vis-à-vis competitors"
+        ],
+        "example": "Developing economies face unique challenges vis-à-vis sovereign debt restructuring during global monetary tightening.",
+        "synonyms": [
+          "in comparison with",
+          "in relation to",
+          "as opposed to"
+        ],
+        "antonyms": [],
+        "academic_tip": "Từ mượn tiếng Pháp được công nhận trong chuẩn mực tiếng Anh học thuật quốc tế."
+      },
+      "tags": [
+        "band8",
+        "discourse_markers",
+        "comparisons"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-041",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "pragmatic",
+        "phonetic": "/præɡˈmæt.ɪk/",
+        "part_of_speech": "adjective",
+        "context": "Urban policymakers must adopt a pragmatic approach balancing environmental ideals with municipal budgetary realities."
+      },
+      "back": {
+        "vietnamese": "Thực tế, thực dụng, dựa trên tính khả thi thực tế hơn lý thuyết suông",
+        "definition": "Dealing with things sensibly and realistically in a way that is based on practical rather than theoretical considerations.",
+        "collocations": [
+          "pragmatic approach",
+          "pragmatic solution",
+          "pragmatic compromise",
+          "pragmatic policy"
+        ],
+        "example": "A pragmatic transition to zero-carbon energy utilizes existing nuclear facilities while renewable grids expand.",
+        "synonyms": [
+          "practical",
+          "hard-headed",
+          "utilitarian",
+          "feasible"
+        ],
+        "antonyms": [
+          "idealistic",
+          "impractical",
+          "quixotic"
+        ],
+        "academic_tip": "Từ vựng đắc lực khi đưa ra giải pháp cân bằng, khả thi trong Task 2."
+      },
+      "tags": [
+        "awl",
+        "policy",
+        "writing"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-042",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "delineate",
+        "phonetic": "/dɪˈlɪn.i.eɪt/",
+        "part_of_speech": "verb",
+        "context": "The municipal blueprint clearly delineates the boundaries between residential neighborhoods and protected wetlands."
+      },
+      "back": {
+        "vietnamese": "Vạch rõ ranh giới, phác họa chi tiết",
+        "definition": "To describe or portray something precisely; to indicate the exact position of a border or boundary.",
+        "collocations": [
+          "delineate boundaries",
+          "clearly delineate",
+          "delineate roles",
+          "delineate the process"
+        ],
+        "example": "The contract explicitly delineates the environmental liabilities assumed by the extractive mining consortium.",
+        "synonyms": [
+          "outline",
+          "demarcate",
+          "define",
+          "specify"
+        ],
+        "antonyms": [
+          "blur",
+          "confound",
+          "obscure"
+        ],
+        "academic_tip": "Rất hữu ích khi mô tả bản đồ quy hoạch (Task 1 Map) hoặc phân định ranh giới trách nhiệm trong Task 2."
+      },
+      "tags": [
+        "awl",
+        "task1",
+        "maps"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-043",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "detrimental",
+        "phonetic": "/ˌdet.rɪˈmen.təl/",
+        "part_of_speech": "adjective",
+        "context": "Sedentary lifestyle habits exert a deeply detrimental effect on cardiovascular health and metabolic efficiency."
+      },
+      "back": {
+        "vietnamese": "Có hại, gây tổn hại (tác động tiêu cực)",
+        "definition": "Tending to cause harm or damage.",
+        "collocations": [
+          "detrimental effect",
+          "detrimental to health",
+          "detrimental impact",
+          "prove detrimental"
+        ],
+        "example": "Overreliance on fossil-fuel subsidies has proven detrimental to the long-term competitiveness of clean energy start-ups.",
+        "synonyms": [
+          "harmful",
+          "damaging",
+          "deleterious",
+          "injurious"
+        ],
+        "antonyms": [
+          "beneficial",
+          "advantageous",
+          "benign"
+        ],
+        "academic_tip": "Cấu trúc: 'have a detrimental effect ON something' (lưu ý giới từ 'on' hoặc 'to')."
+      },
+      "tags": [
+        "awl",
+        "health",
+        "collocations"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-044",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "deleterious",
+        "phonetic": "/ˌdel.ɪˈtɪə.ri.əs/",
+        "part_of_speech": "adjective",
+        "context": "Chronic exposure to lead in municipal drinking water causes irreversible, deleterious neurodevelopmental delays."
+      },
+      "back": {
+        "vietnamese": "Độc hại, gây tổn hại nặng nề ngấm ngầm (nghiêm trọng hơn harmful)",
+        "definition": "Causing harm or damage, often in a subtle or unexpected way.",
+        "collocations": [
+          "deleterious consequences",
+          "deleterious effect on",
+          "deleterious impact"
+        ],
+        "example": "Excessive agricultural runoff has had a deleterious influence on delicate coral reef biodiversity.",
+        "synonyms": [
+          "damaging",
+          "pernicious",
+          "detrimental",
+          "ruinous"
+        ],
+        "antonyms": [
+          "salutary",
+          "wholesome",
+          "beneficial"
+        ],
+        "academic_tip": "Từ đồng nghĩa nâng cao C2 của 'detrimental/harmful', đạt điểm tối đa tiêu chí từ vựng học thuật."
+      },
+      "tags": [
+        "c2",
+        "environment",
+        "health"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-045",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "proponent",
+        "phonetic": "/prəˈpəʊ.nənt/",
+        "part_of_speech": "noun",
+        "context": "Proponents of renewable energy subsidies argue that state support accelerates grid modernization and job creation."
+      },
+      "back": {
+        "vietnamese": "Người ủng hộ, phe tán thành (luận điểm, chính sách)",
+        "definition": "A person who advocates a theory, proposal, or course of action.",
+        "collocations": [
+          "proponents of",
+          "leading proponent",
+          "proponents argue that"
+        ],
+        "example": "While proponents laud artificial intelligence for boosting labor productivity, critics warn of mass white-collar displacement.",
+        "synonyms": [
+          "advocate",
+          "supporter",
+          "champion",
+          "exponent"
+        ],
+        "antonyms": [
+          "opponent",
+          "critic",
+          "detractor"
+        ],
+        "academic_tip": "Cặp từ kinh điển cho dạng bài 'Discuss both views': 'Proponents argue that... Conversely, opponents contend that...'"
+      },
+      "tags": [
+        "awl",
+        "task2",
+        "argumentation"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-046",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "detractor",
+        "phonetic": "/dɪˈtræk.tər/",
+        "part_of_speech": "noun",
+        "context": "Detractors of the high-speed rail network argue that astronomical cost overruns outweigh projected travel time savings."
+      },
+      "back": {
+        "vietnamese": "Người phản đối, phe chỉ trích, bên gièm pha",
+        "definition": "A person who disparages someone or something, or argues strongly against a proposed measure.",
+        "collocations": [
+          "detractors argue that",
+          "vocal detractors",
+          "silence detractors"
+        ],
+        "example": "Despite skepticism from detractors, the congestion charging scheme successfully reduced inner-city vehicular traffic by 30%.",
+        "synonyms": [
+          "critic",
+          "opponent",
+          "cynic",
+          "skeptic"
+        ],
+        "antonyms": [
+          "proponent",
+          "advocate",
+          "supporter"
+        ],
+        "academic_tip": "Từ đối nghĩa hoàn hảo của 'proponent'. Tránh việc lặp lại từ 'critics' quá nhiều lần trong bài luận."
+      },
+      "tags": [
+        "awl",
+        "task2",
+        "argumentation"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-047",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "ubiquity",
+        "phonetic": "/juːˈbɪk.wɪ.ti/",
+        "part_of_speech": "noun",
+        "context": "The sheer ubiquity of algorithmic surveillance in modern smart cities raises profound privacy dilemmas."
+      },
+      "back": {
+        "vietnamese": "Sự phổ biến ở khắp nơi, tính hiện diện đại trà",
+        "definition": "The fact of appearing everywhere or of being very common.",
+        "collocations": [
+          "the ubiquity of",
+          "ubiquity in modern society",
+          "sheer ubiquity"
+        ],
+        "example": "The ubiquity of automated translation tools has led some to question the long-term utility of classroom language instruction.",
+        "synonyms": [
+          "omnipresence",
+          "pervasiveness",
+          "prevalence"
+        ],
+        "antonyms": [
+          "scarcity",
+          "rarity"
+        ],
+        "academic_tip": "Dạng danh từ của tính từ 'ubiquitous'. Tạo cấu trúc danh từ hóa (nominalization) đặc trưng của văn phong học thuật."
+      },
+      "tags": [
+        "awl",
+        "technology",
+        "grammar"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-048",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "catalyze",
+        "phonetic": "/ˈkæt.əl.aɪz/",
+        "part_of_speech": "verb",
+        "context": "Targeted government research grants catalyzed rapid private investments in next-generation solid-state battery technology."
+      },
+      "back": {
+        "vietnamese": "Xúc tác, thúc đẩy nhanh chóng (sự biến chuyển, phát triển)",
+        "definition": "To cause or accelerate a reaction, process, or development.",
+        "collocations": [
+          "catalyze change",
+          "catalyze growth",
+          "catalyze innovation",
+          "act as a catalyst"
+        ],
+        "example": "The introduction of the microchip catalyzed the third industrial revolution across global telecommunications.",
+        "synonyms": [
+          "precipitate",
+          "accelerate",
+          "stimulate",
+          "spark"
+        ],
+        "antonyms": [
+          "retard",
+          "inhibit",
+          "stifle"
+        ],
+        "academic_tip": "Nghĩa bóng từ thuật ngữ hóa học. Dùng thay cho 'make something develop faster'."
+      },
+      "tags": [
+        "awl",
+        "innovation",
+        "science"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-049",
+      "category": "Band 8+ Discourse Markers",
+      "front": {
+        "word": "by the same token",
+        "phonetic": "/baɪ ðə seɪm ˈtəʊ.kən/",
+        "part_of_speech": "phrase / idiom",
+        "context": "Teachers must respect individual student learning paces; by the same token, students must uphold classroom discipline."
+      },
+      "back": {
+        "vietnamese": "Tương tự như vậy, cũng vì lẽ đó (song hành hai mặt của một vấn đề)",
+        "definition": "In the same way or for the same reason; correspondingly.",
+        "collocations": [
+          "by the same token, however",
+          "by the same token, we must"
+        ],
+        "example": "While citizens have a right to clean municipal air, by the same token they bear a duty to minimize individual private vehicle emissions.",
+        "synonyms": [
+          "similarly",
+          "likewise",
+          "in like manner",
+          "correspondingly"
+        ],
+        "antonyms": [
+          "conversely",
+          "on the contrary"
+        ],
+        "academic_tip": "Cụm liên kết liên câu tự nhiên, chứng minh mối quan hệ song hành và đối ứng giữa quyền lợi và trách nhiệm."
+      },
+      "tags": [
+        "band8",
+        "discourse_markers",
+        "cohesion"
+      ]
+    },
+    {
+      "card_id": "IELTS-FC-050",
+      "category": "Academic Word List (AWL)",
+      "front": {
+        "word": "culminate",
+        "phonetic": "/ˈkʌl.mɪ.neɪt/",
+        "part_of_speech": "verb",
+        "context": "Decades of relentless scientific inquiry culminated in the historic landing of the robotic rover on Martian terrain."
+      },
+      "back": {
+        "vietnamese": "Đạt đến đỉnh điểm, kết thúc bằng (một thành tựu hoặc kết quả lớn)",
+        "definition": "To reach a climax or point of highest development; to end with a specific final result.",
+        "collocations": [
+          "culminate in",
+          "culminate with",
+          "years of research culminated in"
+        ],
+        "example": "Escalating trade friction between the two manufacturing titans culminated in a sweeping mutual tariff embargo.",
+        "synonyms": [
+          "peak",
+          "climax",
+          "conclude in",
+          "culminate with"
+        ],
+        "antonyms": [
+          "commence",
+          "originate",
+          "start"
+        ],
+        "academic_tip": "Luôn đi kèm giới từ 'in': 'culminate IN something'. Rất hay dùng ở phần kết luận hoặc tóm tắt tiến trình."
+      },
+      "tags": [
+        "awl",
+        "history",
+        "collocations"
+      ]
     }
   ]
 }

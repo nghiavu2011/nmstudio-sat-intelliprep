@@ -538,5 +538,201 @@
     "source_basis": "original",
     "qa_status": "DRAFT",
     "is_grid_in": true
+  },
+  {
+    "question_id": "MATH-ADV-024",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": 5,
+    "passage": null,
+    "question_stem": "In the xy-plane, the parabola given by y = 2x² - 8x + k intersects the line y = 4x - 10 at exactly one point. What is the value of the constant k?",
+    "choices": {
+      "A": "4",
+      "B": "8",
+      "C": "-8",
+      "D": "-4"
+    },
+    "correct_answer": "B",
+    "explanation": "Set the two equations equal: 2x² - 8x + k = 4x - 10, which rearranges to 2x² - 12x + (k + 10) = 0. For a quadratic equation to have exactly one intersection (tangent), its discriminant Δ = b² - 4ac must equal zero. Here, a = 2, b = -12, c = k + 10. Δ = (-12)² - 4(2)(k + 10) = 144 - 8(k + 10) = 0. 144 - 8k - 80 = 0 -> 64 - 8k = 0 -> 8k = 64 -> k = 8.",
+    "why_others_wrong": {
+      "A": "If k = 4, Δ = 144 - 8(14) = 144 - 112 = 32 > 0 (two intersection points).",
+      "C": "Sign error during algebraic rearrangement.",
+      "D": "Confusing the discriminant calculation with the vertex formula."
+    },
+    "socratic_prompt": "When a line and a parabola intersect at exactly ONE point, what must be true about the discriminant of their combined quadratic equation?",
+    "common_trap": "Forgetting to bring the 4x and -10 over to the same side before finding a, b, c.",
+    "thinking_framework": "System Intersection: 1. Equate equations -> 2. Form standard quadratic Ax² + Bx + C = 0 -> 3. Set discriminant B² - 4AC = 0 -> 4. Solve for k.",
+    "error_type": "DISCRIMINANT_SOLVE_ERROR",
+    "estimated_time_seconds": 75,
+    "source_basis": "original",
+    "tags": [
+      "math",
+      "quadratics",
+      "discriminant",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "MATH-ADV-025",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": 5,
+    "passage": null,
+    "question_stem": "The polynomial function p is defined by p(x) = (x - 3)²(x + 1)(x - k), where k is a positive constant. If the graph of y = p(x) has an x-intercept at (5, 0) and a relative minimum at (3, 0), what is the value of p(4)?",
+    "choices": {
+      "A": "-5",
+      "B": "5",
+      "C": "-15",
+      "D": "15"
+    },
+    "correct_answer": "A",
+    "explanation": "Since p(x) has an x-intercept at (5, 0) and k is a positive constant other than 3 (which already appears as a double root), k must equal 5. Thus, p(x) = (x - 3)²(x + 1)(x - 5). Evaluating at x = 4: p(4) = (4 - 3)² * (4 + 1) * (4 - 5) = (1)² * (5) * (-1) = -5.",
+    "why_others_wrong": {
+      "B": "Sign error on the factor (4 - 5), forgetting it yields negative 1.",
+      "C": "Multiplying an extra factor of 3.",
+      "D": "Sign error on both factors."
+    },
+    "socratic_prompt": "If (5, 0) is an x-intercept, what is the value of k? Then substitute x = 4 carefully into each factor.",
+    "common_trap": "Squaring the negative sign or omitting the negative sign from (4 - 5).",
+    "thinking_framework": "Polynomial Factor Theorem: 1. Identify root k = 5 -> 2. Write full equation -> 3. Evaluate p(4) step by step.",
+    "error_type": "FACTOR_EVALUATION_SIGN",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "tags": [
+      "math",
+      "polynomials",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "MATH-ADV-026",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": 4,
+    "passage": null,
+    "question_stem": "A radioactive isotope decays according to the model N(t) = N₀ · (1/2)^(t / 24), where N(t) is the mass remaining in grams after t hours, and N₀ is the initial mass. If a laboratory sample contains 160 grams initially, after how many hours will exactly 5 grams remain?",
+    "choices": {
+      "A": "120",
+      "B": "96",
+      "C": "72",
+      "D": "144"
+    },
+    "correct_answer": "A",
+    "explanation": "Set N(t) = 5 and N₀ = 160: 5 = 160 · (1/2)^(t / 24). Divide both sides by 160: 5 / 160 = 1 / 32 = (1/2)^5. Therefore, (1/2)^(t / 24) = (1/2)^5. Equating the exponents: t / 24 = 5 -> t = 5 * 24 = 120 hours.",
+    "why_others_wrong": {
+      "B": "96 hours corresponds to 4 half-lives (160 -> 80 -> 40 -> 20 -> 10 grams).",
+      "C": "72 hours corresponds to 3 half-lives (20 grams remaining).",
+      "D": "144 hours corresponds to 6 half-lives (2.5 grams remaining)."
+    },
+    "socratic_prompt": "How many times must 160 be halved to reach 5? (160 -> 80 -> 40 -> 20 -> 10 -> 5). How many half-lives is that?",
+    "common_trap": "Counting 4 half-lives instead of 5.",
+    "thinking_framework": "Exponential Half-Life: 1. Ratio = 5/160 = 1/32 -> 2. 1/32 = (1/2)^5 -> 3. Number of half-lives n = 5 -> 4. Total time = 5 * 24 = 120.",
+    "error_type": "HALF_LIFE_COUNTING_ERROR",
+    "estimated_time_seconds": 55,
+    "source_basis": "original",
+    "tags": [
+      "math",
+      "exponentials",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "MATH-ADV-027",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": 5,
+    "passage": null,
+    "question_stem": "If f(x) = (2x + 5) / (x - 3) and g(x) = 3x - 1, for what positive value of x is f(g(x)) undefined?",
+    "choices": {
+      "A": "4/3",
+      "B": "3",
+      "C": "5/2",
+      "D": "1"
+    },
+    "correct_answer": "A",
+    "explanation": "The composite function f(g(x)) is undefined when the denominator of f is equal to zero. f(u) has a denominator of u - 3, so it is undefined when u = 3. Here, u = g(x) = 3x - 1. Set 3x - 1 = 3 -> 3x = 4 -> x = 4/3.",
+    "why_others_wrong": {
+      "B": "x = 3 is where f(x) is undefined, not f(g(x)).",
+      "C": "x = -5/2 is where the numerator of f equals zero.",
+      "D": "If x = 1, g(1) = 2, and f(2) = 9/(-1) = -9 (well defined)."
+    },
+    "socratic_prompt": "When is f(u) undefined? At u = 3. Now what is u? u = g(x) = 3x - 1. Set 3x - 1 = 3.",
+    "common_trap": "Setting x = 3 directly instead of setting the inner function g(x) equal to 3.",
+    "thinking_framework": "Composite Domain: 1. Outer function undefined when argument = 3 -> 2. Set inner function g(x) = 3 -> 3. Solve 3x - 1 = 3 -> x = 4/3.",
+    "error_type": "COMPOSITE_DOMAIN_INNER_OUTER_CONFUSION",
+    "estimated_time_seconds": 60,
+    "source_basis": "original",
+    "tags": [
+      "math",
+      "rational_functions",
+      "composite",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "MATH-ADV-028",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": 5,
+    "passage": null,
+    "question_stem": "For what value of c will the system of equations y = x² - 6x + c and y = -2x + 1 have no real solutions?",
+    "choices": {
+      "A": "c > 5",
+      "B": "c < 5",
+      "C": "c > -3",
+      "D": "c < -3"
+    },
+    "correct_answer": "A",
+    "explanation": "Set the equations equal: x² - 6x + c = -2x + 1 -> x² - 4x + (c - 1) = 0. For no real solutions, the discriminant must be strictly negative: b² - 4ac < 0. Here, a = 1, b = -4, c' = c - 1. Δ = (-4)² - 4(1)(c - 1) = 16 - 4(c - 1) = 16 - 4c + 4 = 20 - 4c < 0. 20 < 4c -> 4c > 20 -> c > 5.",
+    "why_others_wrong": {
+      "B": "c < 5 would make Δ > 0, yielding two real solutions.",
+      "C": "Algebraic arithmetic error on 16 - 4(c - 1).",
+      "D": "Inverting inequality sign while dividing by positive 4."
+    },
+    "socratic_prompt": "When does a quadratic equation have NO real solutions? (Discriminant < 0).",
+    "common_trap": "Making a sign error when expanding -4(c - 1) to -4c - 4 instead of -4c + 4.",
+    "thinking_framework": "No Solution Condition: 1. Equate -> 2. Form standard quadratic -> 3. Set Δ < 0 -> 4. Solve inequality.",
+    "error_type": "INEQUALITY_SIGN_ERROR",
+    "estimated_time_seconds": 65,
+    "source_basis": "original",
+    "tags": [
+      "math",
+      "quadratics",
+      "systems",
+      "hard"
+    ]
+  },
+  {
+    "question_id": "MATH-ADV-029",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": 4,
+    "passage": null,
+    "question_stem": "If (x - 2) is a factor of the polynomial P(x) = 2x³ - 5x² + kx + 6, what is the value of k?",
+    "choices": {
+      "A": "-1",
+      "B": "1",
+      "C": "5",
+      "D": "-5"
+    },
+    "correct_answer": "A",
+    "explanation": "By the Remainder Theorem, if (x - 2) is a factor of P(x), then P(2) must equal 0. P(2) = 2(2)³ - 5(2)² + k(2) + 6 = 2(8) - 5(4) + 2k + 6 = 16 - 20 + 2k + 6 = 2 + 2k = 0. 2k = -2 -> k = -1.",
+    "why_others_wrong": {
+      "B": "Sign error: 2 + 2k = 0 leads to k = -1, not +1.",
+      "C": "Plugging in x = -2 instead of x = +2.",
+      "D": "Arithmetic error during summation."
+    },
+    "socratic_prompt": "If (x - 2) is a factor, what happens when you substitute x = 2 into P(x)?",
+    "common_trap": "Substituting x = -2 instead of x = 2.",
+    "thinking_framework": "Factor Theorem: Factor (x - c) -> P(c) = 0. Here c = 2, so P(2) = 0.",
+    "error_type": "FACTOR_THEOREM_SIGN_REVERSAL",
+    "estimated_time_seconds": 50,
+    "source_basis": "original",
+    "tags": [
+      "math",
+      "polynomials",
+      "factor_theorem",
+      "hard"
+    ]
   }
 ]
