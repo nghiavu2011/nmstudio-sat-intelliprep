@@ -385,6 +385,40 @@ function renderToday() {
   });
 
   const overallAcc = totalQ > 0 ? Math.round((totalCorrect / totalQ) * 100) : 0;
+  const errorCount = (db.errors || []).length;
+  const activeDays = (db.activeDates || []).length;
+  const studyMins = Math.round((db.totalStudyTimeSec || 0) / 60);
+
+  // Update Hero elements
+  const heroFocusSkill = $('#hero-focus-skill');
+  if (heroFocusSkill) heroFocusSkill.textContent = weakSkill;
+  const heroReviewsCount = $('#hero-reviews-count');
+  if (heroReviewsCount) heroReviewsCount.textContent = `${errorCount} lỗi cần ôn tập`;
+  const heroTargetDisplay = $('#hero-target-display');
+  if (heroTargetDisplay) heroTargetDisplay.textContent = `Mục tiêu ${db.profile?.targetScore || '1500+'}`;
+
+  // Update Status Cards Row
+  const readinessRangeEl = $('#today-readiness-range');
+  const readinessConfEl = $('#today-readiness-conf');
+  if (readinessRangeEl && readinessConfEl) {
+    if (totalQ >= 15) {
+      const bands = calculateSATScoreBands(totalCorrect, totalQ);
+      readinessRangeEl.textContent = `${bands.totalBand.min}–${bands.totalBand.max}`;
+      readinessConfEl.textContent = `${bands.confidence} (Dựa trên ${totalQ} câu)`;
+    } else {
+      readinessRangeEl.textContent = 'Chưa có dữ liệu';
+      readinessConfEl.textContent = 'Hoàn thành bài chẩn đoán để đo lường';
+    }
+  }
+
+  const reviewDueValEl = $('#today-review-due-val');
+  if (reviewDueValEl) reviewDueValEl.textContent = `${errorCount} câu`;
+
+  const streakDisplayEl = $('#today-streak-display');
+  if (streakDisplayEl) streakDisplayEl.textContent = `${activeDays} / 7 ngày`;
+
+  const timeDisplayEl = $('#today-time-display');
+  if (timeDisplayEl) timeDisplayEl.textContent = `${studyMins} phút`;
 
   // Toggle Diagnostic Baseline Banner (P0.5 Fix)
   const diagBanner = $('#today-diagnostic-banner');
@@ -425,6 +459,10 @@ function renderToday() {
       trapName.textContent = 'Chưa ghi nhận bẫy sai — hãy làm bài để phân tích';
     }
   }
+
+  // Activity 1 skill description
+  const act1Desc = $('#act-1-desc');
+  if (act1Desc) act1Desc.textContent = `${weakSkill} (Trọng tâm hôm nay)`;
 }
 
 window.startTodayPlan = function() {
@@ -463,6 +501,34 @@ window.selectDomainTab = function(domainKey) {
     btn.classList.toggle('active', btn.dataset.domain === domainKey);
   });
   loadPracticeSession(domainKey);
+  const qShell = $('#question-shell-container');
+  if (qShell) {
+    qShell.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+};
+
+window.filterPracticeDomains = function(filterType) {
+  $$('.filter-chip').forEach(chip => {
+    chip.classList.toggle('active', chip.dataset.filter === filterType);
+  });
+
+  const cards = $$('.domain-card-btn');
+  cards.forEach(card => {
+    const d = card.dataset.domain || '';
+    if (filterType === 'all') {
+      card.style.display = 'flex';
+    } else if (filterType === 'rw') {
+      card.style.display = d.startsWith('rw') ? 'flex' : 'none';
+    } else if (filterType === 'math') {
+      card.style.display = d.startsWith('math') ? 'flex' : 'none';
+    } else if (filterType === 'weak') {
+      card.style.display = (d === 'rw-info' || d === 'math-adv') ? 'flex' : 'none';
+    }
+  });
+};
+
+window.quickStartFocusedSession = function() {
+  selectDomainTab('rw-info');
 };
 
 window.quickJumpTopic = function(domainKey) {
@@ -689,7 +755,34 @@ async function renderReview(deckType = null) {
   if (dueEl) dueEl.textContent = dueCount;
 
   const errEl = $('#review-mistakes-count');
-  if (errEl) errEl.textContent = (db.errors || []).length;
+  const errCount = (db.errors || []).length;
+  if (errEl) errEl.textContent = errCount;
+
+  // Populate Review Hero Stats
+  const heroDue = $('#review-hero-due-count');
+  if (heroDue) heroDue.textContent = dueCount;
+  const heroTotal = $('#review-hero-total-mistakes');
+  if (heroTotal) heroTotal.textContent = errCount;
+
+  // Error Intelligence Trap Counts
+  let trapCount = 0;
+  let trap1 = 0, trap2 = 0, trap3 = 0;
+  (db.errors || []).forEach(e => {
+    if (e.error_type) trapCount++;
+    const s = (e.skill || '').toLowerCase();
+    if (s.includes('infer') || s.includes('central') || s.includes('evidence')) trap1++;
+    if (s.includes('algebra') || s.includes('advanced') || s.includes('equation')) trap2++;
+    if (s.includes('word') || s.includes('craft') || s.includes('structure')) trap3++;
+  });
+
+  const heroTrap = $('#review-hero-trap-count');
+  if (heroTrap) heroTrap.textContent = trapCount;
+  const t1 = $('#trap-count-1');
+  if (t1) t1.textContent = `${trap1} lần`;
+  const t2 = $('#trap-count-2');
+  if (t2) t2.textContent = `${trap2} lần`;
+  const t3 = $('#trap-count-3');
+  if (t3) t3.textContent = `${trap3} lần`;
 
   // Render Mistake Ledger
   renderMistakeLedger();
@@ -928,6 +1021,37 @@ function calculateSATScoreBands(rwCorrect, rwRouting, mathCorrect, mathRouting) 
   return { rwMin, rwMax, mathMin, mathMax, totalMin, totalMax };
 }
 
+let pendingExamTestId = null;
+
+window.startPretestCheck = function(testId) {
+  pendingExamTestId = testId;
+  const modal = $('#pretest-modal');
+  if (modal) {
+    modal.style.display = 'flex';
+    const titleEl = $('#pretest-modal-title');
+    if (titleEl) {
+      if (testId === 'sat-pt1') titleEl.textContent = 'Chuẩn Bị Bài Thi Thử Số 1 (98 Câu Thích Ứng)';
+      else if (testId === 'sat-pt2') titleEl.textContent = 'Chuẩn Bị Bài Thi Thử Số 2 (98 Câu Thích Ứng)';
+      else if (testId === 'sat-diagnostic') titleEl.textContent = 'Chuẩn Bị Khảo Sát Chẩn Đoán (30 Câu)';
+      else titleEl.textContent = 'Chuẩn Bị Bắt Đầu Bài Thi';
+    }
+  }
+};
+
+window.closePretestModal = function() {
+  const modal = $('#pretest-modal');
+  if (modal) modal.style.display = 'none';
+  pendingExamTestId = null;
+};
+
+window.confirmStartExam = function() {
+  const modal = $('#pretest-modal');
+  if (modal) modal.style.display = 'none';
+  const tid = pendingExamTestId || 'sat-pt1';
+  pendingExamTestId = null;
+  startMockExam('sat', tid);
+};
+
 function renderTest() {
   const grid = $('#test-pack-grid');
   if (!grid) return;
@@ -942,90 +1066,59 @@ function renderTest() {
   grid.style.display = 'grid';
 
   grid.innerHTML = `
-    <!-- Scenario 1: Full Adaptive Mock Exam 1 -->
-    <div class="test-pack-card featured">
-      <div>
-        <span class="plan-badge mb-2">Digital SAT Full Adaptive Exam</span>
-        <h3 style="font-size:1.15rem;font-weight:800;">Digital SAT Practice Test 1</h3>
-        <p class="text-xs text-muted mt-1">Trọn vẹn 98 câu (RW 54 câu / 64 phút + Math 44 câu / 70 phút + 10 phút nghỉ). Mô phỏng cơ chế phân nhánh Module 2 (Hard vs Standard) chuẩn cấu trúc khảo thí 2 chặng.</p>
+    <!-- PRIMARY HERO SIMULATION CARD (Spec 10.2 A) -->
+    <div class="mock-hero-simulation-card card-pastel-blue mb-4" style="grid-column: 1 / -1; padding:2rem 2.25rem; border-radius:var(--radius-card-xl); border:1px solid rgba(78,102,232,0.18); box-shadow:var(--shadow-card);">
+      <div class="flex justify-between items-start flex-wrap gap-4 mb-3">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="plan-badge" style="background:#FFFFFF;color:var(--color-primary);">Chuẩn Khảo Thí Digital SAT 2026</span>
+            <span class="plan-badge" style="background:rgba(255,255,255,0.8);color:var(--color-ink);">Adaptive Two-Stage Routing</span>
+          </div>
+          <h2 class="font-display" style="font-size:1.75rem;font-weight:700;color:var(--color-ink);margin-bottom:0.4rem;">
+            Full Digital SAT Simulation (98 Câu · 134 Phút)
+          </h2>
+          <p class="text-sm text-muted" style="max-width:720px;line-height:1.6;margin:0;">
+            Mô phỏng trọn vẹn 2 Section chuẩn College Board: <strong>Reading &amp; Writing (54 câu · 64 phút)</strong> + <strong>Math (44 câu · 70 phút)</strong> kèm 10 phút nghỉ giữa giờ. Hệ thống tự động phân nhánh Module 2 thích ứng hai chặng và xuất báo cáo dải điểm năng lực có căn cứ.
+          </p>
+        </div>
       </div>
-      <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
-        <span class="text-xs font-semibold">134 phút thi · 98 câu · 4 Modules</span>
-        <button class="btn-primary-action text-xs" onclick="startMockExam('sat', 'sat-pt1')">Thi Thử Đề 1 (98 câu) →</button>
+
+      <div class="flex items-center gap-4 flex-wrap my-4 text-xs font-semibold" style="background:rgba(255,255,255,0.7);padding:0.75rem 1.25rem;border-radius:var(--radius);border:1px solid rgba(78,102,232,0.1);">
+        <span>⏱️ 2h24m thời gian liền mạch</span>
+        <span class="meta-dot">•</span>
+        <span>🔇 Không gian yên tĩnh, không ngắt quãng</span>
+        <span class="meta-dot">•</span>
+        <span>📐 Giấy nháp &amp; Máy tính Desmos tích hợp</span>
+      </div>
+
+      <div class="flex items-center gap-3 flex-wrap pt-2">
+        <button class="btn-primary-action text-sm" onclick="startPretestCheck('sat-pt1')">
+          <span>▶ Thi Thử Đề 1 (98 Câu Thích Ứng)</span>
+        </button>
+        <button class="btn-secondary-action text-sm" style="background:#FFF;" onclick="startPretestCheck('sat-pt2')">
+          <span>Thi Thử Đề 2 (98 Câu Thích Ứng)</span>
+        </button>
       </div>
     </div>
 
-    <!-- Scenario 2: Full Adaptive Mock Exam 2 -->
+    <!-- SECONDARY SECTION TESTS ROW (Spec 10.2 B) -->
     <div class="test-pack-card">
       <div>
-        <span class="plan-badge mb-2">Digital SAT Full Adaptive Exam</span>
-        <h3 style="font-size:1.15rem;font-weight:800;">Digital SAT Practice Test 2</h3>
-        <p class="text-xs text-muted mt-1">Bộ đề khảo thí thích ứng toàn diện thứ hai: 4 module riêng biệt, 98 câu hỏi phân hóa cao bám sát thang đo năng lực Digital SAT 2026.</p>
-      </div>
-      <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
-        <span class="text-xs font-semibold">134 phút thi · 98 câu · 4 Modules</span>
-        <button class="btn-primary-action text-xs" onclick="startMockExam('sat', 'sat-pt2')">Thi Thử Đề 2 (98 câu) →</button>
-      </div>
-    </div>
-
-    <!-- Scenario 3: Diagnostic Baseline Assessment -->
-    <div class="test-pack-card">
-      <div>
-        <span class="tag mb-2" style="background:#EEF2FF;color:#4338CA;">Khảo Sát Năng Lực Đầu Vào</span>
-        <h3 style="font-size:1.15rem;font-weight:800;">Diagnostic Baseline Assessment</h3>
-        <p class="text-xs text-muted mt-1">30 câu hỏi quét đa tầng 15 kỹ năng cốt lõi (Reading, Writing &amp; Math) thiết lập đường cơ sở năng lực và hiệu chỉnh lộ trình Hôm Nay.</p>
+        <span class="plan-badge mb-2" style="background:#EEF2FF;color:#4338CA;">Khảo Sát Nền Tảng</span>
+        <h3 class="font-display" style="font-size:1.2rem;font-weight:700;">Diagnostic Baseline Assessment</h3>
+        <p class="text-xs text-muted mt-1" style="line-height:1.5;">30 câu hỏi quét đa tầng 15 kỹ năng cốt lõi (Reading, Writing &amp; Math) thiết lập đường cơ sở năng lực và hiệu chỉnh lộ trình Hôm Nay.</p>
       </div>
       <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
         <span class="text-xs font-semibold">25 phút · 30 câu</span>
-        <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-diagnostic')">Làm Bài Diagnostic →</button>
+        <button class="btn-primary-action text-xs" onclick="startPretestCheck('sat-diagnostic')">Làm Diagnostic →</button>
       </div>
     </div>
 
-    <!-- Scenario 4: Trap Buster Sprint -->
     <div class="test-pack-card">
       <div>
-        <span class="tag mb-2" style="background:#FEE2E2;color:#991B1B;">Trap Buster Sprint</span>
-        <h3 style="font-size:1.15rem;font-weight:800;">Trap Buster: Khắc Chế Bẫy Tư Duy</h3>
-        <p class="text-xs text-muted mt-1">10 câu hỏi bẫy kinh điển: Over-Inference, Scope Shift, Faulty Comparison và Dấu câu Comma Splice.</p>
-      </div>
-      <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
-        <span class="text-xs font-semibold">15 phút · 10 câu</span>
-        <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-trap-buster')">Khắc Chế Bẫy →</button>
-      </div>
-    </div>
-
-    <!-- Scenario 5: Desmos Speed Mastery -->
-    <div class="test-pack-card">
-      <div>
-        <span class="tag mb-2" style="background:#ECFDF5;color:#065F46;">Desmos Speed Mastery</span>
-        <h3 style="font-size:1.15rem;font-weight:800;">Desmos Speed Hacks &amp; Fast Solver</h3>
-        <p class="text-xs text-muted mt-1">12 câu hỏi Algebra &amp; Parabolas giải siêu tốc bằng máy tính đồ thị Desmos (hệ phương trình, số nghiệm, cực trị).</p>
-      </div>
-      <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
-        <span class="text-xs font-semibold">15 phút · 12 câu</span>
-        <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-desmos-mastery')">Bấm Máy Desmos →</button>
-      </div>
-    </div>
-
-    <!-- Scenario 6: Vocabulary Direct Hits Marathon -->
-    <div class="test-pack-card">
-      <div>
-        <span class="tag mb-2" style="background:#FEF3C7;color:#92400E;">Vocab Direct Hits</span>
-        <h3 style="font-size:1.15rem;font-weight:800;">Vocabulary Direct Hits Marathon</h3>
-        <p class="text-xs text-muted mt-1">15 câu Words in Context &amp; Nghĩa phụ (Secondary Meanings) học thuật nâng cao xuất hiện dày đặc trong đề SAT.</p>
-      </div>
-      <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
-        <span class="text-xs font-semibold">15 phút · 15 câu</span>
-        <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-vocab-marathon')">Luyện Marathon →</button>
-      </div>
-    </div>
-
-    <!-- Scenario 7: Hard Module Math Sprint -->
-    <div class="test-pack-card">
-      <div>
-        <span class="tag mb-2" style="background:#EFF6FF;color:#1D4ED8;">Math Level 4-5</span>
-        <h3 style="font-size:1.15rem;font-weight:800;">Hard Module Math Sprint</h3>
-        <p class="text-xs text-muted mt-1">22 câu hỏi phân loại cao (Level 4-5) Advanced Math, Hàm số phi tuyến và Hình học - Lượng giác bứt phá 780-800.</p>
+        <span class="plan-badge mb-2" style="background:#ECFDF5;color:#065F46;">Math Section Test</span>
+        <h3 class="font-display" style="font-size:1.2rem;font-weight:700;">Hard Module Math Sprint</h3>
+        <p class="text-xs text-muted mt-1" style="line-height:1.5;">22 câu hỏi phân loại cao (Level 4-5) Advanced Math, Hàm số phi tuyến và Hình học - Lượng giác bứt phá dải điểm 780-800.</p>
       </div>
       <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
         <span class="text-xs font-semibold">35 phút · 22 câu</span>
@@ -1033,16 +1126,64 @@ function renderTest() {
       </div>
     </div>
 
-    <!-- Scenario 8: Hard Module Reading & Writing Sprint -->
     <div class="test-pack-card">
       <div>
-        <span class="tag mb-2" style="background:#EFF6FF;color:#1D4ED8;">RW Level 4-5</span>
-        <h3 style="font-size:1.15rem;font-weight:800;">Hard Module Reading &amp; Writing Sprint</h3>
-        <p class="text-xs text-muted mt-1">27 câu hỏi phân hóa đỉnh cao: Inferences phức tạp, Bằng chứng định lượng (Command of Evidence) và Cross-Text.</p>
+        <span class="plan-badge mb-2" style="background:#EFF6FF;color:#1D4ED8;">RW Section Test</span>
+        <h3 class="font-display" style="font-size:1.2rem;font-weight:700;">Hard Module RW Sprint</h3>
+        <p class="text-xs text-muted mt-1" style="line-height:1.5;">27 câu hỏi phân hóa đỉnh cao: Inferences phức tạp, Bằng chứng định lượng (Command of Evidence) và Cross-Text.</p>
       </div>
       <div class="mt-4 pt-3 border-t border-border flex justify-between items-center">
         <span class="text-xs font-semibold">32 phút · 27 câu</span>
         <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-rw-sprint')">Bứt Phá 750+ RW →</button>
+      </div>
+    </div>
+
+    <!-- SPECIALIZED SPRINTS (4 CARDS) -->
+    <div class="test-pack-card">
+      <div>
+        <span class="tag mb-2" style="background:#FEE2E2;color:#991B1B;">Trap Buster Sprint</span>
+        <h3 class="font-bold text-sm">Trap Buster: Khắc Chế Bẫy Tư Duy</h3>
+        <p class="text-xs text-muted mt-1">10 câu hỏi bẫy kinh điển: Over-Inference, Scope Shift, Faulty Comparison và Dấu câu Comma Splice.</p>
+      </div>
+      <div class="mt-3 pt-2 border-t border-border flex justify-between items-center">
+        <span class="text-xs font-semibold">15 phút · 10 câu</span>
+        <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-trap-buster')">Khắc Chế Bẫy →</button>
+      </div>
+    </div>
+
+    <div class="test-pack-card">
+      <div>
+        <span class="tag mb-2" style="background:#ECFDF5;color:#065F46;">Desmos Speed Mastery</span>
+        <h3 class="font-bold text-sm">Desmos Speed Hacks &amp; Fast Solver</h3>
+        <p class="text-xs text-muted mt-1">12 câu hỏi Algebra &amp; Parabolas giải siêu tốc bằng máy tính đồ thị Desmos (hệ phương trình, số nghiệm, cực trị).</p>
+      </div>
+      <div class="mt-3 pt-2 border-t border-border flex justify-between items-center">
+        <span class="text-xs font-semibold">15 phút · 12 câu</span>
+        <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-desmos-mastery')">Bấm Máy Desmos →</button>
+      </div>
+    </div>
+
+    <div class="test-pack-card">
+      <div>
+        <span class="tag mb-2" style="background:#FEF3C7;color:#92400E;">Vocab Direct Hits</span>
+        <h3 class="font-bold text-sm">Vocabulary Direct Hits Marathon</h3>
+        <p class="text-xs text-muted mt-1">15 câu Words in Context &amp; Nghĩa phụ (Secondary Meanings) học thuật nâng cao xuất hiện dày đặc trong đề SAT.</p>
+      </div>
+      <div class="mt-3 pt-2 border-t border-border flex justify-between items-center">
+        <span class="text-xs font-semibold">15 phút · 15 câu</span>
+        <button class="btn btn-outline text-xs" onclick="startMockExam('sat', 'sat-vocab-marathon')">Luyện Marathon →</button>
+      </div>
+    </div>
+
+    <div class="test-pack-card">
+      <div>
+        <span class="tag mb-2" style="background:#E0E7FF;color:#3730A3;">Chẩn Đoán 15 Kỹ Năng</span>
+        <h3 class="font-bold text-sm">Full Diagnostic Checkpoint</h3>
+        <p class="text-xs text-muted mt-1">Quét toàn diện 4 miền Reading &amp; Writing và 4 miền Math để thiết lập lộ trình học tập cá nhân hóa.</p>
+      </div>
+      <div class="mt-3 pt-2 border-t border-border flex justify-between items-center">
+        <span class="text-xs font-semibold">25 phút · 30 câu</span>
+        <button class="btn btn-outline text-xs" onclick="startPretestCheck('sat-diagnostic')">Chẩn Đoán Nhanh →</button>
       </div>
     </div>
   `;
@@ -1487,8 +1628,8 @@ window.finishTimedSession = function() {
       if (modal) {
         modal.style.display = 'flex';
         $('#adaptive-route-title').textContent = 'Hoàn Thành Reading & Writing Module 1';
-        $('#adaptive-route-desc').innerHTML = `Bạn đạt <strong>${stageCorrect}/${activeExam.questions.length} câu đúng (${activeExam.rwM1Accuracy}%)</strong>.<br><br>Cơ chế phân nhánh thích ứng Digital SAT:<br>${activeExam.rwRouting === 'hard' ? '🚀 Bạn đã mở khóa <strong style="color:var(--color-primary)">Module 2 Nâng Cao (Hard)</strong> để chinh phục dải điểm 650–800!' : '🎯 Hệ thống chuyển sang <strong>Module 2 Tiêu Chuẩn (Standard)</strong> để củng cố nền tảng vững chắc.'}`;
-        $('#adaptive-route-continue-btn').textContent = 'Bắt Đầu RW Module 2 (32 phút) →';
+        $('#adaptive-route-desc').innerHTML = `Module 1 đã hoàn tất.<br><br>Hệ thống khảo thí đã sẵn sàng <strong>Module 2</strong> thích ứng theo tiến trình làm bài của bạn.`;
+        $('#adaptive-route-continue-btn').textContent = 'Bắt Đầu Module 2 Tiếp Theo (32 phút) →';
       }
       return;
     }
@@ -1521,8 +1662,8 @@ window.finishTimedSession = function() {
       if (modal) {
         modal.style.display = 'flex';
         $('#adaptive-route-title').textContent = 'Hoàn Thành Math Module 1';
-        $('#adaptive-route-desc').innerHTML = `Bạn đạt <strong>${stageCorrect}/${activeExam.questions.length} câu đúng (${activeExam.mathM1Accuracy}%)</strong>.<br><br>Cơ chế phân nhánh thích ứng Digital SAT:<br>${activeExam.mathRouting === 'hard' ? '🚀 Bạn đã mở khóa <strong style="color:var(--color-primary)">Module 2 Nâng Cao (Hard)</strong> để vươn tới 750–800 Math!' : '🎯 Hệ thống chuyển sang <strong>Module 2 Tiêu Chuẩn (Standard)</strong>.'}`;
-        $('#adaptive-route-continue-btn').textContent = 'Bắt Đầu Math Module 2 (35 phút) →';
+        $('#adaptive-route-desc').innerHTML = `Module 1 đã hoàn tất.<br><br>Hệ thống khảo thí đã sẵn sàng <strong>Module 2</strong> thích ứng theo tiến trình làm bài của bạn.`;
+        $('#adaptive-route-continue-btn').textContent = 'Bắt Đầu Module 2 Tiếp Theo (35 phút) →';
       }
       return;
     }
@@ -1763,44 +1904,138 @@ window.startMockTest = function() {
 // SECTION 5: PROGRESS & PARENT COMPANION
 // ═══════════════════════════════════════════════════════════════
 function renderProgress() {
-  // Skill Mastery Bars
-  const container = $('#skill-mastery-bars-container');
-  if (container) {
-    container.innerHTML = SAT_SKILLS.map(skill => {
-      const s = db.skills[skill] || { correct: 0, total: 0 };
-      const pct = s.total > 0 ? Math.round((s.correct / s.total) * 100) : 0;
-      const colorClass = pct >= 75 ? 'bg-success' : pct >= 50 ? 'bg-warning' : 'bg-error';
-      return `
-        <div>
-          <div class="flex justify-between text-xs mb-1">
-            <strong>${escapeHTML(skill)}</strong>
-            <span>${pct}% (${s.correct}/${s.total})</span>
-          </div>
-          <div class="progress-container">
-            <div class="progress-bar ${colorClass}" style="width:${Math.max(5, pct)}%;"></div>
-          </div>
-        </div>
-      `;
-    }).join('');
-  }
+  // Aggregate canonical domains & skills
+  const rwDomainSkills = {
+    'Information and Ideas': ['Central Ideas and Details', 'Command of Evidence: Textual', 'Command of Evidence: Quantitative', 'Inferences'],
+    'Craft and Structure': ['Words in Context', 'Text Structure and Purpose', 'Cross-Text Connections'],
+    'Expression of Ideas': ['Rhetorical Synthesis', 'Transitions'],
+    'Standard English Conventions': ['Boundaries', 'Form, Structure, and Sense']
+  };
 
-  // Parent Companion stats (P0.9 Fix: Real measured study time & calendar activity)
+  const mathDomainSkills = {
+    'Algebra': ['Algebra'],
+    'Advanced Math': ['Advanced Math'],
+    'Problem-Solving and Data Analysis': ['Problem-Solving and Data Analysis'],
+    'Geometry and Trigonometry': ['Geometry and Trigonometry']
+  };
+
+  let rwTotal = 0, rwCorrect = 0;
+  let mathTotal = 0, mathCorrect = 0;
   let totalQ = 0, totalCorrect = 0, masteredCount = 0;
-  Object.values(db.skills || {}).forEach(s => {
+
+  // Track subskills
+  Object.entries(db.skills || {}).forEach(([skill, s]) => {
     totalQ += (s.total || 0);
     totalCorrect += (s.correct || 0);
     if (s.total >= 3 && (s.correct / s.total) >= 0.75) masteredCount++;
+
+    const isMath = ['Algebra', 'Advanced Math', 'Problem-Solving and Data Analysis', 'Geometry and Trigonometry'].includes(skill);
+    if (isMath) {
+      mathTotal += (s.total || 0);
+      mathCorrect += (s.correct || 0);
+    } else {
+      rwTotal += (s.total || 0);
+      rwCorrect += (s.correct || 0);
+    }
   });
 
   const totalSec = db.totalStudyTimeSec || 0;
   const hours = Math.floor(totalSec / 3600);
   const mins = Math.floor((totalSec % 3600) / 60);
-
-  $('#parent-total-hours').textContent = `${hours}h ${mins}m`;
-  $('#parent-total-questions').textContent = `${totalQ} câu`;
   const activeDays = (db.activeDates || []).length;
-  $('#parent-active-days').textContent = activeDays > 0 ? `${activeDays} ngày` : '0 ngày';
-  $('#parent-mastered-skills').textContent = `${masteredCount} / ${SAT_SKILLS.length}`;
+
+  // 1. Overall Readiness Hero Card
+  const bandEl = $('#prog-readiness-band');
+  const confEl = $('#prog-confidence-badge');
+  const noteEl = $('#prog-readiness-note');
+  const trajEl = $('#prog-trajectory-val');
+
+  if (totalQ > 0) {
+    const overallPct = Math.round((totalCorrect / totalQ) * 100);
+    const estMin = Math.round((920 + overallPct * 6) / 10) * 10;
+    const estMax = Math.min(1560, estMin + 90);
+    if (bandEl) bandEl.textContent = `${estMin} – ${estMax}`;
+    if (confEl) confEl.textContent = totalQ >= 25 ? 'Độ Tin Cậy: Cao' : 'Độ Tin Cậy: Trung Bình';
+    if (noteEl) noteEl.textContent = `Ước lượng năng lực dựa trên ${totalQ} câu hỏi thực tế đã giải (${overallPct}% chính xác).`;
+    if (trajEl) trajEl.textContent = `+${Math.min(150, Math.round(totalQ * 1.5) + 30)} điểm`;
+  } else {
+    if (bandEl) bandEl.textContent = 'Chưa Có Dữ Liệu';
+    if (confEl) confEl.textContent = 'Cần Làm Chẩn Đoán';
+    if (noteEl) noteEl.textContent = 'Hoàn thành bài khảo sát chẩn đoán hoặc bài thi thử để kích hoạt dải điểm.';
+    if (trajEl) trajEl.textContent = '--';
+  }
+
+  // 2. Section Overview Cards (RW vs Math)
+  const rwAcc = rwTotal > 0 ? Math.round((rwCorrect / rwTotal) * 100) : 0;
+  const mathAcc = mathTotal > 0 ? Math.round((mathCorrect / mathTotal) * 100) : 0;
+
+  const rwMin = rwTotal > 0 ? Math.round((460 + rwAcc * 3.3) / 10) * 10 : 480;
+  const rwMax = Math.min(790, rwMin + 60);
+  const mathMin = mathTotal > 0 ? Math.round((460 + mathAcc * 3.4) / 10) * 10 : 490;
+  const mathMax = Math.min(800, mathMin + 60);
+
+  if ($('#prog-rw-range-text')) $('#prog-rw-range-text').textContent = rwTotal > 0 ? `${rwMin} – ${rwMax}` : '480 – 540 (Ước lượng)';
+  if ($('#prog-rw-acc-pill')) $('#prog-rw-acc-pill').textContent = `Độ chính xác: ${rwAcc}% (${rwCorrect}/${rwTotal})`;
+  if ($('#prog-math-range-text')) $('#prog-math-range-text').textContent = mathTotal > 0 ? `${mathMin} – ${mathMax}` : '490 – 550 (Ước lượng)';
+  if ($('#prog-math-acc-pill')) $('#prog-math-acc-pill').textContent = `Độ chính xác: ${mathAcc}% (${mathCorrect}/${mathTotal})`;
+
+  // 3. Momentum & Parent Metrics
+  if ($('#prog-momentum-time')) $('#prog-momentum-time').textContent = `${hours}h ${mins}m`;
+  if ($('#prog-momentum-days')) $('#prog-momentum-days').textContent = `${activeDays} / 7 ngày`;
+  if ($('#prog-momentum-questions')) $('#prog-momentum-questions').textContent = `${totalQ} câu`;
+
+  if ($('#parent-total-hours')) $('#parent-total-hours').textContent = `${hours}h ${mins}m`;
+  if ($('#parent-total-questions')) $('#parent-total-questions').textContent = `${totalQ} câu`;
+  if ($('#parent-active-days')) $('#parent-active-days').textContent = activeDays > 0 ? `${activeDays} ngày` : '0 ngày';
+  if ($('#parent-mastered-skills')) $('#parent-mastered-skills').textContent = `${masteredCount} / ${SAT_SKILLS.length}`;
+
+  // 4. Canonical 8-Domain Mastery Horizontal Bars
+  const container = $('#skill-mastery-bars-container');
+  if (container) {
+    const allDomains = [
+      { name: 'Information & Ideas', section: 'RW', skills: rwDomainSkills['Information and Ideas'] },
+      { name: 'Craft & Structure', section: 'RW', skills: rwDomainSkills['Craft and Structure'] },
+      { name: 'Expression of Ideas', section: 'RW', skills: rwDomainSkills['Expression of Ideas'] },
+      { name: 'Standard English Conventions', section: 'RW', skills: rwDomainSkills['Standard English Conventions'] },
+      { name: 'Algebra', section: 'Math', skills: mathDomainSkills['Algebra'] },
+      { name: 'Advanced Math', section: 'Math', skills: mathDomainSkills['Advanced Math'] },
+      { name: 'Problem-Solving & Data Analysis', section: 'Math', skills: mathDomainSkills['Problem-Solving and Data Analysis'] },
+      { name: 'Geometry & Trigonometry', section: 'Math', skills: mathDomainSkills['Geometry and Trigonometry'] }
+    ];
+
+    container.innerHTML = allDomains.map(d => {
+      let dTotal = 0, dCorrect = 0;
+      d.skills.forEach(sk => {
+        const s = db.skills[sk];
+        if (s) {
+          dTotal += (s.total || 0);
+          dCorrect += (s.correct || 0);
+        }
+      });
+
+      const pct = dTotal > 0 ? Math.round((dCorrect / dTotal) * 100) : 0;
+      const colorClass = pct >= 75 ? 'bg-success' : pct >= 50 ? 'bg-warning' : 'bg-error';
+      const statusLabel = dTotal === 0 ? 'Chưa rèn luyện' : pct >= 75 ? 'Mastered' : pct >= 50 ? 'Proficient' : 'Developing';
+
+      return `
+        <div style="background:#FAFBFD;padding:0.85rem 1rem;border-radius:var(--radius);border:1px solid var(--color-border);">
+          <div class="flex justify-between items-center text-xs mb-1.5 flex-wrap gap-1">
+            <div class="flex items-center gap-2">
+              <span class="plan-badge text-2xs" style="background:#FFF;">${d.section}</span>
+              <strong style="font-size:0.85rem;">${escapeHTML(d.name)}</strong>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs text-muted">${dCorrect}/${dTotal} câu (${pct}%)</span>
+              <span class="plan-badge text-2xs" style="background:${pct >= 75 ? '#DEF7EC' : pct >= 50 ? '#FEF3C7' : '#FDE8E8'};color:${pct >= 75 ? '#03543F' : pct >= 50 ? '#92400E' : '#9B1C1C'};border:none;">${statusLabel}</span>
+            </div>
+          </div>
+          <div class="progress-container" style="height:7px;background:#E5E7EB;border-radius:999px;overflow:hidden;">
+            <div class="progress-bar ${colorClass}" style="width:${Math.max(4, pct)}%;height:100%;transition:width 0.3s ease;"></div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
 }
 
 // ═══════════════════════════════════════════════════════════════

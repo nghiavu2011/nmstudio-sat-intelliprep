@@ -19,10 +19,10 @@
   <meta property="og:description" content="Nền tảng luyện thi Digital SAT chuẩn học thuật Calm Academic Intelligence dành cho học sinh THPT bứt phá 1500+.">
   <meta property="og:image" content="assets/logo.png">
 
-  <!-- Typography: Be Vietnam Pro (Calm Academic Standard) -->
+  <!-- Typography: Lora (Editorial Display) + Inter (Clean UI/Test) + Be Vietnam Pro -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -72,16 +72,17 @@
 
   <div class="app-container">
     <!-- Top Header & Workspace Switcher -->
+    <!-- Top Header App Shell (Calm Academic Standard • 72px) -->
     <header class="top-header">
       <div class="top-header-inner">
         <!-- Brand identity -->
-        <div class="brand-section">
-          <img src="assets/logo.png" alt="Logo" class="brand-logo-img">
+        <a href="#today" class="brand-section" style="text-decoration:none;color:inherit;">
+          <img src="assets/logo.png" alt="SAT IntelliPrep Logo" class="brand-logo-img">
           <div class="brand-name-wrap">
-            <span class="brand-title">N&amp;Mstudio_Education</span>
-            <span class="brand-tagline">SAT IntelliPrep OS</span>
+            <span class="brand-title">SAT IntelliPrep</span>
+            <span class="brand-tagline">N&amp;Mstudio Education</span>
           </div>
-        </div>
+        </a>
 
         <!-- Digital SAT Core Indicator -->
         <div class="sat-core-pill">
@@ -89,20 +90,37 @@
           <span class="sat-pill-text">Digital SAT 2026 Core</span>
         </div>
 
-        <!-- 5-Destination Primary Navigation -->
-        <nav class="primary-nav">
-          <a href="#today" class="nav-tab active" data-nav="today"><span class="nav-icon">🧭</span> <span class="nav-text">TODAY</span></a>
-          <a href="#practice" class="nav-tab" data-nav="practice"><span class="nav-icon">🎯</span> <span class="nav-text">PRACTICE</span></a>
-          <a href="#review" class="nav-tab" data-nav="review"><span class="nav-icon">🔄</span> <span class="nav-text">REVIEW</span></a>
-          <a href="#test" class="nav-tab" data-nav="test"><span class="nav-icon">⏱️</span> <span class="nav-text">TEST</span></a>
-          <a href="#progress" class="nav-tab" data-nav="progress"><span class="nav-icon">📊</span> <span class="nav-text">PROGRESS</span></a>
+        <!-- 5-Destination Primary Navigation (Clean SVG Line Icons) -->
+        <nav class="primary-nav" aria-label="Primary Navigation">
+          <a href="#today" class="nav-tab active" data-nav="today" title="Today's Learning Plan">
+            <svg class="nav-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            <span class="nav-text">Today</span>
+          </a>
+          <a href="#practice" class="nav-tab" data-nav="practice" title="Targeted Skill Practice">
+            <svg class="nav-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="m9 9.5 2 2 4-4"/></svg>
+            <span class="nav-text">Practice</span>
+          </a>
+          <a href="#review" class="nav-tab" data-nav="review" title="Spaced Mistake Review">
+            <svg class="nav-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+            <span class="nav-text">Review</span>
+          </a>
+          <a href="#test" class="nav-tab" data-nav="test" title="Full Adaptive Simulation">
+            <svg class="nav-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+            <span class="nav-text">Mock Test</span>
+          </a>
+          <a href="#progress" class="nav-tab" data-nav="progress" title="Readiness & Analytics">
+            <svg class="nav-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            <span class="nav-text">Progress</span>
+          </a>
         </nav>
 
-        <!-- Header Actions -->
+        <!-- Header Actions & Utility Controls -->
         <div class="header-actions">
-          <button id="toggle-lang" class="btn btn-outline text-xs" style="padding:0.35rem 0.65rem;">🌐 VI / EN</button>
-          <a href="https://zalo.me/84985578385" target="_blank" rel="noopener noreferrer" class="zalo-pill-btn" title="Liên hệ Hotline Zalo">
-            <span>💬 Hotline: +98 557 8385</span>
+          <a href="#landing" class="btn btn-outline text-xs" style="padding:0.4rem 0.75rem;border-radius:var(--radius-pill);text-decoration:none;" title="Xem tổng quan hệ thống & phương pháp">💡 Phương Pháp</a>
+          <button id="toggle-lang" class="btn btn-outline text-xs" style="padding:0.4rem 0.75rem;border-radius:var(--radius-pill);" title="Chuyển đổi mức độ ngôn ngữ giải thích">🌐 VI / EN</button>
+          <a href="https://zalo.me/84985578385" target="_blank" rel="noopener noreferrer" class="zalo-pill-btn" title="Liên hệ Hotline/Zalo Cố Vấn Học Thuật">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span>Cố Vấn: 0985 578 385</span>
           </a>
         </div>
       </div>
@@ -112,19 +130,95 @@
     <main class="main-shell">
       
       <!-- ═══════════════════════════════════════════════════════════════
-           SECTION 1: TODAY (LEARNING COMMAND CENTER)
+           SECTION 1: TODAY (LEARNING COMMAND CENTER • PHASE UI-1)
            ═══════════════════════════════════════════════════════════════ -->
       <section id="today" class="section-view active">
-        <div class="today-header">
-          <h1 class="today-greeting" id="today-greeting-text">Chào bạn! Chúc bạn một ngày học tập tập trung.</h1>
-          <div class="today-subdate flex items-center justify-between flex-wrap gap-2">
-            <span class="date-display"></span>
-            <span class="plan-badge" id="current-workspace-badge">🎯 Digital SAT 2026 Core • Lộ Trình 1500+</span>
+        <!-- A. Personalized Editorial Hero -->
+        <div class="today-hero-card">
+          <div class="today-hero-content">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="plan-badge" id="current-workspace-badge">🎯 Digital SAT 2026 Core • Lộ Trình 1500+</span>
+              <span class="date-display text-xs text-muted"></span>
+            </div>
+            <h1 class="today-greeting font-display" id="today-greeting-text">Chào bạn! Chúc bạn một ngày học tập tập trung.</h1>
+            <p class="hero-focus-statement">
+              Trọng tâm giá trị cao nhất hôm nay: <span class="hero-focus-tag" id="hero-focus-skill">Inferences &amp; Evidence</span>
+            </p>
+            <div class="hero-meta-row">
+              <span class="hero-meta-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span id="hero-time-estimate">27 phút kế hoạch</span>
+              </span>
+              <span class="meta-dot">•</span>
+              <span class="hero-meta-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                <span id="hero-reviews-count">0 lỗi cần ôn tập</span>
+              </span>
+              <span class="meta-dot">•</span>
+              <span class="hero-meta-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+                <span id="hero-target-display">Mục tiêu 1500+</span>
+              </span>
+            </div>
+            <div class="hero-cta-group">
+              <button class="btn-primary-action" onclick="startTodayPlan()">
+                <span>▶ Bắt Đầu Kế Hoạch Hôm Nay</span>
+              </button>
+              <button class="btn-secondary-action" onclick="startDiagnosticExam()">
+                Làm Bài Chẩn Đoán (25m)
+              </button>
+            </div>
+          </div>
+          <div class="today-hero-visual">
+            <img src="assets/visual/hero/today-student-cutout.webp" alt="Học viên SAT IntelliPrep" class="today-student-cutout-img" width="240" height="290" loading="eager">
+          </div>
+        </div>
+
+        <!-- B. 4 Quick Status Cards Row -->
+        <div class="status-quad-row">
+          <!-- Status 1: Readiness -->
+          <div class="status-card">
+            <div class="status-card-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m12 6 3 6-6 3"/></svg>
+              <span>Ước Lượng Năng Lực</span>
+            </div>
+            <div class="status-card-val" id="today-readiness-range">Chưa có dữ liệu</div>
+            <div class="status-card-note" id="today-readiness-conf">Làm chẩn đoán để đo lường</div>
+          </div>
+
+          <!-- Status 2: Review Due -->
+          <div class="status-card">
+            <div class="status-card-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+              <span>Lỗi Cần Truy Hồi</span>
+            </div>
+            <div class="status-card-val" id="today-review-due-val">0 câu</div>
+            <div class="status-card-note" id="today-review-due-sub">Spaced Repetition</div>
+          </div>
+
+          <!-- Status 3: Weekly Consistency -->
+          <div class="status-card">
+            <div class="status-card-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+              <span>Kỷ Luật Tuần</span>
+            </div>
+            <div class="status-card-val" id="today-streak-display">1 / 7 ngày</div>
+            <div class="status-card-note">Tích lũy: <strong id="today-time-display">0 phút</strong></div>
+          </div>
+
+          <!-- Status 4: Next Mock Milestone -->
+          <div class="status-card">
+            <div class="status-card-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+              <span>Thi Thử Kế Tiếp</span>
+            </div>
+            <div class="status-card-val">Adaptive Test 1</div>
+            <div class="status-card-note">98 câu • 134 phút chuẩn Digital SAT</div>
           </div>
         </div>
 
         <!-- Diagnostic Assessment Prompt Banner (Shown if not yet completed) -->
-        <div id="today-diagnostic-banner" style="display:none;background:linear-gradient(135deg,#EFF6FF,#DBEAFE);border:1.5px solid #93C5FD;border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin-bottom:1.5rem;box-shadow:var(--shadow-sm);">
+        <div id="today-diagnostic-banner" style="display:none;background:linear-gradient(135deg,#EFF6FF,#DBEAFE);border:1.5px solid #93C5FD;border-radius:var(--radius-card);padding:1.25rem 1.5rem;margin-bottom:1.5rem;box-shadow:var(--shadow-sm);">
           <div class="flex justify-between items-center flex-wrap gap-3">
             <div>
               <span class="plan-badge" style="background:#2563EB;color:white;border:none;">Khảo Thí Đầu Vào</span>
@@ -135,12 +229,12 @@
           </div>
         </div>
 
-        <!-- Dominant Component: Today's Action Plan -->
+        <!-- C. Dominant Component: Today's Action Plan -->
         <div class="today-command-card">
           <div class="command-card-top">
             <div>
               <span class="plan-badge">Kế Hoạch Hôm Nay • 27 Phút</span>
-              <h2 class="command-title" id="today-plan-headline">Tiếp Tục Luyện Tập Kỹ Năng Trọng Tâm</h2>
+              <h2 class="command-title font-display" id="today-plan-headline">Tiếp Tục Luyện Tập Kỹ Năng Trọng Tâm</h2>
               <p class="command-meta" id="today-plan-subtext">Hệ thống đã chuẩn bị 3 hoạt động tối ưu dựa trên phân tích lỗi sai gần nhất.</p>
             </div>
             <button class="btn-primary-action" onclick="startTodayPlan()">
@@ -152,7 +246,7 @@
           <div class="plan-activities-list">
             <div class="plan-activity-item">
               <div class="activity-name-wrap">
-                <span class="activity-index">1</span>
+                <span class="activity-index">01</span>
                 <div>
                   <strong id="act-1-title">Luyện 10 Câu Kỹ Năng Trọng Tâm</strong>
                   <div class="text-xs text-muted" id="act-1-desc">Information &amp; Ideas (Reading &amp; Writing)</div>
@@ -163,7 +257,7 @@
 
             <div class="plan-activity-item">
               <div class="activity-name-wrap">
-                <span class="activity-index">2</span>
+                <span class="activity-index">02</span>
                 <div>
                   <strong id="act-2-title">Chẩn Đoán Lỗi Sai (Spaced Error Review)</strong>
                   <div class="text-xs text-muted" id="act-2-desc">Bóc tách 3 bẫy suy luận đã mắc phải trong tuần</div>
@@ -174,7 +268,7 @@
 
             <div class="plan-activity-item">
               <div class="activity-name-wrap">
-                <span class="activity-index">3</span>
+                <span class="activity-index">03</span>
                 <div>
                   <strong id="act-3-title">Truy Hồi Từ Vựng Học Thuật (FSRS Flashcards)</strong>
                   <div class="text-xs text-muted" id="act-3-desc">5 thẻ từ vựng đến hạn ôn tập dài hạn</div>
@@ -190,13 +284,14 @@
           </div>
         </div>
 
-        <!-- 3-Column Insights Subgrid -->
+        <!-- D. 3-Column Recommended Insights Subgrid -->
         <div class="today-subgrid">
           <!-- Card 1: Focus Skill -->
           <div class="insight-card">
             <div>
               <div class="insight-header">
-                <span>🎯</span> Kỹ Năng Trọng Tâm
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/></svg>
+                <span>Kỹ Năng Trọng Tâm</span>
               </div>
               <div class="insight-body">
                 <h4 id="focus-skill-name">Inferences &amp; Evidence</h4>
@@ -211,8 +306,9 @@
           <!-- Card 2: Concept Attention -->
           <div class="insight-card">
             <div>
-              <div class="insight-header">
-                <span>⚠️</span> Cảnh Báo Bẫy Logic
+              <div class="insight-header" style="color:var(--color-warning);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+                <span>Cảnh Báo Bẫy Logic</span>
               </div>
               <div class="insight-body">
                 <h4 id="trap-alert-name">Over-Inference Trap</h4>
@@ -227,12 +323,13 @@
           <!-- Card 3: Consistency & Growth -->
           <div class="insight-card">
             <div>
-              <div class="insight-header">
-                <span>📈</span> Tiến Trình Thực Chất
+              <div class="insight-header" style="color:var(--color-success);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                <span>Tiến Trình Thực Chất</span>
               </div>
               <div class="insight-body">
-                <h4>Bạn Hôm Nay vs 30 Ngày Trước</h4>
-                <p id="trajectory-stat">Độ chính xác tăng từ <strong>62% → 78%</strong> với 120+ câu đã giải quyết.</p>
+                <h4>Độ Chính Xác Đo Lường</h4>
+                <p id="trajectory-stat">Độ chính xác trung bình đo lường qua số câu đã giải quyết.</p>
               </div>
             </div>
             <div class="insight-footer">
@@ -240,30 +337,235 @@
             </div>
           </div>
         </div>
+
+        <!-- E. Strategy Tip Editorial Banner (Spec 7.2 G) -->
+        <div class="strategy-tip-banner">
+          <div class="strategy-tip-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+          </div>
+          <div class="strategy-tip-body">
+            <span class="strategy-tip-tag">SAT Strategy — Inference &amp; Evidence</span>
+            <h4 class="strategy-tip-title">Không suy diễn quá phạm vi chứng cứ trong bài</h4>
+            <p class="strategy-tip-desc">Đáp án đúng của câu hỏi suy luận (Inference) bắt buộc phải có câu chữ chứng minh trong bài đọc. Tránh chọn phương án có vẻ hợp lý ngoài đời thực nhưng không được tác giả nhắc tới.</p>
+          </div>
+          <a href="#practice" class="btn btn-outline text-xs" style="white-space:nowrap;">Luyện Bài Tập Minh Họa →</a>
+        </div>
+
+        <!-- F. The 5-Step Learning Loop Architecture (Spec 7.2 & 12.3) -->
+        <div class="card p-6 mb-6" style="border-radius:var(--radius-card-lg);border:1px solid var(--color-border);background:var(--color-surface);box-shadow:var(--shadow-card);">
+          <div class="flex justify-between items-center mb-4 flex-wrap gap-2">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="plan-badge">The Learning Loop</span>
+                <span class="text-xs text-muted">Chu Trình Khép Kín 5 Bước</span>
+              </div>
+              <h3 class="font-display" style="font-size:1.2rem;font-weight:700;">Học Tập Dựa Trên Khoa Học Nhận Thức</h3>
+            </div>
+            <a href="#landing" class="btn btn-outline text-xs" style="text-decoration:none;">Tìm Hiểu Chi Tiết →</a>
+          </div>
+          <div class="learning-loop-grid">
+            <div class="loop-step-card card-pastel-blue">
+              <div class="loop-step-num">01</div>
+              <h4 class="font-bold text-xs mb-1">Chẩn Đoán (Diagnose)</h4>
+              <p class="text-2xs text-muted">Đo lường baseline 15 kỹ năng qua 30 câu quét đa tầng.</p>
+            </div>
+            <div class="loop-step-card card-pastel-green">
+              <div class="loop-step-num">02</div>
+              <h4 class="font-bold text-xs mb-1">Luyện Tập (Practice)</h4>
+              <p class="text-2xs text-muted">Rèn luyện sâu miền kiến thức trọng tâm với độ tập trung cao.</p>
+            </div>
+            <div class="loop-step-card card-pastel-coral">
+              <div class="loop-step-num">03</div>
+              <h4 class="font-bold text-xs mb-1">Khắc Chế Lỗi (Review)</h4>
+              <p class="text-2xs text-muted">Chẩn đoán 17 bẫy nhận thức &amp; truy hồi thẻ nhớ ngắt quãng.</p>
+            </div>
+            <div class="loop-step-card card-pastel-yellow">
+              <div class="loop-step-num">04</div>
+              <h4 class="font-bold text-xs mb-1">Thi Thử (Test)</h4>
+              <p class="text-2xs text-muted">Mô phỏng 98 câu, 134 phút thi + 10 phút nghỉ, thích ứng 2 chặng.</p>
+            </div>
+            <div class="loop-step-card card-pastel-lilac">
+              <div class="loop-step-num">05</div>
+              <h4 class="font-bold text-xs mb-1">Bứt Phá (Improve)</h4>
+              <p class="text-2xs text-muted">Theo dõi quỹ đạo tăng điểm thực chất, tối ưu lộ trình kế tiếp.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- ═══════════════════════════════════════════════════════════════
-           SECTION 2: PRACTICE (DELIBERATE LEARNING SESSION)
+           SECTION 2: PRACTICE (DELIBERATE LEARNING SESSION • PHASE UI-2)
            ═══════════════════════════════════════════════════════════════ -->
       <section id="practice" class="section-view">
-        <div class="practice-header-bar">
+        <!-- 1. Practice Page Header -->
+        <div class="practice-page-hero">
           <div>
-            <h2 style="font-size:1.35rem;font-weight:800;margin-bottom:0.2rem;">Luyện Tập Có Chủ Đích (Deliberate Practice)</h2>
-            <p class="text-muted text-sm">Chọn phân môn hoặc bắt đầu rèn luyện theo đúng định dạng bài thi.</p>
+            <span class="plan-badge mb-2">Deliberate Practice Engine</span>
+            <h1 class="practice-page-title font-display">Luyện Tập Có Chủ Đích</h1>
+            <p class="practice-page-sub">Xây dựng đúng kỹ năng trọng tâm bạn cần bứt phá tiếp theo theo chuẩn khảo thí Digital SAT 2026.</p>
           </div>
-          <div class="domain-tabs" id="practice-domain-tabs">
-            <button class="domain-tab-btn active" data-domain="rw-info" onclick="selectDomainTab('rw-info')">Information &amp; Ideas</button>
-            <button class="domain-tab-btn" data-domain="rw-craft" onclick="selectDomainTab('rw-craft')">Craft &amp; Structure</button>
-            <button class="domain-tab-btn" data-domain="rw-expr" onclick="selectDomainTab('rw-expr')">Expression</button>
-            <button class="domain-tab-btn" data-domain="rw-conv" onclick="selectDomainTab('rw-conv')">Conventions</button>
-            <button class="domain-tab-btn" data-domain="math-alg" onclick="selectDomainTab('math-alg')">Algebra</button>
-            <button class="domain-tab-btn" data-domain="math-adv" onclick="selectDomainTab('math-adv')">Advanced Math</button>
-            <button class="domain-tab-btn" data-domain="math-psda" onclick="selectDomainTab('math-psda')">Problem Solving</button>
-            <button class="domain-tab-btn" data-domain="math-geo" onclick="selectDomainTab('math-geo')">Geometry &amp; Trig</button>
+          <button class="btn-primary-action" onclick="quickStartFocusedSession()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Phiên Tập Trung (20 Phút)</span>
+          </button>
+        </div>
+
+        <!-- 2. Primary Filter Chips (Horizontal Scroll) -->
+        <div class="practice-filter-bar">
+          <div class="filter-chips-wrapper">
+            <button class="filter-chip active" data-filter="all" onclick="filterPracticeDomains('all')">Tất Cả Phân Môn</button>
+            <button class="filter-chip" data-filter="rw" onclick="filterPracticeDomains('rw')">Reading &amp; Writing</button>
+            <button class="filter-chip" data-filter="math" onclick="filterPracticeDomains('math')">Math</button>
+            <button class="filter-chip" data-filter="weak" onclick="filterPracticeDomains('weak')">Kỹ Năng Cần Củng Cố</button>
+            <button class="filter-chip" data-filter="due" onclick="location.hash='#review'">Ôn Tập Lỗi Sai</button>
+            <button class="filter-chip" data-filter="timed" onclick="location.hash='#test'">Luyện Thi Tính Giờ</button>
           </div>
         </div>
 
-        <!-- Question Shell (High Focus) -->
+        <!-- 3. Recommended Practice Row (Spec 8.2 C) -->
+        <div class="recommended-practice-row">
+          <div class="practice-card-recommended card-pastel-blue" onclick="selectDomainTab('rw-info')">
+            <div class="flex justify-between items-start">
+              <span class="plan-badge" style="background:#FFFFFF;color:var(--color-primary);">Trọng Tâm Hôm Nay</span>
+              <span class="text-xs font-semibold text-muted">15 phút • 10 câu</span>
+            </div>
+            <h3 class="font-display text-lg font-bold mt-2 mb-1">Information &amp; Ideas — Inferences &amp; Evidence</h3>
+            <p class="text-xs text-muted mb-3">Độ chính xác hiện tại cần củng cố — luyện tập để làm chủ bẫy suy luận và chứng cứ văn bản.</p>
+            <div class="flex justify-between items-center mt-auto">
+              <span class="difficulty-tag">Level 3 • Medium-Hard</span>
+              <button class="btn-primary-action text-xs" style="padding:0.4rem 0.9rem;">Luyện Ngay →</button>
+            </div>
+          </div>
+
+          <div class="practice-card-alternate card-pastel-sage" onclick="selectDomainTab('math-alg')">
+            <span class="text-2xs font-bold uppercase tracking-wider text-muted">Đại Số Tuyến Tính</span>
+            <h4 class="font-bold text-sm mt-1 mb-1">Algebra · Systems of Linear Equations</h4>
+            <p class="text-2xs text-muted mb-2">12 phút • 8 câu • Độ khó Level 3</p>
+            <span class="text-xs font-semibold" style="color:var(--pastel-sage-dark);">Bắt đầu luyện →</span>
+          </div>
+
+          <div class="practice-card-alternate card-pastel-yellow" onclick="selectDomainTab('rw-expr')">
+            <span class="text-2xs font-bold uppercase tracking-wider text-muted">Diễn Đạt Ý Tưởng</span>
+            <h4 class="font-bold text-sm mt-1 mb-1">Expression of Ideas · Rhetorical Transitions</h4>
+            <p class="text-2xs text-muted mb-2">10 phút • 8 câu • Độ khó Level 3</p>
+            <span class="text-xs font-semibold" style="color:var(--pastel-yellow-dark);">Bắt đầu luyện →</span>
+          </div>
+        </div>
+
+        <!-- 4. Domain Taxonomy Grid (8 Canonical SAT Domains) -->
+        <div class="domains-overview-section mb-6">
+          <div class="flex justify-between items-center mb-3">
+            <h3 class="font-display text-base font-bold">8 Phân Môn Chuẩn Khảo Thí Digital SAT</h3>
+            <span class="text-xs text-muted">Chọn phân môn để làm bài ngay bên dưới</span>
+          </div>
+          <div class="domain-cards-grid" id="practice-domain-tabs">
+            <!-- RW 1 -->
+            <button class="domain-card-btn domain-tab-btn active card-pastel-blue" data-domain="rw-info" onclick="selectDomainTab('rw-info')">
+              <div class="domain-card-top">
+                <span class="domain-card-icon">📖</span>
+                <span class="domain-section-tag">Reading &amp; Writing</span>
+              </div>
+              <h4 class="domain-card-title">Information &amp; Ideas</h4>
+              <p class="domain-card-meta">Central Ideas, Evidence, Inferences</p>
+              <div class="domain-card-footer">
+                <span class="domain-action-link">Luyện tập →</span>
+              </div>
+            </button>
+
+            <!-- RW 2 -->
+            <button class="domain-card-btn domain-tab-btn card-pastel-lilac" data-domain="rw-craft" onclick="selectDomainTab('rw-craft')">
+              <div class="domain-card-top">
+                <span class="domain-card-icon">🏛️</span>
+                <span class="domain-section-tag">Reading &amp; Writing</span>
+              </div>
+              <h4 class="domain-card-title">Craft &amp; Structure</h4>
+              <p class="domain-card-meta">Words in Context, Text Structure, Cross-Text</p>
+              <div class="domain-card-footer">
+                <span class="domain-action-link">Luyện tập →</span>
+              </div>
+            </button>
+
+            <!-- RW 3 -->
+            <button class="domain-card-btn domain-tab-btn card-pastel-yellow" data-domain="rw-expr" onclick="selectDomainTab('rw-expr')">
+              <div class="domain-card-top">
+                <span class="domain-card-icon">✍️</span>
+                <span class="domain-section-tag">Reading &amp; Writing</span>
+              </div>
+              <h4 class="domain-card-title">Expression of Ideas</h4>
+              <p class="domain-card-meta">Transitions, Rhetorical Synthesis</p>
+              <div class="domain-card-footer">
+                <span class="domain-action-link">Luyện tập →</span>
+              </div>
+            </button>
+
+            <!-- RW 4 -->
+            <button class="domain-card-btn domain-tab-btn card-pastel-green" data-domain="rw-conv" onclick="selectDomainTab('rw-conv')">
+              <div class="domain-card-top">
+                <span class="domain-card-icon">⚖️</span>
+                <span class="domain-section-tag">Reading &amp; Writing</span>
+              </div>
+              <h4 class="domain-card-title">Standard English Conventions</h4>
+              <p class="domain-card-meta">Boundaries, Form, Structure, Sense</p>
+              <div class="domain-card-footer">
+                <span class="domain-action-link">Luyện tập →</span>
+              </div>
+            </button>
+
+            <!-- Math 1 -->
+            <button class="domain-card-btn domain-tab-btn card-pastel-sage" data-domain="math-alg" onclick="selectDomainTab('math-alg')">
+              <div class="domain-card-top">
+                <span class="domain-card-icon">📐</span>
+                <span class="domain-section-tag">Math</span>
+              </div>
+              <h4 class="domain-card-title">Algebra</h4>
+              <p class="domain-card-meta">Linear Equations, Systems, Inequalities</p>
+              <div class="domain-card-footer">
+                <span class="domain-action-link">Luyện tập →</span>
+              </div>
+            </button>
+
+            <!-- Math 2 -->
+            <button class="domain-card-btn domain-tab-btn card-pastel-lilac" data-domain="math-adv" onclick="selectDomainTab('math-adv')">
+              <div class="domain-card-top">
+                <span class="domain-card-icon">∑</span>
+                <span class="domain-section-tag">Math</span>
+              </div>
+              <h4 class="domain-card-title">Advanced Math</h4>
+              <p class="domain-card-meta">Quadratics, Polynomials, Non-linear Functions</p>
+              <div class="domain-card-footer">
+                <span class="domain-action-link">Luyện tập →</span>
+              </div>
+            </button>
+
+            <!-- Math 3 -->
+            <button class="domain-card-btn domain-tab-btn card-pastel-yellow" data-domain="math-psda" onclick="selectDomainTab('math-psda')">
+              <div class="domain-card-top">
+                <span class="domain-card-icon">📊</span>
+                <span class="domain-section-tag">Math</span>
+              </div>
+              <h4 class="domain-card-title">Problem-Solving &amp; Data Analysis</h4>
+              <p class="domain-card-meta">Ratios, Percentages, Statistics, Probability</p>
+              <div class="domain-card-footer">
+                <span class="domain-action-link">Luyện tập →</span>
+              </div>
+            </button>
+
+            <!-- Math 4 -->
+            <button class="domain-card-btn domain-tab-btn card-pastel-blue" data-domain="math-geo" onclick="selectDomainTab('math-geo')">
+              <div class="domain-card-top">
+                <span class="domain-card-icon">🔷</span>
+                <span class="domain-section-tag">Math</span>
+              </div>
+              <h4 class="domain-card-title">Geometry &amp; Trigonometry</h4>
+              <p class="domain-card-meta">Area, Volume, Circles, Trigonometry Ratios</p>
+              <div class="domain-card-footer">
+                <span class="domain-action-link">Luyện tập →</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- 5. Question Shell (High Focus) -->
         <div class="question-shell" id="question-shell-container">
           <div class="question-meta-bar">
             <span class="skill-pill" id="q-skill-display">Central Ideas &amp; Details</span>
@@ -342,46 +644,106 @@
       </section>
 
       <!-- ═══════════════════════════════════════════════════════════════
-           SECTION 3: REVIEW (SPACED RETRIEVAL & ERROR ANALYSIS)
+           SECTION 3: REVIEW (SPACED RETRIEVAL & ERROR ANALYSIS • PHASE UI-3)
            ═══════════════════════════════════════════════════════════════ -->
       <section id="review" class="section-view">
-        <div class="today-header">
-          <h1 class="today-greeting">Sổ Tay Ôn Tập &amp; Truy Hồi (Review &amp; Retrieval)</h1>
-          <p class="today-subdate">Hệ thống áp dụng thuật toán lặp lại ngắt quãng (Spaced Repetition System - SRS) giúp ghi nhớ dài hạn và khắc phục bẫy logic.</p>
+        <!-- 1. Review Hero Status -->
+        <div class="review-hero-card card-pastel-coral">
+          <div class="review-hero-content">
+            <span class="plan-badge" style="background:#FFFFFF;color:var(--pastel-coral-dark);">Spaced Retrieval &amp; Error Intelligence</span>
+            <h1 class="review-page-title font-display">Ôn Tập Điều Quan Trọng Nhất</h1>
+            <p class="review-page-sub">Biến mọi sai sót và bẫy tư duy thành bước đệm nâng điểm thực chất bằng thuật toán lặp lại ngắt quãng.</p>
+            <div class="review-hero-meta">
+              <span class="hero-meta-item"><strong id="review-hero-due-count">0</strong> thẻ đến hạn</span>
+              <span class="meta-dot">•</span>
+              <span class="hero-meta-item"><strong id="review-hero-trap-count">0</strong> bẫy tư duy ghi nhận</span>
+              <span class="meta-dot">•</span>
+              <span class="hero-meta-item"><strong id="review-hero-total-mistakes">0</strong> câu trong sổ tay lỗi</span>
+            </div>
+            <div class="hero-cta-group">
+              <button class="btn-primary-action" onclick="startFlashcardReview()">
+                <span>▶ Bắt Đầu Ôn Tập Thẻ Đến Hạn</span>
+              </button>
+              <button class="btn-secondary-action" onclick="startSpacedReviewSession()">
+                Luyện Lại Câu Đã Sai
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div class="review-dashboard-grid">
+        <!-- 2. Error Intelligence Summary (Spec 9.3) -->
+        <div class="error-intelligence-block mb-6">
+          <div class="flex justify-between items-center mb-3">
+            <h3 class="font-display text-base font-bold">Top Bẫy Nhận Thức Lặp Lại Cần Lưu Ý</h3>
+            <span class="text-xs text-muted">Tự động phát hiện qua các bài làm</span>
+          </div>
+          <div class="traps-summary-grid" id="top-traps-summary-grid">
+            <div class="trap-card">
+              <div class="flex justify-between items-center mb-1">
+                <span class="trap-type-pill">Inferences</span>
+                <span class="trap-count-pill" id="trap-count-1">0 lần</span>
+              </div>
+              <h4 class="font-bold text-sm">Over-Inference / Beyond Scope</h4>
+              <p class="text-xs text-muted">Suy diễn vượt quá phạm vi chứng cứ mà bài đọc cung cấp.</p>
+            </div>
+            <div class="trap-card">
+              <div class="flex justify-between items-center mb-1">
+                <span class="trap-type-pill">Algebra</span>
+                <span class="trap-count-pill" id="trap-count-2">0 lần</span>
+              </div>
+              <h4 class="font-bold text-sm">Sign Inversion (+/-) Error</h4>
+              <p class="text-xs text-muted">Nhầm dấu khi chuyển vế phương trình hoặc khai căn bậc hai.</p>
+            </div>
+            <div class="trap-card">
+              <div class="flex justify-between items-center mb-1">
+                <span class="trap-type-pill">Craft &amp; Structure</span>
+                <span class="trap-count-pill" id="trap-count-3">0 lần</span>
+              </div>
+              <h4 class="font-bold text-sm">Secondary Meaning Trap</h4>
+              <p class="text-xs text-muted">Chọn nghĩa thông dụng phổ biến thay vì nghĩa học thuật theo văn cảnh.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Review Dashboard Grid (2 Large Cards) -->
+        <div class="review-dashboard-grid mb-6">
           <!-- Due Today Flashcards Card -->
-          <div class="review-summary-card">
-            <span class="plan-badge">Spaced Repetition System (SRS)</span>
-            <div class="review-stat-number" id="review-fc-due-count">0</div>
-            <h3 style="font-size:1.15rem;font-weight:700;">Thẻ Ghi Nhớ Đến Hạn Ôn Tập</h3>
-            <p class="text-sm text-muted mb-2">Ôn tập từ vựng Direct Hits, quy tắc ngữ pháp và công thức toán học trước khi đường cong quên lãng giảm sút.</p>
+          <div class="review-summary-card card-pastel-blue">
+            <div class="flex justify-between items-start mb-2">
+              <span class="plan-badge" style="background:#FFFFFF;color:var(--color-primary);">Spaced Repetition System (SRS)</span>
+              <div class="review-stat-number" id="review-fc-due-count">0</div>
+            </div>
+            <h3 style="font-size:1.15rem;font-weight:700;" class="font-display">Thẻ Ghi Nhớ Đến Hạn Ôn Tập</h3>
+            <p class="text-xs text-muted mb-3">Truy hồi từ vựng Direct Hits, quy tắc ngữ pháp và công thức toán trước khi đường cong quên lãng giảm sút.</p>
             
             <!-- Quick Deck Switchers -->
-            <div class="flex gap-1 flex-wrap mb-3">
-              <button class="btn btn-outline text-2xs" onclick="startFlashcardReview('vocabulary_direct_hits')">📖 Vocab Direct Hits</button>
-              <button class="btn btn-outline text-2xs" onclick="startFlashcardReview('math')">📐 Math Formulas</button>
-              <button class="btn btn-outline text-2xs" onclick="startFlashcardReview('grammar')">✍️ Conventions</button>
-              <button class="btn btn-outline text-2xs" onclick="startFlashcardReview('mistakes')">🧠 Lỗi Sai Của Tôi</button>
+            <div class="flex gap-1 flex-wrap mb-4">
+              <button class="btn btn-outline text-2xs" style="background:#FFF;" onclick="startFlashcardReview('vocabulary_direct_hits')">📖 Vocab Direct Hits</button>
+              <button class="btn btn-outline text-2xs" style="background:#FFF;" onclick="startFlashcardReview('math')">📐 Math Formulas</button>
+              <button class="btn btn-outline text-2xs" style="background:#FFF;" onclick="startFlashcardReview('grammar')">✍️ Conventions</button>
+              <button class="btn btn-outline text-2xs" style="background:#FFF;" onclick="startFlashcardReview('mistakes')">🧠 Lỗi Sai Của Tôi</button>
             </div>
 
-            <button class="btn-primary-action text-sm" onclick="startFlashcardReview()">Bắt Đầu Lật Thẻ SRS →</button>
+            <button class="btn-primary-action text-sm w-full" style="width:100%;" onclick="startFlashcardReview()">Bắt Đầu Lật Thẻ SRS →</button>
           </div>
 
           <!-- Mistake Ledger Card -->
-          <div class="review-summary-card">
-            <span class="plan-badge" style="background:#FEE2E2;color:#991B1B;">Metacognitive Error Log</span>
-            <div class="review-stat-number" id="review-mistakes-count">0</div>
-            <h3 style="font-size:1.15rem;font-weight:700;">Lỗi Sai Cần Chẩn Đoán Lại</h3>
-            <p class="text-sm text-muted mb-4">Các câu hỏi đã từng làm sai, được tự động phân loại theo bẫy tư duy để luyện lại.</p>
-            <button class="btn btn-outline text-sm" onclick="startSpacedReviewSession()">Luyện Lại Câu Đã Sai →</button>
+          <div class="review-summary-card card-pastel-coral">
+            <div class="flex justify-between items-start mb-2">
+              <span class="plan-badge" style="background:#FFFFFF;color:var(--pastel-coral-dark);">Metacognitive Error Log</span>
+              <div class="review-stat-number" id="review-mistakes-count">0</div>
+            </div>
+            <h3 style="font-size:1.15rem;font-weight:700;" class="font-display">Lỗi Sai Cần Chẩn Đoán Lại</h3>
+            <p class="text-xs text-muted mb-4">Các câu hỏi đã từng làm sai, được tự động phân loại theo bẫy tư duy để làm lại và chuyển hóa thành phản xạ đúng.</p>
+            <div class="mt-auto">
+              <button class="btn-secondary-action text-sm w-full" style="width:100%;background:#FFF;" onclick="startSpacedReviewSession()">Luyện Lại Câu Đã Sai →</button>
+            </div>
           </div>
         </div>
 
-        <!-- Flashcard Interactive Stage (Hidden until activated) -->
+        <!-- 4. Flashcard Interactive Stage (Hidden until activated) -->
         <div id="flashcard-interactive-wrapper" style="display:none;margin-bottom:2.5rem;">
-          <div class="card p-6" style="background:#FAFBFD;">
+          <div class="card p-6" style="background:#FAFBFD;border-radius:var(--radius-card-lg);border:1px solid var(--color-border);box-shadow:var(--shadow-card);">
             <div class="flex justify-between items-center mb-4">
               <span class="tag" id="fc-deck-name">Deck: Direct Hits Vocabulary</span>
               <span class="text-xs text-muted" id="fc-progress-count">Thẻ 1 / 10</span>
@@ -410,10 +772,13 @@
           </div>
         </div>
 
-        <!-- Mistake Ledger List -->
-        <div class="card">
+        <!-- 5. Mistake Ledger List -->
+        <div class="card" style="border-radius:var(--radius-card-lg);border:1px solid var(--color-border);box-shadow:var(--shadow-card);padding:1.75rem;">
           <div class="flex justify-between items-center flex-wrap gap-2 mb-4">
-            <h3 style="font-size:1.15rem;font-weight:700;">Danh Sách Lỗi Sai &amp; Bẫy Logic Gần Đây</h3>
+            <div>
+              <h3 style="font-size:1.15rem;font-weight:700;" class="font-display">Danh Sách Lỗi Sai &amp; Bẫy Logic Gần Đây</h3>
+              <p class="text-xs text-muted">Bóc tách phương án bạn đã chọn so với logic chuẩn khảo thí.</p>
+            </div>
             <div class="flex gap-2 flex-wrap">
               <button class="btn btn-outline text-xs" onclick="exportPDFReport('workbook')">📑 Sổ Tay Lỗi Sai (PDF/A4)</button>
               <button class="btn btn-outline text-xs" onclick="openAnkiModal()">🗂️ Xuất Anki TSV</button>
@@ -427,12 +792,55 @@
       </section>
 
       <!-- ═══════════════════════════════════════════════════════════════
-           SECTION 4: TEST & MOCK EXAMS
+           SECTION 4: TEST & MOCK EXAMS (PHASE UI-4 REDESIGN)
            ═══════════════════════════════════════════════════════════════ -->
       <section id="test" class="section-view">
-        <div class="today-header">
-          <h1 class="today-greeting">Thi Thử Chuẩn Khảo Thí (Test &amp; Mock Exams)</h1>
-          <p class="today-subdate">Mô phỏng chân thực áp lực phòng thi Digital SAT 2026 Adaptive (2 Mô-đun) và các kịch bản luyện tốc độ chuyên sâu.</p>
+        <!-- Mock Test Page Header -->
+        <div class="today-header mb-6">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="plan-badge">Digital SAT Full Simulation</span>
+            <span class="text-xs text-muted">98 Câu Hỏi • 134 Phút Thi • 2 Modules Thích Ứng</span>
+          </div>
+          <h1 class="today-greeting font-display" style="font-size:1.85rem;font-weight:700;">Thi Thử Chuẩn Khảo Thí (Mock Test)</h1>
+          <p class="today-subdate" style="max-width:680px;line-height:1.6;">
+            Mô phỏng chân thực bài thi Digital SAT 2026 với cấu trúc 98 câu, 134 phút thi + 10 phút nghỉ giữa giờ, phân nhánh thích ứng 2 chặng và dải điểm dự phóng có căn cứ.
+          </p>
+        </div>
+
+        <!-- Pre-Test Readiness Checklist Modal -->
+        <div id="pretest-modal" class="modal-backdrop" role="dialog" aria-modal="true" style="display:none;z-index:9999;">
+          <div class="modal-card" style="max-width:560px;text-align:left;background:var(--color-surface);border-radius:var(--radius-card-lg);padding:2rem;border:1px solid var(--color-border);box-shadow:var(--shadow-card-hover);">
+            <div class="flex justify-between items-center mb-3">
+              <span class="plan-badge">Pre-Test Readiness Checklist</span>
+              <button class="btn btn-outline text-xs" onclick="closePretestModal()" aria-label="Đóng">✕ Đóng</button>
+            </div>
+            <h2 class="font-display" style="font-size:1.4rem;font-weight:700;margin-bottom:0.35rem;" id="pretest-modal-title">Sẵn Sàng Cho Bài Thi Thử</h2>
+            <p class="text-xs text-muted mb-4">Để kết quả phản ánh chính xác nhất năng lực thực tế, vui lòng kiểm tra các điều kiện phòng thi dưới đây:</p>
+            
+            <div class="flex-col gap-3 mb-5" style="background:#FAFBFD;padding:1.25rem;border-radius:var(--radius-card);border:1px solid var(--color-border);">
+              <label class="flex items-center gap-3 text-sm cursor-pointer" style="line-height:1.4;">
+                <input type="checkbox" id="check-time" checked style="accent-color:var(--color-primary);width:18px;height:18px;">
+                <span><strong>Đủ thời gian liền mạch</strong> (Khoảng 2h24m cho bài thi 98 câu hoặc tương ứng)</span>
+              </label>
+              <label class="flex items-center gap-3 text-sm cursor-pointer" style="line-height:1.4;">
+                <input type="checkbox" id="check-device" checked style="accent-color:var(--color-primary);width:18px;height:18px;">
+                <span><strong>Công cụ sẵn sàng</strong> (Máy tính bỏ túi / Desmos tích hợp, nháp và bút)</span>
+              </label>
+              <label class="flex items-center gap-3 text-sm cursor-pointer" style="line-height:1.4;">
+                <input type="checkbox" id="check-quiet" checked style="accent-color:var(--color-primary);width:18px;height:18px;">
+                <span><strong>Không gian yên tĩnh</strong> (Tắt thông báo điện thoại, không gián đoạn)</span>
+              </label>
+              <label class="flex items-center gap-3 text-sm cursor-pointer" style="line-height:1.4;">
+                <input type="checkbox" id="check-fullscreen" checked style="accent-color:var(--color-primary);width:18px;height:18px;">
+                <span><strong>Môi trường tập trung</strong> (Khuyến nghị mở toàn màn hình F11 để mô phỏng Bluebook)</span>
+              </label>
+            </div>
+
+            <div class="flex justify-end gap-2">
+              <button class="btn btn-outline text-sm" onclick="closePretestModal()">Để Sau</button>
+              <button class="btn-primary-action text-sm" id="confirm-start-exam-btn" onclick="confirmStartExam()">Bắt Đầu Làm Bài Ngay →</button>
+            </div>
+          </div>
         </div>
 
         <!-- Dynamic Test Pack Grid (Populated by app.js based on SAT workspace) -->
@@ -446,7 +854,7 @@
             <div>
               <div class="flex items-center gap-2">
                 <span class="plan-badge" id="timed-exam-badge">Simulation</span>
-                <h3 id="timed-exam-title" style="margin:0;font-size:1.25rem;font-weight:800;">Timed Practice</h3>
+                <h3 id="timed-exam-title" style="margin:0;font-size:1.25rem;font-weight:700;" class="font-display">Timed Practice</h3>
               </div>
               <span class="text-xs text-muted mt-1 block" id="timed-exam-status">Câu 1 / 20</span>
             </div>
@@ -478,23 +886,27 @@
         </div>
 
         <!-- Timed Break Area (10-minute break between RW and Math sections) -->
-        <div id="timed-break-area" class="card p-6 text-center" style="display:none; max-width:650px; margin:2rem auto;">
-          <span class="plan-badge mb-2" style="background:#EFF6FF;color:#1D4ED8;">Section Break · Giờ Nghỉ Khảo Thí</span>
-          <h2 style="font-size:1.6rem;font-weight:800;color:var(--color-ink);margin:0.5rem 0;">Nghỉ Giữa Giờ: 10 Phút</h2>
-          <p class="text-sm text-muted mb-4">Bạn vừa hoàn thành trọn vẹn Section Reading &amp; Writing (54 câu). Hãy đứng dậy vận động nhẹ, thư giãn mắt và uống nước trước khi bước vào Section Math (44 câu).</p>
-          <div style="font-size:3.25rem;font-weight:800;font-family:monospace;color:var(--color-primary);margin:1.5rem 0;" id="break-timer-display">10:00</div>
+        <div id="timed-break-area" class="card text-center" style="display:none; max-width:620px; margin:2.5rem auto; padding:2.5rem 2rem; border-radius:var(--radius-card-xl); background:var(--pastel-blue); border:1px solid rgba(78,102,232,0.15); box-shadow:var(--shadow-card-hover);">
+          <span class="plan-badge mb-3" style="background:#FFFFFF;color:var(--color-primary);">Section Break · Giờ Nghỉ Khảo Thí</span>
+          <h2 style="font-size:1.75rem;font-weight:700;color:var(--color-ink);margin:0.5rem 0;" class="font-display">Nghỉ Giữa Giờ: 10 Phút</h2>
+          <p class="text-sm text-muted mb-4" style="max-width:480px;margin-left:auto;margin-right:auto;line-height:1.6;">
+            Bạn vừa hoàn thành trọn vẹn Section Reading &amp; Writing (54 câu). Hãy đứng dậy vận động nhẹ, thư giãn mắt và uống nước trước khi bước vào Section Math (44 câu).
+          </p>
+          <div style="font-size:3.75rem;font-weight:800;font-family:monospace;color:var(--color-primary);margin:1.25rem 0;letter-spacing:2px;" id="break-timer-display">10:00</div>
           <div class="flex justify-center gap-3">
             <button class="btn-primary-action text-sm" onclick="skipExamBreak()">Bắt Đầu Math Module 1 Ngay →</button>
           </div>
         </div>
 
-        <!-- Adaptive Module Routing Transition Overlay -->
+        <!-- Adaptive Module Routing Transition Overlay (Neutral Copy - P0.1 & Spec 10.5) -->
         <div id="adaptive-transition-modal" class="modal-backdrop" role="dialog" aria-modal="true" style="display:none;z-index:9999;">
-          <div class="modal-card" style="max-width:520px;text-align:center;">
-            <div style="font-size:2.5rem;margin-bottom:0.5rem;">🧭</div>
+          <div class="modal-card" style="max-width:520px;text-align:center;background:var(--color-surface);border-radius:var(--radius-card-lg);padding:2.25rem 2rem;border:1px solid var(--color-border);box-shadow:var(--shadow-card-hover);">
+            <div style="font-size:2.5rem;margin-bottom:0.75rem;">🧭</div>
             <span class="plan-badge mb-2" id="adaptive-route-badge">Multi-Stage Adaptive Routing</span>
-            <h3 style="font-size:1.35rem;font-weight:800;margin:0.5rem 0;" id="adaptive-route-title">Hoàn Thành Module 1</h3>
-            <p class="text-sm text-muted mb-4" id="adaptive-route-desc">Độ chính xác Module 1: <strong>--%</strong>. Hệ thống đã tự động định tuyến bạn sang <strong>Module 2</strong>.</p>
+            <h3 style="font-size:1.35rem;font-weight:700;margin:0.5rem 0;" id="adaptive-route-title" class="font-display">Hoàn Thành Module 1</h3>
+            <p class="text-sm text-muted mb-4" id="adaptive-route-desc" style="line-height:1.6;">
+              Module hoàn tất. Hệ thống đã chuẩn bị bài thi Module tiếp theo được điều chỉnh thích ứng theo tiến trình làm bài của bạn.
+            </p>
             <button class="btn-primary-action w-full" id="adaptive-route-continue-btn" onclick="startRoutedModule()">Bắt Đầu Module 2 Tiếp Theo →</button>
           </div>
         </div>
@@ -506,81 +918,318 @@
       </section>
 
       <!-- ═══════════════════════════════════════════════════════════════
-           SECTION 5: PROGRESS & PARENT COMPANION
+           SECTION 5: PROGRESS & PARENT COMPANION (PHASE UI-5 REDESIGN)
            ═══════════════════════════════════════════════════════════════ -->
       <section id="progress" class="section-view">
-        <div class="today-header">
-          <h1 class="today-greeting">Phân Tích Năng Lực &amp; Góc Phụ Huynh</h1>
-          <p class="today-subdate">Chuyển hóa dữ liệu làm bài thành hành động học tập cụ thể, không phán xét, đo lường sự nỗ lực thực chất.</p>
-        </div>
-
-        <!-- Interpretive Insight Card (What changed? Why? What next?) -->
-        <div class="progress-insight-banner">
-          <span class="plan-badge">Metacognitive Insight</span>
-          <h3 style="font-size:1.2rem;font-weight:800;margin:0.4rem 0;">Điểm Sáng &amp; Mục Tiêu Bứt Phá Tiếp Theo</h3>
-          <p class="text-sm" id="progress-interpretive-text">
-            <strong>Kỹ năng tiến bộ mạnh nhất:</strong> Algebra (88% chính xác).<br>
-            <strong>Điểm cần chú ý:</strong> Nhóm câu hỏi Inferences có xu hướng mất điểm ở các lựa chọn suy diễn quá rộng.<br>
-            <strong>Khuyến nghị kế tiếp:</strong> Dành 12 phút hoàn thành 5 câu Inferences trước khi làm bài thi thử cuối tuần.
+        <div class="today-header mb-6">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="plan-badge">Readiness &amp; Analytics</span>
+            <span class="text-xs text-muted">Đo Lường Thực Chất • Không Phán Xét • Định Hướng Tương Lai</span>
+          </div>
+          <h1 class="today-greeting font-display" style="font-size:1.85rem;font-weight:700;">Phân Tích Năng Lực &amp; Góc Phụ Huynh</h1>
+          <p class="today-subdate" style="max-width:680px;line-height:1.6;">
+            Chuyển hóa dữ liệu làm bài thành hành động học tập cụ thể, theo dõi quỹ đạo bứt phá dải điểm và đo lường sự kiên trì thực chất.
           </p>
         </div>
 
-        <div class="grid-2 mb-6">
-          <!-- Skill Map -->
-          <div class="card">
-            <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1rem;">Bản Đồ Làm Chủ Kỹ Năng (Skill Mastery)</h3>
-            <div id="skill-mastery-bars-container" class="flex-col gap-3">
-              <!-- Rendered by app.js -->
+        <!-- 1. Readiness Hero Card (Spec 11.2 A) -->
+        <div class="readiness-hero-card mb-6" style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-card-xl);padding:2rem;box-shadow:var(--shadow-card);">
+          <div class="flex justify-between items-start flex-wrap gap-4">
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="plan-badge" style="background:var(--pastel-blue);color:var(--color-primary);">Dự Phóng Năng Lực SAT Hiện Tại</span>
+                <span class="plan-badge" id="prog-confidence-badge" style="background:#FAFBFD;color:var(--color-ink);">Độ Tin Cậy: Trung Bình</span>
+              </div>
+              <div class="font-display" style="font-size:2.5rem;font-weight:700;color:var(--color-primary);margin:0.25rem 0;" id="prog-readiness-band">
+                1380 – 1450
+              </div>
+              <p class="text-sm text-muted" id="prog-readiness-note" style="margin:0;">
+                Ước lượng dựa trên dữ liệu làm bài chẩn đoán và các phiên luyện tập gần nhất.
+              </p>
             </div>
-          </div>
-
-          <!-- Consistency & Data Management -->
-          <div class="card">
-            <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1rem;">Quản Lý Dữ Liệu &amp; Hồ Sơ</h3>
-            <p class="text-sm text-muted mb-4">Toàn bộ dữ liệu học tập được lưu cục bộ an toàn trên trình duyệt của bạn.</p>
-            <div class="flex-col gap-2">
-              <button class="btn btn-outline text-sm text-left" onclick="exportPDFReport('parent')">📑 In Báo Cáo Năng Lực Dành Cho Phụ Huynh (Print / PDF)</button>
-              <button class="btn btn-outline text-sm text-left" onclick="exportPDFReport('workbook')">📑 In Sổ Tay Chẩn Đoán Lỗi Sai SAT (Print / PDF)</button>
-              <button class="btn btn-outline text-sm text-left" onclick="openAnkiModal()">🗂️ Xuất Kho Thẻ Anki (.tsv / UTF-8 BOM)</button>
-              <button class="btn btn-outline text-sm text-left" onclick="exportUserData()">📥 Sao Lưu Toàn Bộ Dữ Liệu Học Tập (JSON)</button>
-              <button class="btn btn-outline text-sm text-left" onclick="exportErrorLogCSV()">📊 Xuất File Dữ Liệu Lỗi Sai (CSV)</button>
-              <button class="btn btn-outline text-sm text-left" style="color:var(--color-error);border-color:#FECACA;" onclick="resetAllProgress()">🗑️ Đặt Lại Tiến Độ (Reset Progress)</button>
+            <div class="text-right" style="min-width:200px;">
+              <div class="text-xs font-semibold text-muted uppercase tracking-wider mb-1">Quỹ Đạo Bứt Phá</div>
+              <div class="text-lg font-bold text-success" id="prog-trajectory-val">+60–90 điểm</div>
+              <div class="text-xs text-muted">kể từ điểm xuất phát (Baseline)</div>
             </div>
           </div>
         </div>
 
-        <!-- Dedicated Parent Companion Section -->
-        <div class="parent-companion-section">
+        <!-- 2. Section Overview: RW vs Math (Spec 11.2 B - 2 Large Cards) -->
+        <div class="grid-2 mb-6" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:1.5rem;">
+          <!-- Reading & Writing Card -->
+          <div class="card p-6" style="background:var(--pastel-blue);border-radius:var(--radius-card-lg);border:1px solid rgba(78,102,232,0.15);box-shadow:var(--shadow-card);">
+            <div class="flex justify-between items-center mb-2">
+              <span class="plan-badge" style="background:#FFF;color:var(--color-primary);">Section 1</span>
+              <span class="text-xs font-bold" id="prog-rw-acc-pill" style="color:var(--color-primary);">Độ chính xác: --%</span>
+            </div>
+            <h3 class="font-display" style="font-size:1.35rem;font-weight:700;margin-bottom:0.25rem;">Reading &amp; Writing</h3>
+            <div class="font-display text-2xl font-bold" style="color:var(--color-ink);margin-bottom:0.75rem;" id="prog-rw-range-text">680 – 740</div>
+            
+            <div class="flex-col gap-2 text-xs mb-4" style="background:rgba(255,255,255,0.7);padding:0.85rem;border-radius:var(--radius);line-height:1.6;">
+              <div><strong>✨ Thế mạnh:</strong> <span id="prog-rw-strength">Conventions (Boundaries)</span></div>
+              <div><strong>🎯 Trọng tâm cần củng cố:</strong> <span id="prog-rw-focus">Inferences &amp; Evidence</span></div>
+            </div>
+
+            <button class="btn btn-outline text-xs w-full" style="background:#FFF;" onclick="selectDomainTab('Information and Ideas')">Luyện Kỹ Năng RW →</button>
+          </div>
+
+          <!-- Math Card -->
+          <div class="card p-6" style="background:var(--pastel-green);border-radius:var(--radius-card-lg);border:1px solid rgba(22,134,106,0.15);box-shadow:var(--shadow-card);">
+            <div class="flex justify-between items-center mb-2">
+              <span class="plan-badge" style="background:#FFF;color:var(--pastel-green-dark);">Section 2</span>
+              <span class="text-xs font-bold" id="prog-math-acc-pill" style="color:var(--pastel-green-dark);">Độ chính xác: --%</span>
+            </div>
+            <h3 class="font-display" style="font-size:1.35rem;font-weight:700;margin-bottom:0.25rem;">Math</h3>
+            <div class="font-display text-2xl font-bold" style="color:var(--color-ink);margin-bottom:0.75rem;" id="prog-math-range-text">700 – 760</div>
+
+            <div class="flex-col gap-2 text-xs mb-4" style="background:rgba(255,255,255,0.7);padding:0.85rem;border-radius:var(--radius);line-height:1.6;">
+              <div><strong>✨ Thế mạnh:</strong> <span id="prog-math-strength">Linear Equations &amp; Algebra</span></div>
+              <div><strong>🎯 Trọng tâm cần củng cố:</strong> <span id="prog-math-focus">Quadratics &amp; Parabolas</span></div>
+            </div>
+
+            <button class="btn btn-outline text-xs w-full" style="background:#FFF;" onclick="selectDomainTab('Algebra')">Luyện Kỹ Năng Math →</button>
+          </div>
+        </div>
+
+        <!-- 3. Canonical Domain Mastery Horizontal Bars (Spec 11.2 C) -->
+        <div class="card p-6 mb-6" style="border-radius:var(--radius-card-lg);border:1px solid var(--color-border);box-shadow:var(--shadow-card);">
+          <div class="flex justify-between items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h3 class="font-display" style="font-size:1.25rem;font-weight:700;">Làm Chủ 8 Miền Kiến Thức Chuẩn Khảo Thí (Domain Mastery)</h3>
+              <p class="text-xs text-muted">Tiến độ được tổng hợp tự động từ bài tập và bài thi thử trên 4 miền RW và 4 miền Math.</p>
+            </div>
+            <span class="plan-badge">Canonical SAT Taxonomy</span>
+          </div>
+
+          <div id="skill-mastery-bars-container" class="flex-col gap-3">
+            <!-- Rendered dynamically by renderProgress() -->
+          </div>
+        </div>
+
+        <!-- 4. Study Momentum & Data Management Grid (Spec 11.2 D & E) -->
+        <div class="grid-2 mb-6" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:1.5rem;">
+          <!-- Study Momentum Card -->
+          <div class="card p-6" style="border-radius:var(--radius-card-lg);border:1px solid var(--color-border);box-shadow:var(--shadow-card);">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="plan-badge">Study Momentum</span>
+              <span class="text-xs text-muted">Kỷ Luật Rèn Luyện</span>
+            </div>
+            <h3 class="font-display" style="font-size:1.15rem;font-weight:700;margin-bottom:0.5rem;">Nhịp Độ Học Tập Đo Lường Thực Tế</h3>
+            <p class="text-xs text-muted mb-4">Hệ thống chỉ ghi nhận thời gian làm bài thực tế, không tạo dữ liệu ảo.</p>
+
+            <div class="flex-col gap-3">
+              <div class="flex justify-between items-center p-3" style="background:#FAFBFD;border-radius:var(--radius);border:1px solid var(--color-border);">
+                <span class="text-xs font-semibold">⏱️ Tổng Thời Gian Rèn Luyện</span>
+                <strong class="text-sm" id="prog-momentum-time">0 phút</strong>
+              </div>
+              <div class="flex justify-between items-center p-3" style="background:#FAFBFD;border-radius:var(--radius);border:1px solid var(--color-border);">
+                <span class="text-xs font-semibold">📅 Số Ngày Hoạt Động Tuần Này</span>
+                <strong class="text-sm" id="prog-momentum-days">0 / 7 ngày</strong>
+              </div>
+              <div class="flex justify-between items-center p-3" style="background:#FAFBFD;border-radius:var(--radius);border:1px solid var(--color-border);">
+                <span class="text-xs font-semibold">📝 Tổng Số Câu Đã Luyện Tập</span>
+                <strong class="text-sm" id="prog-momentum-questions">0 câu</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Management & Export Tools Card -->
+          <div class="card p-6" style="border-radius:var(--radius-card-lg);border:1px solid var(--color-border);box-shadow:var(--shadow-card);">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="plan-badge">Hồ Sơ &amp; Xuất Dữ Liệu</span>
+              <span class="text-xs text-muted">100% Cục Bộ An Toàn</span>
+            </div>
+            <h3 class="font-display" style="font-size:1.15rem;font-weight:700;margin-bottom:0.5rem;">Quản Lý Dữ Liệu &amp; Hồ Sơ Cá Nhân</h3>
+            <p class="text-xs text-muted mb-3">Toàn bộ dữ liệu học tập được lưu cục bộ an toàn trên trình duyệt của bạn.</p>
+
+            <div class="flex-col gap-2">
+              <button class="btn btn-outline text-xs text-left" onclick="exportPDFReport('parent')">📑 In Báo Cáo Năng Lực Dành Cho Phụ Huynh (Print / PDF)</button>
+              <button class="btn btn-outline text-xs text-left" onclick="exportPDFReport('workbook')">📑 In Sổ Tay Chẩn Đoán Lỗi Sai SAT (Print / PDF)</button>
+              <button class="btn btn-outline text-xs text-left" onclick="openAnkiModal()">🗂️ Xuất Kho Thẻ Anki (.tsv / UTF-8 BOM)</button>
+              <button class="btn btn-outline text-xs text-left" onclick="exportUserData()">📥 Sao Lưu Toàn Bộ Dữ Liệu Học Tập (JSON)</button>
+              <button class="btn btn-outline text-xs text-left" onclick="exportErrorLogCSV()">📊 Xuất File Dữ Liệu Lỗi Sai (CSV)</button>
+              <button class="btn btn-outline text-xs text-left" style="color:var(--color-error);border-color:#FECACA;" onclick="resetAllProgress()">🗑️ Đặt Lại Tiến Độ (Reset Progress)</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Dedicated Parent Companion Section (Spec 11.2 F) -->
+        <div class="parent-companion-section" style="border-radius:var(--radius-card-lg);border:1px solid var(--color-border);box-shadow:var(--shadow-card);padding:2rem;">
           <div class="flex justify-between items-start flex-wrap gap-4 mb-4">
             <div>
               <span class="tag-parent">👨‍👩‍👧 DÀNH RIÊNG CHO CHA MẸ ĐỒNG HÀNH</span>
-              <h2 style="font-size:1.35rem;font-weight:800;margin-top:0.35rem;">Bản Tổng Kết Tiến Độ Thực Chất Cho Phụ Huynh</h2>
+              <h2 class="font-display" style="font-size:1.4rem;font-weight:700;margin-top:0.35rem;">Bản Tổng Kết Tiến Độ Thực Chất Cho Phụ Huynh</h2>
               <p class="text-xs text-muted">Đo lường sự kiên trì, số giờ tập trung và tính kỷ luật thay vì săm soi điểm số từng câu.</p>
             </div>
             <button class="btn btn-outline text-xs" onclick="exportPDFReport('parent')">🖨️ In Báo Cáo Định Kỳ (Print/PDF)</button>
           </div>
 
-          <div class="grid-4 mb-4" id="parent-metrics-grid">
-            <div class="stat-card">
+          <div class="grid-4 mb-4" id="parent-metrics-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:1rem;">
+            <div class="stat-card" style="background:#FAFBFD;padding:1.25rem;border-radius:var(--radius);border:1px solid var(--color-border);">
               <div class="text-muted text-xs font-bold uppercase">⏱️ Tổng Thời Gian Rèn Luyện</div>
               <div class="text-2xl font-bold mt-1" id="parent-total-hours">0 giờ 00p</div>
             </div>
-            <div class="stat-card">
+            <div class="stat-card" style="background:#FAFBFD;padding:1.25rem;border-radius:var(--radius);border:1px solid var(--color-border);">
               <div class="text-muted text-xs font-bold uppercase">📝 Khối Lượng Câu Đã Giải</div>
               <div class="text-2xl font-bold mt-1" id="parent-total-questions">0 câu</div>
             </div>
-            <div class="stat-card">
+            <div class="stat-card" style="background:#FAFBFD;padding:1.25rem;border-radius:var(--radius);border:1px solid var(--color-border);">
               <div class="text-muted text-xs font-bold uppercase">🔥 Kỷ Luật Tuần Này</div>
               <div class="text-2xl font-bold mt-1" id="parent-active-days">0 ngày</div>
             </div>
-            <div class="stat-card">
+            <div class="stat-card" style="background:#FAFBFD;padding:1.25rem;border-radius:var(--radius);border:1px solid var(--color-border);">
               <div class="text-muted text-xs font-bold uppercase">🎯 Kỹ Năng Đã Master</div>
               <div class="text-2xl font-bold mt-1" id="parent-mastered-skills">0 / 15</div>
             </div>
           </div>
 
-          <div class="p-4 bg-muted-light rounded text-xs text-muted" id="parent-advice-box">
+          <div class="p-4 rounded text-xs text-muted" id="parent-advice-box" style="background:var(--pastel-blue);border:1px solid rgba(78,102,232,0.15);line-height:1.6;">
             <strong>Cẩm nang đồng hành cùng con tuổi 15–18:</strong> Tránh kiểm tra đột xuất hoặc phán xét khi con làm sai. Hãy hỏi: <em>"Hôm nay con thấy bẫy nào trong bài thú vị nhất?"</em> và đảm bảo con ngủ đủ 7–8 tiếng trước ngày thi để não bộ tái tạo năng lượng tối ưu.
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 6: LANDING / SYSTEM OVERVIEW (PHASE UI-6)
+           ═══════════════════════════════════════════════════════════════ -->
+      <section id="landing" class="section-view">
+        <!-- 1. Editorial Hero Container (Spec 12.2) -->
+        <div class="landing-hero-card mb-8">
+          <div class="landing-hero-grid">
+            <div class="landing-hero-text">
+              <span class="plan-badge mb-3" style="background:var(--pastel-blue);color:var(--color-primary);">Hệ Thống Luyện Thi Digital SAT 2026</span>
+              <h1 class="landing-display-title font-display">
+                Prepare Smarter for the Digital SAT.
+              </h1>
+              <p class="landing-lead-text">
+                Hệ thống rèn luyện tư duy có chủ đích dành cho học sinh THPT: Tự động chẩn đoán lỗ hổng kiến thức, tối ưu kế hoạch rèn luyện hàng ngày và biến mọi lỗi sai thành năng lực thực chất.
+              </p>
+              <div class="flex items-center gap-3 flex-wrap mt-5">
+                <button class="btn-primary-action" onclick="startDiagnosticExam()">
+                  <span>▶ Bắt Đầu Bài Chẩn Đoán (25m)</span>
+                </button>
+                <a href="#today" class="btn-secondary-action" style="text-decoration:none;">
+                  Vào Bàn Học Hôm Nay →
+                </a>
+              </div>
+              <div class="landing-trust-pills mt-6">
+                <span>✓ Không quảng cáo</span>
+                <span class="meta-dot">•</span>
+                <span>✓ 98 câu thích ứng 2 chặng</span>
+                <span class="meta-dot">•</span>
+                <span>✓ Lưu trữ bảo mật trên trình duyệt</span>
+              </div>
+            </div>
+            <div class="landing-hero-media">
+              <picture class="landing-picture">
+                <source media="(max-width: 768px)" srcset="assets/visual/hero/landing-hero-mobile.webp" type="image/webp">
+                <source media="(max-width: 768px)" srcset="assets/visual/hero/landing-hero-mobile.png" type="image/png">
+                <source srcset="assets/visual/hero/landing-hero-desktop.webp" type="image/webp">
+                <img src="assets/visual/hero/landing-hero-desktop.png" alt="Học sinh THPT rèn luyện Digital SAT" class="landing-hero-img" width="720" height="405" loading="eager">
+              </picture>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. The 5-Step Learning Loop (Spec 12.3) -->
+        <div class="landing-block mb-8">
+          <div class="text-center mb-6">
+            <span class="plan-badge">Khoa Học Học Tập Thực Nghiệm</span>
+            <h2 class="font-display text-2xl font-bold mt-2">Chu Trình Khép Kín 5 Bước (The Learning Loop)</h2>
+            <p class="text-xs text-muted max-w-md mx-auto mt-1">Giúp học sinh thoát khỏi bẫy luyện đề mù quáng, tập trung vào bản chất tư duy khảo thí.</p>
+          </div>
+
+          <div class="learning-loop-grid">
+            <div class="loop-step-card card-pastel-blue">
+              <div class="loop-step-num">01</div>
+              <h3 class="font-bold text-sm mb-1">Chẩn Đoán (Diagnose)</h3>
+              <p class="text-xs text-muted">Đo lường baseline trên 15 kỹ năng SAT qua 30 câu hỏi quét đa tầng.</p>
+            </div>
+            <div class="loop-step-card card-pastel-green">
+              <div class="loop-step-num">02</div>
+              <h3 class="font-bold text-sm mb-1">Luyện Tập (Practice)</h3>
+              <p class="text-xs text-muted">Tập trung vào miền kỹ năng có giá trị cao nhất với giao diện không xao nhãng.</p>
+            </div>
+            <div class="loop-step-card card-pastel-coral">
+              <div class="loop-step-num">03</div>
+              <h3 class="font-bold text-sm mb-1">Khắc Chế Lỗi (Review)</h3>
+              <p class="text-xs text-muted">Bóc tách 17 bẫy nhận thức kinh điển và lật thẻ ghi nhớ lặp lại ngắt quãng SRS.</p>
+            </div>
+            <div class="loop-step-card card-pastel-yellow">
+              <div class="loop-step-num">04</div>
+              <h3 class="font-bold text-sm mb-1">Thi Thử (Test)</h3>
+              <p class="text-xs text-muted">Mô phỏng 98 câu, 134 phút thi + 10 phút nghỉ, thích ứng 2 chặng chuẩn Digital SAT.</p>
+            </div>
+            <div class="loop-step-card card-pastel-lilac">
+              <div class="loop-step-num">05</div>
+              <h3 class="font-bold text-sm mb-1">Bứt Phá (Improve)</h3>
+              <p class="text-xs text-muted">Theo dõi quỹ đạo tăng điểm có căn cứ, điều chỉnh kế hoạch Hôm Nay tự động.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Featured Learning Paths (Spec 12.4) -->
+        <div class="landing-block mb-8">
+          <div class="text-center mb-6">
+            <span class="plan-badge">Nội Dung Trọng Tâm</span>
+            <h2 class="font-display text-2xl font-bold mt-2">4 Trụ Cột Rèn Luyện Chuyên Biệt</h2>
+          </div>
+
+          <div class="grid-2" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+            <div class="card p-6 card-pastel-blue">
+              <span class="plan-badge" style="background:#FFF;color:var(--color-primary);">54 Câu / Đề</span>
+              <h3 class="font-display text-lg font-bold mt-2 mb-1">Reading &amp; Writing Mastery</h3>
+              <p class="text-xs text-muted mb-4" style="line-height:1.6;">Làm chủ Information &amp; Ideas, Craft &amp; Structure, Expression và Conventions. Phân tích bẫy Over-Inference và quan hệ logic chuyển ý.</p>
+              <a href="#practice" class="btn btn-outline text-xs" style="background:#FFF;text-decoration:none;">Khám Phá Kỹ Năng RW →</a>
+            </div>
+
+            <div class="card p-6 card-pastel-green">
+              <span class="plan-badge" style="background:#FFF;color:var(--pastel-green-dark);">44 Câu / Đề</span>
+              <h3 class="font-display text-lg font-bold mt-2 mb-1">Math &amp; Desmos Speed Hacks</h3>
+              <p class="text-xs text-muted mb-4" style="line-height:1.6;">Chiến lược 5 bước GIVEN → TARGET → MODEL → SOLVE → VERIFY. Tích hợp máy tính đồ thị Desmos chính thức để giải siêu tốc.</p>
+              <a href="#practice" class="btn btn-outline text-xs" style="background:#FFF;text-decoration:none;">Khám Phá Kỹ Năng Math →</a>
+            </div>
+
+            <div class="card p-6 card-pastel-coral">
+              <span class="plan-badge" style="background:#FFF;color:var(--pastel-coral-dark);">Spaced Repetition</span>
+              <h3 class="font-display text-lg font-bold mt-2 mb-1">Metacognitive Error Review</h3>
+              <p class="text-xs text-muted mb-4" style="line-height:1.6;">Sổ tay lỗi sai thông minh phân loại 17 bẫy nhận thức kinh điển. Xuất file Anki TSV chuẩn UTF-8 BOM và in tài liệu PDF A4.</p>
+              <a href="#review" class="btn btn-outline text-xs" style="background:#FFF;text-decoration:none;">Xem Hộp Ôn Tập Lỗi Sai →</a>
+            </div>
+
+            <div class="card p-6 card-pastel-lilac">
+              <span class="plan-badge" style="background:#FFF;color:#5B21B6);">Multi-Stage Adaptive</span>
+              <h3 class="font-display text-lg font-bold mt-2 mb-1">Full Digital SAT Simulation</h3>
+              <p class="text-xs text-muted mb-4" style="line-height:1.6;">Bài thi 98 câu, 134 phút + 10 phút nghỉ giữa giờ. Dự phóng dải điểm năng lực phòng thi chân thực không phán xét.</p>
+              <a href="#test" class="btn btn-outline text-xs" style="background:#FFF;text-decoration:none;">Vào Khu Vực Thi Thử →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Trust & Platform Invariants (Spec 12.5) -->
+        <div class="card p-6 mb-8" style="border-radius:var(--radius-card-lg);border:1px solid var(--color-border);box-shadow:var(--shadow-card);">
+          <div class="text-center mb-6">
+            <span class="plan-badge">Chuẩn Mực Học Thuật</span>
+            <h2 class="font-display text-xl font-bold mt-2">Vì Sao Học Sinh THPT Chọn SAT IntelliPrep?</h2>
+          </div>
+
+          <div class="grid-3" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1.25rem;">
+            <div class="p-4" style="background:#FAFBFD;border-radius:var(--radius);border:1px solid var(--color-border);">
+              <div class="text-lg mb-1">🧭</div>
+              <strong class="text-sm block mb-1">Phân Nhánh Thích Ứng Thật</strong>
+              <p class="text-xs text-muted" style="line-height:1.5;">Module 2 phân nhánh Hard vs Standard dựa trên kết quả Module 1 đúng chuẩn cấu trúc Digital SAT 2026.</p>
+            </div>
+            <div class="p-4" style="background:#FAFBFD;border-radius:var(--radius);border:1px solid var(--color-border);">
+              <div class="text-lg mb-1">🎯</div>
+              <strong class="text-sm block mb-1">Dải Điểm Có Căn Cứ</strong>
+              <p class="text-xs text-muted" style="line-height:1.5;">Tuyệt đối không chấm điểm giả lập chính xác tuyệt đối. Báo cáo dải điểm năng lực bảo vệ tâm lý học sinh.</p>
+            </div>
+            <div class="p-4" style="background:#FAFBFD;border-radius:var(--radius);border:1px solid var(--color-border);">
+              <div class="text-lg mb-1">⏱️</div>
+              <strong class="text-sm block mb-1">Đo Lường Thực Chất</strong>
+              <p class="text-xs text-muted" style="line-height:1.5;">Ghi nhận từng phút học tập và ngày rèn luyện thực tế. Không streak ảo, không game hóa ồn ào.</p>
+            </div>
           </div>
         </div>
       </section>
