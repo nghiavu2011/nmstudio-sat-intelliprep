@@ -275,10 +275,22 @@ function init() {
   if (!db.totalStudyTimeSec) db.totalStudyTimeSec = 0;
 
   const modal = $('#setup-modal');
-  if (!db.profile) {
-    modal.style.display = 'flex';
-  } else {
-    modal.style.display = 'none';
+  window.openSetupModal = function() {
+    if (modal) {
+      modal.style.display = 'flex';
+      document.body.classList.add('modal-open');
+    }
+  };
+  window.closeSetupModal = function() {
+    if (modal) {
+      modal.style.display = 'none';
+      document.body.classList.remove('modal-open');
+    }
+  };
+
+  // If user has no profile and no explicit hash, start on #landing
+  if (!db.profile && !location.hash) {
+    location.hash = '#landing';
   }
 
   // Setup submit handler
@@ -292,11 +304,11 @@ function init() {
       setupDate: new Date().toISOString()
     };
     save();
-    modal.style.display = 'none';
+    window.closeSetupModal();
     if (doDiagnostic) {
       startDiagnosticExam();
     } else {
-      handleRoute();
+      location.hash = '#today';
     }
   });
 
@@ -323,7 +335,8 @@ function init() {
 
 // ── 5-Destination Hash Routing ──
 function handleRoute() {
-  const hash = location.hash || '#today';
+  const currentDb = loadState();
+  const hash = location.hash || (currentDb.profile ? '#today' : '#landing');
   
   // Normalize legacy routes to 5 core destinations
   let target = hash;
@@ -347,6 +360,13 @@ function handleRoute() {
   $$('.section-view').forEach(s => {
     s.classList.toggle('active', '#' + s.id === target);
   });
+
+  // Prompt user for setup if deep-linking into protected view without profile
+  if (!currentDb.profile && target !== '#landing') {
+    window.openSetupModal();
+  } else if (currentDb.profile) {
+    window.closeSetupModal();
+  }
 
   // Render view data
   if (target === '#today') renderToday();
@@ -1096,7 +1116,7 @@ function renderTest() {
 
       <div class="flex items-center gap-3 flex-wrap pt-2">
         <button class="btn-primary-action text-sm" onclick="startPretestCheck('sat-pt1')">
-          <span>▶ Thi Thử Đề 1 (98 Câu Thích Ứng)</span>
+          <span>Thi Thử Đề 1 (98 Câu Thích Ứng) →</span>
         </button>
         <button class="btn-secondary-action text-sm" style="background:#FFF;" onclick="startPretestCheck('sat-pt2')">
           <span>Thi Thử Đề 2 (98 Câu Thích Ứng)</span>
@@ -1312,6 +1332,7 @@ window.startMockExam = async function(examType, testId) {
     $('#timed-exam-badge').textContent = testId === 'sat-diagnostic' ? 'Khảo Sát Ban Đầu' : 'Single Module Sprint';
     $('#timed-exam-title').textContent = title;
 
+    document.body.classList.add('exam-mode-active');
     renderExamPalette();
     renderExamQuestion(0);
     startExamTimer();
@@ -1366,6 +1387,7 @@ function startAdaptiveStage(stage) {
     $('#timed-exam-title').textContent = `${activeExam.title} (Module 4/4 · 22 câu / 35m)`;
   }
 
+  document.body.classList.add('exam-mode-active');
   renderExamPalette();
   renderExamQuestion(0);
   startExamTimer();
@@ -1564,6 +1586,7 @@ window.exitTimedSession = function() {
   if (confirm('Bạn có chắc chắn muốn thoát bài thi? Tiến trình bài làm hiện tại sẽ không được lưu.')) {
     if (activeExam.timerInterval) clearInterval(activeExam.timerInterval);
     if (activeExam.breakInterval) clearInterval(activeExam.breakInterval);
+    document.body.classList.remove('exam-mode-active');
     $('#timed-exam-area').style.display = 'none';
     $('#timed-break-area').style.display = 'none';
     $('#adaptive-transition-modal').style.display = 'none';
@@ -1688,6 +1711,7 @@ window.finishTimedSession = function() {
 };
 
 function showFullAdaptiveResults() {
+  document.body.classList.remove('exam-mode-active');
   $('#timed-exam-area').style.display = 'none';
   $('#timed-break-area').style.display = 'none';
   $('#adaptive-transition-modal').style.display = 'none';
@@ -1810,6 +1834,7 @@ function showFullAdaptiveResults() {
 }
 
 function showTestResults(correct, total, timeSpentSec) {
+  document.body.classList.remove('exam-mode-active');
   $('#timed-exam-area').style.display = 'none';
   const resultsArea = $('#timed-results-area');
   if (!resultsArea) return;

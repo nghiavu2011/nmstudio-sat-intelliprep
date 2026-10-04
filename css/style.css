@@ -755,10 +755,11 @@ input, select, textarea {
   border-top: 1px solid var(--color-border-subtle);
 }
 
-/* ── E. Strategy Tip Editorial Banner (Spec 7.2 G) ── */
+/* ── E. Strategy Tip Editorial Banner (Spec 7.2 G & Sec 8) ── */
 .strategy-tip-banner {
-  background: var(--pastel-yellow);
-  border: 1px solid var(--pastel-yellow-border);
+  background: #FFFDF7;
+  border: 1px solid #FDE68A;
+  border-left: 4px solid #D97706;
   border-radius: var(--radius-card);
   padding: 1.5rem 1.75rem;
   display: flex;
@@ -1618,10 +1619,21 @@ input, select, textarea {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1180px) {
+  .sat-core-pill {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .top-header {
+    height: auto;
+    min-height: 72px;
+  }
   .top-header-inner {
     flex-wrap: wrap;
     padding: 0.75rem 1rem;
+    gap: 0.75rem;
   }
   .primary-nav {
     order: 3;
@@ -1629,11 +1641,66 @@ input, select, textarea {
     justify-content: space-around;
     padding-top: 0.5rem;
     border-top: 1px solid var(--color-border);
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-header {
+    height: auto;
+    min-height: 64px;
+  }
+  .top-header-inner {
+    flex-wrap: wrap;
+    padding: 0.5rem 0.5rem;
+    gap: 0.5rem;
+  }
+  .primary-nav {
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.35rem;
+    border-top: 1px solid var(--color-border);
+    margin-top: 0.25rem;
+    gap: 0.15rem;
   }
   .nav-tab {
-    padding: 0.4rem 0.6rem;
-    font-size: var(--text-xs);
+    padding: 0.35rem 0.4rem;
+    font-size: 0.72rem;
+    gap: 0.2rem;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+  .nav-tab .nav-svg {
+    width: 14px;
+    height: 14px;
+  }
+  .nav-tab .nav-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .today-hero-card {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1.25rem;
+  }
+  .today-hero-visual {
+    display: none;
+  }
+  .status-quad-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header-actions {
+    gap: 0.35rem;
+  }
+  .header-actions .header-util-btn {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  .zalo-pill-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
   }
   .main-shell {
     padding: 1.25rem 1rem 3rem;
@@ -2067,4 +2134,222 @@ input, select, textarea {
   .landing-display-title {
     font-size: 2rem;
   }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   P0: PRODUCTION SETUP MODAL OVERLAY & CALM ACADEMIC DIALOG
+   ═══════════════════════════════════════════════════════════════ */
+.setup-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.setup-modal-dialog {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  max-width: 920px;
+  width: 100%;
+  max-height: calc(100vh - 48px);
+  background: var(--color-surface);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.setup-modal-visual {
+  background: linear-gradient(145deg, #1E293B, #0F172A);
+  color: #FFFFFF;
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.setup-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.setup-brand-logo {
+  border-radius: 10px;
+}
+
+.setup-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.setup-brand-sub {
+  font-size: 0.75rem;
+  color: #94A3B8;
+}
+
+.setup-visual-tagline h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+  color: #F8FAFC;
+}
+
+.setup-visual-tagline p {
+  font-size: 0.8rem;
+  color: #CBD5E1;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+.setup-visual-img-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.25rem;
+}
+
+.setup-visual-cover {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.setup-visual-trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+.setup-modal-form-pane {
+  padding: 2.5rem 2.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--color-surface);
+  overflow-y: auto;
+}
+
+.setup-modal-header {
+  margin-bottom: 1.5rem;
+}
+
+.setup-dialog-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.setup-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.setup-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.setup-field-label {
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.setup-select {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--color-border);
+  font-size: 0.85rem;
+  background-color: #FAFBFD;
+  color: var(--color-ink);
+  transition: border-color 0.15s ease;
+}
+
+.setup-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background-color: #FFFFFF;
+}
+
+.setup-diagnostic-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+}
+
+.setup-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.82rem;
+  cursor: pointer;
+  color: #1E3A8A;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.setup-checkbox {
+  accent-color: var(--color-primary);
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+}
+
+.setup-submit-btn {
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: var(--radius-control);
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .setup-modal-dialog {
+    grid-template-columns: 1fr;
+    max-height: calc(100vh - 24px);
+    overflow-y: auto;
+  }
+  .setup-modal-visual {
+    display: none;
+  }
+  .setup-modal-form-pane {
+    padding: 1.75rem 1.5rem;
+  }
+  .header-actions .header-util-btn {
+    padding: 0.35rem 0.55rem;
+  }
+}
+
+/* ── Active Exam Distraction-Free Isolation (Spec 10.3) ── */
+body.exam-mode-active .top-header,
+body.exam-mode-active .ai-coach-drawer,
+body.exam-mode-active footer {
+  display: none !important;
 }
