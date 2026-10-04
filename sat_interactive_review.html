@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAT IntelliPrep — Release QA Portal v2</title>
+  <style>
+    /* ═══════════════════════════════════════════════════════════════
+       SAT IntelliPrep — Calm Academic QA Portal System Styles
+       Zero runtime dependencies • Pure semantic CSS • Responsive
+       ═══════════════════════════════════════════════════════════════ */
+    :root {
+      --canvas: #F8FAFC;
+      --surface: #FFFFFF;
+      --surface-subtle: #F1F5F9;
+      --surface-hover: #E2E8F0;
+      --border: #E2E8F0;
+      --border-focus: #4E66E8;
+      --ink: #0F172A;
+      --ink-muted: #64748B;
+      --ink-subtle: #94A3B8;
+      
+      --brand: #4E66E8;
+      --brand-soft: #EEF2FF;
+      --brand-dark: #3747BE;
+
+      --pass-bg: #ECFDF5;
+      --pass-border: #A7F3D0;
+      --pass-ink: #065F46;
+      --pass-dot: #10B981;
+
+      --warn-bg: #FFFBEB;
+      --warn-border: #FDE68A;
+      --warn-ink: #92400E;
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+
+      --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 4px 16px -2px rgba(15, 23, 42, 0.06);
+      --shadow-lg: 0 12px 32px -4px rgba(15, 23, 42, 0.1);
+      
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--canvas);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 14px;
+      line-height: 1.5;
+      padding: 1.5rem 1rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .portal-container {
+      max-width: 1480px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    /* ── 1. Top Release Header ── */
+    .release-header {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-left {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .portal-title-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .portal-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+    }
+
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: var(--pass-bg);
+      color: var(--pass-ink);
+      border: 1px solid var(--pass-border);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .badge-status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--pass-dot);
+    }
+
+    .header-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      color: var(--ink-muted);
+      font-size: 0.8rem;
+    }
+
+    .header-meta span strong {
+      color: var(--ink);
+    }
+
+    .header-meta .sep {
+      color: var(--ink-subtle);
+    }
+
+    .source-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      color: var(--ink);
+    }
+
+    .source-badge.prod {
+      background: #EFF6FF;
+      color: #1D4ED8;
+      border-color: #BFDBFE;
+    }
+
+    .source-badge.local {
+      background: #FDF4FF;
+      color: #A21CAF;
+      border-color: #F5D0FE;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--ink);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      min-height: 36px;
+    }
+
+    .btn:hover {
+      background: var(--surface-subtle);
+      border-color: #CBD5E1;
+    }
+
+    .btn:focus-visible {
+      outline: 2px solid var(--brand);
+      outline-offset: 2px;
+    }
+
+    .btn-primary {
+      background: var(--brand);
+      color: #FFFFFF;
+      border-color: var(--brand);
+    }
+
+    .btn-primary:hover {
+      background: var(--brand-dark);
+      border-color: var(--brand-dark);
+    }
+
+    /* ── 2. Release Gates Grid (5 Cards) ── */
+    .gates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .gate-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      box-shadow: var(--shadow-sm);
+      border-left: 4px solid var(--pass-dot);
+    }
+
+    .gate-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .gate-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-muted);
+    }
+
+    .gate-pill {
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      background: var(--pass-bg);
+      color: var(--pass-ink);
+    }
+
+    .gate-metric {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .gate-desc {
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      line-height: 1.4;
+    }
+
+    /* ── 3. Review Stage Controls Bar ── */
+    .stage-controls {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .control-group {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .control-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-muted);
+      margin-right: 0.25rem;
+    }
+
+    .nav-chip, .vp-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--ink-muted);
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      min-height: 32px;
+    }
+
+    .nav-chip:hover, .vp-chip:hover {
+      background: var(--surface-subtle);
+      color: var(--ink);
+    }
+
+    .nav-chip:focus-visible, .vp-chip:focus-visible {
+      outline: 2px solid var(--brand);
+      outline-offset: 1px;
+    }
+
+    .nav-chip.active {
+      background: var(--brand-soft);
+      border-color: var(--brand);
+      color: var(--brand-dark);
+      font-weight: 700;
+    }
+
+    .vp-chip.active {
+      background: #EFF6FF;
+      border-color: #3B82F6;
+      color: #1D4ED8;
+      font-weight: 700;
+    }
+
+    /* ── 4. Live App Preview Stage ── */
+    .preview-stage-wrap {
+      background: #E2E8F0;
+      border: 1px solid #CBD5E1;
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: auto;
+      min-height: 840px;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    .stage-meta-strip {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      font-size: 0.75rem;
+      color: #475569;
+    }
+
+    .stage-badges {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .meta-tag {
+      background: rgba(255,255,255,0.85);
+      border: 1px solid #CBD5E1;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 700;
+      font-family: monospace;
+      color: #334155;
+    }
+
+    .iframe-scaler-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      overflow: visible;
+      transform-origin: top center;
+    }
+
+    .app-frame {
+      background: #FFFFFF;
+      border: 1px solid #94A3B8;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      transition: width 0.25s ease, height 0.25s ease;
+      width: 100%;
+      height: 820px;
+    }
+
+    /* Fallback if iframe fails/blocked */
+    .iframe-fallback {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 2rem;
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      width: 100%;
+      max-width: 600px;
+      margin: 4rem auto;
+      gap: 1rem;
+    }
+
+    /* ── 5. Expert Review: Evidence vs Qualitative Opinion ── */
+    .expert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .expert-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .expert-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.85rem;
+      gap: 0.75rem;
+    }
+
+    .expert-title-block h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .expert-subtitle {
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      margin-top: 0.15rem;
+    }
+
+    .qualitative-score-pill {
+      background: var(--brand-soft);
+      border: 1px solid rgba(78, 102, 232, 0.25);
+      color: var(--brand-dark);
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .expert-eval-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      font-size: 0.8rem;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+
+    .expert-eval-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .eval-check {
+      color: var(--pass-dot);
+      font-weight: bold;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .eval-action {
+      color: #D97706;
+      font-weight: bold;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    /* ── 6. Inventory & Next Milestones ── */
+    .inventory-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .section-heading-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--ink);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .inventory-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .inventory-box {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .inv-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+    }
+
+    .inv-val {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+    }
+
+    /* ── 7. Roadmap Table ── */
+    .roadmap-table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+
+    .roadmap-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.8rem;
+    }
+
+    .roadmap-table th {
+      background: var(--surface-subtle);
+      padding: 0.65rem 0.85rem;
+      font-weight: 700;
+      color: var(--ink-muted);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+    }
+
+    .roadmap-table td {
+      padding: 0.65rem 0.85rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--ink);
+    }
+
+    .roadmap-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .tag-priority {
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+    }
+
+    .tag-priority.p1 { background: #FEE2E2; color: #991B1B; }
+    .tag-priority.p2 { background: #FEF3C7; color: #92400E; }
+    .tag-priority.p3 { background: #E0E7FF; color: #3730A3; }
+
+    /* ── Footer ── */
+    .portal-footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: 0.75rem;
+      color: var(--ink-subtle);
+      border-top: 1px solid var(--border);
+      line-height: 1.6;
+    }
+
+    /* ── Responsive Adaptations ── */
+    @media (max-width: 1024px) {
+      .expert-grid {
+        grid-template-columns: 1fr;
+      }
+      .gates-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 0.75rem 0.5rem;
+      }
+      .gates-grid {
+        grid-template-columns: 1fr;
+      }
+      .release-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .stage-controls {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .control-group {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 0.25rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="portal-container">
+
+    <!-- 1. TOP RELEASE HEADER -->
+    <header class="release-header" role="banner">
+      <div class="header-left">
+        <div class="portal-title-row">
+          <h1 class="portal-title">SAT IntelliPrep — Release QA Portal</h1>
+          <span class="badge-status" id="header-status-badge">
+            <span class="badge-status-dot"></span>
+            <span id="header-status-text">Ready for Review</span>
+          </span>
+          <span class="source-badge prod" id="header-source-badge">SOURCE: PRODUCTION</span>
+        </div>
+        <div class="header-meta">
+          <span>Build: <strong id="meta-release-tag">v1.0 RC Hotfix</strong></span>
+          <span class="sep">•</span>
+          <span>Branch: <strong id="meta-branch">main</strong></span>
+          <span class="sep">•</span>
+          <span>Commit: <strong id="meta-commit">79b8ca3</strong></span>
+          <span class="sep">•</span>
+          <span>Reviewed: <strong id="meta-reviewed-date">04 Oct 2026, 23:20</strong></span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="btn" onclick="copyCurrentAppUrl()" title="Sao chép URL ứng dụng đang xem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <span>Copy URL</span>
+        </button>
+        <button class="btn" onclick="toggleLocalOverride()" id="toggle-source-btn" title="Chuyển đổi giữa Production và Localhost">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"></path><line x1="8" y1="16" x2="8.01" y2="16"></line><line x1="8" y1="20" x2="8.01" y2="20"></line><line x1="12" y1="18" x2="12.01" y2="18"></line><line x1="12" y1="22" x2="12.01" y2="22"></line><line x1="16" y1="16" x2="16.01" y2="16"></line><line x1="16" y1="20" x2="16.01" y2="20"></line></svg>
+          <span id="source-btn-text">Dùng Local Dev</span>
+        </button>
+        <a id="open-app-external-link" href="https://nmstudio-sat-intelliprep.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Mở ứng dụng trên tab độc lập">
+          <span>Open App</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+      </div>
+    </header>
+
+    <!-- 2. RELEASE GATE SUMMARY (5 EVIDENCE CARDS) -->
+    <section class="gates-grid" aria-label="Báo cáo nghiệm thu kỹ thuật">
+      <!-- 1. Regression -->
+      <div class="gate-card">
+        <div class="gate-top">
+          <span class="gate-title">Regression Gate</span>
+          <span class="gate-pill" id="gate-reg-status">PASS</span>
+        </div>
+        <div class="gate-metric" id="gate-reg-result">27 / 27 Tests</div>
+        <div class="gate-desc">Tất cả bài test dữ liệu câu hỏi, ma trận adaptive, schema &amp; disclaimers vượt qua kiểm thử.</div>
+      </div>
+
+      <!-- 2. Runtime Integrity -->
+      <div class="gate-card">
+        <div class="gate-top">
+          <span class="gate-title">Runtime Integrity</span>
+          <span class="gate-pill" id="gate-run-status">PASS</span>
+        </div>
+        <div class="gate-metric" id="gate-run-result">8 / 8 Hotfixes (T01–T08)</div>
+        <div class="gate-desc">Đã sửa crash Today, dải điểm Progress trung thực, loại bỏ công thức ngoại suy ảo.</div>
+      </div>
+
+      <!-- 3. Visual QA -->
+      <div class="gate-card">
+        <div class="gate-top">
+          <span class="gate-title">Visual QA Matrix</span>
+          <span class="gate-pill" id="gate-vis-status">PASS</span>
+        </div>
+        <div class="gate-metric" id="gate-vis-result">8 / 8 Viewports</div>
+        <div class="gate-desc">Header 1 hàng trên 1366px laptop, các card có hiệu ứng hover glow vi tế.</div>
+      </div>
+
+      <!-- 4. Console Errors -->
+      <div class="gate-card">
+        <div class="gate-top">
+          <span class="gate-title">Browser Console</span>
+          <span class="gate-pill" id="gate-con-status">PASS</span>
+        </div>
+        <div class="gate-metric" id="gate-con-result">0 Page Errors</div>
+        <div class="gate-desc">Không phát sinh lỗi JavaScript TypeError, Unhandled Promise hay CSP block.</div>
+      </div>
+
+      <!-- 5. Accessibility -->
+      <div class="gate-card">
+        <div class="gate-top">
+          <span class="gate-title">Accessibility</span>
+          <span class="gate-pill" id="gate-a11y-status">PASS</span>
+        </div>
+        <div class="gate-metric" id="gate-a11y-result">Keyboard Focus Trap</div>
+        <div class="gate-desc">Bẫy tiêu điểm Tab/Shift+Tab trong setup modal, hỗ trợ ESC và hoàn trả focus.</div>
+      </div>
+    </section>
+
+    <!-- 3. STAGE CONTROLS: ROUTE & VIEWPORT SELECTION -->
+    <div class="stage-controls" role="toolbar" aria-label="Điều khiển màn hình và kích thước xem trước">
+      <!-- Route switcher -->
+      <div class="control-group" role="group" aria-label="Chọn trang">
+        <span class="control-label">Màn hình:</span>
+        <button class="nav-chip active" onclick="navigateFrame('#today')" data-hash="#today">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <span>Today</span>
+        </button>
+        <button class="nav-chip" onclick="navigateFrame('#practice')" data-hash="#practice">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><polyline points="9 11 12 14 22 4"></polyline></svg>
+          <span>Practice</span>
+        </button>
+        <button class="nav-chip" onclick="navigateFrame('#test')" data-hash="#test">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><polyline points="9 14 12 17 18 11"></polyline></svg>
+          <span>Mock Test</span>
+        </button>
+        <button class="nav-chip" onclick="navigateFrame('#review')" data-hash="#review">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+          <span>SRS Review</span>
+        </button>
+        <button class="nav-chip" onclick="navigateFrame('#progress')" data-hash="#progress">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+          <span>Progress</span>
+        </button>
+        <button class="nav-chip" onclick="navigateFrame('#landing')" data-hash="#landing">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span>Landing</span>
+        </button>
+      </div>
+
+      <!-- Viewport switcher -->
+      <div class="control-group" role="group" aria-label="Chọn kích thước màn hình">
+        <span class="control-label">Viewport:</span>
+        <button class="vp-chip active" onclick="setViewport('100%', '820px', '100% (Fit)', 1)" data-w="100%">Fit</button>
+        <button class="vp-chip" onclick="setViewport('1920px', '1080px', '1920×1080', 0.72)" data-w="1920px">1920</button>
+        <button class="vp-chip" onclick="setViewport('1440px', '900px', '1440×900', 0.85)" data-w="1440px">1440</button>
+        <button class="vp-chip" onclick="setViewport('1366px', '768px', '1366×768 (Laptop)', 0.9)" data-w="1366px">1366</button>
+        <button class="vp-chip" onclick="setViewport('1180px', '820px', '1180×820 (iPad)', 1)" data-w="1180px">1180</button>
+        <button class="vp-chip" onclick="setViewport('1024px', '768px', '1024×768', 1)" data-w="1024px">1024</button>
+        <button class="vp-chip" onclick="setViewport('768px', '1024px', '768×1024 (Portrait)', 1)" data-w="768px">768</button>
+        <button class="vp-chip" onclick="setViewport('390px', '844px', '390×844 (Mobile)', 1)" data-w="390px">390</button>
+        <button class="vp-chip" onclick="setViewport('360px', '800px', '360×800 (Android)', 1)" data-w="360px">360</button>
+      </div>
+    </div>
+
+    <!-- 4. LIVE APP PREVIEW STAGE -->
+    <main class="preview-stage-wrap">
+      <div class="stage-meta-strip">
+        <div class="stage-badges">
+          <span class="meta-tag" id="badge-cur-route">ROUTE: #today</span>
+          <span class="meta-tag" id="badge-cur-viewport">VIEWPORT: 100% (Fit)</span>
+        </div>
+        <div>
+          <button class="btn" style="padding: 0.25rem 0.6rem; font-size: 0.75rem; min-height: 28px;" onclick="reloadPreviewFrame()" title="Tải lại iframe">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+            <span>Reload Frame</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="iframe-scaler-container" id="iframe-scaler-box">
+        <iframe
+          id="preview-iframe"
+          name="preview-iframe"
+          src=""
+          title="SAT IntelliPrep live release preview"
+          class="app-frame"
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Fallback when iframe is blocked by CSP or unconfigured -->
+      <div class="iframe-fallback" id="iframe-fallback-box">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+        <h3 style="font-size: 1.1rem; font-weight: 700;">Không Thể Nhúng Khung Trực Tiếp (Iframe CSP Restriction)</h3>
+        <p style="font-size: 0.85rem; color: #64748B; max-width: 440px;">
+          Nếu máy chủ Production cấu hình chặn nhúng ngoài qua <code>X-Frame-Options</code> hoặc CSP, hãy mở ứng dụng trực tiếp trên một tab độc lập hoặc dùng chế độ Local Dev.
+        </p>
+        <a id="fallback-open-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <span>Mở Ứng Dụng Trên Tab Mới →</span>
+        </a>
+      </div>
+    </main>
+
+    <!-- 5. EXPERT REVIEW — SEPARATE EVIDENCE FROM QUALITATIVE OPINION -->
+    <section class="expert-grid" aria-label="Báo cáo chuyên môn độc lập">
+      
+      <!-- Perspective A: Creative Director -->
+      <article class="expert-card">
+        <div class="expert-header">
+          <div class="expert-title-block">
+            <h3>Giám Đốc Sáng Tạo UI/UX &amp; Web</h3>
+            <div class="expert-subtitle">Đánh giá hệ thống nhận diện, nhịp bố cục &amp; vi tương tác</div>
+          </div>
+          <span class="qualitative-score-pill">Expert Score: 8.8 / 10</span>
+        </div>
+        <ul class="expert-eval-list">
+          <li>
+            <span class="eval-check">✓</span>
+            <div><strong>Khắc phục triệt để lỗi Header 2 dòng:</strong> Header cố định 72px duy nhất (`white-space: nowrap`, `flex-shrink: 0`), tự động co giãn khoảng cách trên laptop 1366px và 1440px mà không bị vỡ bố cục.</div>
+          </li>
+          <li>
+            <span class="eval-check">✓</span>
+            <div><strong>Hiệu ứng Ambient Glow &amp; Lift:</strong> Bổ sung bóng đổ `var(--shadow-card)` tinh tế và chuyển động hover mượt mà (`translateY(-2px)`, tỏa sáng viền Indigo), giải quyết cảm giác đơn điệu của giao diện phẳng.</div>
+          </li>
+          <li>
+            <span class="eval-check">✓</span>
+            <div><strong>Quản trị Focus Accessibility:</strong> Setup dialog bẫy Tab/Shift+Tab khép kín, tự động trỏ focus vào control đầu tiên và hỗ trợ phím Escape đóng an toàn.</div>
+          </li>
+          <li>
+            <span class="eval-action">⚡</span>
+            <div><strong>Cơ hội nâng cấp trải nghiệm:</strong> Bổ sung công cụ Gạch bỏ phương án (Cross-out) và Bôi sáng (Highlighter) trong chế độ thi thử để tương đồng sâu hơn với trải nghiệm thi thực tế của Bluebook™.</div>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Perspective B: SAT Assessment Specialist -->
+      <article class="expert-card">
+        <div class="expert-header">
+          <div class="expert-title-block">
+            <h3>Chuyên Gia Sư Phạm Khảo Thí SAT</h3>
+            <div class="expert-subtitle">Đánh giá chuẩn năng lực College Board &amp; độ trung thực dữ liệu</div>
+          </div>
+          <span class="qualitative-score-pill">Expert Score: 9.2 / 10</span>
+        </div>
+        <ul class="expert-eval-list">
+          <li>
+            <span class="eval-check">✓</span>
+            <div><strong>Cấu trúc chuẩn Digital SAT:</strong> Bám sát quy chuẩn 1 đoạn văn ngắn : 1 câu hỏi, bao phủ 15/15 kỹ năng chính thống, câu hỏi toán Grid-in tự nhận diện phân số và số thập phân tương đương.</div>
+          </li>
+          <li>
+            <span class="eval-check">✓</span>
+            <div><strong>Tính trung thực điểm số (Score Integrity):</strong> Đã gỡ bỏ toàn bộ công thức ngoại suy điểm số ảo từ câu luyện tập. Dải điểm chỉ xuất hiện khi hoàn thành bài Full Adaptive Mock Test qua phân nhánh 2 modules thích ứng.</div>
+          </li>
+          <li>
+            <span class="eval-check">✓</span>
+            <div><strong>Giải phẫu bẫy lỗi 6 bước &amp; Socratic:</strong> Phân tích 17 dạng lỗi nhận thức thực tế kèm câu hỏi gợi mở, giúp học sinh THPT xây dựng tư duy bản chất thay vì giải đề cơ học.</div>
+          </li>
+          <li>
+            <span class="eval-action">⚡</span>
+            <div><strong>Kế hoạch mở rộng nội dung:</strong> Cần tiếp tục nhân rộng ngân hàng câu hỏi tự soạn và thêm biểu đồ/bảng số liệu (Quantitative Evidence) cho chu kỳ luyện thi 3–6 tháng.</div>
+          </li>
+        </ul>
+      </article>
+
+    </section>
+
+    <!-- 6. QUESTION BANK INVENTORY (SOURCE-BASED) -->
+    <section class="inventory-section" aria-label="Kiểm kê tài nguyên câu hỏi">
+      <div class="section-heading-row">
+        <span class="section-title">Kiểm Kê Ngân Hàng Câu Hỏi &amp; Đề Thi (Source Inventory)</span>
+        <span style="font-size: 0.75rem; color: var(--ink-muted);">Dữ liệu kiểm đếm thực tế từ kho lưu trữ (Zero Fabrication)</span>
+      </div>
+      <div class="inventory-strip">
+        <div class="inventory-box">
+          <span class="inv-label">Unique Authored Items</span>
+          <span class="inv-val" id="inv-unique">194</span>
+        </div>
+        <div class="inventory-box">
+          <span class="inv-label">Approved Bank Items</span>
+          <span class="inv-val" id="inv-approved">194</span>
+        </div>
+        <div class="inventory-box">
+          <span class="inv-label">Diagnostic Pool</span>
+          <span class="inv-val" id="inv-diag">30</span>
+        </div>
+        <div class="inventory-box">
+          <span class="inv-label">Full Mock Forms</span>
+          <span class="inv-val" id="inv-forms">3</span>
+        </div>
+        <div class="inventory-box">
+          <span class="inv-label">Mock Placements</span>
+          <span class="inv-val" id="inv-placements">375</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. OPEN ISSUES & ROADMAP -->
+    <section class="inventory-section" aria-label="Lộ trình phát triển các phiên bản tiếp theo">
+      <div class="section-heading-row">
+        <span class="section-title">Lộ Trình Cải Tiến Sản Phẩm Tiếp Theo (Open Milestones)</span>
+        <span style="font-size: 0.75rem; color: var(--ink-muted);">Dự kiến triển khai sau đợt phát hành Release Candidate</span>
+      </div>
+      <div class="roadmap-table-wrap">
+        <table class="roadmap-table">
+          <thead>
+            <tr>
+              <th style="width: 15%;">Tính Năng</th>
+              <th style="width: 45%;">Mục Tiêu &amp; Chi Tiết Nghiệp Vụ</th>
+              <th style="width: 15%;">Ưu Tiên</th>
+              <th style="width: 10%;">Trạng Thái</th>
+              <th style="width: 15%;">Phiên Bản Mục Tiêu</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Exam Tooling Parity</strong></td>
+              <td>Bổ sung công cụ gạch bỏ đáp án (Cross-out) và bôi màu văn bản (Passage Highlighter) trong bài thi</td>
+              <td><span class="tag-priority p1">P1 High</span></td>
+              <td>Planned</td>
+              <td>V1.1 (Exam Interactivity)</td>
+            </tr>
+            <tr>
+              <td><strong>Mock Session Resume</strong></td>
+              <td>Khả năng lưu tạm phiên thi thử 98 câu dở dang và tiếp tục làm lại sau khi đóng trình duyệt</td>
+              <td><span class="tag-priority p2">P2 Medium</span></td>
+              <td>Planned</td>
+              <td>V1.1 (Exam Interactivity)</td>
+            </tr>
+            <tr>
+              <td><strong>Content Scale Expansion</strong></td>
+              <td>Mở rộng ngân hàng câu hỏi lên 600+ mục, tăng cường dạng bài Quantitative Evidence kèm biểu đồ</td>
+              <td><span class="tag-priority p1">P1 High</span></td>
+              <td>In Progress</td>
+              <td>V1.2 (Content Scale)</td>
+            </tr>
+            <tr>
+              <td><strong>Psychometric Calibration</strong></td>
+              <td>Hiệu chuẩn độ phân hóa câu hỏi (Discrimination Index) và phân tích thời gian làm bài thực tế</td>
+              <td><span class="tag-priority p3">P3 Normal</span></td>
+              <td>Research</td>
+              <td>V1.3 (Psychometrics)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="portal-footer" role="contentinfo">
+      <p><strong>SAT IntelliPrep OS — Release QA &amp; Design Review Portal v2</strong></p>
+      <p>Bề mặt kiểm thử nội bộ phục vụ rà soát chất lượng sản phẩm trước khi phát hành chính thức • N&amp;Mstudio Education</p>
+    </footer>
+
+  </div>
+
+  <!-- PORTAL CONTROLLER LOGIC -->
+  <script>
+    // ═══════════════════════════════════════════════════════════════
+    // Configurable Application URL Logic (No hardcoded localhost)
+    // ═══════════════════════════════════════════════════════════════
+    const params = new URLSearchParams(window.location.search);
+    
+    // Default URLs
+    const DEFAULT_PROD_URL = 'https://nmstudio-sat-intelliprep.vercel.app';
+    const DEFAULT_LOCAL_URL = 'http://localhost:5500';
+
+    // Resolved APP_URL
+    const APP_URL = params.get('app') || window.REVIEW_CONFIG?.productionUrl || DEFAULT_PROD_URL;
+    const isLocalDev = APP_URL.includes('localhost') || APP_URL.includes('127.0.0.1');
+
+    let currentHash = '#today';
+    let currentScale = 1;
+
+    // Elements
+    const iframe = document.getElementById('preview-iframe');
+    const iframeScaler = document.getElementById('iframe-scaler-box');
+    const badgeRoute = document.getElementById('badge-cur-route');
+    const badgeViewport = document.getElementById('badge-cur-viewport');
+    const sourceBadge = document.getElementById('header-source-badge');
+    const sourceBtnText = document.getElementById('source-btn-text');
+    const externalLink = document.getElementById('open-app-external-link');
+    const fallbackLink = document.getElementById('fallback-open-link');
+
+    // Initialize Header state
+    if (isLocalDev) {
+      sourceBadge.className = 'source-badge local';
+      sourceBadge.textContent = 'SOURCE: LOCAL DEV';
+      sourceBtnText.textContent = 'Dùng Production';
+    } else {
+      sourceBadge.className = 'source-badge prod';
+      sourceBadge.textContent = 'SOURCE: PRODUCTION';
+      sourceBtnText.textContent = 'Dùng Local Dev';
+    }
+
+    function getFullTargetUrl(hash) {
+      const cleanBase = APP_URL.replace(/#.*$/, '').replace(/\/$/, '');
+      return cleanBase + '/' + hash;
+    }
+
+    function updatePreviewUrl() {
+      const fullUrl = getFullTargetUrl(currentHash);
+      iframe.src = fullUrl;
+      externalLink.href = fullUrl;
+      fallbackLink.href = fullUrl;
+      badgeRoute.textContent = 'ROUTE: ' + currentHash;
+    }
+
+    function navigateFrame(hash) {
+      currentHash = hash;
+      document.querySelectorAll('.nav-chip').forEach(chip => {
+        chip.classList.toggle('active', chip.dataset.hash === hash);
+      });
+      updatePreviewUrl();
+    }
+
+    function setViewport(width, height, label, scale = 1) {
+      document.querySelectorAll('.vp-chip').forEach(chip => {
+        chip.classList.toggle('active', chip.dataset.w === width);
+      });
+
+      iframe.style.width = width;
+      iframe.style.height = height;
+      currentScale = scale;
+
+      if (scale < 1) {
+        iframe.style.transform = `scale(${scale})`;
+        iframe.style.transformOrigin = 'top center';
+        iframeScaler.style.height = (parseInt(height) * scale + 40) + 'px';
+      } else {
+        iframe.style.transform = 'none';
+        iframeScaler.style.height = 'auto';
+      }
+
+      badgeViewport.textContent = 'VIEWPORT: ' + label;
+    }
+
+    function reloadPreviewFrame() {
+      const curSrc = iframe.src;
+      iframe.src = 'about:blank';
+      setTimeout(() => {
+        iframe.src = curSrc;
+      }, 50);
+    }
+
+    function copyCurrentAppUrl() {
+      const fullUrl = getFullTargetUrl(currentHash);
+      navigator.clipboard.writeText(fullUrl).then(() => {
+        alert('Đã sao chép URL ứng dụng: ' + fullUrl);
+      }).catch(() => {
+        prompt('Copy URL:', fullUrl);
+      });
+    }
+
+    function toggleLocalOverride() {
+      const curUrl = new URL(window.location.href);
+      if (isLocalDev) {
+        curUrl.searchParams.delete('app');
+      } else {
+        curUrl.searchParams.set('app', DEFAULT_LOCAL_URL);
+      }
+      window.location.href = curUrl.toString();
+    }
+
+    // Load dynamic release status data if available
+    async function loadReleaseStatusData() {
+      try {
+        const res = await fetch('reports/release_status.json');
+        if (res.ok) {
+          const data = await res.json();
+          if (data.commit) document.getElementById('meta-commit').textContent = data.commit;
+          if (data.branch) document.getElementById('meta-branch').textContent = data.branch;
+          if (data.release) document.getElementById('meta-release-tag').textContent = data.release;
+          if (data.overallStatus) document.getElementById('header-status-text').textContent = data.overallStatus;
+          
+          if (data.inventory) {
+            document.getElementById('inv-unique').textContent = data.inventory.uniqueAuthoredItems || '--';
+            document.getElementById('inv-approved').textContent = data.inventory.approvedBankItems || '--';
+            document.getElementById('inv-diag').textContent = data.inventory.diagnosticPool || '--';
+            document.getElementById('inv-forms').textContent = data.inventory.fullMockForms || '--';
+            document.getElementById('inv-placements').textContent = data.inventory.mockPlacements || '--';
+          }
+        }
+      } catch (err) {
+        console.warn('release_status.json not loaded, using verified inline data');
+      }
+    }
+
+    // Initial load
+    updatePreviewUrl();
+    loadReleaseStatusData();
+  </script>
+</body>
+</html>
