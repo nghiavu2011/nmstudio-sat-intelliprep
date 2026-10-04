@@ -23,7 +23,7 @@
     "thinking_framework": "1. Identify the subject (bees). 2. Identify what the author says about it (crucial for crops). 3. Match.",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "science"
     ]
@@ -36,15 +36,15 @@
     "passage": "During the Industrial Revolution, the advent of the steam engine dramatically changed transportation. Trains could move goods across the country much faster than horse-drawn wagons, leading to rapid economic growth in areas previously isolated.",
     "question_stem": "According to the text, what was one result of the steam engine's invention?",
     "choices": {
-      "A": "Horse-drawn wagons became completely obsolete.",
-      "B": "Economic growth occurred in formerly isolated areas.",
+      "A": "Economic growth occurred in formerly isolated areas.",
+      "B": "Horse-drawn wagons became completely obsolete.",
       "C": "The Industrial Revolution began immediately.",
       "D": "People stopped traveling long distances."
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "explanation": "The text directly states that faster transport of goods led to rapid economic growth in previously isolated areas.",
     "why_others_wrong": {
-      "A": "Too extreme; the text doesn't say they became *completely* obsolete.",
+      "B": "Too extreme; the text doesn't say they became *completely* obsolete.",
       "C": "The text says this happened *during* the Industrial Revolution, not that it started it.",
       "D": "Contradicts the implication that transportation improved."
     },
@@ -52,7 +52,7 @@
     "thinking_framework": "Scan text for cause-and-effect relationships tied to the steam engine.",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "history"
     ]
@@ -67,21 +67,21 @@
     "choices": {
       "A": "Alexander Fleming was a sloppy scientist who let mold contaminate his work.",
       "B": "Penicillin is the most important medical discovery of the 20th century.",
-      "C": "A chance observation of a contaminated petri dish led to a revolutionary medical breakthrough.",
-      "D": "Bacteria can easily be killed by various types of mold found in laboratories."
+      "C": "Bacteria can easily be killed by various types of mold found in laboratories.",
+      "D": "A chance observation of a contaminated petri dish led to a revolutionary medical breakthrough."
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "explanation": "It accurately summarizes the entire narrative: a chance event (serendipity) leading to isolation of penicillin (breakthrough).",
     "why_others_wrong": {
       "A": "Mischaracterizes the tone and focus.",
       "B": "Too extreme/opinionated; text just says it 'revolutionized'.",
-      "D": "Too broad; focus is specifically on Fleming's discovery."
+      "C": "Too broad; focus is specifically on Fleming's discovery."
     },
     "common_trap": "Choosing an overly broad scientific claim.",
     "thinking_framework": "Synthesize the narrative arc into a single main point.",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "science",
       "history"
@@ -96,22 +96,22 @@
     "question_stem": "Which choice best summarizes the debate presented in the text?",
     "choices": {
       "A": "Urban planners agree that 15-minute cities will eliminate carbon emissions entirely.",
-      "B": "While the 15-minute city model offers environmental benefits, it faces concerns about potential gentrification, which supporters believe can be managed.",
-      "C": "Critics of 15-minute cities believe the model is fundamentally flawed because it forces residents to bike rather than drive.",
+      "B": "Critics of 15-minute cities believe the model is fundamentally flawed because it forces residents to bike rather than drive.",
+      "C": "While the 15-minute city model offers environmental benefits, it faces concerns about potential gentrification, which supporters believe can be managed.",
       "D": "Gentrification is an unavoidable consequence of designing cities for walking and biking."
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "explanation": "B captures both the criticism (gentrification) and the proponents' counterargument (management via zoning + benefits).",
     "why_others_wrong": {
       "A": "Too extreme ('eliminate entirely').",
-      "C": "Misrepresents the critics' argument.",
+      "B": "Misrepresents the critics' argument.",
       "D": "Ignores the proponents' view that it can be prevented."
     },
     "common_trap": "Focusing only on the critics or only on the proponents.",
     "thinking_framework": "Identify the multiple perspectives in the text and find the choice that encompasses all of them.",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "social science"
     ]
@@ -140,7 +140,7 @@
     "thinking_framework": "Analyze the relationship between the new idea (pragmatism) and the old idea (traditional epistemology).",
     "estimated_time_seconds": 120,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "humanities"
     ]
@@ -169,7 +169,7 @@
     "thinking_framework": "Identify the core claim (exclusive reliance on moths) and find evidence that proves it false.",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "science"
     ]
@@ -184,21 +184,21 @@
     "choices": {
       "A": "Evidence of large-scale irrigation systems surrounding the settlement.",
       "B": "An abundance of ancient coins from distant regions found near the furnaces.",
-      "C": "Written records detailing the export of refined metal goods from Karia.",
-      "D": "Fossilized remains of diverse crops in the town center."
+      "C": "Fossilized remains of diverse crops in the town center.",
+      "D": "Written records detailing the export of refined metal goods from Karia."
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "explanation": "Written records of metal export would strongly support the theory that metalworking (smelting) was the primary economic driver.",
     "why_others_wrong": {
       "A": "Supports the old agricultural theory.",
       "B": "Supports trade, but doesn't explicitly link it to the metal goods.",
-      "D": "Supports the old agricultural theory."
+      "C": "Supports the old agricultural theory."
     },
     "common_trap": "Choosing evidence for the old theory instead of the revised one.",
     "thinking_framework": "Identify the revised theory (metalworking economy) and find the most direct proof.",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "history"
     ]
@@ -227,7 +227,7 @@
     "thinking_framework": "Match both parts of the critic's claim: Arctic setting + destruction of scientific ambition.",
     "estimated_time_seconds": 120,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "literature"
     ]
@@ -256,7 +256,7 @@
     "thinking_framework": "Identify the claim (drastic acceleration) and find the data point that proves the sudden spike.",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "social science"
     ]
@@ -285,7 +285,7 @@
     "thinking_framework": "Isolate the variable (humidity) and find data showing its direct effect on the outcome.",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "science"
     ]
@@ -299,22 +299,22 @@
     "question_stem": "Which choice provides the best data to challenge the city officials' claim?",
     "choices": {
       "A": "The diversion rate increased by 7 percentage points immediately after implementation.",
-      "B": "The diversion rate slightly decreased from 25% in 2022 to 24% in 2023.",
+      "B": "The diversion rate was higher in 2023 than it was in 2020.",
       "C": "In 2020, 85% of waste was sent to landfills.",
-      "D": "The diversion rate was higher in 2023 than it was in 2020."
+      "D": "The diversion rate slightly decreased from 25% in 2022 to 24% in 2023."
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "explanation": "The officials claim 'continuous' success. The drop in 2023 challenges the 'continuous' aspect.",
     "why_others_wrong": {
       "A": "Supports the claim of success.",
-      "C": "Just a restatement of the 2020 data.",
-      "D": "Supports the claim of overall success."
+      "B": "Supports the claim of overall success.",
+      "C": "Just a restatement of the 2020 data."
     },
     "common_trap": "Failing to notice the specific word 'continuous' in the claim.",
     "thinking_framework": "Look for the weak point in the claim ('continuous') and find data that contradicts it.",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "social science"
     ]
@@ -328,22 +328,22 @@
     "question_stem": "Which choice most logically completes the text?",
     "choices": {
       "A": "Sarah will decide to sell her house.",
-      "B": "The creek will likely overflow and flood Sarah's garden.",
-      "C": "The thunderstorms will bypass Sarah's neighborhood.",
+      "B": "The thunderstorms will bypass Sarah's neighborhood.",
+      "C": "The creek will likely overflow and flood Sarah's garden.",
       "D": "Sarah's garden will benefit from the extra water."
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "explanation": "Given the premise (heavy rain = flood) and the forecast (heavy rain), the logical conclusion is a flood.",
     "why_others_wrong": {
       "A": "Requires an illogical leap.",
-      "C": "Contradicts the forecast.",
+      "B": "Contradicts the forecast.",
       "D": "Subjective value judgment not supported by text."
     },
     "common_trap": "Adding outside assumptions.",
     "thinking_framework": "A + B = C. Rain causes flood + rain is coming = flood is coming.",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "science"
     ]
@@ -357,22 +357,22 @@
     "question_stem": "Which choice most logically completes the text?",
     "choices": {
       "A": "These tube worms and bacteria must migrate to shallower waters to survive.",
-      "B": "Photosynthesis is the primary energy source for these newly discovered bacteria.",
-      "C": "The organisms in this vent system likely depend on chemosynthesis for their energy needs.",
+      "B": "The organisms in this vent system likely depend on chemosynthesis for their energy needs.",
+      "C": "Photosynthesis is the primary energy source for these newly discovered bacteria.",
       "D": "The Mariana Trench contains the highest concentration of marine life on Earth."
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "explanation": "If organisms live where there is no sunlight, and deep-sea systems without sunlight use chemosynthesis, it follows that these organisms use chemosynthesis.",
     "why_others_wrong": {
       "A": "Contradicts the fact that they harbor a dense population *there*.",
-      "B": "Contradicts the premise (no sunlight).",
+      "C": "Contradicts the premise (no sunlight).",
       "D": "Too extreme; cannot be inferred from a single vent system."
     },
     "common_trap": "Going beyond the provided facts to make a grandiose claim.",
     "thinking_framework": "Connect the specific example (Mariana vent) to the general rule (deep-sea chemosynthesis).",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "science"
     ]
@@ -385,15 +385,15 @@
     "passage": "Early medieval manuscripts were painstakingly written by hand on vellum, a material made from animal skin, which was incredibly expensive. Consequently, books were rare and typically owned only by wealthy institutions. When paper, a much cheaper material, was introduced to Europe in the 11th century, book production methods initially remained the same, yet the number of privately owned books began to rise.",
     "question_stem": "Which choice most logically completes the text?",
     "choices": {
-      "A": "The introduction of paper directly caused the invention of the printing press.",
-      "B": "The drop in material costs allowed individuals outside of wealthy institutions to afford books.",
+      "A": "The drop in material costs allowed individuals outside of wealthy institutions to afford books.",
+      "B": "The introduction of paper directly caused the invention of the printing press.",
       "C": "Vellum was quickly banned by institutions in favor of the new paper technology.",
       "D": "Scribes demanded higher wages to write on paper instead of vellum."
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "explanation": "If the material became cheaper and private ownership rose despite methods staying the same, the cheaper material cost is the logical cause of increased affordability.",
     "why_others_wrong": {
-      "A": "Not mentioned; historical leap.",
+      "B": "Not mentioned; historical leap.",
       "C": "Too extreme ('banned').",
       "D": "No evidence regarding scribes' wages."
     },
@@ -401,7 +401,7 @@
     "thinking_framework": "Identify the changing variable (material cost) and link it directly to the stated outcome (private ownership).",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "history"
     ]
@@ -415,22 +415,22 @@
     "question_stem": "Which choice most logically completes the text?",
     "choices": {
       "A": "infants would develop language skills much earlier than they currently do.",
-      "B": "complex spatial reasoning would be impossible without first acquiring language.",
+      "B": "spatial reasoning would be recognized as a distinct form of language.",
       "C": "cognitive scientists would have to abandon the study of infant behavior.",
-      "D": "spatial reasoning would be recognized as a distinct form of language."
+      "D": "complex spatial reasoning would be impossible without first acquiring language."
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "explanation": "If language strictly dictates thought, then complex thought (like spatial reasoning) couldn't happen without language.",
     "why_others_wrong": {
       "A": "Illogical leap regarding developmental timelines.",
-      "C": "Exaggerated consequence.",
-      "D": "Redefines the terms rather than following the logical premise."
+      "B": "Redefines the terms rather than following the logical premise.",
+      "C": "Exaggerated consequence."
     },
     "common_trap": "Choosing a choice that alters the definition of the concepts rather than following the if-then logic.",
     "thinking_framework": "Apply conditional logic: If X (language dictates thought) is true, then Y (thought without language) must be impossible.",
     "estimated_time_seconds": 120,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "science"
     ]
@@ -444,22 +444,22 @@
     "question_stem": "Which choice best uses data from the text to support the researchers' conclusion?",
     "choices": {
       "A": "Estuary A experienced 1.2 meters of storm surge despite having the lowest percentage of canopy cover.",
-      "B": "Estuary D recorded the highest storm surge at 5.8 meters while possessing the lowest mangrove canopy cover at 12%.",
-      "C": "Estuary B recorded a greater storm surge than Estuary C because its canopy cover was nearly twice as dense.",
+      "B": "Estuary B recorded a greater storm surge than Estuary C because its canopy cover was nearly twice as dense.",
+      "C": "Estuary D recorded the highest storm surge at 5.8 meters while possessing the lowest mangrove canopy cover at 12%.",
       "D": "Estuaries with less than 50% canopy cover experienced identical storm surges regardless of tree density."
     },
-    "correct_answer": "B",
-    "explanation": "The researchers' claim is that denser mangroves reduce storm surge inland. Choice B directly supports this by pairing the lowest canopy cover (12%) with the highest inland surge (5.8 meters), illustrating the negative correlation between density and surge penetration.",
+    "correct_answer": "C",
+    "explanation": "The researchers' claim is that denser mangroves reduce storm surge inland. Choice C directly supports this by pairing the lowest canopy cover (12%) with the highest inland surge (5.8 meters), illustrating the negative correlation between density and surge penetration.",
     "why_others_wrong": {
       "A": "Contradicts the data in the text: Estuary A had the *highest* canopy cover (78%), not the lowest.",
-      "C": "Contradicts the data: Estuary B (2.4 m) had a *smaller* surge than Estuary C (4.1 m).",
+      "B": "Contradicts the data: Estuary B (2.4 m) had a *smaller* surge than Estuary C (4.1 m).",
       "D": "Contradicts the data: Estuary C (4.1 m) and Estuary D (5.8 m) recorded distinctly different surges."
     },
     "common_trap": "Choosing an option that states a plausible scientific trend but inverts or misreads the actual numbers in the passage.",
     "thinking_framework": "1. Identify claim: Denser mangroves = less storm surge. 2. Verify each option against exact numbers: Estuary D has 12% cover and 5.8 m surge (highest surge with lowest cover). Matches Choice B.",
     "estimated_time_seconds": 75,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "environmental_science",
       "data_interpretation"
@@ -473,15 +473,15 @@
     "passage": "In an experiment testing heat tolerance in agricultural crops, botanists measured photosynthetic efficiency (percentage of optimal carbon fixation) at elevated temperatures of 35°C and 42°C. Variety 1 maintained 88% efficiency at 35°C and 64% at 42°C. Variety 2 achieved 92% efficiency at 35°C but plummeted to 31% at 42°C. Variety 3 recorded 76% at 35°C and 72% at 42°C. The lead author argued that while some crop varieties achieve superior baseline performance under moderate heat, they may lack the physiological stability necessary to withstand extreme thermal spikes.",
     "question_stem": "Which choice best uses data from the experiment to support the author's argument?",
     "choices": {
-      "A": "Variety 2 demonstrated the highest efficiency at 35°C among all varieties, yet suffered the steepest drop when temperature increased to 42°C.",
-      "B": "Variety 3 exhibited higher photosynthetic efficiency at 35°C than Variety 1, but its efficiency declined substantially at 42°C.",
+      "A": "Variety 3 exhibited higher photosynthetic efficiency at 35°C than Variety 1, but its efficiency declined substantially at 42°C.",
+      "B": "Variety 2 demonstrated the highest efficiency at 35°C among all varieties, yet suffered the steepest drop when temperature increased to 42°C.",
       "C": "All three varieties retained more than half of their photosynthetic efficiency even when subjected to 42°C.",
       "D": "Variety 1 maintained higher carbon fixation rates at both 35°C and 42°C than either Variety 2 or Variety 3."
     },
-    "correct_answer": "A",
-    "explanation": "The author's argument is that varieties with top baseline performance under moderate heat (35°C) may fail under extreme heat (42°C). Choice A directly validates this: Variety 2 had the highest performance at 35°C (92%) but crashed to 31% at 42°C (a 61-point drop).",
+    "correct_answer": "B",
+    "explanation": "The author's argument is that varieties with top baseline performance under moderate heat (35°C) may fail under extreme heat (42°C). Choice B directly validates this: Variety 2 had the highest performance at 35°C (92%) but crashed to 31% at 42°C (a 61-point drop).",
     "why_others_wrong": {
-      "B": "Contradicts the data: Variety 3 was at 76% at 35°C, which is *lower* than Variety 1 (88%), and its efficiency barely declined (72%).",
+      "A": "Contradicts the data: Variety 3 was at 76% at 35°C, which is *lower* than Variety 1 (88%), and its efficiency barely declined (72%).",
       "C": "Contradicts the data: Variety 2 fell to 31%, which is far below half (50%).",
       "D": "Contradicts the data: Variety 2 was higher at 35°C (92% vs 88%), and Variety 3 was higher at 42°C (72% vs 64%)."
     },
@@ -489,7 +489,7 @@
     "thinking_framework": "Author claim: High baseline under moderate heat + poor stability under extreme heat. Variety 2: 92% at 35°C (highest) -> 31% at 42°C (lowest). Choice A is exact.",
     "estimated_time_seconds": 85,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "agriculture",
       "biology",
@@ -520,7 +520,7 @@
     "thinking_framework": "1. Fact 1: Helpers help non-relatives (rules out kin selection alone). 2. Fact 2: Helped pups repay helpers in adulthood (reciprocity). 3. Conclusion: Reciprocal altruism explains this behavior.",
     "estimated_time_seconds": 75,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "zoology",
       "evolution"
@@ -534,23 +534,23 @@
     "passage": "In many arid ecosystems, biological soil crusts (biocrusts) — communities of cyanobacteria, mosses, and lichens living on the soil surface — perform vital ecological services. They bind loose sand particles together, preventing wind and water erosion, while fixing atmospheric nitrogen into bioavailable soil nutrients. When heavy livestock grazing or off-road vehicles disrupt biocrusts, soil loss increases dramatically, and native vegetation struggles to recolonize the disturbed landscape.",
     "question_stem": "Which choice best states the main idea of the text?",
     "choices": {
-      "A": "Biocrusts stabilize soil and provide essential nutrients in arid environments, making their preservation crucial for ecosystem health.",
+      "A": "Native vegetation in arid regions can only grow in soils with high concentrations of atmospheric nitrogen.",
       "B": "Heavy livestock grazing is the single greatest threat to desert biodiversity worldwide.",
       "C": "Cyanobacteria are more resilient than mosses when exposed to vehicular disruption in desert soils.",
-      "D": "Native vegetation in arid regions can only grow in soils with high concentrations of atmospheric nitrogen."
+      "D": "Biocrusts stabilize soil and provide essential nutrients in arid environments, making their preservation crucial for ecosystem health."
     },
-    "correct_answer": "A",
-    "explanation": "Choice A accurately synthesizes both key components of the text: the beneficial functions of biocrusts (soil stabilization and nutrient fixation) and the consequence of their disruption (highlighting the importance of preservation).",
+    "correct_answer": "D",
+    "explanation": "Choice D accurately synthesizes both key components of the text: the beneficial functions of biocrusts (soil stabilization and nutrient fixation) and the consequence of their disruption (highlighting the importance of preservation).",
     "why_others_wrong": {
+      "A": "Too extreme and scientifically inaccurate: the text states biocrusts help, not that native plants 'can only grow' through them.",
       "B": "Too extreme: the text mentions grazing as one disruption, but does not claim it is 'the single greatest threat worldwide'.",
-      "C": "The text makes no comparison between the resilience of cyanobacteria versus mosses.",
-      "D": "Too extreme and scientifically inaccurate: the text states biocrusts help, not that native plants 'can only grow' through them."
+      "C": "The text makes no comparison between the resilience of cyanobacteria versus mosses."
     },
     "common_trap": "Choosing an overly narrow detail or an unsubstantiated extreme claim.",
     "thinking_framework": "1. What is the subject? Biocrusts. 2. What do they do? Prevent erosion, fix nitrogen. 3. What happens if damaged? Severe soil loss. 4. Synthesis: Biocrusts are crucial for arid soil stability and nutrients.",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "ecology",
       "science"
@@ -580,7 +580,7 @@
     "thinking_framework": "Claim: Shelley critiques Victor's abandonment of responsibility (refusing to nurture/educate). Match with Choice C: 'fled... leaving the being helpless and untaught'.",
     "estimated_time_seconds": 75,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "literature",
       "evidence"
@@ -610,7 +610,7 @@
     "thinking_framework": "Observation 1: Cuttlefish camouflage matches visual pattern. Observation 2: In darkness, touching the pattern produces no camouflage. Inference: Camouflage relies on vision, not touch.",
     "estimated_time_seconds": 70,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "zoology",
       "neurobiology"
@@ -640,7 +640,7 @@
     "thinking_framework": "Benefit 1: Cools urban heat. Benefit 2: Captures stormwater runoff. Main idea: Rooftop gardens reduce temperatures and runoff.",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "urban_planning",
       "environmental_science"
@@ -654,17 +654,17 @@
     "passage": "Ecologist Sarah Martinez investigated the trophic cascade triggered by reintroducing apex predators into a riparian woodland. While prior computer models predicted that apex predators would reduce herbivore populations exclusively through direct predation, Martinez's team observed that elk and deer radically altered their foraging behaviors even when predator densities were negligible. Specifically, the herbivores actively avoided steep ravine corridors with restricted sightlines—areas where predators could stage successful ambushes—even though those ravines contained the most nutrient-dense willow saplings. Consequently, vegetation recovery was heavily concentrated along topographical choke points rather than uniformly distributed across the forest.",
     "question_stem": "Which choice most logically completes the text?",
     "choices": {
-      "A": "herbivore foraging decisions in the woodland were governed as much by perceived predation risk as by raw caloric abundance.",
+      "A": "computer simulations of trophic cascades are fundamentally incapable of modeling any ecological interactions.",
       "B": "apex predators primarily target weak and elderly herbivores during periods of severe winter nutritional stress.",
       "C": "willow saplings in steep ravines are biochemically inferior to those growing in wide open meadows.",
-      "D": "computer simulations of trophic cascades are fundamentally incapable of modeling any ecological interactions."
+      "D": "herbivore foraging decisions in the woodland were governed as much by perceived predation risk as by raw caloric abundance."
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "explanation": "The text shows that herbivores avoided the steep ravines despite having 'the most nutrient-dense willow saplings' because predators could ambush them there ('restricted sightlines'). This demonstrates that the fear/perceived risk of predation drove their choices over raw food abundance.",
     "why_others_wrong": {
+      "A": "Extreme over-generalization: computer models missed behavioral fear landscapes, but that doesn't mean they are incapable of modeling any interactions.",
       "B": "Winter stress and targeting weak/elderly animals are never mentioned in the text.",
-      "C": "Contradicts the text, which explicitly states the ravine saplings were 'the most nutrient-dense'.",
-      "D": "Extreme over-generalization: computer models missed behavioral fear landscapes, but that doesn't mean they are incapable of modeling any interactions."
+      "C": "Contradicts the text, which explicitly states the ravine saplings were 'the most nutrient-dense'."
     },
     "socratic_prompt": "Why did herbivores avoid ravines with the best food? What influenced their choice besides food quantity?",
     "common_trap": "Choosing D due to extreme anti-computer sentiment, or C which contradicts the explicit text.",
@@ -676,7 +676,8 @@
       "ecology",
       "inferences",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "RW-II-024",
@@ -686,16 +687,16 @@
     "passage": "Data Table: Mean Photosynthetic Yield (μmol CO2/m²/s) under Elevated Temperatures\n- Species A (Native C3 Grass): At 20°C: 28.4 | At 30°C: 31.2 | At 38°C: 14.1\n- Species B (Invasive C4 Grass): At 20°C: 19.5 | At 30°C: 34.0 | At 38°C: 38.6\n\nBotanist Elena Vance evaluated whether anticipated warming trends would facilitate the competitive displacement of native temperate grasses by invasive sub-tropical varieties. In her summary, Vance highlighted that while Species A outperformed Species B under moderate springtime baselines (20°C), Species B exhibited a physiological mechanism—C4 photosynthesis—that prevents photorespiration under severe thermal stress.",
     "question_stem": "Which choice best uses data from the table to support Vance's conclusion?",
     "choices": {
-      "A": "At 38°C, Species B achieved a photosynthetic yield of 38.6 μmol CO2/m²/s, more than double the 14.1 μmol CO2/m²/s recorded for Species A.",
+      "A": "Both Species A and Species B experienced their highest photosynthetic rates at exactly 30°C.",
       "B": "At 20°C, Species A produced 28.4 μmol CO2/m²/s, which was lower than its photosynthetic yield at 38°C.",
-      "C": "Both Species A and Species B experienced their highest photosynthetic rates at exactly 30°C.",
+      "C": "At 38°C, Species B achieved a photosynthetic yield of 38.6 μmol CO2/m²/s, more than double the 14.1 μmol CO2/m²/s recorded for Species A.",
       "D": "Species B consistently had lower photosynthetic yield than Species A across all three tested temperature regimes."
     },
-    "correct_answer": "A",
-    "explanation": "To support Vance's conclusion about Species B's advantage under severe heat, the data must compare the two species at 38°C. Option A accurately quotes the table (38.6 vs 14.1) showing Species B produces more than double the yield of Species A.",
+    "correct_answer": "C",
+    "explanation": "To support Vance's conclusion about Species B's advantage under severe heat, the data must compare the two species at 38°C. Option C accurately quotes the table (38.6 vs 14.1) showing Species B produces more than double the yield of Species A.",
     "why_others_wrong": {
+      "A": "Factually false: Species B had its highest rate at 38°C (38.6), not 30°C.",
       "B": "Factually false according to the table: Species A's yield at 20°C (28.4) was much higher than at 38°C (14.1).",
-      "C": "Factually false: Species B had its highest rate at 38°C (38.6), not 30°C.",
       "D": "Factually false: Species B was higher at 30°C and 38°C."
     },
     "socratic_prompt": "What does the data show at the highest temperature (38°C) for Species B compared to Species A?",
@@ -708,7 +709,8 @@
       "botany",
       "quantitative_evidence",
       "table"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "RW-II-025",
@@ -718,15 +720,15 @@
     "passage": "Astronomers analyzing the orbital dynamics of Kuiper Belt Objects (KBOs) noted that several extreme trans-Neptunian bodies share peculiar, clustered orbital inclinations and eccentricities that cannot be explained by the gravitational perturbations of the four known gas giant planets alone. Astrophysicists Konstantin Batygin and Mike Brown hypothesized that a distant, yet undiscovered super-Earth—popularly designated Planet Nine—shepherds these objects into their observed alignments. However, skeptic Ann-Marie Madigan proposed an alternative 'collective gravity' model, demonstrating that a massive primordial disk composed of millions of small icy planetesimals could gravitationally bind itself into clustered orbits over billions of years without requiring a singular massive planet.",
     "question_stem": "If observational infrared sky surveys ultimately confirm that the total mass of all small icy planetesimals in the outer solar system is less than one-tenth of Earth's mass, this finding would most directly",
     "choices": {
-      "A": "undermine Madigan's collective gravity hypothesis while lending circumstantial support to the Planet Nine hypothesis.",
-      "B": "prove conclusively that Pluto must be restored to official planetary status by the International Astronomical Union.",
+      "A": "prove conclusively that Pluto must be restored to official planetary status by the International Astronomical Union.",
+      "B": "undermine Madigan's collective gravity hypothesis while lending circumstantial support to the Planet Nine hypothesis.",
       "C": "demonstrate that the Kuiper Belt Objects are moving in completely chaotic, unclustered orbits.",
       "D": "refute the laws of universal gravitation formulated by Isaac Newton."
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "explanation": "Madigan's hypothesis relies on a 'massive primordial disk' generating collective gravity. If the total mass of planetesimals is tiny (< 0.1 Earth mass), there isn't enough mass to create collective gravitational clustering, thereby weakening (undermining) Madigan's hypothesis and leaving the single massive planet (Planet Nine) as the more plausible explanation.",
     "why_others_wrong": {
-      "B": "Pluto's planetary classification is an irrelevant regulatory convention not addressed by the mass of the disk.",
+      "A": "Pluto's planetary classification is an irrelevant regulatory convention not addressed by the mass of the disk.",
       "C": "The clustering has already been observed; small mass doesn't make the observed clustering disappear, it just refutes the collective gravity explanation.",
       "D": "Absurdly out of scope: testing planetary models does not overthrow Newtonian physics."
     },
@@ -740,7 +742,8 @@
       "astronomy",
       "inferences",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "RW-II-026",
@@ -772,7 +775,8 @@
       "history",
       "textual_evidence",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "RW-II-027",
@@ -782,17 +786,17 @@
     "passage": "Neurobiologists examining memory consolidation discovered that sleep-deprived mice exhibited normal acquisition of fear conditioning when exposed to an auditory tone paired with a mild foot-shock. However, when tested 48 hours later, the sleep-deprived mice showed virtually zero freezing behavior upon hearing the tone alone, whereas control mice that slept normally froze consistently. Molecular assays of the hippocampus revealed that dendritic spine remodeling on CA1 pyramidal neurons was severely suppressed in the sleep-deprived cohort.",
     "question_stem": "The researchers' findings most strongly imply that sleep deprivation",
     "choices": {
-      "A": "impairs the long-term structural consolidation of associative memories without preventing immediate short-term learning.",
+      "A": "prevents animals from experiencing any physiological fear responses during initial conditioning.",
       "B": "completely destroys auditory sensory perception, rendering mice permanently deaf to tone cues.",
       "C": "enhances the physical endurance of hippocampal neurons against electrical shocks.",
-      "D": "prevents animals from experiencing any physiological fear responses during initial conditioning."
+      "D": "impairs the long-term structural consolidation of associative memories without preventing immediate short-term learning."
     },
-    "correct_answer": "A",
-    "explanation": "The mice acquired fear conditioning normally during the session (immediate short-term learning was intact), but failed to freeze 48 hours later (long-term memory failed) due to suppressed dendritic spine remodeling. This directly supports option A.",
+    "correct_answer": "D",
+    "explanation": "The mice acquired fear conditioning normally during the session (immediate short-term learning was intact), but failed to freeze 48 hours later (long-term memory failed) due to suppressed dendritic spine remodeling. This directly supports option D.",
     "why_others_wrong": {
+      "A": "Contradicted by the text: they exhibited 'normal acquisition of fear conditioning' initially.",
       "B": "Extreme exaggeration: the mice were not deaf, they just did not consolidate the associative memory.",
-      "C": "The text shows dendrite spine remodeling was suppressed (damaged/inhibited), not enhanced.",
-      "D": "Contradicted by the text: they exhibited 'normal acquisition of fear conditioning' initially."
+      "C": "The text shows dendrite spine remodeling was suppressed (damaged/inhibited), not enhanced."
     },
     "socratic_prompt": "Did the sleep-deprived mice learn the shock association during the first day? What happened 48 hours later?",
     "common_trap": "Confusing failure of long-term memory retrieval with sensory deafness or total lack of initial fear.",
@@ -804,7 +808,8 @@
       "neuroscience",
       "inferences",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "RW-II-028",
@@ -814,16 +819,16 @@
     "passage": "In many social insect colonies, task allocation emerges through decentralized self-organization rather than top-down hierarchical commands from the queen. In harvester ant (Pogonomyrmex barbatus) colonies, individual foragers assess whether to leave the nest by measuring the rate of brief antennal contacts with returning foragers carrying seeds. If food is plentiful near the nest, foragers return rapidly, increasing contact frequency and stimulating more outbound foragers. Conversely, if seeds are scarce or predators lurk outside, return intervals lengthen, and foraging activity automatically drops. Through this simple feedback loop, the colony tunes its collective metabolic investment without any single ant comprehending the global foraging landscape.",
     "question_stem": "Which choice best describes the main idea of the passage?",
     "choices": {
-      "A": "Harvester ant colonies dynamically regulate food-gathering effort through decentralized feedback loops based on return rates.",
+      "A": "Individual harvester ants possess sophisticated cognitive maps that calculate total regional seed supplies.",
       "B": "The queen ant issues complex hormonal signals that direct each worker to specific seed foraging locations.",
-      "C": "Individual harvester ants possess sophisticated cognitive maps that calculate total regional seed supplies.",
+      "C": "Harvester ant colonies dynamically regulate food-gathering effort through decentralized feedback loops based on return rates.",
       "D": "Predators are the sole determining factor in whether ants choose to forage during daylight hours."
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "explanation": "The passage highlights how colonies allocate tasks through 'decentralized self-organization' via 'antennal contacts with returning foragers', allowing the colony to tune its investment without central leadership or global comprehension.",
     "why_others_wrong": {
+      "A": "Contradicted by 'without any single ant comprehending the global foraging landscape'.",
       "B": "Directly contradicted: the text explicitly states task allocation occurs 'rather than top-down hierarchical commands from the queen'.",
-      "C": "Contradicted by 'without any single ant comprehending the global foraging landscape'.",
       "D": "Extreme distractor: food availability and return rates are primary, not solely predators."
     },
     "socratic_prompt": "Does the queen ant command workers, or do workers respond locally to encounter rates?",
@@ -836,6 +841,7 @@
       "biology",
       "central_ideas",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   }
 ]

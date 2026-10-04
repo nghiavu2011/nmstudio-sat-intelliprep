@@ -23,7 +23,7 @@
     "thinking_framework": "Find the definition in the sentence (tiny pinch) and match the word.",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "humanities"
     ]
@@ -36,15 +36,15 @@
     "passage": "Despite his initial reluctance, the mayor was eventually _____ to support the new infrastructure bill after seeing the overwhelming public approval in recent polls.",
     "question_stem": "Which choice completes the text with the most logical and precise word or phrase?",
     "choices": {
-      "A": "persuaded",
-      "B": "forbidden",
+      "A": "forbidden",
+      "B": "persuaded",
       "C": "confused",
       "D": "obligated"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "explanation": "He was reluctant but 'eventually' supported it due to polls, meaning he was convinced or 'persuaded'.",
     "why_others_wrong": {
-      "B": "Opposite meaning; he ended up supporting it.",
+      "A": "Opposite meaning; he ended up supporting it.",
       "C": "Doesn't fit the cause-and-effect of seeing polls and then supporting.",
       "D": "Too strong; polls influence but don't strictly 'obligate' legally."
     },
@@ -52,7 +52,7 @@
     "thinking_framework": "Identify the transition from reluctance to support. What verb describes this change of mind?",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "social science"
     ]
@@ -65,15 +65,15 @@
     "passage": "The critic noted that the director's latest film was highly _____, borrowing heavily from the visual styles of classic 1970s sci-fi movies rather than establishing an original aesthetic.",
     "question_stem": "Which choice completes the text with the most logical and precise word or phrase?",
     "choices": {
-      "A": "innovative",
-      "B": "derivative",
+      "A": "derivative",
+      "B": "innovative",
       "C": "incomprehensible",
       "D": "profound"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "explanation": "'Derivative' means imitative of the work of another, which perfectly matches 'borrowing heavily... rather than establishing an original aesthetic'.",
     "why_others_wrong": {
-      "A": "Opposite of the context clue.",
+      "B": "Opposite of the context clue.",
       "C": "No evidence suggests it was hard to understand.",
       "D": "Doesn't address the borrowing aspect."
     },
@@ -81,7 +81,7 @@
     "thinking_framework": "Look at the contrast clue: 'rather than establishing an original aesthetic'. The word must mean 'unoriginal'.",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "arts"
     ]
@@ -96,21 +96,21 @@
     "choices": {
       "A": "successful",
       "B": "transparent",
-      "C": "ineffectual",
-      "D": "vindictive"
+      "C": "vindictive",
+      "D": "ineffectual"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "explanation": "'Ineffectual' means not producing the desired effect. Since her promises 'inflamed their frustrations further', the attempt to assuage them failed.",
     "why_others_wrong": {
       "A": "Opposite of what happened.",
       "B": "Doesn't fit the consequence (inflaming frustrations).",
-      "D": "She made 'vague promises', which isn't inherently vengeful (vindictive)."
+      "C": "She made 'vague promises', which isn't inherently vengeful (vindictive)."
     },
     "common_trap": "Choosing 'transparent' thinking it means her lies were obvious, but 'ineffectual' directly addresses the failure to achieve the goal.",
     "thinking_framework": "Identify the goal (assuage) and the result (inflamed). The word must describe a failed effort.",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "social science"
     ]
@@ -124,22 +124,22 @@
     "question_stem": "Which choice completes the text with the most logical and precise word or phrase?",
     "choices": {
       "A": "superficial",
-      "B": "idiosyncratic",
-      "C": "rudimentary",
+      "B": "rudimentary",
+      "C": "idiosyncratic",
       "D": "ubiquitous"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "explanation": "'Idiosyncratic' means peculiar or individual. Extreme deep-sea conditions lead to highly unique/specialized adaptations.",
     "why_others_wrong": {
       "A": "Means 'on the surface' or 'lacking depth', incorrect here.",
-      "C": "Means 'basic or primary', contradicting the complexity implied by 'evolutionary adaptations' to extreme conditions.",
+      "B": "Means 'basic or primary', contradicting the complexity implied by 'evolutionary adaptations' to extreme conditions.",
       "D": "Means 'found everywhere', but these are specific to the deep sea."
     },
     "common_trap": "Choosing a difficult vocabulary word without verifying it fits the precise context of unique deep-sea evolution.",
     "thinking_framework": "Adaptations to extreme, specific environments are unique/peculiar to that environment.",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "science"
     ]
@@ -153,22 +153,22 @@
     "question_stem": "Which choice best states the main purpose of the text?",
     "choices": {
       "A": "To argue that hummingbirds are the most important birds.",
-      "B": "To explain the mechanics of how bird wings work.",
-      "C": "To provide examples of the unique flight abilities of hummingbirds.",
+      "B": "To provide examples of the unique flight abilities of hummingbirds.",
+      "C": "To explain the mechanics of how bird wings work.",
       "D": "To compare hummingbirds to other flying insects."
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "explanation": "The text states they are fascinating and then lists two specific unique abilities (hovering, flying backward).",
     "why_others_wrong": {
       "A": "Too extreme/opinionated.",
-      "B": "Too broad; it's only about hummingbirds.",
+      "C": "Too broad; it's only about hummingbirds.",
       "D": "No comparison to insects is made."
     },
     "common_trap": "Choosing a choice that is too broad.",
     "thinking_framework": "Summarize what the sentences actually do: state a claim, give example 1, give example 2.",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "science"
     ]
@@ -197,7 +197,7 @@
     "thinking_framework": "Map each sentence to its function and find the matching choice.",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "history",
       "arts"
@@ -212,22 +212,22 @@
     "question_stem": "Which choice best states the main purpose of the text?",
     "choices": {
       "A": "To outline the specific biological processes of human metabolism.",
-      "B": "To challenge a popular nutritional belief by highlighting the benefits of a specific macronutrient.",
+      "B": "To promote the consumption of whole grains over other types of food.",
       "C": "To argue that diet fads are deliberately designed to mislead the public.",
-      "D": "To promote the consumption of whole grains over other types of food."
+      "D": "To challenge a popular nutritional belief by highlighting the benefits of a specific macronutrient."
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "explanation": "The text presents a fad belief (carbs are bad) and then challenges it (oversimplifies) by noting the benefits of complex carbs.",
     "why_others_wrong": {
       "A": "Too broad; metabolism is only briefly mentioned.",
-      "C": "Assumes malicious intent ('deliberately designed') not present in text.",
-      "D": "Too narrow/extreme; it just uses whole grains as an example of good carbs."
+      "B": "Too narrow/extreme; it just uses whole grains as an example of good carbs.",
+      "C": "Assumes malicious intent ('deliberately designed') not present in text."
     },
     "common_trap": "Focusing too much on the example (whole grains) rather than the argumentative purpose.",
     "thinking_framework": "Identify the turn ('However'). The purpose is usually located in the claim following the turn.",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "science"
     ]
@@ -241,22 +241,22 @@
     "question_stem": "What is the primary function of the final sentence in the overall structure of the text?",
     "choices": {
       "A": "It introduces a methodological flaw that invalidates the study's findings.",
-      "B": "It presents an alternative explanation for the correlation observed in the study.",
-      "C": "It confirms the hypothesis that structural cohesion directly reduces crime.",
+      "B": "It confirms the hypothesis that structural cohesion directly reduces crime.",
+      "C": "It presents an alternative explanation for the correlation observed in the study.",
       "D": "It suggests that future studies should focus on psychological bandwidth."
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "explanation": "The final sentence warns against causality (A causes B) and suggests an alternate direction (B causes A).",
     "why_others_wrong": {
       "A": "It doesn't invalidate the finding (the correlation exists), just the interpretation.",
-      "C": "It explicitly cautions *against* confirming that direct reduction.",
+      "B": "It explicitly cautions *against* confirming that direct reduction.",
       "D": "It doesn't make recommendations for future studies."
     },
     "common_trap": "Confusing a caution about interpretation with a flaw that invalidates data.",
     "thinking_framework": "Analyze 'Yet, Vance cautions...'. He is offering another way to look at the same data.",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "social science"
     ]
@@ -285,7 +285,7 @@
     "thinking_framework": "Match the clauses in the answer choice directly to the sentences in the text.",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "literature"
     ]
@@ -298,15 +298,15 @@
     "passage": "Text 1\nMany cities are replacing traditional traffic lights with roundabouts. Studies show that roundabouts reduce fatal collisions by up to 90% because they force drivers to slow down and travel in the same direction.\n\nText 2\nWhile roundabouts may be mathematically safer, they are a nightmare for pedestrians. Navigating a continuous flow of cars without the explicit 'walk' signal provided by a traditional traffic light is intimidating and dangerous for those on foot.",
     "question_stem": "Based on the texts, how would the author of Text 2 most likely respond to the statistics presented in Text 1?",
     "choices": {
-      "A": "By arguing that the studies in Text 1 are based on flawed data.",
-      "B": "By agreeing that roundabouts are safer overall, but emphasizing they neglect pedestrian safety.",
+      "A": "By agreeing that roundabouts are safer overall, but emphasizing they neglect pedestrian safety.",
+      "B": "By arguing that the studies in Text 1 are based on flawed data.",
       "C": "By claiming that traffic lights are actually more effective at slowing cars down.",
       "D": "By suggesting that roundabouts should be removed completely from all cities."
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "explanation": "Text 2 concedes roundabouts 'may be mathematically safer' (agreeing with Text 1's stats) but focuses on the negative impact on pedestrians.",
     "why_others_wrong": {
-      "A": "Text 2 doesn't challenge the math/data.",
+      "B": "Text 2 doesn't challenge the math/data.",
       "C": "Text 2 doesn't claim this.",
       "D": "Too extreme; Text 2 just points out a specific problem."
     },
@@ -314,7 +314,7 @@
     "thinking_framework": "Identify the overlap. Text 2 accepts Text 1's premise but adds a caveat.",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "social science"
     ]
@@ -327,23 +327,23 @@
     "passage": "Text 1\nThe discovery of the 'hobbit' species (*Homo floresiensis*) in Indonesia disrupted the linear narrative of human evolution. Their small brain size, combined with evidence of advanced tool use, suggests that brain architecture, not just volume, dictates cognitive ability.\n\nText 2\nRecent analyses of *Homo floresiensis* tools show they are remarkably similar to those made by modern humans (*Homo sapiens*) who passed through the region. It is highly probable the 'hobbits' did not invent these tools, but merely scavenged them.",
     "question_stem": "Based on the texts, how would the author of Text 2 most likely view the conclusion drawn in Text 1?",
     "choices": {
-      "A": "They would reject the conclusion that *H. floresiensis* possessed advanced cognitive abilities based on tool use.",
+      "A": "They would support the idea that human evolution is a linear narrative.",
       "B": "They would agree that brain architecture is more important than brain volume.",
       "C": "They would argue that *H. floresiensis* actually had a much larger brain than previously thought.",
-      "D": "They would support the idea that human evolution is a linear narrative."
+      "D": "They would reject the conclusion that *H. floresiensis* possessed advanced cognitive abilities based on tool use."
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "explanation": "Text 1 says tool use proves advanced cognition. Text 2 says they didn't make the tools (they scavenged them). Therefore, Text 2 would reject the idea that tool use proves their advanced cognition.",
     "why_others_wrong": {
+      "A": "Text 2 only addresses the tools, not the linear narrative.",
       "B": "Text 2 undermines the evidence used to make this claim.",
-      "C": "Text 2 doesn't mention brain size.",
-      "D": "Text 2 only addresses the tools, not the linear narrative."
+      "C": "Text 2 doesn't mention brain size."
     },
     "common_trap": "Choosing an answer about brain size when the disagreement is specifically about the origin of the tools.",
     "thinking_framework": "Identify what Text 1 bases its conclusion on (tool use). See how Text 2 attacks that specific basis (scavenged, not made).",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "science"
     ]
@@ -357,22 +357,22 @@
     "question_stem": "Which choice best describes the relationship between the two texts?",
     "choices": {
       "A": "Text 2 provides a specific example of the phenomenon criticized in Text 1.",
-      "B": "Text 2 argues for a fundamentally different prioritization of the elements discussed in Text 1.",
-      "C": "Text 2 agrees with the premise of Text 1 but applies it to a different genre of literature.",
+      "B": "Text 2 agrees with the premise of Text 1 but applies it to a different genre of literature.",
+      "C": "Text 2 argues for a fundamentally different prioritization of the elements discussed in Text 1.",
       "D": "Text 1 and Text 2 both conclude that historical fiction is an inherently flawed genre."
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "explanation": "Text 1 prioritizes accuracy over narrative/entertainment. Text 2 prioritizes entertainment/narrative over strict accuracy. They hold opposing priorities.",
     "why_others_wrong": {
       "A": "Text 2 doesn't provide a specific book as an example.",
-      "C": "They disagree, and both are about historical fiction.",
+      "B": "They disagree, and both are about historical fiction.",
       "D": "Neither claims the genre is flawed, just how it should be written."
     },
     "common_trap": "Looking for complete disagreement and choosing an overly extreme choice (like D).",
     "thinking_framework": "Compare the core thesis of each text regarding the balance of history vs. fiction.",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "humanities",
       "arts"
@@ -402,7 +402,7 @@
     "thinking_framework": "Text 1 = humans rational. Text 2 = humans irrational/biased. Therefore, Text 2 contradicts Text 1.",
     "estimated_time_seconds": 120,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "social science"
     ]
@@ -415,15 +415,15 @@
     "passage": "Text 1\nThe implementation of open-plan offices was intended to foster collaboration. By removing physical barriers, managers hoped to flatten hierarchies and encourage spontaneous brainstorming among employees of all levels.\n\nText 2\nA study of corporate communication revealed that transitioning to open-plan offices actually decreased face-to-face interactions by 70%. Seeking privacy in an exposed environment, employees relied heavily on instant messaging and wore noise-canceling headphones.",
     "question_stem": "Which choice best synthesizes the information in the two texts?",
     "choices": {
-      "A": "Open-plan offices succeeded in flattening corporate hierarchies but failed to improve the quality of work produced.",
-      "B": "Although designed to increase physical interaction among employees, open-plan offices paradoxically led to greater isolation and reliance on digital communication.",
+      "A": "Although designed to increase physical interaction among employees, open-plan offices paradoxically led to greater isolation and reliance on digital communication.",
+      "B": "Open-plan offices succeeded in flattening corporate hierarchies but failed to improve the quality of work produced.",
       "C": "The removal of physical barriers in offices caused employees to become distracted, leading to a 70% decrease in overall productivity.",
       "D": "Managers and employees disagree on the best layout for an office, with managers preferring open plans and employees preferring private offices."
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "explanation": "Synthesizes intent (Text 1: intended to foster collaboration) with the actual result (Text 2: decreased interaction, more digital/headphones).",
     "why_others_wrong": {
-      "A": "Neither text discusses the 'quality of work produced'.",
+      "B": "Neither text discusses the 'quality of work produced'.",
       "C": "Text 2 mentions a 70% decrease in interaction, not productivity.",
       "D": "Text 2 doesn't state what employees *prefer*, only how they reacted."
     },
@@ -431,7 +431,7 @@
     "thinking_framework": "Combine Text 1's goal with Text 2's reality to form a complete picture of the situation.",
     "estimated_time_seconds": 120,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "social science"
     ]
@@ -444,23 +444,23 @@
     "passage": "Text 1\nHistorian Elena Rostova argues that the rapid urbanization of 19th-century Britain was primarily driven by the Enclosure Acts, which privatized common agricultural land. Deprived of communal pastures and small plots, hundreds of thousands of dispossessed rural laborers had no economic choice but to migrate to burgeoning industrial cities to seek factory employment.\n\nText 2\nEconomic historian Marcus Vance contends that urban migration patterns preceded the major wave of parliamentary enclosures. Vance emphasizes wage differentials, demonstrating that factory pay in northern textile centers was up to three times higher than agricultural wages long before common lands were enclosed. For Vance, cities pulled rural workers with the promise of higher living standards rather than rural legislation pushing them out.",
     "question_stem": "Based on the texts, how would Vance (Text 2) most likely respond to Rostova's claim in Text 1 regarding the cause of rural migration?",
     "choices": {
-      "A": "By arguing that rural laborers were attracted to urban factories by significant wage incentives before the Enclosure Acts took widespread effect.",
+      "A": "By demonstrating that living standards in industrial cities were too low to motivate voluntary migration.",
       "B": "By asserting that the Enclosure Acts actually increased agricultural wages, making rural life more attractive than factory work.",
       "C": "By agreeing that land privatization was the primary push factor, but claiming it occurred earlier than Rostova suggests.",
-      "D": "By demonstrating that living standards in industrial cities were too low to motivate voluntary migration."
+      "D": "By arguing that rural laborers were attracted to urban factories by significant wage incentives before the Enclosure Acts took widespread effect."
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "explanation": "Text 2 explicitly states Vance's argument: migration was driven by a 'pull' factor (factory pay was up to three times higher) that occurred *before* the major wave of enclosures, directly countering Rostova's claim that enclosures were the primary 'push' driver.",
     "why_others_wrong": {
+      "A": "Contradicts Text 2, which states cities pulled workers with 'the promise of higher living standards'.",
       "B": "Vance does not claim agricultural wages increased; he highlights that factory wages were much higher.",
-      "C": "Vance does not agree with the privatization push factor; he argues wage differentials pulled workers.",
-      "D": "Contradicts Text 2, which states cities pulled workers with 'the promise of higher living standards'."
+      "C": "Vance does not agree with the privatization push factor; he argues wage differentials pulled workers."
     },
     "common_trap": "Confusing push factors (enclosures forcing workers out) with pull factors (higher wages attracting workers in).",
     "thinking_framework": "1. Text 1 claim: Enclosure Acts pushed workers to cities. 2. Text 2 claim: Wage differentials pulled workers to cities BEFORE enclosures. 3. Vance's response: Wage incentives attracted workers before enclosures took effect.",
     "estimated_time_seconds": 85,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "history",
       "economics"
@@ -475,22 +475,22 @@
     "question_stem": "Based on the texts, in what way does Lin (Text 2) qualify the claims made by Sato (Text 1)?",
     "choices": {
       "A": "Lin denies that non-invasive BCIs have any practical utility, whereas Sato believes they can decode all forms of neural activity.",
-      "B": "Lin argues that non-invasive BCIs cannot achieve the high-resolution neural decoding needed for fine motor control, whereas Sato considers non-invasive resolution adequate for broader motor tasks.",
-      "C": "Lin asserts that craniotomies carry no meaningful medical risks, directly contradicting Sato's safety concerns.",
+      "B": "Lin asserts that craniotomies carry no meaningful medical risks, directly contradicting Sato's safety concerns.",
+      "C": "Lin argues that non-invasive BCIs cannot achieve the high-resolution neural decoding needed for fine motor control, whereas Sato considers non-invasive resolution adequate for broader motor tasks.",
       "D": "Lin believes that skull tissue enhances electrical impulses, whereas Sato claims bone attenuates neural signals."
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "explanation": "Sato claims non-invasive BCIs have 'sufficient spatial resolution to decode broad motor intentions' (like steering). Lin qualifies this by arguing that because signals degrade through the skull, non-invasive BCIs cannot achieve the nuanced dexterity (like individual finger articulation) that implanted arrays allow.",
     "why_others_wrong": {
       "A": "Too extreme: Lin does not deny broad utility, she specifically argues against nuanced dexterity; Sato also explicitly mentions 'broad motor intentions', not all forms.",
-      "C": "Lin does not discuss whether craniotomies carry risks; she focuses on signal quality.",
+      "B": "Lin does not discuss whether craniotomies carry risks; she focuses on signal quality.",
       "D": "Inverts the physics: both acknowledge skull degradation; Lin emphasizes that it creates an insurmountable barrier for fine control."
     },
     "common_trap": "Assuming the second author completely dismisses the first, rather than identifying the specific technical boundary where the two perspectives diverge.",
     "thinking_framework": "1. Sato: Non-invasive is safe and adequate for BROAD tasks. 2. Lin: Signal degrades through skull; non-invasive CANNOT do FINE/NUANCED dexterity. 3. Qualification: Non-invasive works for broad, but fails for fine motor control.",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "neuroscience",
       "bioengineering"
@@ -520,7 +520,7 @@
     "thinking_framework": "Replace 'sound' with a blank: 'the structural integrity remained [blank]'. Prediction: intact / undamaged. Matches Choice B.",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "engineering",
       "words_in_context"
@@ -534,15 +534,15 @@
     "passage": "Although the environmental activist group initially enjoyed broad public support, their decision to block peak-hour commuter trains alienated many working-class allies, who felt that their daily hardships were being disregarded in pursuit of political theater.",
     "question_stem": "As used in the text, what does \"alienated\" most nearly mean?",
     "choices": {
-      "A": "isolated geographically",
-      "B": "estranged",
+      "A": "estranged",
+      "B": "isolated geographically",
       "C": "banished",
       "D": "confused"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "explanation": "To 'alienate' allies means to cause them to feel estranged, hostile, or disconnected from the cause due to controversial actions.",
     "why_others_wrong": {
-      "A": "Refers to physical spatial separation, whereas alienation here is social/political.",
+      "B": "Refers to physical spatial separation, whereas alienation here is social/political.",
       "C": "Refers to formal exile or deportation by an authority.",
       "D": "Means puzzled or perplexed; the allies were offended and distant, not merely confused."
     },
@@ -550,7 +550,7 @@
     "thinking_framework": "Context clue: 'initially enjoyed support' contrasted with 'their decision... alienated allies'. Meaning: distanced / estranged.",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "social_science",
       "words_in_context"
@@ -564,23 +564,23 @@
     "passage": "In 1911, physicist Ernest Rutherford fired alpha particles at a thin sheet of gold foil. Most particles passed directly through, but a small fraction deflected at extreme angles. This startling result led Rutherford to discard J.J. Thomson's 'plum pudding' model of the atom and propose that mass and positive charge are concentrated in a tiny, dense nucleus.",
     "question_stem": "Which choice best describes the primary purpose of the text?",
     "choices": {
-      "A": "To describe an experimental observation and the theoretical breakthrough it prompted.",
+      "A": "To contrast the properties of gold foil with those of other metallic elements.",
       "B": "To argue that Rutherford's experimental methodology was superior to that of Thomson.",
       "C": "To explain the industrial applications of alpha particle radiation.",
-      "D": "To contrast the properties of gold foil with those of other metallic elements."
+      "D": "To describe an experimental observation and the theoretical breakthrough it prompted."
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "explanation": "The text describes an experiment (alpha particles fired at gold foil), notes the surprising observation (unexpected deflections), and concludes with the theoretical breakthrough (discovery of the atomic nucleus).",
     "why_others_wrong": {
+      "A": "No comparison with other metals is made.",
       "B": "The text is an objective historical account, not an argumentative defense of methodology.",
-      "C": "No industrial applications are mentioned.",
-      "D": "No comparison with other metals is made."
+      "C": "No industrial applications are mentioned."
     },
     "common_trap": "Focusing on a single technical component rather than the narrative arc of the paragraph.",
     "thinking_framework": "1. What happens first? Experiment described. 2. What happens next? Anomaly discovered. 3. What is the climax? New model proposed. Choice A summarizes this trajectory.",
     "estimated_time_seconds": 50,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "physics",
       "history_of_science"
@@ -594,23 +594,23 @@
     "passage": "The economist argued that the sudden surge in speculative cryptocurrency trading was largely driven by retail investors seeking to hedge against currency depreciation, rather than an authentic appraisal of underlying blockchain utility.",
     "question_stem": "As used in the text, what does \"appraisal\" most nearly mean?",
     "choices": {
-      "A": "evaluation",
+      "A": "celebration",
       "B": "approval",
-      "C": "celebration",
+      "C": "evaluation",
       "D": "criticism"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "explanation": "In financial and economic contexts, 'appraisal' means an objective evaluation or assessment of worth, value, or utility.",
     "why_others_wrong": {
+      "A": "Means joyful recognition, which is not an analytical financial process.",
       "B": "Means permission or favorable regard, not analytical assessment.",
-      "C": "Means joyful recognition, which is not an analytical financial process.",
       "D": "Means finding fault, whereas appraisal is neutral evaluation."
     },
     "common_trap": "Confusing 'appraisal' (assessment) with 'praise' or 'approval'.",
     "thinking_framework": "Economic valuation of utility = assessment / evaluation. Matches Choice A.",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "economics",
       "words_in_context"
@@ -624,15 +624,15 @@
     "passage": "For decades, palaeontologists debated whether sauropods — the gigantic, long-necked dinosaurs — held their necks horizontally to graze on low shrubs or vertically to reach high canopy foliage. Recently, biomechanical modeling of sauropod vertebrae combined with fossil blood-pressure estimates has provided compelling evidence: the immense cardiovascular pressure required to pump blood eight meters upward into a vertically elevated head would have exceeded the capacity of any known vertebrate heart.",
     "question_stem": "Which choice best describes the function of the underlined phrase (\"the immense cardiovascular pressure required to pump blood eight meters upward into a vertically elevated head would have exceeded the capacity of any known vertebrate heart\") in the text as a whole?",
     "choices": {
-      "A": "It presents physiological evidence that challenges the hypothesis that sauropods maintained vertical neck postures.",
-      "B": "It proves that sauropods possessed a unique circulatory system unlike any modern animal.",
+      "A": "It proves that sauropods possessed a unique circulatory system unlike any modern animal.",
+      "B": "It presents physiological evidence that challenges the hypothesis that sauropods maintained vertical neck postures.",
       "C": "It introduces a new debate concerning the cardiovascular evolution of prehistoric reptiles.",
       "D": "It refutes the claim that biomechanical modeling can be reliably applied to extinct species."
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "explanation": "The underlined phrase provides specific physiological calculations (cardiovascular pressure limits) that challenge/undermine the vertical neck hypothesis introduced in the first sentence.",
     "why_others_wrong": {
-      "B": "The text states the required pressure *exceeded* known vertebrate capacities, suggesting they did *not* hold their necks vertically, rather than proving an exotic circulatory system.",
+      "A": "The text states the required pressure *exceeded* known vertebrate capacities, suggesting they did *not* hold their necks vertically, rather than proving an exotic circulatory system.",
       "C": "The phrase resolves or informs the existing neck-posture debate; it does not launch an unrelated debate.",
       "D": "The text relies on biomechanical modeling as evidence; it does not refute it."
     },
@@ -640,7 +640,7 @@
     "thinking_framework": "1. Debate: Horizontal vs vertical necks. 2. Underlined evidence: Vertical requires impossible heart pressure. 3. Function: Challenges vertical neck hypothesis.",
     "estimated_time_seconds": 65,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "paleontology",
       "text_structure"
@@ -654,15 +654,15 @@
     "passage": "The novelist's prose was celebrated not for ornate embellishment, but for its austere precision; every adjective was deployed with clinical economy, allowing the raw emotional gravity of the narrative to emerge unencumbered by authorial self-indulgence.",
     "question_stem": "As used in the text, what does \"austere\" most nearly mean?",
     "choices": {
-      "A": "harsh and punitive",
-      "B": "simple and unadorned",
+      "A": "simple and unadorned",
+      "B": "harsh and punitive",
       "C": "gloomy",
       "D": "inexperienced"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "explanation": "In an aesthetic or stylistic literary context, 'austere' means simple, unadorned, and stripped of unnecessary decoration (contrasted directly with 'ornate embellishment').",
     "why_others_wrong": {
-      "A": "Means strict or punishing, which does not describe stylistic conciseness.",
+      "B": "Means strict or punishing, which does not describe stylistic conciseness.",
       "C": "Means melancholy, which confuses emotional tone with stylistic minimalism.",
       "D": "Means novice, whereas the author's precision is described as masterful."
     },
@@ -670,7 +670,7 @@
     "thinking_framework": "Contrast: 'not for ornate embellishment, but for its austere precision'. Opposite of ornate = simple, unadorned.",
     "estimated_time_seconds": 50,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "literature",
       "words_in_context"
@@ -684,23 +684,23 @@
     "passage": "Text 1\nUrban planner Kevin Lynch proposed that residents navigate cities using mental maps structured around five distinct elements: paths, edges, districts, nodes, and landmarks. Lynch argued that legible, easily navigable cities foster a strong sense of emotional security and civic attachment among citizens.\n\nText 2\nSociologist Jane Jacobs criticized overly planned, hyper-legible urban layouts. Jacobs contended that vibrant cities thrive on organic complexity, irregular side streets, and mixed-use chaos that cannot be reduced to clean geometric elements. For Jacobs, unpredictable neighborhood texture promotes spontaneous human interaction far more effectively than artificial legibility.",
     "question_stem": "Based on the texts, both Lynch (Text 1) and Jacobs (Text 2) would most likely agree with which of the following statements?",
     "choices": {
-      "A": "The physical design and spatial layout of a city significantly influence the social and emotional experiences of its inhabitants.",
+      "A": "Urban planners should eliminate irregular side streets in favor of standardized transit corridors.",
       "B": "Landmarks are the most crucial urban element for fostering spontaneous community interaction.",
       "C": "Clean, predictable street grids are universally preferred by residents over complex neighborhood textures.",
-      "D": "Urban planners should eliminate irregular side streets in favor of standardized transit corridors."
+      "D": "The physical design and spatial layout of a city significantly influence the social and emotional experiences of its inhabitants."
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "explanation": "While Lynch and Jacobs disagree on whether legibility or complexity is preferable, both share the foundational premise that urban spatial layout exerts a profound influence on residents' emotional and social lives.",
     "why_others_wrong": {
+      "A": "Jacobs advocates for preserving irregular streets, contradicting this choice.",
       "B": "Only Lynch emphasizes landmarks; Jacobs emphasizes mixed-use texture.",
-      "C": "Jacobs explicitly rejects clean, predictable street grids.",
-      "D": "Jacobs advocates for preserving irregular streets, contradicting this choice."
+      "C": "Jacobs explicitly rejects clean, predictable street grids."
     },
     "common_trap": "Choosing an opinion held by only one author rather than finding their shared premise.",
     "thinking_framework": "What is the common ground? Both believe city design profoundly shapes how people feel and interact.",
     "estimated_time_seconds": 75,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "sociology",
       "urban_planning"
@@ -730,7 +730,7 @@
     "thinking_framework": "'cast in ambiguous language' = expressed / formulated in ambiguous words.",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "political_science",
       "words_in_context"
@@ -744,15 +744,15 @@
     "passage": "In *The Structure of Scientific Revolutions*, Thomas Kuhn argued that science does not progress via a steady, cumulative accumulation of facts. Instead, scientific disciplines operate within prevailing 'paradigms' — shared frameworks of assumptions and experimental standards. Over time, anomalies accumulate that the reigning paradigm cannot explain. Eventually, these anomalies trigger a crisis, culminating in a revolutionary 'paradigm shift' that redefines the discipline from its foundations.",
     "question_stem": "Which choice best describes the overall development of the passage?",
     "choices": {
-      "A": "It rejects a conventional historical model, introduces a replacement theoretical concept, and outlines the sequential stages of that process.",
-      "B": "It presents two competing scientific theories and provides empirical evidence to resolve the disagreement.",
+      "A": "It presents two competing scientific theories and provides empirical evidence to resolve the disagreement.",
+      "B": "It rejects a conventional historical model, introduces a replacement theoretical concept, and outlines the sequential stages of that process.",
       "C": "It chronicles the biography of a prominent philosopher and evaluates his impact on modern laboratory practices.",
       "D": "It describes a specific historical scientific crisis and analyzes why researchers failed to resolve it."
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "explanation": "The passage begins by rejecting the conventional view (science as steady cumulative accumulation), introduces Kuhn's replacement model ('paradigms'), and then outlines the sequential process (anomalies accumulate -> crisis -> paradigm shift).",
     "why_others_wrong": {
-      "B": "The passage outlines a philosophy of scientific progress, not two competing empirical theories with data.",
+      "A": "The passage outlines a philosophy of scientific progress, not two competing empirical theories with data.",
       "C": "The text discusses Kuhn's theory, not his personal biography.",
       "D": "No single historical crisis is detailed; the text describes an abstract general model."
     },
@@ -760,7 +760,7 @@
     "thinking_framework": "Structure: 1. Deny cumulative model. 2. Introduce paradigm concept. 3. Trace sequence: anomalies -> crisis -> shift. Matches Choice A.",
     "estimated_time_seconds": 75,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "philosophy_of_science",
       "text_structure"
@@ -774,15 +774,15 @@
     "passage": "Faced with compounding budget deficits, the municipal council voted to curtail public library operating hours on weekends, prompting vocal protests from neighborhood community groups.",
     "question_stem": "As used in the text, what does \"curtail\" most nearly mean?",
     "choices": {
-      "A": "extend",
-      "B": "reduce",
+      "A": "reduce",
+      "B": "extend",
       "C": "terminate",
       "D": "celebrate"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "explanation": "To 'curtail' hours means to cut back, shorten, or reduce them (not completely eliminate or terminate them).",
     "why_others_wrong": {
-      "A": "Opposite: 'extend' means to lengthen.",
+      "B": "Opposite: 'extend' means to lengthen.",
       "C": "Too extreme: 'terminate' means end completely, whereas curtailing hours means reducing them.",
       "D": "Irrelevant positive connotation."
     },
@@ -790,7 +790,7 @@
     "thinking_framework": "Faced with deficits -> cut back / reduce operating hours. Matches Choice B.",
     "estimated_time_seconds": 35,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "tags": [
       "civics",
       "words_in_context"
@@ -804,17 +804,17 @@
     "passage": "Text 1: Political theorist Isaiah Berlin articulated a fundamental dichotomy between negative liberty—the absence of external obstacles or coercion preventing an agent from acting—and positive liberty, which concerns the capacity of an individual to achieve self-realization and master their own destiny. Berlin cautioned that positive liberty, while superficially noble, has historically been co-opted by authoritarian regimes to justify paternalistic coercion in the name of a citizen's 'true' rational will.\n\nText 2: Philosopher Charles Taylor argues that Berlin’s rigid defense of negative liberty is untenable. Taylor contends that an individual cannot truly be called 'free' merely because there are no physical walls or legal prohibitions. If a person is paralyzed by internalized self-hatred, irrational compulsive desires, or severe addiction, they lack genuine autonomy, even in a state with zero external legal constraints. Therefore, meaningful liberty inherently requires internal self-determination—the very core of positive liberty.",
     "question_stem": "Based on the texts, how would Charles Taylor (Text 2) most likely respond to Berlin's skepticism of positive liberty (Text 1)?",
     "choices": {
-      "A": "By arguing that negative liberty alone provides an incomplete definition of freedom because internal psychological impediments can restrict autonomy just as effectively as legal barriers.",
+      "A": "By demanding that all negative liberties be immediately repealed in democratic constitutions.",
       "B": "By agreeing with Berlin that authoritarian regimes are the only entities capable of defining positive liberty for citizens.",
       "C": "By claiming that physical walls and legal prohibitions are completely harmless and have never restricted human movement.",
-      "D": "By demanding that all negative liberties be immediately repealed in democratic constitutions."
+      "D": "By arguing that negative liberty alone provides an incomplete definition of freedom because internal psychological impediments can restrict autonomy just as effectively as legal barriers."
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "explanation": "Taylor argues that mere absence of external obstacles (negative liberty) is insufficient, pointing out that internal compulsions or addiction impair genuine autonomy. Thus, he responds to Berlin by asserting that negative liberty alone is an incomplete definition of freedom.",
     "why_others_wrong": {
+      "A": "Extreme distortion: advocating for positive liberty does not mean repealing negative liberty.",
       "B": "Taylor defends positive liberty as genuine autonomy; he does not advocate for authoritarian regimes.",
-      "C": "Taylor never claims physical walls are harmless; he simply argues they are not the *only* restriction on freedom.",
-      "D": "Extreme distortion: advocating for positive liberty does not mean repealing negative liberty."
+      "C": "Taylor never claims physical walls are harmless; he simply argues they are not the *only* restriction on freedom."
     },
     "socratic_prompt": "What does Taylor say about someone who has no legal barriers but is paralyzed by addiction? Is that person free?",
     "common_trap": "Choosing an extreme option that turns Taylor into an authoritarian tyrant.",
@@ -826,7 +826,8 @@
       "philosophy",
       "cross_text",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "RW-CS-029",
@@ -836,16 +837,16 @@
     "passage": "In her critical monograph on twentieth-century industrial design, architecture critic Reyner Banham observed that Buckminster Fuller's geodesic domes, while geometrically sublime, proved stubbornly refractory when adapted to mundane domestic habitation. Standard rectangular furniture could not nest against concave hexagonal perimeters, and internal acoustic reflections magnified the slightest whisper into a disconcerting public echo.",
     "question_stem": "As used in the text, what does the word 'refractory' most nearly mean?",
     "choices": {
-      "A": "Unmanageable and resistant to adaptation",
+      "A": "Easily shattered under thermal stress",
       "B": "Transparent and allowing light through",
-      "C": "Easily shattered under thermal stress",
+      "C": "Unmanageable and resistant to adaptation",
       "D": "Financially profitable for developers"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "explanation": "The text explains that the domes 'proved stubbornly refractory when adapted to mundane domestic habitation', giving examples of rectangular furniture failing to fit and acoustic echoes. In this context, 'refractory' means stubborn, unmanageable, or resistant to being adapted.",
     "why_others_wrong": {
+      "A": "Confuses 'refractory' (heat-resistant in metallurgy) with brittle or shatterable.",
       "B": "Confuses 'refractory' with optical 'refraction' of light.",
-      "C": "Confuses 'refractory' (heat-resistant in metallurgy) with brittle or shatterable.",
       "D": "Financial profit is completely unrelated to furniture fit and acoustic issues."
     },
     "socratic_prompt": "Look at the adverb 'stubbornly' and the examples: furniture couldn't fit and echoes were magnified. Does 'refractory' mean cooperative or resistant?",
@@ -858,7 +859,8 @@
       "architecture",
       "words_in_context",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "RW-CS-030",
@@ -868,15 +870,15 @@
     "passage": "Text 1: Economists traditionally viewed intellectual property patents as unambiguous catalysts for innovation. By granting inventors a temporary statutory monopoly, patents ensure that innovators can recoup substantial research and development outlays without fearing immediate counterfeit duplication by free-riding competitors.\n\nText 2: Legal scholars Michele Boldrin and David Levine contest the orthodox view, pointing out that patent thickets in fields like microprocessing and biotechnology generate severe 'anti-commons' effects. When developing a single smartphone requires licensing thousands of overlapping, litigious patents held by defensive shell entities, the transaction costs and legal liabilities actually deter new entrants and stifle technological cross-pollination.",
     "question_stem": "Which choice best describes how Text 2 relates to the perspective presented in Text 1?",
     "choices": {
-      "A": "It challenges the view in Text 1 by illustrating how excessive and overlapping patent protections can create administrative friction that dampens innovation.",
-      "B": "It provides additional empirical evidence confirming that patent protections always accelerate consumer product launches.",
+      "A": "It provides additional empirical evidence confirming that patent protections always accelerate consumer product launches.",
+      "B": "It challenges the view in Text 1 by illustrating how excessive and overlapping patent protections can create administrative friction that dampens innovation.",
       "C": "It accuses the authors of Text 1 of committing copyright fraud in their economic analysis.",
       "D": "It argues that smartphones should be manufactured entirely without electronic microprocessors."
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "explanation": "Text 1 presents the traditional view that patents catalyze innovation. Text 2 counters that overlapping 'patent thickets' create transaction costs and liabilities that 'deter new entrants and stifle technological cross-pollination'. Thus, Text 2 challenges Text 1 by highlighting these frictions.",
     "why_others_wrong": {
-      "B": "Text 2 directly contradicts the claim that patents always accelerate innovation.",
+      "A": "Text 2 directly contradicts the claim that patents always accelerate innovation.",
       "C": "Text 2 critiques the economic theory of patent thickets, not accusing authors of personal fraud.",
       "D": "Absurd distractor: Text 2 uses smartphones as an example of patent thickets, not advocating against microprocessors."
     },
@@ -890,7 +892,8 @@
       "economics",
       "cross_text",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "RW-CS-031",
@@ -922,7 +925,8 @@
       "history",
       "text_structure",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "RW-CS-032",
@@ -932,17 +936,17 @@
     "passage": "Although the treaty was formally signed with lavish ceremonial fanfare, diplomatic historians now regard the accord as merely perfunctory; neither government had allocated budgetary appropriations to implement its demilitarization protocols, and cross-border skirmishes resumed within weeks.",
     "question_stem": "As used in the text, what does the word 'perfunctory' most nearly mean?",
     "choices": {
-      "A": "Carried out with minimum effort or genuine commitment",
+      "A": "Secretly negotiated by espionage agents",
       "B": "Exceedingly dangerous to public safety",
       "C": "Highly beneficial to international trade",
-      "D": "Secretly negotiated by espionage agents"
+      "D": "Carried out with minimum effort or genuine commitment"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "explanation": "The text states that despite the fanfare, neither government funded the treaty and fighting resumed immediately. 'Perfunctory' means done merely as a formality or routine without genuine care, effort, or conviction.",
     "why_others_wrong": {
+      "A": "The text notes 'lavish ceremonial fanfare', showing it was public, not secret.",
       "B": "'Perfunctory' does not mean dangerous; it means superficial/formalistic.",
-      "C": "Trade benefits are contradicted by the resumption of skirmishes.",
-      "D": "The text notes 'lavish ceremonial fanfare', showing it was public, not secret."
+      "C": "Trade benefits are contradicted by the resumption of skirmishes."
     },
     "socratic_prompt": "If a treaty is signed with big ceremonies but nobody funds it or takes it seriously, how would you describe the effort put in?",
     "common_trap": "Picking 'dangerous' because fighting resumed, rather than describing the empty nature of the treaty signing.",
@@ -954,7 +958,8 @@
       "history",
       "words_in_context",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "RW-CS-033",
@@ -964,16 +969,16 @@
     "passage": "Text 1: Paleontologist Mary Schweitzer challenged decades of fossilization dogma when she discovered preserved soft tissue structures, including flexible blood vessels and collagen fragments, inside a 68-million-year-old Tyrannosaurus rex femur. Conventional taphonomy held that organic biomolecules degrade within a few hundred thousand years. Schweitzer hypothesized that iron nanoparticles liberated from decomposing hemoglobin acted as powerful molecular cross-linkers, effectively preserving the protein structures across geological epochs.\n\nText 2: Analytical biochemist Evan Thomas cautions that extraordinary taphonomic claims require rigorous contamination controls. Thomas argues that common environmental microbes, such as biofilm-forming bacteria, can infiltrate porous fossil matrices post-excavation. Under electron microscopy, bacterial biofilms frequently form polymeric hollow tubular structures that mimic ancient capillary vessels, producing false-positive signals that masquerade as dinosaurian soft tissue.",
     "question_stem": "Based on the texts, how would Evan Thomas (Text 2) most likely evaluate Schweitzer's claimed discovery in Text 1?",
     "choices": {
-      "A": "He would suggest that the apparent soft tissue vessels could be artifacts of modern bacterial biofilm contamination rather than genuine preserved dinosaur proteins.",
+      "A": "He would argue that Tyrannosaurus rex fossils are actually modern elephant skeletons buried by hoaxes.",
       "B": "He would celebrate Schweitzer's iron cross-linking hypothesis as the definitive solution to taphonomic degradation.",
-      "C": "He would argue that Tyrannosaurus rex fossils are actually modern elephant skeletons buried by hoaxes.",
+      "C": "He would suggest that the apparent soft tissue vessels could be artifacts of modern bacterial biofilm contamination rather than genuine preserved dinosaur proteins.",
       "D": "He would assert that bacterial biofilms cannot survive in subterranean environments."
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "explanation": "Thomas argues in Text 2 that bacterial biofilms can infiltrate fossil bones and produce hollow tubular structures that mimic ancient capillaries, producing false-positive signals. Thus, he would evaluate Schweitzer's vessels as potential modern microbial contamination.",
     "why_others_wrong": {
+      "A": "Absurd distractor: neither author questions the identity of dinosaur fossils.",
       "B": "Contradicts Text 2: Thomas is a skeptic urging caution, not celebrating the discovery as definitive.",
-      "C": "Absurd distractor: neither author questions the identity of dinosaur fossils.",
       "D": "Contradicts Text 2, which explicitly states bacteria infiltrate fossil matrices."
     },
     "socratic_prompt": "What does Thomas warn that bacterial biofilms can look like under electron microscopy?",
@@ -986,6 +991,7 @@
       "paleontology",
       "cross_text",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   }
 ]

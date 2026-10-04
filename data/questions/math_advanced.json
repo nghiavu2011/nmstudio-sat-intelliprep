@@ -8,21 +8,21 @@
     "choices": {
       "A": "3 only",
       "B": "-3 only",
-      "C": "-3 and 3",
-      "D": "-9 and 9"
+      "C": "-9 and 9",
+      "D": "-3 and 3"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "explanation": "Add 9 to both sides to get x^2 = 9. Taking the square root gives x = 3 and x = -3.",
     "why_others_wrong": {
       "A": "Missed negative root",
       "B": "Missed positive root",
-      "D": "Didn't take square root"
+      "C": "Didn't take square root"
     },
     "common_trap": "Forgetting the negative root.",
     "calculator_note": "Mental math",
     "estimated_time_seconds": 30,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -32,23 +32,23 @@
     "difficulty": 2,
     "question_stem": "Which of the following is equivalent to (2x^2 + 3x - 1) - (x^2 - 2x + 4)?",
     "choices": {
-      "A": "x^2 + 5x - 5",
+      "A": "3x^2 + x + 3",
       "B": "x^2 + x - 5",
-      "C": "3x^2 + x + 3",
+      "C": "x^2 + 5x - 5",
       "D": "x^2 + 5x + 3"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "explanation": "Distribute the negative sign: 2x^2 + 3x - 1 - x^2 + 2x - 4. Combine like terms: x^2 + 5x - 5.",
     "why_others_wrong": {
+      "A": "Added instead of subtracting",
       "B": "Failed to distribute negative to -2x",
-      "C": "Added instead of subtracting",
       "D": "Failed to distribute negative to 4"
     },
     "common_trap": "Failing to distribute the negative sign to all terms in the second polynomial.",
     "calculator_note": "Mental math",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -74,7 +74,7 @@
     "calculator_note": "Mental math",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -91,7 +91,7 @@
     "calculator_note": "Mental math",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": true
   },
   {
@@ -101,23 +101,23 @@
     "difficulty": 3,
     "question_stem": "What is the y-coordinate of the vertex of the parabola y = -2x^2 + 8x - 5?",
     "choices": {
-      "A": "-5",
+      "A": "3",
       "B": "2",
-      "C": "3",
+      "C": "-5",
       "D": "11"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "explanation": "x-coordinate of vertex is -b/(2a) = -8/(2*-2) = 2. Substitute x=2 back in: y = -2(2)^2 + 8(2) - 5 = -8 + 16 - 5 = 3.",
     "why_others_wrong": {
-      "A": "y-intercept",
       "B": "x-coordinate",
+      "C": "y-intercept",
       "D": "Calculation error"
     },
     "common_trap": "Stopping after finding the x-coordinate.",
     "calculator_note": "Desmos useful",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -127,23 +127,23 @@
     "difficulty": 3,
     "question_stem": "Simplify the expression: (x^2 - 4) / (x^2 - x - 6)",
     "choices": {
-      "A": "(x-2)/(x-3)",
+      "A": "(x+2)/(x+3)",
       "B": "(x+2)/(x-3)",
       "C": "(x-2)/(x+3)",
-      "D": "(x+2)/(x+3)"
+      "D": "(x-2)/(x-3)"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "explanation": "Numerator factors to (x-2)(x+2). Denominator factors to (x-3)(x+2). Cancel (x+2) to get (x-2)/(x-3).",
     "why_others_wrong": {
+      "A": "Sign error in factoring",
       "B": "Sign error in factoring",
-      "C": "Sign error in factoring",
-      "D": "Sign error in factoring"
+      "C": "Sign error in factoring"
     },
     "common_trap": "Factoring the denominator incorrectly.",
     "calculator_note": "Mental math",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -154,22 +154,22 @@
     "question_stem": "A population of bacteria doubles every 4 hours. If the initial population is 100, which equation models the population P after t hours?",
     "choices": {
       "A": "P = 100(2)^(4t)",
-      "B": "P = 100(2)^(t/4)",
-      "C": "P = 100(4)^(t/2)",
+      "B": "P = 100(4)^(t/2)",
+      "C": "P = 100(2)^(t/4)",
       "D": "P = 200(t/4)"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "explanation": "The base is 2 because it doubles. The exponent must be 1 when t=4. So the exponent is t/4. Equation: P = 100(2)^(t/4).",
     "why_others_wrong": {
       "A": "Multiplies by 4 instead of dividing",
-      "C": "Wrong base and exponent",
+      "B": "Wrong base and exponent",
       "D": "Linear model"
     },
     "common_trap": "Using 4t instead of t/4 in the exponent.",
     "calculator_note": "Conceptual",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -186,7 +186,7 @@
     "calculator_note": "Mental math",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": true
   },
   {
@@ -197,22 +197,22 @@
     "question_stem": "If x - 2 is a factor of the polynomial p(x) = x^3 - kx^2 + 5x - 6, what is the value of k?",
     "choices": {
       "A": "1",
-      "B": "2",
-      "C": "3",
+      "B": "3",
+      "C": "2",
       "D": "4"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "explanation": "By the Factor Theorem, if x - 2 is a factor, then p(2) = 0. p(2) = 2^3 - k(2)^2 + 5(2) - 6 = 8 - 4k + 10 - 6 = 12 - 4k = 0. k = 3.",
     "why_others_wrong": {
       "A": "Math error",
-      "B": "Math error",
+      "C": "Math error",
       "D": "Sign error"
     },
     "common_trap": "Evaluating p(-2) instead of p(2).",
     "calculator_note": "Mental math",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -238,7 +238,7 @@
     "calculator_note": "Desmos useful",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -246,21 +246,16 @@
     "domain": "Advanced Math",
     "skill": "Radicals",
     "difficulty": 5,
-    "question_stem": "Solve for x: sqrt(2x + 15) - x = 0",
-    "choices": {
-      "A": "3",
-      "B": "-5",
-      "C": "3 and -5",
-      "D": "-3 and 5"
-    },
-    "correct_answer": "A",
-    "explanation": "sqrt(2x + 15) = x. Square both sides: 2x + 15 = x^2. x^2 - 2x - 15 = 0. (x - 5)(x + 3) = 0. x = 5 or x = -3. Wait, let me check. If x=-3, sqrt(9)=3 != -3. So x=5 is the only solution. The choices are wrong. Let's fix the question: sqrt(2x+15) - x = 0 -> x=5. I will change choice A to 5. Actually, let's make it a grid in.",
+    "question_stem": "What is the value of x that satisfies the equation sqrt(2x + 15) - x = 0?",
+    "choices": null,
+    "correct_answer": "5",
+    "explanation": "Isolating the radical term gives sqrt(2x + 15) = x. Squaring both sides yields 2x + 15 = x^2, which rearranges to the quadratic equation x^2 - 2x - 15 = 0. Factoring gives (x - 5)(x + 3) = 0, providing potential solutions x = 5 and x = -3. Checking x = -3 in the original equation gives sqrt(2(-3) + 15) - (-3) = sqrt(9) + 3 = 6 != 0, so x = -3 is extraneous. Checking x = 5 gives sqrt(2(5) + 15) - 5 = sqrt(25) - 5 = 0, which is valid. Therefore, the only real solution is 5.",
     "why_others_wrong": null,
-    "common_trap": "Including extraneous solutions.",
-    "calculator_note": "Desmos highly recommended",
+    "common_trap": "Accepting extraneous solution x = -3 without checking the radical domain.",
+    "calculator_note": "Desmos: graph y = sqrt(2x + 15) - x and inspect the x-intercept at x = 5.",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": true
   },
   {
@@ -270,23 +265,23 @@
     "difficulty": 5,
     "question_stem": "If 9^x = 27^(y-1), which of the following expresses x in terms of y?",
     "choices": {
-      "A": "x = (3y - 3) / 2",
+      "A": "x = 3y/2 - 1",
       "B": "x = 3y - 3",
       "C": "x = (2y - 2) / 3",
-      "D": "x = 3y/2 - 1"
+      "D": "x = (3y - 3) / 2"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "explanation": "Write with base 3: (3^2)^x = (3^3)^(y-1). 3^(2x) = 3^(3y-3). So 2x = 3y - 3, x = (3y - 3) / 2.",
     "why_others_wrong": {
+      "A": "Only divided the y term by 2",
       "B": "Forgot to divide by 2",
-      "C": "Swapped coefficients",
-      "D": "Only divided the y term by 2"
+      "C": "Swapped coefficients"
     },
     "common_trap": "Dividing incorrectly or messing up the exponent rules.",
     "calculator_note": "Mental math",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -303,7 +298,7 @@
     "calculator_note": "Desmos useful",
     "estimated_time_seconds": 90,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": true
   },
   {
@@ -313,23 +308,23 @@
     "difficulty": 5,
     "question_stem": "The polynomial p(x) has a remainder of 3 when divided by x - 2 and a remainder of -1 when divided by x + 1. What is the remainder when p(x) is divided by (x - 2)(x + 1)?",
     "choices": {
-      "A": "4/3 x + 1/3",
+      "A": "4x - 5",
       "B": "x + 1",
-      "C": "4x - 5",
+      "C": "4/3 x + 1/3",
       "D": "2"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "explanation": "Remainder is linear: R(x) = ax + b. R(2) = 3 -> 2a + b = 3. R(-1) = -1 -> -a + b = -1. Subtract: 3a = 4 -> a = 4/3. b = -1 + 4/3 = 1/3. So R(x) = 4/3 x + 1/3.",
     "why_others_wrong": {
+      "A": "Math error",
       "B": "Math error",
-      "C": "Math error",
       "D": "Used a constant remainder"
     },
     "common_trap": "Assuming the remainder is a constant.",
     "calculator_note": "Advanced concept",
     "estimated_time_seconds": 120,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -339,15 +334,15 @@
     "difficulty": 5,
     "question_stem": "The function f(x) = (2x^2 + kx - 15) / (x - 3) can be simplified to a linear function g(x) for all x != 3. What is the value of k?",
     "choices": {
-      "A": "-1",
-      "B": "1",
+      "A": "1",
+      "B": "-1",
       "C": "5",
       "D": "-5"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "explanation": "For the rational function to simplify, (x - 3) must be a factor of the numerator. So, 2(3)^2 + k(3) - 15 = 0. 18 + 3k - 15 = 0. 3k = -3, k = -1.",
     "why_others_wrong": {
-      "B": "Sign error",
+      "A": "Sign error",
       "C": "Constant error",
       "D": "Sign error"
     },
@@ -355,7 +350,7 @@
     "calculator_note": "Mental math",
     "estimated_time_seconds": 75,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -372,7 +367,7 @@
     "calculator_note": "Can graph f(x) = (x - 3)^2 - 16 in Desmos and inspect the y-intercept at x = 0.",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": true
   },
   {
@@ -398,7 +393,7 @@
     "calculator_note": "Desmos strategy: Graph y = (x^2 - 9)/(2x^2 + 5x - 3) and y = (x - 3)/(2x - 1); the curves will overlap completely.",
     "estimated_time_seconds": 70,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -415,7 +410,7 @@
     "calculator_note": "Graph y = x - 3 and y = √(2x + 9) in Desmos; the curves intersect at exactly one point: (8, 5).",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": true
   },
   {
@@ -425,23 +420,23 @@
     "difficulty": 4,
     "question_stem": "The value of a rare coin is modeled by the function V(t) = 150(1.08)^t, where V(t) is the value in dollars t years after 2010. Which of the following is the best interpretation of the number 1.08 in this context?",
     "choices": {
-      "A": "The value of the coin increases by 8% each year.",
+      "A": "The coin will double in value every 1.08 years.",
       "B": "The value of the coin increases by $1.08 each year.",
       "C": "The value of the coin in 2010 was $1.08.",
-      "D": "The coin will double in value every 1.08 years."
+      "D": "The value of the coin increases by 8% each year."
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "explanation": "In an exponential growth model V(t) = P(1 + r)^t, the base 1.08 corresponds to 1 + 0.08, which represents an 8% annual increase.",
     "why_others_wrong": {
+      "A": "1.08 is the annual multiplier, not the doubling period.",
       "B": "Confuses a percentage growth rate with a fixed dollar increase.",
-      "C": "The value in 2010 (t = 0) is V(0) = $150, not $1.08.",
-      "D": "1.08 is the annual multiplier, not the doubling period."
+      "C": "The value in 2010 (t = 0) is V(0) = $150, not $1.08."
     },
     "common_trap": "Interpreting exponential growth as linear addition ($1.08 per year).",
     "calculator_note": "1.08 = 1 + 0.08 = 8% annual growth.",
     "estimated_time_seconds": 35,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -451,23 +446,23 @@
     "difficulty": 3,
     "question_stem": "Which of the following is equivalent to (x^(3/4)) * (x^(1/2)) for all x > 0?",
     "choices": {
-      "A": "x^(5/4)",
+      "A": "x^(3/6)",
       "B": "x^(3/8)",
-      "C": "x^(3/6)",
+      "C": "x^(5/4)",
       "D": "x^(2/4)"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "explanation": "When multiplying terms with the same base, add the exponents: (3/4) + (1/2) = (3/4) + (2/4) = 5/4. Thus, the expression is x^(5/4).",
     "why_others_wrong": {
+      "A": "Added numerators and denominators: (3+1)/(4+2) = 4/6.",
       "B": "Multiplied exponents: (3/4) * (1/2) = 3/8 instead of adding them.",
-      "C": "Added numerators and denominators: (3+1)/(4+2) = 4/6.",
       "D": "Subtracted exponents."
     },
     "common_trap": "Multiplying fractional exponents instead of adding them.",
     "calculator_note": "Exponent rule: x^a * x^b = x^(a+b). 3/4 + 1/2 = 1.25 = 5/4.",
     "estimated_time_seconds": 30,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -493,7 +488,7 @@
     "calculator_note": "Graph both equations in Desmos to see the line is tangent to the parabola at (3, 4).",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -519,7 +514,7 @@
     "calculator_note": "Test (2, 7) in Choice A: 3(2 - 4)^2 - 5 = 3(4) - 5 = 7.",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -536,7 +531,7 @@
     "calculator_note": "Factor Theorem: P(c) = 0 when (x - c) is a factor.",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": true
   },
   {
@@ -548,16 +543,16 @@
     "question_stem": "In the xy-plane, the parabola given by y = 2x² - 8x + k intersects the line y = 4x - 10 at exactly one point. What is the value of the constant k?",
     "choices": {
       "A": "4",
-      "B": "8",
+      "B": "-4",
       "C": "-8",
-      "D": "-4"
+      "D": "8"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "explanation": "Set the two equations equal: 2x² - 8x + k = 4x - 10, which rearranges to 2x² - 12x + (k + 10) = 0. For a quadratic equation to have exactly one intersection (tangent), its discriminant Δ = b² - 4ac must equal zero. Here, a = 2, b = -12, c = k + 10. Δ = (-12)² - 4(2)(k + 10) = 144 - 8(k + 10) = 0. 144 - 8k - 80 = 0 -> 64 - 8k = 0 -> 8k = 64 -> k = 8.",
     "why_others_wrong": {
       "A": "If k = 4, Δ = 144 - 8(14) = 144 - 112 = 32 > 0 (two intersection points).",
-      "C": "Sign error during algebraic rearrangement.",
-      "D": "Confusing the discriminant calculation with the vertex formula."
+      "B": "Confusing the discriminant calculation with the vertex formula.",
+      "C": "Sign error during algebraic rearrangement."
     },
     "socratic_prompt": "When a line and a parabola intersect at exactly ONE point, what must be true about the discriminant of their combined quadratic equation?",
     "common_trap": "Forgetting to bring the 4x and -10 over to the same side before finding a, b, c.",
@@ -570,7 +565,8 @@
       "quadratics",
       "discriminant",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "MATH-ADV-025",
@@ -580,16 +576,16 @@
     "passage": null,
     "question_stem": "The polynomial function p is defined by p(x) = (x - 3)²(x + 1)(x - k), where k is a positive constant. If the graph of y = p(x) has an x-intercept at (5, 0) and a relative minimum at (3, 0), what is the value of p(4)?",
     "choices": {
-      "A": "-5",
+      "A": "-15",
       "B": "5",
-      "C": "-15",
+      "C": "-5",
       "D": "15"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "explanation": "Since p(x) has an x-intercept at (5, 0) and k is a positive constant other than 3 (which already appears as a double root), k must equal 5. Thus, p(x) = (x - 3)²(x + 1)(x - 5). Evaluating at x = 4: p(4) = (4 - 3)² * (4 + 1) * (4 - 5) = (1)² * (5) * (-1) = -5.",
     "why_others_wrong": {
+      "A": "Multiplying an extra factor of 3.",
       "B": "Sign error on the factor (4 - 5), forgetting it yields negative 1.",
-      "C": "Multiplying an extra factor of 3.",
       "D": "Sign error on both factors."
     },
     "socratic_prompt": "If (5, 0) is an x-intercept, what is the value of k? Then substitute x = 4 carefully into each factor.",
@@ -602,7 +598,8 @@
       "math",
       "polynomials",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "MATH-ADV-026",
@@ -612,15 +609,15 @@
     "passage": null,
     "question_stem": "A radioactive isotope decays according to the model N(t) = N₀ · (1/2)^(t / 24), where N(t) is the mass remaining in grams after t hours, and N₀ is the initial mass. If a laboratory sample contains 160 grams initially, after how many hours will exactly 5 grams remain?",
     "choices": {
-      "A": "120",
-      "B": "96",
+      "A": "96",
+      "B": "120",
       "C": "72",
       "D": "144"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "explanation": "Set N(t) = 5 and N₀ = 160: 5 = 160 · (1/2)^(t / 24). Divide both sides by 160: 5 / 160 = 1 / 32 = (1/2)^5. Therefore, (1/2)^(t / 24) = (1/2)^5. Equating the exponents: t / 24 = 5 -> t = 5 * 24 = 120 hours.",
     "why_others_wrong": {
-      "B": "96 hours corresponds to 4 half-lives (160 -> 80 -> 40 -> 20 -> 10 grams).",
+      "A": "96 hours corresponds to 4 half-lives (160 -> 80 -> 40 -> 20 -> 10 grams).",
       "C": "72 hours corresponds to 3 half-lives (20 grams remaining).",
       "D": "144 hours corresponds to 6 half-lives (2.5 grams remaining)."
     },
@@ -634,7 +631,8 @@
       "math",
       "exponentials",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "MATH-ADV-027",
@@ -667,7 +665,8 @@
       "rational_functions",
       "composite",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "MATH-ADV-028",
@@ -677,17 +676,17 @@
     "passage": null,
     "question_stem": "For what value of c will the system of equations y = x² - 6x + c and y = -2x + 1 have no real solutions?",
     "choices": {
-      "A": "c > 5",
+      "A": "c < -3",
       "B": "c < 5",
       "C": "c > -3",
-      "D": "c < -3"
+      "D": "c > 5"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "explanation": "Set the equations equal: x² - 6x + c = -2x + 1 -> x² - 4x + (c - 1) = 0. For no real solutions, the discriminant must be strictly negative: b² - 4ac < 0. Here, a = 1, b = -4, c' = c - 1. Δ = (-4)² - 4(1)(c - 1) = 16 - 4(c - 1) = 16 - 4c + 4 = 20 - 4c < 0. 20 < 4c -> 4c > 20 -> c > 5.",
     "why_others_wrong": {
+      "A": "Inverting inequality sign while dividing by positive 4.",
       "B": "c < 5 would make Δ > 0, yielding two real solutions.",
-      "C": "Algebraic arithmetic error on 16 - 4(c - 1).",
-      "D": "Inverting inequality sign while dividing by positive 4."
+      "C": "Algebraic arithmetic error on 16 - 4(c - 1)."
     },
     "socratic_prompt": "When does a quadratic equation have NO real solutions? (Discriminant < 0).",
     "common_trap": "Making a sign error when expanding -4(c - 1) to -4c - 4 instead of -4c + 4.",
@@ -700,7 +699,8 @@
       "quadratics",
       "systems",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "MATH-ADV-029",
@@ -710,16 +710,16 @@
     "passage": null,
     "question_stem": "If (x - 2) is a factor of the polynomial P(x) = 2x³ - 5x² + kx + 6, what is the value of k?",
     "choices": {
-      "A": "-1",
+      "A": "5",
       "B": "1",
-      "C": "5",
+      "C": "-1",
       "D": "-5"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "explanation": "By the Remainder Theorem, if (x - 2) is a factor of P(x), then P(2) must equal 0. P(2) = 2(2)³ - 5(2)² + k(2) + 6 = 2(8) - 5(4) + 2k + 6 = 16 - 20 + 2k + 6 = 2 + 2k = 0. 2k = -2 -> k = -1.",
     "why_others_wrong": {
+      "A": "Plugging in x = -2 instead of x = +2.",
       "B": "Sign error: 2 + 2k = 0 leads to k = -1, not +1.",
-      "C": "Plugging in x = -2 instead of x = +2.",
       "D": "Arithmetic error during summation."
     },
     "socratic_prompt": "If (x - 2) is a factor, what happens when you substitute x = 2 into P(x)?",
@@ -733,6 +733,7 @@
       "polynomials",
       "factor_theorem",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   }
 ]

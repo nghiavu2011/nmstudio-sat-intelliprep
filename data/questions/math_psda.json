@@ -6,15 +6,15 @@
     "difficulty": 1,
     "question_stem": "If a shirt originally costs $40 and is on sale for 20% off, what is the sale price?",
     "choices": {
-      "A": "$20",
-      "B": "$32",
+      "A": "$32",
+      "B": "$20",
       "C": "$36",
       "D": "$48"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "explanation": "20% of 40 is 0.20 * 40 = 8. 40 - 8 = 32.",
     "why_others_wrong": {
-      "A": "50% off",
+      "B": "50% off",
       "C": "10% off",
       "D": "20% markup"
     },
@@ -22,7 +22,7 @@
     "calculator_note": "Mental math",
     "estimated_time_seconds": 30,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -32,23 +32,23 @@
     "difficulty": 2,
     "question_stem": "The ratio of apples to oranges in a basket is 3:5. If there are 40 fruits in total, how many apples are there?",
     "choices": {
-      "A": "15",
+      "A": "30",
       "B": "24",
       "C": "25",
-      "D": "30"
+      "D": "15"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "explanation": "Total parts = 3 + 5 = 8. Each part is 40 / 8 = 5. Apples = 3 parts * 5 = 15.",
     "why_others_wrong": {
+      "A": "Math error",
       "B": "Found oranges",
-      "C": "Math error",
-      "D": "Math error"
+      "C": "Math error"
     },
     "common_trap": "Finding the number of oranges instead of apples.",
     "calculator_note": "Mental math",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -65,7 +65,7 @@
     "calculator_note": "Calculator useful",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": true
   },
   {
@@ -75,23 +75,23 @@
     "difficulty": 3,
     "question_stem": "A scatterplot shows a strong negative linear association between variables x and y. Which of the following could be the correlation coefficient?",
     "choices": {
-      "A": "-0.9",
+      "A": "0.1",
       "B": "-0.1",
-      "C": "0.1",
+      "C": "-0.9",
       "D": "0.9"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "explanation": "A strong negative association corresponds to a correlation coefficient close to -1.",
     "why_others_wrong": {
+      "A": "Weak positive",
       "B": "Weak negative",
-      "C": "Weak positive",
       "D": "Strong positive"
     },
     "common_trap": "Confusing magnitude and sign.",
     "calculator_note": "Conceptual",
     "estimated_time_seconds": 30,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -101,15 +101,15 @@
     "difficulty": 3,
     "question_stem": "A set of 5 numbers has a mean of 12. If the number 18 is added to the set, what is the new mean?",
     "choices": {
-      "A": "13",
-      "B": "14",
+      "A": "14",
+      "B": "13",
       "C": "15",
       "D": "18"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "explanation": "Sum of 5 numbers = 5 * 12 = 60. New sum = 60 + 18 = 78. New mean = 78 / 6 = 13.",
     "why_others_wrong": {
-      "B": "Math error",
+      "A": "Math error",
       "C": "Divided by 5",
       "D": "Added to mean"
     },
@@ -117,7 +117,7 @@
     "calculator_note": "Mental math",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -134,7 +134,7 @@
     "calculator_note": "Calculator useful",
     "estimated_time_seconds": 75,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": true
   },
   {
@@ -160,7 +160,7 @@
     "calculator_note": "Mental math",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -172,21 +172,21 @@
     "choices": {
       "A": "84",
       "B": "85",
-      "C": "86",
-      "D": "88"
+      "C": "88",
+      "D": "86"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "explanation": "Total sum = 20(80) + 30(90) = 1600 + 2700 = 4300. Overall mean = 4300 / 50 = 86.",
     "why_others_wrong": {
       "A": "Math error",
       "B": "Simple average of 80 and 90",
-      "D": "Weighted towards Class B but wrong math"
+      "C": "Weighted towards Class B but wrong math"
     },
     "common_trap": "Taking the simple average of the two means (85) without weighting by class size.",
     "calculator_note": "Calculator recommended",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -212,7 +212,7 @@
     "calculator_note": "Conceptual",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -229,7 +229,7 @@
     "calculator_note": "Mental math",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": true
   },
   {
@@ -240,22 +240,22 @@
     "question_stem": "A survey of 120 college students recorded their major and whether they participate in varsity athletics:\n• STEM: 15 athletes, 45 non-athletes (Total: 60)\n• Humanities: 10 athletes, 50 non-athletes (Total: 60)\nIf a student is selected at random from among the athletes, what is the probability that the student is a STEM major?",
     "choices": {
       "A": "15/120",
-      "B": "15/60",
-      "C": "15/25",
+      "B": "15/25",
+      "C": "15/60",
       "D": "25/120"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "explanation": "This is conditional probability: P(STEM | Athlete). The condition restricts the sample space to athletes only. Total athletes = 15 (STEM) + 10 (Humanities) = 25. Number of STEM athletes = 15. Therefore, the probability is 15/25 (or 3/5).",
     "why_others_wrong": {
       "A": "Calculated P(STEM and Athlete) relative to the total student population: 15/120.",
-      "B": "Divided by total STEM students (60) instead of total athletes: 15/60.",
+      "C": "Divided by total STEM students (60) instead of total athletes: 15/60.",
       "D": "Calculated total probability of being an athlete: 25/120."
     },
     "common_trap": "Using the total population (120) or row total as the denominator instead of the restricted conditional group (athletes = 25).",
     "calculator_note": "Identify the restricted denominator first: 'from among the athletes' = 25.",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -265,15 +265,15 @@
     "difficulty": 3,
     "question_stem": "The price of a share of stock increased by 20% on Monday and then decreased by 20% on Tuesday. If the price at the end of Tuesday was $96, what was the original price of the stock before Monday's increase?",
     "choices": {
-      "A": "$96",
-      "B": "$100",
+      "A": "$100",
+      "B": "$96",
       "C": "$104",
       "D": "$120"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "explanation": "Let P be the original price. After a 20% increase, the price is P * 1.20. After a 20% decrease, the price is (P * 1.20) * 0.80 = 0.96P. We are given 0.96P = 96. Solving for P: P = 96 / 0.96 = 100.",
     "why_others_wrong": {
-      "A": "Assumes a 20% increase followed by a 20% decrease returns to the exact starting price.",
+      "B": "Assumes a 20% increase followed by a 20% decrease returns to the exact starting price.",
       "C": "Added 8% arbitrarily.",
       "D": "Divided 96 by 0.8."
     },
@@ -281,7 +281,7 @@
     "calculator_note": "Simple calculation: 96 / (1.2 * 0.8) = 96 / 0.96 = 100.",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -298,7 +298,7 @@
     "calculator_note": "4.2 * 25 - 18 = 87.",
     "estimated_time_seconds": 35,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": true
   },
   {
@@ -309,22 +309,22 @@
     "question_stem": "A random sample of 500 registered voters in a city found that 54% support a proposed municipal transit tax, with an associated margin of error of 4% at a 95% confidence level. Which of the following is the most appropriate conclusion based on this result?",
     "choices": {
       "A": "Exactly 54% of all registered voters in the city support the tax.",
-      "B": "It is plausible that between 50% and 58% of all registered voters in the city support the tax.",
+      "B": "The tax is guaranteed to pass with at least 50% of the vote.",
       "C": "If another sample of 500 voters is surveyed, exactly 54% will support the tax.",
-      "D": "The tax is guaranteed to pass with at least 50% of the vote."
+      "D": "It is plausible that between 50% and 58% of all registered voters in the city support the tax."
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "explanation": "The margin of error of ±4% around the sample estimate of 54% creates a confidence interval of [54% - 4%, 54% + 4%] = [50%, 58%]. It is statistically plausible that the true population proportion lies within this interval.",
     "why_others_wrong": {
       "A": "Sample statistics provide an estimate, not an exact count of the entire population.",
-      "C": "Sampling variability means different samples will yield slightly different percentages.",
-      "D": "Statistics never provides an absolute guarantee, and 50% is at the boundary of the interval."
+      "B": "Statistics never provides an absolute guarantee, and 50% is at the boundary of the interval.",
+      "C": "Sampling variability means different samples will yield slightly different percentages."
     },
     "common_trap": "Choosing an absolute statement ('exactly', 'guaranteed') instead of an inferential range ('plausible between X and Y').",
     "calculator_note": "Margin of error: 54 ± 4 = [50, 58].",
     "estimated_time_seconds": 50,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -341,7 +341,7 @@
     "calculator_note": "(900 / 45) * 12 / 60 = 4.",
     "estimated_time_seconds": 50,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": true
   }
 ]

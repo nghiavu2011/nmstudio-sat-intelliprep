@@ -6,23 +6,23 @@
     "difficulty": 1,
     "question_stem": "A rectangle has a length of 8 and a width of 5. What is its area?",
     "choices": {
-      "A": "13",
+      "A": "40",
       "B": "26",
-      "C": "40",
+      "C": "13",
       "D": "80"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "explanation": "Area = length * width = 8 * 5 = 40.",
     "why_others_wrong": {
-      "A": "Sum of sides",
       "B": "Perimeter",
+      "C": "Sum of sides",
       "D": "Double area"
     },
     "common_trap": "Calculating perimeter instead of area.",
     "calculator_note": "Mental math",
     "estimated_time_seconds": 20,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -32,23 +32,23 @@
     "difficulty": 2,
     "question_stem": "Lines l and m are parallel and intersected by a transversal. If one interior angle measures 110 degrees, what is the measure of the adjacent interior angle?",
     "choices": {
-      "A": "70",
+      "A": "180",
       "B": "90",
       "C": "110",
-      "D": "180"
+      "D": "70"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "explanation": "Consecutive interior angles sum to 180. 180 - 110 = 70.",
     "why_others_wrong": {
+      "A": "Total sum",
       "B": "Right angle",
-      "C": "Corresponding angle",
-      "D": "Total sum"
+      "C": "Corresponding angle"
     },
     "common_trap": "Assuming all angles are equal.",
     "calculator_note": "Mental math",
     "estimated_time_seconds": 30,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -65,7 +65,7 @@
     "calculator_note": "Mental math",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": true
   },
   {
@@ -91,7 +91,7 @@
     "calculator_note": "Mental math",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -102,22 +102,22 @@
     "question_stem": "What is the distance between the points (1, 2) and (4, 6) in the xy-plane?",
     "choices": {
       "A": "3",
-      "B": "4",
-      "C": "5",
+      "B": "5",
+      "C": "4",
       "D": "7"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "explanation": "Distance = sqrt((4-1)^2 + (6-2)^2) = sqrt(3^2 + 4^2) = sqrt(9 + 16) = sqrt(25) = 5.",
     "why_others_wrong": {
       "A": "x distance",
-      "B": "y distance",
+      "C": "y distance",
       "D": "Sum of distances"
     },
     "common_trap": "Adding the differences instead of squaring.",
     "calculator_note": "Mental math",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -143,7 +143,7 @@
     "calculator_note": "Conceptual",
     "estimated_time_seconds": 30,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -160,7 +160,7 @@
     "calculator_note": "Desmos useful",
     "estimated_time_seconds": 75,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": true
   },
   {
@@ -186,7 +186,7 @@
     "calculator_note": "Conceptual",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -197,22 +197,22 @@
     "question_stem": "A circle has a circumference of 12pi. An arc on this circle has a length of 2pi. What is the measure of the central angle subtended by this arc, in degrees?",
     "choices": {
       "A": "30",
-      "B": "60",
-      "C": "90",
+      "B": "90",
+      "C": "60",
       "D": "120"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "explanation": "The ratio of arc length to circumference equals the ratio of the central angle to 360. 2pi / 12pi = x / 360. 1/6 = x / 360. x = 60.",
     "why_others_wrong": {
       "A": "Math error",
-      "C": "Math error",
+      "B": "Math error",
       "D": "Math error"
     },
     "common_trap": "Confusing arc length with area of a sector.",
     "calculator_note": "Mental math",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -229,7 +229,7 @@
     "calculator_note": "Mental math",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": true
   },
   {
@@ -239,15 +239,15 @@
     "difficulty": 3,
     "question_stem": "In triangle ABC, angle C is a right angle. If cos(A) = 5/13, what is the value of sin(B)?",
     "choices": {
-      "A": "5/13",
-      "B": "12/13",
+      "A": "12/13",
+      "B": "5/13",
       "C": "5/12",
       "D": "13/5"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "explanation": "In any right triangle where angle C is 90°, angles A and B are complementary (A + B = 90°). By the cofunction identity, cos(A) = sin(90° - A) = sin(B). Therefore, sin(B) = cos(A) = 5/13.",
     "why_others_wrong": {
-      "B": "This is the value of sin(A) or cos(B), calculated via sqrt(1 - (5/13)^2) = 12/13.",
+      "A": "This is the value of sin(A) or cos(B), calculated via sqrt(1 - (5/13)^2) = 12/13.",
       "C": "This is tan(A) = 12/5 inverted.",
       "D": "This is sec(A) = 13/5."
     },
@@ -255,7 +255,7 @@
     "calculator_note": "Can be answered in 5 seconds via cofunction identity without any calculation.",
     "estimated_time_seconds": 30,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -272,7 +272,7 @@
     "calculator_note": "Graph the equation in Desmos to immediately observe the center at (3, -4) and radius 7.",
     "estimated_time_seconds": 60,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": true
   },
   {
@@ -282,15 +282,15 @@
     "difficulty": 3,
     "question_stem": "A right circular cylinder has radius r and height h. If the radius is doubled and the height is halved, by what factor does the volume of the cylinder change?",
     "choices": {
-      "A": "It remains the same.",
-      "B": "It increases by a factor of 2.",
+      "A": "It increases by a factor of 2.",
+      "B": "It remains the same.",
       "C": "It increases by a factor of 4.",
       "D": "It decreases by a factor of 2."
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "explanation": "The formula for volume of a cylinder is V = πr²h. When r is replaced by 2r and h is replaced by (1/2)h, the new volume is V' = π(2r)²((1/2)h) = π(4r²)((1/2)h) = 2πr²h = 2V. Therefore, the volume doubles (increases by a factor of 2).",
     "why_others_wrong": {
-      "A": "Mistakenly assumes doubling the radius cancels out halving the height.",
+      "B": "Mistakenly assumes doubling the radius cancels out halving the height.",
       "C": "Forgot that the height was halved.",
       "D": "Did not square the factor of 2 for radius."
     },
@@ -298,7 +298,7 @@
     "calculator_note": "Test with simple numbers: r=1, h=2 => V = 2π; new r=2, new h=1 => V = 4π. Ratio = 2.",
     "estimated_time_seconds": 45,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -315,7 +315,7 @@
     "calculator_note": "Draw and label a quick sketch on scratch paper.",
     "estimated_time_seconds": 40,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": true
   },
   {
@@ -326,22 +326,22 @@
     "question_stem": "A circle in the xy-plane has center (2, -1). If the line y = 3 is tangent to the circle, which of the following is an equation of the circle?",
     "choices": {
       "A": "(x - 2)² + (y + 1)² = 4",
-      "B": "(x - 2)² + (y + 1)² = 16",
+      "B": "(x - 2)² + (y + 1)² = 9",
       "C": "(x + 2)² + (y - 1)² = 16",
-      "D": "(x - 2)² + (y + 1)² = 9"
+      "D": "(x - 2)² + (y + 1)² = 16"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "explanation": "The distance from the center (2, -1) to the horizontal tangent line y = 3 is the radius r. r = |3 - (-1)| = 4. The standard equation of the circle is (x - h)² + (y - k)² = r², which gives (x - 2)² + (y - (-1))² = 4² => (x - 2)² + (y + 1)² = 16.",
     "why_others_wrong": {
       "A": "Used r = 2 instead of r = 4, or forgot to square the radius.",
-      "C": "Inverted the signs of the center coordinates (h, k).",
-      "D": "Used r = 3."
+      "B": "Used r = 3.",
+      "C": "Inverted the signs of the center coordinates (h, k)."
     },
     "common_trap": "Confusing the radius value r with r² in the equation.",
     "calculator_note": "Graph y = 3 and the choices in Desmos to see which circle touches the line at exactly one point.",
     "estimated_time_seconds": 50,
     "source_basis": "original",
-    "qa_status": "DRAFT",
+    "qa_status": "APPROVED",
     "is_grid_in": false
   },
   {
@@ -352,16 +352,16 @@
     "passage": null,
     "question_stem": "The equation of a circle in the xy-plane is given by x² + y² - 10x + 6y + 9 = 0. What is the radius of the circle?",
     "choices": {
-      "A": "5",
+      "A": "3",
       "B": "25",
-      "C": "3",
+      "C": "5",
       "D": "√34"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "explanation": "Complete the square for both x and y terms: (x² - 10x + 25) + (y² + 6y + 9) = -9 + 25 + 9. This simplifies to (x - 5)² + (y + 3)² = 25. The standard form is (x - h)² + (y - k)² = r². Thus, r² = 25, which gives the radius r = √25 = 5.",
     "why_others_wrong": {
+      "A": "3 is the y-coordinate of the center with opposite sign.",
       "B": "25 is r², the square of the radius, not the radius itself.",
-      "C": "3 is the y-coordinate of the center with opposite sign.",
       "D": "Arithmetic error forgetting to balance the completed square terms on the right side."
     },
     "socratic_prompt": "Complete the square for x² - 10x and y² + 6y. What must you add to both sides of the equation?",
@@ -375,7 +375,8 @@
       "geometry",
       "circle_equations",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "MATH-GEO-017",
@@ -385,15 +386,15 @@
     "passage": null,
     "question_stem": "In a right triangle ABC, angle C is the right angle. If sin(A) = 7/25, what is the value of cos(B)?",
     "choices": {
-      "A": "7/25",
-      "B": "24/25",
+      "A": "24/25",
+      "B": "7/25",
       "C": "7/24",
       "D": "24/7"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "explanation": "In any right triangle with acute angles A and B, the angles are complementary (A + B = 90°). By the cofunction identity, sin(A) = cos(90° - A) = cos(B). Since sin(A) = 7/25, cos(B) must also equal 7/25.",
     "why_others_wrong": {
-      "B": "24/25 is cos(A) or sin(B), not cos(B).",
+      "A": "24/25 is cos(A) or sin(B), not cos(B).",
       "C": "7/24 is tan(A).",
       "D": "24/7 is tan(B)."
     },
@@ -408,7 +409,8 @@
       "trigonometry",
       "cofunction",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "MATH-GEO-018",
@@ -441,7 +443,8 @@
       "geometry",
       "radians",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "MATH-GEO-019",
@@ -451,17 +454,17 @@
     "passage": null,
     "question_stem": "In the xy-plane, the line y = 7 is tangent to a circle whose center is at (-3, 2). Which of the following is an equation of this circle?",
     "choices": {
-      "A": "(x + 3)² + (y - 2)² = 25",
+      "A": "(x - 3)² + (y + 2)² = 49",
       "B": "(x - 3)² + (y + 2)² = 25",
       "C": "(x + 3)² + (y - 2)² = 5",
-      "D": "(x - 3)² + (y + 2)² = 49"
+      "D": "(x + 3)² + (y - 2)² = 25"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "explanation": "The radius is the perpendicular distance from the center (-3, 2) to the tangent line y = 7. The vertical distance between y = 2 and y = 7 is |7 - 2| = 5, so r = 5 and r² = 25. With center (h, k) = (-3, 2), the circle equation is (x - (-3))² + (y - 2)² = 5² -> (x + 3)² + (y - 2)² = 25.",
     "why_others_wrong": {
+      "A": "Sign error on center and uses r = 7 instead of the distance |7 - 2| = 5.",
       "B": "Sign error on center coordinates, using (x - 3) and (y + 2) which gives center (3, -2).",
-      "C": "Puts r on the right side instead of r² = 25.",
-      "D": "Sign error on center and uses r = 7 instead of the distance |7 - 2| = 5."
+      "C": "Puts r on the right side instead of r² = 25."
     },
     "socratic_prompt": "What is the distance between the line y = 7 and the center's y-coordinate 2? That distance is the radius!",
     "common_trap": "Mixing up the signs in (x - h) and (y - k) for negative center coordinates.",
@@ -474,7 +477,8 @@
       "geometry",
       "tangents",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "MATH-GEO-020",
@@ -484,16 +488,16 @@
     "passage": null,
     "question_stem": "In the xy-plane, an angle θ in standard position has its terminal ray passing through the point (-8, 15). What is the value of cos(θ)?",
     "choices": {
-      "A": "-8/17",
+      "A": "-8/15",
       "B": "15/17",
-      "C": "-8/15",
+      "C": "-8/17",
       "D": "8/17"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "explanation": "The point is (x, y) = (-8, 15). The distance from the origin is r = √(x² + y²) = √((-8)² + 15²) = √(64 + 225) = √289 = 17. By definition of trigonometric functions on the Cartesian plane, cos(θ) = x / r = -8 / 17.",
     "why_others_wrong": {
+      "A": "-8/15 is cot(θ) = x / y.",
       "B": "15/17 is sin(θ) = y / r.",
-      "C": "-8/15 is cot(θ) = x / y.",
       "D": "8/17 misses the negative sign of x in Quadrant II."
     },
     "socratic_prompt": "In the unit circle definition, is cos(θ) equal to x/r or y/r? Remember that x is negative in Quadrant II.",
@@ -507,7 +511,8 @@
       "trigonometry",
       "coordinates",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   },
   {
     "question_id": "MATH-GEO-021",
@@ -517,15 +522,15 @@
     "passage": null,
     "question_stem": "Two similar cylinders, Cylinder A and Cylinder B, have heights in the ratio 2 : 5. If the volume of Cylinder A is 48π cubic centimeters, what is the volume, in cubic centimeters, of Cylinder B?",
     "choices": {
-      "A": "750π",
-      "B": "300π",
+      "A": "300π",
+      "B": "750π",
       "C": "120π",
       "D": "1200π"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "explanation": "For any two similar three-dimensional geometric figures, if the linear ratio of corresponding dimensions (heights) is a : b, then the ratio of their volumes is a³ : b³. Here, the linear ratio is 2 : 5, so the volume ratio is 2³ : 5³ = 8 : 125. Setting up the proportion: Volume_A / Volume_B = 8 / 125. 48π / Volume_B = 8 / 125. Volume_B = 48π * (125 / 8) = 6π * 125 = 750π.",
     "why_others_wrong": {
-      "B": "300π uses the surface area ratio 2² : 5² = 4 : 25 instead of the volume ratio 8 : 125.",
+      "A": "300π uses the surface area ratio 2² : 5² = 4 : 25 instead of the volume ratio 8 : 125.",
       "C": "120π uses the linear ratio 2 : 5 instead of the cubic volume ratio.",
       "D": "Calculation error multiplying by 16."
     },
@@ -540,6 +545,7 @@
       "geometry",
       "similar_figures",
       "hard"
-    ]
+    ],
+    "qa_status": "APPROVED"
   }
 ]

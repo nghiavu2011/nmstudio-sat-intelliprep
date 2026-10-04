@@ -29,15 +29,15 @@
 <body>
 
   <!-- Initial Setup Modal -->
-  <div id="setup-modal" style="display:none;">
+  <div id="setup-modal" role="dialog" aria-modal="true" aria-labelledby="setup-modal-title" style="display:none;">
     <div class="modal-content" style="background:var(--color-surface);border-radius:var(--radius-xl);padding:2rem;max-width:500px;width:90%;box-shadow:var(--shadow-lg);border:1px solid var(--color-border);">
       <div class="text-center mb-4">
         <img src="assets/logo.png" alt="N&amp;Mstudio Logo" width="56" height="56" style="border-radius:12px;margin-bottom:0.5rem;">
-        <h2 style="font-size:1.35rem;font-weight:800;">Chào mừng bạn đến với SAT IntelliPrep</h2>
-        <p class="text-muted" style="font-size:0.85rem;">Thiết lập mục tiêu để hệ thống cá nhân hóa lộ trình Digital SAT 2026.</p>
+        <h2 id="setup-modal-title" style="font-size:1.35rem;font-weight:800;">Chào mừng bạn đến với SAT IntelliPrep</h2>
+        <p class="text-muted" style="font-size:0.85rem;">Thiết lập hồ sơ để cá nhân hóa lộ trình Digital SAT 2026 dựa trên dữ liệu thực tế.</p>
       </div>
       
-      <label style="font-weight:700;font-size:0.85rem;display:block;margin-bottom:0.35rem;">Mục Tiêu Điểm Số SAT (Target Score)</label>
+      <label for="setup-target-score" style="font-weight:700;font-size:0.85rem;display:block;margin-bottom:0.35rem;">Mục Tiêu Điểm Số SAT (Target Score)</label>
       <select id="setup-target-score" style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius);border:1.5px solid var(--color-border);margin-bottom:1rem;">
         <option value="1500+" selected>1500+ (Ivy League, Top 20 Đại học Mỹ, Học bổng toàn phần)</option>
         <option value="1400+">1400+ (Top 50 Mỹ, FTU / RMIT / NEU xét tuyển thẳng)</option>
@@ -45,21 +45,28 @@
         <option value="1200+">1200+ (Khởi đầu vững chắc, củng cố nền tảng)</option>
       </select>
 
-      <label style="font-weight:700;font-size:0.85rem;display:block;margin-bottom:0.35rem;">Khối Lớp Hiện Tại</label>
+      <label for="setup-grade" style="font-weight:700;font-size:0.85rem;display:block;margin-bottom:0.35rem;">Khối Lớp Hiện Tại</label>
       <select id="setup-grade" style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius);border:1.5px solid var(--color-border);margin-bottom:1rem;">
         <option value="10">Lớp 10 (Xây dựng nền tảng từ vựng &amp; tư duy sớm)</option>
         <option value="11" selected>Lớp 11 (Giai đoạn vàng tăng tốc luyện đề)</option>
         <option value="12">Lớp 12 (Bứt phá điểm tối đa &amp; nộp hồ sơ du học)</option>
       </select>
 
-      <label style="font-weight:700;font-size:0.85rem;display:block;margin-bottom:0.35rem;">Cấp Độ Ngôn Ngữ</label>
-      <select id="setup-level" style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius);border:1.5px solid var(--color-border);margin-bottom:1.5rem;">
-        <option value="foundation">Cơ bản (Hỗ trợ giải thích tiếng Việt)</option>
+      <label for="setup-level" style="font-weight:700;font-size:0.85rem;display:block;margin-bottom:0.35rem;">Cấp Độ Ngôn Ngữ</label>
+      <select id="setup-level" style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius);border:1.5px solid var(--color-border);margin-bottom:1rem;">
+        <option value="foundation">Cơ bản (Hỗ trợ phân tích &amp; giải nghĩa chi tiết)</option>
         <option value="intermediate" selected>Trung cấp (Chuẩn học thuật quốc tế)</option>
         <option value="advanced">Nâng cao (100% tiếng Anh nguyên bản)</option>
       </select>
 
-      <button id="setup-submit" class="btn-primary-action w-full" style="width:100%;">Bắt Đầu Lộ Trình SAT 1500+ 🚀</button>
+      <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:var(--radius);padding:0.75rem;margin-bottom:1.25rem;">
+        <label for="setup-do-diagnostic" style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;cursor:pointer;color:#1E3A8A;font-weight:600;line-height:1.4;">
+          <input type="checkbox" id="setup-do-diagnostic" checked style="accent-color:var(--color-primary);margin-top:2px;">
+          <span>Làm bài <strong>Đánh Giá Chẩn Đoán Đầu Vào (25 phút • 30 câu)</strong> để đo baseline 15 kỹ năng SAT ngay sau khi lưu.</span>
+        </label>
+      </div>
+
+      <button id="setup-submit" class="btn-primary-action w-full" style="width:100%;">Bắt Đầu Lộ Trình SAT 🚀</button>
     </div>
   </div>
 
@@ -113,6 +120,18 @@
           <div class="today-subdate flex items-center justify-between flex-wrap gap-2">
             <span class="date-display"></span>
             <span class="plan-badge" id="current-workspace-badge">🎯 Digital SAT 2026 Core • Lộ Trình 1500+</span>
+          </div>
+        </div>
+
+        <!-- Diagnostic Assessment Prompt Banner (Shown if not yet completed) -->
+        <div id="today-diagnostic-banner" style="display:none;background:linear-gradient(135deg,#EFF6FF,#DBEAFE);border:1.5px solid #93C5FD;border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin-bottom:1.5rem;box-shadow:var(--shadow-sm);">
+          <div class="flex justify-between items-center flex-wrap gap-3">
+            <div>
+              <span class="plan-badge" style="background:#2563EB;color:white;border:none;">Khảo Thí Đầu Vào</span>
+              <h3 style="font-size:1.1rem;font-weight:800;color:#1E3A8A;margin:0.35rem 0 0.2rem 0;">Xác Lập Điểm Khởi Đầu: Bài Chẩn Đoán 30 Câu (25 Phút)</h3>
+              <p class="text-xs" style="color:#1E40AF;margin:0;">Hệ thống sẽ bóc tách năng lực thực tế trên 15 kỹ năng SAT và đề xuất lộ trình trọng tâm cho bạn.</p>
+            </div>
+            <button class="btn-primary-action text-xs" onclick="startDiagnosticExam()">Bắt Đầu Bài Chẩn Đoán →</button>
           </div>
         </div>
 
@@ -328,13 +347,13 @@
       <section id="review" class="section-view">
         <div class="today-header">
           <h1 class="today-greeting">Sổ Tay Ôn Tập &amp; Truy Hồi (Review &amp; Retrieval)</h1>
-          <p class="today-subdate">Hệ thống áp dụng thuật toán lặp lại ngắt quãng (FSRS) giúp ghi nhớ dài hạn và khắc phục bẫy logic.</p>
+          <p class="today-subdate">Hệ thống áp dụng thuật toán lặp lại ngắt quãng (Spaced Repetition System - SRS) giúp ghi nhớ dài hạn và khắc phục bẫy logic.</p>
         </div>
 
         <div class="review-dashboard-grid">
           <!-- Due Today Flashcards Card -->
           <div class="review-summary-card">
-            <span class="plan-badge">FSRS Spaced Repetition</span>
+            <span class="plan-badge">Spaced Repetition System (SRS)</span>
             <div class="review-stat-number" id="review-fc-due-count">0</div>
             <h3 style="font-size:1.15rem;font-weight:700;">Thẻ Ghi Nhớ Đến Hạn Ôn Tập</h3>
             <p class="text-sm text-muted mb-2">Ôn tập từ vựng Direct Hits, quy tắc ngữ pháp và công thức toán học trước khi đường cong quên lãng giảm sút.</p>
@@ -347,7 +366,7 @@
               <button class="btn btn-outline text-2xs" onclick="startFlashcardReview('mistakes')">🧠 Lỗi Sai Của Tôi</button>
             </div>
 
-            <button class="btn-primary-action text-sm" onclick="startFlashcardReview()">Bắt Đầu Lật Thẻ FSRS →</button>
+            <button class="btn-primary-action text-sm" onclick="startFlashcardReview()">Bắt Đầu Lật Thẻ SRS →</button>
           </div>
 
           <!-- Mistake Ledger Card -->
@@ -383,7 +402,7 @@
             </div>
 
             <div class="fsrs-button-row">
-              <button class="fsrs-btn again" onclick="rateFlashcard(1)">Again (&lt;1m)</button>
+              <button class="fsrs-btn again" onclick="rateFlashcard(1)">Again (10m)</button>
               <button class="fsrs-btn hard" onclick="rateFlashcard(2)">Hard (1d)</button>
               <button class="fsrs-btn good" onclick="rateFlashcard(3)">Good (3d)</button>
               <button class="fsrs-btn easy" onclick="rateFlashcard(4)">Easy (7d)</button>
@@ -455,6 +474,28 @@
               <span class="text-xs text-muted" id="timed-answered-count">0/20 đã trả lời</span>
             </div>
             <button class="btn btn-outline text-sm" id="timed-next-btn" onclick="nextTimedQuestion()">Câu Tiếp Theo →</button>
+          </div>
+        </div>
+
+        <!-- Timed Break Area (10-minute break between RW and Math sections) -->
+        <div id="timed-break-area" class="card p-6 text-center" style="display:none; max-width:650px; margin:2rem auto;">
+          <span class="plan-badge mb-2" style="background:#EFF6FF;color:#1D4ED8;">Section Break · Giờ Nghỉ Khảo Thí</span>
+          <h2 style="font-size:1.6rem;font-weight:800;color:var(--color-ink);margin:0.5rem 0;">Nghỉ Giữa Giờ: 10 Phút</h2>
+          <p class="text-sm text-muted mb-4">Bạn vừa hoàn thành trọn vẹn Section Reading &amp; Writing (54 câu). Hãy đứng dậy vận động nhẹ, thư giãn mắt và uống nước trước khi bước vào Section Math (44 câu).</p>
+          <div style="font-size:3.25rem;font-weight:800;font-family:monospace;color:var(--color-primary);margin:1.5rem 0;" id="break-timer-display">10:00</div>
+          <div class="flex justify-center gap-3">
+            <button class="btn-primary-action text-sm" onclick="skipExamBreak()">Bắt Đầu Math Module 1 Ngay →</button>
+          </div>
+        </div>
+
+        <!-- Adaptive Module Routing Transition Overlay -->
+        <div id="adaptive-transition-modal" class="modal-backdrop" role="dialog" aria-modal="true" style="display:none;z-index:9999;">
+          <div class="modal-card" style="max-width:520px;text-align:center;">
+            <div style="font-size:2.5rem;margin-bottom:0.5rem;">🧭</div>
+            <span class="plan-badge mb-2" id="adaptive-route-badge">Multi-Stage Adaptive Routing</span>
+            <h3 style="font-size:1.35rem;font-weight:800;margin:0.5rem 0;" id="adaptive-route-title">Hoàn Thành Module 1</h3>
+            <p class="text-sm text-muted mb-4" id="adaptive-route-desc">Độ chính xác Module 1: <strong>--%</strong>. Hệ thống đã tự động định tuyến bạn sang <strong>Module 2</strong>.</p>
+            <button class="btn-primary-action w-full" id="adaptive-route-continue-btn" onclick="startRoutedModule()">Bắt Đầu Module 2 Tiếp Theo →</button>
           </div>
         </div>
 
@@ -548,61 +589,61 @@
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════
-       CONTEXTUAL AI COACH MODAL & DRAWER
+       CONTEXTUAL STRATEGY COACH (TUTOR ENGINE)
        ═══════════════════════════════════════════════════════════════ -->
   <div class="ai-coach-drawer">
-    <button class="ai-coach-trigger-btn" onclick="askAICoach()">
-      <span>🤖</span> <span>AI Tutor Trợ Giảng</span>
+    <button class="ai-coach-trigger-btn" onclick="askAICoach()" aria-label="Mở Trợ Lý Chiến Thuật SAT">
+      <span>🤖</span> <span>SAT Strategy Coach</span>
     </button>
   </div>
 
-  <div class="ai-coach-modal" id="ai-coach-modal">
+  <div class="ai-coach-modal" id="ai-coach-modal" role="dialog" aria-modal="true" aria-labelledby="strategy-coach-title">
     <div class="ai-coach-box">
       <div class="ai-coach-header">
         <div class="flex items-center gap-2">
           <span style="font-size:1.25rem;">🤖</span>
           <div>
-            <h3 style="margin:0;font-size:1.05rem;font-weight:800;">N&amp;Mstudio AI Coach</h3>
+            <h3 id="strategy-coach-title" style="margin:0;font-size:1.05rem;font-weight:800;">SAT Strategy Coach</h3>
             <span class="text-xs text-muted" id="ai-context-indicator">Context: Active Question</span>
           </div>
         </div>
-        <button class="btn btn-outline text-xs" onclick="closeAICoach()">✕ Đóng</button>
+        <button class="btn btn-outline text-xs" onclick="closeAICoach()" aria-label="Đóng cửa sổ Trợ Lý">✕ Đóng</button>
       </div>
       <div class="ai-coach-content">
-        <div class="text-xs font-semibold text-muted mb-2">GỢI Ý HỎI NHANH CHO CÂU NÀY:</div>
+        <div class="text-xs font-semibold text-muted mb-2">GỢI Ý CHIẾN THUẬT CHO CÂU NÀY:</div>
         <div class="ai-quick-prompts">
           <button class="prompt-chip" onclick="askAIPrompt('explain_another_way')">💡 Giải thích theo cách khác</button>
           <button class="prompt-chip" onclick="askAIPrompt('why_distractor_wrong')">🔍 Vì sao các phương án khác sai?</button>
           <button class="prompt-chip" onclick="askAIPrompt('give_hint')">🧩 Cho tôi một gợi ý tư duy</button>
-          <button class="prompt-chip" onclick="askAIPrompt('show_thinking_steps')">📝 Từng bước suy luận</button>
+          <button class="prompt-chip" onclick="askAIPrompt('show_thinking_steps')">📝 Từng bước suy luận / Bấm máy</button>
           <button class="prompt-chip" onclick="askAIPrompt('easier_example')">🌱 Cho một ví dụ đơn giản hơn</button>
         </div>
         <div class="ai-response-area" id="ai-response-content">
-          Xin chào! Tôi là Trợ giảng AI đồng hành cùng bạn. Bạn có thể nhấn vào các gợi ý bên trên hoặc chọn nội dung cần gỡ rối nhé!
+          Xin chào! Tôi là Trợ lý Chiến thuật SAT đồng hành cùng bạn. Bạn có thể nhấn vào các gợi ý bên trên hoặc chọn nội dung cần gỡ rối nhé!
         </div>
       </div>
     </div>
   </div>
 
   <!-- Desmos Calculator Modal -->
-  <div id="desmos-modal" class="hidden" style="position:fixed;inset:0;background:rgba(21,40,59,0.7);z-index:90;display:none;align-items:center;justify-content:center;">
+  <div id="desmos-modal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="desmos-title" style="position:fixed;inset:0;background:rgba(21,40,59,0.7);z-index:90;display:none;align-items:center;justify-content:center;">
     <div class="modal-content" style="max-width:920px;width:95%;height:580px;display:flex;flex-direction:column;padding:1.25rem;background:white;border-radius:var(--radius-xl);">
       <div class="flex justify-between items-center mb-2">
-        <h3 class="font-bold flex items-center gap-2" style="margin-bottom:0;font-size:1.1rem;">
-          <span>📈</span> Desmos Graphing Calculator (Digital SAT Official Interface)
+        <h3 id="desmos-title" class="font-bold flex items-center gap-2" style="margin-bottom:0;font-size:1.1rem;">
+          <span>📈</span> Desmos Graphing Calculator (Digital SAT Compatible)
         </h3>
-        <button class="btn btn-outline text-xs" onclick="toggleDesmos()">✕ Đóng</button>
+        <button class="btn btn-outline text-xs" onclick="toggleDesmos()" aria-label="Đóng máy tính Desmos">✕ Đóng</button>
       </div>
-      <iframe id="desmos-iframe" src="about:blank" style="flex:1;width:100%;border:1px solid var(--color-border);border-radius:var(--radius);background:white"></iframe>
+      <iframe id="desmos-iframe" title="Desmos Graphing Calculator" src="about:blank" style="flex:1;width:100%;border:1px solid var(--color-border);border-radius:var(--radius);background:white"></iframe>
     </div>
   </div>
 
   <!-- Social Share Modal -->
-  <div id="share-modal" style="position:fixed;inset:0;background:rgba(21,40,59,0.7);z-index:95;display:none;align-items:center;justify-content:center;">
+  <div id="share-modal" role="dialog" aria-modal="true" aria-labelledby="share-title" style="position:fixed;inset:0;background:rgba(21,40,59,0.7);z-index:95;display:none;align-items:center;justify-content:center;">
     <div class="modal-content" style="max-width:520px;width:92%;background:var(--color-surface);border-radius:var(--radius-xl);padding:1.5rem;box-shadow:var(--shadow-lg);">
       <div class="flex justify-between items-center mb-3">
-        <h3 style="margin:0;font-size:1.1rem;font-weight:800;">🏆 Thẻ Thành Tích Rèn Luyện</h3>
-        <button class="btn btn-outline text-xs" onclick="closeShareModal()">✕ Đóng</button>
+        <h3 id="share-title" style="margin:0;font-size:1.1rem;font-weight:800;">🏆 Thẻ Thành Tích Rèn Luyện</h3>
+        <button class="btn btn-outline text-xs" onclick="closeShareModal()" aria-label="Đóng thẻ thành tích">✕ Đóng</button>
       </div>
 
       <div id="share-card-preview" style="background:#15283B;border-radius:var(--radius-lg);padding:1.5rem;color:white;margin-bottom:1rem;">
@@ -624,15 +665,15 @@
 
         <div class="grid-3 text-center py-2" style="border-top:1px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.15);">
           <div>
-            <div class="text-xl font-bold" id="share-stat-q" style="color:#38BDF8;">120</div>
+            <div class="text-xl font-bold" id="share-stat-q" style="color:#38BDF8;">0</div>
             <div class="text-2xs" style="color:#94A3B8;">CÂU ĐÃ GIẢI</div>
           </div>
           <div>
-            <div class="text-xl font-bold" id="share-stat-acc" style="color:#34D399;">82%</div>
+            <div class="text-xl font-bold" id="share-stat-acc" style="color:#34D399;">0%</div>
             <div class="text-2xs" style="color:#94A3B8;">ĐỘ CHÍNH XÁC</div>
           </div>
           <div>
-            <div class="text-xl font-bold" id="share-stat-skills" style="color:#FBBF24;">8/15</div>
+            <div class="text-xl font-bold" id="share-stat-skills" style="color:#FBBF24;">0/15</div>
             <div class="text-2xs" style="color:#94A3B8;">MASTERED</div>
           </div>
         </div>
@@ -648,17 +689,17 @@
   </div>
 
   <!-- Anki Deck Export Modal -->
-  <div id="anki-export-modal" style="position:fixed;inset:0;background:rgba(21,40,59,0.7);z-index:95;display:none;align-items:center;justify-content:center;">
+  <div id="anki-export-modal" role="dialog" aria-modal="true" aria-labelledby="anki-title" style="position:fixed;inset:0;background:rgba(21,40,59,0.7);z-index:95;display:none;align-items:center;justify-content:center;">
     <div class="modal-content" style="max-width:540px;width:92%;background:var(--color-surface);border-radius:var(--radius-xl);padding:1.75rem;box-shadow:var(--shadow-lg);">
       <div class="flex justify-between items-center mb-3">
         <div class="flex items-center gap-2">
           <span style="font-size:1.4rem;">🗂️</span>
           <div>
-            <h3 style="margin:0;font-size:1.15rem;font-weight:800;">Xuất Bộ Thẻ Ghi Nhớ Chuẩn Anki (.tsv)</h3>
+            <h3 id="anki-title" style="margin:0;font-size:1.15rem;font-weight:800;">Xuất Bộ Thẻ Ghi Nhớ Chuẩn Anki (.tsv)</h3>
             <p class="text-xs text-muted" style="margin:0;">Định dạng chuẩn UTF-8 BOM, tương thích 100% Anki Desktop &amp; AnkiMobile.</p>
           </div>
         </div>
-        <button class="btn btn-outline text-xs" onclick="closeAnkiModal()">✕ Đóng</button>
+        <button class="btn btn-outline text-xs" onclick="closeAnkiModal()" aria-label="Đóng cửa sổ Anki">✕ Đóng</button>
       </div>
 
       <p class="text-xs text-muted mb-4" style="line-height:1.5;">
@@ -708,6 +749,17 @@
 
   <!-- Dedicated Print Portal (Populated dynamically on window.print) -->
   <div id="print-portal" style="display:none;"></div>
+
+  <!-- Academic Platform Footer & Compliance Disclaimer -->
+  <footer style="text-align:center;padding:2rem 1rem;font-size:0.75rem;color:var(--color-muted);border-top:1px solid var(--color-border);margin-top:2.5rem;line-height:1.6;">
+    <p><strong>N&amp;Mstudio_Education — SAT IntelliPrep OS (2026)</strong></p>
+    <p style="margin-top:0.35rem;max-width:720px;margin-left:auto;margin-right:auto;">
+      SAT® is a registered trademark of the College Board, which is not affiliated with, and does not endorse or sponsor, this learning platform. Nền tảng học tập độc lập, không có mối liên kết hay tài trợ chính thức từ phía College Board.
+    </p>
+    <p style="margin-top:0.25rem;color:var(--color-muted-dark);">
+      Nền tảng rèn luyện tư duy khảo thí &amp; chẩn đoán lỗi nhận thức có chủ đích dành cho học sinh THPT. Hotline/Zalo Cố Vấn: +98 557 8385.
+    </p>
+  </footer>
 
   <script src="js/app.js"></script>
 </body>
