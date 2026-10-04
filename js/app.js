@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════
    N&Mstudio_Education — SAT IntelliPrep OS (Digital SAT 2026)
    Main Application Logic: Pure Digital SAT Focus, 5-Destination Nav,
-   6-Stage Deliberate Feedback, FSRS Spaced Review, Deep Anki TSV &
+   6-Stage Deliberate Feedback, SRS Spaced Review, Deep Anki TSV &
    A4 PDF Export Engines, 6 Specialized SAT Exam Scenarios
    ═══════════════════════════════════════════════════════════════ */
 
@@ -40,6 +40,7 @@ function loadState() {
         if (parsed.skills && parsed.errors) {
           if (!parsed.profile) parsed.profile = { grade: '11', level: 'intermediate', targetScore: '1500+' };
           if (!parsed.profile.targetScore) parsed.profile.targetScore = '1500+';
+          if (!parsed.assessmentHistory) parsed.assessmentHistory = [];
           return parsed;
         }
       }
@@ -53,11 +54,34 @@ function loadState() {
     skills: {},
     errors: [],
     flashcardState: {},
-    sessionLog: []
+    sessionLog: [],
+    assessmentHistory: []
   };
 }
 
 let db = loadState();
+
+// ── Local Calendar Date & 7-Day Consistency (P1.1 Fix) ──
+function getLocalDateKey(dateObj = new Date()) {
+  const y = dateObj.getFullYear();
+  const m = String(dateObj.getMonth() + 1).padStart(2, '0');
+  const d = String(dateObj.getDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
+}
+
+function getActiveDaysLast7() {
+  const activeDates = new Set(db.activeDates || []);
+  let count = 0;
+  const now = new Date();
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(now.getFullYear(), now.getMonth(), now.getDate() - i);
+    const key = getLocalDateKey(d);
+    if (activeDates.has(key)) {
+      count++;
+    }
+  }
+  return count;
+}
 
 function save() {
   try {
@@ -275,16 +299,65 @@ function init() {
   if (!db.totalStudyTimeSec) db.totalStudyTimeSec = 0;
 
   const modal = $('#setup-modal');
+  let previouslyFocusedElement = null;
+
+  function trapModalFocus(e) {
+    if (!modal || modal.style.display !== 'flex') return;
+    if (e.key === 'Tab') {
+      const focusables = modal.querySelectorAll('select, input, button, [tabindex]:not([tabindex="-1"])');
+      const focusableArr = Array.from(focusables).filter(el => !el.disabled && el.offsetParent !== null);
+      if (focusableArr.length === 0) return;
+
+      const firstEl = focusableArr[0];
+      const lastEl = focusableArr[focusableArr.length - 1];
+
+      if (e.shiftKey) {
+        if (document.activeElement === firstEl) {
+          e.preventDefault();
+          lastEl.focus();
+        }
+      } else {
+        if (document.activeElement === lastEl) {
+          e.preventDefault();
+          firstEl.focus();
+        }
+      }
+    } else if (e.key === 'Escape') {
+      // If profile already exists, Escape can close the optional setup modal
+      if (db.profile) {
+        e.preventDefault();
+        window.closeSetupModal();
+      }
+    }
+  }
+
   window.openSetupModal = function() {
     if (modal) {
+      previouslyFocusedElement = document.activeElement;
       modal.style.display = 'flex';
       document.body.classList.add('modal-open');
+      document.addEventListener('keydown', trapModalFocus);
+
+      // Focus first meaningful form control
+      setTimeout(() => {
+        const firstInput = modal.querySelector('#setup-target-score, select, input, button');
+        if (firstInput) firstInput.focus();
+      }, 50);
     }
   };
+
   window.closeSetupModal = function() {
     if (modal) {
       modal.style.display = 'none';
       document.body.classList.remove('modal-open');
+      document.removeEventListener('keydown', trapModalFocus);
+
+      // Restore focus to previous element if valid
+      if (previouslyFocusedElement && typeof previouslyFocusedElement.focus === 'function') {
+        try {
+          previouslyFocusedElement.focus();
+        } catch (_) {}
+      }
     }
   };
 
@@ -406,7 +479,7 @@ function renderToday() {
 
   const overallAcc = totalQ > 0 ? Math.round((totalCorrect / totalQ) * 100) : 0;
   const errorCount = (db.errors || []).length;
-  const activeDays = (db.activeDates || []).length;
+  const activeDays7 = getActiveDaysLast7();
   const studyMins = Math.round((db.totalStudyTimeSec || 0) / 60);
 
   // Update Hero elements
@@ -417,17 +490,21 @@ function renderToday() {
   const heroTargetDisplay = $('#hero-target-display');
   if (heroTargetDisplay) heroTargetDisplay.textContent = `Mục tiêu ${db.profile?.targetScore || '1500+'}`;
 
-  // Update Status Cards Row
+  // Update Status Cards Row (P0.1 Hotfix: Honest SAT Assessment Readiness)
   const readinessRangeEl = $('#today-readiness-range');
   const readinessConfEl = $('#today-readiness-conf');
   if (readinessRangeEl && readinessConfEl) {
-    if (totalQ >= 15) {
-      const bands = calculateSATScoreBands(totalCorrect, totalQ);
-      readinessRangeEl.textContent = `${bands.totalBand.min}–${bands.totalBand.max}`;
-      readinessConfEl.textContent = `${bands.confidence} (Dựa trên ${totalQ} câu)`;
+    const history = db.assessmentHistory || [];
+    const latestMock = history.length > 0 ? history[history.length - 1] : null;
+
+    if (latestMock && latestMock.totalMin && latestMock.totalMax) {
+      readinessRangeEl.textContent = `${latestMock.totalMin}–${latestMock.totalMax}`;
+      readinessConfEl.textContent = 'Từ Full Adaptive Mock gần nhất';
     } else {
-      readinessRangeEl.textContent = 'Chưa có dữ liệu';
-      readinessConfEl.textContent = 'Hoàn thành bài chẩn đoán để đo lường';
+      readinessRangeEl.textContent = 'Chưa có dải điểm';
+      readinessConfEl.textContent = totalQ > 0 
+        ? `Độ chính xác luyện tập: ${overallAcc}% · ${totalQ} câu` 
+        : 'Hoàn thành Full Adaptive Mock để ước lượng';
     }
   }
 
@@ -435,7 +512,7 @@ function renderToday() {
   if (reviewDueValEl) reviewDueValEl.textContent = `${errorCount} câu`;
 
   const streakDisplayEl = $('#today-streak-display');
-  if (streakDisplayEl) streakDisplayEl.textContent = `${activeDays} / 7 ngày`;
+  if (streakDisplayEl) streakDisplayEl.textContent = `${activeDays7} / 7 ngày`;
 
   const timeDisplayEl = $('#today-time-display');
   if (timeDisplayEl) timeDisplayEl.textContent = `${studyMins} phút`;
@@ -532,6 +609,48 @@ window.filterPracticeDomains = function(filterType) {
     chip.classList.toggle('active', chip.dataset.filter === filterType);
   });
 
+  // Calculate dynamic weak domains from db.skills (P1.5 Hotfix)
+  let weakDomainKeys = new Set();
+  if (filterType === 'weak') {
+    const domainMap = {
+      'rw-info': ['Central Ideas and Details', 'Command of Evidence: Textual', 'Command of Evidence: Quantitative', 'Inferences'],
+      'rw-craft': ['Words in Context', 'Text Structure and Purpose', 'Cross-Text Connections'],
+      'rw-expr': ['Rhetorical Synthesis', 'Transitions'],
+      'rw-conv': ['Boundaries', 'Form, Structure, and Sense'],
+      'math-alg': ['Algebra'],
+      'math-adv': ['Advanced Math'],
+      'math-psda': ['Problem-Solving and Data Analysis'],
+      'math-geo': ['Geometry and Trigonometry']
+    };
+
+    const domainAccs = [];
+    Object.entries(domainMap).forEach(([domKey, skills]) => {
+      let dTotal = 0, dCorrect = 0;
+      skills.forEach(sk => {
+        const s = (db.skills || {})[sk];
+        if (s) {
+          dTotal += (s.total || 0);
+          dCorrect += (s.correct || 0);
+        }
+      });
+      // Evidence threshold: requires at least 2 questions answered in this domain
+      if (dTotal >= 2) {
+        domainAccs.push({ key: domKey, acc: (dCorrect / dTotal) * 100, total: dTotal });
+      }
+    });
+
+    if (domainAccs.length > 0) {
+      domainAccs.sort((a, b) => a.acc - b.acc);
+      // Weakest domains are those with lowest accuracy (acc < 75%)
+      const lowestAcc = domainAccs[0].acc;
+      domainAccs.forEach(d => {
+        if (d.acc <= Math.max(lowestAcc, 60) || d.acc < 75) {
+          weakDomainKeys.add(d.key);
+        }
+      });
+    }
+  }
+
   const cards = $$('.domain-card-btn');
   cards.forEach(card => {
     const d = card.dataset.domain || '';
@@ -542,7 +661,13 @@ window.filterPracticeDomains = function(filterType) {
     } else if (filterType === 'math') {
       card.style.display = d.startsWith('math') ? 'flex' : 'none';
     } else if (filterType === 'weak') {
-      card.style.display = (d === 'rw-info' || d === 'math-adv') ? 'flex' : 'none';
+      // If we have calculated weak domains with enough evidence, show them.
+      // If no domain has enough evidence yet, show all domains as neutral state.
+      if (weakDomainKeys.size > 0) {
+        card.style.display = weakDomainKeys.has(d) ? 'flex' : 'none';
+      } else {
+        card.style.display = 'flex';
+      }
     }
   });
 };
@@ -751,7 +876,7 @@ window.trySimilarQuestion = function() {
 };
 
 // ═══════════════════════════════════════════════════════════════
-// SECTION 3: REVIEW (FSRS FLASHCARDS & ERROR ANALYSIS)
+// SECTION 3: REVIEW (SRS FLASHCARDS & ERROR ANALYSIS)
 // ═══════════════════════════════════════════════════════════════
 let flashcardDeck = [];
 let currentCardIdx = 0;
@@ -1491,10 +1616,20 @@ function renderExamQuestion(idx) {
     else desmosBtn.classList.add('hidden');
   }
 
-  // Update flag button state
+  // Update flag button state (P1.2 Icon Consistency - Clean SVG + Label)
   const flagBtn = $('#timed-flag-btn');
   if (flagBtn) {
-    flagBtn.textContent = activeExam.flags[idx] ? '🚩 Bỏ Đánh Dấu' : '🚩 Đánh Dấu';
+    const isFlagged = !!activeExam.flags[idx];
+    const span = flagBtn.querySelector('span');
+    if (span) {
+      span.textContent = isFlagged ? 'Bỏ Đánh Dấu' : 'Đánh Dấu';
+    } else {
+      flagBtn.innerHTML = `
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></svg>
+        <span>${isFlagged ? 'Bỏ Đánh Dấu' : 'Đánh Dấu'}</span>
+      `;
+    }
+    flagBtn.classList.toggle('active', isFlagged);
   }
 
   // Handle Passage
@@ -1566,7 +1701,17 @@ window.toggleExamFlag = function() {
   renderExamPalette();
   const flagBtn = $('#timed-flag-btn');
   if (flagBtn) {
-    flagBtn.textContent = activeExam.flags[idx] ? '🚩 Bỏ Đánh Dấu' : '🚩 Đánh Dấu';
+    const isFlagged = !!activeExam.flags[idx];
+    const span = flagBtn.querySelector('span');
+    if (span) {
+      span.textContent = isFlagged ? 'Bỏ Đánh Dấu' : 'Đánh Dấu';
+    } else {
+      flagBtn.innerHTML = `
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></svg>
+        <span>${isFlagged ? 'Bỏ Đánh Dấu' : 'Đánh Dấu'}</span>
+      `;
+    }
+    flagBtn.classList.toggle('active', isFlagged);
   }
 };
 
@@ -1732,6 +1877,31 @@ function showFullAdaptiveResults() {
   const overallPct = Math.round((totalCorrect / totalQuestions) * 100);
 
   const bands = calculateSATScoreBands(rwCorrect, activeExam.rwRouting, mathCorrect, activeExam.mathRouting);
+
+  // Persist assessment history entry (P0.1 & P0.2 Hotfix)
+  if (!db.assessmentHistory) db.assessmentHistory = [];
+  const assessmentEntry = {
+    id: `mock_${Date.now()}`,
+    type: 'full_adaptive_mock',
+    testId: activeExam.testId,
+    timestamp: new Date().toISOString(),
+    rwCorrect,
+    mathCorrect,
+    totalCorrect,
+    rwRouting: activeExam.rwRouting,
+    mathRouting: activeExam.mathRouting,
+    rwMin: bands.rwMin,
+    rwMax: bands.rwMax,
+    mathMin: bands.mathMin,
+    mathMax: bands.mathMax,
+    totalMin: bands.totalMin,
+    totalMax: bands.totalMax
+  };
+  db.assessmentHistory.push(assessmentEntry);
+  if (db.profile) {
+    db.profile.lastAssessment = assessmentEntry;
+  }
+  save();
 
   let totalTimeSpent = 0;
   activeExam.allStagesData.forEach(d => totalTimeSpent += (d.timeSpentSec || 0));
@@ -1970,26 +2140,40 @@ function renderProgress() {
   const totalSec = db.totalStudyTimeSec || 0;
   const hours = Math.floor(totalSec / 3600);
   const mins = Math.floor((totalSec % 3600) / 60);
-  const activeDays = (db.activeDates || []).length;
+  const activeDays7 = getActiveDaysLast7();
+  const lifetimeActiveDays = (db.activeDates || []).length;
 
-  // 1. Overall Readiness Hero Card
+  // 1. Overall Readiness Hero Card (P0.2 Hotfix: Score Integrity)
   const bandEl = $('#prog-readiness-band');
   const confEl = $('#prog-confidence-badge');
   const noteEl = $('#prog-readiness-note');
   const trajEl = $('#prog-trajectory-val');
 
-  if (totalQ > 0) {
-    const overallPct = Math.round((totalCorrect / totalQ) * 100);
-    const estMin = Math.round((920 + overallPct * 6) / 10) * 10;
-    const estMax = Math.min(1560, estMin + 90);
-    if (bandEl) bandEl.textContent = `${estMin} – ${estMax}`;
-    if (confEl) confEl.textContent = totalQ >= 25 ? 'Độ Tin Cậy: Cao' : 'Độ Tin Cậy: Trung Bình';
-    if (noteEl) noteEl.textContent = `Ước lượng năng lực dựa trên ${totalQ} câu hỏi thực tế đã giải (${overallPct}% chính xác).`;
-    if (trajEl) trajEl.textContent = `+${Math.min(150, Math.round(totalQ * 1.5) + 30)} điểm`;
+  const history = db.assessmentHistory || [];
+  const latestMock = history.length > 0 ? history[history.length - 1] : null;
+
+  if (latestMock && latestMock.totalMin && latestMock.totalMax) {
+    if (bandEl) bandEl.textContent = `${latestMock.totalMin} – ${latestMock.totalMax}`;
+    if (confEl) confEl.textContent = 'Dựa Trên Mock Test Thích Ứng';
+    if (noteEl) noteEl.textContent = `Dải dự phóng năng lực từ bài Full Adaptive Mock gần nhất (${latestMock.totalCorrect}/98 câu đúng).`;
+    
+    // Trajectory calculation based on real mock midpoint delta
+    if (history.length >= 2) {
+      const firstMock = history[0];
+      const latestMid = (latestMock.totalMin + latestMock.totalMax) / 2;
+      const firstMid = (firstMock.totalMin + firstMock.totalMax) / 2;
+      const delta = Math.round(latestMid - firstMid);
+      const sign = delta > 0 ? '+' : '';
+      if (trajEl) trajEl.textContent = `${sign}${delta} điểm`;
+    } else {
+      if (trajEl) trajEl.textContent = '--';
+    }
   } else {
-    if (bandEl) bandEl.textContent = 'Chưa Có Dữ Liệu';
-    if (confEl) confEl.textContent = 'Cần Làm Chẩn Đoán';
-    if (noteEl) noteEl.textContent = 'Hoàn thành bài khảo sát chẩn đoán hoặc bài thi thử để kích hoạt dải điểm.';
+    if (bandEl) bandEl.textContent = 'Chưa có dải điểm';
+    if (confEl) confEl.textContent = 'Chưa có bài thi thử';
+    if (noteEl) noteEl.textContent = totalQ > 0 
+      ? `Đã hoàn thành ${totalQ} câu luyện tập (${Math.round((totalCorrect / totalQ) * 100)}% chính xác). Hãy làm bài Full Adaptive Mock để ước lượng dải điểm.`
+      : 'Hoàn thành bài khảo sát chẩn đoán hoặc bài thi thử để kích hoạt dải điểm.';
     if (trajEl) trajEl.textContent = '--';
   }
 
@@ -1997,24 +2181,28 @@ function renderProgress() {
   const rwAcc = rwTotal > 0 ? Math.round((rwCorrect / rwTotal) * 100) : 0;
   const mathAcc = mathTotal > 0 ? Math.round((mathCorrect / mathTotal) * 100) : 0;
 
-  const rwMin = rwTotal > 0 ? Math.round((460 + rwAcc * 3.3) / 10) * 10 : 480;
-  const rwMax = Math.min(790, rwMin + 60);
-  const mathMin = mathTotal > 0 ? Math.round((460 + mathAcc * 3.4) / 10) * 10 : 490;
-  const mathMax = Math.min(800, mathMin + 60);
-
-  if ($('#prog-rw-range-text')) $('#prog-rw-range-text').textContent = rwTotal > 0 ? `${rwMin} – ${rwMax}` : '480 – 540 (Ước lượng)';
+  if (latestMock && latestMock.rwMin && latestMock.rwMax) {
+    if ($('#prog-rw-range-text')) $('#prog-rw-range-text').textContent = `${latestMock.rwMin} – ${latestMock.rwMax}`;
+  } else {
+    if ($('#prog-rw-range-text')) $('#prog-rw-range-text').textContent = 'Chưa có dữ liệu khảo thí';
+  }
   if ($('#prog-rw-acc-pill')) $('#prog-rw-acc-pill').textContent = `Độ chính xác: ${rwAcc}% (${rwCorrect}/${rwTotal})`;
-  if ($('#prog-math-range-text')) $('#prog-math-range-text').textContent = mathTotal > 0 ? `${mathMin} – ${mathMax}` : '490 – 550 (Ước lượng)';
+
+  if (latestMock && latestMock.mathMin && latestMock.mathMax) {
+    if ($('#prog-math-range-text')) $('#prog-math-range-text').textContent = `${latestMock.mathMin} – ${latestMock.mathMax}`;
+  } else {
+    if ($('#prog-math-range-text')) $('#prog-math-range-text').textContent = 'Chưa có dữ liệu khảo thí';
+  }
   if ($('#prog-math-acc-pill')) $('#prog-math-acc-pill').textContent = `Độ chính xác: ${mathAcc}% (${mathCorrect}/${mathTotal})`;
 
   // 3. Momentum & Parent Metrics
   if ($('#prog-momentum-time')) $('#prog-momentum-time').textContent = `${hours}h ${mins}m`;
-  if ($('#prog-momentum-days')) $('#prog-momentum-days').textContent = `${activeDays} / 7 ngày`;
+  if ($('#prog-momentum-days')) $('#prog-momentum-days').textContent = `${activeDays7} / 7 ngày`;
   if ($('#prog-momentum-questions')) $('#prog-momentum-questions').textContent = `${totalQ} câu`;
 
   if ($('#parent-total-hours')) $('#parent-total-hours').textContent = `${hours}h ${mins}m`;
   if ($('#parent-total-questions')) $('#parent-total-questions').textContent = `${totalQ} câu`;
-  if ($('#parent-active-days')) $('#parent-active-days').textContent = activeDays > 0 ? `${activeDays} ngày` : '0 ngày';
+  if ($('#parent-active-days')) $('#parent-active-days').textContent = lifetimeActiveDays > 0 ? `${lifetimeActiveDays} ngày` : '0 ngày';
   if ($('#parent-mastered-skills')) $('#parent-mastered-skills').textContent = `${masteredCount} / ${SAT_SKILLS.length}`;
 
   // 4. Canonical 8-Domain Mastery Horizontal Bars
