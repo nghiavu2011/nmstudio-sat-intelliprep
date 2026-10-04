@@ -1068,8 +1068,8 @@ function renderTest() {
   grid.innerHTML = `
     <!-- PRIMARY HERO SIMULATION CARD (Spec 10.2 A) -->
     <div class="mock-hero-simulation-card card-pastel-blue mb-4" style="grid-column: 1 / -1; padding:2rem 2.25rem; border-radius:var(--radius-card-xl); border:1px solid rgba(78,102,232,0.18); box-shadow:var(--shadow-card);">
-      <div class="flex justify-between items-start flex-wrap gap-4 mb-3">
-        <div>
+      <div class="flex justify-between items-start flex-wrap gap-5 mb-3">
+        <div style="flex: 1; min-width: 320px;">
           <div class="flex items-center gap-2 mb-2">
             <span class="plan-badge" style="background:#FFFFFF;color:var(--color-primary);">Chuẩn Khảo Thí Digital SAT 2026</span>
             <span class="plan-badge" style="background:rgba(255,255,255,0.8);color:var(--color-ink);">Adaptive Two-Stage Routing</span>
@@ -1080,6 +1080,9 @@ function renderTest() {
           <p class="text-sm text-muted" style="max-width:720px;line-height:1.6;margin:0;">
             Mô phỏng trọn vẹn 2 Section chuẩn College Board: <strong>Reading &amp; Writing (54 câu · 64 phút)</strong> + <strong>Math (44 câu · 70 phút)</strong> kèm 10 phút nghỉ giữa giờ. Hệ thống tự động phân nhánh Module 2 thích ứng hai chặng và xuất báo cáo dải điểm năng lực có căn cứ.
           </p>
+        </div>
+        <div class="mock-hero-media" style="width:240px;height:135px;flex-shrink:0;border-radius:var(--radius-card);overflow:hidden;box-shadow:var(--shadow-md);border:1px solid rgba(78,102,232,0.2);">
+          <img src="assets/visual/mock/mock-test.webp" alt="Mô phỏng phòng thi Digital SAT" width="240" height="135" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
       </div>
 

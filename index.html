@@ -219,13 +219,16 @@
 
         <!-- Diagnostic Assessment Prompt Banner (Shown if not yet completed) -->
         <div id="today-diagnostic-banner" style="display:none;background:linear-gradient(135deg,#EFF6FF,#DBEAFE);border:1.5px solid #93C5FD;border-radius:var(--radius-card);padding:1.25rem 1.5rem;margin-bottom:1.5rem;box-shadow:var(--shadow-sm);">
-          <div class="flex justify-between items-center flex-wrap gap-3">
-            <div>
+          <div class="flex justify-between items-center flex-wrap gap-4">
+            <div style="flex: 1; min-width: 260px;">
               <span class="plan-badge" style="background:#2563EB;color:white;border:none;">Khảo Thí Đầu Vào</span>
               <h3 style="font-size:1.1rem;font-weight:800;color:#1E3A8A;margin:0.35rem 0 0.2rem 0;">Xác Lập Điểm Khởi Đầu: Bài Chẩn Đoán 30 Câu (25 Phút)</h3>
-              <p class="text-xs" style="color:#1E40AF;margin:0;">Hệ thống sẽ bóc tách năng lực thực tế trên 15 kỹ năng SAT và đề xuất lộ trình trọng tâm cho bạn.</p>
+              <p class="text-xs" style="color:#1E40AF;margin:0 0 0.85rem 0;line-height:1.5;">Hệ thống sẽ bóc tách năng lực thực tế trên 15 kỹ năng SAT và đề xuất lộ trình trọng tâm cho bạn.</p>
+              <button class="btn-primary-action text-xs" onclick="startDiagnosticExam()">Bắt Đầu Bài Chẩn Đoán →</button>
             </div>
-            <button class="btn-primary-action text-xs" onclick="startDiagnosticExam()">Bắt Đầu Bài Chẩn Đoán →</button>
+            <div class="banner-editorial-media" style="width:130px;height:90px;flex-shrink:0;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(37,99,235,0.2);box-shadow:var(--shadow-sm);">
+              <img src="assets/visual/editorial/diagnostic-start.webp" alt="Làm bài chẩn đoán SAT" width="130" height="90" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
           </div>
         </div>
 
@@ -348,6 +351,9 @@
             <h4 class="strategy-tip-title">Không suy diễn quá phạm vi chứng cứ trong bài</h4>
             <p class="strategy-tip-desc">Đáp án đúng của câu hỏi suy luận (Inference) bắt buộc phải có câu chữ chứng minh trong bài đọc. Tránh chọn phương án có vẻ hợp lý ngoài đời thực nhưng không được tác giả nhắc tới.</p>
           </div>
+          <div class="strategy-tip-media" style="width:120px;height:80px;flex-shrink:0;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(217,119,6,0.2);box-shadow:var(--shadow-sm);">
+            <img src="assets/visual/editorial/strategy-review.webp" alt="Chiến thuật đọc hiểu SAT" width="120" height="80" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
           <a href="#practice" class="btn btn-outline text-xs" style="white-space:nowrap;">Luyện Bài Tập Minh Họa →</a>
         </div>
 
@@ -461,105 +467,145 @@
           <div class="domain-cards-grid" id="practice-domain-tabs">
             <!-- RW 1 -->
             <button class="domain-card-btn domain-tab-btn active card-pastel-blue" data-domain="rw-info" onclick="selectDomainTab('rw-info')">
-              <div class="domain-card-top">
-                <span class="domain-card-icon">📖</span>
-                <span class="domain-section-tag">Reading &amp; Writing</span>
+              <div class="domain-card-thumb-wrap">
+                <img src="assets/visual/domains/rw-information-ideas.webp" alt="Information &amp; Ideas" class="domain-card-thumb" width="160" height="90" loading="lazy">
               </div>
-              <h4 class="domain-card-title">Information &amp; Ideas</h4>
-              <p class="domain-card-meta">Central Ideas, Evidence, Inferences</p>
-              <div class="domain-card-footer">
-                <span class="domain-action-link">Luyện tập →</span>
+              <div class="domain-card-content">
+                <div class="domain-card-top">
+                  <span class="domain-card-icon">📖</span>
+                  <span class="domain-section-tag">Reading &amp; Writing</span>
+                </div>
+                <h4 class="domain-card-title">Information &amp; Ideas</h4>
+                <p class="domain-card-meta">Central Ideas, Evidence, Inferences</p>
+                <div class="domain-card-footer">
+                  <span class="domain-action-link">Luyện tập →</span>
+                </div>
               </div>
             </button>
 
             <!-- RW 2 -->
             <button class="domain-card-btn domain-tab-btn card-pastel-lilac" data-domain="rw-craft" onclick="selectDomainTab('rw-craft')">
-              <div class="domain-card-top">
-                <span class="domain-card-icon">🏛️</span>
-                <span class="domain-section-tag">Reading &amp; Writing</span>
+              <div class="domain-card-thumb-wrap">
+                <img src="assets/visual/domains/rw-craft-structure.webp" alt="Craft &amp; Structure" class="domain-card-thumb" width="160" height="90" loading="lazy">
               </div>
-              <h4 class="domain-card-title">Craft &amp; Structure</h4>
-              <p class="domain-card-meta">Words in Context, Text Structure, Cross-Text</p>
-              <div class="domain-card-footer">
-                <span class="domain-action-link">Luyện tập →</span>
+              <div class="domain-card-content">
+                <div class="domain-card-top">
+                  <span class="domain-card-icon">🏛️</span>
+                  <span class="domain-section-tag">Reading &amp; Writing</span>
+                </div>
+                <h4 class="domain-card-title">Craft &amp; Structure</h4>
+                <p class="domain-card-meta">Words in Context, Text Structure, Cross-Text</p>
+                <div class="domain-card-footer">
+                  <span class="domain-action-link">Luyện tập →</span>
+                </div>
               </div>
             </button>
 
             <!-- RW 3 -->
             <button class="domain-card-btn domain-tab-btn card-pastel-yellow" data-domain="rw-expr" onclick="selectDomainTab('rw-expr')">
-              <div class="domain-card-top">
-                <span class="domain-card-icon">✍️</span>
-                <span class="domain-section-tag">Reading &amp; Writing</span>
+              <div class="domain-card-thumb-wrap">
+                <img src="assets/visual/domains/rw-expression-ideas.webp" alt="Expression of Ideas" class="domain-card-thumb" width="160" height="90" loading="lazy">
               </div>
-              <h4 class="domain-card-title">Expression of Ideas</h4>
-              <p class="domain-card-meta">Transitions, Rhetorical Synthesis</p>
-              <div class="domain-card-footer">
-                <span class="domain-action-link">Luyện tập →</span>
+              <div class="domain-card-content">
+                <div class="domain-card-top">
+                  <span class="domain-card-icon">✍️</span>
+                  <span class="domain-section-tag">Reading &amp; Writing</span>
+                </div>
+                <h4 class="domain-card-title">Expression of Ideas</h4>
+                <p class="domain-card-meta">Transitions, Rhetorical Synthesis</p>
+                <div class="domain-card-footer">
+                  <span class="domain-action-link">Luyện tập →</span>
+                </div>
               </div>
             </button>
 
             <!-- RW 4 -->
             <button class="domain-card-btn domain-tab-btn card-pastel-green" data-domain="rw-conv" onclick="selectDomainTab('rw-conv')">
-              <div class="domain-card-top">
-                <span class="domain-card-icon">⚖️</span>
-                <span class="domain-section-tag">Reading &amp; Writing</span>
+              <div class="domain-card-thumb-wrap">
+                <img src="assets/visual/domains/rw-standard-conventions.webp" alt="Standard English Conventions" class="domain-card-thumb" width="160" height="90" loading="lazy">
               </div>
-              <h4 class="domain-card-title">Standard English Conventions</h4>
-              <p class="domain-card-meta">Boundaries, Form, Structure, Sense</p>
-              <div class="domain-card-footer">
-                <span class="domain-action-link">Luyện tập →</span>
+              <div class="domain-card-content">
+                <div class="domain-card-top">
+                  <span class="domain-card-icon">⚖️</span>
+                  <span class="domain-section-tag">Reading &amp; Writing</span>
+                </div>
+                <h4 class="domain-card-title">Standard English Conventions</h4>
+                <p class="domain-card-meta">Boundaries, Form, Structure, Sense</p>
+                <div class="domain-card-footer">
+                  <span class="domain-action-link">Luyện tập →</span>
+                </div>
               </div>
             </button>
 
             <!-- Math 1 -->
             <button class="domain-card-btn domain-tab-btn card-pastel-sage" data-domain="math-alg" onclick="selectDomainTab('math-alg')">
-              <div class="domain-card-top">
-                <span class="domain-card-icon">📐</span>
-                <span class="domain-section-tag">Math</span>
+              <div class="domain-card-thumb-wrap">
+                <img src="assets/visual/domains/math-algebra.webp" alt="Algebra" class="domain-card-thumb" width="160" height="90" loading="lazy">
               </div>
-              <h4 class="domain-card-title">Algebra</h4>
-              <p class="domain-card-meta">Linear Equations, Systems, Inequalities</p>
-              <div class="domain-card-footer">
-                <span class="domain-action-link">Luyện tập →</span>
+              <div class="domain-card-content">
+                <div class="domain-card-top">
+                  <span class="domain-card-icon">📐</span>
+                  <span class="domain-section-tag">Math</span>
+                </div>
+                <h4 class="domain-card-title">Algebra</h4>
+                <p class="domain-card-meta">Linear Equations, Systems, Inequalities</p>
+                <div class="domain-card-footer">
+                  <span class="domain-action-link">Luyện tập →</span>
+                </div>
               </div>
             </button>
 
             <!-- Math 2 -->
             <button class="domain-card-btn domain-tab-btn card-pastel-lilac" data-domain="math-adv" onclick="selectDomainTab('math-adv')">
-              <div class="domain-card-top">
-                <span class="domain-card-icon">∑</span>
-                <span class="domain-section-tag">Math</span>
+              <div class="domain-card-thumb-wrap">
+                <img src="assets/visual/domains/math-advanced.webp" alt="Advanced Math" class="domain-card-thumb" width="160" height="90" loading="lazy">
               </div>
-              <h4 class="domain-card-title">Advanced Math</h4>
-              <p class="domain-card-meta">Quadratics, Polynomials, Non-linear Functions</p>
-              <div class="domain-card-footer">
-                <span class="domain-action-link">Luyện tập →</span>
+              <div class="domain-card-content">
+                <div class="domain-card-top">
+                  <span class="domain-card-icon">∑</span>
+                  <span class="domain-section-tag">Math</span>
+                </div>
+                <h4 class="domain-card-title">Advanced Math</h4>
+                <p class="domain-card-meta">Quadratics, Polynomials, Non-linear Functions</p>
+                <div class="domain-card-footer">
+                  <span class="domain-action-link">Luyện tập →</span>
+                </div>
               </div>
             </button>
 
             <!-- Math 3 -->
             <button class="domain-card-btn domain-tab-btn card-pastel-yellow" data-domain="math-psda" onclick="selectDomainTab('math-psda')">
-              <div class="domain-card-top">
-                <span class="domain-card-icon">📊</span>
-                <span class="domain-section-tag">Math</span>
+              <div class="domain-card-thumb-wrap">
+                <img src="assets/visual/domains/math-psda.webp" alt="Problem-Solving &amp; Data Analysis" class="domain-card-thumb" width="160" height="90" loading="lazy">
               </div>
-              <h4 class="domain-card-title">Problem-Solving &amp; Data Analysis</h4>
-              <p class="domain-card-meta">Ratios, Percentages, Statistics, Probability</p>
-              <div class="domain-card-footer">
-                <span class="domain-action-link">Luyện tập →</span>
+              <div class="domain-card-content">
+                <div class="domain-card-top">
+                  <span class="domain-card-icon">📊</span>
+                  <span class="domain-section-tag">Math</span>
+                </div>
+                <h4 class="domain-card-title">Problem-Solving &amp; Data Analysis</h4>
+                <p class="domain-card-meta">Ratios, Percentages, Statistics, Probability</p>
+                <div class="domain-card-footer">
+                  <span class="domain-action-link">Luyện tập →</span>
+                </div>
               </div>
             </button>
 
             <!-- Math 4 -->
             <button class="domain-card-btn domain-tab-btn card-pastel-blue" data-domain="math-geo" onclick="selectDomainTab('math-geo')">
-              <div class="domain-card-top">
-                <span class="domain-card-icon">🔷</span>
-                <span class="domain-section-tag">Math</span>
+              <div class="domain-card-thumb-wrap">
+                <img src="assets/visual/domains/math-geometry-trig.webp" alt="Geometry &amp; Trigonometry" class="domain-card-thumb" width="160" height="90" loading="lazy">
               </div>
-              <h4 class="domain-card-title">Geometry &amp; Trigonometry</h4>
-              <p class="domain-card-meta">Area, Volume, Circles, Trigonometry Ratios</p>
-              <div class="domain-card-footer">
-                <span class="domain-action-link">Luyện tập →</span>
+              <div class="domain-card-content">
+                <div class="domain-card-top">
+                  <span class="domain-card-icon">🔷</span>
+                  <span class="domain-section-tag">Math</span>
+                </div>
+                <h4 class="domain-card-title">Geometry &amp; Trigonometry</h4>
+                <p class="domain-card-meta">Area, Volume, Circles, Trigonometry Ratios</p>
+                <div class="domain-card-footer">
+                  <span class="domain-action-link">Luyện tập →</span>
+                </div>
               </div>
             </button>
           </div>
@@ -1124,9 +1170,8 @@
             <div class="landing-hero-media">
               <picture class="landing-picture">
                 <source media="(max-width: 768px)" srcset="assets/visual/hero/landing-hero-mobile.webp" type="image/webp">
-                <source media="(max-width: 768px)" srcset="assets/visual/hero/landing-hero-mobile.png" type="image/png">
                 <source srcset="assets/visual/hero/landing-hero-desktop.webp" type="image/webp">
-                <img src="assets/visual/hero/landing-hero-desktop.png" alt="Học sinh THPT rèn luyện Digital SAT" class="landing-hero-img" width="720" height="405" loading="eager">
+                <img src="assets/visual/hero/landing-hero-desktop.webp" alt="Học sinh THPT rèn luyện Digital SAT" class="landing-hero-img" width="720" height="405" fetchpriority="high">
               </picture>
             </div>
           </div>
