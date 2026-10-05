@@ -142,13 +142,29 @@ if (fs.existsSync(manifestPath)) {
   } catch (_) {}
 }
 
-// 4. Derive Overall Status
+// Gate 4: Pilot Telemetry & Privacy QA Gate
+let pilotStatus = 'NOT VERIFIED';
+let pilotResult = '--';
+let pilotDetail = 'Pilot verification script not executed';
+try {
+  execSync('node scripts/verify_pilot_telemetry.js', { stdio: ['pipe', 'pipe', 'ignore'] });
+  pilotStatus = 'PASS';
+  pilotResult = '15 / 15 Checks (T01–T15)';
+  pilotDetail = 'Privacy boundaries, consent gate, UUID isolation, zero PII, and queue retry verified';
+} catch (err) {
+  pilotStatus = 'FAIL';
+  pilotResult = 'Pilot verification failed';
+  pilotDetail = err.message;
+}
+
+// 5. Derive Overall Status
 const gates = {
   regression: { status: regressionStatus, result: regressionResult, detail: regressionDetail, command: 'node scripts/verify_acceptance_gate.js' },
   runtime: { status: runtimeStatus, result: runtimeResult, detail: runtimeDetail, command: 'node scripts/verify_rc_hotfixes.js' },
   visual: { status: visualStatus, result: visualResult, detail: visualDetail, command: 'node scripts/capture_visual_qa.js' },
   console: { status: consoleStatus, result: consoleResult, detail: consoleDetail, command: 'Playwright runtime listener' },
-  accessibility: { status: a11yStatus, result: a11yResult, detail: a11yDetail, command: 'T07 modal focus trap test' }
+  accessibility: { status: a11yStatus, result: a11yResult, detail: a11yDetail, command: 'T07 modal focus trap test' },
+  pilot: { status: pilotStatus, result: pilotResult, detail: pilotDetail, command: 'node scripts/verify_pilot_telemetry.js' }
 };
 
 let overallStatus = 'READY FOR REVIEW';

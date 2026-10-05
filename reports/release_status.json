@@ -1,11 +1,11 @@
 {
   "product": "SAT IntelliPrep OS",
   "release": "v1.0 RC Hotfix",
-  "commit": "215e7b3",
+  "commit": "11c861d",
   "branch": "main",
   "productionUrl": "https://nmstudio-sat-intelliprep.vercel.app",
   "localUrl": "http://localhost:5500",
-  "reviewedAt": "2026-10-05T02:32:36.494Z",
+  "reviewedAt": "2026-10-05T07:53:31.302Z",
   "overallStatus": "READY FOR REVIEW",
   "gates": {
     "regression": {
@@ -37,6 +37,12 @@
       "result": "Focus Trap Verified",
       "detail": "Setup modal traps Tab/Shift+Tab, restores focus on close, ESC handling verified",
       "command": "T07 modal focus trap test"
+    },
+    "pilot": {
+      "status": "PASS",
+      "result": "15 / 15 Checks (T01–T15)",
+      "detail": "Privacy boundaries, consent gate, UUID isolation, zero PII, and queue retry verified",
+      "command": "node scripts/verify_pilot_telemetry.js"
     }
   },
   "inventory": {

@@ -8,7 +8,9 @@
     "qa:acceptance": "node scripts/verify_acceptance_gate.js",
     "qa:runtime": "node scripts/verify_rc_hotfixes.js",
     "qa:visual": "node scripts/capture_visual_qa.js",
-    "qa:release": "node scripts/verify_acceptance_gate.js && node scripts/verify_rc_hotfixes.js && node scripts/capture_visual_qa.js && node scripts/generate_release_status.js"
+    "qa:pilot": "node scripts/verify_pilot_telemetry.js",
+    "pilot:report": "node scripts/generate_pilot_report.js",
+    "qa:release": "node scripts/verify_acceptance_gate.js && node scripts/verify_rc_hotfixes.js && node scripts/verify_pilot_telemetry.js && node scripts/capture_visual_qa.js && node scripts/generate_release_status.js"
   },
   "repository": {
     "type": "git",

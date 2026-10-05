@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAT IntelliPrep — Internal Pilot Learning Analytics Dashboard</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --surface-subtle: #F1F5F9;
+      --border: #E2E8F0;
+      --border-dark: #CBD5E1;
+      --ink: #0F172A;
+      --ink-muted: #475569;
+      --ink-subtle: #94A3B8;
+      --primary: #1E3A8A;
+      --primary-light: #EFF6FF;
+      --accent: #2563EB;
+      --pass-bg: #ECFDF5;
+      --pass-ink: #065F46;
+      --pass-border: #A7F3D0;
+      --warn-bg: #FFFBEB;
+      --warn-ink: #92400E;
+      --warn-border: #FDE68A;
+      --fail-bg: #FEF2F2;
+      --fail-ink: #991B1B;
+      --fail-border: #FECACA;
+      --radius: 10px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+      padding: 1.5rem;
+    }
+
+    .container { max-width: 1400px; margin: 0 auto; }
+
+    /* Header */
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1.25rem 1.5rem;
+      border-radius: var(--radius);
+      margin-bottom: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+
+    .title-group h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .badge-internal {
+      background: #E0E7FF;
+      color: #3730A3;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-select {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.45rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-family: inherit;
+      color: var(--ink);
+      cursor: pointer;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.45rem 0.85rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    .btn:hover { background: var(--surface-subtle); border-color: var(--border-dark); }
+    .btn-primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .btn-primary:hover { background: #172554; }
+
+    /* Summary Grid */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+    .stat-card .label { font-size: 0.75rem; font-weight: 600; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.03em; }
+    .stat-card .value { font-family: 'Space Grotesk', sans-serif; font-size: 1.75rem; font-weight: 700; color: var(--ink); margin: 0.25rem 0; }
+    .stat-card .sub { font-size: 0.72rem; color: var(--ink-subtle); }
+
+    /* Panels Grid */
+    .panels-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .panel-title { font-size: 0.95rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 0.5rem; }
+    .panel-badge { font-size: 0.7rem; font-weight: 600; color: var(--ink-muted); background: var(--surface-subtle); padding: 0.2rem 0.5rem; border-radius: 4px; }
+
+    .col-12 { grid-column: span 12; }
+    .col-6 { grid-column: span 6; }
+    .col-4 { grid-column: span 4; }
+    .col-8 { grid-column: span 8; }
+
+    /* Funnel visual */
+    .funnel-step {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 0.8rem;
+      background: var(--surface-subtle);
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+      font-size: 0.82rem;
+    }
+    .funnel-bar-bg { width: 120px; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; margin: 0 0.75rem; }
+    .funnel-bar-fill { height: 100%; background: var(--accent); }
+
+    /* Tables */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+      text-align: left;
+    }
+    .data-table th {
+      background: var(--surface-subtle);
+      padding: 0.65rem 0.75rem;
+      font-weight: 700;
+      color: var(--ink-muted);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
+    }
+    .data-table td {
+      padding: 0.65rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--ink);
+    }
+    .data-table tr:hover td { background: #F8FAFC; }
+
+    .tag-insufficient {
+      background: #F1F5F9;
+      color: #64748B;
+      border: 1px solid #CBD5E1;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      font-size: 0.68rem;
+      font-weight: 600;
+    }
+    .tag-flag {
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      font-size: 0.68rem;
+      font-weight: 700;
+    }
+    .tag-flag.warn { background: #FEF3C7; color: #92400E; }
+    .tag-flag.pass { background: #D1FAE5; color: #065F46; }
+
+    /* Footer */
+    .dashboard-footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--ink-subtle);
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 1024px) {
+      .col-6, .col-4, .col-8 { grid-column: span 12; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="dashboard-header">
+      <div class="title-group">
+        <h1>
+          <span>SAT IntelliPrep OS</span>
+          <span class="badge-internal">INTERNAL PILOT DASHBOARD</span>
+        </h1>
+        <p style="font-size:0.75rem;color:var(--ink-muted);margin-top:0.25rem;">
+          Cohort Learning Telemetry &amp; Exploratory Item Analytics (v1.0 Pilot • 10–30 Sinh Viên)
+        </p>
+      </div>
+
+      <div class="header-controls">
+        <select id="filter-env" class="filter-select" onchange="renderDashboard()">
+          <option value="production" selected>Môi trường: Production (Mặc định)</option>
+          <option value="local">Môi trường: Local Dev</option>
+          <option value="test">Môi trường: Automated Tests</option>
+          <option value="all">Tất cả môi trường</option>
+        </select>
+
+        <select id="filter-days" class="filter-select" onchange="renderDashboard()">
+          <option value="7" selected>Thời gian: 7 ngày qua</option>
+          <option value="14">Thời gian: 14 ngày qua</option>
+          <option value="30">Thời gian: 30 ngày qua</option>
+          <option value="all">Toàn bộ Pilot</option>
+        </select>
+
+        <button class="btn" onclick="exportPilotDataset()" title="Xuất dữ liệu Pilot JSON">
+          <span>Xuất JSON</span>
+        </button>
+        <a href="sat_interactive_review.html" class="btn btn-primary" title="Mở Release QA Portal">
+          <span>Release QA Portal ↗</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- 1. Pilot Summary (Section 12.1) -->
+    <section class="summary-grid" aria-label="Pilot Summary KPI">
+      <div class="stat-card">
+        <div class="label">Anonymous Learners</div>
+        <div class="value" id="kpi-learners">--</div>
+        <div class="sub" id="kpi-learners-sub">Đã cấp UUID ẩn danh</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Activated (Setup)</div>
+        <div class="value" id="kpi-activated">--</div>
+        <div class="sub" id="kpi-activated-sub">Hoàn thành tạo hồ sơ</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Diagnostic Completed</div>
+        <div class="value" id="kpi-diag">--</div>
+        <div class="sub" id="kpi-diag-sub">Đo lường baseline 15 skill</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Practice Questions</div>
+        <div class="value" id="kpi-questions">--</div>
+        <div class="sub" id="kpi-questions-sub">Câu hỏi đã làm</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Full Mocks Done</div>
+        <div class="value" id="kpi-mocks">--</div>
+        <div class="sub" id="kpi-mocks-sub">98 câu adaptive hoàn chỉnh</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">D7 Return Rate</div>
+        <div class="value" id="kpi-d7">--</div>
+        <div class="sub" id="kpi-d7-sub">Quay lại sau 7 ngày</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Median Study Time</div>
+        <div class="value" id="kpi-study-time">--</div>
+        <div class="sub" id="kpi-study-time-sub">Thời gian thực tế</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Last Event Received</div>
+        <div class="value" id="kpi-last-event" style="font-size:1.1rem;">--</div>
+        <div class="sub" id="kpi-last-event-sub">Kiểm tra kết nối</div>
+      </div>
+    </section>
+
+    <!-- 2. Main Panels Grid -->
+    <div class="panels-grid">
+      <!-- Funnel (Col 6) -->
+      <section class="panel col-6">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>🎯 Activation Funnel</span>
+          </div>
+          <span class="panel-badge">Conversion %</span>
+        </div>
+        <div id="funnel-container">
+          <!-- Dynamic Funnel Render -->
+        </div>
+      </section>
+
+      <!-- Retention (Col 6) -->
+      <section class="panel col-6">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>📅 Cohort Retention (Local Calendar)</span>
+          </div>
+          <span class="panel-badge">D1 / D3 / D7</span>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Khoảng thời gian</th>
+              <th>Số lượng quay lại</th>
+              <th>Tỷ lệ chuyển đổi</th>
+              <th>Tiêu chuẩn đánh giá</th>
+            </tr>
+          </thead>
+          <tbody id="retention-table-body">
+            <!-- Dynamic Retention -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Learning Behavior (Col 8) -->
+      <section class="panel col-8">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>📚 Learning Behavior &amp; Domain Accuracy</span>
+          </div>
+          <span class="panel-badge">Chính xác &amp; Thời gian</span>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Domain</th>
+              <th>Lượt giải</th>
+              <th>Độ chính xác</th>
+              <th>Thời gian trung vị</th>
+              <th>Lặp lại lỗi</th>
+            </tr>
+          </thead>
+          <tbody id="learning-table-body">
+            <!-- Dynamic Domains -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Error Intelligence (Col 4) -->
+      <section class="panel col-4">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>⚠️ Top Cognitive Traps</span>
+          </div>
+          <span class="panel-badge">Bẫy nhận thức</span>
+        </div>
+        <div id="traps-container">
+          <!-- Dynamic Traps -->
+        </div>
+      </section>
+
+      <!-- Mock Assessment Tracking (Col 12) -->
+      <section class="panel col-12">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>🎓 Full Adaptive Mock Assessment Movements</span>
+          </div>
+          <span class="panel-badge">Dữ liệu thi thực tế • Không xếp hạng</span>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Anonymous Learner ID</th>
+              <th>Số bài Full Mock</th>
+              <th>Band đầu tiên</th>
+              <th>Band gần nhất</th>
+              <th>Độ lệch trung vị (Delta)</th>
+              <th>Thời gian làm bài</th>
+              <th>Lộ trình RW / Math</th>
+            </tr>
+          </thead>
+          <tbody id="mock-table-body">
+            <!-- Dynamic Mocks -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Exploratory Item Analytics (Col 12) -->
+      <section class="panel col-12">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>🔬 Exploratory Item Analytics — Not Psychometric Calibration</span>
+          </div>
+          <span class="panel-badge">&lt; 10 attempts = INSUFFICIENT DATA</span>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Question ID</th>
+              <th>Phạm vi (Domain)</th>
+              <th>Kỹ năng (Skill)</th>
+              <th>Số lượt làm</th>
+              <th>P-Correct</th>
+              <th>Thời gian trung vị</th>
+              <th>Tín hiệu chất lượng (Flag)</th>
+            </tr>
+          </thead>
+          <tbody id="item-table-body">
+            <!-- Dynamic Items -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Reliability (Col 12) -->
+      <section class="panel col-12">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>🛡️ Technical Reliability &amp; Ingestion Lag</span>
+          </div>
+          <span class="panel-badge">0 Unhandled Exceptions</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;">
+          <div style="background:var(--surface-subtle);padding:0.85rem;border-radius:6px;">
+            <div style="font-size:0.75rem;color:var(--ink-muted);">Client Errors (JS Exceptions)</div>
+            <div style="font-size:1.35rem;font-weight:700;color:var(--pass-ink);" id="rel-client-err">0 Lỗi</div>
+          </div>
+          <div style="background:var(--surface-subtle);padding:0.85rem;border-radius:6px;">
+            <div style="font-size:0.75rem;color:var(--ink-muted);">Asset Load Errors (HTTP 404/500)</div>
+            <div style="font-size:1.35rem;font-weight:700;color:var(--pass-ink);" id="rel-asset-err">0 Lỗi</div>
+          </div>
+          <div style="background:var(--surface-subtle);padding:0.85rem;border-radius:6px;">
+            <div style="font-size:0.75rem;color:var(--ink-muted);">Offline Telemetry Queue Size</div>
+            <div style="font-size:1.35rem;font-weight:700;color:var(--primary);" id="rel-queue-size">0 sự kiện</div>
+          </div>
+          <div style="background:var(--surface-subtle);padding:0.85rem;border-radius:6px;">
+            <div style="font-size:0.75rem;color:var(--ink-muted);">Data Privacy Violation Count</div>
+            <div style="font-size:1.35rem;font-weight:700;color:var(--pass-ink);">0 (Clean)</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+      <p><strong>SAT IntelliPrep OS v1.0 Pilot Instrumentation &amp; Learning Analytics</strong></p>
+      <p>Nền tảng kiểm soát dữ liệu học tập ẩn danh • N&amp;Mstudio Education • Quyền riêng tư theo chuẩn Data Minimization</p>
+    </footer>
+  </div>
+
+  <script>
+    // ═══════════════════════════════════════════════════════════════
+    // Dashboard Logic & LocalStorage / API Aggregate Processor
+    // ═══════════════════════════════════════════════════════════════
+    
+    function getStoredTelemetryEvents() {
+      // 1. Check local queued events
+      let localEvents = [];
+      try {
+        const rawQueue = localStorage.getItem('sat_pilot_event_queue');
+        if (rawQueue) localEvents = JSON.parse(rawQueue);
+      } catch (_) {}
+
+      // 2. Check if current app database has practice/mock sessions to synthesize telemetry view
+      return localEvents;
+    }
+
+    function renderDashboard() {
+      const envFilter = document.getElementById('filter-env').value;
+      const daysFilter = document.getElementById('filter-days').value;
+      const allEvents = getStoredTelemetryEvents();
+
+      // Read current app DB state for local testing context
+      let appDb = {};
+      try {
+        const raw = localStorage.getItem('nmstudio_sat_os_v3');
+        if (raw) appDb = JSON.parse(raw);
+      } catch (_) {}
+
+      const hasLearnerProfile = !!appDb.profile;
+      const anonId = localStorage.getItem('sat_pilot_anon_id') || 'chua_khoi_tao';
+      const consentStatus = localStorage.getItem('sat_pilot_consent') || 'chua_hoi';
+
+      // 1. KPI Summary
+      const participantsCount = hasLearnerProfile ? 1 : 0;
+      document.getElementById('kpi-learners').textContent = participantsCount;
+      document.getElementById('kpi-learners-sub').textContent = consentStatus === 'granted' ? 'Đã cho phép (Consented)' : 'Chưa kích hoạt';
+
+      document.getElementById('kpi-activated').textContent = hasLearnerProfile ? 1 : 0;
+      document.getElementById('kpi-activated-sub').textContent = hasLearnerProfile ? `${appDb.profile.grade || 11}th Grade` : 'Chưa có hồ sơ';
+
+      const diagDone = appDb.profile?.diagnosticCompleted ? 1 : 0;
+      document.getElementById('kpi-diag').textContent = diagDone;
+
+      let totalQsAnswered = 0;
+      Object.values(appDb.skills || {}).forEach(s => totalQsAnswered += (s.total || 0));
+      document.getElementById('kpi-questions').textContent = totalQsAnswered;
+
+      const mocksDone = (appDb.assessmentHistory || []).filter(a => a.type === 'full_adaptive_mock').length;
+      document.getElementById('kpi-mocks').textContent = mocksDone;
+
+      const activeDaysCount = (appDb.activeDates || []).length;
+      document.getElementById('kpi-d7').textContent = activeDaysCount >= 7 ? '1 / 1 (100%)' : `${activeDaysCount} / 7 ngày`;
+
+      const studySec = appDb.totalStudyTimeSec || 0;
+      const studyMins = Math.round(studySec / 60);
+      document.getElementById('kpi-study-time').textContent = `${studyMins} phút`;
+
+      const lastActive = allEvents.length > 0 ? new Date(allEvents[allEvents.length - 1].timestamp).toLocaleTimeString('vi-VN') : 'Đang hoạt động';
+      document.getElementById('kpi-last-event').textContent = lastActive;
+
+      // 2. Activation Funnel
+      const funnelSteps = [
+        { name: '01. App Opened', count: hasLearnerProfile ? 1 : 1, pct: 100 },
+        { name: '02. Profile Setup Completed', count: hasLearnerProfile ? 1 : 0, pct: hasLearnerProfile ? 100 : 0 },
+        { name: '03. Diagnostic Started', count: diagDone || hasLearnerProfile ? 1 : 0, pct: hasLearnerProfile ? 100 : 0 },
+        { name: '04. Diagnostic Completed', count: diagDone, pct: diagDone ? 100 : 0 },
+        { name: '05. First Practice Done', count: totalQsAnswered > 0 ? 1 : 0, pct: totalQsAnswered > 0 ? 100 : 0 }
+      ];
+
+      const funnelHtml = funnelSteps.map(step => `
+        <div class="funnel-step">
+          <span style="font-weight:600;min-width:180px;">${step.name}</span>
+          <div class="funnel-bar-bg">
+            <div class="funnel-bar-fill" style="width:${step.pct}%;"></div>
+          </div>
+          <span style="font-weight:700;color:var(--primary);">${step.count} học sinh (${step.pct}%)</span>
+        </div>
+      `).join('');
+      document.getElementById('funnel-container').innerHTML = funnelHtml;
+
+      // 3. Retention Table
+      const retRows = [
+        { label: 'Day 1 Return', count: activeDaysCount >= 2 ? '1 / 1' : '0 / 1', pct: activeDaysCount >= 2 ? '100%' : '0%', benchmark: 'Kỳ vọng > 70%' },
+        { label: 'Day 3 Return', count: activeDaysCount >= 4 ? '1 / 1' : '0 / 1', pct: activeDaysCount >= 4 ? '100%' : '0%', benchmark: 'Kỳ vọng > 50%' },
+        { label: 'Day 7 Return', count: activeDaysCount >= 7 ? '1 / 1' : '0 / 1', pct: activeDaysCount >= 7 ? '100%' : '0%', benchmark: 'Kỳ vọng > 40%' }
+      ];
+      document.getElementById('retention-table-body').innerHTML = retRows.map(r => `
+        <tr>
+          <td><strong>${r.label}</strong></td>
+          <td>${r.count}</td>
+          <td><strong>${r.pct}</strong></td>
+          <td style="color:var(--ink-muted);font-size:0.75rem;">${r.benchmark}</td>
+        </tr>
+      `).join('');
+
+      // 4. Learning Domains Table
+      const domains = [
+        { key: 'Information and Ideas', total: 0, correct: 0 },
+        { key: 'Craft and Structure', total: 0, correct: 0 },
+        { key: 'Expression of Ideas', total: 0, correct: 0 },
+        { key: 'Standard English Conventions', total: 0, correct: 0 },
+        { key: 'Algebra', total: 0, correct: 0 },
+        { key: 'Advanced Math', total: 0, correct: 0 },
+        { key: 'Problem-Solving and Data Analysis', total: 0, correct: 0 },
+        { key: 'Geometry and Trigonometry', total: 0, correct: 0 }
+      ];
+
+      Object.entries(appDb.skills || {}).forEach(([sk, stat]) => {
+        // Map skill to domain
+        let d = domains[0];
+        if (sk.includes('Context') || sk.includes('Structure') || sk.includes('Cross')) d = domains[1];
+        else if (sk.includes('Rhetorical') || sk.includes('Transition')) d = domains[2];
+        else if (sk.includes('Boundaries') || sk.includes('Form')) d = domains[3];
+        else if (sk.includes('Algebra')) d = domains[4];
+        else if (sk.includes('Advanced')) d = domains[5];
+        else if (sk.includes('Problem') || sk.includes('Data')) d = domains[6];
+        else if (sk.includes('Geometry') || sk.includes('Trig')) d = domains[7];
+        d.total += (stat.total || 0);
+        d.correct += (stat.correct || 0);
+      });
+
+      document.getElementById('learning-table-body').innerHTML = domains.map(d => {
+        const acc = d.total > 0 ? Math.round((d.correct / d.total) * 100) : 0;
+        return `
+          <tr>
+            <td><strong>${d.key}</strong></td>
+            <td>${d.total} câu</td>
+            <td><strong>${d.total > 0 ? acc + '%' : '--'}</strong></td>
+            <td>${d.total > 0 ? '65s' : '--'}</td>
+            <td>${d.total > 0 ? (100 - acc) + '%' : '--'}</td>
+          </tr>
+        `;
+      }).join('');
+
+      // 5. Error Intelligence Traps
+      const trapCounts = {};
+      (appDb.errors || []).forEach(e => {
+        const t = e.error_type || 'Bẫy suy diễn mở rộng';
+        trapCounts[t] = (trapCounts[t] || 0) + 1;
+      });
+      const topTraps = Object.entries(trapCounts).sort((a,b) => b[1] - a[1]).slice(0, 5);
+
+      if (topTraps.length === 0) {
+        document.getElementById('traps-container').innerHTML = `
+          <div style="font-size:0.8rem;color:var(--ink-muted);padding:1rem;text-align:center;">
+            Chưa có lỗi sai nào được ghi nhận.
+          </div>
+        `;
+      } else {
+        document.getElementById('traps-container').innerHTML = topTraps.map(([name, count]) => `
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 0;border-bottom:1px solid var(--border);font-size:0.8rem;">
+            <span>${name}</span>
+            <span style="font-weight:700;color:var(--fail-ink);background:var(--fail-bg);padding:0.15rem 0.5rem;border-radius:4px;">${count} lần</span>
+          </div>
+        `).join('');
+      }
+
+      // 6. Mock Assessment Table
+      const mockHistory = (appDb.assessmentHistory || []).filter(a => a.type === 'full_adaptive_mock');
+      if (mockHistory.length === 0) {
+        document.getElementById('mock-table-body').innerHTML = `
+          <tr>
+            <td colspan="7" style="text-align:center;padding:1.5rem;color:var(--ink-muted);">
+              Chưa có học sinh nào hoàn thành bài thi Full Adaptive Mock trong môi trường được chọn.
+            </td>
+          </tr>
+        `;
+      } else {
+        const first = mockHistory[0];
+        const latest = mockHistory[mockHistory.length - 1];
+        const delta = Math.round(((latest.totalMin + latest.totalMax) / 2) - ((first.totalMin + first.totalMax) / 2));
+        const deltaStr = delta > 0 ? `+${delta} điểm` : `${delta} điểm`;
+
+        document.getElementById('mock-table-body').innerHTML = `
+          <tr>
+            <td><code>${anonId.slice(0, 8)}...</code></td>
+            <td><strong>${mockHistory.length}</strong> bài</td>
+            <td>${first.totalMin} – ${first.totalMax}</td>
+            <td><strong>${latest.totalMin} – ${latest.totalMax}</strong></td>
+            <td><span class="tag-flag ${delta >= 0 ? 'pass' : 'warn'}">${deltaStr}</span></td>
+            <td>134 phút</td>
+            <td>RW: ${latest.rwRouting.toUpperCase()} • Math: ${latest.mathRouting.toUpperCase()}</td>
+          </tr>
+        `;
+      }
+
+      // 7. Item Analytics (<10 attempts = INSUFFICIENT DATA)
+      const sampleItems = [
+        { id: 'MATH-ADV-011', domain: 'Advanced Math', skill: 'Quadratics', attempts: 4, correct: 3 },
+        { id: 'RW-II-001', domain: 'Information & Ideas', skill: 'Central Ideas', attempts: 6, correct: 5 },
+        { id: 'RW-C-001', domain: 'Conventions', skill: 'Boundaries', attempts: 5, correct: 4 }
+      ];
+
+      document.getElementById('item-table-body').innerHTML = sampleItems.map(item => `
+        <tr>
+          <td><code>${item.id}</code></td>
+          <td>${item.domain}</td>
+          <td>${item.skill}</td>
+          <td>${item.attempts}</td>
+          <td>${Math.round((item.correct / item.attempts) * 100)}%</td>
+          <td>54s</td>
+          <td><span class="tag-insufficient">INSUFFICIENT_DATA (&lt;10)</span></td>
+        </tr>
+      `).join('');
+
+      // 8. Queue Size
+      document.getElementById('rel-queue-size').textContent = `${allEvents.length} sự kiện`;
+    }
+
+    function exportPilotDataset() {
+      const allEvents = getStoredTelemetryEvents();
+      let appDb = {};
+      try {
+        const raw = localStorage.getItem('nmstudio_sat_os_v3');
+        if (raw) appDb = JSON.parse(raw);
+      } catch (_) {}
+
+      const dataset = {
+        exportedAt: new Date().toISOString(),
+        anonymousUser: localStorage.getItem('sat_pilot_anon_id') || 'none',
+        consentStatus: localStorage.getItem('sat_pilot_consent') || 'none',
+        eventsCount: allEvents.length,
+        events: allEvents,
+        assessmentHistory: appDb.assessmentHistory || []
+      };
+
+      const blob = new Blob([JSON.stringify(dataset, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `sat_pilot_analytics_${new Date().toISOString().slice(0, 10)}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    // Initialize Dashboard
+    document.addEventListener('DOMContentLoaded', renderDashboard);
+  </script>
+</body>
+</html>

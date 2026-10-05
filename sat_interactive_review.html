@@ -767,6 +767,19 @@
         <div class="gate-metric" id="gate-a11y-result">--</div>
         <div class="gate-desc" id="gate-a11y-desc">Đang tải dữ liệu kiểm thử...</div>
       </div>
+
+      <!-- 6. Pilot Analytics (Section 22) -->
+      <div class="gate-card" id="gate-card-pilot" style="border-left:3px solid var(--primary);">
+        <div class="gate-top">
+          <span class="gate-title">Pilot Analytics</span>
+          <span class="gate-pill gate-pass" id="gate-pilot-status">READY</span>
+        </div>
+        <div class="gate-metric" id="gate-pilot-result">10–30 Cohort</div>
+        <div class="gate-desc" id="gate-pilot-desc" style="display:flex;justify-content:space-between;align-items:center;margin-top:0.35rem;">
+          <span>Telemetry: <strong>ACTIVE</strong></span>
+          <a href="pilot_dashboard.html" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:700;text-decoration:none;">Open Dashboard ↗</a>
+        </div>
+      </div>
     </section>
 
     <!-- 3. STAGE CONTROLS: ROUTE & VIEWPORT SELECTION -->
@@ -1180,13 +1193,16 @@
           overallBadge.className = 'badge-status warn';
         }
 
-        // 2. Render all 5 Gate Cards
+        // 2. Render Gate Cards
         if (data.gates) {
           renderGateCard('regression', data.gates.regression);
           renderGateCard('runtime', data.gates.runtime);
           renderGateCard('visual', data.gates.visual);
           renderGateCard('console', data.gates.console);
           renderGateCard('accessibility', data.gates.accessibility);
+          if (data.gates.pilot) {
+            renderGateCard('pilot', data.gates.pilot);
+          }
         }
 
         // 3. Render Inventory

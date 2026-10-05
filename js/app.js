@@ -369,6 +369,13 @@ function init() {
   // Setup submit handler
   $('#setup-submit')?.addEventListener('click', () => {
     const doDiagnostic = $('#setup-do-diagnostic')?.checked;
+    const consentGranted = $('#pilot-consent-allow')?.checked ?? true;
+
+    // Save consent choice through telemetry engine (Section 5)
+    if (window.SatTelemetry) {
+      window.SatTelemetry.setConsent(consentGranted);
+    }
+
     db.profile = {
       targetScore: $('#setup-target-score')?.value || '1500+',
       grade: $('#setup-grade')?.value || '11',
@@ -377,6 +384,16 @@ function init() {
       setupDate: new Date().toISOString()
     };
     save();
+
+    if (window.SatTelemetry) {
+      window.SatTelemetry.track('setup_completed', {
+        grade_band: db.profile.grade,
+        explanation_level: db.profile.level,
+        target_score: db.profile.targetScore,
+        chose_diagnostic: !!doDiagnostic
+      });
+    }
+
     window.closeSetupModal();
     if (doDiagnostic) {
       startDiagnosticExam();
@@ -433,6 +450,14 @@ function handleRoute() {
   $$('.section-view').forEach(s => {
     s.classList.toggle('active', '#' + s.id === target);
   });
+
+  // Telemetry: Route Navigation (Section 8 Lifecycle)
+  if (window.SatTelemetry) {
+    const routeName = target.replace(/^#/, '');
+    window.SatTelemetry.track('route_viewed', { route_name: routeName });
+    if (routeName === 'today') window.SatTelemetry.track('today_viewed');
+    if (routeName === 'review') window.SatTelemetry.track('review_viewed');
+  }
 
   // Prompt user for setup if deep-linking into protected view without profile
   if (!currentDb.profile && target !== '#landing') {
@@ -563,10 +588,16 @@ function renderToday() {
 }
 
 window.startTodayPlan = function() {
+  if (window.SatTelemetry) {
+    window.SatTelemetry.track('today_plan_started');
+  }
   location.hash = '#practice';
 };
 
 window.startDiagnosticExam = function() {
+  if (window.SatTelemetry) {
+    window.SatTelemetry.track('diagnostic_started');
+  }
   location.hash = '#test';
   setTimeout(() => {
     startMockExam('sat', 'sat-diagnostic');
@@ -584,6 +615,9 @@ let questionStartTime = Date.now();
 
 async function loadPracticeSession(domainKey = null) {
   const key = domainKey || 'rw-info';
+  if (window.SatTelemetry) {
+    window.SatTelemetry.track('practice_session_started', { domain_key: key });
+  }
   practicePool = await loadQuestions(key);
   if (!practicePool || practicePool.length === 0) {
     practicePool = await loadQuestions('rw-info');
@@ -793,7 +827,25 @@ window.submitCurrentAnswer = function() {
     });
     if (db.errors.length > 100) db.errors.pop();
   }
-  save();
+  // Telemetry: Question Answered (Section 8 Practice - Strict non-PII IDs & metadata only)
+  if (window.SatTelemetry) {
+    const isMath = isMathQuestion(q);
+    const desmosOpen = !$('#desmos-modal')?.classList.contains('hidden');
+    window.SatTelemetry.track('practice_question_answered', {
+      question_id: q.question_id || 'UNKNOWN',
+      domain: q.domain || 'Digital SAT',
+      skill: canonicalSkill,
+      difficulty: q.difficulty || 3,
+      is_correct: isCorrect,
+      attempt_index: 1,
+      time_spent_ms: timeTakenSec * 1000,
+      error_type: isCorrect ? null : classifyDistractorTrap(q, userAns),
+      used_desmos: isMath && desmosOpen,
+      is_grid_in: !!q.is_grid_in,
+      selected_option: String(userAns || '').slice(0, 10),
+      correct_option: String(q.correct_answer || '').slice(0, 10)
+    });
+  }
 
   // Display 6-Part Feedback
   showDeliberateFeedback(isCorrect, userAns, q, timeTakenSec);
@@ -1072,6 +1124,17 @@ window.rateFlashcard = function(rating) {
     cur.due = Date.now() + cur.interval * 86400000;
     db.flashcardState[c.card_id] = cur;
     save();
+
+    // Telemetry: Flashcard Rated (Section 8 Review)
+    if (window.SatTelemetry) {
+      window.SatTelemetry.track('review_card_rated', {
+        card_id: c.card_id || 'FC-UNKNOWN',
+        card_type: c.type || 'general',
+        rating: rating,
+        review_count: cur.reviews,
+        next_interval_days: Math.round(cur.interval * 10) / 10
+      });
+    }
   }
 
   currentCardIdx = (currentCardIdx + 1) % flashcardDeck.length;
@@ -1079,6 +1142,9 @@ window.rateFlashcard = function(rating) {
 };
 
 window.retryMistakeItem = async function(skillName) {
+  if (window.SatTelemetry) {
+    window.SatTelemetry.track('mistake_retry_started', { skill: skillName });
+  }
   location.hash = '#practice';
   // P0.7 Fix: Dynamic domain loading so mistakes from any domain can be retrained
   let domainKey = 'rw-info';
@@ -1693,6 +1759,19 @@ window.selectExamAnswer = function(ans) {
   $$('#timed-question-render .answer-option').forEach(btn => {
     btn.classList.toggle('selected', btn.querySelector('.choice-letter')?.textContent === ans);
   });
+
+  // Telemetry: Mock Question Answered (Section 8 Mock Test)
+  if (window.SatTelemetry && activeExam) {
+    const q = activeExam.questions ? activeExam.questions[activeExam.currentIdx] : null;
+    window.SatTelemetry.track('mock_question_answered', {
+      test_id: activeExam.testId || 'MOCK',
+      stage: activeExam.stage || 'SINGLE_MODULE',
+      question_index: activeExam.currentIdx,
+      question_id: q?.question_id || `Q-${activeExam.currentIdx}`,
+      selected_option: String(ans || '').slice(0, 10),
+      is_flagged: !!activeExam.flags[activeExam.currentIdx]
+    });
+  }
 };
 
 window.toggleExamFlag = function() {
@@ -1712,6 +1791,15 @@ window.toggleExamFlag = function() {
       `;
     }
     flagBtn.classList.toggle('active', isFlagged);
+  }
+
+  // Telemetry: Mock Question Flagged
+  if (window.SatTelemetry && activeExam) {
+    window.SatTelemetry.track('mock_question_flagged', {
+      test_id: activeExam.testId || 'MOCK',
+      question_index: idx,
+      is_flagged: !!activeExam.flags[idx]
+    });
   }
 };
 
@@ -1850,6 +1938,14 @@ window.finishTimedSession = function() {
         db.profile.diagnosticCompleted = true;
         save();
       }
+      if (window.SatTelemetry) {
+        window.SatTelemetry.track('diagnostic_completed', {
+          duration_sec: timeSpentSec,
+          questions_answered: activeExam.questions.length,
+          correct_count: stageCorrect,
+          accuracy: Math.round((stageCorrect / (activeExam.questions.length || 1)) * 100)
+        });
+      }
     }
     showTestResults(stageCorrect, activeExam.questions.length, timeSpentSec);
   }
@@ -1902,6 +1998,24 @@ function showFullAdaptiveResults() {
     db.profile.lastAssessment = assessmentEntry;
   }
   save();
+
+  // Telemetry: Mock Completed (Section 8 Mock Test - Uses strictly already-computed score bands, T11 compliance)
+  if (window.SatTelemetry) {
+    let mockTotalTime = 0;
+    activeExam.allStagesData.forEach(d => mockTotalTime += (d.timeSpentSec || 0));
+    window.SatTelemetry.track('mock_completed', {
+      test_id: activeExam.testId || 'full_mock',
+      rw_min: bands.rwMin,
+      rw_max: bands.rwMax,
+      math_min: bands.mathMin,
+      math_max: bands.mathMax,
+      total_min: bands.totalMin,
+      total_max: bands.totalMax,
+      rw_routing: activeExam.rwRouting,
+      math_routing: activeExam.mathRouting,
+      duration_sec: mockTotalTime
+    });
+  }
 
   let totalTimeSpent = 0;
   activeExam.allStagesData.forEach(d => totalTimeSpent += (d.timeSpentSec || 0));
@@ -2777,7 +2891,17 @@ window.resetAllProgress = function() {
   if (!confirm('Bạn có chắc chắn muốn đặt lại toàn bộ tiến độ học tập SAT? Hành động này không thể hoàn tác.')) return;
   localStorage.removeItem(DB_KEY);
   localStorage.removeItem('nmstudio_learning_os_v2');
+  localStorage.removeItem('sat_pilot_consent');
+  localStorage.removeItem('sat_pilot_anon_id');
+  localStorage.removeItem('sat_pilot_session_id');
+  localStorage.removeItem('sat_pilot_event_queue');
   location.reload();
+};
+
+window.togglePilotTelemetry = function(enable) {
+  if (window.SatTelemetry) {
+    window.SatTelemetry.setConsent(enable);
+  }
 };
 
 // ── Global Keyboard Shortcuts & Modal UX (Digital SAT Bluebook Standards) ──

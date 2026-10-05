@@ -103,6 +103,26 @@
             </label>
           </div>
 
+          <!-- Pilot Data Notice & Consent (Section 5) -->
+          <div class="setup-diagnostic-box" id="pilot-consent-box" style="background:var(--color-bg-subtle);border-left:3px solid var(--color-primary);margin-top:0.75rem;">
+            <div style="font-weight:700;font-size:0.75rem;color:var(--color-ink);margin-bottom:0.25rem;">
+              🔒 Quyền Riêng Tư &amp; Dữ Liệu Học Tập Thử Nghiệm (Pilot Data Notice)
+            </div>
+            <p style="font-size:0.7rem;color:var(--color-muted);line-height:1.45;margin-bottom:0.5rem;">
+              SAT IntelliPrep có thể thu thập dữ liệu hành vi học tập ẩn danh trong đợt thử nghiệm này để cải thiện luồng học và chất lượng câu hỏi. Hệ thống <strong>hoàn toàn không thu thập</strong> họ tên, email, số điện thoại, nội dung bài đọc hay văn bản câu trả lời của bạn.
+            </p>
+            <div class="flex items-center gap-3" style="font-size:0.75rem;">
+              <label class="flex items-center gap-1 cursor-pointer">
+                <input type="radio" name="pilot-consent" id="pilot-consent-allow" value="allow" checked>
+                <span style="font-weight:600;color:var(--color-primary);">Cho phép dữ liệu Pilot</span>
+              </label>
+              <label class="flex items-center gap-1 cursor-pointer">
+                <input type="radio" name="pilot-consent" id="pilot-consent-decline" value="decline">
+                <span style="color:var(--color-muted);">Không tham gia</span>
+              </label>
+            </div>
+          </div>
+
           <button id="setup-submit" class="btn-primary-action setup-submit-btn">
             <span>Bắt Đầu Lộ Trình SAT →</span>
           </button>
@@ -1543,6 +1563,7 @@
     </p>
   </footer>
 
+  <script src="js/telemetry.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
