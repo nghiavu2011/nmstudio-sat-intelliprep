@@ -241,12 +241,15 @@ async function runTests() {
   await page.evaluate(() => {
     // Math Geometry is weak: 0/4
     // Algebra is strong: 10/10
-    const raw = JSON.parse(localStorage.getItem('nmstudio_sat_os_v3'));
+    const raw = JSON.parse(localStorage.getItem('nmstudio_sat_os_v3')) || {};
     raw.skills = {
       'Geometry and Trigonometry': { correct: 0, total: 4 },
       'Algebra': { correct: 10, total: 10 }
     };
     localStorage.setItem('nmstudio_sat_os_v3', JSON.stringify(raw));
+    if (typeof db !== 'undefined') {
+      db.skills = raw.skills;
+    }
     filterPracticeDomains('weak');
   });
   await page.waitForTimeout(200);

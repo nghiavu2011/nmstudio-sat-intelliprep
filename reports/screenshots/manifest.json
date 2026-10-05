@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-10-05T02:31:23.665Z",
+  "viewports": [
+    "1920x1080_desktop",
+    "1440x900_macbook",
+    "1366x768_laptop",
+    "1180x820_ipad_air",
+    "1024x768_tablet",
+    "768x1024_portrait_tablet",
+    "390x844_iphone13",
+    "360x800_android"
+  ],
+  "portalCaptures": [
+    "portal_v2_desktop_1440",
+    "portal_v2_tablet_1024",
+    "portal_v2_mobile_390"
+  ],
+  "totalCaptured": 44
+}

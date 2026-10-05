@@ -32,6 +32,12 @@
       --warn-bg: #FFFBEB;
       --warn-border: #FDE68A;
       --warn-ink: #92400E;
+      --warn-dot: #F59E0B;
+
+      --fail-bg: #FEF2F2;
+      --fail-border: #FECACA;
+      --fail-ink: #991B1B;
+      --fail-dot: #EF4444;
 
       --radius-sm: 8px;
       --radius-md: 12px;
@@ -111,9 +117,9 @@
       border-radius: 9999px;
       font-size: 0.75rem;
       font-weight: 700;
-      background: var(--pass-bg);
-      color: var(--pass-ink);
-      border: 1px solid var(--pass-border);
+      background: var(--surface-subtle);
+      color: var(--ink-muted);
+      border: 1px solid var(--border);
       text-transform: uppercase;
       letter-spacing: 0.04em;
     }
@@ -122,8 +128,29 @@
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: var(--pass-dot);
+      background: var(--ink-subtle);
     }
+
+    .badge-status.pass {
+      background: var(--pass-bg);
+      color: var(--pass-ink);
+      border-color: var(--pass-border);
+    }
+    .badge-status.pass .badge-status-dot { background: var(--pass-dot); }
+
+    .badge-status.warn {
+      background: var(--warn-bg);
+      color: var(--warn-ink);
+      border-color: var(--warn-border);
+    }
+    .badge-status.warn .badge-status-dot { background: var(--warn-dot); }
+
+    .badge-status.fail {
+      background: var(--fail-bg);
+      color: var(--fail-ink);
+      border-color: var(--fail-border);
+    }
+    .badge-status.fail .badge-status-dot { background: var(--fail-dot); }
 
     .header-meta {
       display: flex;
@@ -226,8 +253,13 @@
       flex-direction: column;
       gap: 0.35rem;
       box-shadow: var(--shadow-sm);
-      border-left: 4px solid var(--pass-dot);
+      border-left: 4px solid var(--ink-subtle);
+      transition: border-color 0.2s;
     }
+
+    .gate-card.gate-pass { border-left-color: var(--pass-dot); }
+    .gate-card.gate-warn { border-left-color: var(--warn-dot); }
+    .gate-card.gate-fail { border-left-color: var(--fail-dot); }
 
     .gate-top {
       display: flex;
@@ -248,9 +280,13 @@
       font-weight: 800;
       padding: 0.1rem 0.4rem;
       border-radius: 4px;
-      background: var(--pass-bg);
-      color: var(--pass-ink);
+      background: var(--surface-subtle);
+      color: var(--ink-muted);
     }
+
+    .gate-pill.gate-pass { background: var(--pass-bg); color: var(--pass-ink); }
+    .gate-pill.gate-warn { background: var(--warn-bg); color: var(--warn-ink); }
+    .gate-pill.gate-fail { background: var(--fail-bg); color: var(--fail-ink); }
 
     .gate-metric {
       font-size: 0.95rem;
@@ -356,12 +392,15 @@
       margin-bottom: 0.75rem;
       font-size: 0.75rem;
       color: #475569;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
 
     .stage-badges {
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      flex-wrap: wrap;
     }
 
     .meta-tag {
@@ -372,6 +411,16 @@
       font-weight: 700;
       font-family: monospace;
       color: #334155;
+    }
+
+    .preview-helper-link {
+      font-size: 0.75rem;
+      color: var(--brand);
+      text-decoration: underline;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
     }
 
     .iframe-scaler-container {
@@ -390,23 +439,6 @@
       transition: width 0.25s ease, height 0.25s ease;
       width: 100%;
       height: 820px;
-    }
-
-    /* Fallback if iframe fails/blocked */
-    .iframe-fallback {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 3rem 2rem;
-      background: #FFFFFF;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border);
-      width: 100%;
-      max-width: 600px;
-      margin: 4rem auto;
-      gap: 1rem;
     }
 
     /* ── 5. Expert Review: Evidence vs Qualitative Opinion ── */
@@ -654,18 +686,18 @@
           <h1 class="portal-title">SAT IntelliPrep — Release QA Portal</h1>
           <span class="badge-status" id="header-status-badge">
             <span class="badge-status-dot"></span>
-            <span id="header-status-text">Ready for Review</span>
+            <span id="header-status-text">NOT VERIFIED</span>
           </span>
           <span class="source-badge prod" id="header-source-badge">SOURCE: PRODUCTION</span>
         </div>
         <div class="header-meta">
-          <span>Build: <strong id="meta-release-tag">v1.0 RC Hotfix</strong></span>
+          <span>Build: <strong id="meta-release-tag">--</strong></span>
           <span class="sep">•</span>
-          <span>Branch: <strong id="meta-branch">main</strong></span>
+          <span>Branch: <strong id="meta-branch">--</strong></span>
           <span class="sep">•</span>
-          <span>Commit: <strong id="meta-commit">79b8ca3</strong></span>
+          <span>Commit: <strong id="meta-commit">--</strong></span>
           <span class="sep">•</span>
-          <span>Reviewed: <strong id="meta-reviewed-date">04 Oct 2026, 23:20</strong></span>
+          <span>Reviewed: <strong id="meta-reviewed-date">--</strong></span>
         </div>
       </div>
       <div class="header-actions">
@@ -677,7 +709,7 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"></path><line x1="8" y1="16" x2="8.01" y2="16"></line><line x1="8" y1="20" x2="8.01" y2="20"></line><line x1="12" y1="18" x2="12.01" y2="18"></line><line x1="12" y1="22" x2="12.01" y2="22"></line><line x1="16" y1="16" x2="16.01" y2="16"></line><line x1="16" y1="20" x2="16.01" y2="20"></line></svg>
           <span id="source-btn-text">Dùng Local Dev</span>
         </button>
-        <a id="open-app-external-link" href="https://nmstudio-sat-intelliprep.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Mở ứng dụng trên tab độc lập">
+        <a id="open-app-external-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Mở ứng dụng trên tab độc lập">
           <span>Open App</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
         </a>
@@ -687,53 +719,53 @@
     <!-- 2. RELEASE GATE SUMMARY (5 EVIDENCE CARDS) -->
     <section class="gates-grid" aria-label="Báo cáo nghiệm thu kỹ thuật">
       <!-- 1. Regression -->
-      <div class="gate-card">
+      <div class="gate-card" id="gate-card-regression">
         <div class="gate-top">
           <span class="gate-title">Regression Gate</span>
-          <span class="gate-pill" id="gate-reg-status">PASS</span>
+          <span class="gate-pill" id="gate-reg-status">NOT VERIFIED</span>
         </div>
-        <div class="gate-metric" id="gate-reg-result">27 / 27 Tests</div>
-        <div class="gate-desc">Tất cả bài test dữ liệu câu hỏi, ma trận adaptive, schema &amp; disclaimers vượt qua kiểm thử.</div>
+        <div class="gate-metric" id="gate-reg-result">--</div>
+        <div class="gate-desc" id="gate-reg-desc">Đang tải dữ liệu kiểm thử...</div>
       </div>
 
       <!-- 2. Runtime Integrity -->
-      <div class="gate-card">
+      <div class="gate-card" id="gate-card-runtime">
         <div class="gate-top">
           <span class="gate-title">Runtime Integrity</span>
-          <span class="gate-pill" id="gate-run-status">PASS</span>
+          <span class="gate-pill" id="gate-run-status">NOT VERIFIED</span>
         </div>
-        <div class="gate-metric" id="gate-run-result">8 / 8 Hotfixes (T01–T08)</div>
-        <div class="gate-desc">Đã sửa crash Today, dải điểm Progress trung thực, loại bỏ công thức ngoại suy ảo.</div>
+        <div class="gate-metric" id="gate-run-result">--</div>
+        <div class="gate-desc" id="gate-run-desc">Đang tải dữ liệu kiểm thử...</div>
       </div>
 
       <!-- 3. Visual QA -->
-      <div class="gate-card">
+      <div class="gate-card" id="gate-card-visual">
         <div class="gate-top">
           <span class="gate-title">Visual QA Matrix</span>
-          <span class="gate-pill" id="gate-vis-status">PASS</span>
+          <span class="gate-pill" id="gate-vis-status">NOT VERIFIED</span>
         </div>
-        <div class="gate-metric" id="gate-vis-result">8 / 8 Viewports</div>
-        <div class="gate-desc">Header 1 hàng trên 1366px laptop, các card có hiệu ứng hover glow vi tế.</div>
+        <div class="gate-metric" id="gate-vis-result">--</div>
+        <div class="gate-desc" id="gate-vis-desc">Đang tải dữ liệu kiểm thử...</div>
       </div>
 
       <!-- 4. Console Errors -->
-      <div class="gate-card">
+      <div class="gate-card" id="gate-card-console">
         <div class="gate-top">
           <span class="gate-title">Browser Console</span>
-          <span class="gate-pill" id="gate-con-status">PASS</span>
+          <span class="gate-pill" id="gate-con-status">NOT VERIFIED</span>
         </div>
-        <div class="gate-metric" id="gate-con-result">0 Page Errors</div>
-        <div class="gate-desc">Không phát sinh lỗi JavaScript TypeError, Unhandled Promise hay CSP block.</div>
+        <div class="gate-metric" id="gate-con-result">--</div>
+        <div class="gate-desc" id="gate-con-desc">Đang tải dữ liệu kiểm thử...</div>
       </div>
 
       <!-- 5. Accessibility -->
-      <div class="gate-card">
+      <div class="gate-card" id="gate-card-accessibility">
         <div class="gate-top">
           <span class="gate-title">Accessibility</span>
-          <span class="gate-pill" id="gate-a11y-status">PASS</span>
+          <span class="gate-pill" id="gate-a11y-status">NOT VERIFIED</span>
         </div>
-        <div class="gate-metric" id="gate-a11y-result">Keyboard Focus Trap</div>
-        <div class="gate-desc">Bẫy tiêu điểm Tab/Shift+Tab trong setup modal, hỗ trợ ESC và hoàn trả focus.</div>
+        <div class="gate-metric" id="gate-a11y-result">--</div>
+        <div class="gate-desc" id="gate-a11y-desc">Đang tải dữ liệu kiểm thử...</div>
       </div>
     </section>
 
@@ -742,7 +774,7 @@
       <!-- Route switcher -->
       <div class="control-group" role="group" aria-label="Chọn trang">
         <span class="control-label">Màn hình:</span>
-        <button class="nav-chip active" onclick="navigateFrame('#today')" data-hash="#today">
+        <button class="nav-chip" onclick="navigateFrame('#today')" data-hash="#today">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
           <span>Today</span>
         </button>
@@ -771,7 +803,7 @@
       <!-- Viewport switcher -->
       <div class="control-group" role="group" aria-label="Chọn kích thước màn hình">
         <span class="control-label">Viewport:</span>
-        <button class="vp-chip active" onclick="setViewport('100%', '820px', '100% (Fit)', 1)" data-w="100%">Fit</button>
+        <button class="vp-chip" onclick="setViewport('100%', '820px', '100% (Fit)', 1)" data-w="100%">Fit</button>
         <button class="vp-chip" onclick="setViewport('1920px', '1080px', '1920×1080', 0.72)" data-w="1920px">1920</button>
         <button class="vp-chip" onclick="setViewport('1440px', '900px', '1440×900', 0.85)" data-w="1440px">1440</button>
         <button class="vp-chip" onclick="setViewport('1366px', '768px', '1366×768 (Laptop)', 0.9)" data-w="1366px">1366</button>
@@ -789,6 +821,9 @@
         <div class="stage-badges">
           <span class="meta-tag" id="badge-cur-route">ROUTE: #today</span>
           <span class="meta-tag" id="badge-cur-viewport">VIEWPORT: 100% (Fit)</span>
+          <a id="preview-open-helper" href="#" target="_blank" rel="noopener noreferrer" class="preview-helper-link" title="Mở trên tab độc lập">
+            <span>Khung xem trước bị trắng hoặc bị chặn? Mở trên tab mới ↗</span>
+          </a>
         </div>
         <div>
           <button class="btn" style="padding: 0.25rem 0.6rem; font-size: 0.75rem; min-height: 28px;" onclick="reloadPreviewFrame()" title="Tải lại iframe">
@@ -807,18 +842,6 @@
           class="app-frame"
           loading="lazy">
         </iframe>
-      </div>
-
-      <!-- Fallback when iframe is blocked by CSP or unconfigured -->
-      <div class="iframe-fallback" id="iframe-fallback-box">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
-        <h3 style="font-size: 1.1rem; font-weight: 700;">Không Thể Nhúng Khung Trực Tiếp (Iframe CSP Restriction)</h3>
-        <p style="font-size: 0.85rem; color: #64748B; max-width: 440px;">
-          Nếu máy chủ Production cấu hình chặn nhúng ngoài qua <code>X-Frame-Options</code> hoặc CSP, hãy mở ứng dụng trực tiếp trên một tab độc lập hoặc dùng chế độ Local Dev.
-        </p>
-        <a id="fallback-open-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          <span>Mở Ứng Dụng Trên Tab Mới →</span>
-        </a>
       </div>
     </main>
 
@@ -849,7 +872,7 @@
           </li>
           <li>
             <span class="eval-action">⚡</span>
-            <div><strong>Cơ hội nâng cấp trải nghiệm:</strong> Bổ sung công cụ Gạch bỏ phương án (Cross-out) và Bôi sáng (Highlighter) trong chế độ thi thử để tương đồng sâu hơn với trải nghiệm thi thực tế của Bluebook™.</div>
+            <div><strong>Cơ hội nâng cấp trải nghiệm:</strong> Bổ sung công cụ Gạch bỏ phương án (Cross-out) và Bôi sáng (Highlighter) trong chế độ thi thử để mang lại sự tương đồng sâu hơn với trải nghiệm thi thực tế Digital SAT.</div>
           </li>
         </ul>
       </article>
@@ -894,23 +917,27 @@
       <div class="inventory-strip">
         <div class="inventory-box">
           <span class="inv-label">Unique Authored Items</span>
-          <span class="inv-val" id="inv-unique">194</span>
+          <span class="inv-val" id="inv-unique">--</span>
         </div>
         <div class="inventory-box">
           <span class="inv-label">Approved Bank Items</span>
-          <span class="inv-val" id="inv-approved">194</span>
+          <span class="inv-val" id="inv-approved">--</span>
         </div>
         <div class="inventory-box">
           <span class="inv-label">Diagnostic Pool</span>
-          <span class="inv-val" id="inv-diag">30</span>
+          <span class="inv-val" id="inv-diag">--</span>
         </div>
         <div class="inventory-box">
-          <span class="inv-label">Full Mock Forms</span>
-          <span class="inv-val" id="inv-forms">3</span>
+          <span class="inv-label">Full Adaptive Mock Forms</span>
+          <span class="inv-val" id="inv-full-forms">--</span>
         </div>
         <div class="inventory-box">
-          <span class="inv-label">Mock Placements</span>
-          <span class="inv-val" id="inv-placements">375</span>
+          <span class="inv-label">Compact Mock Forms</span>
+          <span class="inv-val" id="inv-compact-forms">--</span>
+        </div>
+        <div class="inventory-box">
+          <span class="inv-label">Mock Placements (All)</span>
+          <span class="inv-val" id="inv-placements">--</span>
         </div>
       </div>
     </section>
@@ -977,19 +1004,20 @@
   <!-- PORTAL CONTROLLER LOGIC -->
   <script>
     // ═══════════════════════════════════════════════════════════════
-    // Configurable Application URL Logic (No hardcoded localhost)
+    // Configurable Application URL Logic & State Preservation (P1.4)
     // ═══════════════════════════════════════════════════════════════
     const params = new URLSearchParams(window.location.search);
     
-    // Default URLs
     const DEFAULT_PROD_URL = 'https://nmstudio-sat-intelliprep.vercel.app';
     const DEFAULT_LOCAL_URL = 'http://localhost:5500';
 
-    // Resolved APP_URL
     const APP_URL = params.get('app') || window.REVIEW_CONFIG?.productionUrl || DEFAULT_PROD_URL;
     const isLocalDev = APP_URL.includes('localhost') || APP_URL.includes('127.0.0.1');
 
-    let currentHash = '#today';
+    // Route preservation: read ?route= or default to 'today'
+    const initialRouteParam = params.get('route');
+    let currentHash = initialRouteParam ? ('#' + initialRouteParam.replace(/^#/, '')) : '#today';
+    let currentVpWidth = params.get('vp') || '100%';
     let currentScale = 1;
 
     // Elements
@@ -1000,7 +1028,7 @@
     const sourceBadge = document.getElementById('header-source-badge');
     const sourceBtnText = document.getElementById('source-btn-text');
     const externalLink = document.getElementById('open-app-external-link');
-    const fallbackLink = document.getElementById('fallback-open-link');
+    const previewOpenHelper = document.getElementById('preview-open-helper');
 
     // Initialize Header state
     if (isLocalDev) {
@@ -1018,12 +1046,25 @@
       return cleanBase + '/' + hash;
     }
 
+    function syncPortalUrlParams() {
+      const u = new URL(window.location.href);
+      const cleanRoute = currentHash.replace(/^#/, '');
+      u.searchParams.set('route', cleanRoute);
+      if (currentVpWidth !== '100%') {
+        u.searchParams.set('vp', currentVpWidth);
+      } else {
+        u.searchParams.delete('vp');
+      }
+      history.replaceState(null, '', u.toString());
+    }
+
     function updatePreviewUrl() {
       const fullUrl = getFullTargetUrl(currentHash);
       iframe.src = fullUrl;
       externalLink.href = fullUrl;
-      fallbackLink.href = fullUrl;
+      previewOpenHelper.href = fullUrl;
       badgeRoute.textContent = 'ROUTE: ' + currentHash;
+      syncPortalUrlParams();
     }
 
     function navigateFrame(hash) {
@@ -1035,6 +1076,7 @@
     }
 
     function setViewport(width, height, label, scale = 1) {
+      currentVpWidth = width;
       document.querySelectorAll('.vp-chip').forEach(chip => {
         chip.classList.toggle('active', chip.dataset.w === width);
       });
@@ -1053,6 +1095,7 @@
       }
 
       badgeViewport.textContent = 'VIEWPORT: ' + label;
+      syncPortalUrlParams();
     }
 
     function reloadPreviewFrame() {
@@ -1079,31 +1122,104 @@
       } else {
         curUrl.searchParams.set('app', DEFAULT_LOCAL_URL);
       }
+      // Preserve current route & viewport
+      curUrl.searchParams.set('route', currentHash.replace(/^#/, ''));
+      if (currentVpWidth !== '100%') curUrl.searchParams.set('vp', currentVpWidth);
       window.location.href = curUrl.toString();
     }
 
-    // Load dynamic release status data if available
+    // Dynamic Gate Card Renderer (P0.2)
+    function renderGateCard(gateKey, gateData) {
+      const cardEl = document.getElementById('gate-card-' + gateKey);
+      const pillEl = document.getElementById('gate-' + gateKey.slice(0, 3) + '-status');
+      const resEl = document.getElementById('gate-' + gateKey.slice(0, 3) + '-result');
+      const descEl = document.getElementById('gate-' + gateKey.slice(0, 3) + '-desc');
+
+      if (!cardEl || !gateData) return;
+
+      const st = (gateData.status || 'NOT VERIFIED').toUpperCase();
+      let cls = 'gate-warn';
+      if (st === 'PASS') cls = 'gate-pass';
+      if (st === 'FAIL') cls = 'gate-fail';
+
+      cardEl.className = 'gate-card ' + cls;
+      if (pillEl) {
+        pillEl.className = 'gate-pill ' + cls;
+        pillEl.textContent = st;
+      }
+      if (resEl) resEl.textContent = gateData.result || '--';
+      if (descEl) descEl.textContent = gateData.detail || 'Không có mô tả chi tiết.';
+    }
+
+    // Load dynamic release status data (P0.1, P0.2, P0.3)
     async function loadReleaseStatusData() {
       try {
         const res = await fetch('reports/release_status.json');
-        if (res.ok) {
-          const data = await res.json();
-          if (data.commit) document.getElementById('meta-commit').textContent = data.commit;
-          if (data.branch) document.getElementById('meta-branch').textContent = data.branch;
-          if (data.release) document.getElementById('meta-release-tag').textContent = data.release;
-          if (data.overallStatus) document.getElementById('header-status-text').textContent = data.overallStatus;
-          
-          if (data.inventory) {
-            document.getElementById('inv-unique').textContent = data.inventory.uniqueAuthoredItems || '--';
-            document.getElementById('inv-approved').textContent = data.inventory.approvedBankItems || '--';
-            document.getElementById('inv-diag').textContent = data.inventory.diagnosticPool || '--';
-            document.getElementById('inv-forms').textContent = data.inventory.fullMockForms || '--';
-            document.getElementById('inv-placements').textContent = data.inventory.mockPlacements || '--';
-          }
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+
+        // 1. Header Metadata
+        document.getElementById('meta-commit').textContent = data.commit || 'NOT VERIFIED';
+        document.getElementById('meta-branch').textContent = data.branch || 'NOT VERIFIED';
+        document.getElementById('meta-release-tag').textContent = data.release || 'NOT VERIFIED';
+        
+        if (data.reviewedAt) {
+          const d = new Date(data.reviewedAt);
+          document.getElementById('meta-reviewed-date').textContent = d.toLocaleString('vi-VN');
+        }
+
+        const overallBadge = document.getElementById('header-status-badge');
+        const overallText = document.getElementById('header-status-text');
+        const st = (data.overallStatus || 'NOT VERIFIED').toUpperCase();
+        overallText.textContent = st;
+        if (st === 'READY FOR REVIEW' || st === 'PASS') {
+          overallBadge.className = 'badge-status pass';
+        } else if (st === 'BLOCKED' || st === 'FAIL') {
+          overallBadge.className = 'badge-status fail';
+        } else {
+          overallBadge.className = 'badge-status warn';
+        }
+
+        // 2. Render all 5 Gate Cards
+        if (data.gates) {
+          renderGateCard('regression', data.gates.regression);
+          renderGateCard('runtime', data.gates.runtime);
+          renderGateCard('visual', data.gates.visual);
+          renderGateCard('console', data.gates.console);
+          renderGateCard('accessibility', data.gates.accessibility);
+        }
+
+        // 3. Render Inventory
+        if (data.inventory) {
+          document.getElementById('inv-unique').textContent = data.inventory.uniqueAuthoredItems ?? '--';
+          document.getElementById('inv-approved').textContent = data.inventory.approvedBankItems ?? '--';
+          document.getElementById('inv-diag').textContent = data.inventory.diagnosticPool ?? '--';
+          document.getElementById('inv-full-forms').textContent = data.inventory.fullAdaptiveMockForms ?? '--';
+          document.getElementById('inv-compact-forms').textContent = data.inventory.partialOrCompactMockForms ?? '--';
+          document.getElementById('inv-placements').textContent = data.inventory.allMockPlacements ?? '--';
         }
       } catch (err) {
-        console.warn('release_status.json not loaded, using verified inline data');
+        console.warn('release_status.json unavailable, marking gates as NOT VERIFIED:', err);
+        const overallBadge = document.getElementById('header-status-badge');
+        overallBadge.className = 'badge-status warn';
+        document.getElementById('header-status-text').textContent = 'STATUS DATA: NOT VERIFIED';
+        
+        ['regression', 'runtime', 'visual', 'console', 'accessibility'].forEach(k => {
+          renderGateCard(k, { status: 'NOT VERIFIED', result: '--', detail: 'Chưa có file reports/release_status.json' });
+        });
       }
+    }
+
+    // Setup initial navigation chip & viewport button
+    document.querySelectorAll('.nav-chip').forEach(chip => {
+      chip.classList.toggle('active', chip.dataset.hash === currentHash);
+    });
+
+    const initialVpBtn = document.querySelector(`.vp-chip[data-w="${currentVpWidth}"]`);
+    if (initialVpBtn) {
+      initialVpBtn.click();
+    } else {
+      document.querySelector('.vp-chip[data-w="100%"]')?.classList.add('active');
     }
 
     // Initial load

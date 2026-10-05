@@ -289,11 +289,11 @@ const $$ = s => document.querySelectorAll(s);
 
 // ── Initialize App ──
 function init() {
-  // Real calendar active tracking (P0.9 Fix)
+  // Real local calendar active tracking (P1.5 Local Date Fix)
   if (!db.activeDates) db.activeDates = [];
-  const todayISO = new Date().toISOString().slice(0, 10);
-  if (!db.activeDates.includes(todayISO)) {
-    db.activeDates.push(todayISO);
+  const todayKey = getLocalDateKey();
+  if (!db.activeDates.includes(todayKey)) {
+    db.activeDates.push(todayKey);
     save();
   }
   if (!db.totalStudyTimeSec) db.totalStudyTimeSec = 0;

@@ -1,49 +1,52 @@
 {
   "product": "SAT IntelliPrep OS",
   "release": "v1.0 RC Hotfix",
-  "commit": "79b8ca3",
+  "commit": "5c5d22e",
   "branch": "main",
   "productionUrl": "https://nmstudio-sat-intelliprep.vercel.app",
   "localUrl": "http://localhost:5500",
-  "reviewedAt": "2026-10-04T23:20:00+07:00",
+  "reviewedAt": "2026-10-05T02:31:55.709Z",
   "overallStatus": "READY FOR REVIEW",
   "gates": {
     "regression": {
       "status": "PASS",
-      "result": "27/27 automated checks",
-      "detail": "All question QA, balance, schemas, disclaimers & state machines verified",
+      "result": "28 / 28 Checks",
+      "detail": "Question QA, balanced keys, adaptive routing schema & disclaimers verified",
       "command": "node scripts/verify_acceptance_gate.js"
     },
     "runtime": {
       "status": "PASS",
-      "result": "8/8 runtime checks (T01–T08)",
-      "detail": "Readiness crash fixed, zero fake trajectory, score integrity guaranteed",
+      "result": "8 / 8 Checks (T01–T08)",
+      "detail": "Today readiness verified, Progress score integrity clean, 7-day consistency confirmed",
       "command": "node scripts/verify_rc_hotfixes.js"
     },
     "visual": {
       "status": "PASS",
-      "result": "8/8 viewports verified",
-      "detail": "Screenshots captured across 1920x1080 down to 360x800",
-      "command": "python scripts/capture_visual_qa.py"
+      "result": "8 Viewports (44 Shots)",
+      "detail": "8 learner viewports + 3 portal viewports captured without layout overflow",
+      "command": "node scripts/capture_visual_qa.js"
     },
     "console": {
       "status": "PASS",
-      "result": "0 page errors / unhandled rejections",
-      "detail": "Verified via Playwright browser console listener",
-      "command": "Playwright console error listener"
+      "result": "0 Page Errors",
+      "detail": "Zero unhandled exceptions or TypeError across headless runtime execution",
+      "command": "Playwright runtime listener"
     },
     "accessibility": {
       "status": "PASS",
-      "result": "Keyboard modal flow verified",
-      "detail": "Setup modal focus trap, tab wrapping, ESC dismiss & restore verified",
-      "command": "T07 setup focus trap test"
+      "result": "Focus Trap Verified",
+      "detail": "Setup modal traps Tab/Shift+Tab, restores focus on close, ESC handling verified",
+      "command": "T07 modal focus trap test"
     }
   },
   "inventory": {
     "uniqueAuthoredItems": 194,
     "approvedBankItems": 194,
     "diagnosticPool": 30,
-    "fullMockForms": 3,
-    "mockPlacements": 375
+    "fullAdaptiveMockForms": 2,
+    "partialOrCompactMockForms": 1,
+    "allMockFiles": 3,
+    "allMockPlacements": 375,
+    "fullMockPlacements": 294
   }
 }

@@ -54,7 +54,7 @@ check('RW-C-001 has no incomplete sentence bug', qConv1 && !qConv1.choices.C?.in
 const qConv11 = (rwConv.questions || rwConv).find(q => q.question_id === 'RW-C-011');
 check('RW-C-011 is unambiguous', qConv11 && !qConv11.explanation.includes('Actually') && qConv11.qa_status === 'APPROVED');
 
-// 3. Check Practice Tests 1 and 2 (98 Questions Full Adaptive)
+// 3. Check Practice Tests Structure & Classification (P0.3 Structural Classifier)
 const ptDir = path.join(__dirname, '..', 'data', 'practice_tests');
 ['practice_test_1.json', 'practice_test_2.json'].forEach(ptFile => {
   const pt = JSON.parse(fs.readFileSync(path.join(ptDir, ptFile), 'utf8'));
@@ -65,10 +65,15 @@ const ptDir = path.join(__dirname, '..', 'data', 'practice_tests');
   const mM2H = pt.math?.module_2_hard?.length || 0;
   const mM2S = pt.math?.module_2_standard?.length || 0;
 
-  check(`${ptFile} has RW M1: 27, RW M2-H: 27, RW M2-S: 27`, rwM1 === 27 && rwM2H === 27 && rwM2S === 27, `Got ${rwM1}, ${rwM2H}, ${rwM2S}`);
-  check(`${ptFile} has Math M1: 22, Math M2-H: 22, Math M2-S: 22`, mM1 === 22 && mM2H === 22 && mM2S === 22, `Got ${mM1}, ${mM2H}, ${mM2S}`);
+  check(`${ptFile} has Full Simulation: RW M1: 27, RW M2-H: 27, RW M2-S: 27`, rwM1 === 27 && rwM2H === 27 && rwM2S === 27, `Got ${rwM1}, ${rwM2H}, ${rwM2S}`);
+  check(`${ptFile} has Full Simulation: Math M1: 22, Math M2-H: 22, Math M2-S: 22`, mM1 === 22 && mM2H === 22 && mM2S === 22, `Got ${mM1}, ${mM2H}, ${mM2S}`);
   check(`${ptFile} title has no "Official" claim`, !pt.title.toLowerCase().includes('official'));
 });
+
+// Structural check for practice_test_3.json: Compact Sprint form
+const pt3 = JSON.parse(fs.readFileSync(path.join(ptDir, 'practice_test_3.json'), 'utf8'));
+const pt3IsCompact = !pt3.title.toLowerCase().includes('full simulation') && pt3.title.includes('Compact Sprint');
+check('practice_test_3.json is accurately classified as Compact Sprint Simulation (15 RW / 12 Math)', pt3IsCompact && pt3.reading_and_writing?.module_1?.length === 15 && pt3.math?.module_1?.length === 12);
 
 // 4. Check Diagnostic Assessment Data
 const diagFile = path.join(__dirname, '..', 'data', 'diagnostic', 'diagnostic_questions.json');
